@@ -1,0 +1,70 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+    position: relative;
+    z-index: 1;
+}
+
+a img {
+    border: none;
+}
+
+table, h1, h2, h3, h4, h5, ul, li, form {
+    margin: 0;
+    padding: 0;
+}
+
+ul, li {
+    list-style: none;
+}
+
+#top {
+	position: relative;
+	width: 100%;
+	background-color: #f1f1f2;
+	text-align: center;
+	height: 540px;
+	border-top: 5px solid #e53b30;
+}
+
+#repositories {
+	position: relative;
+	width: 1000px;
+	margin: 0 auto;
+}
+
+h2 {
+	position: relative;
+    width: 1000px;
+    height: 120px;
+    background: url("repositories.png") center top no-repeat;
+	text-indent: -9000px;
+}
+
+.repository, .repository_s {
+	position: relative;
+	float: left;
+	width: 300px;
+	margin-right: 50px;
+
+}
+
+.repository {
+
+	height: 400px;
+}
+
+.repository_s {
+	height: 230px;
+}
+
+.right {
+	margin-right: 0px;
+}
+
