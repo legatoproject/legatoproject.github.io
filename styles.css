@@ -1,3 +1,47 @@
+@font-face {
+    font-family: 'r-lt';
+    src: url('r-lt.eot');
+    src: url('r-lt.eot?#iefix') format('embedded-opentype'),
+         url('r-lt.woff') format('woff'),
+         url('r-lt.ttf') format('truetype'),
+         url('r-lt.svg#r-lt') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'r-th';
+    src: url('r-th.eot');
+    src: url('r-th.eot?#iefix') format('embedded-opentype'),
+         url('r-th.woff') format('woff'),
+         url('r-th.ttf') format('truetype'),
+         url('r-th.svg#r-th') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'oct';
+    src: url('oct.eot');
+    src: url('oct.eot?#iefix') format('embedded-opentype'),
+         url('oct.woff') format('woff'),
+         url('oct.ttf') format('truetype'),
+         url('oct.svg#oct') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'l-lt';
+    src: url('l-lt.eot');
+    src: url('l-lt.eot?#iefix') format('embedded-opentype'),
+         url('l-lt.woff') format('woff'),
+         url('l-lt.ttf') format('truetype'),
+         url('l-lt.svg#l-lt') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html, body {
     margin: 0px;
     padding: 0px;
@@ -31,20 +75,86 @@ ul, li {
 	text-align: center;
 	height: 540px;
 	border-top: 5px solid #e53b30;
+	color: #a6a6a6;
+	font-family: 'r-lt', sans-serif;
+	font-weight: normal;
+	font-size: 30px;
+}
+
+#top p {
+	margin: 0px;
+	padding: 0px;
+	line-height: 35px;
+}
+
+#brands {
+	position: relative;
+	width: 80%;
+	height: 62px;
+	padding-top: 50px;
+	margin: 50px auto 40px auto;
+}
+
+a#sierra-wireless {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+a#sierra-wireless_devzone {
+	display: block;
+	width: 220px;
+	height: 62px;
+	position: relative;
+	margin: -50px auto 0px auto;
+}
+
+#github {
+	position: absolute;
+	top: 0px;
+	right: 50px;
+}
+
+#top h1 {
+	position: relative;
+	margin: 0 auto;
+	width: 500px;
+	height: 117px;
+	text-indent: -9000px;
+	background: url('sierra-wireless_legato_github_legato_logo.png') top left no-repeat;
+	margin-bottom: 25px;
+}
+
+#top h2 {
+	font-family: 'r-th', sans-serif;
+	font-weight: normal;
+	color: #444;
+	font-size: 60px;
+	padding-bottom: 8px;
 }
 
 #repositories {
 	position: relative;
-	width: 1000px;
+	width: 80%;
 	margin: 0 auto;
+	text-align: center;
 }
 
-h2 {
-	position: relative;
-    width: 1000px;
-    height: 120px;
-    background: url("repositories.png") center top no-repeat;
-	text-indent: -9000px;
+#repositories h3 {
+	font-family: 'r-th', sans-serif;
+	font-weight: normal;
+	color: #444;
+	font-size: 36px;
+	display: block;
+	height: 85px;
+	padding-top: 35px;
+}
+
+#repositories span.icons {
+	font-family: 'oct', sans-serif;
+	font-weight: normal;
+	color: #444;
+	font-size: 36px;
 }
 
 .repository, .repository_s {
@@ -52,13 +162,48 @@ h2 {
 	float: left;
 	width: 300px;
 	margin-right: 50px;
-
 }
 
 .repository {
-
 	height: 400px;
+	text-align: left;
+	font-family: 'l-lt', sans-serif;
+	font-size: 15px;
+	color: #8b8b8b;
 }
+
+.repository a {
+	color: #8b8b8b;
+}
+
+.repository a:hover {
+	color: #e53b30;
+}
+
+.repository p {
+	padding: 0px;
+	margin: 0px;
+	padding-top: 20px;
+}
+
+.repository .repositoryLinks {
+	position: absolute;
+	top: 290px;
+	left: 0px;
+}
+
+.repository .repositoryLinks a {
+	color: #e53b30;
+}
+
+.repository h4 {
+	font-family: 'r-lt', sans-serif;
+	font-weight: normal;
+	color: #272727;
+	font-size: 22px;
+	padding-top: 20px;
+}
+
 
 .repository_s {
 	height: 230px;
