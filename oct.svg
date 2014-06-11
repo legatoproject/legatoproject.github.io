@@ -9,19 +9,20 @@
 <glyph />
 <glyph />
 <glyph unicode="&#xd;" />
-<glyph unicode="&#x2000;" horiz-adv-x="682" />
-<glyph unicode="&#x2001;" horiz-adv-x="1365" />
-<glyph unicode="&#x2002;" horiz-adv-x="682" />
-<glyph unicode="&#x2003;" horiz-adv-x="1365" />
-<glyph unicode="&#x2004;" horiz-adv-x="455" />
-<glyph unicode="&#x2005;" horiz-adv-x="341" />
-<glyph unicode="&#x2006;" horiz-adv-x="227" />
-<glyph unicode="&#x2007;" horiz-adv-x="227" />
-<glyph unicode="&#x2008;" horiz-adv-x="170" />
-<glyph unicode="&#x2009;" horiz-adv-x="273" />
-<glyph unicode="&#x200a;" horiz-adv-x="75" />
-<glyph unicode="&#x202f;" horiz-adv-x="273" />
-<glyph unicode="&#x205f;" horiz-adv-x="341" />
+<glyph unicode="a" d="M256 121v7v1536q0 26 7 47t18.5 34t25 23t27 14t25 6.5t18.5 3.5h7h1280q5 0 13.5 -1t31 -7.5t39 -18.5t30.5 -38.5t14 -62.5v-1536q0 -5 -1 -13.5t-7.5 -31t-18.5 -39t-38.5 -30.5t-62.5 -14h-640v-256l-192 192l-192 -192v256h-256q-26 0 -47 7t-34 18.5t-23 25t-14 27 t-6.5 25t-3.5 18.5zM384 256q0 -5 1 -13.5t7.5 -31t18.5 -39t38.5 -30.5t62.5 -14h128v128h384v-128h512q5 0 13.5 1t31 7.5t39 18.5t30.5 38.5t14 62.5v128h-1280v-128zM640 512h1024v1152h-1024v-1152zM768 640v128h128v-128h-128zM768 896v128h128v-128h-128zM768 1152 v128h128v-128h-128zM768 1408v128h128v-128h-128z" />
+<glyph unicode="&#x2000;" horiz-adv-x="896" />
+<glyph unicode="&#x2001;" horiz-adv-x="1792" />
+<glyph unicode="&#x2002;" horiz-adv-x="896" />
+<glyph unicode="&#x2003;" horiz-adv-x="1792" />
+<glyph unicode="&#x2004;" horiz-adv-x="597" />
+<glyph unicode="&#x2005;" horiz-adv-x="448" />
+<glyph unicode="&#x2006;" horiz-adv-x="298" />
+<glyph unicode="&#x2007;" horiz-adv-x="298" />
+<glyph unicode="&#x2008;" horiz-adv-x="224" />
+<glyph unicode="&#x2009;" horiz-adv-x="358" />
+<glyph unicode="&#x200a;" horiz-adv-x="99" />
+<glyph unicode="&#x202f;" horiz-adv-x="358" />
+<glyph unicode="&#x205f;" horiz-adv-x="448" />
 <glyph unicode="&#x25fc;" horiz-adv-x="500" d="M0 0z" />
 </font>
 </defs></svg> 

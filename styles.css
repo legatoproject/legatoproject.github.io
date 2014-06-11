@@ -46,6 +46,7 @@ html, body {
     margin: 0px;
     padding: 0px;
     height: 100%;
+	-webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -150,11 +151,15 @@ a#sierra-wireless_devzone {
 	padding-top: 35px;
 }
 
-#repositories span.icons {
-	font-family: 'oct', sans-serif;
+#repositories h3:before {
+	position: absolute;
+	top: 42px;
+	left: 360px;
+	font-family: 'oct';
 	font-weight: normal;
 	color: #444;
 	font-size: 36px;
+	content: '\0061';
 }
 
 .repository, .repository_s {
