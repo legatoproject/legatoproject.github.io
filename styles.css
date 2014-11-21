@@ -74,12 +74,12 @@ ul, li {
 	width: 100%;
 	background-color: #f1f1f2;
 	text-align: center;
-	height: 540px;
+	height: 430px;
 	border-top: 5px solid #e53b30;
 	color: #a6a6a6;
 	font-family: 'r-lt', sans-serif;
 	font-weight: normal;
-	font-size: 30px;
+	font-size: 20px;
 }
 
 #top p {
@@ -88,38 +88,31 @@ ul, li {
 	line-height: 35px;
 }
 
+#top a {
+	margin: 0px;
+	padding: 0px;
+	color: #666666;
+}
+
 #brands {
 	position: relative;
 	width: 80%;
-	height: 62px;
-	padding-top: 50px;
-	margin: 50px auto 40px auto;
+	height: 15px;
+	padding-top: 40px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 a#sierra-wireless {
 	position: absolute;
-	top: 0px;
+	top: 20px;
 	left: 0px;
-}
-
-a#sierra-wireless_devzone {
-	display: block;
-	width: 220px;
-	height: 62px;
-	position: relative;
-	margin: -50px auto 0px auto;
-}
-
-#github {
-	position: absolute;
-	top: 0px;
-	right: 50px;
 }
 
 #top h1 {
 	position: relative;
-	margin: 0 auto;
-	width: 500px;
+	margin: auto;
+	width: 400px;
 	height: 117px;
 	text-indent: -9000px;
 	background: url('sierra-wireless_legato_github_legato_logo.png') top left no-repeat;
@@ -130,10 +123,24 @@ a#sierra-wireless_devzone {
 	font-family: 'r-th', sans-serif;
 	font-weight: normal;
 	color: #444;
-	font-size: 60px;
+	font-size: 28px;
 	padding-bottom: 8px;
 }
 
+#h3 {
+	font-family: 'r-th', sans-serif;
+	font-weight: normal;
+	color: #444;
+	font-size: 28px;
+	padding-bottom: 8px;
+}
+top links {
+	font-family: 'r-th', sans-serif;
+	font-weight: normal;
+	color: #444;
+	font-size: 28px;
+	}
+	
 #repositories {
 	position: relative;
 	width: 1000px;
@@ -144,10 +151,10 @@ a#sierra-wireless_devzone {
 #repositories h3 {
 	font-family: 'r-th', sans-serif;
 	font-weight: normal;
-	color: #444;
-	font-size: 36px;
+	color: #000;
+	font-size: 24px;
 	display: block;
-	height: 85px;
+	height: 60px;
 	padding-top: 35px;
 }
 
@@ -158,22 +165,22 @@ a#sierra-wireless_devzone {
 	font-family: 'oct';
 	font-weight: normal;
 	color: #444;
-	font-size: 36px;
+	font-size: 24px;
 	content: '\0061';
 }
 
 .repository, .repository_s {
 	position: relative;
 	float: left;
-	width: 300px;
-	margin-right: 50px;
+	width: 250px;
+	margin-right: 0px;
 }
 
 .repository {
 	height: 400px;
 	text-align: left;
 	font-family: 'l-lt', sans-serif;
-	font-size: 15px;
+	font-size: 18px;
 	color: #8b8b8b;
 }
 
@@ -188,13 +195,15 @@ a#sierra-wireless_devzone {
 .repository p {
 	padding: 0px;
 	margin: 0px;
-	padding-top: 20px;
+	padding-top: 26px;
+	font-size: 16px;
 }
 
 .repository .repositoryLinks {
 	position: absolute;
-	top: 290px;
+	top: 205px;
 	left: 0px;
+	font-size: 15px;
 }
 
 .repository .repositoryLinks a {
@@ -205,7 +214,7 @@ a#sierra-wireless_devzone {
 	font-family: 'r-lt', sans-serif;
 	font-weight: normal;
 	color: #272727;
-	font-size: 22px;
+	font-size: 18px;
 	padding-top: 20px;
 }
 
