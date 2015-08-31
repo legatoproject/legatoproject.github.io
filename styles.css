@@ -144,7 +144,7 @@ top links {
 #repositories {
 	position: relative;
 	width: 1000px;
-	padding-left: 200px;
+	padding-left: 250px;
 	margin: 0 auto;
 	text-align: center;
 }
@@ -157,12 +157,13 @@ top links {
 	display: block;
 	height: 60px;
 	padding-top: 35px;
+	position: center;
 }
 
 #repositories h3:before {
 	position: absolute;
 	top: 42px;
-	left: 360px;
+	left: 500px;
 	font-family: 'oct';
 	font-weight: normal;
 	color: #444;
