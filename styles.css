@@ -158,6 +158,7 @@ top links {
 	height: 60px;
 	padding-top: 35px;
 	position: center;
+	padding-right: 250px;
 }
 
 #repositories h3:before {
