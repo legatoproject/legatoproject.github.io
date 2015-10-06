@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Legato</title>
+	<meta name="description" content="#description" />
+	<meta name="keywords" content="#keywords" />
+	<meta name="robots" content="noindex, nofollow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="resources/images/legato.ico">
+    <link rel="apple-touch-icon" href="#">
+    <link rel="apple-touch-icon" sizes="72x72" href="#">
+    <link rel="apple-touch-icon" sizes="114x114" href="#">
+    <link rel="stylesheet" type="text/css" href="resources/css/style-core.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/shortcode.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/slicknav.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/responsive.css" />
+    
+    <!--[if IE]>
+    <script src="resources/js/html5shiv.js"></script>
+    <script src="resources/js/respond.js"></script>
+    <![endif]-->
+    
+    <script type="text/javascript" src="resources/js/jquery-core.js"></script>
+    <script type="text/javascript" src="resources/js/jquery.flexslider-min.js"></script>
+    <script type="text/javascript" src="resources/js/main.js"></script>
+    <script>
+      $(document).ready(function(){
+		$("#menu-trigger").click(function() {
+			$("#top")[this.opened ? "removeClass" : "addClass"]("menu-open");
+			$(this)[this.opened ? "removeClass" : "addClass"]("trigger-open");
+			this.opened = !this.opened;
+	    });
+		
+		$("#top a").click(function() {
+	        $("#top").removeClass("menu-open");
+			$("#menu-trigger").removeClass("trigger-open").get(0).opened = false;
+			
+	    });
+		
+      });
+    </script>
+    
+</head>
+<body>
+    <div class="wrapper">
+    	<div id="menu-trigger" class="fa fa-bars"></div>
+        <div id="top">
+            <header>
+                <h1><a title="back to top" href="#introduction" class="navlink">Legato</a></h1>
+                <nav>
+                    <a href="#" class="navlink">Legato</a>
+                </nav>
+            </header>
+        </div>
+        <div id="line-home" class="line-full line-center">	
+            <div class="line-banner-full flexslider" style="border:0px; margin:0px;">
+                <ul id="slides" class="slides" style="position: relative; min-height: 500px">
+                
+                    <!--slide 01-->
+                    <li class="line-cover line-item-height slide_01">
+                        <div class="line-hello line-middle">
+                            <h2 data-scrollreveal="enter top over 0.5s after 0.3s" data-sr-init="true" data-sr-complete="true">
+                                IoT Development Swiss Knife
+                            </h2>
+                            <h4 data-scrollreveal="enter top over 0.5s after 0.3s" data-sr-init="true" data-sr-complete="true">
+                                An open source Linux-based embedded platform designed to simplify connected IoT application development 
+                            </h4>
+                        </div>
+                    </li>
+                    <!--slide 01-->
+                    
+                    <!--slide 02-->
+                    <li class="line-cover line-item-height slide_02 flex-active-slide">
+                        <div class="line-hello line-middle">
+                            <h2 data-scrollreveal="enter top over 0.5s after 0.3s" data-sr-init="true" data-sr-complete="true">
+                                Legato news #01
+                            </h2>
+                            <h4 data-scrollreveal="enter top over 0.5s after 0.3s" data-sr-init="true" data-sr-complete="true">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />Nunc non rhoncus dui, eu dignissim nibh. Suspendisse eu diam sem.
+                            </h4>
+                            <a href="#" class="line-btn">Details</a>
+                        </div>
+                    </li>
+                    <!--slide 02-->
+                    
+                    <!--slide 03-->
+                    <li class="line-cover line-item-height slide_03 flex-active-slide">
+                        <div class="line-hello line-middle">
+                            <h2 data-scrollreveal="enter top over 0.5s after 0.3s" data-sr-init="true" data-sr-complete="true">
+                                Legato news #02
+                            </h2>
+                            <h4 data-scrollreveal="enter top over 0.5s after 0.3s" data-sr-init="true" data-sr-complete="true">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />Nunc non rhoncus dui, eu dignissim nibh. Suspendisse eu diam sem.
+                            </h4>
+                            <a href="#" class="line-btn">Details</a>
+                        </div>
+                    </li>
+                    <!--slide 03-->
+                    
+                    <!--slide 04-->
+                    <li class="line-cover line-item-height slide_04 flex-active-slide">
+                        <div class="line-hello line-middle">
+                            <h2 data-scrollreveal="enter top over 0.5s after 0.3s" data-sr-init="true" data-sr-complete="true">
+                                Legato news #03
+                            </h2>
+                            <h4 data-scrollreveal="enter top over 0.5s after 0.3s" data-sr-init="true" data-sr-complete="true">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />Nunc non rhoncus dui, eu dignissim nibh. Suspendisse eu diam sem.
+                            </h4>
+                            <a href="#" class="line-btn">Details</a>
+                        </div>
+                    </li>
+                    <!--slide 04-->
+                                                        
+                </ul>
+                <ul class="flex-direction-nav">
+                    <li>
+                        <a class="flex-prev" href="index.html#">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex-next" href="index.html#">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+	</div>
+</body>
+</html>
