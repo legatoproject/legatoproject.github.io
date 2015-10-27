@@ -240,7 +240,7 @@ div.wrapper {
 
 h1 a {
     position: absolute;
-    right: 15%;
+    right: 4%;
     text-indent: -9000px;
     top: 25px;
     width: 250px;
@@ -361,7 +361,7 @@ ul.slides a {
 }
 
 .content {
-	padding: 0 15% 25px 15%;
+	padding: 0 4% 25px 4%;
 }
 
 .content h2 {
@@ -373,7 +373,7 @@ ul.slides a {
 
 div.usecases {
 	position: relative;
-	padding: 1% 15% 0 15%;
+	padding: 1% 0 0 1%;
 	background-color: white;
 }
 
