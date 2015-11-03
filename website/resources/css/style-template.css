@@ -180,11 +180,11 @@ nav a:hover, nav a.link-selected {
 }
 
 #topMenu {
-	position: fixed;
+	position: absolute;
 	top: 50px;
 	left: 0;
 	width: 100%;
-	z-index: 1100;
+	z-index: 900;
 	height: 100px;
 	box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
 }
