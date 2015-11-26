@@ -254,9 +254,10 @@ nav a:hover, nav a.link-selected {
 	width: 150px;
 	z-index: 500;
 	height: 100%;
-	background-color: #fff;
 	padding: 175px 30px 150px 30px;
 	font-size: 13px;
+	background: url('../images/legato_logo-grey.png') no-repeat 64px 72px #fff;
+	background-size: 72px;
 }
 
 
