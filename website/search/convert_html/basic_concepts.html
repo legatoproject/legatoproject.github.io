@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Legato - Documentation</title>
+<meta content="#description" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="resources/images/legato.ico" rel="shortcut icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="resources/css/style-template.css" rel="stylesheet" type="text/css" />
+<link href="resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<link href="resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<link href="resources/css/navtree.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+    <script src="resources/js/html5shiv.js"></script>
+    <script src="resources/js/respond.js"></script>
+    <![endif]-->
+<script src="resources/js/jquery-core.js" type="text/javascript"></script>
+<script src="resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="resources/js/data.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="wrapper documentation">
+<div id="top">
+<header>
+<h1><a class="navlink" href="#" title="back to Legotao documentation homepage">Legato</a></h1>
+<nav>
+<a class="link-selected" href="documentation.html">Documentation</a>
+<a href="downloads.html">Downloads</a>
+<a href="community.html">Community</a>
+<a href="prototyping-tools.html">Prototyping Tools</a>
+<a href="#"><i class="fa fa-search"></i> Search</a>
+</nav>
+</header>
+</div>
+<div id="topMenu">
+<h2>Documentation</h2>
+<nav>
+<a id="Guides">Guides</a>
+<a id="Tutorial">Tutorial</a>
+<a id="Tools">Service API</a>
+<a href="#">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1" style="display:visible;"></div>
+<div id="tree2" style="display:none;">tree2</div>
+<div id="tree3" style="display:none;">tree3</div>
+</div>
+<div class="content">
+<div class="textblock"><p><a class="el" href="basic_runtime_arch.html">Runtime Architecture</a> <br />
+<a class="el" href="basic_security.html">Security</a> <br />
+<a class="el" href="basic_components.html">Components</a> <br />
+<a class="el" href="basic_interfaces.html">Interfaces</a> <br />
+<a class="el" href="basic_config.html">Configuration</a> <br />
+<a class="el" href="basic_events.html">Event-driven Programming</a> <br />
+<a class="el" href="basic_pwr_mgmt.html">Power Management</a> <br />
+<a class="el" href="basic_i_p_c.html">Inter-process Communication</a> <br />
+<a class="el" href="basic_internationalization.html">Internationalization</a> <br />
+<a class="el" href="basic_log.html">Logging</a> <br />
+<a class="el" href="basic_l_w_m2_m_data.html">LWM2M Data</a></p>
+<p><a class="el" href="about_docs_glossary.html">Glossary</a> <br />
+</p>
+<h2>Overview</h2>
+<p>Legato is designed to make developing component-based software for embedded devices in the Internet-of-things (IoT) easier, faster, and less expensive.</p>
+<div class="image">
+<img alt="LegatoPlatform.png" src="LegatoPlatform.png" />
+</div>
+<hr />
+<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<div id="footer">
+        	Copyright © Sierra Wireless Inc. Use of this work is subject to license.
+        </div>
+</div>
+</body>
+<script>
+	$("#Tutorial").bind("click", function(){
+    $("#tree1").hide();
+    $("#tree2").show();
+    $("#tree3").hide();
+});
+
+	$("#Guides").bind("click", function(){
+    $("#tree1").show();
+    $("#tree2").hide();
+    $("#tree3").hide();
+});
+	
+	$("#Tools").bind("click", function(){
+    $("#tree1").hide();
+    $("#tree2").hide();
+    $("#tree3").show();
+});
+
+
+</script>
+</html>

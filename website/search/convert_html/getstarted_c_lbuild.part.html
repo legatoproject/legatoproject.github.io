@@ -1,0 +1,19 @@
+<div class="contents">
+<div class="textblock"><p>After you've installed the source files, you build the Legato framework for your host and target.</p>
+<h1><a class="anchor" id="getstartedCLbuild_makeLegato"></a>
+Make Legato</h1>
+<p><b>cd</b> to your Legato directory</p>
+<p><b>Run</b> <code>make</code>.</p>
+<p>These are <a class="el" href="getstarted_host_dirs.html">Host Directories</a> installed.<br />
+</p>
+<h1><a class="anchor" id="getstartedCLbuild_binlegs"></a>
+bin/legs</h1>
+<p>To set the your Legato environment, you must run <code>bin/legs</code> <em>every</em> time you open a new shell:</p>
+<p><b>Run</b> <code>$ bin/legs </code></p>
+<h1><a class="anchor" id="getstartedCLbuild_makeTarget"></a>
+Make for Target</h1>
+<p><b>Run</b> <code>make</code> to build the framework and AirVantage agent for the target (substitute <code>ar7</code> or <code>wp7</code> if building those targets): </p><div class="fragment"><div class="line">$ make wp85 </div>
+</div><!-- fragment --><p>Or run this to build the framework for the target without the AirVantage agent: </p><div class="fragment"><div class="line">$ make wp85 INCLUDE_AIRVANTAGE=0 </div>
+</div><!-- fragment --><hr />
+<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>

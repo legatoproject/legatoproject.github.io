@@ -1,0 +1,85 @@
+<div class="contents">
+<a href="app_smack__interface_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span> <span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span> <span class="comment"> * ====================== WARNING ======================</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span> <span class="comment"> *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span> <span class="comment"> * THE CONTENTS OF THIS FILE HAVE BEEN AUTO-GENERATED.</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span> <span class="comment"> * DO NOT MODIFY IN ANY WAY.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span> <span class="comment"> *</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span> <span class="comment"> * ====================== WARNING ======================</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span> <span class="comment"> */</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span> <span class="preprocessor">#ifndef APPSMACK_INTERFACE_H_INCLUDE_GUARD</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span> <span class="preprocessor">#define APPSMACK_INTERFACE_H_INCLUDE_GUARD</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span> <span class="preprocessor">#include "<a class="code" href="legato_8h.html">legato.h</a>"</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span> <span class="comment">// Interface specific includes</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span> <span class="preprocessor">#include "<a class="code" href="le__limit__interface_8h.html">le_limit_interface.h</a>"</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span> <span class="keywordtype">void</span> <a class="code" href="app_smack__interface_8h.html#ad3e19b9a4a9634d3c12ef9c40a036567">appSmack_ConnectService</a></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span> (</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>     <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span> );</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span> <span class="keywordtype">void</span> <a class="code" href="app_smack__interface_8h.html#a5106468b3ff13d029ed868c13e297c7a">appSmack_DisconnectService</a></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span> (</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>     <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span> );</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="app_smack__interface_8h.html#a85a91187e19bedb818fc29ef4bba1722">   66</a></span> <span class="preprocessor">#define APPSMACK_LABEL_LEN 23</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="app_smack__interface_8h.html#a333d2301d2d23e6b74bd6bb9b383aa3d">   74</a></span> <span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span> {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>     APPSMACK_ACCESS_FLAG_READ = 0x1,</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>     APPSMACK_ACCESS_FLAG_WRITE = 0x2,</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>     APPSMACK_ACCESS_FLAG_EXECUTE = 0x4</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span> }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span> <a class="code" href="app_smack__interface_8h.html#a333d2301d2d23e6b74bd6bb9b383aa3d">appSmack_AccessFlags_t</a>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span> <span class="keywordtype">void</span> <a class="code" href="app_smack__interface_8h.html#adb46c9612a7e4af419e8144e6567c2fd">appSmack_GetLabel</a></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span> (</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>     <span class="keyword">const</span> <span class="keywordtype">char</span>* appName,</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>     <span class="keywordtype">char</span>* label,</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>     <span class="keywordtype">size_t</span> labelNumElements</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span> );</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span> <span class="keywordtype">void</span> <a class="code" href="app_smack__interface_8h.html#aa9283290ed50347a040dcd88997088ae">appSmack_GetAccessLabel</a></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span> (</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>     <span class="keyword">const</span> <span class="keywordtype">char</span>* appName,</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>     <a class="code" href="app_smack__interface_8h.html#a333d2301d2d23e6b74bd6bb9b383aa3d">appSmack_AccessFlags_t</a> accessMode,</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>     <span class="keywordtype">char</span>* label,</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>     <span class="keywordtype">size_t</span> labelNumElements</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span> );</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span> <span class="preprocessor">#endif // APPSMACK_INTERFACE_H_INCLUDE_GUARD</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="ttc" id="app_smack__interface_8h_html_adb46c9612a7e4af419e8144e6567c2fd"><div class="ttname"><a href="app_smack__interface_8h.html#adb46c9612a7e4af419e8144e6567c2fd">appSmack_GetLabel</a></div><div class="ttdeci">void appSmack_GetLabel(const char *appName, char *label, size_t labelNumElements)</div></div>
+<div class="ttc" id="le__limit__interface_8h_html"><div class="ttname"><a href="le__limit__interface_8h.html">le_limit_interface.h</a></div></div>
+<div class="ttc" id="legato_8h_html"><div class="ttname"><a href="legato_8h.html">legato.h</a></div></div>
+<div class="ttc" id="app_smack__interface_8h_html_a333d2301d2d23e6b74bd6bb9b383aa3d"><div class="ttname"><a href="app_smack__interface_8h.html#a333d2301d2d23e6b74bd6bb9b383aa3d">appSmack_AccessFlags_t</a></div><div class="ttdeci">appSmack_AccessFlags_t</div><div class="ttdef"><b>Definition:</b> appSmack_interface.h:74</div></div>
+<div class="ttc" id="app_smack__interface_8h_html_aa9283290ed50347a040dcd88997088ae"><div class="ttname"><a href="app_smack__interface_8h.html#aa9283290ed50347a040dcd88997088ae">appSmack_GetAccessLabel</a></div><div class="ttdeci">void appSmack_GetAccessLabel(const char *appName, appSmack_AccessFlags_t accessMode, char *label, size_t labelNumElements)</div></div>
+<div class="ttc" id="app_smack__interface_8h_html_a5106468b3ff13d029ed868c13e297c7a"><div class="ttname"><a href="app_smack__interface_8h.html#a5106468b3ff13d029ed868c13e297c7a">appSmack_DisconnectService</a></div><div class="ttdeci">void appSmack_DisconnectService(void)</div></div>
+<div class="ttc" id="app_smack__interface_8h_html_ad3e19b9a4a9634d3c12ef9c40a036567"><div class="ttname"><a href="app_smack__interface_8h.html#ad3e19b9a4a9634d3c12ef9c40a036567">appSmack_ConnectService</a></div><div class="ttdeci">void appSmack_ConnectService(void)</div></div>
+</div><!-- fragment --></div>

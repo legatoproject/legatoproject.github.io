@@ -1,0 +1,40 @@
+<div class="contents">
+<div class="textblock"><p><a class="el" href="le__gpio__interface_8h.html">API Reference</a></p>
+<hr />
+<p>Used by apps to control general-purpose digital input/output pins.</p>
+<p>A GPIO pin typically has one or more of the following features:</p><ul>
+<li>Can be configured as an input pin or an output pin.</li>
+<li>Can have an internal pull-up resistor or pull-down resistor enabled, or neither.</li>
+<li>If an output, can be push-pull or open-drain.</li>
+<li>If an input, can trigger an "interrupt" (asynchronous notification of state change).</li>
+</ul>
+<p>Output pins can be driven in three different modes:</p><ul>
+<li>Push-pull: A transistor connects to the supply and another transistor connects to ground (only one is operated at a time)</li>
+<li>Tri-state: Same as push-pull, with an added high-impedance (high Z) state, in which the pin is essentially disconnected from both ground and supply.</li>
+<li>Open drain: A transistor connects to ground and nothing else. Can only be used to pull low.</li>
+</ul>
+<p>In addition, pins have a "polarity".</p><ul>
+<li>An <b> active-high </b> polarity pin is read/written as a digital 1 (true) when its voltage is "high" and 0 (false) when its voltage is "low" (grounded).</li>
+<li>An <b> active-low </b> pin is read/written as a digital 1 (true) when its voltage is "low" (grounded) and 0 (false) when its voltage is "high".</li>
+</ul>
+<p>The following functions are used to configure the GPIO pin:</p><ul>
+<li>SetInput() - Configure as an input pin.</li>
+<li>SetPushPullOutput() - Configure as push-pull output pin (can drive high or low).</li>
+<li>SetTriStateOutput() - Configure as tri-state output pin (can drive high or low or neither).</li>
+<li>SetOpenDrainOutput() - Configure as open-drain output pin (only pulls low).</li>
+<li>EnablePullUp() - Enables the internal pull-up resistor (and disables the pull-down).</li>
+<li>EnablePullDown() - Enables the internal pull-down resistor (and disables the pull-up).</li>
+<li>DisableResistors() - Disables the internal pull-up/down resistors.</li>
+</ul>
+<p>To set the level of an output pin, call Activate(), Deactivate(), or SetHighZ().</p>
+<p>To poll the value of an input pin, call Read().</p>
+<p>Use SetChangeCallback() to register a notification callback function to be called when the state of an input pin changes.</p>
+<p>Each GPIO pin is accessed through a single IPC service. This makes it possible to use bindings to control which GPIO pins each app is allowed to access. It also simplifies the API by removing the need to specify which pin is desired and allows the pins to be named differently in the client and the server, so the client can be more portable.</p>
+<p>Binding example:</p>
+<pre class="fragment">bindings:
+{
+    ui.frontPanel.powerLed -> cf3.pin22
+}
+</pre><hr />
+<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>

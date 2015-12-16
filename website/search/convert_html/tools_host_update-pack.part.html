@@ -1,0 +1,33 @@
+<div class="contents">
+<div class="textblock"><h1>NAME</h1>
+<p><b>update-pack</b> - Create an update package for a target device.</p>
+<h1>SYNOPSIS</h1>
+<p><code>update-pack TARGET OPTIONS</code><br />
+<code>update-pack -d UPDATE_FILE</code><br />
+<code>update-pack -h</code><br />
+<code>update-pack –help</code><br />
+<code>update-pack -v</code><br />
+</p>
+<h1>DESCRIPTION</h1>
+<p>Creates a package containing update instructions and/or content to be installed on a target device.</p>
+<p>TARGET is the type of target device. The following targets are supported: ar7 ar86 wp7 wp85 virt</p>
+<p>When creating an update pack for a target device,</p>
+<p>Options used when creating an update pack:</p>
+<p>-ai APP_FILE Add an application to the update for installation on the target.</p>
+<p>-ar APP_NAME Specify an application to be removed from the target.</p>
+<p>-m FIRMWARE_FILE Add a modem firmware image to the update for installation on the target.</p>
+<p>-o FILE_NAME Specify output update file name. If not specified, default.update is used. If "-" is specified, then output will be sent to the standard output stream.</p>
+<p>Other options:</p>
+<p>-v Prints the Legato framework version.</p>
+<p>-d UPDATE_FILE Prints an update file's manifest to the standard output stream.</p>
+<p>-h –help Print this help text.</p>
+<p>Examples:</p>
+<h1>Create an update package helloWorld.update that installs helloWorld app on an AR7xxx.</h1>
+<p>update-pack ar7 -o helloWorld.update -ai helloWorld.ar7</p>
+<h1>Create update package which will install helloWorld and remove OldApp on an AR7XXX.</h1>
+<p>update-pack ar7 -o InstallRemove.update -ai helloWorld.ar7 -ar OldApp</p>
+<h1>Display manifest information from an update file.</h1>
+<p>update-pack -d helloWorld.update</p>
+<hr />
+<p> Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>

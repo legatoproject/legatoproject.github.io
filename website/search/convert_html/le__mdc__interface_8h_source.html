@@ -1,0 +1,817 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Legato - Documentation</title>
+<meta content="#description" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="resources/images/legato.ico" rel="shortcut icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="resources/css/style-template.css" rel="stylesheet" type="text/css" />
+<link href="resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<link href="resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<link href="resources/css/navtree.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+    <script src="resources/js/html5shiv.js"></script>
+    <script src="resources/js/respond.js"></script>
+    <![endif]-->
+<script src="resources/js/jquery-core.js" type="text/javascript"></script>
+<script src="resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="resources/js/data.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="wrapper documentation">
+<div id="top">
+<header>
+<h1><a class="navlink" href="#" title="back to Legotao documentation homepage">Legato</a></h1>
+<nav>
+<a class="link-selected" href="documentation.html">Documentation</a>
+<a href="downloads.html">Downloads</a>
+<a href="community.html">Community</a>
+<a href="prototyping-tools.html">Prototyping Tools</a>
+<a href="#"><i class="fa fa-search"></i> Search</a>
+</nav>
+</header>
+</div>
+<div id="topMenu">
+<h2>Documentation</h2>
+<nav>
+<a id="Guides">Guides</a>
+<a id="Tutorial">Tutorial</a>
+<a id="Tools">Service API</a>
+<a href="#">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1" style="display:visible;"></div>
+<div id="tree2" style="display:none;">tree2</div>
+<div id="tree3" style="display:none;">tree3</div>
+</div>
+<div class="content">
+<a href="le__mdc__interface_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span> <span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span> <span class="comment"> * ====================== WARNING ======================</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span> <span class="comment"> *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span> <span class="comment"> * THE CONTENTS OF THIS FILE HAVE BEEN AUTO-GENERATED.</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span> <span class="comment"> * DO NOT MODIFY IN ANY WAY.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span> <span class="comment"> *</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span> <span class="comment"> * ====================== WARNING ======================</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span> <span class="comment"> */</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span> <span class="preprocessor">#ifndef LE_MDC_INTERFACE_H_INCLUDE_GUARD</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span> <span class="preprocessor">#define LE_MDC_INTERFACE_H_INCLUDE_GUARD</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span> <span class="preprocessor">#include "<a class="code" href="legato_8h.html">legato.h</a>"</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span> <span class="keywordtype">void</span> <a class="code" href="le__mdc__interface_8h.html#a2a841ce582ce97f62df6334717b49fcb">le_mdc_ConnectService</a></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span> (</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>     <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span> );</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span> </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span> <span class="keywordtype">void</span> <a class="code" href="le__mdc__interface_8h.html#a3ce7efc114de8b91a7ad61cb6f6f47c8">le_mdc_DisconnectService</a></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span> (</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>     <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span> );</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ad097b347b1504e36f68cded881fe2d96">  155</a></span> <span class="preprocessor">#define LE_MDC_INTERFACE_NAME_MAX_LEN 10</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#a33ebf9afd03f0ffc91a80c32c15afb42">  163</a></span> <span class="preprocessor">#define LE_MDC_INTERFACE_NAME_MAX_BYTES 11</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span> </div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span> </div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ae85dfc41758d1886dc006e01ea3e08f4">  171</a></span> <span class="preprocessor">#define LE_MDC_IPV4_ADDR_MAX_LEN 15</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span> </div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span> </div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#a2b8d841986d6cfefcd7a86201b236740">  179</a></span> <span class="preprocessor">#define LE_MDC_IPV4_ADDR_MAX_BYTES 16</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span> </div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span> </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00187"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#a69a4563aa097e65d26b54c7a0f6dabfb">  187</a></span> <span class="preprocessor">#define LE_MDC_IPV6_ADDR_MAX_LEN 45</span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span> </div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span> </div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ae6335030b88ae6cb9fd73199a16f7b5f">  195</a></span> <span class="preprocessor">#define LE_MDC_IPV6_ADDR_MAX_BYTES 46</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span> </div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span> </div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#a94003147532b5c18b83cac9a4e1eb054">  203</a></span> <span class="preprocessor">#define LE_MDC_APN_NAME_MAX_LEN 100</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span> </div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span> </div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ac0411dbd4cc176274efb1d2cb3be3cce">  211</a></span> <span class="preprocessor">#define LE_MDC_APN_NAME_MAX_BYTES 101</span></div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span> </div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span> </div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ad246bc94c8c69c08d2765cc0570aa3cf">  219</a></span> <span class="preprocessor">#define LE_MDC_USER_NAME_MAX_LEN 64</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span> </div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span> </div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00227"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#a8048b6b33162159555c83da28719efa1">  227</a></span> <span class="preprocessor">#define LE_MDC_USER_NAME_MAX_BYTES 65</span></div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span> </div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span> </div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00235"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#a37643c42ade5141861f6c19c17378c2f">  235</a></span> <span class="preprocessor">#define LE_MDC_PASSWORD_NAME_MAX_LEN 100</span></div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span> </div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span> </div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00243"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#a97f368b52546916bf8f2e697872d00bd">  243</a></span> <span class="preprocessor">#define LE_MDC_PASSWORD_NAME_MAX_BYTES 101</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span> </div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span> </div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00251"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#abf72eaa8891f7591477e229bb4ad5723">  251</a></span> <span class="preprocessor">#define LE_MDC_DEFAULT_PROFILE -1</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span> </div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span> </div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00259"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">  259</a></span> <span class="keyword">typedef</span> <span class="keyword">struct </span>le_mdc_Profile* <a class="code" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a>;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span> </div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span> </div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00267"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527e">  267</a></span> <span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span> {</div>
+<div class="line"><a name="l00269"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527eaa74ef22bfd51f6bec5d3521080f9537a">  269</a></span>     <a class="code" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527eaa74ef22bfd51f6bec5d3521080f9537a">LE_MDC_DATA_BEARER_TECHNOLOGY_UNKNOWN</a>,</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span> </div>
+<div class="line"><a name="l00272"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527ea94176f1b8b893b313de18327d7adaec3">  272</a></span>     <a class="code" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527ea94176f1b8b893b313de18327d7adaec3">LE_MDC_DATA_BEARER_TECHNOLOGY_GSM</a>,</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span> </div>
+<div class="line"><a name="l00275"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527eab66accc8a4866e53319773962d328d33">  275</a></span>     <a class="code" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527eab66accc8a4866e53319773962d328d33">LE_MDC_DATA_BEARER_TECHNOLOGY_GPRS</a>,</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span> </div>
+<div class="line"><a name="l00278"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527ea7a6d420354b58854ef51236c9dd5ffac">  278</a></span>     <a class="code" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527ea7a6d420354b58854ef51236c9dd5ffac">LE_MDC_DATA_BEARER_TECHNOLOGY_EGPRS</a>,</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span> </div>
+<div class="line"><a name="l00281"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527eaef4c110d2e9f49244e50deb1160a76ba">  281</a></span>     <a class="code" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527eaef4c110d2e9f49244e50deb1160a76ba">LE_MDC_DATA_BEARER_TECHNOLOGY_WCDMA</a>,</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span> </div>
+<div class="line"><a name="l00284"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527ea9cf6c01fefb6d34d9146853914464b89">  284</a></span>     <a class="code" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527ea9cf6c01fefb6d34d9146853914464b89">LE_MDC_DATA_BEARER_TECHNOLOGY_HSPA</a>,</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span> </div>
+<div class="line"><a name="l00287"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527ea90f0d2e99bae1f7955349d3c69635612">  287</a></span>     <a class="code" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527ea90f0d2e99bae1f7955349d3c69635612">LE_MDC_DATA_BEARER_TECHNOLOGY_HSPA_PLUS</a>,</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span> </div>
+<div class="line"><a name="l00290"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527eafb22fb13c85a703fd541854d55d84cbd">  290</a></span>     <a class="code" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527eafb22fb13c85a703fd541854d55d84cbd">LE_MDC_DATA_BEARER_TECHNOLOGY_DC_HSPA_PLUS</a>,</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span> </div>
+<div class="line"><a name="l00293"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527ead74d1b39916f65f547b3c3a263a8eb4d">  293</a></span>     <a class="code" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527ead74d1b39916f65f547b3c3a263a8eb4d">LE_MDC_DATA_BEARER_TECHNOLOGY_LTE</a>,</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span> </div>
+<div class="line"><a name="l00296"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527eaf8c16113115e99ef7214284f51895634">  296</a></span>     <a class="code" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527eaf8c16113115e99ef7214284f51895634">LE_MDC_DATA_BEARER_TECHNOLOGY_TD_SCDMA</a>,</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span> </div>
+<div class="line"><a name="l00299"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527eaf1a513b9966ddce01044f75470419f81">  299</a></span>     <a class="code" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527eaf1a513b9966ddce01044f75470419f81">LE_MDC_DATA_BEARER_TECHNOLOGY_CDMA2000_1X</a>,</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span> </div>
+<div class="line"><a name="l00302"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527eae01ab4b9a842cfbc2eb44abcddd75ff4">  302</a></span>     <a class="code" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527eae01ab4b9a842cfbc2eb44abcddd75ff4">LE_MDC_DATA_BEARER_TECHNOLOGY_CDMA2000_EVDO</a>,</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span> </div>
+<div class="line"><a name="l00305"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527ea27fc297fc07b683df6eb64cdd017a79b">  305</a></span>     <a class="code" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527ea27fc297fc07b683df6eb64cdd017a79b">LE_MDC_DATA_BEARER_TECHNOLOGY_CDMA2000_EVDO_REVA</a>,</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span> </div>
+<div class="line"><a name="l00308"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527eaff19a89df5659dfb03cf054d7d4f464b">  308</a></span>     <a class="code" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527eaff19a89df5659dfb03cf054d7d4f464b">LE_MDC_DATA_BEARER_TECHNOLOGY_CDMA2000_EHRPD</a></div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span> }</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span> <a class="code" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527e">le_mdc_DataBearerTechnology_t</a>;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span> </div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span> </div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00319"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#a85721ec6046140c2f87c23f877dce247">  319</a></span> <span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span> {</div>
+<div class="line"><a name="l00321"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#a85721ec6046140c2f87c23f877dce247a590fd5c933c3751e42053f996d530987">  321</a></span>     <a class="code" href="le__mdc__interface_8h.html#a85721ec6046140c2f87c23f877dce247a590fd5c933c3751e42053f996d530987">LE_MDC_PDP_UNKNOWN</a>,</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span> </div>
+<div class="line"><a name="l00324"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#a85721ec6046140c2f87c23f877dce247af550adf5bcecb680294f92f28496a830">  324</a></span>     <a class="code" href="le__mdc__interface_8h.html#a85721ec6046140c2f87c23f877dce247af550adf5bcecb680294f92f28496a830">LE_MDC_PDP_IPV4</a>,</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span> </div>
+<div class="line"><a name="l00327"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#a85721ec6046140c2f87c23f877dce247ac2d2a34bad2d18be1ea8facef0effad0">  327</a></span>     <a class="code" href="le__mdc__interface_8h.html#a85721ec6046140c2f87c23f877dce247ac2d2a34bad2d18be1ea8facef0effad0">LE_MDC_PDP_IPV6</a>,</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span> </div>
+<div class="line"><a name="l00330"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#a85721ec6046140c2f87c23f877dce247a4427db8ba7a89ebf66c7b62eacfc8275">  330</a></span>     <a class="code" href="le__mdc__interface_8h.html#a85721ec6046140c2f87c23f877dce247a4427db8ba7a89ebf66c7b62eacfc8275">LE_MDC_PDP_IPV4V6</a></div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span> }</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span> <a class="code" href="le__mdc__interface_8h.html#a85721ec6046140c2f87c23f877dce247">le_mdc_Pdp_t</a>;</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span> </div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span> </div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00341"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ae9758eecfab89fbc1bc01341393a7723">  341</a></span> <span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span> {</div>
+<div class="line"><a name="l00343"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ae9758eecfab89fbc1bc01341393a7723a10fb016f4d6f7a7e893cf66846c24de2">  343</a></span>     <a class="code" href="le__mdc__interface_8h.html#ae9758eecfab89fbc1bc01341393a7723a10fb016f4d6f7a7e893cf66846c24de2">LE_MDC_AUTH_NONE</a>,</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span> </div>
+<div class="line"><a name="l00346"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ae9758eecfab89fbc1bc01341393a7723a151065be441aa8f065d0ead3d739b6f0">  346</a></span>     <a class="code" href="le__mdc__interface_8h.html#ae9758eecfab89fbc1bc01341393a7723a151065be441aa8f065d0ead3d739b6f0">LE_MDC_AUTH_PAP</a>,</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span> </div>
+<div class="line"><a name="l00349"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ae9758eecfab89fbc1bc01341393a7723ae93a464a7ee2f31346aa01676afc7054">  349</a></span>     <a class="code" href="le__mdc__interface_8h.html#ae9758eecfab89fbc1bc01341393a7723ae93a464a7ee2f31346aa01676afc7054">LE_MDC_AUTH_CHAP</a></div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span> }</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span> <a class="code" href="le__mdc__interface_8h.html#ae9758eecfab89fbc1bc01341393a7723">le_mdc_Auth_t</a>;</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span> </div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span> </div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00360"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#a0727e543d0394422963c8d6297947333">  360</a></span> <span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span> {</div>
+<div class="line"><a name="l00362"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#a0727e543d0394422963c8d6297947333a6d11ee963528c79d73a269eb85202ba7">  362</a></span>     <a class="code" href="le__mdc__interface_8h.html#a0727e543d0394422963c8d6297947333a6d11ee963528c79d73a269eb85202ba7">LE_MDC_DISCONNECTED</a>,</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span> </div>
+<div class="line"><a name="l00365"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#a0727e543d0394422963c8d6297947333a06c37ceba786a0a786008571f9ead8d4">  365</a></span>     <a class="code" href="le__mdc__interface_8h.html#a0727e543d0394422963c8d6297947333a06c37ceba786a0a786008571f9ead8d4">LE_MDC_AUTHENTICATING</a>,</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span> </div>
+<div class="line"><a name="l00368"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#a0727e543d0394422963c8d6297947333a0a8a2113935b881b76c59b94cf7223b8">  368</a></span>     <a class="code" href="le__mdc__interface_8h.html#a0727e543d0394422963c8d6297947333a0a8a2113935b881b76c59b94cf7223b8">LE_MDC_CONNECTED</a>,</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span> </div>
+<div class="line"><a name="l00371"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#a0727e543d0394422963c8d6297947333a7a58a20c7df2b0c380ff0b819175044b">  371</a></span>     <a class="code" href="le__mdc__interface_8h.html#a0727e543d0394422963c8d6297947333a7a58a20c7df2b0c380ff0b819175044b">LE_MDC_SUSPENDING</a>,</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span> </div>
+<div class="line"><a name="l00374"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#a0727e543d0394422963c8d6297947333a2a61bb66c6afff9fca4957e856d48bda">  374</a></span>     <a class="code" href="le__mdc__interface_8h.html#a0727e543d0394422963c8d6297947333a2a61bb66c6afff9fca4957e856d48bda">LE_MDC_INCOMING</a></div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span> }</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span> <a class="code" href="le__mdc__interface_8h.html#a0727e543d0394422963c8d6297947333">le_mdc_ConState_t</a>;</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span> </div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span> </div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00385"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17">  385</a></span> <span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span> {</div>
+<div class="line"><a name="l00387"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a4b0bf3c47de146dfb256c8a7d2555008">  387</a></span>     <a class="code" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a4b0bf3c47de146dfb256c8a7d2555008">LE_MDC_DISC_NO_SERVICE</a>,</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span> </div>
+<div class="line"><a name="l00390"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17ad74d5631833f877116b54301f4b551d2">  390</a></span>     <a class="code" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17ad74d5631833f877116b54301f4b551d2">LE_MDC_DISC_OPERATOR_DETERMINED_BARRING</a>,</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span> </div>
+<div class="line"><a name="l00393"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17af69c8c7dab5a8569cb84aa1c55e199f0">  393</a></span>     <a class="code" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17af69c8c7dab5a8569cb84aa1c55e199f0">LE_MDC_DISC_INSUFFICIENT_MBMS_CAPABILITIES</a>,</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span> </div>
+<div class="line"><a name="l00396"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a7cddd67daef05f99316bf2de04a5bb62">  396</a></span>     <a class="code" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a7cddd67daef05f99316bf2de04a5bb62">LE_MDC_DISC_LLC_SNDCP_FAILURE</a>,</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span> </div>
+<div class="line"><a name="l00399"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17ab4979cca494637abc973e10ad5f18865">  399</a></span>     <a class="code" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17ab4979cca494637abc973e10ad5f18865">LE_MDC_DISC_INSUFFICIENT_RESOURCES</a>,</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span> </div>
+<div class="line"><a name="l00402"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17aa2f50c19fd13a0900994849ca92d2125">  402</a></span>     <a class="code" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17aa2f50c19fd13a0900994849ca92d2125">LE_MDC_DISC_MISSING_OR_UNKNOWN_APN</a>,</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span> </div>
+<div class="line"><a name="l00405"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17aa53f88c6058ceffa22451433657bf182">  405</a></span>     <a class="code" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17aa53f88c6058ceffa22451433657bf182">LE_MDC_DISC_UNKNOWN_PDP_ADDR_OR_TYPE</a>,</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span> </div>
+<div class="line"><a name="l00408"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17afe4e899719154b0952108c03748aed86">  408</a></span>     <a class="code" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17afe4e899719154b0952108c03748aed86">LE_MDC_DISC_USER_AUTHENTIFICATION_FAILURE</a>,</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span> </div>
+<div class="line"><a name="l00411"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17aae8b18d5198005cf6cfb7ecad401b8db">  411</a></span>     <a class="code" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17aae8b18d5198005cf6cfb7ecad401b8db">LE_MDC_DISC_ACTIVATION_REJECTED_BY_GGSN_OR_GW</a>,</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span> </div>
+<div class="line"><a name="l00414"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17ad81651aa81ecc9c91756611ea8811a4a">  414</a></span>     <a class="code" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17ad81651aa81ecc9c91756611ea8811a4a">LE_MDC_DISC_ACTIVATION_REJECTED_UNSPECIFIED</a>,</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span> </div>
+<div class="line"><a name="l00417"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17afeaf658e0acdb7413caef8fee314cfbb">  417</a></span>     <a class="code" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17afeaf658e0acdb7413caef8fee314cfbb">LE_MDC_DISC_SERVICE_OPTION_NOT_SUPPORTED</a>,</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span> </div>
+<div class="line"><a name="l00420"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17aba9d6aca3394ac28f880456b67ca5b1f">  420</a></span>     <a class="code" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17aba9d6aca3394ac28f880456b67ca5b1f">LE_MDC_DISC_REQUESTED_SERVICE_OPTION_UNSUBSCRIBED</a>,</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span> </div>
+<div class="line"><a name="l00423"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a31d48c551add5d7dc2a09f8564551b7a">  423</a></span>     <a class="code" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a31d48c551add5d7dc2a09f8564551b7a">LE_MDC_DISC_REQUESTED_SERVICE_OPTION_OUT_OF_ORDER</a>,</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span> </div>
+<div class="line"><a name="l00426"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a3b4bb956e4b23fc6769b3d8d59f62521">  426</a></span>     <a class="code" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a3b4bb956e4b23fc6769b3d8d59f62521">LE_MDC_DISC_NSAPI_ALREADY_USED</a>,</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span> </div>
+<div class="line"><a name="l00429"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a19c22a1e138f7612e19b89de60732349">  429</a></span>     <a class="code" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a19c22a1e138f7612e19b89de60732349">LE_MDC_DISC_REGULAR_DEACTIVATION</a>,</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span> </div>
+<div class="line"><a name="l00432"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17abc70afad936a15351c90141e9eb4dca6">  432</a></span>     <a class="code" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17abc70afad936a15351c90141e9eb4dca6">LE_MDC_DISC_QOS_NOT_ACCEPTED</a>,</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span> </div>
+<div class="line"><a name="l00435"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17aa08661335bfd617b8ee708b9316344bc">  435</a></span>     <a class="code" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17aa08661335bfd617b8ee708b9316344bc">LE_MDC_DISC_NETWORK_FAILURE</a>,</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span> </div>
+<div class="line"><a name="l00438"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17aba25708a0d557aaec2dfe1a27d5fbbea">  438</a></span>     <a class="code" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17aba25708a0d557aaec2dfe1a27d5fbbea">LE_MDC_DISC_REACTIVATION_REQUESTED</a>,</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span> </div>
+<div class="line"><a name="l00441"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a447a14f91479512283cf5ddae58e3eff">  441</a></span>     <a class="code" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a447a14f91479512283cf5ddae58e3eff">LE_MDC_DISC_FEATURE_NOT_SUPPORTED</a>,</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span> </div>
+<div class="line"><a name="l00444"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17ae94f35e11adf576b58219bbb84307e67">  444</a></span>     <a class="code" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17ae94f35e11adf576b58219bbb84307e67">LE_MDC_DISC_TFT_SEMANTIC_ERROR</a>,</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span> </div>
+<div class="line"><a name="l00447"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a157d5799c577ee41886c0e34b4ad1dfb">  447</a></span>     <a class="code" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a157d5799c577ee41886c0e34b4ad1dfb">LE_MDC_DISC_TFT_SYNTACTICAL_ERROR</a>,</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span> </div>
+<div class="line"><a name="l00450"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17ae020bbb75374fe545348dd0efd02b09c">  450</a></span>     <a class="code" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17ae020bbb75374fe545348dd0efd02b09c">LE_MDC_DISC_UNKNOWN_PDP_CONTEXT</a>,</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span> </div>
+<div class="line"><a name="l00453"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a24d91ccf0e7ec5fab2b81b45409ea8f5">  453</a></span>     <a class="code" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a24d91ccf0e7ec5fab2b81b45409ea8f5">LE_MDC_DISC_PACKET_FILTER_SEMANTIC_ERROR</a>,</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span> </div>
+<div class="line"><a name="l00456"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a46acd5f0a45d5f71e7c3ea7060565ccf">  456</a></span>     <a class="code" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a46acd5f0a45d5f71e7c3ea7060565ccf">LE_MDC_DISC_PACKET_FILTER_SYNTACTICAL_ERROR</a>,</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span> </div>
+<div class="line"><a name="l00459"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a50a570e65085ada48cc12e69b0d25edc">  459</a></span>     <a class="code" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a50a570e65085ada48cc12e69b0d25edc">LE_MDC_DISC_PDP_CONTEXT_WITHOUT_ACTIVE_TFT</a>,</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span> </div>
+<div class="line"><a name="l00462"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a4e5e3c5c7d4c85682678679d9660bdbb">  462</a></span>     <a class="code" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a4e5e3c5c7d4c85682678679d9660bdbb">LE_MDC_DISC_MULTICAST_TIME_OUT</a>,</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span> </div>
+<div class="line"><a name="l00465"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a6db98dadba3f8b9332da761a0eb31f21">  465</a></span>     <a class="code" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a6db98dadba3f8b9332da761a0eb31f21">LE_MDC_DISC_BEARER_CONTROL_MODE_VIOLATION</a>,</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span> </div>
+<div class="line"><a name="l00468"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17ac0a682063498ae7ec9601af7f3798c7a">  468</a></span>     <a class="code" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17ac0a682063498ae7ec9601af7f3798c7a">LE_MDC_DISC_IPV4_ONLY_ALLOWED</a>,</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span> </div>
+<div class="line"><a name="l00471"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a2557336c990e378807fff1722d42da6f">  471</a></span>     <a class="code" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a2557336c990e378807fff1722d42da6f">LE_MDC_DISC_IPV6_ONLY_ALLOWED</a>,</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span> </div>
+<div class="line"><a name="l00474"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a853b368b5f56798d835f4e3bed58d5e9">  474</a></span>     <a class="code" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a853b368b5f56798d835f4e3bed58d5e9">LE_MDC_DISC_SINGLE_ADDR_ONLY_ALLOWED</a>,</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span> </div>
+<div class="line"><a name="l00477"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a65f02b1c06c889c5d7e9344a6069ae68">  477</a></span>     <a class="code" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a65f02b1c06c889c5d7e9344a6069ae68">LE_MDC_DISC_COLLISION_WITH_NETWORK_INITIATED_REQ</a>,</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span> </div>
+<div class="line"><a name="l00480"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17acd07cb5199b2482d6031dc2268f2506b">  480</a></span>     <a class="code" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17acd07cb5199b2482d6031dc2268f2506b">LE_MDC_DISC_BEARER_HANDLING_UNSUPPORTED</a>,</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span> </div>
+<div class="line"><a name="l00483"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17af336a2033458975c20d9f8f593d1cf68">  483</a></span>     <a class="code" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17af336a2033458975c20d9f8f593d1cf68">LE_MDC_DISC_MAX_PDP_CONTEXTS</a>,</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span> </div>
+<div class="line"><a name="l00486"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a7ad657ac040c4cf169a0af03d7b51325">  486</a></span>     <a class="code" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a7ad657ac040c4cf169a0af03d7b51325">LE_MDC_DISC_APN_UNSUPPORTED_FOR_RAT_AND_PLMN</a>,</div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span> </div>
+<div class="line"><a name="l00489"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17adbcc071b27d08423fa7239fbd6137563">  489</a></span>     <a class="code" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17adbcc071b27d08423fa7239fbd6137563">LE_MDC_DISC_INCOMPATIBLE_APN</a>,</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span> </div>
+<div class="line"><a name="l00492"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a6541a2df9aef958e78745c35deffbe4d">  492</a></span>     <a class="code" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a6541a2df9aef958e78745c35deffbe4d">LE_MDC_DISC_INVALID_TRANSACTION_ID</a>,</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span> </div>
+<div class="line"><a name="l00495"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a0e0db24bc4566a107d13fb2a735247dc">  495</a></span>     <a class="code" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a0e0db24bc4566a107d13fb2a735247dc">LE_MDC_DISC_MESSAGE_INCORRECT_SEMANTIC</a>,</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span> </div>
+<div class="line"><a name="l00498"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a2fcf6fa570f2d1232460f8ac345477da">  498</a></span>     <a class="code" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a2fcf6fa570f2d1232460f8ac345477da">LE_MDC_DISC_INVALID_MANDATORY_INFORMATION</a>,</div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span> </div>
+<div class="line"><a name="l00501"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17ad15f8293ca2daccd4ec60a83ca1657ef">  501</a></span>     <a class="code" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17ad15f8293ca2daccd4ec60a83ca1657ef">LE_MDC_DISC_UNSUPPORTED_MESSAGE_TYPE</a>,</div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span> </div>
+<div class="line"><a name="l00504"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17ab86cf3c132a1bfb4bb653b0e5d6e93a1">  504</a></span>     <a class="code" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17ab86cf3c132a1bfb4bb653b0e5d6e93a1">LE_MDC_DISC_MESSAGE_AND_PROTOCOL_STATE_UNCOMPATIBLE</a>,</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span> </div>
+<div class="line"><a name="l00507"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17aac98e15b1eddeaab082fc677fbc5c9e3">  507</a></span>     <a class="code" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17aac98e15b1eddeaab082fc677fbc5c9e3">LE_MDC_DISC_UNKNOWN_INFORMATION_ELEMENT</a>,</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span> </div>
+<div class="line"><a name="l00510"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17ab7c4eab939b9bfb77fd869ac9284b2a6">  510</a></span>     <a class="code" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17ab7c4eab939b9bfb77fd869ac9284b2a6">LE_MDC_DISC_CONDITIONAL_IE_ERROR</a>,</div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span> </div>
+<div class="line"><a name="l00513"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a6328213c0930135dc96ab7281defb544">  513</a></span>     <a class="code" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a6328213c0930135dc96ab7281defb544">LE_MDC_DISC_MESSAGE_AND_STATE_UNCOMPATIBLE</a>,</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span> </div>
+<div class="line"><a name="l00516"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a7be545dea0d9d93c2ac54d6e315fb578">  516</a></span>     <a class="code" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a7be545dea0d9d93c2ac54d6e315fb578">LE_MDC_DISC_PROTOCOL_ERROR_UNSPECIFIED</a>,</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span> </div>
+<div class="line"><a name="l00519"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a9302526da171ae2b91f7ccb44d9d9b53">  519</a></span>     <a class="code" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a9302526da171ae2b91f7ccb44d9d9b53">LE_MDC_DISC_PLATFORM_SPECIFIC</a>,</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span> </div>
+<div class="line"><a name="l00522"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a1a7921226f32bbb60973380dc4000b3f">  522</a></span>     <a class="code" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a1a7921226f32bbb60973380dc4000b3f">LE_MDC_DISC_UNDEFINED</a></div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span> }</div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span> <a class="code" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17">le_mdc_DisconnectionReason_t</a>;</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span> </div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span> </div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00532"></a><span class="lineno">  532</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00533"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#a1a5079ca540f75d009991c164f1c2a51">  533</a></span> <span class="keyword">typedef</span> <span class="keyword">struct </span>le_mdc_SessionStateHandler* <a class="code" href="le__mdc__interface_8h.html#a1a5079ca540f75d009991c164f1c2a51">le_mdc_SessionStateHandlerRef_t</a>;</div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span> </div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span> </div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00541"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#a00399530f88038d5d06823194780793a">  541</a></span> <span class="keyword">typedef</span> <span class="keyword">struct </span>le_mdc_MtPdpSessionStateHandler* <a class="code" href="le__mdc__interface_8h.html#a00399530f88038d5d06823194780793a">le_mdc_MtPdpSessionStateHandlerRef_t</a>;</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span> </div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span> </div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00555"></a><span class="lineno">  555</span> <span class="keyword">typedef</span> void (*<a class="code" href="le__mdc__interface_8h.html#a1f32da683c8a9e061db7101ef5c8bb98">le_mdc_SessionStateHandlerFunc_t</a>)</div>
+<div class="line"><a name="l00556"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#a1f32da683c8a9e061db7101ef5c8bb98">  556</a></span> (</div>
+<div class="line"><a name="l00557"></a><span class="lineno">  557</span>     <a class="code" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef,</div>
+<div class="line"><a name="l00558"></a><span class="lineno">  558</span>     <a class="code" href="le__mdc__interface_8h.html#a0727e543d0394422963c8d6297947333">le_mdc_ConState_t</a> ConnectionState,</div>
+<div class="line"><a name="l00559"></a><span class="lineno">  559</span>     <span class="keywordtype">void</span>* contextPtr</div>
+<div class="line"><a name="l00560"></a><span class="lineno">  560</span> );</div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span> </div>
+<div class="line"><a name="l00562"></a><span class="lineno">  562</span> </div>
+<div class="line"><a name="l00563"></a><span class="lineno">  563</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00571"></a><span class="lineno">  571</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00572"></a><span class="lineno">  572</span> <span class="keyword">typedef</span> void (*<a class="code" href="le__mdc__interface_8h.html#a285dd997ce1e6a439441dd939df080c8">le_mdc_MtPdpSessionStateHandlerFunc_t</a>)</div>
+<div class="line"><a name="l00573"></a><span class="lineno"><a class="line" href="le__mdc__interface_8h.html#a285dd997ce1e6a439441dd939df080c8">  573</a></span> (</div>
+<div class="line"><a name="l00574"></a><span class="lineno">  574</span>     <a class="code" href="le__mdc__interface_8h.html#a0727e543d0394422963c8d6297947333">le_mdc_ConState_t</a> ConnectionState,</div>
+<div class="line"><a name="l00575"></a><span class="lineno">  575</span>     <span class="keywordtype">void</span>* contextPtr</div>
+<div class="line"><a name="l00576"></a><span class="lineno">  576</span> );</div>
+<div class="line"><a name="l00577"></a><span class="lineno">  577</span> </div>
+<div class="line"><a name="l00578"></a><span class="lineno">  578</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00584"></a><span class="lineno">  584</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00585"></a><span class="lineno">  585</span> <a class="code" href="le__mdc__interface_8h.html#a1a5079ca540f75d009991c164f1c2a51">le_mdc_SessionStateHandlerRef_t</a> <a class="code" href="le__mdc__interface_8h.html#a594c85c1ccb56ddfbaf36496f35f681e">le_mdc_AddSessionStateHandler</a></div>
+<div class="line"><a name="l00586"></a><span class="lineno">  586</span> (</div>
+<div class="line"><a name="l00587"></a><span class="lineno">  587</span>     <a class="code" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef,</div>
+<div class="line"><a name="l00590"></a><span class="lineno">  590</span> </div>
+<div class="line"><a name="l00591"></a><span class="lineno">  591</span>     <a class="code" href="le__mdc__interface_8h.html#a1f32da683c8a9e061db7101ef5c8bb98">le_mdc_SessionStateHandlerFunc_t</a> handlerPtr,</div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span> </div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>     <span class="keywordtype">void</span>* contextPtr</div>
+<div class="line"><a name="l00596"></a><span class="lineno">  596</span> );</div>
+<div class="line"><a name="l00597"></a><span class="lineno">  597</span> </div>
+<div class="line"><a name="l00598"></a><span class="lineno">  598</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00602"></a><span class="lineno">  602</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00603"></a><span class="lineno">  603</span> <span class="keywordtype">void</span> <a class="code" href="le__mdc__interface_8h.html#a3b89962f4383f42a357f5a5fcc14fdff">le_mdc_RemoveSessionStateHandler</a></div>
+<div class="line"><a name="l00604"></a><span class="lineno">  604</span> (</div>
+<div class="line"><a name="l00605"></a><span class="lineno">  605</span>     <a class="code" href="le__mdc__interface_8h.html#a1a5079ca540f75d009991c164f1c2a51">le_mdc_SessionStateHandlerRef_t</a> addHandlerRef</div>
+<div class="line"><a name="l00607"></a><span class="lineno">  607</span> );</div>
+<div class="line"><a name="l00608"></a><span class="lineno">  608</span> </div>
+<div class="line"><a name="l00609"></a><span class="lineno">  609</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00615"></a><span class="lineno">  615</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00616"></a><span class="lineno">  616</span> <a class="code" href="le__mdc__interface_8h.html#a00399530f88038d5d06823194780793a">le_mdc_MtPdpSessionStateHandlerRef_t</a> <a class="code" href="le__mdc__interface_8h.html#ada19c2a399ba8c0aa038e27c21689472">le_mdc_AddMtPdpSessionStateHandler</a></div>
+<div class="line"><a name="l00617"></a><span class="lineno">  617</span> (</div>
+<div class="line"><a name="l00618"></a><span class="lineno">  618</span>     <a class="code" href="le__mdc__interface_8h.html#a1f32da683c8a9e061db7101ef5c8bb98">le_mdc_SessionStateHandlerFunc_t</a> handlerPtr,</div>
+<div class="line"><a name="l00620"></a><span class="lineno">  620</span> </div>
+<div class="line"><a name="l00621"></a><span class="lineno">  621</span>     <span class="keywordtype">void</span>* contextPtr</div>
+<div class="line"><a name="l00623"></a><span class="lineno">  623</span> );</div>
+<div class="line"><a name="l00624"></a><span class="lineno">  624</span> </div>
+<div class="line"><a name="l00625"></a><span class="lineno">  625</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00629"></a><span class="lineno">  629</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00630"></a><span class="lineno">  630</span> <span class="keywordtype">void</span> <a class="code" href="le__mdc__interface_8h.html#ad296518ad496c960b4b23f89f7a1b222">le_mdc_RemoveMtPdpSessionStateHandler</a></div>
+<div class="line"><a name="l00631"></a><span class="lineno">  631</span> (</div>
+<div class="line"><a name="l00632"></a><span class="lineno">  632</span>     <a class="code" href="le__mdc__interface_8h.html#a00399530f88038d5d06823194780793a">le_mdc_MtPdpSessionStateHandlerRef_t</a> addHandlerRef</div>
+<div class="line"><a name="l00634"></a><span class="lineno">  634</span> );</div>
+<div class="line"><a name="l00635"></a><span class="lineno">  635</span> </div>
+<div class="line"><a name="l00636"></a><span class="lineno">  636</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00646"></a><span class="lineno">  646</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00647"></a><span class="lineno">  647</span> <a class="code" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> <a class="code" href="le__mdc__interface_8h.html#a638b693cd5f644fa5c24f81e1e36483c">le_mdc_GetProfile</a></div>
+<div class="line"><a name="l00648"></a><span class="lineno">  648</span> (</div>
+<div class="line"><a name="l00649"></a><span class="lineno">  649</span>     uint32_t index</div>
+<div class="line"><a name="l00652"></a><span class="lineno">  652</span> );</div>
+<div class="line"><a name="l00653"></a><span class="lineno">  653</span> </div>
+<div class="line"><a name="l00654"></a><span class="lineno">  654</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00664"></a><span class="lineno">  664</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00665"></a><span class="lineno">  665</span> uint32_t <a class="code" href="le__mdc__interface_8h.html#a108f7c3db74a377c2ae5482543d4e0d9">le_mdc_GetProfileIndex</a></div>
+<div class="line"><a name="l00666"></a><span class="lineno">  666</span> (</div>
+<div class="line"><a name="l00667"></a><span class="lineno">  667</span>     <a class="code" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef</div>
+<div class="line"><a name="l00670"></a><span class="lineno">  670</span> );</div>
+<div class="line"><a name="l00671"></a><span class="lineno">  671</span> </div>
+<div class="line"><a name="l00672"></a><span class="lineno">  672</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00685"></a><span class="lineno">  685</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00686"></a><span class="lineno">  686</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__mdc__interface_8h.html#a2cb08d5c3e6c43297d80448891719649">le_mdc_StartSession</a></div>
+<div class="line"><a name="l00687"></a><span class="lineno">  687</span> (</div>
+<div class="line"><a name="l00688"></a><span class="lineno">  688</span>     <a class="code" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef</div>
+<div class="line"><a name="l00691"></a><span class="lineno">  691</span> );</div>
+<div class="line"><a name="l00692"></a><span class="lineno">  692</span> </div>
+<div class="line"><a name="l00693"></a><span class="lineno">  693</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00705"></a><span class="lineno">  705</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00706"></a><span class="lineno">  706</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__mdc__interface_8h.html#a53453f85065c3cace0922150b7e3d869">le_mdc_StopSession</a></div>
+<div class="line"><a name="l00707"></a><span class="lineno">  707</span> (</div>
+<div class="line"><a name="l00708"></a><span class="lineno">  708</span>     <a class="code" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef</div>
+<div class="line"><a name="l00711"></a><span class="lineno">  711</span> );</div>
+<div class="line"><a name="l00712"></a><span class="lineno">  712</span> </div>
+<div class="line"><a name="l00713"></a><span class="lineno">  713</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00725"></a><span class="lineno">  725</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00726"></a><span class="lineno">  726</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__mdc__interface_8h.html#ae3b49edad910960b84a9012ecc33c66a">le_mdc_RejectMtPdpSession</a></div>
+<div class="line"><a name="l00727"></a><span class="lineno">  727</span> (</div>
+<div class="line"><a name="l00728"></a><span class="lineno">  728</span>     <a class="code" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef</div>
+<div class="line"><a name="l00731"></a><span class="lineno">  731</span> );</div>
+<div class="line"><a name="l00732"></a><span class="lineno">  732</span> </div>
+<div class="line"><a name="l00733"></a><span class="lineno">  733</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00745"></a><span class="lineno">  745</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00746"></a><span class="lineno">  746</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__mdc__interface_8h.html#add91c364e8b3e4e82a0ce64e480c016b">le_mdc_GetSessionState</a></div>
+<div class="line"><a name="l00747"></a><span class="lineno">  747</span> (</div>
+<div class="line"><a name="l00748"></a><span class="lineno">  748</span>     <a class="code" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef,</div>
+<div class="line"><a name="l00751"></a><span class="lineno">  751</span> </div>
+<div class="line"><a name="l00752"></a><span class="lineno">  752</span>     <a class="code" href="le__mdc__interface_8h.html#a0727e543d0394422963c8d6297947333">le_mdc_ConState_t</a>* connectionStatePtr</div>
+<div class="line"><a name="l00755"></a><span class="lineno">  755</span> );</div>
+<div class="line"><a name="l00756"></a><span class="lineno">  756</span> </div>
+<div class="line"><a name="l00757"></a><span class="lineno">  757</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00769"></a><span class="lineno">  769</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00770"></a><span class="lineno">  770</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__mdc__interface_8h.html#abf470aa8e252114cbb95b4e337083d52">le_mdc_GetInterfaceName</a></div>
+<div class="line"><a name="l00771"></a><span class="lineno">  771</span> (</div>
+<div class="line"><a name="l00772"></a><span class="lineno">  772</span>     <a class="code" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef,</div>
+<div class="line"><a name="l00775"></a><span class="lineno">  775</span> </div>
+<div class="line"><a name="l00776"></a><span class="lineno">  776</span>     <span class="keywordtype">char</span>* interfaceName,</div>
+<div class="line"><a name="l00779"></a><span class="lineno">  779</span> </div>
+<div class="line"><a name="l00780"></a><span class="lineno">  780</span>     <span class="keywordtype">size_t</span> interfaceNameNumElements</div>
+<div class="line"><a name="l00782"></a><span class="lineno">  782</span> );</div>
+<div class="line"><a name="l00783"></a><span class="lineno">  783</span> </div>
+<div class="line"><a name="l00784"></a><span class="lineno">  784</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00797"></a><span class="lineno">  797</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00798"></a><span class="lineno">  798</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__mdc__interface_8h.html#a732acb5823549a1644aa1bb5ba69fea5">le_mdc_GetIPv4Address</a></div>
+<div class="line"><a name="l00799"></a><span class="lineno">  799</span> (</div>
+<div class="line"><a name="l00800"></a><span class="lineno">  800</span>     <a class="code" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef,</div>
+<div class="line"><a name="l00803"></a><span class="lineno">  803</span> </div>
+<div class="line"><a name="l00804"></a><span class="lineno">  804</span>     <span class="keywordtype">char</span>* ipAddr,</div>
+<div class="line"><a name="l00807"></a><span class="lineno">  807</span> </div>
+<div class="line"><a name="l00808"></a><span class="lineno">  808</span>     <span class="keywordtype">size_t</span> ipAddrNumElements</div>
+<div class="line"><a name="l00810"></a><span class="lineno">  810</span> );</div>
+<div class="line"><a name="l00811"></a><span class="lineno">  811</span> </div>
+<div class="line"><a name="l00812"></a><span class="lineno">  812</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00825"></a><span class="lineno">  825</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00826"></a><span class="lineno">  826</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__mdc__interface_8h.html#af4be1afa6d44a4a7041f9f02660704b9">le_mdc_GetIPv4GatewayAddress</a></div>
+<div class="line"><a name="l00827"></a><span class="lineno">  827</span> (</div>
+<div class="line"><a name="l00828"></a><span class="lineno">  828</span>     <a class="code" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef,</div>
+<div class="line"><a name="l00831"></a><span class="lineno">  831</span> </div>
+<div class="line"><a name="l00832"></a><span class="lineno">  832</span>     <span class="keywordtype">char</span>* gatewayAddr,</div>
+<div class="line"><a name="l00835"></a><span class="lineno">  835</span> </div>
+<div class="line"><a name="l00836"></a><span class="lineno">  836</span>     <span class="keywordtype">size_t</span> gatewayAddrNumElements</div>
+<div class="line"><a name="l00838"></a><span class="lineno">  838</span> );</div>
+<div class="line"><a name="l00839"></a><span class="lineno">  839</span> </div>
+<div class="line"><a name="l00840"></a><span class="lineno">  840</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00855"></a><span class="lineno">  855</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00856"></a><span class="lineno">  856</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__mdc__interface_8h.html#ae99f6e212de1b0c0ea8a8763b62e0bea">le_mdc_GetIPv4DNSAddresses</a></div>
+<div class="line"><a name="l00857"></a><span class="lineno">  857</span> (</div>
+<div class="line"><a name="l00858"></a><span class="lineno">  858</span>     <a class="code" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef,</div>
+<div class="line"><a name="l00861"></a><span class="lineno">  861</span> </div>
+<div class="line"><a name="l00862"></a><span class="lineno">  862</span>     <span class="keywordtype">char</span>* dns1AddrStr,</div>
+<div class="line"><a name="l00865"></a><span class="lineno">  865</span> </div>
+<div class="line"><a name="l00866"></a><span class="lineno">  866</span>     <span class="keywordtype">size_t</span> dns1AddrStrNumElements,</div>
+<div class="line"><a name="l00868"></a><span class="lineno">  868</span> </div>
+<div class="line"><a name="l00869"></a><span class="lineno">  869</span>     <span class="keywordtype">char</span>* dns2AddrStr,</div>
+<div class="line"><a name="l00872"></a><span class="lineno">  872</span> </div>
+<div class="line"><a name="l00873"></a><span class="lineno">  873</span>     <span class="keywordtype">size_t</span> dns2AddrStrNumElements</div>
+<div class="line"><a name="l00875"></a><span class="lineno">  875</span> );</div>
+<div class="line"><a name="l00876"></a><span class="lineno">  876</span> </div>
+<div class="line"><a name="l00877"></a><span class="lineno">  877</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00890"></a><span class="lineno">  890</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00891"></a><span class="lineno">  891</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__mdc__interface_8h.html#aacd6a0b646f26625cdb26a78d42f8e5f">le_mdc_GetIPv6Address</a></div>
+<div class="line"><a name="l00892"></a><span class="lineno">  892</span> (</div>
+<div class="line"><a name="l00893"></a><span class="lineno">  893</span>     <a class="code" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef,</div>
+<div class="line"><a name="l00896"></a><span class="lineno">  896</span> </div>
+<div class="line"><a name="l00897"></a><span class="lineno">  897</span>     <span class="keywordtype">char</span>* ipAddr,</div>
+<div class="line"><a name="l00900"></a><span class="lineno">  900</span> </div>
+<div class="line"><a name="l00901"></a><span class="lineno">  901</span>     <span class="keywordtype">size_t</span> ipAddrNumElements</div>
+<div class="line"><a name="l00903"></a><span class="lineno">  903</span> );</div>
+<div class="line"><a name="l00904"></a><span class="lineno">  904</span> </div>
+<div class="line"><a name="l00905"></a><span class="lineno">  905</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00918"></a><span class="lineno">  918</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00919"></a><span class="lineno">  919</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__mdc__interface_8h.html#a0b82eac1ed112bd3b82060cc54751246">le_mdc_GetIPv6GatewayAddress</a></div>
+<div class="line"><a name="l00920"></a><span class="lineno">  920</span> (</div>
+<div class="line"><a name="l00921"></a><span class="lineno">  921</span>     <a class="code" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef,</div>
+<div class="line"><a name="l00924"></a><span class="lineno">  924</span> </div>
+<div class="line"><a name="l00925"></a><span class="lineno">  925</span>     <span class="keywordtype">char</span>* gatewayAddr,</div>
+<div class="line"><a name="l00928"></a><span class="lineno">  928</span> </div>
+<div class="line"><a name="l00929"></a><span class="lineno">  929</span>     <span class="keywordtype">size_t</span> gatewayAddrNumElements</div>
+<div class="line"><a name="l00931"></a><span class="lineno">  931</span> );</div>
+<div class="line"><a name="l00932"></a><span class="lineno">  932</span> </div>
+<div class="line"><a name="l00933"></a><span class="lineno">  933</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00948"></a><span class="lineno">  948</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00949"></a><span class="lineno">  949</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__mdc__interface_8h.html#a8aeb3f684567eee2976b851b7d713f01">le_mdc_GetIPv6DNSAddresses</a></div>
+<div class="line"><a name="l00950"></a><span class="lineno">  950</span> (</div>
+<div class="line"><a name="l00951"></a><span class="lineno">  951</span>     <a class="code" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef,</div>
+<div class="line"><a name="l00954"></a><span class="lineno">  954</span> </div>
+<div class="line"><a name="l00955"></a><span class="lineno">  955</span>     <span class="keywordtype">char</span>* dns1AddrStr,</div>
+<div class="line"><a name="l00958"></a><span class="lineno">  958</span> </div>
+<div class="line"><a name="l00959"></a><span class="lineno">  959</span>     <span class="keywordtype">size_t</span> dns1AddrStrNumElements,</div>
+<div class="line"><a name="l00961"></a><span class="lineno">  961</span> </div>
+<div class="line"><a name="l00962"></a><span class="lineno">  962</span>     <span class="keywordtype">char</span>* dns2AddrStr,</div>
+<div class="line"><a name="l00965"></a><span class="lineno">  965</span> </div>
+<div class="line"><a name="l00966"></a><span class="lineno">  966</span>     <span class="keywordtype">size_t</span> dns2AddrStrNumElements</div>
+<div class="line"><a name="l00968"></a><span class="lineno">  968</span> );</div>
+<div class="line"><a name="l00969"></a><span class="lineno">  969</span> </div>
+<div class="line"><a name="l00970"></a><span class="lineno">  970</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00980"></a><span class="lineno">  980</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00981"></a><span class="lineno">  981</span> <span class="keywordtype">bool</span> <a class="code" href="le__mdc__interface_8h.html#aa3912e94864a6e5862e07f58b3772cba">le_mdc_IsIPv4</a></div>
+<div class="line"><a name="l00982"></a><span class="lineno">  982</span> (</div>
+<div class="line"><a name="l00983"></a><span class="lineno">  983</span>     <a class="code" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef</div>
+<div class="line"><a name="l00986"></a><span class="lineno">  986</span> );</div>
+<div class="line"><a name="l00987"></a><span class="lineno">  987</span> </div>
+<div class="line"><a name="l00988"></a><span class="lineno">  988</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00998"></a><span class="lineno">  998</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00999"></a><span class="lineno">  999</span> <span class="keywordtype">bool</span> <a class="code" href="le__mdc__interface_8h.html#adde11de0b17b2c937acca6355b6fba11">le_mdc_IsIPv6</a></div>
+<div class="line"><a name="l01000"></a><span class="lineno"> 1000</span> (</div>
+<div class="line"><a name="l01001"></a><span class="lineno"> 1001</span>     <a class="code" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef</div>
+<div class="line"><a name="l01004"></a><span class="lineno"> 1004</span> );</div>
+<div class="line"><a name="l01005"></a><span class="lineno"> 1005</span> </div>
+<div class="line"><a name="l01006"></a><span class="lineno"> 1006</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l01017"></a><span class="lineno"> 1017</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l01018"></a><span class="lineno"> 1018</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__mdc__interface_8h.html#a1b17bb87b347162013b5ad608cdcda2d">le_mdc_GetDataBearerTechnology</a></div>
+<div class="line"><a name="l01019"></a><span class="lineno"> 1019</span> (</div>
+<div class="line"><a name="l01020"></a><span class="lineno"> 1020</span>     <a class="code" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef,</div>
+<div class="line"><a name="l01023"></a><span class="lineno"> 1023</span> </div>
+<div class="line"><a name="l01024"></a><span class="lineno"> 1024</span>     <a class="code" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527e">le_mdc_DataBearerTechnology_t</a>* downlinkDataBearerTechPtrPtr,</div>
+<div class="line"><a name="l01027"></a><span class="lineno"> 1027</span> </div>
+<div class="line"><a name="l01028"></a><span class="lineno"> 1028</span>     <a class="code" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527e">le_mdc_DataBearerTechnology_t</a>* uplinkDataBearerTechPtrPtr</div>
+<div class="line"><a name="l01031"></a><span class="lineno"> 1031</span> );</div>
+<div class="line"><a name="l01032"></a><span class="lineno"> 1032</span> </div>
+<div class="line"><a name="l01033"></a><span class="lineno"> 1033</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l01044"></a><span class="lineno"> 1044</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l01045"></a><span class="lineno"> 1045</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__mdc__interface_8h.html#aaad833c105f7d0ae77f18195d6739080">le_mdc_GetBytesCounters</a></div>
+<div class="line"><a name="l01046"></a><span class="lineno"> 1046</span> (</div>
+<div class="line"><a name="l01047"></a><span class="lineno"> 1047</span>     uint64_t* rxBytesPtr,</div>
+<div class="line"><a name="l01050"></a><span class="lineno"> 1050</span> </div>
+<div class="line"><a name="l01051"></a><span class="lineno"> 1051</span>     uint64_t* txBytesPtr</div>
+<div class="line"><a name="l01054"></a><span class="lineno"> 1054</span> );</div>
+<div class="line"><a name="l01055"></a><span class="lineno"> 1055</span> </div>
+<div class="line"><a name="l01056"></a><span class="lineno"> 1056</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l01064"></a><span class="lineno"> 1064</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l01065"></a><span class="lineno"> 1065</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__mdc__interface_8h.html#a63636b2779d2ee6a6520ebfb2d26666c">le_mdc_ResetBytesCounter</a></div>
+<div class="line"><a name="l01066"></a><span class="lineno"> 1066</span> (</div>
+<div class="line"><a name="l01067"></a><span class="lineno"> 1067</span>     <span class="keywordtype">void</span></div>
+<div class="line"><a name="l01068"></a><span class="lineno"> 1068</span> );</div>
+<div class="line"><a name="l01069"></a><span class="lineno"> 1069</span> </div>
+<div class="line"><a name="l01070"></a><span class="lineno"> 1070</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l01082"></a><span class="lineno"> 1082</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l01083"></a><span class="lineno"> 1083</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__mdc__interface_8h.html#a73e66a7a63dc95d7f261fc2a26470386">le_mdc_SetPDP</a></div>
+<div class="line"><a name="l01084"></a><span class="lineno"> 1084</span> (</div>
+<div class="line"><a name="l01085"></a><span class="lineno"> 1085</span>     <a class="code" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef,</div>
+<div class="line"><a name="l01088"></a><span class="lineno"> 1088</span> </div>
+<div class="line"><a name="l01089"></a><span class="lineno"> 1089</span>     <a class="code" href="le__mdc__interface_8h.html#a85721ec6046140c2f87c23f877dce247">le_mdc_Pdp_t</a> pdp</div>
+<div class="line"><a name="l01092"></a><span class="lineno"> 1092</span> );</div>
+<div class="line"><a name="l01093"></a><span class="lineno"> 1093</span> </div>
+<div class="line"><a name="l01094"></a><span class="lineno"> 1094</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l01104"></a><span class="lineno"> 1104</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l01105"></a><span class="lineno"> 1105</span> <a class="code" href="le__mdc__interface_8h.html#a85721ec6046140c2f87c23f877dce247">le_mdc_Pdp_t</a> <a class="code" href="le__mdc__interface_8h.html#a0a51125579f1d5009dac03c79ddff498">le_mdc_GetPDP</a></div>
+<div class="line"><a name="l01106"></a><span class="lineno"> 1106</span> (</div>
+<div class="line"><a name="l01107"></a><span class="lineno"> 1107</span>     <a class="code" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef</div>
+<div class="line"><a name="l01110"></a><span class="lineno"> 1110</span> );</div>
+<div class="line"><a name="l01111"></a><span class="lineno"> 1111</span> </div>
+<div class="line"><a name="l01112"></a><span class="lineno"> 1112</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l01128"></a><span class="lineno"> 1128</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l01129"></a><span class="lineno"> 1129</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__mdc__interface_8h.html#a1777f22b1a400593c3e0fb879acd57c6">le_mdc_SetAPN</a></div>
+<div class="line"><a name="l01130"></a><span class="lineno"> 1130</span> (</div>
+<div class="line"><a name="l01131"></a><span class="lineno"> 1131</span>     <a class="code" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef,</div>
+<div class="line"><a name="l01134"></a><span class="lineno"> 1134</span> </div>
+<div class="line"><a name="l01135"></a><span class="lineno"> 1135</span>     <span class="keyword">const</span> <span class="keywordtype">char</span>* apnStr</div>
+<div class="line"><a name="l01138"></a><span class="lineno"> 1138</span> );</div>
+<div class="line"><a name="l01139"></a><span class="lineno"> 1139</span> </div>
+<div class="line"><a name="l01140"></a><span class="lineno"> 1140</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l01153"></a><span class="lineno"> 1153</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l01154"></a><span class="lineno"> 1154</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__mdc__interface_8h.html#ad44bd756fd5cbfd43a5b348054786a4d">le_mdc_SetDefaultAPN</a></div>
+<div class="line"><a name="l01155"></a><span class="lineno"> 1155</span> (</div>
+<div class="line"><a name="l01156"></a><span class="lineno"> 1156</span>     <a class="code" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef</div>
+<div class="line"><a name="l01159"></a><span class="lineno"> 1159</span> );</div>
+<div class="line"><a name="l01160"></a><span class="lineno"> 1160</span> </div>
+<div class="line"><a name="l01161"></a><span class="lineno"> 1161</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l01174"></a><span class="lineno"> 1174</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l01175"></a><span class="lineno"> 1175</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__mdc__interface_8h.html#ac9accd1ea303d6840e5e7de19b0dae6f">le_mdc_GetAPN</a></div>
+<div class="line"><a name="l01176"></a><span class="lineno"> 1176</span> (</div>
+<div class="line"><a name="l01177"></a><span class="lineno"> 1177</span>     <a class="code" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef,</div>
+<div class="line"><a name="l01180"></a><span class="lineno"> 1180</span> </div>
+<div class="line"><a name="l01181"></a><span class="lineno"> 1181</span>     <span class="keywordtype">char</span>* apnStr,</div>
+<div class="line"><a name="l01184"></a><span class="lineno"> 1184</span> </div>
+<div class="line"><a name="l01185"></a><span class="lineno"> 1185</span>     <span class="keywordtype">size_t</span> apnStrNumElements</div>
+<div class="line"><a name="l01187"></a><span class="lineno"> 1187</span> );</div>
+<div class="line"><a name="l01188"></a><span class="lineno"> 1188</span> </div>
+<div class="line"><a name="l01189"></a><span class="lineno"> 1189</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l01204"></a><span class="lineno"> 1204</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l01205"></a><span class="lineno"> 1205</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__mdc__interface_8h.html#abf58f1dd7d4f9b915647e9c0f642065b">le_mdc_SetAuthentication</a></div>
+<div class="line"><a name="l01206"></a><span class="lineno"> 1206</span> (</div>
+<div class="line"><a name="l01207"></a><span class="lineno"> 1207</span>     <a class="code" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef,</div>
+<div class="line"><a name="l01210"></a><span class="lineno"> 1210</span> </div>
+<div class="line"><a name="l01211"></a><span class="lineno"> 1211</span>     <a class="code" href="le__mdc__interface_8h.html#ae9758eecfab89fbc1bc01341393a7723">le_mdc_Auth_t</a> type,</div>
+<div class="line"><a name="l01214"></a><span class="lineno"> 1214</span> </div>
+<div class="line"><a name="l01215"></a><span class="lineno"> 1215</span>     <span class="keyword">const</span> <span class="keywordtype">char</span>* userName,</div>
+<div class="line"><a name="l01218"></a><span class="lineno"> 1218</span> </div>
+<div class="line"><a name="l01219"></a><span class="lineno"> 1219</span>     <span class="keyword">const</span> <span class="keywordtype">char</span>* password</div>
+<div class="line"><a name="l01222"></a><span class="lineno"> 1222</span> );</div>
+<div class="line"><a name="l01223"></a><span class="lineno"> 1223</span> </div>
+<div class="line"><a name="l01224"></a><span class="lineno"> 1224</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l01237"></a><span class="lineno"> 1237</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l01238"></a><span class="lineno"> 1238</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__mdc__interface_8h.html#a2bd23fc2f951772a8fa73301affff36f">le_mdc_GetAuthentication</a></div>
+<div class="line"><a name="l01239"></a><span class="lineno"> 1239</span> (</div>
+<div class="line"><a name="l01240"></a><span class="lineno"> 1240</span>     <a class="code" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef,</div>
+<div class="line"><a name="l01243"></a><span class="lineno"> 1243</span> </div>
+<div class="line"><a name="l01244"></a><span class="lineno"> 1244</span>     <a class="code" href="le__mdc__interface_8h.html#ae9758eecfab89fbc1bc01341393a7723">le_mdc_Auth_t</a>* typePtr,</div>
+<div class="line"><a name="l01247"></a><span class="lineno"> 1247</span> </div>
+<div class="line"><a name="l01248"></a><span class="lineno"> 1248</span>     <span class="keywordtype">char</span>* userName,</div>
+<div class="line"><a name="l01251"></a><span class="lineno"> 1251</span> </div>
+<div class="line"><a name="l01252"></a><span class="lineno"> 1252</span>     <span class="keywordtype">size_t</span> userNameNumElements,</div>
+<div class="line"><a name="l01254"></a><span class="lineno"> 1254</span> </div>
+<div class="line"><a name="l01255"></a><span class="lineno"> 1255</span>     <span class="keywordtype">char</span>* password,</div>
+<div class="line"><a name="l01258"></a><span class="lineno"> 1258</span> </div>
+<div class="line"><a name="l01259"></a><span class="lineno"> 1259</span>     <span class="keywordtype">size_t</span> passwordNumElements</div>
+<div class="line"><a name="l01261"></a><span class="lineno"> 1261</span> );</div>
+<div class="line"><a name="l01262"></a><span class="lineno"> 1262</span> </div>
+<div class="line"><a name="l01263"></a><span class="lineno"> 1263</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l01270"></a><span class="lineno"> 1270</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l01271"></a><span class="lineno"> 1271</span> uint32_t <a class="code" href="le__mdc__interface_8h.html#a790602f1b17d7bf9626a51eac5599439">le_mdc_NumProfiles</a></div>
+<div class="line"><a name="l01272"></a><span class="lineno"> 1272</span> (</div>
+<div class="line"><a name="l01273"></a><span class="lineno"> 1273</span>     <span class="keywordtype">void</span></div>
+<div class="line"><a name="l01274"></a><span class="lineno"> 1274</span> );</div>
+<div class="line"><a name="l01275"></a><span class="lineno"> 1275</span> </div>
+<div class="line"><a name="l01276"></a><span class="lineno"> 1276</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l01285"></a><span class="lineno"> 1285</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l01286"></a><span class="lineno"> 1286</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__mdc__interface_8h.html#a160de65c9260e93f7fc2140c0ff429e7">le_mdc_GetProfileFromApn</a></div>
+<div class="line"><a name="l01287"></a><span class="lineno"> 1287</span> (</div>
+<div class="line"><a name="l01288"></a><span class="lineno"> 1288</span>     <span class="keyword">const</span> <span class="keywordtype">char</span>* apnStr,</div>
+<div class="line"><a name="l01291"></a><span class="lineno"> 1291</span> </div>
+<div class="line"><a name="l01292"></a><span class="lineno"> 1292</span>     <a class="code" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a>* profileRefPtr</div>
+<div class="line"><a name="l01295"></a><span class="lineno"> 1295</span> );</div>
+<div class="line"><a name="l01296"></a><span class="lineno"> 1296</span> </div>
+<div class="line"><a name="l01297"></a><span class="lineno"> 1297</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l01306"></a><span class="lineno"> 1306</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l01307"></a><span class="lineno"> 1307</span> <a class="code" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17">le_mdc_DisconnectionReason_t</a> <a class="code" href="le__mdc__interface_8h.html#afe73f44c23b1bd120dd82a85b36c6059">le_mdc_GetDisconnectionReason</a></div>
+<div class="line"><a name="l01308"></a><span class="lineno"> 1308</span> (</div>
+<div class="line"><a name="l01309"></a><span class="lineno"> 1309</span>     <a class="code" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef</div>
+<div class="line"><a name="l01312"></a><span class="lineno"> 1312</span> );</div>
+<div class="line"><a name="l01313"></a><span class="lineno"> 1313</span> </div>
+<div class="line"><a name="l01314"></a><span class="lineno"> 1314</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l01323"></a><span class="lineno"> 1323</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l01324"></a><span class="lineno"> 1324</span> int32_t <a class="code" href="le__mdc__interface_8h.html#a3e3a92b0f5e3edab9400412170517a62">le_mdc_GetPlatformSpecificDisconnectionCode</a></div>
+<div class="line"><a name="l01325"></a><span class="lineno"> 1325</span> (</div>
+<div class="line"><a name="l01326"></a><span class="lineno"> 1326</span>     <a class="code" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef</div>
+<div class="line"><a name="l01329"></a><span class="lineno"> 1329</span> );</div>
+<div class="line"><a name="l01330"></a><span class="lineno"> 1330</span> </div>
+<div class="line"><a name="l01331"></a><span class="lineno"> 1331</span> </div>
+<div class="line"><a name="l01332"></a><span class="lineno"> 1332</span> <span class="preprocessor">#endif // LE_MDC_INTERFACE_H_INCLUDE_GUARD</span></div>
+<div class="line"><a name="l01333"></a><span class="lineno"> 1333</span> </div>
+<div class="ttc" id="le__mdc__interface_8h_html_add91c364e8b3e4e82a0ce64e480c016b"><div class="ttname"><a href="le__mdc__interface_8h.html#add91c364e8b3e4e82a0ce64e480c016b">le_mdc_GetSessionState</a></div><div class="ttdeci">le_result_t le_mdc_GetSessionState(le_mdc_ProfileRef_t profileRef, le_mdc_ConState_t *connectionStatePtr)</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ad1fe8909ae01a2f7e33fdbdc6938bf17ac0a682063498ae7ec9601af7f3798c7a"><div class="ttname"><a href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17ac0a682063498ae7ec9601af7f3798c7a">LE_MDC_DISC_IPV4_ONLY_ALLOWED</a></div><div class="ttdoc">cf. 3GPP 24.008 Annex I1 </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:468</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a594c85c1ccb56ddfbaf36496f35f681e"><div class="ttname"><a href="le__mdc__interface_8h.html#a594c85c1ccb56ddfbaf36496f35f681e">le_mdc_AddSessionStateHandler</a></div><div class="ttdeci">le_mdc_SessionStateHandlerRef_t le_mdc_AddSessionStateHandler(le_mdc_ProfileRef_t profileRef, le_mdc_SessionStateHandlerFunc_t handlerPtr, void *contextPtr)</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a0727e543d0394422963c8d6297947333a7a58a20c7df2b0c380ff0b819175044b"><div class="ttname"><a href="le__mdc__interface_8h.html#a0727e543d0394422963c8d6297947333a7a58a20c7df2b0c380ff0b819175044b">LE_MDC_SUSPENDING</a></div><div class="ttdoc">Suspending data session. </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:371</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a0727e543d0394422963c8d6297947333a6d11ee963528c79d73a269eb85202ba7"><div class="ttname"><a href="le__mdc__interface_8h.html#a0727e543d0394422963c8d6297947333a6d11ee963528c79d73a269eb85202ba7">LE_MDC_DISCONNECTED</a></div><div class="ttdoc">Data session is disconnected. </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:362</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a7a9d8c4b2053b048a53257ed810f527e"><div class="ttname"><a href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527e">le_mdc_DataBearerTechnology_t</a></div><div class="ttdeci">le_mdc_DataBearerTechnology_t</div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:267</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a0a51125579f1d5009dac03c79ddff498"><div class="ttname"><a href="le__mdc__interface_8h.html#a0a51125579f1d5009dac03c79ddff498">le_mdc_GetPDP</a></div><div class="ttdeci">le_mdc_Pdp_t le_mdc_GetPDP(le_mdc_ProfileRef_t profileRef)</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a7a9d8c4b2053b048a53257ed810f527eafb22fb13c85a703fd541854d55d84cbd"><div class="ttname"><a href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527eafb22fb13c85a703fd541854d55d84cbd">LE_MDC_DATA_BEARER_TECHNOLOGY_DC_HSPA_PLUS</a></div><div class="ttdoc">Dual Cell - HSPA+. </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:290</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a1b17bb87b347162013b5ad608cdcda2d"><div class="ttname"><a href="le__mdc__interface_8h.html#a1b17bb87b347162013b5ad608cdcda2d">le_mdc_GetDataBearerTechnology</a></div><div class="ttdeci">le_result_t le_mdc_GetDataBearerTechnology(le_mdc_ProfileRef_t profileRef, le_mdc_DataBearerTechnology_t *downlinkDataBearerTechPtrPtr, le_mdc_DataBearerTechnology_t *uplinkDataBearerTechPtrPtr)</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ad1fe8909ae01a2f7e33fdbdc6938bf17ae020bbb75374fe545348dd0efd02b09c"><div class="ttname"><a href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17ae020bbb75374fe545348dd0efd02b09c">LE_MDC_DISC_UNKNOWN_PDP_CONTEXT</a></div><div class="ttdoc">cf. 3GPP 24.008 Annex I1 </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:450</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a0727e543d0394422963c8d6297947333a0a8a2113935b881b76c59b94cf7223b8"><div class="ttname"><a href="le__mdc__interface_8h.html#a0727e543d0394422963c8d6297947333a0a8a2113935b881b76c59b94cf7223b8">LE_MDC_CONNECTED</a></div><div class="ttdoc">Data session is connected. </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:368</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_abf470aa8e252114cbb95b4e337083d52"><div class="ttname"><a href="le__mdc__interface_8h.html#abf470aa8e252114cbb95b4e337083d52">le_mdc_GetInterfaceName</a></div><div class="ttdeci">le_result_t le_mdc_GetInterfaceName(le_mdc_ProfileRef_t profileRef, char *interfaceName, size_t interfaceNameNumElements)</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a1a5079ca540f75d009991c164f1c2a51"><div class="ttname"><a href="le__mdc__interface_8h.html#a1a5079ca540f75d009991c164f1c2a51">le_mdc_SessionStateHandlerRef_t</a></div><div class="ttdeci">struct le_mdc_SessionStateHandler * le_mdc_SessionStateHandlerRef_t</div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:533</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a85721ec6046140c2f87c23f877dce247a4427db8ba7a89ebf66c7b62eacfc8275"><div class="ttname"><a href="le__mdc__interface_8h.html#a85721ec6046140c2f87c23f877dce247a4427db8ba7a89ebf66c7b62eacfc8275">LE_MDC_PDP_IPV4V6</a></div><div class="ttdoc">IPv4 and IPv6. </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:330</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_af4be1afa6d44a4a7041f9f02660704b9"><div class="ttname"><a href="le__mdc__interface_8h.html#af4be1afa6d44a4a7041f9f02660704b9">le_mdc_GetIPv4GatewayAddress</a></div><div class="ttdeci">le_result_t le_mdc_GetIPv4GatewayAddress(le_mdc_ProfileRef_t profileRef, char *gatewayAddr, size_t gatewayAddrNumElements)</div></div>
+<div class="ttc" id="le__basics_8h_html_a1cca095ed6ebab24b57a636382a6c86c"><div class="ttname"><a href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a></div><div class="ttdeci">le_result_t</div><div class="ttdef"><b>Definition:</b> le_basics.h:35</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_aa3912e94864a6e5862e07f58b3772cba"><div class="ttname"><a href="le__mdc__interface_8h.html#aa3912e94864a6e5862e07f58b3772cba">le_mdc_IsIPv4</a></div><div class="ttdeci">bool le_mdc_IsIPv4(le_mdc_ProfileRef_t profileRef)</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a85721ec6046140c2f87c23f877dce247af550adf5bcecb680294f92f28496a830"><div class="ttname"><a href="le__mdc__interface_8h.html#a85721ec6046140c2f87c23f877dce247af550adf5bcecb680294f92f28496a830">LE_MDC_PDP_IPV4</a></div><div class="ttdoc">IPv4. </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:324</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a0727e543d0394422963c8d6297947333a2a61bb66c6afff9fca4957e856d48bda"><div class="ttname"><a href="le__mdc__interface_8h.html#a0727e543d0394422963c8d6297947333a2a61bb66c6afff9fca4957e856d48bda">LE_MDC_INCOMING</a></div><div class="ttdoc">Incoming data session (MT-PDP context request) </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:374</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ad1fe8909ae01a2f7e33fdbdc6938bf17a7be545dea0d9d93c2ac54d6e315fb578"><div class="ttname"><a href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a7be545dea0d9d93c2ac54d6e315fb578">LE_MDC_DISC_PROTOCOL_ERROR_UNSPECIFIED</a></div><div class="ttdoc">cf. 3GPP 24.008 Annex I2 </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:516</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ad1fe8909ae01a2f7e33fdbdc6938bf17a9302526da171ae2b91f7ccb44d9d9b53"><div class="ttname"><a href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a9302526da171ae2b91f7ccb44d9d9b53">LE_MDC_DISC_PLATFORM_SPECIFIC</a></div><div class="ttdoc">Platform specific code. </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:519</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a85721ec6046140c2f87c23f877dce247"><div class="ttname"><a href="le__mdc__interface_8h.html#a85721ec6046140c2f87c23f877dce247">le_mdc_Pdp_t</a></div><div class="ttdeci">le_mdc_Pdp_t</div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:319</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ad1fe8909ae01a2f7e33fdbdc6938bf17"><div class="ttname"><a href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17">le_mdc_DisconnectionReason_t</a></div><div class="ttdeci">le_mdc_DisconnectionReason_t</div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:385</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ad1fe8909ae01a2f7e33fdbdc6938bf17aac98e15b1eddeaab082fc677fbc5c9e3"><div class="ttname"><a href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17aac98e15b1eddeaab082fc677fbc5c9e3">LE_MDC_DISC_UNKNOWN_INFORMATION_ELEMENT</a></div><div class="ttdoc">cf. 3GPP 24.008 Annex I2 </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:507</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ad1fe8909ae01a2f7e33fdbdc6938bf17a447a14f91479512283cf5ddae58e3eff"><div class="ttname"><a href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a447a14f91479512283cf5ddae58e3eff">LE_MDC_DISC_FEATURE_NOT_SUPPORTED</a></div><div class="ttdoc">cf. 3GPP 24.008 Annex I1 </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:441</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ad1fe8909ae01a2f7e33fdbdc6938bf17adbcc071b27d08423fa7239fbd6137563"><div class="ttname"><a href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17adbcc071b27d08423fa7239fbd6137563">LE_MDC_DISC_INCOMPATIBLE_APN</a></div><div class="ttdoc">cf. 3GPP 24.008 Annex I1 </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:489</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a53453f85065c3cace0922150b7e3d869"><div class="ttname"><a href="le__mdc__interface_8h.html#a53453f85065c3cace0922150b7e3d869">le_mdc_StopSession</a></div><div class="ttdeci">le_result_t le_mdc_StopSession(le_mdc_ProfileRef_t profileRef)</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a2bd23fc2f951772a8fa73301affff36f"><div class="ttname"><a href="le__mdc__interface_8h.html#a2bd23fc2f951772a8fa73301affff36f">le_mdc_GetAuthentication</a></div><div class="ttdeci">le_result_t le_mdc_GetAuthentication(le_mdc_ProfileRef_t profileRef, le_mdc_Auth_t *typePtr, char *userName, size_t userNameNumElements, char *password, size_t passwordNumElements)</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ad1fe8909ae01a2f7e33fdbdc6938bf17a1a7921226f32bbb60973380dc4000b3f"><div class="ttname"><a href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a1a7921226f32bbb60973380dc4000b3f">LE_MDC_DISC_UNDEFINED</a></div><div class="ttdoc">Undefined reason. </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:522</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ad1fe8909ae01a2f7e33fdbdc6938bf17a6328213c0930135dc96ab7281defb544"><div class="ttname"><a href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a6328213c0930135dc96ab7281defb544">LE_MDC_DISC_MESSAGE_AND_STATE_UNCOMPATIBLE</a></div><div class="ttdoc">cf. 3GPP 24.008 Annex I2 </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:513</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ad1fe8909ae01a2f7e33fdbdc6938bf17ab4979cca494637abc973e10ad5f18865"><div class="ttname"><a href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17ab4979cca494637abc973e10ad5f18865">LE_MDC_DISC_INSUFFICIENT_RESOURCES</a></div><div class="ttdoc">cf. 3GPP 24.008 Annex I1 </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:399</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a2a841ce582ce97f62df6334717b49fcb"><div class="ttname"><a href="le__mdc__interface_8h.html#a2a841ce582ce97f62df6334717b49fcb">le_mdc_ConnectService</a></div><div class="ttdeci">void le_mdc_ConnectService(void)</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ad1fe8909ae01a2f7e33fdbdc6938bf17af69c8c7dab5a8569cb84aa1c55e199f0"><div class="ttname"><a href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17af69c8c7dab5a8569cb84aa1c55e199f0">LE_MDC_DISC_INSUFFICIENT_MBMS_CAPABILITIES</a></div><div class="ttdoc">cf. 3GPP 24.008 Annex I1 </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:393</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a0727e543d0394422963c8d6297947333a06c37ceba786a0a786008571f9ead8d4"><div class="ttname"><a href="le__mdc__interface_8h.html#a0727e543d0394422963c8d6297947333a06c37ceba786a0a786008571f9ead8d4">LE_MDC_AUTHENTICATING</a></div><div class="ttdoc">Authenticating data session. </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:365</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ae9758eecfab89fbc1bc01341393a7723a10fb016f4d6f7a7e893cf66846c24de2"><div class="ttname"><a href="le__mdc__interface_8h.html#ae9758eecfab89fbc1bc01341393a7723a10fb016f4d6f7a7e893cf66846c24de2">LE_MDC_AUTH_NONE</a></div><div class="ttdoc">no authentication </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:343</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a91074d8f0d88c6645e3085dfadf87011"><div class="ttname"><a href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a></div><div class="ttdeci">struct le_mdc_Profile * le_mdc_ProfileRef_t</div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:259</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ad1fe8909ae01a2f7e33fdbdc6938bf17aa08661335bfd617b8ee708b9316344bc"><div class="ttname"><a href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17aa08661335bfd617b8ee708b9316344bc">LE_MDC_DISC_NETWORK_FAILURE</a></div><div class="ttdoc">cf. 3GPP 24.008 Annex I1 </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:435</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a7a9d8c4b2053b048a53257ed810f527ea90f0d2e99bae1f7955349d3c69635612"><div class="ttname"><a href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527ea90f0d2e99bae1f7955349d3c69635612">LE_MDC_DATA_BEARER_TECHNOLOGY_HSPA_PLUS</a></div><div class="ttdoc">HSPA+. </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:287</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ad1fe8909ae01a2f7e33fdbdc6938bf17a2fcf6fa570f2d1232460f8ac345477da"><div class="ttname"><a href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a2fcf6fa570f2d1232460f8ac345477da">LE_MDC_DISC_INVALID_MANDATORY_INFORMATION</a></div><div class="ttdoc">cf. 3GPP 24.008 Annex I2 </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:498</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a73e66a7a63dc95d7f261fc2a26470386"><div class="ttname"><a href="le__mdc__interface_8h.html#a73e66a7a63dc95d7f261fc2a26470386">le_mdc_SetPDP</a></div><div class="ttdeci">le_result_t le_mdc_SetPDP(le_mdc_ProfileRef_t profileRef, le_mdc_Pdp_t pdp)</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ae9758eecfab89fbc1bc01341393a7723ae93a464a7ee2f31346aa01676afc7054"><div class="ttname"><a href="le__mdc__interface_8h.html#ae9758eecfab89fbc1bc01341393a7723ae93a464a7ee2f31346aa01676afc7054">LE_MDC_AUTH_CHAP</a></div><div class="ttdoc">CHAP protocol. </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:349</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ac9accd1ea303d6840e5e7de19b0dae6f"><div class="ttname"><a href="le__mdc__interface_8h.html#ac9accd1ea303d6840e5e7de19b0dae6f">le_mdc_GetAPN</a></div><div class="ttdeci">le_result_t le_mdc_GetAPN(le_mdc_ProfileRef_t profileRef, char *apnStr, size_t apnStrNumElements)</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a7a9d8c4b2053b048a53257ed810f527eaef4c110d2e9f49244e50deb1160a76ba"><div class="ttname"><a href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527eaef4c110d2e9f49244e50deb1160a76ba">LE_MDC_DATA_BEARER_TECHNOLOGY_WCDMA</a></div><div class="ttdoc">WCDMA (UMTS) </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:281</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a285dd997ce1e6a439441dd939df080c8"><div class="ttname"><a href="le__mdc__interface_8h.html#a285dd997ce1e6a439441dd939df080c8">le_mdc_MtPdpSessionStateHandlerFunc_t</a></div><div class="ttdeci">void(* le_mdc_MtPdpSessionStateHandlerFunc_t)(le_mdc_ConState_t ConnectionState, void *contextPtr)</div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:573</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a7a9d8c4b2053b048a53257ed810f527ea9cf6c01fefb6d34d9146853914464b89"><div class="ttname"><a href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527ea9cf6c01fefb6d34d9146853914464b89">LE_MDC_DATA_BEARER_TECHNOLOGY_HSPA</a></div><div class="ttdoc">HSPA. </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:284</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_adde11de0b17b2c937acca6355b6fba11"><div class="ttname"><a href="le__mdc__interface_8h.html#adde11de0b17b2c937acca6355b6fba11">le_mdc_IsIPv6</a></div><div class="ttdeci">bool le_mdc_IsIPv6(le_mdc_ProfileRef_t profileRef)</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ad1fe8909ae01a2f7e33fdbdc6938bf17a853b368b5f56798d835f4e3bed58d5e9"><div class="ttname"><a href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a853b368b5f56798d835f4e3bed58d5e9">LE_MDC_DISC_SINGLE_ADDR_ONLY_ALLOWED</a></div><div class="ttdoc">cf. 3GPP 24.008 Annex I1 </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:474</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ad1fe8909ae01a2f7e33fdbdc6938bf17a19c22a1e138f7612e19b89de60732349"><div class="ttname"><a href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a19c22a1e138f7612e19b89de60732349">LE_MDC_DISC_REGULAR_DEACTIVATION</a></div><div class="ttdoc">cf. 3GPP 24.008 Annex I1 </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:429</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a7a9d8c4b2053b048a53257ed810f527ea7a6d420354b58854ef51236c9dd5ffac"><div class="ttname"><a href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527ea7a6d420354b58854ef51236c9dd5ffac">LE_MDC_DATA_BEARER_TECHNOLOGY_EGPRS</a></div><div class="ttdoc">Enhanced GPRS (EDGE) </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:278</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a85721ec6046140c2f87c23f877dce247ac2d2a34bad2d18be1ea8facef0effad0"><div class="ttname"><a href="le__mdc__interface_8h.html#a85721ec6046140c2f87c23f877dce247ac2d2a34bad2d18be1ea8facef0effad0">LE_MDC_PDP_IPV6</a></div><div class="ttdoc">IPv6. </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:327</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a85721ec6046140c2f87c23f877dce247a590fd5c933c3751e42053f996d530987"><div class="ttname"><a href="le__mdc__interface_8h.html#a85721ec6046140c2f87c23f877dce247a590fd5c933c3751e42053f996d530987">LE_MDC_PDP_UNKNOWN</a></div><div class="ttdoc">Unknown. </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:321</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ad1fe8909ae01a2f7e33fdbdc6938bf17a6db98dadba3f8b9332da761a0eb31f21"><div class="ttname"><a href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a6db98dadba3f8b9332da761a0eb31f21">LE_MDC_DISC_BEARER_CONTROL_MODE_VIOLATION</a></div><div class="ttdoc">cf. 3GPP 24.008 Annex I1 </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:465</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a7a9d8c4b2053b048a53257ed810f527eaa74ef22bfd51f6bec5d3521080f9537a"><div class="ttname"><a href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527eaa74ef22bfd51f6bec5d3521080f9537a">LE_MDC_DATA_BEARER_TECHNOLOGY_UNKNOWN</a></div><div class="ttdoc">Unknown. </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:269</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ad1fe8909ae01a2f7e33fdbdc6938bf17ae94f35e11adf576b58219bbb84307e67"><div class="ttname"><a href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17ae94f35e11adf576b58219bbb84307e67">LE_MDC_DISC_TFT_SEMANTIC_ERROR</a></div><div class="ttdoc">cf. 3GPP 24.008 Annex I1 </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:444</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ad1fe8909ae01a2f7e33fdbdc6938bf17a157d5799c577ee41886c0e34b4ad1dfb"><div class="ttname"><a href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a157d5799c577ee41886c0e34b4ad1dfb">LE_MDC_DISC_TFT_SYNTACTICAL_ERROR</a></div><div class="ttdoc">cf. 3GPP 24.008 Annex I1 </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:447</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ad1fe8909ae01a2f7e33fdbdc6938bf17a2557336c990e378807fff1722d42da6f"><div class="ttname"><a href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a2557336c990e378807fff1722d42da6f">LE_MDC_DISC_IPV6_ONLY_ALLOWED</a></div><div class="ttdoc">cf. 3GPP 24.008 Annex I1 </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:471</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_aaad833c105f7d0ae77f18195d6739080"><div class="ttname"><a href="le__mdc__interface_8h.html#aaad833c105f7d0ae77f18195d6739080">le_mdc_GetBytesCounters</a></div><div class="ttdeci">le_result_t le_mdc_GetBytesCounters(uint64_t *rxBytesPtr, uint64_t *txBytesPtr)</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ad1fe8909ae01a2f7e33fdbdc6938bf17a31d48c551add5d7dc2a09f8564551b7a"><div class="ttname"><a href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a31d48c551add5d7dc2a09f8564551b7a">LE_MDC_DISC_REQUESTED_SERVICE_OPTION_OUT_OF_ORDER</a></div><div class="ttdoc">cf. 3GPP 24.008 Annex I1 </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:423</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ad1fe8909ae01a2f7e33fdbdc6938bf17ab86cf3c132a1bfb4bb653b0e5d6e93a1"><div class="ttname"><a href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17ab86cf3c132a1bfb4bb653b0e5d6e93a1">LE_MDC_DISC_MESSAGE_AND_PROTOCOL_STATE_UNCOMPATIBLE</a></div><div class="ttdoc">cf. 3GPP 24.008 Annex I2 </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:504</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a7a9d8c4b2053b048a53257ed810f527eae01ab4b9a842cfbc2eb44abcddd75ff4"><div class="ttname"><a href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527eae01ab4b9a842cfbc2eb44abcddd75ff4">LE_MDC_DATA_BEARER_TECHNOLOGY_CDMA2000_EVDO</a></div><div class="ttdoc">CDMA2000 HRPD (1xEV-DO) </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:302</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ad1fe8909ae01a2f7e33fdbdc6938bf17a7ad657ac040c4cf169a0af03d7b51325"><div class="ttname"><a href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a7ad657ac040c4cf169a0af03d7b51325">LE_MDC_DISC_APN_UNSUPPORTED_FOR_RAT_AND_PLMN</a></div><div class="ttdoc">cf. 3GPP 24.008 Annex I1 </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:486</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_afe73f44c23b1bd120dd82a85b36c6059"><div class="ttname"><a href="le__mdc__interface_8h.html#afe73f44c23b1bd120dd82a85b36c6059">le_mdc_GetDisconnectionReason</a></div><div class="ttdeci">le_mdc_DisconnectionReason_t le_mdc_GetDisconnectionReason(le_mdc_ProfileRef_t profileRef)</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a3b89962f4383f42a357f5a5fcc14fdff"><div class="ttname"><a href="le__mdc__interface_8h.html#a3b89962f4383f42a357f5a5fcc14fdff">le_mdc_RemoveSessionStateHandler</a></div><div class="ttdeci">void le_mdc_RemoveSessionStateHandler(le_mdc_SessionStateHandlerRef_t addHandlerRef)</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ad1fe8909ae01a2f7e33fdbdc6938bf17a46acd5f0a45d5f71e7c3ea7060565ccf"><div class="ttname"><a href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a46acd5f0a45d5f71e7c3ea7060565ccf">LE_MDC_DISC_PACKET_FILTER_SYNTACTICAL_ERROR</a></div><div class="ttdoc">cf. 3GPP 24.008 Annex I1 </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:456</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ad1fe8909ae01a2f7e33fdbdc6938bf17ad15f8293ca2daccd4ec60a83ca1657ef"><div class="ttname"><a href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17ad15f8293ca2daccd4ec60a83ca1657ef">LE_MDC_DISC_UNSUPPORTED_MESSAGE_TYPE</a></div><div class="ttdoc">cf. 3GPP 24.008 Annex I2 </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:501</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ad1fe8909ae01a2f7e33fdbdc6938bf17a0e0db24bc4566a107d13fb2a735247dc"><div class="ttname"><a href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a0e0db24bc4566a107d13fb2a735247dc">LE_MDC_DISC_MESSAGE_INCORRECT_SEMANTIC</a></div><div class="ttdoc">cf. 3GPP 24.008 Annex I2 </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:495</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a8aeb3f684567eee2976b851b7d713f01"><div class="ttname"><a href="le__mdc__interface_8h.html#a8aeb3f684567eee2976b851b7d713f01">le_mdc_GetIPv6DNSAddresses</a></div><div class="ttdeci">le_result_t le_mdc_GetIPv6DNSAddresses(le_mdc_ProfileRef_t profileRef, char *dns1AddrStr, size_t dns1AddrStrNumElements, char *dns2AddrStr, size_t dns2AddrStrNumElements)</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ad1fe8909ae01a2f7e33fdbdc6938bf17aba9d6aca3394ac28f880456b67ca5b1f"><div class="ttname"><a href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17aba9d6aca3394ac28f880456b67ca5b1f">LE_MDC_DISC_REQUESTED_SERVICE_OPTION_UNSUBSCRIBED</a></div><div class="ttdoc">cf. 3GPP 24.008 Annex I1 </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:420</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ad1fe8909ae01a2f7e33fdbdc6938bf17a7cddd67daef05f99316bf2de04a5bb62"><div class="ttname"><a href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a7cddd67daef05f99316bf2de04a5bb62">LE_MDC_DISC_LLC_SNDCP_FAILURE</a></div><div class="ttdoc">cf. 3GPP 24.008 Annex I1 </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:396</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ae99f6e212de1b0c0ea8a8763b62e0bea"><div class="ttname"><a href="le__mdc__interface_8h.html#ae99f6e212de1b0c0ea8a8763b62e0bea">le_mdc_GetIPv4DNSAddresses</a></div><div class="ttdeci">le_result_t le_mdc_GetIPv4DNSAddresses(le_mdc_ProfileRef_t profileRef, char *dns1AddrStr, size_t dns1AddrStrNumElements, char *dns2AddrStr, size_t dns2AddrStrNumElements)</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ad1fe8909ae01a2f7e33fdbdc6938bf17ab7c4eab939b9bfb77fd869ac9284b2a6"><div class="ttname"><a href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17ab7c4eab939b9bfb77fd869ac9284b2a6">LE_MDC_DISC_CONDITIONAL_IE_ERROR</a></div><div class="ttdoc">cf. 3GPP 24.008 Annex I2 </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:510</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ad1fe8909ae01a2f7e33fdbdc6938bf17afeaf658e0acdb7413caef8fee314cfbb"><div class="ttname"><a href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17afeaf658e0acdb7413caef8fee314cfbb">LE_MDC_DISC_SERVICE_OPTION_NOT_SUPPORTED</a></div><div class="ttdoc">cf. 3GPP 24.008 Annex I1 </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:417</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_aacd6a0b646f26625cdb26a78d42f8e5f"><div class="ttname"><a href="le__mdc__interface_8h.html#aacd6a0b646f26625cdb26a78d42f8e5f">le_mdc_GetIPv6Address</a></div><div class="ttdeci">le_result_t le_mdc_GetIPv6Address(le_mdc_ProfileRef_t profileRef, char *ipAddr, size_t ipAddrNumElements)</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ad1fe8909ae01a2f7e33fdbdc6938bf17afe4e899719154b0952108c03748aed86"><div class="ttname"><a href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17afe4e899719154b0952108c03748aed86">LE_MDC_DISC_USER_AUTHENTIFICATION_FAILURE</a></div><div class="ttdoc">cf. 3GPP 24.008 Annex I1 </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:408</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a638b693cd5f644fa5c24f81e1e36483c"><div class="ttname"><a href="le__mdc__interface_8h.html#a638b693cd5f644fa5c24f81e1e36483c">le_mdc_GetProfile</a></div><div class="ttdeci">le_mdc_ProfileRef_t le_mdc_GetProfile(uint32_t index)</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ad1fe8909ae01a2f7e33fdbdc6938bf17a4b0bf3c47de146dfb256c8a7d2555008"><div class="ttname"><a href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a4b0bf3c47de146dfb256c8a7d2555008">LE_MDC_DISC_NO_SERVICE</a></div><div class="ttdoc">Modem has no service. </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:387</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a3e3a92b0f5e3edab9400412170517a62"><div class="ttname"><a href="le__mdc__interface_8h.html#a3e3a92b0f5e3edab9400412170517a62">le_mdc_GetPlatformSpecificDisconnectionCode</a></div><div class="ttdeci">int32_t le_mdc_GetPlatformSpecificDisconnectionCode(le_mdc_ProfileRef_t profileRef)</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ad1fe8909ae01a2f7e33fdbdc6938bf17ad74d5631833f877116b54301f4b551d2"><div class="ttname"><a href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17ad74d5631833f877116b54301f4b551d2">LE_MDC_DISC_OPERATOR_DETERMINED_BARRING</a></div><div class="ttdoc">cf. 3GPP 24.008 Annex I1 </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:390</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a7a9d8c4b2053b048a53257ed810f527eaff19a89df5659dfb03cf054d7d4f464b"><div class="ttname"><a href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527eaff19a89df5659dfb03cf054d7d4f464b">LE_MDC_DATA_BEARER_TECHNOLOGY_CDMA2000_EHRPD</a></div><div class="ttdoc">CDMA2000 EHRPD. </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:308</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a2cb08d5c3e6c43297d80448891719649"><div class="ttname"><a href="le__mdc__interface_8h.html#a2cb08d5c3e6c43297d80448891719649">le_mdc_StartSession</a></div><div class="ttdeci">le_result_t le_mdc_StartSession(le_mdc_ProfileRef_t profileRef)</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ad1fe8909ae01a2f7e33fdbdc6938bf17af336a2033458975c20d9f8f593d1cf68"><div class="ttname"><a href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17af336a2033458975c20d9f8f593d1cf68">LE_MDC_DISC_MAX_PDP_CONTEXTS</a></div><div class="ttdoc">cf. 3GPP 24.008 Annex I1 </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:483</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a63636b2779d2ee6a6520ebfb2d26666c"><div class="ttname"><a href="le__mdc__interface_8h.html#a63636b2779d2ee6a6520ebfb2d26666c">le_mdc_ResetBytesCounter</a></div><div class="ttdeci">le_result_t le_mdc_ResetBytesCounter(void)</div></div>
+<div class="ttc" id="legato_8h_html"><div class="ttname"><a href="legato_8h.html">legato.h</a></div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a3ce7efc114de8b91a7ad61cb6f6f47c8"><div class="ttname"><a href="le__mdc__interface_8h.html#a3ce7efc114de8b91a7ad61cb6f6f47c8">le_mdc_DisconnectService</a></div><div class="ttdeci">void le_mdc_DisconnectService(void)</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ad1fe8909ae01a2f7e33fdbdc6938bf17a24d91ccf0e7ec5fab2b81b45409ea8f5"><div class="ttname"><a href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a24d91ccf0e7ec5fab2b81b45409ea8f5">LE_MDC_DISC_PACKET_FILTER_SEMANTIC_ERROR</a></div><div class="ttdoc">cf. 3GPP 24.008 Annex I1 </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:453</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a00399530f88038d5d06823194780793a"><div class="ttname"><a href="le__mdc__interface_8h.html#a00399530f88038d5d06823194780793a">le_mdc_MtPdpSessionStateHandlerRef_t</a></div><div class="ttdeci">struct le_mdc_MtPdpSessionStateHandler * le_mdc_MtPdpSessionStateHandlerRef_t</div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:541</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ad1fe8909ae01a2f7e33fdbdc6938bf17a4e5e3c5c7d4c85682678679d9660bdbb"><div class="ttname"><a href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a4e5e3c5c7d4c85682678679d9660bdbb">LE_MDC_DISC_MULTICAST_TIME_OUT</a></div><div class="ttdoc">cf. 3GPP 24.008 Annex I1 </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:462</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ad1fe8909ae01a2f7e33fdbdc6938bf17acd07cb5199b2482d6031dc2268f2506b"><div class="ttname"><a href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17acd07cb5199b2482d6031dc2268f2506b">LE_MDC_DISC_BEARER_HANDLING_UNSUPPORTED</a></div><div class="ttdoc">cf. 3GPP 24.008 Annex I1 </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:480</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ada19c2a399ba8c0aa038e27c21689472"><div class="ttname"><a href="le__mdc__interface_8h.html#ada19c2a399ba8c0aa038e27c21689472">le_mdc_AddMtPdpSessionStateHandler</a></div><div class="ttdeci">le_mdc_MtPdpSessionStateHandlerRef_t le_mdc_AddMtPdpSessionStateHandler(le_mdc_SessionStateHandlerFunc_t handlerPtr, void *contextPtr)</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a732acb5823549a1644aa1bb5ba69fea5"><div class="ttname"><a href="le__mdc__interface_8h.html#a732acb5823549a1644aa1bb5ba69fea5">le_mdc_GetIPv4Address</a></div><div class="ttdeci">le_result_t le_mdc_GetIPv4Address(le_mdc_ProfileRef_t profileRef, char *ipAddr, size_t ipAddrNumElements)</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_abf58f1dd7d4f9b915647e9c0f642065b"><div class="ttname"><a href="le__mdc__interface_8h.html#abf58f1dd7d4f9b915647e9c0f642065b">le_mdc_SetAuthentication</a></div><div class="ttdeci">le_result_t le_mdc_SetAuthentication(le_mdc_ProfileRef_t profileRef, le_mdc_Auth_t type, const char *userName, const char *password)</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ad1fe8909ae01a2f7e33fdbdc6938bf17aa2f50c19fd13a0900994849ca92d2125"><div class="ttname"><a href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17aa2f50c19fd13a0900994849ca92d2125">LE_MDC_DISC_MISSING_OR_UNKNOWN_APN</a></div><div class="ttdoc">cf. 3GPP 24.008 Annex I1 </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:402</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a0727e543d0394422963c8d6297947333"><div class="ttname"><a href="le__mdc__interface_8h.html#a0727e543d0394422963c8d6297947333">le_mdc_ConState_t</a></div><div class="ttdeci">le_mdc_ConState_t</div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:360</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a160de65c9260e93f7fc2140c0ff429e7"><div class="ttname"><a href="le__mdc__interface_8h.html#a160de65c9260e93f7fc2140c0ff429e7">le_mdc_GetProfileFromApn</a></div><div class="ttdeci">le_result_t le_mdc_GetProfileFromApn(const char *apnStr, le_mdc_ProfileRef_t *profileRefPtr)</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a7a9d8c4b2053b048a53257ed810f527ead74d1b39916f65f547b3c3a263a8eb4d"><div class="ttname"><a href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527ead74d1b39916f65f547b3c3a263a8eb4d">LE_MDC_DATA_BEARER_TECHNOLOGY_LTE</a></div><div class="ttdoc">LTE. </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:293</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ae9758eecfab89fbc1bc01341393a7723"><div class="ttname"><a href="le__mdc__interface_8h.html#ae9758eecfab89fbc1bc01341393a7723">le_mdc_Auth_t</a></div><div class="ttdeci">le_mdc_Auth_t</div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:341</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a7a9d8c4b2053b048a53257ed810f527eab66accc8a4866e53319773962d328d33"><div class="ttname"><a href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527eab66accc8a4866e53319773962d328d33">LE_MDC_DATA_BEARER_TECHNOLOGY_GPRS</a></div><div class="ttdoc">GPRS. </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:275</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ae9758eecfab89fbc1bc01341393a7723a151065be441aa8f065d0ead3d739b6f0"><div class="ttname"><a href="le__mdc__interface_8h.html#ae9758eecfab89fbc1bc01341393a7723a151065be441aa8f065d0ead3d739b6f0">LE_MDC_AUTH_PAP</a></div><div class="ttdoc">PAP protocol. </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:346</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a108f7c3db74a377c2ae5482543d4e0d9"><div class="ttname"><a href="le__mdc__interface_8h.html#a108f7c3db74a377c2ae5482543d4e0d9">le_mdc_GetProfileIndex</a></div><div class="ttdeci">uint32_t le_mdc_GetProfileIndex(le_mdc_ProfileRef_t profileRef)</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a790602f1b17d7bf9626a51eac5599439"><div class="ttname"><a href="le__mdc__interface_8h.html#a790602f1b17d7bf9626a51eac5599439">le_mdc_NumProfiles</a></div><div class="ttdeci">uint32_t le_mdc_NumProfiles(void)</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ad44bd756fd5cbfd43a5b348054786a4d"><div class="ttname"><a href="le__mdc__interface_8h.html#ad44bd756fd5cbfd43a5b348054786a4d">le_mdc_SetDefaultAPN</a></div><div class="ttdeci">le_result_t le_mdc_SetDefaultAPN(le_mdc_ProfileRef_t profileRef)</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ad1fe8909ae01a2f7e33fdbdc6938bf17aa53f88c6058ceffa22451433657bf182"><div class="ttname"><a href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17aa53f88c6058ceffa22451433657bf182">LE_MDC_DISC_UNKNOWN_PDP_ADDR_OR_TYPE</a></div><div class="ttdoc">cf. 3GPP 24.008 Annex I1 </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:405</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ae3b49edad910960b84a9012ecc33c66a"><div class="ttname"><a href="le__mdc__interface_8h.html#ae3b49edad910960b84a9012ecc33c66a">le_mdc_RejectMtPdpSession</a></div><div class="ttdeci">le_result_t le_mdc_RejectMtPdpSession(le_mdc_ProfileRef_t profileRef)</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ad1fe8909ae01a2f7e33fdbdc6938bf17a65f02b1c06c889c5d7e9344a6069ae68"><div class="ttname"><a href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a65f02b1c06c889c5d7e9344a6069ae68">LE_MDC_DISC_COLLISION_WITH_NETWORK_INITIATED_REQ</a></div><div class="ttdoc">cf. 3GPP 24.008 Annex I1 </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:477</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a7a9d8c4b2053b048a53257ed810f527ea27fc297fc07b683df6eb64cdd017a79b"><div class="ttname"><a href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527ea27fc297fc07b683df6eb64cdd017a79b">LE_MDC_DATA_BEARER_TECHNOLOGY_CDMA2000_EVDO_REVA</a></div><div class="ttdoc">CDMA2000 HRPD (1xEV-DO RevA) </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:305</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a1777f22b1a400593c3e0fb879acd57c6"><div class="ttname"><a href="le__mdc__interface_8h.html#a1777f22b1a400593c3e0fb879acd57c6">le_mdc_SetAPN</a></div><div class="ttdeci">le_result_t le_mdc_SetAPN(le_mdc_ProfileRef_t profileRef, const char *apnStr)</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a1f32da683c8a9e061db7101ef5c8bb98"><div class="ttname"><a href="le__mdc__interface_8h.html#a1f32da683c8a9e061db7101ef5c8bb98">le_mdc_SessionStateHandlerFunc_t</a></div><div class="ttdeci">void(* le_mdc_SessionStateHandlerFunc_t)(le_mdc_ProfileRef_t profileRef, le_mdc_ConState_t ConnectionState, void *contextPtr)</div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:556</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a0b82eac1ed112bd3b82060cc54751246"><div class="ttname"><a href="le__mdc__interface_8h.html#a0b82eac1ed112bd3b82060cc54751246">le_mdc_GetIPv6GatewayAddress</a></div><div class="ttdeci">le_result_t le_mdc_GetIPv6GatewayAddress(le_mdc_ProfileRef_t profileRef, char *gatewayAddr, size_t gatewayAddrNumElements)</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a7a9d8c4b2053b048a53257ed810f527ea94176f1b8b893b313de18327d7adaec3"><div class="ttname"><a href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527ea94176f1b8b893b313de18327d7adaec3">LE_MDC_DATA_BEARER_TECHNOLOGY_GSM</a></div><div class="ttdoc">GSM. </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:272</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a7a9d8c4b2053b048a53257ed810f527eaf8c16113115e99ef7214284f51895634"><div class="ttname"><a href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527eaf8c16113115e99ef7214284f51895634">LE_MDC_DATA_BEARER_TECHNOLOGY_TD_SCDMA</a></div><div class="ttdoc">TD-SCDMA. </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:296</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ad1fe8909ae01a2f7e33fdbdc6938bf17aba25708a0d557aaec2dfe1a27d5fbbea"><div class="ttname"><a href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17aba25708a0d557aaec2dfe1a27d5fbbea">LE_MDC_DISC_REACTIVATION_REQUESTED</a></div><div class="ttdoc">cf. 3GPP 24.008 Annex I1 </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:438</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ad1fe8909ae01a2f7e33fdbdc6938bf17a50a570e65085ada48cc12e69b0d25edc"><div class="ttname"><a href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a50a570e65085ada48cc12e69b0d25edc">LE_MDC_DISC_PDP_CONTEXT_WITHOUT_ACTIVE_TFT</a></div><div class="ttdoc">cf. 3GPP 24.008 Annex I1 </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:459</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ad1fe8909ae01a2f7e33fdbdc6938bf17abc70afad936a15351c90141e9eb4dca6"><div class="ttname"><a href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17abc70afad936a15351c90141e9eb4dca6">LE_MDC_DISC_QOS_NOT_ACCEPTED</a></div><div class="ttdoc">cf. 3GPP 24.008 Annex I1 </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:432</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ad1fe8909ae01a2f7e33fdbdc6938bf17a3b4bb956e4b23fc6769b3d8d59f62521"><div class="ttname"><a href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a3b4bb956e4b23fc6769b3d8d59f62521">LE_MDC_DISC_NSAPI_ALREADY_USED</a></div><div class="ttdoc">cf. 3GPP 24.008 Annex I1 </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:426</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ad1fe8909ae01a2f7e33fdbdc6938bf17a6541a2df9aef958e78745c35deffbe4d"><div class="ttname"><a href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a6541a2df9aef958e78745c35deffbe4d">LE_MDC_DISC_INVALID_TRANSACTION_ID</a></div><div class="ttdoc">cf. 3GPP 24.008 Annex I2 </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:492</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_a7a9d8c4b2053b048a53257ed810f527eaf1a513b9966ddce01044f75470419f81"><div class="ttname"><a href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527eaf1a513b9966ddce01044f75470419f81">LE_MDC_DATA_BEARER_TECHNOLOGY_CDMA2000_1X</a></div><div class="ttdoc">CDMA2000 1X. </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:299</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ad1fe8909ae01a2f7e33fdbdc6938bf17ad81651aa81ecc9c91756611ea8811a4a"><div class="ttname"><a href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17ad81651aa81ecc9c91756611ea8811a4a">LE_MDC_DISC_ACTIVATION_REJECTED_UNSPECIFIED</a></div><div class="ttdoc">cf. 3GPP 24.008 Annex I1 </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:414</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ad1fe8909ae01a2f7e33fdbdc6938bf17aae8b18d5198005cf6cfb7ecad401b8db"><div class="ttname"><a href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17aae8b18d5198005cf6cfb7ecad401b8db">LE_MDC_DISC_ACTIVATION_REJECTED_BY_GGSN_OR_GW</a></div><div class="ttdoc">cf. 3GPP 24.008 Annex I1 </div><div class="ttdef"><b>Definition:</b> le_mdc_interface.h:411</div></div>
+<div class="ttc" id="le__mdc__interface_8h_html_ad296518ad496c960b4b23f89f7a1b222"><div class="ttname"><a href="le__mdc__interface_8h.html#ad296518ad496c960b4b23f89f7a1b222">le_mdc_RemoveMtPdpSessionStateHandler</a></div><div class="ttdeci">void le_mdc_RemoveMtPdpSessionStateHandler(le_mdc_MtPdpSessionStateHandlerRef_t addHandlerRef)</div></div>
+</div><!-- fragment --></div>
+<div id="footer">
+        	Copyright © Sierra Wireless Inc. Use of this work is subject to license.
+        </div>
+</div>
+</body>
+<script>
+	$("#Tutorial").bind("click", function(){
+    $("#tree1").hide();
+    $("#tree2").show();
+    $("#tree3").hide();
+});
+
+	$("#Guides").bind("click", function(){
+    $("#tree1").show();
+    $("#tree2").hide();
+    $("#tree3").hide();
+});
+	
+	$("#Tools").bind("click", function(){
+    $("#tree1").hide();
+    $("#tree2").hide();
+    $("#tree3").show();
+});
+
+
+</script>
+</html>

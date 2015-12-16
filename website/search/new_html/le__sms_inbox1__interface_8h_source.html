@@ -1,0 +1,250 @@
+<div class="contents">
+<a href="le__sms_inbox1__interface_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span> <span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span> <span class="comment"> * ====================== WARNING ======================</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span> <span class="comment"> *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span> <span class="comment"> * THE CONTENTS OF THIS FILE HAVE BEEN AUTO-GENERATED.</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span> <span class="comment"> * DO NOT MODIFY IN ANY WAY.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span> <span class="comment"> *</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span> <span class="comment"> * ====================== WARNING ======================</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span> <span class="comment"> */</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span> <span class="preprocessor">#ifndef LE_SMSINBOX1_INTERFACE_H_INCLUDE_GUARD</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span> <span class="preprocessor">#define LE_SMSINBOX1_INTERFACE_H_INCLUDE_GUARD</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span> </div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span> </div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span> <span class="preprocessor">#include "<a class="code" href="legato_8h.html">legato.h</a>"</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span> </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span> <span class="comment">// Interface specific includes</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span> <span class="preprocessor">#include "<a class="code" href="le__mdm_defs__interface_8h.html">le_mdmDefs_interface.h</a>"</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span> <span class="preprocessor">#include "<a class="code" href="le__sim__interface_8h.html">le_sim_interface.h</a>"</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span> <span class="preprocessor">#include "<a class="code" href="le__sms__interface_8h.html">le_sms_interface.h</a>"</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span> </div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span> </div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span> <span class="keywordtype">void</span> <a class="code" href="le__sms_inbox1__interface_8h.html#a212dd8196dd4b265798466920331de11">le_smsInbox1_ConnectService</a></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span> (</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>     <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span> );</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span> </div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span> <span class="keywordtype">void</span> <a class="code" href="le__sms_inbox1__interface_8h.html#a8fef777c7e3c78c855fba53c47a97784">le_smsInbox1_DisconnectService</a></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span> (</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>     <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span> );</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span> </div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span> </div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno"><a class="line" href="le__sms_inbox1__interface_8h.html#ae17eb9a61d395f3c0e4dacd2f135c074">  211</a></span> <span class="keyword">typedef</span> <span class="keyword">struct </span>le_smsInbox1_Session* <a class="code" href="le__sms_inbox1__interface_8h.html#ae17eb9a61d395f3c0e4dacd2f135c074">le_smsInbox1_SessionRef_t</a>;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span> </div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span> </div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno"><a class="line" href="le__sms_inbox1__interface_8h.html#af4a955f49ab155d2401a74b85a8d1a76">  219</a></span> <span class="preprocessor">#define LE_SMSINBOX1_FORMAT_UNKNOWN -1</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span> </div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span> </div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00227"></a><span class="lineno"><a class="line" href="le__sms_inbox1__interface_8h.html#ac47994ad2ef1c56bdb5348b269ac8139">  227</a></span> <span class="preprocessor">#define LE_SMSINBOX1_MAX_MBOX_NAME_LEN 12</span></div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span> </div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span> </div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00235"></a><span class="lineno"><a class="line" href="le__sms_inbox1__interface_8h.html#a8a995bec7afbcced5c0a7d0c3d6c8feb">  235</a></span> <span class="keyword">typedef</span> <span class="keyword">struct </span>le_smsInbox1_RxMessageHandler* <a class="code" href="le__sms_inbox1__interface_8h.html#a8a995bec7afbcced5c0a7d0c3d6c8feb">le_smsInbox1_RxMessageHandlerRef_t</a>;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span> </div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span> </div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span> <span class="keyword">typedef</span> void (*<a class="code" href="le__sms_inbox1__interface_8h.html#a19b58278c1549e54f5af6ff2542c3458">le_smsInbox1_RxMessageHandlerFunc_t</a>)</div>
+<div class="line"><a name="l00249"></a><span class="lineno"><a class="line" href="le__sms_inbox1__interface_8h.html#a19b58278c1549e54f5af6ff2542c3458">  249</a></span> (</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>     uint32_t msgId,</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>     <span class="keywordtype">void</span>* contextPtr</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span> );</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span> </div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span> <a class="code" href="le__sms_inbox1__interface_8h.html#ae17eb9a61d395f3c0e4dacd2f135c074">le_smsInbox1_SessionRef_t</a> <a class="code" href="le__sms_inbox1__interface_8h.html#ab5c07622b824f8af32de8a7c6f6aaf53">le_smsInbox1_Open</a></div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span> (</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>     <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span> );</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span> </div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span> <span class="keywordtype">void</span> <a class="code" href="le__sms_inbox1__interface_8h.html#a2c3b0118016949b77df6bab31c3a986e">le_smsInbox1_Close</a></div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span> (</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>     <a class="code" href="le__sms_inbox1__interface_8h.html#ae17eb9a61d395f3c0e4dacd2f135c074">le_smsInbox1_SessionRef_t</a> sessionRef</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span> );</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span> </div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span> <a class="code" href="le__sms_inbox1__interface_8h.html#a8a995bec7afbcced5c0a7d0c3d6c8feb">le_smsInbox1_RxMessageHandlerRef_t</a> <a class="code" href="le__sms_inbox1__interface_8h.html#ad1921790ff294865477be5508fc46f87">le_smsInbox1_AddRxMessageHandler</a></div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span> (</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>     <a class="code" href="le__sms_inbox1__interface_8h.html#a19b58278c1549e54f5af6ff2542c3458">le_smsInbox1_RxMessageHandlerFunc_t</a> handlerPtr,</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span> </div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>     <span class="keywordtype">void</span>* contextPtr</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span> );</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span> </div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span> <span class="keywordtype">void</span> <a class="code" href="le__sms_inbox1__interface_8h.html#a58587948e7bf5612bcb38164edfa4fee">le_smsInbox1_RemoveRxMessageHandler</a></div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span> (</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>     <a class="code" href="le__sms_inbox1__interface_8h.html#a8a995bec7afbcced5c0a7d0c3d6c8feb">le_smsInbox1_RxMessageHandlerRef_t</a> addHandlerRef</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span> );</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span> </div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span> <span class="keywordtype">void</span> <a class="code" href="le__sms_inbox1__interface_8h.html#a2a426505848863678403f5b14c2ce16c">le_smsInbox1_DeleteMsg</a></div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span> (</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>     uint32_t msgId</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span> );</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span> </div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__sms_inbox1__interface_8h.html#a47b7188457df57060544353824a722e5">le_smsInbox1_GetImsi</a></div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span> (</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>     uint32_t msgId,</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span> </div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>     <span class="keywordtype">char</span>* imsi,</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span> </div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>     <span class="keywordtype">size_t</span> imsiNumElements</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span> );</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span> </div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span> <a class="code" href="le__sms__interface_8h.html#a337778c44e63660c44fa2116699296c0">le_sms_Format_t</a> <a class="code" href="le__sms_inbox1__interface_8h.html#a7daf191029452574c2f73be31745ddd5">le_smsInbox1_GetFormat</a></div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span> (</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>     uint32_t msgId</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span> );</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span> </div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__sms_inbox1__interface_8h.html#a526785c35a6dcaabaff01b3959b25eb4">le_smsInbox1_GetSenderTel</a></div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span> (</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>     uint32_t msgId,</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span> </div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>     <span class="keywordtype">char</span>* tel,</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span> </div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>     <span class="keywordtype">size_t</span> telNumElements</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span> );</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span> </div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__sms_inbox1__interface_8h.html#aea859f08a7d8115d4839a59ce1be987c">le_smsInbox1_GetTimeStamp</a></div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span> (</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>     uint32_t msgId,</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span> </div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>     <span class="keywordtype">char</span>* timestamp,</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span> </div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>     <span class="keywordtype">size_t</span> timestampNumElements</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span> );</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span> </div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span> <span class="keywordtype">size_t</span> <a class="code" href="le__sms_inbox1__interface_8h.html#a99ac3b4b8d886a2c797c221a00f01bd6">le_smsInbox1_GetMsgLen</a></div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span> (</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>     uint32_t msgId</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span> );</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span> </div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__sms_inbox1__interface_8h.html#aa35b73bd6e76889b4ab93e021e14c7a6">le_smsInbox1_GetText</a></div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span> (</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>     uint32_t msgId,</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span> </div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>     <span class="keywordtype">char</span>* text,</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span> </div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>     <span class="keywordtype">size_t</span> textNumElements</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span> );</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span> </div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__sms_inbox1__interface_8h.html#a74a7caad34f457e0c3fb5a741f5089ae">le_smsInbox1_GetBinary</a></div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span> (</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>     uint32_t msgId,</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span> </div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>     uint8_t* binPtr,</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span> </div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>     <span class="keywordtype">size_t</span>* binNumElementsPtr</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span> );</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span> </div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__sms_inbox1__interface_8h.html#ac1f8f65a60e406752394499ee3d60883">le_smsInbox1_GetPdu</a></div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span> (</div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>     uint32_t msgId,</div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span> </div>
+<div class="line"><a name="l00504"></a><span class="lineno">  504</span>     uint8_t* pduPtr,</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span> </div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>     <span class="keywordtype">size_t</span>* pduNumElementsPtr</div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span> );</div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span> </div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span> uint32_t <a class="code" href="le__sms_inbox1__interface_8h.html#ae63652bebbdb65a29212bb7d5636b025">le_smsInbox1_GetFirst</a></div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span> (</div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>     <a class="code" href="le__sms_inbox1__interface_8h.html#ae17eb9a61d395f3c0e4dacd2f135c074">le_smsInbox1_SessionRef_t</a> sessionRef</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span> );</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span> </div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span> uint32_t <a class="code" href="le__sms_inbox1__interface_8h.html#a605986f7e80b0686841e9b3b5e9b2802">le_smsInbox1_GetNext</a></div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span> (</div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>     <a class="code" href="le__sms_inbox1__interface_8h.html#ae17eb9a61d395f3c0e4dacd2f135c074">le_smsInbox1_SessionRef_t</a> sessionRef</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span> );</div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span> </div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00555"></a><span class="lineno">  555</span> <span class="keywordtype">bool</span> <a class="code" href="le__sms_inbox1__interface_8h.html#a9f7be15b8e499a305efdcbed8a009255">le_smsInbox1_IsUnread</a></div>
+<div class="line"><a name="l00556"></a><span class="lineno">  556</span> (</div>
+<div class="line"><a name="l00557"></a><span class="lineno">  557</span>     uint32_t msgId</div>
+<div class="line"><a name="l00560"></a><span class="lineno">  560</span> );</div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span> </div>
+<div class="line"><a name="l00562"></a><span class="lineno">  562</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00569"></a><span class="lineno">  569</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00570"></a><span class="lineno">  570</span> <span class="keywordtype">void</span> <a class="code" href="le__sms_inbox1__interface_8h.html#a19c1e0e3e27a2d44374a1774b582b1ff">le_smsInbox1_MarkRead</a></div>
+<div class="line"><a name="l00571"></a><span class="lineno">  571</span> (</div>
+<div class="line"><a name="l00572"></a><span class="lineno">  572</span>     uint32_t msgId</div>
+<div class="line"><a name="l00575"></a><span class="lineno">  575</span> );</div>
+<div class="line"><a name="l00576"></a><span class="lineno">  576</span> </div>
+<div class="line"><a name="l00577"></a><span class="lineno">  577</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00584"></a><span class="lineno">  584</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00585"></a><span class="lineno">  585</span> <span class="keywordtype">void</span> <a class="code" href="le__sms_inbox1__interface_8h.html#a82ad6e7eb4ced962f6205acb87a8f62a">le_smsInbox1_MarkUnread</a></div>
+<div class="line"><a name="l00586"></a><span class="lineno">  586</span> (</div>
+<div class="line"><a name="l00587"></a><span class="lineno">  587</span>     uint32_t msgId</div>
+<div class="line"><a name="l00590"></a><span class="lineno">  590</span> );</div>
+<div class="line"><a name="l00591"></a><span class="lineno">  591</span> </div>
+<div class="line"><a name="l00592"></a><span class="lineno">  592</span> </div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span> <span class="preprocessor">#endif // LE_SMSINBOX1_INTERFACE_H_INCLUDE_GUARD</span></div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span> </div>
+<div class="ttc" id="le__sms_inbox1__interface_8h_html_a58587948e7bf5612bcb38164edfa4fee"><div class="ttname"><a href="le__sms_inbox1__interface_8h.html#a58587948e7bf5612bcb38164edfa4fee">le_smsInbox1_RemoveRxMessageHandler</a></div><div class="ttdeci">void le_smsInbox1_RemoveRxMessageHandler(le_smsInbox1_RxMessageHandlerRef_t addHandlerRef)</div></div>
+<div class="ttc" id="le__sms_inbox1__interface_8h_html_ae63652bebbdb65a29212bb7d5636b025"><div class="ttname"><a href="le__sms_inbox1__interface_8h.html#ae63652bebbdb65a29212bb7d5636b025">le_smsInbox1_GetFirst</a></div><div class="ttdeci">uint32_t le_smsInbox1_GetFirst(le_smsInbox1_SessionRef_t sessionRef)</div></div>
+<div class="ttc" id="le__basics_8h_html_a1cca095ed6ebab24b57a636382a6c86c"><div class="ttname"><a href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a></div><div class="ttdeci">le_result_t</div><div class="ttdef"><b>Definition:</b> le_basics.h:35</div></div>
+<div class="ttc" id="le__mdm_defs__interface_8h_html"><div class="ttname"><a href="le__mdm_defs__interface_8h.html">le_mdmDefs_interface.h</a></div></div>
+<div class="ttc" id="le__sms_inbox1__interface_8h_html_ab5c07622b824f8af32de8a7c6f6aaf53"><div class="ttname"><a href="le__sms_inbox1__interface_8h.html#ab5c07622b824f8af32de8a7c6f6aaf53">le_smsInbox1_Open</a></div><div class="ttdeci">le_smsInbox1_SessionRef_t le_smsInbox1_Open(void)</div></div>
+<div class="ttc" id="le__sms_inbox1__interface_8h_html_a99ac3b4b8d886a2c797c221a00f01bd6"><div class="ttname"><a href="le__sms_inbox1__interface_8h.html#a99ac3b4b8d886a2c797c221a00f01bd6">le_smsInbox1_GetMsgLen</a></div><div class="ttdeci">size_t le_smsInbox1_GetMsgLen(uint32_t msgId)</div></div>
+<div class="ttc" id="le__sms_inbox1__interface_8h_html_ac1f8f65a60e406752394499ee3d60883"><div class="ttname"><a href="le__sms_inbox1__interface_8h.html#ac1f8f65a60e406752394499ee3d60883">le_smsInbox1_GetPdu</a></div><div class="ttdeci">le_result_t le_smsInbox1_GetPdu(uint32_t msgId, uint8_t *pduPtr, size_t *pduNumElementsPtr)</div></div>
+<div class="ttc" id="le__sms_inbox1__interface_8h_html_a605986f7e80b0686841e9b3b5e9b2802"><div class="ttname"><a href="le__sms_inbox1__interface_8h.html#a605986f7e80b0686841e9b3b5e9b2802">le_smsInbox1_GetNext</a></div><div class="ttdeci">uint32_t le_smsInbox1_GetNext(le_smsInbox1_SessionRef_t sessionRef)</div></div>
+<div class="ttc" id="le__sms_inbox1__interface_8h_html_a2a426505848863678403f5b14c2ce16c"><div class="ttname"><a href="le__sms_inbox1__interface_8h.html#a2a426505848863678403f5b14c2ce16c">le_smsInbox1_DeleteMsg</a></div><div class="ttdeci">void le_smsInbox1_DeleteMsg(uint32_t msgId)</div></div>
+<div class="ttc" id="le__sms__interface_8h_html"><div class="ttname"><a href="le__sms__interface_8h.html">le_sms_interface.h</a></div></div>
+<div class="ttc" id="le__sms_inbox1__interface_8h_html_ad1921790ff294865477be5508fc46f87"><div class="ttname"><a href="le__sms_inbox1__interface_8h.html#ad1921790ff294865477be5508fc46f87">le_smsInbox1_AddRxMessageHandler</a></div><div class="ttdeci">le_smsInbox1_RxMessageHandlerRef_t le_smsInbox1_AddRxMessageHandler(le_smsInbox1_RxMessageHandlerFunc_t handlerPtr, void *contextPtr)</div></div>
+<div class="ttc" id="le__sms__interface_8h_html_a337778c44e63660c44fa2116699296c0"><div class="ttname"><a href="le__sms__interface_8h.html#a337778c44e63660c44fa2116699296c0">le_sms_Format_t</a></div><div class="ttdeci">le_sms_Format_t</div><div class="ttdef"><b>Definition:</b> le_sms_interface.h:527</div></div>
+<div class="ttc" id="le__sim__interface_8h_html"><div class="ttname"><a href="le__sim__interface_8h.html">le_sim_interface.h</a></div></div>
+<div class="ttc" id="le__sms_inbox1__interface_8h_html_a212dd8196dd4b265798466920331de11"><div class="ttname"><a href="le__sms_inbox1__interface_8h.html#a212dd8196dd4b265798466920331de11">le_smsInbox1_ConnectService</a></div><div class="ttdeci">void le_smsInbox1_ConnectService(void)</div></div>
+<div class="ttc" id="le__sms_inbox1__interface_8h_html_a19b58278c1549e54f5af6ff2542c3458"><div class="ttname"><a href="le__sms_inbox1__interface_8h.html#a19b58278c1549e54f5af6ff2542c3458">le_smsInbox1_RxMessageHandlerFunc_t</a></div><div class="ttdeci">void(* le_smsInbox1_RxMessageHandlerFunc_t)(uint32_t msgId, void *contextPtr)</div><div class="ttdef"><b>Definition:</b> le_smsInbox1_interface.h:249</div></div>
+<div class="ttc" id="le__sms_inbox1__interface_8h_html_a7daf191029452574c2f73be31745ddd5"><div class="ttname"><a href="le__sms_inbox1__interface_8h.html#a7daf191029452574c2f73be31745ddd5">le_smsInbox1_GetFormat</a></div><div class="ttdeci">le_sms_Format_t le_smsInbox1_GetFormat(uint32_t msgId)</div></div>
+<div class="ttc" id="le__sms_inbox1__interface_8h_html_a9f7be15b8e499a305efdcbed8a009255"><div class="ttname"><a href="le__sms_inbox1__interface_8h.html#a9f7be15b8e499a305efdcbed8a009255">le_smsInbox1_IsUnread</a></div><div class="ttdeci">bool le_smsInbox1_IsUnread(uint32_t msgId)</div></div>
+<div class="ttc" id="legato_8h_html"><div class="ttname"><a href="legato_8h.html">legato.h</a></div></div>
+<div class="ttc" id="le__sms_inbox1__interface_8h_html_aea859f08a7d8115d4839a59ce1be987c"><div class="ttname"><a href="le__sms_inbox1__interface_8h.html#aea859f08a7d8115d4839a59ce1be987c">le_smsInbox1_GetTimeStamp</a></div><div class="ttdeci">le_result_t le_smsInbox1_GetTimeStamp(uint32_t msgId, char *timestamp, size_t timestampNumElements)</div></div>
+<div class="ttc" id="le__sms_inbox1__interface_8h_html_a82ad6e7eb4ced962f6205acb87a8f62a"><div class="ttname"><a href="le__sms_inbox1__interface_8h.html#a82ad6e7eb4ced962f6205acb87a8f62a">le_smsInbox1_MarkUnread</a></div><div class="ttdeci">void le_smsInbox1_MarkUnread(uint32_t msgId)</div></div>
+<div class="ttc" id="le__sms_inbox1__interface_8h_html_a74a7caad34f457e0c3fb5a741f5089ae"><div class="ttname"><a href="le__sms_inbox1__interface_8h.html#a74a7caad34f457e0c3fb5a741f5089ae">le_smsInbox1_GetBinary</a></div><div class="ttdeci">le_result_t le_smsInbox1_GetBinary(uint32_t msgId, uint8_t *binPtr, size_t *binNumElementsPtr)</div></div>
+<div class="ttc" id="le__sms_inbox1__interface_8h_html_ae17eb9a61d395f3c0e4dacd2f135c074"><div class="ttname"><a href="le__sms_inbox1__interface_8h.html#ae17eb9a61d395f3c0e4dacd2f135c074">le_smsInbox1_SessionRef_t</a></div><div class="ttdeci">struct le_smsInbox1_Session * le_smsInbox1_SessionRef_t</div><div class="ttdef"><b>Definition:</b> le_smsInbox1_interface.h:211</div></div>
+<div class="ttc" id="le__sms_inbox1__interface_8h_html_a8fef777c7e3c78c855fba53c47a97784"><div class="ttname"><a href="le__sms_inbox1__interface_8h.html#a8fef777c7e3c78c855fba53c47a97784">le_smsInbox1_DisconnectService</a></div><div class="ttdeci">void le_smsInbox1_DisconnectService(void)</div></div>
+<div class="ttc" id="le__sms_inbox1__interface_8h_html_a526785c35a6dcaabaff01b3959b25eb4"><div class="ttname"><a href="le__sms_inbox1__interface_8h.html#a526785c35a6dcaabaff01b3959b25eb4">le_smsInbox1_GetSenderTel</a></div><div class="ttdeci">le_result_t le_smsInbox1_GetSenderTel(uint32_t msgId, char *tel, size_t telNumElements)</div></div>
+<div class="ttc" id="le__sms_inbox1__interface_8h_html_a19c1e0e3e27a2d44374a1774b582b1ff"><div class="ttname"><a href="le__sms_inbox1__interface_8h.html#a19c1e0e3e27a2d44374a1774b582b1ff">le_smsInbox1_MarkRead</a></div><div class="ttdeci">void le_smsInbox1_MarkRead(uint32_t msgId)</div></div>
+<div class="ttc" id="le__sms_inbox1__interface_8h_html_a47b7188457df57060544353824a722e5"><div class="ttname"><a href="le__sms_inbox1__interface_8h.html#a47b7188457df57060544353824a722e5">le_smsInbox1_GetImsi</a></div><div class="ttdeci">le_result_t le_smsInbox1_GetImsi(uint32_t msgId, char *imsi, size_t imsiNumElements)</div></div>
+<div class="ttc" id="le__sms_inbox1__interface_8h_html_aa35b73bd6e76889b4ab93e021e14c7a6"><div class="ttname"><a href="le__sms_inbox1__interface_8h.html#aa35b73bd6e76889b4ab93e021e14c7a6">le_smsInbox1_GetText</a></div><div class="ttdeci">le_result_t le_smsInbox1_GetText(uint32_t msgId, char *text, size_t textNumElements)</div></div>
+<div class="ttc" id="le__sms_inbox1__interface_8h_html_a2c3b0118016949b77df6bab31c3a986e"><div class="ttname"><a href="le__sms_inbox1__interface_8h.html#a2c3b0118016949b77df6bab31c3a986e">le_smsInbox1_Close</a></div><div class="ttdeci">void le_smsInbox1_Close(le_smsInbox1_SessionRef_t sessionRef)</div></div>
+<div class="ttc" id="le__sms_inbox1__interface_8h_html_a8a995bec7afbcced5c0a7d0c3d6c8feb"><div class="ttname"><a href="le__sms_inbox1__interface_8h.html#a8a995bec7afbcced5c0a7d0c3d6c8feb">le_smsInbox1_RxMessageHandlerRef_t</a></div><div class="ttdeci">struct le_smsInbox1_RxMessageHandler * le_smsInbox1_RxMessageHandlerRef_t</div><div class="ttdef"><b>Definition:</b> le_smsInbox1_interface.h:235</div></div>
+</div><!-- fragment --></div>

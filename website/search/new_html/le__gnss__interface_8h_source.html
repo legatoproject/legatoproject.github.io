@@ -1,0 +1,214 @@
+<div class="contents">
+<a href="le__gnss__interface_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span> <span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span> <span class="comment"> * ====================== WARNING ======================</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span> <span class="comment"> *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span> <span class="comment"> * THE CONTENTS OF THIS FILE HAVE BEEN AUTO-GENERATED.</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span> <span class="comment"> * DO NOT MODIFY IN ANY WAY.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span> <span class="comment"> *</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span> <span class="comment"> * ====================== WARNING ======================</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span> <span class="comment"> */</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span> <span class="preprocessor">#ifndef LE_GNSS_INTERFACE_H_INCLUDE_GUARD</span></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span> <span class="preprocessor">#define LE_GNSS_INTERFACE_H_INCLUDE_GUARD</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span> </div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span> </div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span> <span class="preprocessor">#include "<a class="code" href="legato_8h.html">legato.h</a>"</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span> </div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span> <span class="keywordtype">void</span> <a class="code" href="le__gnss__interface_8h.html#a3b352251c2764092c56f20592f5894ca">le_gnss_ConnectService</a></div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span> (</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>     <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span> );</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span> </div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span> <span class="keywordtype">void</span> <a class="code" href="le__gnss__interface_8h.html#aeb249461b02547251a5b5e1e8bb28a95">le_gnss_DisconnectService</a></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span> (</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>     <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span> );</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span> </div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span> </div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00241"></a><span class="lineno"><a class="line" href="le__gnss__interface_8h.html#aad83794e1452ffce131332a7d5d615f0">  241</a></span> <span class="preprocessor">#define LE_GNSS_MAX_SUPL_SERVER_URL_LEN 256</span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span> </div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span> </div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno"><a class="line" href="le__gnss__interface_8h.html#a55a09e781cec3a35c15fd88e17bdbad1">  249</a></span> <span class="preprocessor">#define LE_GNSS_MAX_SUPL_CERTIFICATE_LEN 2000</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span> </div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span> </div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno"><a class="line" href="le__gnss__interface_8h.html#a70085fe9ff78ec5c7426fd4c9dc2f9dc">  257</a></span> <span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span> {</div>
+<div class="line"><a name="l00259"></a><span class="lineno"><a class="line" href="le__gnss__interface_8h.html#a70085fe9ff78ec5c7426fd4c9dc2f9dca32336a5d9f3cf42251c081fbc0ae7b36">  259</a></span>     <a class="code" href="le__gnss__interface_8h.html#a70085fe9ff78ec5c7426fd4c9dc2f9dca32336a5d9f3cf42251c081fbc0ae7b36">LE_GNSS_STANDALONE_MODE</a>,</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span> </div>
+<div class="line"><a name="l00262"></a><span class="lineno"><a class="line" href="le__gnss__interface_8h.html#a70085fe9ff78ec5c7426fd4c9dc2f9dca4d21852db64fad5ca5c90b35efaaefff">  262</a></span>     <a class="code" href="le__gnss__interface_8h.html#a70085fe9ff78ec5c7426fd4c9dc2f9dca4d21852db64fad5ca5c90b35efaaefff">LE_GNSS_MS_BASED_MODE</a>,</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span> </div>
+<div class="line"><a name="l00265"></a><span class="lineno"><a class="line" href="le__gnss__interface_8h.html#a70085fe9ff78ec5c7426fd4c9dc2f9dca185c89cade65e4e40dc69c55327c726a">  265</a></span>     <a class="code" href="le__gnss__interface_8h.html#a70085fe9ff78ec5c7426fd4c9dc2f9dca185c89cade65e4e40dc69c55327c726a">LE_GNSS_MS_ASSISTED_MODE</a></div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span> }</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span> <a class="code" href="le__gnss__interface_8h.html#a70085fe9ff78ec5c7426fd4c9dc2f9dc">le_gnss_AssistedMode_t</a>;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span> </div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span> </div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00278"></a><span class="lineno"><a class="line" href="le__gnss__interface_8h.html#adac6fdd4f73229bc9af14e0a11335efc">  278</a></span> <span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span> {</div>
+<div class="line"><a name="l00280"></a><span class="lineno"><a class="line" href="le__gnss__interface_8h.html#adac6fdd4f73229bc9af14e0a11335efcad8f92688bcc53bb744cb1466609d49a7">  280</a></span>     <a class="code" href="le__gnss__interface_8h.html#adac6fdd4f73229bc9af14e0a11335efcad8f92688bcc53bb744cb1466609d49a7">LE_GNSS_CONSTELLATION_GPS</a> = 0x1,</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span> </div>
+<div class="line"><a name="l00283"></a><span class="lineno"><a class="line" href="le__gnss__interface_8h.html#adac6fdd4f73229bc9af14e0a11335efca8031dcacac5aac40d2b2e1b574c5b878">  283</a></span>     <a class="code" href="le__gnss__interface_8h.html#adac6fdd4f73229bc9af14e0a11335efca8031dcacac5aac40d2b2e1b574c5b878">LE_GNSS_CONSTELLATION_GLONASS</a> = 0x2</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span> }</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span> <a class="code" href="le__gnss__interface_8h.html#adac6fdd4f73229bc9af14e0a11335efc">le_gnss_ConstellationBitMask_t</a>;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span> </div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__gnss__interface_8h.html#a6dbdc58f23e480e65ea16c583ef5340f">le_gnss_SetConstellation</a></div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span> (</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>     <a class="code" href="le__gnss__interface_8h.html#adac6fdd4f73229bc9af14e0a11335efc">le_gnss_ConstellationBitMask_t</a> constellationMask</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span> );</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span> </div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__gnss__interface_8h.html#a150835481ab3751e3ab1821362e34e84">le_gnss_GetConstellation</a></div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span> (</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>     <a class="code" href="le__gnss__interface_8h.html#adac6fdd4f73229bc9af14e0a11335efc">le_gnss_ConstellationBitMask_t</a>* constellationMaskPtr</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span> );</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span> </div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__gnss__interface_8h.html#a3474bb912febeca6e258c6039144f39f">le_gnss_EnableExtendedEphemerisFile</a></div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span> (</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>     <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span> );</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span> </div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__gnss__interface_8h.html#a49d596f01c010f7828c949f1436246df">le_gnss_DisableExtendedEphemerisFile</a></div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span> (</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>     <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span> );</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span> </div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__gnss__interface_8h.html#aea1811e39dfae1516b08404adfbaec22">le_gnss_LoadExtendedEphemerisFile</a></div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span> (</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>     <span class="keywordtype">int</span> fd</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span> );</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span> </div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__gnss__interface_8h.html#a661b57f0684d4f9b4e438c55ef85f7dc">le_gnss_GetExtendedEphemerisValidity</a></div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span> (</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>     <a class="code" href="structle__clk___time__t.html">le_clk_Time_t</a>* startTimePtrPtr,</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span> </div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>     <a class="code" href="structle__clk___time__t.html">le_clk_Time_t</a>* stopTimePtrPtr</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span> );</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span> </div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__gnss__interface_8h.html#add90639835a531c4b9d15554e4f3ba16">le_gnss_Start</a></div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span> (</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>     <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span> );</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span> </div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__gnss__interface_8h.html#a93d63fdc76dbced071956b87de2abff7">le_gnss_Stop</a></div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span> (</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>     <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span> );</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span> </div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__gnss__interface_8h.html#aa702703bbeebbefd65dd51b1f9fd4ce5">le_gnss_ForceColdRestart</a></div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span> (</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>     <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span> );</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span> </div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__gnss__interface_8h.html#a8e1d96b1b64055b298a74cad1acfbbf8">le_gnss_Enable</a></div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span> (</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>     <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span> );</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span> </div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__gnss__interface_8h.html#aa2cd87c616f968370e9e2113570437ea">le_gnss_Disable</a></div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span> (</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>     <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span> );</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span> </div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__gnss__interface_8h.html#a5d74c2ad91a504a1d0ac35b4f4f2c382">le_gnss_SetSuplAssistedMode</a></div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span> (</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>     <a class="code" href="le__gnss__interface_8h.html#a70085fe9ff78ec5c7426fd4c9dc2f9dc">le_gnss_AssistedMode_t</a> assistedMode</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span> );</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span> </div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__gnss__interface_8h.html#a2b5eb5e1efbc31683e717dd7181ff1d3">le_gnss_GetSuplAssistedMode</a></div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span> (</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>     <a class="code" href="le__gnss__interface_8h.html#a70085fe9ff78ec5c7426fd4c9dc2f9dc">le_gnss_AssistedMode_t</a>* assistedModePtr</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span> );</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span> </div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__gnss__interface_8h.html#a96329491c6b00cb922b6f0934f110b1f">le_gnss_SetSuplServerUrl</a></div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span> (</div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>     <span class="keyword">const</span> <span class="keywordtype">char</span>* suplServerUrlPtr</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span> );</div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span> </div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__gnss__interface_8h.html#abab58e1002daa036d0549ca259ddc90a">le_gnss_InjectSuplCertificate</a></div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span> (</div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>     uint8_t suplCertificateId,</div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span> </div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>     uint16_t suplCertificateLen,</div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span> </div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>     <span class="keyword">const</span> <span class="keywordtype">char</span>* suplCertificatePtr</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span> );</div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span> </div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00555"></a><span class="lineno">  555</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__gnss__interface_8h.html#aec8d50c209ce21a979b7e9f552353aec">le_gnss_DeleteSuplCertificate</a></div>
+<div class="line"><a name="l00556"></a><span class="lineno">  556</span> (</div>
+<div class="line"><a name="l00557"></a><span class="lineno">  557</span>     uint8_t suplCertificateId</div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span> );</div>
+<div class="line"><a name="l00562"></a><span class="lineno">  562</span> </div>
+<div class="line"><a name="l00563"></a><span class="lineno">  563</span> </div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span> <span class="preprocessor">#endif // LE_GNSS_INTERFACE_H_INCLUDE_GUARD</span></div>
+<div class="line"><a name="l00565"></a><span class="lineno">  565</span> </div>
+<div class="ttc" id="le__gnss__interface_8h_html_a70085fe9ff78ec5c7426fd4c9dc2f9dc"><div class="ttname"><a href="le__gnss__interface_8h.html#a70085fe9ff78ec5c7426fd4c9dc2f9dc">le_gnss_AssistedMode_t</a></div><div class="ttdeci">le_gnss_AssistedMode_t</div><div class="ttdef"><b>Definition:</b> le_gnss_interface.h:257</div></div>
+<div class="ttc" id="le__gnss__interface_8h_html_a661b57f0684d4f9b4e438c55ef85f7dc"><div class="ttname"><a href="le__gnss__interface_8h.html#a661b57f0684d4f9b4e438c55ef85f7dc">le_gnss_GetExtendedEphemerisValidity</a></div><div class="ttdeci">le_result_t le_gnss_GetExtendedEphemerisValidity(le_clk_Time_t *startTimePtrPtr, le_clk_Time_t *stopTimePtrPtr)</div></div>
+<div class="ttc" id="le__basics_8h_html_a1cca095ed6ebab24b57a636382a6c86c"><div class="ttname"><a href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a></div><div class="ttdeci">le_result_t</div><div class="ttdef"><b>Definition:</b> le_basics.h:35</div></div>
+<div class="ttc" id="le__gnss__interface_8h_html_add90639835a531c4b9d15554e4f3ba16"><div class="ttname"><a href="le__gnss__interface_8h.html#add90639835a531c4b9d15554e4f3ba16">le_gnss_Start</a></div><div class="ttdeci">le_result_t le_gnss_Start(void)</div></div>
+<div class="ttc" id="le__gnss__interface_8h_html_a70085fe9ff78ec5c7426fd4c9dc2f9dca32336a5d9f3cf42251c081fbc0ae7b36"><div class="ttname"><a href="le__gnss__interface_8h.html#a70085fe9ff78ec5c7426fd4c9dc2f9dca32336a5d9f3cf42251c081fbc0ae7b36">LE_GNSS_STANDALONE_MODE</a></div><div class="ttdoc">Standalone mode. </div><div class="ttdef"><b>Definition:</b> le_gnss_interface.h:259</div></div>
+<div class="ttc" id="le__gnss__interface_8h_html_adac6fdd4f73229bc9af14e0a11335efca8031dcacac5aac40d2b2e1b574c5b878"><div class="ttname"><a href="le__gnss__interface_8h.html#adac6fdd4f73229bc9af14e0a11335efca8031dcacac5aac40d2b2e1b574c5b878">LE_GNSS_CONSTELLATION_GLONASS</a></div><div class="ttdoc">GLONASS constellation used in solution. </div><div class="ttdef"><b>Definition:</b> le_gnss_interface.h:283</div></div>
+<div class="ttc" id="le__gnss__interface_8h_html_aea1811e39dfae1516b08404adfbaec22"><div class="ttname"><a href="le__gnss__interface_8h.html#aea1811e39dfae1516b08404adfbaec22">le_gnss_LoadExtendedEphemerisFile</a></div><div class="ttdeci">le_result_t le_gnss_LoadExtendedEphemerisFile(int fd)</div></div>
+<div class="ttc" id="le__gnss__interface_8h_html_aeb249461b02547251a5b5e1e8bb28a95"><div class="ttname"><a href="le__gnss__interface_8h.html#aeb249461b02547251a5b5e1e8bb28a95">le_gnss_DisconnectService</a></div><div class="ttdeci">void le_gnss_DisconnectService(void)</div></div>
+<div class="ttc" id="le__gnss__interface_8h_html_abab58e1002daa036d0549ca259ddc90a"><div class="ttname"><a href="le__gnss__interface_8h.html#abab58e1002daa036d0549ca259ddc90a">le_gnss_InjectSuplCertificate</a></div><div class="ttdeci">le_result_t le_gnss_InjectSuplCertificate(uint8_t suplCertificateId, uint16_t suplCertificateLen, const char *suplCertificatePtr)</div></div>
+<div class="ttc" id="le__gnss__interface_8h_html_aa702703bbeebbefd65dd51b1f9fd4ce5"><div class="ttname"><a href="le__gnss__interface_8h.html#aa702703bbeebbefd65dd51b1f9fd4ce5">le_gnss_ForceColdRestart</a></div><div class="ttdeci">le_result_t le_gnss_ForceColdRestart(void)</div></div>
+<div class="ttc" id="le__gnss__interface_8h_html_a150835481ab3751e3ab1821362e34e84"><div class="ttname"><a href="le__gnss__interface_8h.html#a150835481ab3751e3ab1821362e34e84">le_gnss_GetConstellation</a></div><div class="ttdeci">le_result_t le_gnss_GetConstellation(le_gnss_ConstellationBitMask_t *constellationMaskPtr)</div></div>
+<div class="ttc" id="le__gnss__interface_8h_html_a3474bb912febeca6e258c6039144f39f"><div class="ttname"><a href="le__gnss__interface_8h.html#a3474bb912febeca6e258c6039144f39f">le_gnss_EnableExtendedEphemerisFile</a></div><div class="ttdeci">le_result_t le_gnss_EnableExtendedEphemerisFile(void)</div></div>
+<div class="ttc" id="le__gnss__interface_8h_html_a2b5eb5e1efbc31683e717dd7181ff1d3"><div class="ttname"><a href="le__gnss__interface_8h.html#a2b5eb5e1efbc31683e717dd7181ff1d3">le_gnss_GetSuplAssistedMode</a></div><div class="ttdeci">le_result_t le_gnss_GetSuplAssistedMode(le_gnss_AssistedMode_t *assistedModePtr)</div></div>
+<div class="ttc" id="le__gnss__interface_8h_html_a49d596f01c010f7828c949f1436246df"><div class="ttname"><a href="le__gnss__interface_8h.html#a49d596f01c010f7828c949f1436246df">le_gnss_DisableExtendedEphemerisFile</a></div><div class="ttdeci">le_result_t le_gnss_DisableExtendedEphemerisFile(void)</div></div>
+<div class="ttc" id="structle__clk___time__t_html"><div class="ttname"><a href="structle__clk___time__t.html">le_clk_Time_t</a></div><div class="ttdef"><b>Definition:</b> le_clock.h:92</div></div>
+<div class="ttc" id="le__gnss__interface_8h_html_aec8d50c209ce21a979b7e9f552353aec"><div class="ttname"><a href="le__gnss__interface_8h.html#aec8d50c209ce21a979b7e9f552353aec">le_gnss_DeleteSuplCertificate</a></div><div class="ttdeci">le_result_t le_gnss_DeleteSuplCertificate(uint8_t suplCertificateId)</div></div>
+<div class="ttc" id="le__gnss__interface_8h_html_adac6fdd4f73229bc9af14e0a11335efcad8f92688bcc53bb744cb1466609d49a7"><div class="ttname"><a href="le__gnss__interface_8h.html#adac6fdd4f73229bc9af14e0a11335efcad8f92688bcc53bb744cb1466609d49a7">LE_GNSS_CONSTELLATION_GPS</a></div><div class="ttdoc">GPS constellation used in solution. </div><div class="ttdef"><b>Definition:</b> le_gnss_interface.h:280</div></div>
+<div class="ttc" id="le__gnss__interface_8h_html_a70085fe9ff78ec5c7426fd4c9dc2f9dca185c89cade65e4e40dc69c55327c726a"><div class="ttname"><a href="le__gnss__interface_8h.html#a70085fe9ff78ec5c7426fd4c9dc2f9dca185c89cade65e4e40dc69c55327c726a">LE_GNSS_MS_ASSISTED_MODE</a></div><div class="ttdoc">MS-Assisted mode. </div><div class="ttdef"><b>Definition:</b> le_gnss_interface.h:265</div></div>
+<div class="ttc" id="le__gnss__interface_8h_html_a5d74c2ad91a504a1d0ac35b4f4f2c382"><div class="ttname"><a href="le__gnss__interface_8h.html#a5d74c2ad91a504a1d0ac35b4f4f2c382">le_gnss_SetSuplAssistedMode</a></div><div class="ttdeci">le_result_t le_gnss_SetSuplAssistedMode(le_gnss_AssistedMode_t assistedMode)</div></div>
+<div class="ttc" id="le__gnss__interface_8h_html_adac6fdd4f73229bc9af14e0a11335efc"><div class="ttname"><a href="le__gnss__interface_8h.html#adac6fdd4f73229bc9af14e0a11335efc">le_gnss_ConstellationBitMask_t</a></div><div class="ttdeci">le_gnss_ConstellationBitMask_t</div><div class="ttdef"><b>Definition:</b> le_gnss_interface.h:278</div></div>
+<div class="ttc" id="le__gnss__interface_8h_html_a3b352251c2764092c56f20592f5894ca"><div class="ttname"><a href="le__gnss__interface_8h.html#a3b352251c2764092c56f20592f5894ca">le_gnss_ConnectService</a></div><div class="ttdeci">void le_gnss_ConnectService(void)</div></div>
+<div class="ttc" id="le__gnss__interface_8h_html_a93d63fdc76dbced071956b87de2abff7"><div class="ttname"><a href="le__gnss__interface_8h.html#a93d63fdc76dbced071956b87de2abff7">le_gnss_Stop</a></div><div class="ttdeci">le_result_t le_gnss_Stop(void)</div></div>
+<div class="ttc" id="legato_8h_html"><div class="ttname"><a href="legato_8h.html">legato.h</a></div></div>
+<div class="ttc" id="le__gnss__interface_8h_html_a96329491c6b00cb922b6f0934f110b1f"><div class="ttname"><a href="le__gnss__interface_8h.html#a96329491c6b00cb922b6f0934f110b1f">le_gnss_SetSuplServerUrl</a></div><div class="ttdeci">le_result_t le_gnss_SetSuplServerUrl(const char *suplServerUrlPtr)</div></div>
+<div class="ttc" id="le__gnss__interface_8h_html_aa2cd87c616f968370e9e2113570437ea"><div class="ttname"><a href="le__gnss__interface_8h.html#aa2cd87c616f968370e9e2113570437ea">le_gnss_Disable</a></div><div class="ttdeci">le_result_t le_gnss_Disable(void)</div></div>
+<div class="ttc" id="le__gnss__interface_8h_html_a6dbdc58f23e480e65ea16c583ef5340f"><div class="ttname"><a href="le__gnss__interface_8h.html#a6dbdc58f23e480e65ea16c583ef5340f">le_gnss_SetConstellation</a></div><div class="ttdeci">le_result_t le_gnss_SetConstellation(le_gnss_ConstellationBitMask_t constellationMask)</div></div>
+<div class="ttc" id="le__gnss__interface_8h_html_a70085fe9ff78ec5c7426fd4c9dc2f9dca4d21852db64fad5ca5c90b35efaaefff"><div class="ttname"><a href="le__gnss__interface_8h.html#a70085fe9ff78ec5c7426fd4c9dc2f9dca4d21852db64fad5ca5c90b35efaaefff">LE_GNSS_MS_BASED_MODE</a></div><div class="ttdoc">MS-Based mode. </div><div class="ttdef"><b>Definition:</b> le_gnss_interface.h:262</div></div>
+<div class="ttc" id="le__gnss__interface_8h_html_a8e1d96b1b64055b298a74cad1acfbbf8"><div class="ttname"><a href="le__gnss__interface_8h.html#a8e1d96b1b64055b298a74cad1acfbbf8">le_gnss_Enable</a></div><div class="ttdeci">le_result_t le_gnss_Enable(void)</div></div>
+</div><!-- fragment --></div>

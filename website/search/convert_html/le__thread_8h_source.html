@@ -1,0 +1,336 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Legato - Documentation</title>
+<meta content="#description" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="resources/images/legato.ico" rel="shortcut icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="resources/css/style-template.css" rel="stylesheet" type="text/css" />
+<link href="resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<link href="resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<link href="resources/css/navtree.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+    <script src="resources/js/html5shiv.js"></script>
+    <script src="resources/js/respond.js"></script>
+    <![endif]-->
+<script src="resources/js/jquery-core.js" type="text/javascript"></script>
+<script src="resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="resources/js/data.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="wrapper documentation">
+<div id="top">
+<header>
+<h1><a class="navlink" href="#" title="back to Legotao documentation homepage">Legato</a></h1>
+<nav>
+<a class="link-selected" href="documentation.html">Documentation</a>
+<a href="downloads.html">Downloads</a>
+<a href="community.html">Community</a>
+<a href="prototyping-tools.html">Prototyping Tools</a>
+<a href="#"><i class="fa fa-search"></i> Search</a>
+</nav>
+</header>
+</div>
+<div id="topMenu">
+<h2>Documentation</h2>
+<nav>
+<a id="Guides">Guides</a>
+<a id="Tutorial">Tutorial</a>
+<a id="Tools">Service API</a>
+<a href="#">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1" style="display:visible;"></div>
+<div id="tree2" style="display:none;">tree2</div>
+<div id="tree3" style="display:none;">tree3</div>
+</div>
+<div class="content">
+<a href="le__thread_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span> <span class="preprocessor">#ifndef LEGATO_THREAD_INCLUDE_GUARD</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span> <span class="preprocessor">#define LEGATO_THREAD_INCLUDE_GUARD</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno"><a class="line" href="le__thread_8h.html#a32121104c6b4ca39008eb79a4d6862f2">  167</a></span> <span class="keyword">typedef</span> <span class="keyword">struct </span>le_thread* <a class="code" href="le__thread_8h.html#a32121104c6b4ca39008eb79a4d6862f2">le_thread_Ref_t</a>;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span> </div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span> </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno"><a class="line" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07">  183</a></span> <span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span> {</div>
+<div class="line"><a name="l00185"></a><span class="lineno"><a class="line" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a8237422b4c3d3df0ffcdbc9981c45d98">  185</a></span>     <a class="code" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a8237422b4c3d3df0ffcdbc9981c45d98">LE_THREAD_PRIORITY_IDLE</a> = 0,    </div>
+<div class="line"><a name="l00186"></a><span class="lineno"><a class="line" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07aa0e16c2e450b0510087487a06318a2bb">  186</a></span>     <a class="code" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07aa0e16c2e450b0510087487a06318a2bb">LE_THREAD_PRIORITY_NORMAL</a>,      </div>
+<div class="line"><a name="l00187"></a><span class="lineno"><a class="line" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a37b1c0a99fc3b979afa091911e2f43d6">  187</a></span>     <a class="code" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a37b1c0a99fc3b979afa091911e2f43d6">LE_THREAD_PRIORITY_RT_1</a>,        </div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>     <a class="code" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a6d3958846ce89c25aad1f16db34549c7">LE_THREAD_PRIORITY_RT_2</a>,        </div>
+<div class="line"><a name="l00190"></a><span class="lineno"><a class="line" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a5fce739981e752cb447f5f79b967670e">  190</a></span>     <a class="code" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a5fce739981e752cb447f5f79b967670e">LE_THREAD_PRIORITY_RT_3</a>,        </div>
+<div class="line"><a name="l00191"></a><span class="lineno"><a class="line" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a872a9ad09f7fa8ddf9364e604f096da7">  191</a></span>     <a class="code" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a872a9ad09f7fa8ddf9364e604f096da7">LE_THREAD_PRIORITY_RT_4</a>,        </div>
+<div class="line"><a name="l00192"></a><span class="lineno"><a class="line" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07ac8b001c3b50da24d990dd6b46e1efe68">  192</a></span>     <a class="code" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07ac8b001c3b50da24d990dd6b46e1efe68">LE_THREAD_PRIORITY_RT_5</a>,        </div>
+<div class="line"><a name="l00193"></a><span class="lineno"><a class="line" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a9fc138e30eefdcb4e76714eb24640970">  193</a></span>     <a class="code" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a9fc138e30eefdcb4e76714eb24640970">LE_THREAD_PRIORITY_RT_6</a>,        </div>
+<div class="line"><a name="l00194"></a><span class="lineno"><a class="line" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07ae2c4e9e3acde0b3fdccae600a8fb1495">  194</a></span>     <a class="code" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07ae2c4e9e3acde0b3fdccae600a8fb1495">LE_THREAD_PRIORITY_RT_7</a>,        </div>
+<div class="line"><a name="l00195"></a><span class="lineno"><a class="line" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a8f32fd7602abadccad57458154a36818">  195</a></span>     <a class="code" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a8f32fd7602abadccad57458154a36818">LE_THREAD_PRIORITY_RT_8</a>,        </div>
+<div class="line"><a name="l00196"></a><span class="lineno"><a class="line" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a5d80b49943d3cf26e93c256fcb2f92f9">  196</a></span>     <a class="code" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a5d80b49943d3cf26e93c256fcb2f92f9">LE_THREAD_PRIORITY_RT_9</a>,        </div>
+<div class="line"><a name="l00197"></a><span class="lineno"><a class="line" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a7cf4f6e4bcc28631edce76a0a3dff459">  197</a></span>     <a class="code" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a7cf4f6e4bcc28631edce76a0a3dff459">LE_THREAD_PRIORITY_RT_10</a>,       </div>
+<div class="line"><a name="l00198"></a><span class="lineno"><a class="line" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a7adffd6b46009a0b66e464d04fc33076">  198</a></span>     <a class="code" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a7adffd6b46009a0b66e464d04fc33076">LE_THREAD_PRIORITY_RT_11</a>,       </div>
+<div class="line"><a name="l00199"></a><span class="lineno"><a class="line" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a6606e780b0fc8d1a0d06b1ead1f87e69">  199</a></span>     <a class="code" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a6606e780b0fc8d1a0d06b1ead1f87e69">LE_THREAD_PRIORITY_RT_12</a>,       </div>
+<div class="line"><a name="l00200"></a><span class="lineno"><a class="line" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a1cf7e4ae2011e1a823435bafceca1ec5">  200</a></span>     <a class="code" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a1cf7e4ae2011e1a823435bafceca1ec5">LE_THREAD_PRIORITY_RT_13</a>,       </div>
+<div class="line"><a name="l00201"></a><span class="lineno"><a class="line" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a5b36cb29ff41620721ead1d7b4ce7e5c">  201</a></span>     <a class="code" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a5b36cb29ff41620721ead1d7b4ce7e5c">LE_THREAD_PRIORITY_RT_14</a>,       </div>
+<div class="line"><a name="l00202"></a><span class="lineno"><a class="line" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a8583464ddd0ac106fba090f37500f082">  202</a></span>     <a class="code" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a8583464ddd0ac106fba090f37500f082">LE_THREAD_PRIORITY_RT_15</a>,       </div>
+<div class="line"><a name="l00203"></a><span class="lineno"><a class="line" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07aafa2b78749f6b1e4fe740948f7d0ddc5">  203</a></span>     <a class="code" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07aafa2b78749f6b1e4fe740948f7d0ddc5">LE_THREAD_PRIORITY_RT_16</a>,       </div>
+<div class="line"><a name="l00204"></a><span class="lineno"><a class="line" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07ade2e01a416dc1595ab3d9dde3da10b47">  204</a></span>     <a class="code" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07ade2e01a416dc1595ab3d9dde3da10b47">LE_THREAD_PRIORITY_RT_17</a>,       </div>
+<div class="line"><a name="l00205"></a><span class="lineno"><a class="line" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07aad88067a95684c10cf1b13153629f2a2">  205</a></span>     <a class="code" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07aad88067a95684c10cf1b13153629f2a2">LE_THREAD_PRIORITY_RT_18</a>,       </div>
+<div class="line"><a name="l00206"></a><span class="lineno"><a class="line" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07af671e9ef5c65873cb716562b10fc7aa4">  206</a></span>     <a class="code" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07af671e9ef5c65873cb716562b10fc7aa4">LE_THREAD_PRIORITY_RT_19</a>,       </div>
+<div class="line"><a name="l00207"></a><span class="lineno"><a class="line" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a3f75659013e4bc38c572bd1db744f5ee">  207</a></span>     <a class="code" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a3f75659013e4bc38c572bd1db744f5ee">LE_THREAD_PRIORITY_RT_20</a>,       </div>
+<div class="line"><a name="l00208"></a><span class="lineno"><a class="line" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a50ea42702ed027e7c662115f90083385">  208</a></span>     <a class="code" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a50ea42702ed027e7c662115f90083385">LE_THREAD_PRIORITY_RT_21</a>,       </div>
+<div class="line"><a name="l00209"></a><span class="lineno"><a class="line" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07afce77d999f1b4c976e2249e744063b8e">  209</a></span>     <a class="code" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07afce77d999f1b4c976e2249e744063b8e">LE_THREAD_PRIORITY_RT_22</a>,       </div>
+<div class="line"><a name="l00210"></a><span class="lineno"><a class="line" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a34ff5071e5335d38e2a122873404ddff">  210</a></span>     <a class="code" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a34ff5071e5335d38e2a122873404ddff">LE_THREAD_PRIORITY_RT_23</a>,       </div>
+<div class="line"><a name="l00211"></a><span class="lineno"><a class="line" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a41c0476895c8ca5c68688f875ff653e1">  211</a></span>     <a class="code" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a41c0476895c8ca5c68688f875ff653e1">LE_THREAD_PRIORITY_RT_24</a>,       </div>
+<div class="line"><a name="l00212"></a><span class="lineno"><a class="line" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07ab9c1770678cfce99e82e3d1bdbf5de4e">  212</a></span>     <a class="code" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07ab9c1770678cfce99e82e3d1bdbf5de4e">LE_THREAD_PRIORITY_RT_25</a>,       </div>
+<div class="line"><a name="l00213"></a><span class="lineno"><a class="line" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a22b20d8ac127832cca00cf13232bf6a2">  213</a></span>     <a class="code" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a22b20d8ac127832cca00cf13232bf6a2">LE_THREAD_PRIORITY_RT_26</a>,       </div>
+<div class="line"><a name="l00214"></a><span class="lineno"><a class="line" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07ac6a719f611dd43eb4b8da8ecfab5066e">  214</a></span>     <a class="code" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07ac6a719f611dd43eb4b8da8ecfab5066e">LE_THREAD_PRIORITY_RT_27</a>,       </div>
+<div class="line"><a name="l00215"></a><span class="lineno"><a class="line" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07ad7aab0c671c44c412c20f16020152da1">  215</a></span>     <a class="code" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07ad7aab0c671c44c412c20f16020152da1">LE_THREAD_PRIORITY_RT_28</a>,       </div>
+<div class="line"><a name="l00216"></a><span class="lineno"><a class="line" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07ac906028e6cb4515a6821424353dfb82a">  216</a></span>     <a class="code" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07ac906028e6cb4515a6821424353dfb82a">LE_THREAD_PRIORITY_RT_29</a>,       </div>
+<div class="line"><a name="l00217"></a><span class="lineno"><a class="line" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a14d161ef18fc3d3ef9d2bc512936e3bf">  217</a></span>     <a class="code" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a14d161ef18fc3d3ef9d2bc512936e3bf">LE_THREAD_PRIORITY_RT_30</a>,       </div>
+<div class="line"><a name="l00218"></a><span class="lineno"><a class="line" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a4cad36377869bf2ee3e83d7c84a738b4">  218</a></span>     <a class="code" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a4cad36377869bf2ee3e83d7c84a738b4">LE_THREAD_PRIORITY_RT_31</a>,       </div>
+<div class="line"><a name="l00219"></a><span class="lineno"><a class="line" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a24095b646efb07792a6c2e0dbb259740">  219</a></span>     <a class="code" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a24095b646efb07792a6c2e0dbb259740">LE_THREAD_PRIORITY_RT_32</a> </div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span> }</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span> <a class="code" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07">le_thread_Priority_t</a>;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span> </div>
+<div class="line"><a name="l00223"></a><span class="lineno"><a class="line" href="le__thread_8h.html#a5b989a1262268b0671f847d4d18cca65">  223</a></span> <span class="preprocessor">#define LE_THREAD_PRIORITY_RT_LOWEST    LE_THREAD_PRIORITY_RT_1     </span></div>
+<div class="line"><a name="l00224"></a><span class="lineno"><a class="line" href="le__thread_8h.html#a9a249dc73c81435b2557d61cce888dfe">  224</a></span> <span class="preprocessor">#define LE_THREAD_PRIORITY_RT_HIGHEST   LE_THREAD_PRIORITY_RT_32    </span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span> <span class="preprocessor"></span></div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span> </div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span> <span class="keyword">typedef</span> <span class="keywordtype">void</span>* (* le_thread_MainFunc_t)</div>
+<div class="line"><a name="l00238"></a><span class="lineno"><a class="line" href="le__thread_8h.html#a9210663fea7283e32a6e988ebcf75126">  238</a></span> (</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>     <span class="keywordtype">void</span>* context   </div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span> );</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span> </div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span> </div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span> <a class="code" href="le__thread_8h.html#a32121104c6b4ca39008eb79a4d6862f2">le_thread_Ref_t</a> <a class="code" href="le__thread_8h.html#a87e02a46f92e9e3e11ed28a2b265872f">le_thread_Create</a></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span> (</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>     <span class="keyword">const</span> <span class="keywordtype">char</span>*             name,       </div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>     <a class="code" href="le__thread_8h.html#a9210663fea7283e32a6e988ebcf75126">le_thread_MainFunc_t</a>    mainFunc,   </div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>     <span class="keywordtype">void</span>*                   context     </div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span> );</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span> </div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span> </div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__thread_8h.html#a95257a2f60cacdadc787647453b77356">le_thread_SetPriority</a></div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span> (</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>     <a class="code" href="le__thread_8h.html#a32121104c6b4ca39008eb79a4d6862f2">le_thread_Ref_t</a>         thread,     </div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>     <a class="code" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07">le_thread_Priority_t</a>    priority    </div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span> );</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span> </div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span> </div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__thread_8h.html#a91d0476fe2ddd834c39b194164a665b7">le_thread_SetStackSize</a></div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span> (</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>     <a class="code" href="le__thread_8h.html#a32121104c6b4ca39008eb79a4d6862f2">le_thread_Ref_t</a>     thread,     </div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>     <span class="keywordtype">size_t</span>              size        </div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span> );</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span> </div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span> </div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span> <span class="keywordtype">void</span> <a class="code" href="le__thread_8h.html#a8959f09f66f365916a6a4fbdaf36cf65">le_thread_SetJoinable</a></div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span> (</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>     <a class="code" href="le__thread_8h.html#a32121104c6b4ca39008eb79a4d6862f2">le_thread_Ref_t</a>         thread  </div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span> );</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span> </div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span> </div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span> <span class="keywordtype">void</span> <a class="code" href="le__thread_8h.html#a38df3877ee5ab9fac17b2fc0be46c27e">le_thread_Start</a></div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span> (</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>     <a class="code" href="le__thread_8h.html#a32121104c6b4ca39008eb79a4d6862f2">le_thread_Ref_t</a>     thread      </div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span> );</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span> </div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span> </div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__thread_8h.html#adf7f24fec4859ca12a52b16ce43fd9b8">le_thread_Join</a></div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span> (</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>     <a class="code" href="le__thread_8h.html#a32121104c6b4ca39008eb79a4d6862f2">le_thread_Ref_t</a>     thread,         </div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>     <span class="keywordtype">void</span>**              resultValuePtr  </div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span> );</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span> </div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span> </div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span> <span class="keywordtype">void</span> <a class="code" href="le__thread_8h.html#a6b8e349107ae6628ed8807588f044faa">le_thread_Exit</a></div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span> (</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>     <span class="keywordtype">void</span>*   resultValue     </div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span> );</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span> </div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span> </div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__thread_8h.html#a0f1c1b98f354a96e6e31e55a71b58f6a">le_thread_Cancel</a></div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span> (</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>     <a class="code" href="le__thread_8h.html#a32121104c6b4ca39008eb79a4d6862f2">le_thread_Ref_t</a> threadToCancel  </div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span> );</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span> </div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span> </div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span> <a class="code" href="le__thread_8h.html#a32121104c6b4ca39008eb79a4d6862f2">le_thread_Ref_t</a> <a class="code" href="le__thread_8h.html#a90a9d67db26f816fd1e1032d74a24fcd">le_thread_GetCurrent</a></div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span> (</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>     <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span> );</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span> </div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span> </div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span> <span class="keywordtype">void</span> <a class="code" href="le__thread_8h.html#ab4834a35f1afc1f353fc3c808a5ab6a2">le_thread_GetName</a></div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span> (</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>     <a class="code" href="le__thread_8h.html#a32121104c6b4ca39008eb79a4d6862f2">le_thread_Ref_t</a> threadRef,  </div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>     <span class="keywordtype">char</span>* buffPtr,              </div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>     <span class="keywordtype">size_t</span> buffSize             </div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span> );</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span> </div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span> </div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="le__thread_8h.html#a41c366f881ee31d38de011adb44af12b">le_thread_GetMyName</a></div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span> (</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>     <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span> );</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span> </div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span> </div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span> <span class="keyword">typedef</span> void (* <a class="code" href="le__thread_8h.html#ac0c2e7ab0a7da9fc00c2c546bfc6b0fd">le_thread_Destructor_t</a>)</div>
+<div class="line"><a name="l00435"></a><span class="lineno"><a class="line" href="le__thread_8h.html#ac0c2e7ab0a7da9fc00c2c546bfc6b0fd">  435</a></span> (</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>     <span class="keywordtype">void</span>* context   </div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span> );</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span> </div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span> </div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span> <span class="keywordtype">void</span> <a class="code" href="le__thread_8h.html#aa85ee32cc06f219f3c619104f4d97932">le_thread_AddDestructor</a></div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span> (</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>     <a class="code" href="le__thread_8h.html#ac0c2e7ab0a7da9fc00c2c546bfc6b0fd">le_thread_Destructor_t</a>  destructor, </div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>     <span class="keywordtype">void</span>*                   context     </div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span> );</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span> </div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span> </div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span> <span class="keywordtype">void</span> <a class="code" href="le__thread_8h.html#a671dbe2927a3b2a13c5150476398f34f">le_thread_AddChildDestructor</a></div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span> (</div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>     <a class="code" href="le__thread_8h.html#a32121104c6b4ca39008eb79a4d6862f2">le_thread_Ref_t</a>         thread,     </div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>     <a class="code" href="le__thread_8h.html#ac0c2e7ab0a7da9fc00c2c546bfc6b0fd">le_thread_Destructor_t</a>  destructor, </div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>     <span class="keywordtype">void</span>*                   context     </div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span> );</div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span> </div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span> </div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span> <span class="keywordtype">void</span> <a class="code" href="le__thread_8h.html#a3e35d530ce76e97a627dc60100fc1475">le_thread_InitLegatoThreadData</a></div>
+<div class="line"><a name="l00501"></a><span class="lineno">  501</span> (</div>
+<div class="line"><a name="l00502"></a><span class="lineno">  502</span>     <span class="keyword">const</span> <span class="keywordtype">char</span>* name    </div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span> );</div>
+<div class="line"><a name="l00504"></a><span class="lineno">  504</span> </div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span> </div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span> <span class="keywordtype">void</span> <a class="code" href="le__thread_8h.html#aef59d0ded85da6ddd169a661824670d0">le_thread_CleanupLegatoThreadData</a></div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span> (</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>     <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span> );</div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span> </div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span> </div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span> <span class="preprocessor">#endif // LEGATO_THREAD_INCLUDE_GUARD</span></div>
+<div class="ttc" id="le__thread_8h_html_a32121104c6b4ca39008eb79a4d6862f2"><div class="ttname"><a href="le__thread_8h.html#a32121104c6b4ca39008eb79a4d6862f2">le_thread_Ref_t</a></div><div class="ttdeci">struct le_thread * le_thread_Ref_t</div><div class="ttdef"><b>Definition:</b> le_thread.h:167</div></div>
+<div class="ttc" id="le__thread_8h_html_a9210663fea7283e32a6e988ebcf75126"><div class="ttname"><a href="le__thread_8h.html#a9210663fea7283e32a6e988ebcf75126">le_thread_MainFunc_t</a></div><div class="ttdeci">void *(* le_thread_MainFunc_t)(void *context)</div><div class="ttdef"><b>Definition:</b> le_thread.h:238</div></div>
+<div class="ttc" id="le__thread_8h_html_a653b0f17cd4d4567c86a25e23d004f07a24095b646efb07792a6c2e0dbb259740"><div class="ttname"><a href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a24095b646efb07792a6c2e0dbb259740">LE_THREAD_PRIORITY_RT_32</a></div><div class="ttdoc">Real-time priority level 32. </div><div class="ttdef"><b>Definition:</b> le_thread.h:219</div></div>
+<div class="ttc" id="le__thread_8h_html_a653b0f17cd4d4567c86a25e23d004f07a8f32fd7602abadccad57458154a36818"><div class="ttname"><a href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a8f32fd7602abadccad57458154a36818">LE_THREAD_PRIORITY_RT_8</a></div><div class="ttdoc">Real-time priority level 8. </div><div class="ttdef"><b>Definition:</b> le_thread.h:195</div></div>
+<div class="ttc" id="le__thread_8h_html_a653b0f17cd4d4567c86a25e23d004f07a6d3958846ce89c25aad1f16db34549c7"><div class="ttname"><a href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a6d3958846ce89c25aad1f16db34549c7">LE_THREAD_PRIORITY_RT_2</a></div><div class="ttdoc">Real-time priority level 2. </div><div class="ttdef"><b>Definition:</b> le_thread.h:189</div></div>
+<div class="ttc" id="le__thread_8h_html_a653b0f17cd4d4567c86a25e23d004f07a5fce739981e752cb447f5f79b967670e"><div class="ttname"><a href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a5fce739981e752cb447f5f79b967670e">LE_THREAD_PRIORITY_RT_3</a></div><div class="ttdoc">Real-time priority level 3. </div><div class="ttdef"><b>Definition:</b> le_thread.h:190</div></div>
+<div class="ttc" id="le__thread_8h_html_a653b0f17cd4d4567c86a25e23d004f07afce77d999f1b4c976e2249e744063b8e"><div class="ttname"><a href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07afce77d999f1b4c976e2249e744063b8e">LE_THREAD_PRIORITY_RT_22</a></div><div class="ttdoc">Real-time priority level 22. </div><div class="ttdef"><b>Definition:</b> le_thread.h:209</div></div>
+<div class="ttc" id="le__basics_8h_html_a1cca095ed6ebab24b57a636382a6c86c"><div class="ttname"><a href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a></div><div class="ttdeci">le_result_t</div><div class="ttdef"><b>Definition:</b> le_basics.h:35</div></div>
+<div class="ttc" id="le__thread_8h_html_aa85ee32cc06f219f3c619104f4d97932"><div class="ttname"><a href="le__thread_8h.html#aa85ee32cc06f219f3c619104f4d97932">le_thread_AddDestructor</a></div><div class="ttdeci">void le_thread_AddDestructor(le_thread_Destructor_t destructor, void *context)</div></div>
+<div class="ttc" id="le__thread_8h_html_a0f1c1b98f354a96e6e31e55a71b58f6a"><div class="ttname"><a href="le__thread_8h.html#a0f1c1b98f354a96e6e31e55a71b58f6a">le_thread_Cancel</a></div><div class="ttdeci">le_result_t le_thread_Cancel(le_thread_Ref_t threadToCancel)</div></div>
+<div class="ttc" id="le__thread_8h_html_a653b0f17cd4d4567c86a25e23d004f07a7cf4f6e4bcc28631edce76a0a3dff459"><div class="ttname"><a href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a7cf4f6e4bcc28631edce76a0a3dff459">LE_THREAD_PRIORITY_RT_10</a></div><div class="ttdoc">Real-time priority level 10. </div><div class="ttdef"><b>Definition:</b> le_thread.h:197</div></div>
+<div class="ttc" id="le__thread_8h_html_a91d0476fe2ddd834c39b194164a665b7"><div class="ttname"><a href="le__thread_8h.html#a91d0476fe2ddd834c39b194164a665b7">le_thread_SetStackSize</a></div><div class="ttdeci">le_result_t le_thread_SetStackSize(le_thread_Ref_t thread, size_t size)</div></div>
+<div class="ttc" id="le__thread_8h_html_a95257a2f60cacdadc787647453b77356"><div class="ttname"><a href="le__thread_8h.html#a95257a2f60cacdadc787647453b77356">le_thread_SetPriority</a></div><div class="ttdeci">le_result_t le_thread_SetPriority(le_thread_Ref_t thread, le_thread_Priority_t priority)</div></div>
+<div class="ttc" id="le__thread_8h_html_a653b0f17cd4d4567c86a25e23d004f07ab9c1770678cfce99e82e3d1bdbf5de4e"><div class="ttname"><a href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07ab9c1770678cfce99e82e3d1bdbf5de4e">LE_THREAD_PRIORITY_RT_25</a></div><div class="ttdoc">Real-time priority level 25. </div><div class="ttdef"><b>Definition:</b> le_thread.h:212</div></div>
+<div class="ttc" id="le__thread_8h_html_a653b0f17cd4d4567c86a25e23d004f07a6606e780b0fc8d1a0d06b1ead1f87e69"><div class="ttname"><a href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a6606e780b0fc8d1a0d06b1ead1f87e69">LE_THREAD_PRIORITY_RT_12</a></div><div class="ttdoc">Real-time priority level 12. </div><div class="ttdef"><b>Definition:</b> le_thread.h:199</div></div>
+<div class="ttc" id="le__thread_8h_html_a653b0f17cd4d4567c86a25e23d004f07ad7aab0c671c44c412c20f16020152da1"><div class="ttname"><a href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07ad7aab0c671c44c412c20f16020152da1">LE_THREAD_PRIORITY_RT_28</a></div><div class="ttdoc">Real-time priority level 28. </div><div class="ttdef"><b>Definition:</b> le_thread.h:215</div></div>
+<div class="ttc" id="le__thread_8h_html_a653b0f17cd4d4567c86a25e23d004f07ae2c4e9e3acde0b3fdccae600a8fb1495"><div class="ttname"><a href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07ae2c4e9e3acde0b3fdccae600a8fb1495">LE_THREAD_PRIORITY_RT_7</a></div><div class="ttdoc">Real-time priority level 7. </div><div class="ttdef"><b>Definition:</b> le_thread.h:194</div></div>
+<div class="ttc" id="le__thread_8h_html_a653b0f17cd4d4567c86a25e23d004f07ac6a719f611dd43eb4b8da8ecfab5066e"><div class="ttname"><a href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07ac6a719f611dd43eb4b8da8ecfab5066e">LE_THREAD_PRIORITY_RT_27</a></div><div class="ttdoc">Real-time priority level 27. </div><div class="ttdef"><b>Definition:</b> le_thread.h:214</div></div>
+<div class="ttc" id="le__thread_8h_html_a653b0f17cd4d4567c86a25e23d004f07a22b20d8ac127832cca00cf13232bf6a2"><div class="ttname"><a href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a22b20d8ac127832cca00cf13232bf6a2">LE_THREAD_PRIORITY_RT_26</a></div><div class="ttdoc">Real-time priority level 26. </div><div class="ttdef"><b>Definition:</b> le_thread.h:213</div></div>
+<div class="ttc" id="le__thread_8h_html_a653b0f17cd4d4567c86a25e23d004f07ac906028e6cb4515a6821424353dfb82a"><div class="ttname"><a href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07ac906028e6cb4515a6821424353dfb82a">LE_THREAD_PRIORITY_RT_29</a></div><div class="ttdoc">Real-time priority level 29. </div><div class="ttdef"><b>Definition:</b> le_thread.h:216</div></div>
+<div class="ttc" id="le__thread_8h_html_a653b0f17cd4d4567c86a25e23d004f07a34ff5071e5335d38e2a122873404ddff"><div class="ttname"><a href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a34ff5071e5335d38e2a122873404ddff">LE_THREAD_PRIORITY_RT_23</a></div><div class="ttdoc">Real-time priority level 23. </div><div class="ttdef"><b>Definition:</b> le_thread.h:210</div></div>
+<div class="ttc" id="le__thread_8h_html_a653b0f17cd4d4567c86a25e23d004f07a5b36cb29ff41620721ead1d7b4ce7e5c"><div class="ttname"><a href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a5b36cb29ff41620721ead1d7b4ce7e5c">LE_THREAD_PRIORITY_RT_14</a></div><div class="ttdoc">Real-time priority level 14. </div><div class="ttdef"><b>Definition:</b> le_thread.h:201</div></div>
+<div class="ttc" id="le__thread_8h_html_a653b0f17cd4d4567c86a25e23d004f07aafa2b78749f6b1e4fe740948f7d0ddc5"><div class="ttname"><a href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07aafa2b78749f6b1e4fe740948f7d0ddc5">LE_THREAD_PRIORITY_RT_16</a></div><div class="ttdoc">Real-time priority level 16. </div><div class="ttdef"><b>Definition:</b> le_thread.h:203</div></div>
+<div class="ttc" id="le__thread_8h_html_ab4834a35f1afc1f353fc3c808a5ab6a2"><div class="ttname"><a href="le__thread_8h.html#ab4834a35f1afc1f353fc3c808a5ab6a2">le_thread_GetName</a></div><div class="ttdeci">void le_thread_GetName(le_thread_Ref_t threadRef, char *buffPtr, size_t buffSize)</div></div>
+<div class="ttc" id="le__thread_8h_html_adf7f24fec4859ca12a52b16ce43fd9b8"><div class="ttname"><a href="le__thread_8h.html#adf7f24fec4859ca12a52b16ce43fd9b8">le_thread_Join</a></div><div class="ttdeci">le_result_t le_thread_Join(le_thread_Ref_t thread, void **resultValuePtr)</div></div>
+<div class="ttc" id="le__thread_8h_html_a8959f09f66f365916a6a4fbdaf36cf65"><div class="ttname"><a href="le__thread_8h.html#a8959f09f66f365916a6a4fbdaf36cf65">le_thread_SetJoinable</a></div><div class="ttdeci">void le_thread_SetJoinable(le_thread_Ref_t thread)</div></div>
+<div class="ttc" id="le__thread_8h_html_a90a9d67db26f816fd1e1032d74a24fcd"><div class="ttname"><a href="le__thread_8h.html#a90a9d67db26f816fd1e1032d74a24fcd">le_thread_GetCurrent</a></div><div class="ttdeci">le_thread_Ref_t le_thread_GetCurrent(void)</div></div>
+<div class="ttc" id="le__thread_8h_html_a653b0f17cd4d4567c86a25e23d004f07ade2e01a416dc1595ab3d9dde3da10b47"><div class="ttname"><a href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07ade2e01a416dc1595ab3d9dde3da10b47">LE_THREAD_PRIORITY_RT_17</a></div><div class="ttdoc">Real-time priority level 17. </div><div class="ttdef"><b>Definition:</b> le_thread.h:204</div></div>
+<div class="ttc" id="le__thread_8h_html_a653b0f17cd4d4567c86a25e23d004f07a5d80b49943d3cf26e93c256fcb2f92f9"><div class="ttname"><a href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a5d80b49943d3cf26e93c256fcb2f92f9">LE_THREAD_PRIORITY_RT_9</a></div><div class="ttdoc">Real-time priority level 9. </div><div class="ttdef"><b>Definition:</b> le_thread.h:196</div></div>
+<div class="ttc" id="le__thread_8h_html_a653b0f17cd4d4567c86a25e23d004f07"><div class="ttname"><a href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07">le_thread_Priority_t</a></div><div class="ttdeci">le_thread_Priority_t</div><div class="ttdef"><b>Definition:</b> le_thread.h:183</div></div>
+<div class="ttc" id="le__thread_8h_html_a653b0f17cd4d4567c86a25e23d004f07a8583464ddd0ac106fba090f37500f082"><div class="ttname"><a href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a8583464ddd0ac106fba090f37500f082">LE_THREAD_PRIORITY_RT_15</a></div><div class="ttdoc">Real-time priority level 15. </div><div class="ttdef"><b>Definition:</b> le_thread.h:202</div></div>
+<div class="ttc" id="le__thread_8h_html_a653b0f17cd4d4567c86a25e23d004f07a3f75659013e4bc38c572bd1db744f5ee"><div class="ttname"><a href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a3f75659013e4bc38c572bd1db744f5ee">LE_THREAD_PRIORITY_RT_20</a></div><div class="ttdoc">Real-time priority level 20. </div><div class="ttdef"><b>Definition:</b> le_thread.h:207</div></div>
+<div class="ttc" id="le__thread_8h_html_a653b0f17cd4d4567c86a25e23d004f07a9fc138e30eefdcb4e76714eb24640970"><div class="ttname"><a href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a9fc138e30eefdcb4e76714eb24640970">LE_THREAD_PRIORITY_RT_6</a></div><div class="ttdoc">Real-time priority level 6. </div><div class="ttdef"><b>Definition:</b> le_thread.h:193</div></div>
+<div class="ttc" id="le__thread_8h_html_aef59d0ded85da6ddd169a661824670d0"><div class="ttname"><a href="le__thread_8h.html#aef59d0ded85da6ddd169a661824670d0">le_thread_CleanupLegatoThreadData</a></div><div class="ttdeci">void le_thread_CleanupLegatoThreadData(void)</div></div>
+<div class="ttc" id="le__thread_8h_html_a653b0f17cd4d4567c86a25e23d004f07a41c0476895c8ca5c68688f875ff653e1"><div class="ttname"><a href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a41c0476895c8ca5c68688f875ff653e1">LE_THREAD_PRIORITY_RT_24</a></div><div class="ttdoc">Real-time priority level 24. </div><div class="ttdef"><b>Definition:</b> le_thread.h:211</div></div>
+<div class="ttc" id="le__thread_8h_html_a653b0f17cd4d4567c86a25e23d004f07aa0e16c2e450b0510087487a06318a2bb"><div class="ttname"><a href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07aa0e16c2e450b0510087487a06318a2bb">LE_THREAD_PRIORITY_NORMAL</a></div><div class="ttdoc">Normal, non-real-time priority level. THIS IS THE DEFAULT. </div><div class="ttdef"><b>Definition:</b> le_thread.h:186</div></div>
+<div class="ttc" id="le__thread_8h_html_a3e35d530ce76e97a627dc60100fc1475"><div class="ttname"><a href="le__thread_8h.html#a3e35d530ce76e97a627dc60100fc1475">le_thread_InitLegatoThreadData</a></div><div class="ttdeci">void le_thread_InitLegatoThreadData(const char *name)</div></div>
+<div class="ttc" id="le__thread_8h_html_a653b0f17cd4d4567c86a25e23d004f07a50ea42702ed027e7c662115f90083385"><div class="ttname"><a href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a50ea42702ed027e7c662115f90083385">LE_THREAD_PRIORITY_RT_21</a></div><div class="ttdoc">Real-time priority level 21. </div><div class="ttdef"><b>Definition:</b> le_thread.h:208</div></div>
+<div class="ttc" id="le__thread_8h_html_a6b8e349107ae6628ed8807588f044faa"><div class="ttname"><a href="le__thread_8h.html#a6b8e349107ae6628ed8807588f044faa">le_thread_Exit</a></div><div class="ttdeci">void le_thread_Exit(void *resultValue)</div></div>
+<div class="ttc" id="le__thread_8h_html_a653b0f17cd4d4567c86a25e23d004f07a4cad36377869bf2ee3e83d7c84a738b4"><div class="ttname"><a href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a4cad36377869bf2ee3e83d7c84a738b4">LE_THREAD_PRIORITY_RT_31</a></div><div class="ttdoc">Real-time priority level 31. </div><div class="ttdef"><b>Definition:</b> le_thread.h:218</div></div>
+<div class="ttc" id="le__thread_8h_html_a671dbe2927a3b2a13c5150476398f34f"><div class="ttname"><a href="le__thread_8h.html#a671dbe2927a3b2a13c5150476398f34f">le_thread_AddChildDestructor</a></div><div class="ttdeci">void le_thread_AddChildDestructor(le_thread_Ref_t thread, le_thread_Destructor_t destructor, void *context)</div></div>
+<div class="ttc" id="le__thread_8h_html_a653b0f17cd4d4567c86a25e23d004f07aad88067a95684c10cf1b13153629f2a2"><div class="ttname"><a href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07aad88067a95684c10cf1b13153629f2a2">LE_THREAD_PRIORITY_RT_18</a></div><div class="ttdoc">Real-time priority level 18. </div><div class="ttdef"><b>Definition:</b> le_thread.h:205</div></div>
+<div class="ttc" id="le__thread_8h_html_a653b0f17cd4d4567c86a25e23d004f07a872a9ad09f7fa8ddf9364e604f096da7"><div class="ttname"><a href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a872a9ad09f7fa8ddf9364e604f096da7">LE_THREAD_PRIORITY_RT_4</a></div><div class="ttdoc">Real-time priority level 4. </div><div class="ttdef"><b>Definition:</b> le_thread.h:191</div></div>
+<div class="ttc" id="le__thread_8h_html_a41c366f881ee31d38de011adb44af12b"><div class="ttname"><a href="le__thread_8h.html#a41c366f881ee31d38de011adb44af12b">le_thread_GetMyName</a></div><div class="ttdeci">const char * le_thread_GetMyName(void)</div></div>
+<div class="ttc" id="le__thread_8h_html_ac0c2e7ab0a7da9fc00c2c546bfc6b0fd"><div class="ttname"><a href="le__thread_8h.html#ac0c2e7ab0a7da9fc00c2c546bfc6b0fd">le_thread_Destructor_t</a></div><div class="ttdeci">void(* le_thread_Destructor_t)(void *context)</div><div class="ttdef"><b>Definition:</b> le_thread.h:435</div></div>
+<div class="ttc" id="le__thread_8h_html_a653b0f17cd4d4567c86a25e23d004f07a8237422b4c3d3df0ffcdbc9981c45d98"><div class="ttname"><a href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a8237422b4c3d3df0ffcdbc9981c45d98">LE_THREAD_PRIORITY_IDLE</a></div><div class="ttdoc">Lowest priority level. Only runs when nothing else to do. </div><div class="ttdef"><b>Definition:</b> le_thread.h:185</div></div>
+<div class="ttc" id="le__thread_8h_html_a38df3877ee5ab9fac17b2fc0be46c27e"><div class="ttname"><a href="le__thread_8h.html#a38df3877ee5ab9fac17b2fc0be46c27e">le_thread_Start</a></div><div class="ttdeci">void le_thread_Start(le_thread_Ref_t thread)</div></div>
+<div class="ttc" id="le__thread_8h_html_a653b0f17cd4d4567c86a25e23d004f07a37b1c0a99fc3b979afa091911e2f43d6"><div class="ttname"><a href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a37b1c0a99fc3b979afa091911e2f43d6">LE_THREAD_PRIORITY_RT_1</a></div><div class="ttdef"><b>Definition:</b> le_thread.h:187</div></div>
+<div class="ttc" id="le__thread_8h_html_a87e02a46f92e9e3e11ed28a2b265872f"><div class="ttname"><a href="le__thread_8h.html#a87e02a46f92e9e3e11ed28a2b265872f">le_thread_Create</a></div><div class="ttdeci">le_thread_Ref_t le_thread_Create(const char *name, le_thread_MainFunc_t mainFunc, void *context)</div></div>
+<div class="ttc" id="le__thread_8h_html_a653b0f17cd4d4567c86a25e23d004f07ac8b001c3b50da24d990dd6b46e1efe68"><div class="ttname"><a href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07ac8b001c3b50da24d990dd6b46e1efe68">LE_THREAD_PRIORITY_RT_5</a></div><div class="ttdoc">Real-time priority level 5. </div><div class="ttdef"><b>Definition:</b> le_thread.h:192</div></div>
+<div class="ttc" id="le__thread_8h_html_a653b0f17cd4d4567c86a25e23d004f07a1cf7e4ae2011e1a823435bafceca1ec5"><div class="ttname"><a href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a1cf7e4ae2011e1a823435bafceca1ec5">LE_THREAD_PRIORITY_RT_13</a></div><div class="ttdoc">Real-time priority level 13. </div><div class="ttdef"><b>Definition:</b> le_thread.h:200</div></div>
+<div class="ttc" id="le__thread_8h_html_a653b0f17cd4d4567c86a25e23d004f07a7adffd6b46009a0b66e464d04fc33076"><div class="ttname"><a href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a7adffd6b46009a0b66e464d04fc33076">LE_THREAD_PRIORITY_RT_11</a></div><div class="ttdoc">Real-time priority level 11. </div><div class="ttdef"><b>Definition:</b> le_thread.h:198</div></div>
+<div class="ttc" id="le__thread_8h_html_a653b0f17cd4d4567c86a25e23d004f07a14d161ef18fc3d3ef9d2bc512936e3bf"><div class="ttname"><a href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a14d161ef18fc3d3ef9d2bc512936e3bf">LE_THREAD_PRIORITY_RT_30</a></div><div class="ttdoc">Real-time priority level 30. </div><div class="ttdef"><b>Definition:</b> le_thread.h:217</div></div>
+<div class="ttc" id="le__thread_8h_html_a653b0f17cd4d4567c86a25e23d004f07af671e9ef5c65873cb716562b10fc7aa4"><div class="ttname"><a href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07af671e9ef5c65873cb716562b10fc7aa4">LE_THREAD_PRIORITY_RT_19</a></div><div class="ttdoc">Real-time priority level 19. </div><div class="ttdef"><b>Definition:</b> le_thread.h:206</div></div>
+</div><!-- fragment --></div>
+<div id="footer">
+        	Copyright © Sierra Wireless Inc. Use of this work is subject to license.
+        </div>
+</div>
+</body>
+<script>
+	$("#Tutorial").bind("click", function(){
+    $("#tree1").hide();
+    $("#tree2").show();
+    $("#tree3").hide();
+});
+
+	$("#Guides").bind("click", function(){
+    $("#tree1").show();
+    $("#tree2").hide();
+    $("#tree3").hide();
+});
+	
+	$("#Tools").bind("click", function(){
+    $("#tree1").hide();
+    $("#tree2").hide();
+    $("#tree3").show();
+});
+
+
+</script>
+</html>

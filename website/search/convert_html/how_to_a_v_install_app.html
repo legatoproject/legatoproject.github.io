@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Legato - Documentation</title>
+<meta content="#description" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="resources/images/legato.ico" rel="shortcut icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="resources/css/style-template.css" rel="stylesheet" type="text/css" />
+<link href="resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<link href="resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<link href="resources/css/navtree.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+    <script src="resources/js/html5shiv.js"></script>
+    <script src="resources/js/respond.js"></script>
+    <![endif]-->
+<script src="resources/js/jquery-core.js" type="text/javascript"></script>
+<script src="resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="resources/js/data.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="wrapper documentation">
+<div id="top">
+<header>
+<h1><a class="navlink" href="#" title="back to Legotao documentation homepage">Legato</a></h1>
+<nav>
+<a class="link-selected" href="documentation.html">Documentation</a>
+<a href="downloads.html">Downloads</a>
+<a href="community.html">Community</a>
+<a href="prototyping-tools.html">Prototyping Tools</a>
+<a href="#"><i class="fa fa-search"></i> Search</a>
+</nav>
+</header>
+</div>
+<div id="topMenu">
+<h2>Documentation</h2>
+<nav>
+<a id="Guides">Guides</a>
+<a id="Tutorial">Tutorial</a>
+<a id="Tools">Service API</a>
+<a href="#">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1" style="display:visible;"></div>
+<div id="tree2" style="display:none;">tree2</div>
+<div id="tree3" style="display:none;">tree3</div>
+</div>
+<div class="content">
+<div class="textblock"><p>This page explains how to build your app, configure the AirVantage platform, and then deploy your app remotely to your device.</p>
+<h1><a class="anchor" id="appInstallAirVantage_buildapp"></a>
+Build app</h1>
+<p>Before you build your target app, ensure Legato is built and your shell environment is setup to use command-line tools (i.e., run <code>bin/legs</code>).</p>
+<p>Then, run the following sample on your build host replacing <code>${TARGET_TYPE}</code> with your target device type (e.g., <code>wp85</code> or <code>ar7</code>):</p>
+<pre class="fragment">Legato $ cd apps/sample/helloWorld
+Legato $ mkapp -t ${TARGET_TYPE} helloWorld.adef
+Legato $ update-pack ${TARGET_TYPE} –ai helloWorld.${TARGET_TYPE} –o helloWorld.update
+Legato $ av-pack –f helloWorld.update ${TARGET_TYPE} <type name> _build_helloWorld/${TARGET_TYPE}
+</pre><p>Where "<type name>" must be a globally-unique app type identifier, unique among all apps in all companies anywhere on AirVantage. It should include company name, or user name if it's a developer's sample app. It should look like this:</p>
+<pre class="fragment"> av-pack -f helloWorld.update abcCo.jsmith.helloWorld _build_helloWorld/wp85
+</pre><h1><a class="anchor" id="appInstallAirVantage_usingAv"></a>
+Using AirVantage Platform</h1>
+<p>This part assumes you've already created your target/device on the platform using the section <a class="el" href="connecting_air_vantage.html">Connect to AirVantage</a></p>
+<p><b>Upload app</b></p>
+<pre class="fragment">Upload `<uniqueAppName.targetType.zip>`
+</pre><p>Zip file name will be something like <code>helloWorldabcCo.wp85.zip</code>.</p>
+<p>See <a href="https://doc.airvantage.net/display/USERGUIDE/Getting+Started">AirVantage Getting Started</a> Develop+Activity : "My
+Apps" Section -> action Release ( select publish) for details.</p>
+<p><b>Create app installation job</b></p>
+<p>You need to create the app install job on the platform: on the "Monitor" view for your system, use the "More" menu, and select "Install app" and then select the app you just uploaded,released and published in previous step.</p>
+<h1><a class="anchor" id="appInstallAirVantage_rcvAppAgent"></a>
+Receive app on AirVantage agent</h1>
+<p><b>Connect to server to receive app installation job</b></p>
+<p>This requires an <code>avc</code> control app using the LWM2M AVC API that accepts the download and installation. See <a class="el" href="c_le_avc.html">AirVantage Connector</a> API for details.</p>
+<p><b>Check Success Status</b></p>
+<p>If the installation was successful, you should find helloWorld in the installed apps and on the devices' Monitor view app list.</p>
+<h1><a class="anchor" id="appInstallAirVantage_goingFurther"></a>
+Going further</h1>
+<p>Start, stop, uninstall jobs can be created using corresponding UI buttons on the "Monitor" view for your system, in the "Applications" section, next to the app name you choose.</p>
+<hr />
+<p>See <a href="https://doc.airvantage.net/display/USERGUIDE/Getting+Started">AirVantage Getting Started</a> more details.</p>
+<hr />
+<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<div id="footer">
+        	Copyright © Sierra Wireless Inc. Use of this work is subject to license.
+        </div>
+</div>
+</body>
+<script>
+	$("#Tutorial").bind("click", function(){
+    $("#tree1").hide();
+    $("#tree2").show();
+    $("#tree3").hide();
+});
+
+	$("#Guides").bind("click", function(){
+    $("#tree1").show();
+    $("#tree2").hide();
+    $("#tree3").hide();
+});
+	
+	$("#Tools").bind("click", function(){
+    $("#tree1").hide();
+    $("#tree2").hide();
+    $("#tree3").show();
+});
+
+
+</script>
+</html>

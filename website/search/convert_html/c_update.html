@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Legato - Documentation</title>
+<meta content="#description" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="resources/images/legato.ico" rel="shortcut icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="resources/css/style-template.css" rel="stylesheet" type="text/css" />
+<link href="resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<link href="resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<link href="resources/css/navtree.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+    <script src="resources/js/html5shiv.js"></script>
+    <script src="resources/js/respond.js"></script>
+    <![endif]-->
+<script src="resources/js/jquery-core.js" type="text/javascript"></script>
+<script src="resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="resources/js/data.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="wrapper documentation">
+<div id="top">
+<header>
+<h1><a class="navlink" href="#" title="back to Legotao documentation homepage">Legato</a></h1>
+<nav>
+<a class="link-selected" href="documentation.html">Documentation</a>
+<a href="downloads.html">Downloads</a>
+<a href="community.html">Community</a>
+<a href="prototyping-tools.html">Prototyping Tools</a>
+<a href="#"><i class="fa fa-search"></i> Search</a>
+</nav>
+</header>
+</div>
+<div id="topMenu">
+<h2>Documentation</h2>
+<nav>
+<a id="Guides">Guides</a>
+<a id="Tutorial">Tutorial</a>
+<a id="Tools">Service API</a>
+<a href="#">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1" style="display:visible;"></div>
+<div id="tree2" style="display:none;">tree2</div>
+<div id="tree3" style="display:none;">tree3</div>
+</div>
+<div class="content">
+<div class="textblock"><p><a class="el" href="le__update__interface_8h.html">API Reference</a></p>
+<hr />
+<p>This API is used to control updates (install/remove) for the Legato application/firmware. Update package is combination of manifest and update data. Manifest contains metadata about the update task and all the update data are appended behind manifest. Update data means installation files (most likely tar ball), firmware files etc. Update package can be pictorially viewed as follows:</p>
+<div class="fragment"><div class="line">++++++++++++++++++++++</div>
+<div class="line">+                    +</div>
+<div class="line">+   Manifest         +</div>
+<div class="line">+                    +</div>
+<div class="line">+                    +</div>
+<div class="line">++++++++++++++++++++++</div>
+<div class="line">+                    +</div>
+<div class="line">+   Update_data1     +</div>
+<div class="line">+                    +</div>
+<div class="line">+                    +</div>
+<div class="line">++++++++++++++++++++++</div>
+<div class="line">+                    +</div>
+<div class="line">+   Update_data2     +</div>
+<div class="line">+                    +</div>
+<div class="line">+                    +</div>
+<div class="line">++++++++++++++++++++++</div>
+<div class="line">+                    +</div>
+<div class="line">+   Update_data3     +</div>
+<div class="line">+                    +</div>
+<div class="line">+                    +</div>
+<div class="line">++++++++++++++++++++++</div>
+<div class="line">          .</div>
+<div class="line">          .</div>
+<div class="line">          .</div>
+<div class="line">          .</div>
+<div class="line">++++++++++++++++++++++</div>
+<div class="line">+                    +</div>
+<div class="line">+   Update_dataN     +</div>
+<div class="line">+                    +</div>
+<div class="line">+                    +</div>
+<div class="line">++++++++++++++++++++++</div>
+</div><!-- fragment --><p>Update service provider follows the following state machine while doing an update: </p><div class="fragment"><div class="line">                      ------------------</div>
+<div class="line">            Create()  |                |            Delete()</div>
+<div class="line">            --------->|     NEW        |--------------------------------|</div>
+<div class="line">                      |                |                                |</div>
+<div class="line">                      ------------------                                |</div>
+<div class="line">                      Start() |                                         |</div>
+<div class="line">                              |                                         |</div>
+<div class="line">                              |                                         |</div>
+<div class="line">                              |                                         |</div>
+<div class="line">          |--------------     |                                         |</div>
+<div class="line">          |             |     |                                         |</div>
+<div class="line"> ALL_ITEMS_UNPACKED=NO  V     V                                         |</div>
+<div class="line">          |           ------------------                                |</div>
+<div class="line">          |           |                |   Delete()/Error*              |</div>
+<div class="line">          |           |   UNPACKING    |---------------------|          |</div>
+<div class="line">          ------------|                |                     |          |</div>
+<div class="line">                      ------------------                     V          V</div>
+<div class="line">                              |                          ------------------</div>
+<div class="line">                              |                          |                |</div>
+<div class="line">                      ALL_ITEMS_UNPACKED = YES           |      FAILED    |</div>
+<div class="line">                              |                          |                |</div>
+<div class="line">                              V                          ------------------</div>
+<div class="line">                      ------------------                          ^</div>
+<div class="line">                      |                |     Delete()/Error*      |</div>
+<div class="line">                |---->|    APPLYING    |--------------------------|</div>
+<div class="line">ALL_ITEMS_DONE = NO   |                |</div>
+<div class="line">                |     ------------------</div>
+<div class="line">                |         |    |</div>
+<div class="line">                |_________|    |</div>
+<div class="line">                          ALL_ITEMS_DONE = YES</div>
+<div class="line">                               |</div>
+<div class="line">                               V</div>
+<div class="line">                      ------------------</div>
+<div class="line">                      |                |</div>
+<div class="line">                      |    SUCCESS     |</div>
+<div class="line">                      |                |</div>
+<div class="line">                      ------------------</div>
+<div class="line">Error:  Any kind of error occurred during update.</div>
+</div><!-- fragment --><h1><a class="anchor" id="API_Usage_Guideline"></a>
+API Usage Guideline</h1>
+<p>This is the typical sequence of calling update API:</p>
+<ul>
+<li>[MANDATORY] Client will provide update file descriptor (where manifest string is prepended at the beginning) via <a class="el" href="le__update__interface_8h.html#a10d047c2901fcd00c6f4b4785ba76284">le_update_Create()</a> api. Update service provider returns a handle on success.</li>
+<li>[OPTIONAL] Client may register any callback function for status update. It's highly recommended to register callback function as client can only know its requested update status via callback function.</li>
+<li>[MANDATORY] Client can call <a class="el" href="le__update__interface_8h.html#a7b300c8944da0fe9a919bc6bb14157dd">le_update_Start()</a> to start update task. It's an asynchronous API. It returns after the update process(reading/parsing manifest, calling appropriate installation or removal tool as per manifest command etc) has started, but doesn't verify if it finished). Update service provider will notify the status of update task to client via callback function. If no callback is registered, the client won't get any notification.</li>
+<li>[OPTIONAL] Client may call <a class="el" href="le__update__interface_8h.html#a09df8a83ae1fe0b57d34f2afca7ec008">le_update_GetErrorCode()</a> to get the errors that lead update to failed state. <a class="el" href="le__update__interface_8h.html#a09df8a83ae1fe0b57d34f2afca7ec008">le_update_GetErrorCode()</a> will return LE_UPDATE_ERR_NONE if update is in other state.</li>
+<li>[MANDATORY] Client needs to call <a class="el" href="le__update__interface_8h.html#a64e880b8225cd80571c3f277bbc33137">le_update_Delete()</a> to deallocate resources. If <a class="el" href="le__update__interface_8h.html#a64e880b8225cd80571c3f277bbc33137">le_update_Delete()</a> is called in the middle of an update, update service provider will stop the update and deallocate resources if safe, otherwise the update service provider will deallocate resources after the current update task is finished. If the manifest contains multiple update items, all of the subsequent update items are deleted as part of deletion process. If the client disconnects before deleting the update handle, the update will automatically be deleted, and if the update is still in progress, it may be cancelled.</li>
+</ul>
+<h1><a class="anchor" id="update_example"></a>
+Sample Code</h1>
+<p>This code sample calls an update service provider API to perform an update:</p>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> SoftwareUpdate</div>
+<div class="line">(</div>
+<div class="line"> <span class="keywordtype">void</span></div>
+<div class="line">)</div>
+<div class="line">{</div>
+<div class="line"> <span class="keywordtype">int</span> fd = 0;  <span class="comment">// Update data coming via STDIN</span></div>
+<div class="line"></div>
+<div class="line"> <a class="code" href="le__update__interface_8h.html#a70c1de2e80807cdac13cec80456cc929">le_update_HandleRef_t</a> Handle;</div>
+<div class="line"></div>
+<div class="line"> <span class="comment">// Create an update handle.</span></div>
+<div class="line"> <span class="keywordflow">if</span> ((Handle = <a class="code" href="le__update__interface_8h.html#a10d047c2901fcd00c6f4b4785ba76284">le_update_Create</a>(fd)) == NULL)</div>
+<div class="line">    {</div>
+<div class="line">         perror(<span class="stringliteral">"Update failure, exiting."</span>);</div>
+<div class="line">         exit(EXIT_FAILURE);</div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line"> <span class="comment">// Register callback function.</span></div>
+<div class="line"> <span class="keywordflow">if</span> (<a class="code" href="le__update__interface_8h.html#acc7319e6d8e02dd1e4e06d800d76c235">le_update_AddProgressHandler</a>(Handle, UpdateProgressHandler, NULL) == NULL)</div>
+<div class="line">    {</div>
+<div class="line">         perror(<span class="stringliteral">"Can't register status handler"</span>);</div>
+<div class="line">         exit(EXIT_FAILURE);</div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line"> <span class="comment">// Start update process(asynchronous). Completion will be notified via callback function.</span></div>
+<div class="line"> <span class="keywordflow">if</span> (<a class="code" href="le__update__interface_8h.html#a7b300c8944da0fe9a919bc6bb14157dd">le_update_Start</a>(Handle) != <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86ca5066a4bcec691c6b67843b8f79656422">LE_OK</a>)</div>
+<div class="line">    {</div>
+<div class="line">         perror(<span class="stringliteral">"Can't start update task !"</span>);</div>
+<div class="line">         exit(EXIT_FAILURE);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Sample callback function implementation.</span></div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> UpdateProgressHandler</div>
+<div class="line">(</div>
+<div class="line"> <a class="code" href="le__update__interface_8h.html#ae9758536ebaf1842cdaaddd6cf95a672">le_update_State_t</a> updateState,   </div>
+<div class="line"></div>
+<div class="line">    uint percentDone,                </div>
+<div class="line"></div>
+<div class="line"> <span class="keywordtype">void</span>* contextPtr                 </div>
+<div class="line">)</div>
+<div class="line">{</div>
+<div class="line"></div>
+<div class="line"> <span class="keywordflow">switch</span>(updateState)</div>
+<div class="line">    {</div>
+<div class="line"> <span class="keywordflow">case</span> <a class="code" href="le__update__interface_8h.html#ae9758536ebaf1842cdaaddd6cf95a672a789b71810ab23da9ec3b7d373c16ae08">LE_UPDATE_STATE_NEW</a>:</div>
+<div class="line"> <span class="comment">// New update. Print this information.</span></div>
+<div class="line">            fprintf(stdout, <span class="stringliteral">"New update started\n"</span>);</div>
+<div class="line"> <span class="keywordflow">break</span>;</div>
+<div class="line"></div>
+<div class="line"> <span class="keywordflow">case</span> <a class="code" href="le__update__interface_8h.html#ae9758536ebaf1842cdaaddd6cf95a672a01cdf8340b000eb108dd8d9a350147db">LE_UPDATE_STATE_UNPACKING</a>:</div>
+<div class="line">            fprintf(stdout, <span class="stringliteral">"Unpacking: %d \n"</span>, percentDone);</div>
+<div class="line"> <span class="keywordflow">break</span>;</div>
+<div class="line"></div>
+<div class="line"> <span class="keywordflow">case</span> <a class="code" href="le__update__interface_8h.html#ae9758536ebaf1842cdaaddd6cf95a672ae950e649ac258bc23ba0c315904bca77">LE_UPDATE_STATE_APPLYING</a>:</div>
+<div class="line">            fprintf(stdout, <span class="stringliteral">"Applying: %d \n"</span>, percentDone);</div>
+<div class="line"> <span class="keywordflow">break</span>;</div>
+<div class="line"></div>
+<div class="line"> <span class="keywordflow">case</span> <a class="code" href="le__update__interface_8h.html#ae9758536ebaf1842cdaaddd6cf95a672ae18d6a3b4f86d5cbfc693cb054d91845">LE_UPDATE_STATE_SUCCESS</a>:</div>
+<div class="line"> <span class="comment">//Successful update(install/remove) task.</span></div>
+<div class="line">            fprintf(stdout, <span class="stringliteral">"\nSUCCESS\n"</span>);</div>
+<div class="line"> <a class="code" href="le__update__interface_8h.html#a64e880b8225cd80571c3f277bbc33137">le_update_Delete</a>(Handle);</div>
+<div class="line">            exit(EXIT_SUCCESS);</div>
+<div class="line"></div>
+<div class="line"> <span class="keywordflow">case</span> <a class="code" href="le__update__interface_8h.html#ae9758536ebaf1842cdaaddd6cf95a672a67f0990e9adccbc2cda0ad78ab98d894">LE_UPDATE_STATE_FAILED</a>:</div>
+<div class="line"> <span class="comment">// Failure in update, exit with failure code.</span></div>
+<div class="line">            fprintf(stderr, <span class="stringliteral">"\nFAILED, ErrorCode: %d\n"</span>, <a class="code" href="le__update__interface_8h.html#a09df8a83ae1fe0b57d34f2afca7ec008">le_update_GetErrorCode</a>(Handle));</div>
+<div class="line"> <a class="code" href="le__update__interface_8h.html#a64e880b8225cd80571c3f277bbc33137">le_update_Delete</a>(Handle);</div>
+<div class="line">            exit(EXIT_FAILURE);</div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<div id="footer">
+        	Copyright © Sierra Wireless Inc. Use of this work is subject to license.
+        </div>
+</div>
+</body>
+<script>
+	$("#Tutorial").bind("click", function(){
+    $("#tree1").hide();
+    $("#tree2").show();
+    $("#tree3").hide();
+});
+
+	$("#Guides").bind("click", function(){
+    $("#tree1").show();
+    $("#tree2").hide();
+    $("#tree3").hide();
+});
+	
+	$("#Tools").bind("click", function(){
+    $("#tree1").hide();
+    $("#tree2").hide();
+    $("#tree3").show();
+});
+
+
+</script>
+</html>

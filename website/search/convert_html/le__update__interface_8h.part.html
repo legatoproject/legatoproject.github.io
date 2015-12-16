@@ -1,0 +1,443 @@
+<div class="contents">
+<div class="textblock"><code>#include "<a class="el" href="legato_8h_source.html">legato.h</a>"</code><br />
+</div>
+<p><a href="le__update__interface_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a0b366a441a1c7383a07bc6bab99b0c20"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__update__interface_8h.html#a0b366a441a1c7383a07bc6bab99b0c20">LE_UPDATE_ID_STR_LEN</a>   64</td></tr>
+<tr class="separator:a0b366a441a1c7383a07bc6bab99b0c20"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a70c1de2e80807cdac13cec80456cc929"><td align="right" class="memItemLeft" valign="top">typedef struct le_update_Handle * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__update__interface_8h.html#a70c1de2e80807cdac13cec80456cc929">le_update_HandleRef_t</a></td></tr>
+<tr class="separator:a70c1de2e80807cdac13cec80456cc929"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a20a94b986a9ba0e6772b146f98b95f92"><td align="right" class="memItemLeft" valign="top">typedef struct le_update_ProgressHandler * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__update__interface_8h.html#a20a94b986a9ba0e6772b146f98b95f92">le_update_ProgressHandlerRef_t</a></td></tr>
+<tr class="separator:a20a94b986a9ba0e6772b146f98b95f92"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a6926f0dc18bfe5bfe23e1cea26d464c2"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__update__interface_8h.html#a6926f0dc18bfe5bfe23e1cea26d464c2">le_update_ProgressHandlerFunc_t</a>) (<a class="el" href="le__update__interface_8h.html#ae9758536ebaf1842cdaaddd6cf95a672">le_update_State_t</a> updateState, uint percentDone, void *contextPtr)</td></tr>
+<tr class="separator:a6926f0dc18bfe5bfe23e1cea26d464c2"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a02f53457a4929cdb62270ca0c6fc75b1"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__update__interface_8h.html#a02f53457a4929cdb62270ca0c6fc75b1">le_update_Command_t</a> { <a class="el" href="le__update__interface_8h.html#a02f53457a4929cdb62270ca0c6fc75b1a5b094573c81d04a714d0b59f0d6b62aa">LE_UPDATE_CMD_INSTALL</a>, 
+<a class="el" href="le__update__interface_8h.html#a02f53457a4929cdb62270ca0c6fc75b1a3f20e3ee60a049e2096526c56a2f72c3">LE_UPDATE_CMD_REMOVE</a>
+ }</td></tr>
+<tr class="separator:a02f53457a4929cdb62270ca0c6fc75b1"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a65dc43f8d83511d0efa01fd3bdaefd28"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__update__interface_8h.html#a65dc43f8d83511d0efa01fd3bdaefd28">le_update_ItemType_t</a> { <a class="el" href="le__update__interface_8h.html#a65dc43f8d83511d0efa01fd3bdaefd28a9e400aff386723c01cf8a37e30964243">LE_UPDATE_APP</a>, 
+<a class="el" href="le__update__interface_8h.html#a65dc43f8d83511d0efa01fd3bdaefd28a44650a5fccb66484fa7edf7d9dd7beae">LE_UPDATE_FIRMWARE</a>
+ }</td></tr>
+<tr class="separator:a65dc43f8d83511d0efa01fd3bdaefd28"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ae9758536ebaf1842cdaaddd6cf95a672"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__update__interface_8h.html#ae9758536ebaf1842cdaaddd6cf95a672">le_update_State_t</a> { <br />
+  <a class="el" href="le__update__interface_8h.html#ae9758536ebaf1842cdaaddd6cf95a672a789b71810ab23da9ec3b7d373c16ae08">LE_UPDATE_STATE_NEW</a>, 
+<a class="el" href="le__update__interface_8h.html#ae9758536ebaf1842cdaaddd6cf95a672a01cdf8340b000eb108dd8d9a350147db">LE_UPDATE_STATE_UNPACKING</a>, 
+<a class="el" href="le__update__interface_8h.html#ae9758536ebaf1842cdaaddd6cf95a672ae950e649ac258bc23ba0c315904bca77">LE_UPDATE_STATE_APPLYING</a>, 
+<a class="el" href="le__update__interface_8h.html#ae9758536ebaf1842cdaaddd6cf95a672ae18d6a3b4f86d5cbfc693cb054d91845">LE_UPDATE_STATE_SUCCESS</a>, 
+<br />
+  <a class="el" href="le__update__interface_8h.html#ae9758536ebaf1842cdaaddd6cf95a672a67f0990e9adccbc2cda0ad78ab98d894">LE_UPDATE_STATE_FAILED</a>
+<br />
+ }</td></tr>
+<tr class="separator:ae9758536ebaf1842cdaaddd6cf95a672"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a24bac90fc939c561c64d13608cc78a20"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__update__interface_8h.html#a24bac90fc939c561c64d13608cc78a20">le_update_ErrorCode_t</a> { <br />
+  <a class="el" href="le__update__interface_8h.html#a24bac90fc939c561c64d13608cc78a20a5473b80d9e60fc1a8fd5f78a47b1c69e">LE_UPDATE_ERR_NONE</a>, 
+<a class="el" href="le__update__interface_8h.html#a24bac90fc939c561c64d13608cc78a20ae60744a769a562311f391d0869d1445c">LE_UPDATE_ERR_BAD_MANIFEST</a>, 
+<a class="el" href="le__update__interface_8h.html#a24bac90fc939c561c64d13608cc78a20a66c830d183613b7e744d2111197c43a0">LE_UPDATE_ERR_IO_ERROR</a>, 
+<a class="el" href="le__update__interface_8h.html#a24bac90fc939c561c64d13608cc78a20a9dfcb8ef952d81438c5bc07ed7a15171">LE_UPDATE_ERR_INTERNAL_ERROR</a>, 
+<br />
+  <a class="el" href="le__update__interface_8h.html#a24bac90fc939c561c64d13608cc78a20a41c44fb1d050b43fe1f817baa6e14d9d">LE_UPDATE_ERR_OUT_OF_MEMORY</a>, 
+<a class="el" href="le__update__interface_8h.html#a24bac90fc939c561c64d13608cc78a20a0871224ae55a5ad4c58d4613f90accf8">LE_UPDATE_ERR_VERSION_MISMATCH</a>, 
+<a class="el" href="le__update__interface_8h.html#a24bac90fc939c561c64d13608cc78a20a489899dc472c10bbf14cbd4498f9ff6c">LE_UPDATE_ERR_WRONG_TARGET</a>
+<br />
+ }</td></tr>
+<tr class="separator:a24bac90fc939c561c64d13608cc78a20"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a338754ee167108f8da4a6023487e4d78"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__update__interface_8h.html#a338754ee167108f8da4a6023487e4d78">le_update_ConnectService</a> (void)</td></tr>
+<tr class="separator:a338754ee167108f8da4a6023487e4d78"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a5e49e9b047c622ab7e3f617336907f1d"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__update__interface_8h.html#a5e49e9b047c622ab7e3f617336907f1d">le_update_DisconnectService</a> (void)</td></tr>
+<tr class="separator:a5e49e9b047c622ab7e3f617336907f1d"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a10d047c2901fcd00c6f4b4785ba76284"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__update__interface_8h.html#a70c1de2e80807cdac13cec80456cc929">le_update_HandleRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__update__interface_8h.html#a10d047c2901fcd00c6f4b4785ba76284">le_update_Create</a> (int fileDesc)</td></tr>
+<tr class="separator:a10d047c2901fcd00c6f4b4785ba76284"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a7b300c8944da0fe9a919bc6bb14157dd"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__update__interface_8h.html#a7b300c8944da0fe9a919bc6bb14157dd">le_update_Start</a> (<a class="el" href="le__update__interface_8h.html#a70c1de2e80807cdac13cec80456cc929">le_update_HandleRef_t</a> handle)</td></tr>
+<tr class="separator:a7b300c8944da0fe9a919bc6bb14157dd"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a64e880b8225cd80571c3f277bbc33137"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__update__interface_8h.html#a64e880b8225cd80571c3f277bbc33137">le_update_Delete</a> (<a class="el" href="le__update__interface_8h.html#a70c1de2e80807cdac13cec80456cc929">le_update_HandleRef_t</a> handle)</td></tr>
+<tr class="separator:a64e880b8225cd80571c3f277bbc33137"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a09df8a83ae1fe0b57d34f2afca7ec008"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__update__interface_8h.html#a24bac90fc939c561c64d13608cc78a20">le_update_ErrorCode_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__update__interface_8h.html#a09df8a83ae1fe0b57d34f2afca7ec008">le_update_GetErrorCode</a> (<a class="el" href="le__update__interface_8h.html#a70c1de2e80807cdac13cec80456cc929">le_update_HandleRef_t</a> handle)</td></tr>
+<tr class="separator:a09df8a83ae1fe0b57d34f2afca7ec008"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:acc7319e6d8e02dd1e4e06d800d76c235"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__update__interface_8h.html#a20a94b986a9ba0e6772b146f98b95f92">le_update_ProgressHandlerRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__update__interface_8h.html#acc7319e6d8e02dd1e4e06d800d76c235">le_update_AddProgressHandler</a> (<a class="el" href="le__update__interface_8h.html#a70c1de2e80807cdac13cec80456cc929">le_update_HandleRef_t</a> handle, <a class="el" href="le__update__interface_8h.html#a6926f0dc18bfe5bfe23e1cea26d464c2">le_update_ProgressHandlerFunc_t</a> handlerPtr, void *contextPtr)</td></tr>
+<tr class="separator:acc7319e6d8e02dd1e4e06d800d76c235"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a5c0b5527aaa493f05612f85926d71400"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__update__interface_8h.html#a5c0b5527aaa493f05612f85926d71400">le_update_RemoveProgressHandler</a> (<a class="el" href="le__update__interface_8h.html#a20a94b986a9ba0e6772b146f98b95f92">le_update_ProgressHandlerRef_t</a> addHandlerRef)</td></tr>
+<tr class="separator:a5c0b5527aaa493f05612f85926d71400"><td class="memSeparator" colspan="2"> </td></tr>
+</table>
+<a id="details" name="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Legato <a class="el" href="c_update.html">Software Update</a> include file.</p>
+<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="a0b366a441a1c7383a07bc6bab99b0c20"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_UPDATE_ID_STR_LEN   64</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Length of the ID string. ID string is used to identify update item underway, e.g. for app update/remove ID string will contain appName, for firmware it will contain firmware version. </p>
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a class="anchor" id="a70c1de2e80807cdac13cec80456cc929"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef struct le_update_Handle* <a class="el" href="le__update__interface_8h.html#a70c1de2e80807cdac13cec80456cc929">le_update_HandleRef_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Reference to update task. Used to identify an update task. </p>
+</div>
+</div>
+<a class="anchor" id="a6926f0dc18bfe5bfe23e1cea26d464c2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef void(* le_update_ProgressHandlerFunc_t) (<a class="el" href="le__update__interface_8h.html#ae9758536ebaf1842cdaaddd6cf95a672">le_update_State_t</a> updateState, uint percentDone, void *contextPtr)</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Client callback function to notify status of underway update task.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramname">updateState</td><td>Current State of underway update process in state machine. </td></tr>
+<tr><td class="paramname">percentDone</td><td>Percent done for current state. As example: at state LE_UPDATE_STATE_UNPACKING, percentDone=80 means, 80% of the update file data is already transferred to unpack process. </td></tr>
+<tr><td class="paramname">contextPtr</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a20a94b986a9ba0e6772b146f98b95f92"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef struct le_update_ProgressHandler* <a class="el" href="le__update__interface_8h.html#a20a94b986a9ba0e6772b146f98b95f92">le_update_ProgressHandlerRef_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Reference type used by Add/Remove functions for EVENT 'le_update_Progress' </p>
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a class="anchor" id="a02f53457a4929cdb62270ca0c6fc75b1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="le__update__interface_8h.html#a02f53457a4929cdb62270ca0c6fc75b1">le_update_Command_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Supported commands inside manifest.</p>
+<dl class="section note"><dt>Note</dt><dd>Subject to change. </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a02f53457a4929cdb62270ca0c6fc75b1a5b094573c81d04a714d0b59f0d6b62aa"></a>LE_UPDATE_CMD_INSTALL </td><td class="fielddoc">
+<p>Install tasks. This includes installation of apps, firmware. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a02f53457a4929cdb62270ca0c6fc75b1a3f20e3ee60a049e2096526c56a2f72c3"></a>LE_UPDATE_CMD_REMOVE </td><td class="fielddoc">
+<p>Removal tasks. This includes removal of apps. </p>
+</td></tr>
+</table>
+</div>
+</div>
+<a class="anchor" id="a24bac90fc939c561c64d13608cc78a20"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="le__update__interface_8h.html#a24bac90fc939c561c64d13608cc78a20">le_update_ErrorCode_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Error code used to provide diagnostic information after a failed update.</p>
+<dl class="section note"><dt>Note</dt><dd>Subject to change. </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a24bac90fc939c561c64d13608cc78a20a5473b80d9e60fc1a8fd5f78a47b1c69e"></a>LE_UPDATE_ERR_NONE </td><td class="fielddoc">
+<p>No error. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a24bac90fc939c561c64d13608cc78a20ae60744a769a562311f391d0869d1445c"></a>LE_UPDATE_ERR_BAD_MANIFEST </td><td class="fielddoc">
+<p>Found bad manifest in supplied update package. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a24bac90fc939c561c64d13608cc78a20a66c830d183613b7e744d2111197c43a0"></a>LE_UPDATE_ERR_IO_ERROR </td><td class="fielddoc">
+<p>Encountered IO error. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a24bac90fc939c561c64d13608cc78a20a9dfcb8ef952d81438c5bc07ed7a15171"></a>LE_UPDATE_ERR_INTERNAL_ERROR </td><td class="fielddoc">
+<p>Something wrong happened while doing update. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a24bac90fc939c561c64d13608cc78a20a41c44fb1d050b43fe1f817baa6e14d9d"></a>LE_UPDATE_ERR_OUT_OF_MEMORY </td><td class="fielddoc">
+<p>Not enough memory available to install update. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a24bac90fc939c561c64d13608cc78a20a0871224ae55a5ad4c58d4613f90accf8"></a>LE_UPDATE_ERR_VERSION_MISMATCH </td><td class="fielddoc">
+<p>Software version mismatch. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a24bac90fc939c561c64d13608cc78a20a489899dc472c10bbf14cbd4498f9ff6c"></a>LE_UPDATE_ERR_WRONG_TARGET </td><td class="fielddoc">
+<p>Detected wrong target. </p>
+</td></tr>
+</table>
+</div>
+</div>
+<a class="anchor" id="a65dc43f8d83511d0efa01fd3bdaefd28"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="le__update__interface_8h.html#a65dc43f8d83511d0efa01fd3bdaefd28">le_update_ItemType_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Supported platform types to be updated (inside manifest).</p>
+<dl class="section note"><dt>Note</dt><dd>Subject to change.</dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a65dc43f8d83511d0efa01fd3bdaefd28a9e400aff386723c01cf8a37e30964243"></a>LE_UPDATE_APP </td><td class="fielddoc">
+<p>App item. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a65dc43f8d83511d0efa01fd3bdaefd28a44650a5fccb66484fa7edf7d9dd7beae"></a>LE_UPDATE_FIRMWARE </td><td class="fielddoc">
+<p>Firmware item. </p>
+</td></tr>
+</table>
+</div>
+</div>
+<a class="anchor" id="ae9758536ebaf1842cdaaddd6cf95a672"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="le__update__interface_8h.html#ae9758536ebaf1842cdaaddd6cf95a672">le_update_State_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Different states in the update state machine. The state machine is maintained to track the update task underway.</p>
+<p>Example: for successful installation task, state transitions look like: STATE_NEW–>STATE_UNPACKING–>STATE_APPLYING–>STATE_SUCCESS.</p>
+<dl class="section note"><dt>Note</dt><dd>Subject to change. </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ae9758536ebaf1842cdaaddd6cf95a672a789b71810ab23da9ec3b7d373c16ae08"></a>LE_UPDATE_STATE_NEW </td><td class="fielddoc">
+<p>Requested new update task. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae9758536ebaf1842cdaaddd6cf95a672a01cdf8340b000eb108dd8d9a350147db"></a>LE_UPDATE_STATE_UNPACKING </td><td class="fielddoc">
+<p>Unpacking update data. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae9758536ebaf1842cdaaddd6cf95a672ae950e649ac258bc23ba0c315904bca77"></a>LE_UPDATE_STATE_APPLYING </td><td class="fielddoc">
+<p>Applying update(i.e. installation/removal operation going on). </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae9758536ebaf1842cdaaddd6cf95a672ae18d6a3b4f86d5cbfc693cb054d91845"></a>LE_UPDATE_STATE_SUCCESS </td><td class="fielddoc">
+<p>Successfully completed all update task. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae9758536ebaf1842cdaaddd6cf95a672a67f0990e9adccbc2cda0ad78ab98d894"></a>LE_UPDATE_STATE_FAILED </td><td class="fielddoc">
+<p>Update failed due to some error or deletion request. </p>
+</td></tr>
+</table>
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="acc7319e6d8e02dd1e4e06d800d76c235"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__update__interface_8h.html#a20a94b986a9ba0e6772b146f98b95f92">le_update_ProgressHandlerRef_t</a> le_update_AddProgressHandler </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__update__interface_8h.html#a70c1de2e80807cdac13cec80456cc929">le_update_HandleRef_t</a> </td>
+<td class="paramname"><em>handle</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="le__update__interface_8h.html#a6926f0dc18bfe5bfe23e1cea26d464c2">le_update_ProgressHandlerFunc_t</a> </td>
+<td class="paramname"><em>handlerPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">void * </td>
+<td class="paramname"><em>contextPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Add handler function for EVENT 'le_update_Progress'</p>
+<p>Shows the status of the underway update process. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>Update object reference. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">handlerPtr</td><td></td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">contextPtr</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a338754ee167108f8da4a6023487e4d78"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_update_ConnectService </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Connect the client to the service </p>
+</div>
+</div>
+<a class="anchor" id="a10d047c2901fcd00c6f4b4785ba76284"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__update__interface_8h.html#a70c1de2e80807cdac13cec80456cc929">le_update_HandleRef_t</a> le_update_Create </td>
+<td>(</td>
+<td class="paramtype">int </td>
+<td class="paramname"><em>fileDesc</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Creates an update handle. This handle needs to be used in subsequent api calls.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>Null if already an update is going on.</li>
+<li>Handle reference if successful. </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">fileDesc</td><td>File descriptor containing the update package. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a64e880b8225cd80571c3f277bbc33137"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_update_Delete </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__update__interface_8h.html#a70c1de2e80807cdac13cec80456cc929">le_update_HandleRef_t</a> </td>
+<td class="paramname"><em>handle</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Deletes an update task that's underway. Either deletes the update task (if safe) or marks to delete it after current update current task is finished. If manifest contains multiple update items, all of the subsequent update items are cancelled as part of deletion process.</p>
+<dl class="section note"><dt>Note</dt><dd>The handle becomes invalid after it has been deleted.. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>Handle of the underway update task. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a5e49e9b047c622ab7e3f617336907f1d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_update_DisconnectService </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Disconnect the client from the service </p>
+</div>
+</div>
+<a class="anchor" id="a09df8a83ae1fe0b57d34f2afca7ec008"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__update__interface_8h.html#a24bac90fc939c561c64d13608cc78a20">le_update_ErrorCode_t</a> le_update_GetErrorCode </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__update__interface_8h.html#a70c1de2e80807cdac13cec80456cc929">le_update_HandleRef_t</a> </td>
+<td class="paramname"><em>handle</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Function to get error code when update fails.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>Error code of encountered error.</li>
+<li>ERR_NONE if update is in any other state. </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>Handle of the underway update task. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a5c0b5527aaa493f05612f85926d71400"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_update_RemoveProgressHandler </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__update__interface_8h.html#a20a94b986a9ba0e6772b146f98b95f92">le_update_ProgressHandlerRef_t</a> </td>
+<td class="paramname"><em>addHandlerRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Remove handler function for EVENT 'le_update_Progress' </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">addHandlerRef</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a7b300c8944da0fe9a919bc6bb14157dd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_update_Start </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__update__interface_8h.html#a70c1de2e80807cdac13cec80456cc929">le_update_HandleRef_t</a> </td>
+<td class="paramname"><em>handle</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Starts update process(i.e. parsing manifest, doing update as per manifest). This is an asynchronous function (it returns after the update process has started, but doesn't verify if it finishes). Client will get status through registered call back function.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK if update starts successfully.</li>
+<li>LE_FAULT if update failed to start. </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>Handle of requested update task. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+</div>

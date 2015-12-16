@@ -1,0 +1,33 @@
+<div class="contents">
+<div class="textblock"><p>To setup target software, you copy startup scripts from the host to the target, and then install libraries and executables.</p>
+<h1><a class="anchor" id="getstartedTargetSetup_copyStartScripts"></a>
+Copy Startup Scripts</h1>
+<p>Startup scripts are copied automatically to the target when <code>instlegato</code> is run the first time (see <a class="el" href="getstarted_target_s_w.html#getstartedTargetSetup_copyLibExe">instlegato Copy Libs & Exes</a>) .</p>
+<p>You can also copy the scripts manually. Using ssh, access the target:</p>
+<div class="fragment"><div class="line">ssh root@<target ip address> </div>
+</div><!-- fragment --><p> When prompted for a password, press enter.</p>
+<p>Then create the startup directory: </p><div class="fragment"><div class="line">mkdir -p  /mnt/flash/startup </div>
+</div><!-- fragment --><p>Then copy the startup files to the target by running the following from the dev host: </p><div class="fragment"><div class="line">scp targetFiles/mdm-9x15/startup/fg_* root@<target ip addr>:/mnt/flash/startup</div>
+</div><!-- fragment --><p>Scripts beginning with <code>fg_</code> are run first during startup, and then everything else is runs in the background. You can add more scripts to customize your target. <code>fg_</code> scripts must have executable permissions or they will not run.</p>
+<dl class="section note"><dt>Note</dt><dd>In the rare case you need to prevent legato starting automatically, run <div class="fragment"><div class="line">touch /mnt/flash/startup/STOPLEGATO </div>
+</div><!-- fragment --></dd></dl>
+<h1><a class="anchor" id="getstartedTargetSetup_rebootTarget"></a>
+Reboot Target</h1>
+<p>Wait for the target to fully reboot. The target IP address may have changed. Check it using <code>ifconfig</code> through the serial console before proceeding.</p>
+<h1><a class="anchor" id="getstartedTargetSetup_copyLibExe"></a>
+instlegato Copy Libs & Exes</h1>
+<p>To copy libraries and executables to the target, run:</p>
+<div class="fragment"><div class="line">$ instlegato build/wp7 <target ip address></div>
+</div><!-- fragment --><p>It will automatically start the Legato runtime components.</p>
+<p>If target startup scripts don't exist or don't match the ones in: </p><div class="fragment"><div class="line">targetFiles/mdm-9x15/startup </div>
+</div><!-- fragment --><p> they'll be copied to the target.</p>
+<p>Old startup files from the target will be copied to the host here: </p><div class="fragment"><div class="line">targetFiles/mdm-9x15/backup </div>
+</div><!-- fragment --><p>After the startup files are finished updating, the target will reboot.</p>
+<p>After the target restarts, run <code>instlegato</code> again to finish installation.</p>
+<p>Then you can build and run apps.</p>
+<hr />
+<p>Here's <a class="el" href="getstarted_target_i_pv6.html">Config ECM IPv6</a> info.</p>
+<p>These are <a class="el" href="getstarted_target_dirs.html">Target Directories</a> installed.</p>
+<hr />
+<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
