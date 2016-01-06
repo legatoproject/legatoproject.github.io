@@ -11,15 +11,35 @@ def match_link(href, filepath):
     href = href.lstrip("/")
     return filepath.startswith(href) or filepath.endswith(href)
 
+# This looks for filename in dir, and if it doesn't find it, checks the parent directory, and so on
+def file_dispatch(dir, filename):
+    MAX_DEPTH = 5
+    print("Looking for " + filename)
+    for i in range(MAX_DEPTH):
+        try:
+            with open(join(dir, filename)) as f:
+                data = f.read()
+            print("Found %s in %s with depth %s" % (filename, dir, i))
+            return data, dir
+        except EnvironmentError:
+            if os.path.abspath(dir) == os.path.abspath("sources/"):
+                return None
+            else:
+                dir = os.path.dirname(dir)
+                print("Descending to " + dir)
+                continue
+    print("%%%%Couldn't find " + filename)
+
 def gen_nav(json_file, current_filepath):
-    with open("sources/"+json_file) as f:
-        jsondata = json.loads(f.read(), object_pairs_hook=OrderedDict)
+    dir = os.path.dirname(join(os.getcwd(), "sources/", current_filepath)) # ehhh
+    jsn, dir = file_dispatch(dir, json_file)
+    jsondata = json.loads(jsn, object_pairs_hook=OrderedDict)
     innerHTML = ""
     links = jsondata["links"]
     for x in links.keys():
         #print("{0} & {1} >> {2}".format(links[x],current_filepath,match_link(links[x], current_filepath)))
         innerHTML += jsondata["innerHTML"].format( links[x], ' class="link-selected"' if match_link(links[x], current_filepath) else "", x)
-    dir = os.path.dirname(join(os.getcwd(), "sources/", current_filepath)) # ehhh
+    
     with open(join(dir, "_templates/",jsondata["template"]), 'r') as f:
         outerHTML = f.read().format(innerHTML)
     return outerHTML
@@ -27,12 +47,12 @@ def gen_nav(json_file, current_filepath):
 
 def gen_learn_topmenu(dir, filename, contents):
     print("Generating topmenu for " + filename)
-    return gen_nav(join(dir,"learn_topmenu.json"),join(dir,filename))
+    return gen_nav("topmenu.json",join(dir,filename))
 
 
 def gen_header(dir, filename, contents):
     print("Generating header for " + filename)
-    return gen_nav(join(dir,"header.json"),join(dir,filename))
+    return gen_nav("header.json",join(dir,filename))
 
 
 # marker->function mapping here
