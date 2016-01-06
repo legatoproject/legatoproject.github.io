@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>log  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">log </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p>Use the Log tool tool to set logging variables for components. Also see <a class="el" href="how_to_logs.html">Use Logs</a>.</p>
+<p>Here's more detailed info on the <a class="el" href="c_logging.html">Logging API</a>.</p>
+<h1>Usage</h1>
+<p><b><code> log list <br />
+ log level FILTER_STR [DESTINATION] <br />
+ log trace KEYWORD_STR [DESTINATION] <br />
+ log stoptrace KEYWORD_STR [DESTINATION] <br />
+ log forget PROCESS_NAME <br />
+ log help </code></b></p>
+<pre class="fragment">log list </pre> <blockquote class="doxtable">
+<p>Lists all processes/components registered with the log daemon. </p>
+</blockquote>
+<pre class="fragment">log level FILTER_STR [DESTINATION] </pre> <blockquote class="doxtable">
+<p>Sets the log filter level. Log messages that are less severe than the filter are ignored. <br />
+ Must be one of EMERGENCY | CRITICAL | ERROR | WARNING | INFO | DEBUG </p>
+</blockquote>
+<pre class="fragment">log trace KEYWORD_STR [DESTINATION] </pre> <blockquote class="doxtable">
+<p>Enables a trace by keyword. Any traces with a matching keyword are logged. The KEYWORD_STR is a trace keyword. </p>
+</blockquote>
+<pre class="fragment">log stoptrace KEYWORD_STR [DESTINATION] </pre> <blockquote class="doxtable">
+<p>Disables a trace keyword. Any traces with this keyword are not logged. The KEYWORD_STR is a trace keyword. </p>
+</blockquote>
+<pre class="fragment">log forget PROCESS_NAME</pre> <blockquote class="doxtable">
+<p>Forgets all settings for processes for the specified name. </p>
+</blockquote>
+<pre class="fragment">log help </pre> <blockquote class="doxtable">
+<p>Displays help for log commands. </p>
+</blockquote>
+<pre class="fragment">[DESTINATION] </pre><div class="tool-option"> Optional, specifies the process and component where to send the command.</div><div class="tool-option">The optional <code></code>[DESTINATION] must be in this format:</div><div class="tool-option"><pre class="fragment">process/componentName </pre></div><div class="tool-option">'process' can be a processName or a PID. If it's a processName, the command will apply to all processes with the same name. If it's a PID, it only apply to the process with the matching PID. <br />
+</div><div class="tool-option">Both the 'process' and the 'componentName' can be replaced with an asterix ("*)" to mean all processes and/or all components.</div><div class="tool-option">If the <code></code>[DESTINATION] is omitted, a default destination is used and applies to all processes and all components: <pre class="fragment">"*/*" </pre></div><div class="tool-option">A command can be sent to a process/component that doesn't exist yet. It'll be saved and applied to the process/component when available. This way, you can pre-configure processes/components before they are spawned, but it's only valid if the [DESTINATION] is a process name. Otherwise, the 'process' will be dropped."</div><div class="tool-option"></div><p>Here are some command samples:</p>
+<pre class="fragment">$ log level INFO "processName/componentName"
+</pre> <blockquote class="doxtable">
+<p>Set the log level to INFO for a component in a process. </p>
+</blockquote>
+<pre class="fragment">$ log trace "keyword" "processName/componentName"
+</pre> <blockquote class="doxtable">
+<p>Enable a trace. </p>
+</blockquote>
+<pre class="fragment">$ log stoptrace "keyword" "processName/componentName"
+</pre> <blockquote class="doxtable">
+<p>Disable a trace. </p>
+</blockquote>
+<p>All can use "*" in place of processName and componentName for all processes and/or all components. If the "processName/componentName" is omitted, the default destination is set for all processes and all components.</p>
+<p>Translated command to send to the log daemon:</p>
+<pre class="fragment">   | cmd | destination | commandParameter |
+</pre><blockquote class="doxtable">
+<p>where <em>cmd</em> is a command code, one byte long. destination is the <code>processName/componentName</code> followed by a <code>'/'</code> character. commandParameter is the string specific to the command. </p>
+</blockquote>
+<hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

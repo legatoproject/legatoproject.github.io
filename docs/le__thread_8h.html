@@ -1,0 +1,853 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>le_thread.h File Reference - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Reference.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a href="build_apps_documentation.html">Documentation</a><a class="link-selected" href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="summary">
+<a href="#define-members">Macros</a> |
+<a href="#typedef-members">Typedefs</a> |
+<a href="#enum-members">Enumerations</a> |
+<a href="#func-members">Functions</a> </div>
+<div class="headertitle">
+<h1 class="title">le_thread.h File Reference</h1> </div>
+</div><div class="contents">
+<p><a href="le__thread_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a5b989a1262268b0671f847d4d18cca65"><td align="right" class="memItemLeft" valign="top"><a class="anchor" id="a5b989a1262268b0671f847d4d18cca65"></a>
+#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__thread_8h.html#a5b989a1262268b0671f847d4d18cca65">LE_THREAD_PRIORITY_RT_LOWEST</a>   <a class="el" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a37b1c0a99fc3b979afa091911e2f43d6">LE_THREAD_PRIORITY_RT_1</a></td></tr>
+<tr class="memdesc:a5b989a1262268b0671f847d4d18cca65"><td class="mdescLeft"> </td><td class="mdescRight">Lowest real-time priority. <br /></td></tr>
+<tr class="separator:a5b989a1262268b0671f847d4d18cca65"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a9a249dc73c81435b2557d61cce888dfe"><td align="right" class="memItemLeft" valign="top"><a class="anchor" id="a9a249dc73c81435b2557d61cce888dfe"></a>
+#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__thread_8h.html#a9a249dc73c81435b2557d61cce888dfe">LE_THREAD_PRIORITY_RT_HIGHEST</a>   <a class="el" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a24095b646efb07792a6c2e0dbb259740">LE_THREAD_PRIORITY_RT_32</a></td></tr>
+<tr class="memdesc:a9a249dc73c81435b2557d61cce888dfe"><td class="mdescLeft"> </td><td class="mdescRight">Highest real-time priority. <br /></td></tr>
+<tr class="separator:a9a249dc73c81435b2557d61cce888dfe"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a32121104c6b4ca39008eb79a4d6862f2"><td align="right" class="memItemLeft" valign="top">typedef struct le_thread * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__thread_8h.html#a32121104c6b4ca39008eb79a4d6862f2">le_thread_Ref_t</a></td></tr>
+<tr class="separator:a32121104c6b4ca39008eb79a4d6862f2"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a9210663fea7283e32a6e988ebcf75126"><td align="right" class="memItemLeft" valign="top">typedef void *(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__thread_8h.html#a9210663fea7283e32a6e988ebcf75126">le_thread_MainFunc_t</a>) (void *context)</td></tr>
+<tr class="separator:a9210663fea7283e32a6e988ebcf75126"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:acb79e2410ac4865f8205fb6dd84ca036"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__thread_8h.html#acb79e2410ac4865f8205fb6dd84ca036">le_thread_Destructor_t</a>) (void *context)</td></tr>
+<tr class="separator:acb79e2410ac4865f8205fb6dd84ca036"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a738918131ea45ff37440858db2cec7db"><td align="right" class="memItemLeft" valign="top">typedef struct le_thread_Destructor * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__thread_8h.html#a738918131ea45ff37440858db2cec7db">le_thread_DestructorRef_t</a></td></tr>
+<tr class="separator:a738918131ea45ff37440858db2cec7db"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a653b0f17cd4d4567c86a25e23d004f07"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07">le_thread_Priority_t</a> { <br />
+  <a class="el" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a8237422b4c3d3df0ffcdbc9981c45d98">LE_THREAD_PRIORITY_IDLE</a> = 0, 
+<a class="el" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07aa0e16c2e450b0510087487a06318a2bb">LE_THREAD_PRIORITY_NORMAL</a>, 
+<a class="el" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a37b1c0a99fc3b979afa091911e2f43d6">LE_THREAD_PRIORITY_RT_1</a>, 
+<a class="el" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a6d3958846ce89c25aad1f16db34549c7">LE_THREAD_PRIORITY_RT_2</a>, 
+<br />
+  <a class="el" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a5fce739981e752cb447f5f79b967670e">LE_THREAD_PRIORITY_RT_3</a>, 
+<a class="el" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a872a9ad09f7fa8ddf9364e604f096da7">LE_THREAD_PRIORITY_RT_4</a>, 
+<a class="el" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07ac8b001c3b50da24d990dd6b46e1efe68">LE_THREAD_PRIORITY_RT_5</a>, 
+<a class="el" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a9fc138e30eefdcb4e76714eb24640970">LE_THREAD_PRIORITY_RT_6</a>, 
+<br />
+  <a class="el" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07ae2c4e9e3acde0b3fdccae600a8fb1495">LE_THREAD_PRIORITY_RT_7</a>, 
+<a class="el" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a8f32fd7602abadccad57458154a36818">LE_THREAD_PRIORITY_RT_8</a>, 
+<a class="el" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a5d80b49943d3cf26e93c256fcb2f92f9">LE_THREAD_PRIORITY_RT_9</a>, 
+<a class="el" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a7cf4f6e4bcc28631edce76a0a3dff459">LE_THREAD_PRIORITY_RT_10</a>, 
+<br />
+  <a class="el" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a7adffd6b46009a0b66e464d04fc33076">LE_THREAD_PRIORITY_RT_11</a>, 
+<a class="el" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a6606e780b0fc8d1a0d06b1ead1f87e69">LE_THREAD_PRIORITY_RT_12</a>, 
+<a class="el" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a1cf7e4ae2011e1a823435bafceca1ec5">LE_THREAD_PRIORITY_RT_13</a>, 
+<a class="el" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a5b36cb29ff41620721ead1d7b4ce7e5c">LE_THREAD_PRIORITY_RT_14</a>, 
+<br />
+  <a class="el" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a8583464ddd0ac106fba090f37500f082">LE_THREAD_PRIORITY_RT_15</a>, 
+<a class="el" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07aafa2b78749f6b1e4fe740948f7d0ddc5">LE_THREAD_PRIORITY_RT_16</a>, 
+<a class="el" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07ade2e01a416dc1595ab3d9dde3da10b47">LE_THREAD_PRIORITY_RT_17</a>, 
+<a class="el" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07aad88067a95684c10cf1b13153629f2a2">LE_THREAD_PRIORITY_RT_18</a>, 
+<br />
+  <a class="el" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07af671e9ef5c65873cb716562b10fc7aa4">LE_THREAD_PRIORITY_RT_19</a>, 
+<a class="el" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a3f75659013e4bc38c572bd1db744f5ee">LE_THREAD_PRIORITY_RT_20</a>, 
+<a class="el" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a50ea42702ed027e7c662115f90083385">LE_THREAD_PRIORITY_RT_21</a>, 
+<a class="el" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07afce77d999f1b4c976e2249e744063b8e">LE_THREAD_PRIORITY_RT_22</a>, 
+<br />
+  <a class="el" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a34ff5071e5335d38e2a122873404ddff">LE_THREAD_PRIORITY_RT_23</a>, 
+<a class="el" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a41c0476895c8ca5c68688f875ff653e1">LE_THREAD_PRIORITY_RT_24</a>, 
+<a class="el" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07ab9c1770678cfce99e82e3d1bdbf5de4e">LE_THREAD_PRIORITY_RT_25</a>, 
+<a class="el" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a22b20d8ac127832cca00cf13232bf6a2">LE_THREAD_PRIORITY_RT_26</a>, 
+<br />
+  <a class="el" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07ac6a719f611dd43eb4b8da8ecfab5066e">LE_THREAD_PRIORITY_RT_27</a>, 
+<a class="el" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07ad7aab0c671c44c412c20f16020152da1">LE_THREAD_PRIORITY_RT_28</a>, 
+<a class="el" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07ac906028e6cb4515a6821424353dfb82a">LE_THREAD_PRIORITY_RT_29</a>, 
+<a class="el" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a14d161ef18fc3d3ef9d2bc512936e3bf">LE_THREAD_PRIORITY_RT_30</a>, 
+<br />
+  <a class="el" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a4cad36377869bf2ee3e83d7c84a738b4">LE_THREAD_PRIORITY_RT_31</a>, 
+<a class="el" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07a24095b646efb07792a6c2e0dbb259740">LE_THREAD_PRIORITY_RT_32</a>
+<br />
+ }</td></tr>
+<tr class="separator:a653b0f17cd4d4567c86a25e23d004f07"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a87e02a46f92e9e3e11ed28a2b265872f"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__thread_8h.html#a32121104c6b4ca39008eb79a4d6862f2">le_thread_Ref_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__thread_8h.html#a87e02a46f92e9e3e11ed28a2b265872f">le_thread_Create</a> (const char *name, <a class="el" href="le__thread_8h.html#a9210663fea7283e32a6e988ebcf75126">le_thread_MainFunc_t</a> mainFunc, void *context)</td></tr>
+<tr class="separator:a87e02a46f92e9e3e11ed28a2b265872f"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a95257a2f60cacdadc787647453b77356"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__thread_8h.html#a95257a2f60cacdadc787647453b77356">le_thread_SetPriority</a> (<a class="el" href="le__thread_8h.html#a32121104c6b4ca39008eb79a4d6862f2">le_thread_Ref_t</a> thread, <a class="el" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07">le_thread_Priority_t</a> priority)</td></tr>
+<tr class="separator:a95257a2f60cacdadc787647453b77356"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a91d0476fe2ddd834c39b194164a665b7"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__thread_8h.html#a91d0476fe2ddd834c39b194164a665b7">le_thread_SetStackSize</a> (<a class="el" href="le__thread_8h.html#a32121104c6b4ca39008eb79a4d6862f2">le_thread_Ref_t</a> thread, size_t size)</td></tr>
+<tr class="separator:a91d0476fe2ddd834c39b194164a665b7"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a8959f09f66f365916a6a4fbdaf36cf65"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__thread_8h.html#a8959f09f66f365916a6a4fbdaf36cf65">le_thread_SetJoinable</a> (<a class="el" href="le__thread_8h.html#a32121104c6b4ca39008eb79a4d6862f2">le_thread_Ref_t</a> thread)</td></tr>
+<tr class="separator:a8959f09f66f365916a6a4fbdaf36cf65"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a38df3877ee5ab9fac17b2fc0be46c27e"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__thread_8h.html#a38df3877ee5ab9fac17b2fc0be46c27e">le_thread_Start</a> (<a class="el" href="le__thread_8h.html#a32121104c6b4ca39008eb79a4d6862f2">le_thread_Ref_t</a> thread)</td></tr>
+<tr class="separator:a38df3877ee5ab9fac17b2fc0be46c27e"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:adf7f24fec4859ca12a52b16ce43fd9b8"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__thread_8h.html#adf7f24fec4859ca12a52b16ce43fd9b8">le_thread_Join</a> (<a class="el" href="le__thread_8h.html#a32121104c6b4ca39008eb79a4d6862f2">le_thread_Ref_t</a> thread, void **resultValuePtr)</td></tr>
+<tr class="separator:adf7f24fec4859ca12a52b16ce43fd9b8"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a6b8e349107ae6628ed8807588f044faa"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__thread_8h.html#a6b8e349107ae6628ed8807588f044faa">le_thread_Exit</a> (void *resultValue)</td></tr>
+<tr class="separator:a6b8e349107ae6628ed8807588f044faa"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a0f1c1b98f354a96e6e31e55a71b58f6a"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__thread_8h.html#a0f1c1b98f354a96e6e31e55a71b58f6a">le_thread_Cancel</a> (<a class="el" href="le__thread_8h.html#a32121104c6b4ca39008eb79a4d6862f2">le_thread_Ref_t</a> threadToCancel)</td></tr>
+<tr class="separator:a0f1c1b98f354a96e6e31e55a71b58f6a"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a90a9d67db26f816fd1e1032d74a24fcd"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__thread_8h.html#a32121104c6b4ca39008eb79a4d6862f2">le_thread_Ref_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__thread_8h.html#a90a9d67db26f816fd1e1032d74a24fcd">le_thread_GetCurrent</a> (void)</td></tr>
+<tr class="separator:a90a9d67db26f816fd1e1032d74a24fcd"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ab4834a35f1afc1f353fc3c808a5ab6a2"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__thread_8h.html#ab4834a35f1afc1f353fc3c808a5ab6a2">le_thread_GetName</a> (<a class="el" href="le__thread_8h.html#a32121104c6b4ca39008eb79a4d6862f2">le_thread_Ref_t</a> threadRef, char *buffPtr, size_t buffSize)</td></tr>
+<tr class="separator:ab4834a35f1afc1f353fc3c808a5ab6a2"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a41c366f881ee31d38de011adb44af12b"><td align="right" class="memItemLeft" valign="top">const char * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__thread_8h.html#a41c366f881ee31d38de011adb44af12b">le_thread_GetMyName</a> (void)</td></tr>
+<tr class="separator:a41c366f881ee31d38de011adb44af12b"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a6cb6d7b1729249d185fbf922fa96d27a"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__thread_8h.html#a738918131ea45ff37440858db2cec7db">le_thread_DestructorRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__thread_8h.html#a6cb6d7b1729249d185fbf922fa96d27a">le_thread_AddDestructor</a> (<a class="el" href="le__thread_8h.html#acb79e2410ac4865f8205fb6dd84ca036">le_thread_Destructor_t</a> destructor, void *context)</td></tr>
+<tr class="separator:a6cb6d7b1729249d185fbf922fa96d27a"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a671dbe2927a3b2a13c5150476398f34f"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__thread_8h.html#a671dbe2927a3b2a13c5150476398f34f">le_thread_AddChildDestructor</a> (<a class="el" href="le__thread_8h.html#a32121104c6b4ca39008eb79a4d6862f2">le_thread_Ref_t</a> thread, <a class="el" href="le__thread_8h.html#acb79e2410ac4865f8205fb6dd84ca036">le_thread_Destructor_t</a> destructor, void *context)</td></tr>
+<tr class="separator:a671dbe2927a3b2a13c5150476398f34f"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:af9bb895578b783b45c83acfe862f7358"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__thread_8h.html#af9bb895578b783b45c83acfe862f7358">le_thread_RemoveDestructor</a> (<a class="el" href="le__thread_8h.html#a738918131ea45ff37440858db2cec7db">le_thread_DestructorRef_t</a> destructor)</td></tr>
+<tr class="separator:af9bb895578b783b45c83acfe862f7358"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a3e35d530ce76e97a627dc60100fc1475"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__thread_8h.html#a3e35d530ce76e97a627dc60100fc1475">le_thread_InitLegatoThreadData</a> (const char *name)</td></tr>
+<tr class="separator:a3e35d530ce76e97a627dc60100fc1475"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aef59d0ded85da6ddd169a661824670d0"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__thread_8h.html#aef59d0ded85da6ddd169a661824670d0">le_thread_CleanupLegatoThreadData</a> (void)</td></tr>
+<tr class="separator:aef59d0ded85da6ddd169a661824670d0"><td class="memSeparator" colspan="2"> </td></tr>
+</table>
+<a id="details" name="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Legato <a class="el" href="c_threading.html">Thread Control API</a> include file.</p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div><h2 class="groupheader">Typedef Documentation</h2>
+<a class="anchor" id="acb79e2410ac4865f8205fb6dd84ca036"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef void(*  le_thread_Destructor_t) (void *context )</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Destructor functions for threads must look like this:</p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramname">context</td><td>[IN] Context parameter that was passed into le_thread_SetDestructor() when this destructor was registered. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a738918131ea45ff37440858db2cec7db"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef struct le_thread_Destructor* <a class="el" href="le__thread_8h.html#a738918131ea45ff37440858db2cec7db">le_thread_DestructorRef_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Reference to a registered destructor function. </p>
+</div>
+</div>
+<a class="anchor" id="a9210663fea7283e32a6e988ebcf75126"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef void*(*  le_thread_MainFunc_t) (void *context)</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Main functions for threads must look like this:</p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramname">context</td><td>[IN] Context value that was passed to <a class="el" href="le__thread_8h.html#a87e02a46f92e9e3e11ed28a2b265872f">le_thread_Create()</a>.</td></tr>
+</table>
+</dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Thread result value. If the thread is joinable, then this value can be obtained by another thread through a call to vt_thread_Join(). Otherwise, the return value is ignored. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a32121104c6b4ca39008eb79a4d6862f2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef struct le_thread* <a class="el" href="le__thread_8h.html#a32121104c6b4ca39008eb79a4d6862f2">le_thread_Ref_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Reference to a thread of execution.</p>
+<dl class="section note"><dt>Note</dt><dd>NULL can be used as an invalid value. </dd></dl>
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a class="anchor" id="a653b0f17cd4d4567c86a25e23d004f07"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07">le_thread_Priority_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Thread priority levels.</p>
+<p>Real-time priority levels should be avoided unless absolutely necessary for the application. They are privileged levels and will therefore not be allowed unless the application is executed by an identity with the appropriate permissions. If a thread running at a real-time priority level does not block, no other thread at a lower priority level will run, so be careful with these.</p>
+<dl class="section note"><dt>Note</dt><dd>Higher numbers are higher priority. </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a653b0f17cd4d4567c86a25e23d004f07a8237422b4c3d3df0ffcdbc9981c45d98"></a>LE_THREAD_PRIORITY_IDLE </td><td class="fielddoc">
+<p>Lowest priority level. Only runs when nothing else to do. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a653b0f17cd4d4567c86a25e23d004f07aa0e16c2e450b0510087487a06318a2bb"></a>LE_THREAD_PRIORITY_NORMAL </td><td class="fielddoc">
+<p>Normal, non-real-time priority level. THIS IS THE DEFAULT. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a653b0f17cd4d4567c86a25e23d004f07a37b1c0a99fc3b979afa091911e2f43d6"></a>LE_THREAD_PRIORITY_RT_1 </td><td class="fielddoc">
+<p>Real-time priority level 1. The lowest realtime priority level. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a653b0f17cd4d4567c86a25e23d004f07a6d3958846ce89c25aad1f16db34549c7"></a>LE_THREAD_PRIORITY_RT_2 </td><td class="fielddoc">
+<p>Real-time priority level 2. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a653b0f17cd4d4567c86a25e23d004f07a5fce739981e752cb447f5f79b967670e"></a>LE_THREAD_PRIORITY_RT_3 </td><td class="fielddoc">
+<p>Real-time priority level 3. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a653b0f17cd4d4567c86a25e23d004f07a872a9ad09f7fa8ddf9364e604f096da7"></a>LE_THREAD_PRIORITY_RT_4 </td><td class="fielddoc">
+<p>Real-time priority level 4. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a653b0f17cd4d4567c86a25e23d004f07ac8b001c3b50da24d990dd6b46e1efe68"></a>LE_THREAD_PRIORITY_RT_5 </td><td class="fielddoc">
+<p>Real-time priority level 5. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a653b0f17cd4d4567c86a25e23d004f07a9fc138e30eefdcb4e76714eb24640970"></a>LE_THREAD_PRIORITY_RT_6 </td><td class="fielddoc">
+<p>Real-time priority level 6. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a653b0f17cd4d4567c86a25e23d004f07ae2c4e9e3acde0b3fdccae600a8fb1495"></a>LE_THREAD_PRIORITY_RT_7 </td><td class="fielddoc">
+<p>Real-time priority level 7. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a653b0f17cd4d4567c86a25e23d004f07a8f32fd7602abadccad57458154a36818"></a>LE_THREAD_PRIORITY_RT_8 </td><td class="fielddoc">
+<p>Real-time priority level 8. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a653b0f17cd4d4567c86a25e23d004f07a5d80b49943d3cf26e93c256fcb2f92f9"></a>LE_THREAD_PRIORITY_RT_9 </td><td class="fielddoc">
+<p>Real-time priority level 9. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a653b0f17cd4d4567c86a25e23d004f07a7cf4f6e4bcc28631edce76a0a3dff459"></a>LE_THREAD_PRIORITY_RT_10 </td><td class="fielddoc">
+<p>Real-time priority level 10. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a653b0f17cd4d4567c86a25e23d004f07a7adffd6b46009a0b66e464d04fc33076"></a>LE_THREAD_PRIORITY_RT_11 </td><td class="fielddoc">
+<p>Real-time priority level 11. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a653b0f17cd4d4567c86a25e23d004f07a6606e780b0fc8d1a0d06b1ead1f87e69"></a>LE_THREAD_PRIORITY_RT_12 </td><td class="fielddoc">
+<p>Real-time priority level 12. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a653b0f17cd4d4567c86a25e23d004f07a1cf7e4ae2011e1a823435bafceca1ec5"></a>LE_THREAD_PRIORITY_RT_13 </td><td class="fielddoc">
+<p>Real-time priority level 13. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a653b0f17cd4d4567c86a25e23d004f07a5b36cb29ff41620721ead1d7b4ce7e5c"></a>LE_THREAD_PRIORITY_RT_14 </td><td class="fielddoc">
+<p>Real-time priority level 14. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a653b0f17cd4d4567c86a25e23d004f07a8583464ddd0ac106fba090f37500f082"></a>LE_THREAD_PRIORITY_RT_15 </td><td class="fielddoc">
+<p>Real-time priority level 15. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a653b0f17cd4d4567c86a25e23d004f07aafa2b78749f6b1e4fe740948f7d0ddc5"></a>LE_THREAD_PRIORITY_RT_16 </td><td class="fielddoc">
+<p>Real-time priority level 16. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a653b0f17cd4d4567c86a25e23d004f07ade2e01a416dc1595ab3d9dde3da10b47"></a>LE_THREAD_PRIORITY_RT_17 </td><td class="fielddoc">
+<p>Real-time priority level 17. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a653b0f17cd4d4567c86a25e23d004f07aad88067a95684c10cf1b13153629f2a2"></a>LE_THREAD_PRIORITY_RT_18 </td><td class="fielddoc">
+<p>Real-time priority level 18. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a653b0f17cd4d4567c86a25e23d004f07af671e9ef5c65873cb716562b10fc7aa4"></a>LE_THREAD_PRIORITY_RT_19 </td><td class="fielddoc">
+<p>Real-time priority level 19. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a653b0f17cd4d4567c86a25e23d004f07a3f75659013e4bc38c572bd1db744f5ee"></a>LE_THREAD_PRIORITY_RT_20 </td><td class="fielddoc">
+<p>Real-time priority level 20. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a653b0f17cd4d4567c86a25e23d004f07a50ea42702ed027e7c662115f90083385"></a>LE_THREAD_PRIORITY_RT_21 </td><td class="fielddoc">
+<p>Real-time priority level 21. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a653b0f17cd4d4567c86a25e23d004f07afce77d999f1b4c976e2249e744063b8e"></a>LE_THREAD_PRIORITY_RT_22 </td><td class="fielddoc">
+<p>Real-time priority level 22. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a653b0f17cd4d4567c86a25e23d004f07a34ff5071e5335d38e2a122873404ddff"></a>LE_THREAD_PRIORITY_RT_23 </td><td class="fielddoc">
+<p>Real-time priority level 23. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a653b0f17cd4d4567c86a25e23d004f07a41c0476895c8ca5c68688f875ff653e1"></a>LE_THREAD_PRIORITY_RT_24 </td><td class="fielddoc">
+<p>Real-time priority level 24. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a653b0f17cd4d4567c86a25e23d004f07ab9c1770678cfce99e82e3d1bdbf5de4e"></a>LE_THREAD_PRIORITY_RT_25 </td><td class="fielddoc">
+<p>Real-time priority level 25. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a653b0f17cd4d4567c86a25e23d004f07a22b20d8ac127832cca00cf13232bf6a2"></a>LE_THREAD_PRIORITY_RT_26 </td><td class="fielddoc">
+<p>Real-time priority level 26. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a653b0f17cd4d4567c86a25e23d004f07ac6a719f611dd43eb4b8da8ecfab5066e"></a>LE_THREAD_PRIORITY_RT_27 </td><td class="fielddoc">
+<p>Real-time priority level 27. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a653b0f17cd4d4567c86a25e23d004f07ad7aab0c671c44c412c20f16020152da1"></a>LE_THREAD_PRIORITY_RT_28 </td><td class="fielddoc">
+<p>Real-time priority level 28. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a653b0f17cd4d4567c86a25e23d004f07ac906028e6cb4515a6821424353dfb82a"></a>LE_THREAD_PRIORITY_RT_29 </td><td class="fielddoc">
+<p>Real-time priority level 29. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a653b0f17cd4d4567c86a25e23d004f07a14d161ef18fc3d3ef9d2bc512936e3bf"></a>LE_THREAD_PRIORITY_RT_30 </td><td class="fielddoc">
+<p>Real-time priority level 30. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a653b0f17cd4d4567c86a25e23d004f07a4cad36377869bf2ee3e83d7c84a738b4"></a>LE_THREAD_PRIORITY_RT_31 </td><td class="fielddoc">
+<p>Real-time priority level 31. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a653b0f17cd4d4567c86a25e23d004f07a24095b646efb07792a6c2e0dbb259740"></a>LE_THREAD_PRIORITY_RT_32 </td><td class="fielddoc">
+<p>Real-time priority level 32. </p>
+</td></tr>
+</table>
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="a671dbe2927a3b2a13c5150476398f34f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_thread_AddChildDestructor </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__thread_8h.html#a32121104c6b4ca39008eb79a4d6862f2">le_thread_Ref_t</a> </td>
+<td class="paramname"><em>thread</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="le__thread_8h.html#acb79e2410ac4865f8205fb6dd84ca036">le_thread_Destructor_t</a> </td>
+<td class="paramname"><em>destructor</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">void * </td>
+<td class="paramname"><em>context</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Registers a destructor function for a child thread. The destructor will be called by the child thread just before it terminates.</p>
+<p>This can only be done before the child thread is started. After that, only the child thread can add its own destructors.</p>
+<p>The reason for allowing another thread to register a destructor function is to avoid a race condition that can cause resource leakage when a parent thread passes dynamically allocated resources to threads that they create. This is only a problem if the child thread is expected to release the resources when they are finished with them, and the child thread may get cancelled at any time.</p>
+<p>For example, a thread <em>T1</em> could allocate an object from a memory pool, create a thread <em>T2</em>, and pass that object to <em>T2</em> for processing and release. <em>T2</em> could register a destructor function to release the resource whenever it terminates, whether through cancellation or normal exit. But, if it's possible that <em>T2</em> could get cancelled before it even has a chance to register a destructor function for itself, the memory pool object could never get released. So, we allow <em>T1</em> to register a destructor function for <em>T2</em> before starting <em>T2</em>.</p>
+<p>See <a class="el" href="c_threading.html#threadDestructors">Thread Destructors</a> for more information on destructors. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">thread</td><td>Thread to attach the destructor to. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">destructor</td><td>Function to be called. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>Parameter to pass to the destructor. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a6cb6d7b1729249d185fbf922fa96d27a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__thread_8h.html#a738918131ea45ff37440858db2cec7db">le_thread_DestructorRef_t</a> le_thread_AddDestructor </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__thread_8h.html#acb79e2410ac4865f8205fb6dd84ca036">le_thread_Destructor_t</a> </td>
+<td class="paramname"><em>destructor</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">void * </td>
+<td class="paramname"><em>context</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Registers a destructor function for the calling thread. The destructor will be called by that thread just before it terminates.</p>
+<p>A thread can register (or remove) its own destructor functions any time.</p>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the destructor that can be passed to <a class="el" href="le__thread_8h.html#af9bb895578b783b45c83acfe862f7358">le_thread_RemoveDestructor()</a>.</dd></dl>
+<p>See <a class="el" href="c_threading.html#threadDestructors">Thread Destructors</a> for more information on destructors. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">destructor</td><td>Function to be called. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>Parameter to pass to the destructor. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a0f1c1b98f354a96e6e31e55a71b58f6a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_thread_Cancel </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__thread_8h.html#a32121104c6b4ca39008eb79a4d6862f2">le_thread_Ref_t</a> </td>
+<td class="paramname"><em>threadToCancel</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Tells another thread to terminate. Returns immediately, but the termination of the thread happens asynchronously and is not guaranteed to occur when this function returns.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK if successful.</li>
+<li>LE_NOT_FOUND if the thread doesn't exist. </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">threadToCancel</td><td>Thread to cancel. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="aef59d0ded85da6ddd169a661824670d0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_thread_CleanupLegatoThreadData </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Clean-up the thread-specific data that was initialized using <a class="el" href="le__thread_8h.html#a3e35d530ce76e97a627dc60100fc1475">le_thread_InitLegatoThreadData()</a>.</p>
+<p>To prevent memory leaks, this must be called by the thread when it dies (unless the whole process is dying).</p>
+<dl class="section note"><dt>Note</dt><dd>This is not needed if the thread was started using <a class="el" href="le__thread_8h.html#a38df3877ee5ab9fac17b2fc0be46c27e">le_thread_Start()</a>. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a87e02a46f92e9e3e11ed28a2b265872f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__thread_8h.html#a32121104c6b4ca39008eb79a4d6862f2">le_thread_Ref_t</a> le_thread_Create </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>name</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="le__thread_8h.html#a9210663fea7283e32a6e988ebcf75126">le_thread_MainFunc_t</a> </td>
+<td class="paramname"><em>mainFunc</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">void * </td>
+<td class="paramname"><em>context</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a new Legato thread of execution. After creating the thread, you have the opportunity to set attributes before it starts. It won't start until <a class="el" href="le__thread_8h.html#a38df3877ee5ab9fac17b2fc0be46c27e">le_thread_Start()</a> is called.</p>
+<dl class="section return"><dt>Returns</dt><dd>A reference to the thread (doesn't return if fails). </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Thread name (will be copied, so can be temporary). </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">mainFunc</td><td>Thread's main function. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>Value to pass to mainFunc when it is called. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a6b8e349107ae6628ed8807588f044faa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_thread_Exit </td>
+<td>(</td>
+<td class="paramtype">void * </td>
+<td class="paramname"><em>resultValue</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Terminates the calling thread. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">resultValue</td><td>Result value. If this thread is joinable, this result can be obtained by another thread calling <a class="el" href="le__thread_8h.html#adf7f24fec4859ca12a52b16ce43fd9b8">le_thread_Join()</a> on this thread. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a90a9d67db26f816fd1e1032d74a24fcd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__thread_8h.html#a32121104c6b4ca39008eb79a4d6862f2">le_thread_Ref_t</a> le_thread_GetCurrent </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the calling thread's thread reference.</p>
+<dl class="section return"><dt>Returns</dt><dd>Calling thread's thread reference. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a41c366f881ee31d38de011adb44af12b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">const char* le_thread_GetMyName </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the name of the calling thread. </p>
+</div>
+</div>
+<a class="anchor" id="ab4834a35f1afc1f353fc3c808a5ab6a2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_thread_GetName </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__thread_8h.html#a32121104c6b4ca39008eb79a4d6862f2">le_thread_Ref_t</a> </td>
+<td class="paramname"><em>threadRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">char * </td>
+<td class="paramname"><em>buffPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>buffSize</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the name of a given thread. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">threadRef</td><td>Thread to get the name for. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">buffPtr</td><td>Buffer to store the name of the thread. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">buffSize</td><td>Size of the buffer. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a3e35d530ce76e97a627dc60100fc1475"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_thread_InitLegatoThreadData </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>name</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Initialize the thread-specific data needed by the Legato framework for the calling thread.</p>
+<p>This is used to turn a non-Legato thread (a thread that was created using a non-Legato API, such as pthread_create() ) into a Legato thread.</p>
+<dl class="section note"><dt>Note</dt><dd>This is not needed if the thread was started using <a class="el" href="le__thread_8h.html#a38df3877ee5ab9fac17b2fc0be46c27e">le_thread_Start()</a>. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>A name for the thread (will be copied, so can be temporary). </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="adf7f24fec4859ca12a52b16ce43fd9b8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_thread_Join </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__thread_8h.html#a32121104c6b4ca39008eb79a4d6862f2">le_thread_Ref_t</a> </td>
+<td class="paramname"><em>thread</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">void ** </td>
+<td class="paramname"><em>resultValuePtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>"Joins" the calling thread with another thread. Blocks the calling thread until the other thread finishes.</p>
+<p>After a thread has been joined with, its thread reference is no longer valid and must never be used again.</p>
+<p>The other thread's result value (the value it returned from its main function or passed into <a class="el" href="le__thread_8h.html#a6b8e349107ae6628ed8807588f044faa">le_thread_Exit()</a>) can be obtained.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK if successful.</li>
+<li>LE_DEADLOCK if a thread tries to join with itself or two threads try to join each other.</li>
+<li>LE_NOT_FOUND if the other thread doesn't exist.</li>
+<li>LE_NOT_POSSIBLE if the other thread can't be joined with. </li>
+</ul>
+</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>The other thread must be "joinable". See <a class="el" href="le__thread_8h.html#a8959f09f66f365916a6a4fbdaf36cf65">le_thread_SetJoinable()</a>;</dd>
+<dd>
+It's an error for two or more threads try to join with the same thread. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">thread</td><td></td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">resultValuePtr</td><td>Ptr to where the finished thread's result value will be stored. Can be NULL if the result is not needed. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="af9bb895578b783b45c83acfe862f7358"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_thread_RemoveDestructor </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__thread_8h.html#a738918131ea45ff37440858db2cec7db">le_thread_DestructorRef_t</a> </td>
+<td class="paramname"><em>destructor</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Removes a destructor function from the calling thread's list of destructors. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">destructor</td><td>Reference to the destructor to remove. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a8959f09f66f365916a6a4fbdaf36cf65"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_thread_SetJoinable </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__thread_8h.html#a32121104c6b4ca39008eb79a4d6862f2">le_thread_Ref_t</a> </td>
+<td class="paramname"><em>thread</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Makes a thread "joinable", meaning that when it finishes, it will remain in existence until another thread "joins" with it by calling <a class="el" href="le__thread_8h.html#adf7f24fec4859ca12a52b16ce43fd9b8">le_thread_Join()</a>. By default, threads are not joinable and will be destroyed automatically when they finish. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">thread</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a95257a2f60cacdadc787647453b77356"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_thread_SetPriority </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__thread_8h.html#a32121104c6b4ca39008eb79a4d6862f2">le_thread_Ref_t</a> </td>
+<td class="paramname"><em>thread</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07">le_thread_Priority_t</a> </td>
+<td class="paramname"><em>priority</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the priority of a thread.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK if successful.</li>
+<li>LE_NOT_PERMITTED if the calling thread doesn't have the necessary permission levels to use the requested priority level.</li>
+<li>LE_OUT_OF_RANGE if the priority level requested is out of range. </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">thread</td><td></td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">priority</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a91d0476fe2ddd834c39b194164a665b7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_thread_SetStackSize </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__thread_8h.html#a32121104c6b4ca39008eb79a4d6862f2">le_thread_Ref_t</a> </td>
+<td class="paramname"><em>thread</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>size</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the stack size of a thread.</p>
+<dl class="section note"><dt>Note</dt><dd>It's generally not necessary to set the stack size. Some reasons why you might are:<ul>
+<li>to increase it beyond the system's default stack size to prevent overflow for a thread that makes extremely heavy use of the stack;</li>
+<li>to decrease it to save memory when:<ul>
+<li>running in a system that does not support virtual memory</li>
+<li>the thread has very tight real-time constraints that require that the stack memory be locked into physical memory to avoid page faults.</li>
+</ul>
+</li>
+</ul>
+</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK if successful.</li>
+<li>LE_OVERFLOW if the stack size requested is too small.</li>
+<li>LE_OUT_OF_RANGE if the stack size requested is too large. </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">thread</td><td></td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>Stack size, in bytes. May be rounded up to the nearest virtual memory page size. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a38df3877ee5ab9fac17b2fc0be46c27e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_thread_Start </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__thread_8h.html#a32121104c6b4ca39008eb79a4d6862f2">le_thread_Ref_t</a> </td>
+<td class="paramname"><em>thread</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Starts a new Legato execution thread. After creating the thread, you have the opportunity to set attributes before it starts. It won't start until <a class="el" href="le__thread_8h.html#a38df3877ee5ab9fac17b2fc0be46c27e">le_thread_Start()</a> is called. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">thread</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

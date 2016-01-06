@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>SIM  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">SIM </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p><a class="el" href="le__sim__interface_8h.html">API Reference</a></p>
+<hr />
+<p>This file contains prototype definitions for SIM API.</p>
+<p>A subscriber identity module or subscriber identification module (SIM) is an integrated circuit that securely stores the international mobile subscriber identity (IMSI) and related key used to identify and authenticate subscribers on M2M devices.</p>
+<p>Most SIM cards can store a number of SMS messages and phone book contacts.</p>
+<p><a class="el" href="le__sim__interface_8h.html#a4c9e3ded0485f14c66e4d51763f2de57">le_sim_GetSelectedCard()</a> returns the selected SIM card number.</p>
+<h1><a class="anchor" id="le_sim_binding"></a>
+IPC interfaces binding</h1>
+<p>All the functions of this API are provided by the <b>modemService</b>.</p>
+<p>Here's a code sample binding to modem services: </p><pre class="fragment">bindings:
+{
+   clientExe.clientComponent.le_sim -> modemService.le_sim
+}
+</pre><h1><a class="anchor" id="le_sim_SelectCard"></a>
+Select a card to use</h1>
+<p><a class="el" href="le__sim__interface_8h.html#a91a0f0399c89e466b9a8ccfab6de129d">le_sim_SelectCard()</a> function is used to select the SIM. By default, the SIM in slot 1 is used. </p><dl class="section note"><dt>Note</dt><dd>The SIM selection is not reset persistent; this function has to be called at each start-up.</dd>
+<dd>
+: It is recommended to wait for a SIM handler notification after a new SIM selection before calling le_sim API functions.</dd></dl>
+<p>A sample code can be seen in the following page:</p><ul>
+<li><a class="el" href="c_sim_test_select.html">Sample code for SIM Select</a></li>
+</ul>
+<h1><a class="anchor" id="le_sim_id"></a>
+SIM identification information</h1>
+<p><b>ICCID:</b> Each SIM is internationally identified by its integrated circuit card identifier (ICCID). ICCIDs are stored in the SIM cards and engraved or printed on the SIM card body. The ICCID is defined by the ITU-T recommendation E.118 as the Primary Account Number. According to E.118, the number is up to 19 digits long, including a single check digit calculated using the Luhn algorithm. However, the GSM Phase 1 (ETSI Recommendation GSM 11.11) defined the ICCID length as 10 octets (20 digits) with operator-specific structure.</p>
+<p><a class="el" href="le__sim__interface_8h.html#a90cbc71edc9bee227502f3836f5fa117">le_sim_GetICCID()</a> API reads the identification number (ICCID).</p>
+<p>Using this API selects the requested SIM.</p>
+<p><b>IMSI:</b> The International Mobile Subscriber Identity or IMSI is a unique identification associated with all cellular networks. The IMSI is used in any mobile network that connects with other networks. For GSM, UMTS and LTE network, this number is provisioned in the SIM card.</p>
+<p>An IMSI is usually presented as a 15 digit long number, but can be shorter. The first 3 digits are the mobile country code (MCC), are followed by the mobile network code (MNC), either 2 digits (European standard) or 3 digits (North American standard). The length of the MNC depends on the value of the MCC. The remaining digits are the mobile subscription identification number (MSIN) within the network's customer base.</p>
+<p><b>Home</b> <b>Network</b> <b>Name:</b> <a class="el" href="le__sim__interface_8h.html#a2a6676da979e90e12010e084f304660b">le_sim_GetHomeNetworkOperator()</a> retrieves the Home Network Name.</p>
+<p><a class="el" href="le__sim__interface_8h.html#aedcba6023de6b7ec0a2cf3d2ca725b49">le_sim_GetIMSI()</a> API reads the international mobile subscriber identity (IMSI).</p>
+<p>Using this API selects the requested SIM.</p>
+<p><b>Phone</b> <b>Number:</b> <a class="el" href="le__sim__interface_8h.html#a68a907c8b75749b0647721604a8deb12">le_sim_GetSubscriberPhoneNumber()</a> API reads the Phone Number associated to the SIM. If the phone number has not been provisioned, it will return the empty string.</p>
+<p>Using this API selects the requested SIM.</p>
+<p><b>Home</b> <b>Network</b> <b>Information:</b> </p><ul>
+<li><a class="el" href="le__sim__interface_8h.html#a2a6676da979e90e12010e084f304660b">le_sim_GetHomeNetworkOperator()</a>function retrieves the Home Network Name.</li>
+<li><a class="el" href="le__sim__interface_8h.html#a048b9cc4aed3f4c2fcf6ca34f40e99a9">le_sim_GetHomeNetworkMccMnc()</a>function retrieves the Home Network MCC (Mobile Country Code) and MNC (Mobile Network Code).</li>
+</ul>
+<p>A sample code can be seen in the following page:</p><ul>
+<li><a class="el" href="c_sim_test_identification.html">Sample code for SIM Identification</a></li>
+</ul>
+<h1><a class="anchor" id="le_sim_auth"></a>
+SIM Authentication</h1>
+<p><a class="el" href="le__sim__interface_8h.html#a7d9de57c8931013432cd41b26d1e7585">le_sim_EnterPIN()</a> enters the PIN (Personal Identification Number) code that's required before any Mobile equipment functionality can be used.</p>
+<p>Using this API selects the requested SIM.</p>
+<p><a class="el" href="le__sim__interface_8h.html#a8886dbb94aa732883ec5a67ddd345f98">le_sim_GetRemainingPINTries()</a> returns the number of remaining PIN entry attempts before the SIM will become blocked.</p>
+<p>Using this API selects the requested SIM.</p>
+<p><a class="el" href="le__sim__interface_8h.html#a761bbdf28094b906236320445d9b9166">le_sim_ChangePIN()</a> must be called to change the PIN code.</p>
+<p>Using this API selects the requested SIM.</p>
+<p><a class="el" href="le__sim__interface_8h.html#a9e21c9a633b4675997238cefaa96b9a8">le_sim_Lock()</a> locks the SIM card: it enables requests for the PIN code.</p>
+<p>Using this API selects the requested SIM.</p>
+<p><a class="el" href="le__sim__interface_8h.html#a36f50d2da76a981a8f671424dccb1c1d">le_sim_Unlock()</a> unlocks the SIM card: it disables requests for the PIN code.</p>
+<p>Using this API selects the requested SIM.</p>
+<p><a class="el" href="le__sim__interface_8h.html#a77293780d1e14f291418181c7c3c11f0">le_sim_Unblock()</a> unblocks the SIM card. The SIM card is blocked after X unsuccessful attempts to enter the PIN. <a class="el" href="le__sim__interface_8h.html#a77293780d1e14f291418181c7c3c11f0">le_sim_Unblock()</a> requires the PUK (Personal Unblocking) code to set a new PIN code.</p>
+<p>A sample code can be seen in the following page:</p><ul>
+<li><a class="el" href="c_sim_test_authentication.html">Sample code for SIM Authentication</a></li>
+</ul>
+<h1><a class="anchor" id="le_sim_state"></a>
+SIM states</h1>
+<p><a class="el" href="le__sim__interface_8h.html#aa3255a29cec4358c5e0d68b9ac62ff88">le_sim_IsPresent()</a> API advises the SIM is inserted (and locked) or removed.</p>
+<p>Using this API selects the requested SIM.</p>
+<p><a class="el" href="le__sim__interface_8h.html#ace457890856d3692ecb4176f0e892558">le_sim_IsReady()</a> API advises the SIM is ready (PIN code correctly entered or not required).</p>
+<p>Using this API selects the requested SIM.</p>
+<p>The <a class="el" href="le__sim__interface_8h.html#a16b06f266471d81f772e5439ec570144">le_sim_GetState()</a> API retrieves the SIM state:</p><ul>
+<li>LE_SIM_INSERTED : SIM card is inserted and locked.</li>
+<li>LE_SIM_ABSENT : SIM card is absent.</li>
+<li>LE_SIM_READY : SIM card is inserted and unlocked.</li>
+<li>LE_SIM_BLOCKED : SIM card is blocked.</li>
+<li>LE_SIM_BUSY : SIM card is busy.</li>
+<li>LE_SIM_STATE_UNKNOWN : Unknown SIM state.</li>
+</ul>
+<p>Using this API selects the requested SIM.</p>
+<p>A handler function must be registered to receive SIM's state notifications. <a class="el" href="le__sim__interface_8h.html#a8e296a7cd35edd99cb1dc21232e280dd">le_sim_AddNewStateHandler()</a> API allows the User to register that handler.</p>
+<p>The handler must satisfy the following prototype: typedef void(*le_sim_NewStateHandlerFunc_t)(<a class="el" href="le__sim__interface_8h.html#aace49df88426119626fb1ef4e544ccdd">le_sim_Id_t</a> simId, <code>le_sim_States_t</code> simState);</p>
+<p>When a new SIM's state is notified, the handler is called.</p>
+<p>Call <a class="el" href="le__sim__interface_8h.html#a16b06f266471d81f772e5439ec570144">le_sim_GetState()</a> to retrieve the new state of the SIM.</p>
+<dl class="section note"><dt>Note</dt><dd>If two (or more) applications have registered a handler function for notifications, they will all receive it and will be passed the same SIM.</dd></dl>
+<p>The application can uninstall the handler function by calling <a class="el" href="le__sim__interface_8h.html#a8e3a4e2e978cf4931a39317ee5e9f762">le_sim_RemoveNewStateHandler()</a> API.</p>
+<p>A sample code can be seen in the following page:</p><ul>
+<li><a class="el" href="c_sim_test_states.html">Sample code for SIM States</a></li>
+</ul>
+<h1><a class="anchor" id="le_sim_profile_switch"></a>
+Local SIM profile switch</h1>
+<p>As soon as there are several subscriptions/profiles in the eUICC (multi-profile), and one of them is dedicated to emergency calls (ex: eCall, ERA-Glonass), local swap is needed to swap as quickly as possible to the emergency profile in case of need.</p>
+<p>“Local swap” means that the User's application must be able to directly request the eUICC to swap to Emergency Call Subscription (ECS).</p>
+<p>Local swap puts the eUICC in a temporary state, meaning the commercial subscription is replaced by emergency subscription for a limited time, event triggering the swap back to commercial subscription being controlled by the User's application.</p>
+<p>The <a class="el" href="le__sim__interface_8h.html#aa856f5e094e8182c8d0b07761e309549">le_sim_LocalSwapToEmergencyCallSubscription()</a> function requests the multi-profile eUICC to swap to ECS and to refresh. The User's application must wait for eUICC reboot to be finished and network connection available.</p>
+<p>The <a class="el" href="le__sim__interface_8h.html#a51b535750b66c4cf460e3c8c72f3658d">le_sim_LocalSwapToCommercialSubscription()</a> function requests the multi-profile eUICC to swap back to commercial subscription and to refresh. The User's application must wait for eUICC reboot to be finished and network connection available.</p>
+<p>The User's application can install an handler with <a class="el" href="le__sim__interface_8h.html#a8e296a7cd35edd99cb1dc21232e280dd">le_sim_AddNewStateHandler()</a> to receive eUICC's state notifications.</p>
+<dl class="section warning"><dt>Warning</dt><dd><ul>
+<li>If you use a Morpho or Oberthur card, the SIM_REFRESH PRO-ACTIVE command must be accepted with <a class="el" href="le__sim__interface_8h.html#a8cc75a17466446c19c5bd941b1360e0e">le_sim_AcceptSimToolkitCommand()</a> in order to complete the profile swap procedure.</li>
+<li>If you use a Giesecke & Devrient (G&D) card, be sure that your platform has disabled security restrictions for channel management APDU commands, otherwise local SIM profile switch could not work.</li>
+</ul>
+</dd></dl>
+<p>The <a class="el" href="le__sim__interface_8h.html#a837cdc0fe30761f4339f846a0b44c5f1">le_sim_IsEmergencyCallSubscriptionSelected()</a> function must be called to get the current subscription.</p>
+<dl class="section warning"><dt>Warning</dt><dd>There is no standard method to interrogate the current selected subscription. The returned value of this function is based on the last executed local swap command. This means that this function will always return LE_NOT_FOUND error at Legato startup.</dd></dl>
+<p>A sample code can be seen in the following page:</p><ul>
+<li><a class="el" href="c_sim_test_profile_switch.html">Sample code for Local SIM profile switch</a></li>
+</ul>
+<h1><a class="anchor" id="le_sim_stk"></a>
+SIM Toolkit</h1>
+<p>The SIM application Toolkit allows the SIM card to initiates commands or asking input from the modem to accept/reject SIM operations.</p>
+<p>One of the use case is the remote provisioning of an embedded UICC (eUICC).</p>
+<p>The embedded UICC (eUICC) format supports multiple subscription profiles, which can be remotely provisioned, updated or selected through SIM tool kit procedures (Bearer Independent Protocol -BIP-, SIM refresh).</p>
+<p>It is mainly used for in-vehicle emergency call service (eCall).</p>
+<p>An eUICC can be remotely managed to change the Mobile Network Operator subscription.</p>
+<p>The <a class="el" href="le__sim__interface_8h.html#a85577728a34d70801cbb4deb8efd75d5">le_sim_AddSimToolkitEventHandler()</a> function registers a handler to be notified of SIM Toolkit events.</p>
+<p>The <a class="el" href="le__sim__interface_8h.html#a487be241cae0657f96bcc44d0f8fab5a">le_sim_RemoveSimToolkitEventHandler()</a> function unregisters the handler.</p>
+<p>The <a class="el" href="le__sim__interface_8h.html#a8cc75a17466446c19c5bd941b1360e0e">le_sim_AcceptSimToolkitCommand()</a> allows the device to accept the last SIM Toolkit command.</p>
+<p>The <a class="el" href="le__sim__interface_8h.html#a8cbdc50d62ddd5ea80386d27e16d954f">le_sim_RejectSimToolkitCommand()</a> forbids the device to accept the last SIM Toolkit command.</p>
+<p>A sample code can be seen in the following page:</p><ul>
+<li><a class="el" href="c_sim_test_sim_toolkit.html">Sample code for Local SIM Toolkit</a></li>
+</ul>
+<hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

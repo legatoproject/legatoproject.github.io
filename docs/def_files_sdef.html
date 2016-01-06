@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>System Definition .sdef  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">System Definition .sdef </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p><code>.sdef</code> files can contain these sections:</p>
+<h1><a class="anchor" id="defFilesSdef_apps"></a>
+apps</h1>
+<p>An <code>apps:</code> section declares one or more apps to be deployed to the target system.</p>
+<div class="fragment"><div class="line">apps:</div><div class="line">{</div><div class="line">    webserver</div><div class="line">}</div></div><!-- fragment --><p>This looks for an app definition file called <code>webserver.adef</code> and includes it in the system.</p>
+<p>The <code>apps:</code> section can override limits and other app settings.</p>
+<p>Here's a code sample to deploy a web server limiting its share of the CPU under heavy load to 500 (see <a class="el" href="def_files_adef.html#defFilesAdef_cpuShare">CPU Share</a>):</p>
+<div class="fragment"><div class="line">apps:</div><div class="line">{</div><div class="line">    webServer</div><div class="line">    {</div><div class="line">        cpuShare: 500</div><div class="line">    }</div><div class="line">}</div></div><!-- fragment --><p>Any of the following subsections can be used in an <code></code>.sdef <code>apps:</code> section, and will override the .adef setting for all processes in that app:</p>
+<p><a class="el" href="def_files_adef.html#defFilesAdef_cpuShare">CPU Share</a> <br />
+<a class="el" href="def_files_adef.html#defFilesAdef_processFaultAction">Fault Action</a> <br />
+<a class="el" href="def_files_adef.html#defFilesAdef_groups">Groups</a> <br />
+<a class="el" href="def_files_adef.html#defFilesAdef_processMaxCoreDumpFileBytes">Max Core Dump File Bytes</a> <br />
+<a class="el" href="def_files_adef.html#defFilesAdef_processMaxFileBytes">Max File Bytes</a> <br />
+<a class="el" href="def_files_adef.html#defFilesAdef_processMaxFileDescriptors">Max File Descriptors</a> <br />
+<a class="el" href="def_files_adef.html#defFilesAdef_maxFileSystemBytes">Max File System Bytes</a> <br />
+<a class="el" href="def_files_adef.html#defFilesAdef_processMaxLockedMemoryBytes">Max Locked Memory Bytes</a> <br />
+<a class="el" href="def_files_adef.html#defFilesAdef_maxMemoryBytes">Max Memory Bytes</a> <br />
+<a class="el" href="def_files_adef.html#defFilesAdef_maxMQueueBytes">Max MQueue Bytes</a> <br />
+<a class="el" href="def_files_sdef.html#defFilesSdef_appsMaxPriority">Max Priority</a> <br />
+<a class="el" href="def_files_adef.html#defFilesAdef_maxQueuedSignals">Max Queued Signals</a> <br />
+<a class="el" href="def_files_adef.html#defFilesAdef_maxThreads">Max Threads</a> <br />
+<a class="el" href="def_files_adef.html#defFilesAdef_maxSecureStorageBytes">Max Secure Storage Bytes</a> <br />
+<a class="el" href="def_files_adef.html#defFilesAdef_pools">Pools</a> <br />
+<a class="el" href="def_files_adef.html#defFilesAdef_sandboxed">Sandboxed</a> <br />
+<a class="el" href="def_files_adef.html#defFilesAdef_start">Start</a> <br />
+<a class="el" href="def_files_adef.html#defFilesAdef_watchdogAction">Watchdog Action</a> <br />
+<a class="el" href="def_files_adef.html#defFilesAdef_watchdogTimeout">Watchdog Timeout</a> <br />
+</p>
+<h2><a class="anchor" id="defFilesSdef_appsMaxPriority"></a>
+Max Priority</h2>
+<p>Sets the maximum priority level the app it permitted to use.</p>
+<p>Acts as a ceiling only. Lowers the priority level if an app would otherwise be allowed to use a higher priority. It won't raise the priority level for any processes in the app.</p>
+<p>Here's a code sample where a process in the app's .adef is configured to start at high priority, and the .sdef section for that app has maxPriority set to <code>medium</code> so the process will start at medium priority.</p>
+<div class="fragment"><div class="line">apps:</div><div class="line">{</div><div class="line">    foo</div><div class="line">    {</div><div class="line">        maxPriority: high</div><div class="line">    }</div><div class="line">}</div></div><!-- fragment --><p>Another process in the same .adef configured to start at low priority will still start at low priority.</p>
+<h2><a class="anchor" id="defFilesSdef_appsPreloaded"></a>
+Preloaded</h2>
+<p>Indicates whether or not an app must be preloaded onto the target device separately from the rest of the system.</p>
+<p>The legato AF supports being installed in a read-only partition, mounted as <code>/mnt/legato</code> in the target file system. Writeable files will be kept in another file system mounted as <code>/legato</code> in the target file system.</p>
+<p>If the read-only partition must be updated, but there are other (possibly very large) apps in the writeable file system, it may be impossible to deliver an update containing the apps over-the-air at the same time that the read-only partition is updated.</p>
+<p>Usually, the read-only partition does not need to be updated, but in some cases, it may be desireable, and this feature can help.</p>
+<p>For example, a customer has a giant app containing pictures and audio files. In the factory, the framework and a few apps are loaded into the read-only <code>/mnt/legato</code>, and other apps, including the huge app, are installed in the writeable <code>/legato</code>. Later, when the device is in the field, a change needs to be made to both the modem firmware and the Legato framework, and must be delivered together, as a single FOTA (firmware over the air) update. A new system is built using <code>mksys</code>. But, the resulting system update file is too large to fit in the FOTA update image (and likely very expensive to deliver over the air to hundreds of thousands of devices). Fortunately, the audio files don't need to be updated at the same time, and the audio app can be marked "preloaded" in the .sdef file to exclude it from the system update file. After the FOTA update, the new system will use the audio file that already exists on the target's writeable file system.</p>
+<div class="fragment"><div class="line">apps:</div><div class="line">{</div><div class="line">    modemService</div><div class="line">    audioService</div><div class="line">    dataConnectionService</div><div class="line">    controller</div><div class="line">    userInterface { preloaded: <span class="keyword">true</span> }</div><div class="line">}</div></div><!-- fragment --><p>If you are not sure whether or not you need this feature, you probably don't. Use of this feature is intended for very specific use cases. It is encouraged that delta updates of systems be used instead, whenever practical.</p>
+<h1><a class="anchor" id="defFilesSdef_bindings"></a>
+bindings</h1>
+<p>Lists IPC <code>bindings</code> that connect apps’ external IPC interfaces. They're listed in the <a class="el" href="def_files_adef.html#defFilesAdef_extern">extern section of their <code></code>.adef files</a>. Each binding connects one client-side interface to one server-side interface.</p>
+<p>Interfaces use the app name and the interface name, separated by a period (‘.’). The two bound-together interfaces are separated by an arrow ("->").</p>
+<p>For example,</p>
+<div class="fragment"><div class="line">apps:</div><div class="line">{</div><div class="line">    vavController</div><div class="line">    thermostat</div><div class="line">    airHandlerProxy</div><div class="line">}</div><div class="line"></div><div class="line">bindings:</div><div class="line">{</div><div class="line"> <span class="comment">// Connect the VAV controller to the thermostat</span></div><div class="line">    vavController.temp -> thermostat.temp</div><div class="line">    vavController.setpoint -> thermostat.setpoint</div><div class="line"></div><div class="line"> <span class="comment">// Connect the VAV controller to the supply air duct temperature sensor</span></div><div class="line">    vavController.ductTemp -> ductTemperatureSensor.temp</div><div class="line"></div><div class="line"> <span class="comment">// Hook up the VAV control outputs to the damper actuators.</span></div><div class="line">    vavController.supplyDamper -> supplyAirDamper.damper</div><div class="line">    vavController.returnDamper -> returnAirDamper.damper</div><div class="line"></div><div class="line"> <span class="comment">// Use a network proxy to request duct temperature changes from the Air Handling Unit.</span></div><div class="line">    vavController.airHandler -> airHandlerProxy.airHandler</div><div class="line">}</div></div><!-- fragment --><p>For security reasons, binding between apps is never performed unless explicitly specified in the <code></code>.sdef or <code></code>.adef files.</p>
+<h1><a class="anchor" id="defFilesSdef_commands"></a>
+commands</h1>
+<p>To make a command-line tool available to a root user who is logged-in to a shell on a target device tty (e.g., through secure shell [ssh] or a serial console):</p>
+<ol type="1">
+<li>Build an app containing the executable.</li>
+<li>Add the executable to the "commands:" section of the .sdef file.</li>
+</ol>
+<p>Each entry in the commands section looks like this:</p>
+<div class="fragment"><div class="line">commandName = appName:/path/to/exe</div></div><!-- fragment --><p>The path to the executable must be an absolute path within the application's read-only installed files. For example, if the executable is a script that was bundled into the app "myApp" to appear at "/usr/share/exe" inside the myApp's sandbox at runtime, then the command would be specified as</p>
+<div class="fragment"><div class="line">commandName = myApp:/usr/share/exe</div></div><!-- fragment --><p>If the executable is built using an "executables" section in a .adef file, then the executable will appear in the app's bin directory. For example,</p>
+<div class="fragment"><div class="line">apps:</div><div class="line">{</div><div class="line">    myTools <span class="comment">// This app's .adef builds an exe called "led" that can be used to turn LEDs on and off.</span></div><div class="line">}</div><div class="line"></div><div class="line">commands:</div><div class="line">{</div><div class="line">    led = myTools:/bin/led  <span class="comment">// When I login via ssh, I can run "led 1 on" to turn on LED 1.</span></div><div class="line">}</div></div><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>When the command runs, it runs with the full privileges of the user that runs it. So, if you login as root and run a command, the command runs as root.</dd></dl>
+<hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

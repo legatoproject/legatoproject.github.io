@@ -1,0 +1,722 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>le_avc_interface.h File Reference - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Reference.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a href="build_apps_documentation.html">Documentation</a><a class="link-selected" href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="summary">
+<a href="#typedef-members">Typedefs</a> |
+<a href="#enum-members">Enumerations</a> |
+<a href="#func-members">Functions</a> </div>
+<div class="headertitle">
+<h1 class="title">le_avc_interface.h File Reference</h1> </div>
+</div><div class="contents">
+<div class="textblock"><code>#include "<a class="el" href="legato_8h_source.html">legato.h</a>"</code><br />
+<code>#include "<a class="el" href="le__limit__interface_8h_source.html">le_limit_interface.h</a>"</code><br />
+</div>
+<p><a href="le__avc__interface_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:aa4848ef1adefe1f273d67d4211233a1f"><td align="right" class="memItemLeft" valign="top">typedef struct le_avc_StatusEventHandler * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__avc__interface_8h.html#aa4848ef1adefe1f273d67d4211233a1f">le_avc_StatusEventHandlerRef_t</a></td></tr>
+<tr class="separator:aa4848ef1adefe1f273d67d4211233a1f"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:af331b7d2433e312ee2b6fde1c93c2979"><td align="right" class="memItemLeft" valign="top">typedef struct le_avc_BlockRequest * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__avc__interface_8h.html#af331b7d2433e312ee2b6fde1c93c2979">le_avc_BlockRequestRef_t</a></td></tr>
+<tr class="separator:af331b7d2433e312ee2b6fde1c93c2979"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aafeac33fdfce140b8bf33683cd7d9d18"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__avc__interface_8h.html#aafeac33fdfce140b8bf33683cd7d9d18">le_avc_StatusHandlerFunc_t</a>) (<a class="el" href="le__avc__interface_8h.html#ae45dee5277c9340c8bb083a09ef30cff">le_avc_Status_t</a> updateStatus, int32_t totalNumBytes, int32_t dloadProgress, void *contextPtr)</td></tr>
+<tr class="separator:aafeac33fdfce140b8bf33683cd7d9d18"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ae45dee5277c9340c8bb083a09ef30cff"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__avc__interface_8h.html#ae45dee5277c9340c8bb083a09ef30cff">le_avc_Status_t</a> { <br />
+  <a class="el" href="le__avc__interface_8h.html#ae45dee5277c9340c8bb083a09ef30cffa1f3c54330817d9ea3f0f2d921f6aaa61">LE_AVC_NO_UPDATE</a>, 
+<a class="el" href="le__avc__interface_8h.html#ae45dee5277c9340c8bb083a09ef30cffa466215ed9308f7ffa06280ea9b11342a">LE_AVC_DOWNLOAD_PENDING</a>, 
+<a class="el" href="le__avc__interface_8h.html#ae45dee5277c9340c8bb083a09ef30cffaf0d46a35a5e0308c40c238611a793b34">LE_AVC_DOWNLOAD_IN_PROGRESS</a>, 
+<a class="el" href="le__avc__interface_8h.html#ae45dee5277c9340c8bb083a09ef30cffa13cafab97db914a705923e0fb3d0b864">LE_AVC_DOWNLOAD_COMPLETE</a>, 
+<br />
+  <a class="el" href="le__avc__interface_8h.html#ae45dee5277c9340c8bb083a09ef30cffa1d002c2c2b3344f3ca252e34557bd0c1">LE_AVC_DOWNLOAD_FAILED</a>, 
+<a class="el" href="le__avc__interface_8h.html#ae45dee5277c9340c8bb083a09ef30cffa8e8517a1f269a3c24b133e070f41c182">LE_AVC_INSTALL_PENDING</a>, 
+<a class="el" href="le__avc__interface_8h.html#ae45dee5277c9340c8bb083a09ef30cffaed27813e7aa84f9f853f17bf36ca5bf3">LE_AVC_INSTALL_IN_PROGRESS</a>, 
+<a class="el" href="le__avc__interface_8h.html#ae45dee5277c9340c8bb083a09ef30cffa0730c0add28d8e0adc992d5259052b8d">LE_AVC_INSTALL_COMPLETE</a>, 
+<br />
+  <a class="el" href="le__avc__interface_8h.html#ae45dee5277c9340c8bb083a09ef30cffa804a229abe688cbe91e65fd8cfa532e8">LE_AVC_INSTALL_FAILED</a>, 
+<a class="el" href="le__avc__interface_8h.html#ae45dee5277c9340c8bb083a09ef30cffa1bf857f3a557baf4a34ae184e88a1510">LE_AVC_UNINSTALL_PENDING</a>, 
+<a class="el" href="le__avc__interface_8h.html#ae45dee5277c9340c8bb083a09ef30cffa339bce11b1eed576f74107514d4ad7be">LE_AVC_UNINSTALL_IN_PROGRESS</a>, 
+<a class="el" href="le__avc__interface_8h.html#ae45dee5277c9340c8bb083a09ef30cffa2fdeb6f0e01f90750212a97a3b2bbbb8">LE_AVC_UNINSTALL_COMPLETE</a>, 
+<br />
+  <a class="el" href="le__avc__interface_8h.html#ae45dee5277c9340c8bb083a09ef30cffa2534439c4b73ec8cb8816b7241bed15b">LE_AVC_UNINSTALL_FAILED</a>, 
+<a class="el" href="le__avc__interface_8h.html#ae45dee5277c9340c8bb083a09ef30cffafbb67dce39511535897ad23f847cafc1">LE_AVC_SESSION_STARTED</a>, 
+<a class="el" href="le__avc__interface_8h.html#ae45dee5277c9340c8bb083a09ef30cffae8f54bfa941cac982ce845cb0b682ab0">LE_AVC_SESSION_STOPPED</a>
+<br />
+ }</td></tr>
+<tr class="separator:ae45dee5277c9340c8bb083a09ef30cff"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:af541450f0cbf512f28be786d79a61865"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__avc__interface_8h.html#af541450f0cbf512f28be786d79a61865">le_avc_UpdateType_t</a> { <b>LE_AVC_UNKNOWN_UPDATE</b>, 
+<b>LE_AVC_FIRMWARE_UPDATE</b>, 
+<b>LE_AVC_FRAMEWORK_UPDATE</b>, 
+<b>LE_AVC_APPLICATION_UPDATE</b>
+ }</td></tr>
+<tr class="separator:af541450f0cbf512f28be786d79a61865"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a9c0a79ba754f64f270821246337c4ce9"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__avc__interface_8h.html#a9c0a79ba754f64f270821246337c4ce9">le_avc_ErrorCode_t</a> { <a class="el" href="le__avc__interface_8h.html#a9c0a79ba754f64f270821246337c4ce9a23af7d0f6e4f880433b8189f6070cea6">LE_AVC_ERR_NONE</a>, 
+<a class="el" href="le__avc__interface_8h.html#a9c0a79ba754f64f270821246337c4ce9a88f3a39f2aa27af2986e31b94febd9ec">LE_AVC_ERR_BAD_PACKAGE</a>, 
+<a class="el" href="le__avc__interface_8h.html#a9c0a79ba754f64f270821246337c4ce9a718608913fcee065e2b7076db63c962f">LE_AVC_ERR_INTERNAL</a>, 
+<a class="el" href="le__avc__interface_8h.html#a9c0a79ba754f64f270821246337c4ce9a891ff0af5c14411c8c9f894212948f5a">LE_AVC_ERR_SECURITY_FAILURE</a>
+ }</td></tr>
+<tr class="separator:a9c0a79ba754f64f270821246337c4ce9"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a65ddf265fb3236f8035fb0c475a23bd7"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__avc__interface_8h.html#a65ddf265fb3236f8035fb0c475a23bd7">le_avc_ConnectService</a> (void)</td></tr>
+<tr class="separator:a65ddf265fb3236f8035fb0c475a23bd7"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ac2b017103029c74d4be4cad63eb9dceb"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__avc__interface_8h.html#ac2b017103029c74d4be4cad63eb9dceb">le_avc_DisconnectService</a> (void)</td></tr>
+<tr class="separator:ac2b017103029c74d4be4cad63eb9dceb"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ac5443791a6e4b8db75342f45fa2f91dc"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__avc__interface_8h.html#aa4848ef1adefe1f273d67d4211233a1f">le_avc_StatusEventHandlerRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__avc__interface_8h.html#ac5443791a6e4b8db75342f45fa2f91dc">le_avc_AddStatusEventHandler</a> (<a class="el" href="le__avc__interface_8h.html#aafeac33fdfce140b8bf33683cd7d9d18">le_avc_StatusHandlerFunc_t</a> handlerPtr, void *contextPtr)</td></tr>
+<tr class="separator:ac5443791a6e4b8db75342f45fa2f91dc"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a11e325085dadb01bbefffd0b899eb207"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__avc__interface_8h.html#a11e325085dadb01bbefffd0b899eb207">le_avc_RemoveStatusEventHandler</a> (<a class="el" href="le__avc__interface_8h.html#aa4848ef1adefe1f273d67d4211233a1f">le_avc_StatusEventHandlerRef_t</a> addHandlerRef)</td></tr>
+<tr class="separator:a11e325085dadb01bbefffd0b899eb207"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aee17b1de43cf946b59a965e6077e7b03"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__avc__interface_8h.html#aee17b1de43cf946b59a965e6077e7b03">le_avc_StartSession</a> (void)</td></tr>
+<tr class="separator:aee17b1de43cf946b59a965e6077e7b03"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a5b3e21858181bb972e982046bced1182"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__avc__interface_8h.html#a5b3e21858181bb972e982046bced1182">le_avc_StopSession</a> (void)</td></tr>
+<tr class="separator:a5b3e21858181bb972e982046bced1182"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a3f7dea04dd1e9c456fe24a5eb98d2592"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__avc__interface_8h.html#a3f7dea04dd1e9c456fe24a5eb98d2592">le_avc_AcceptDownload</a> (void)</td></tr>
+<tr class="separator:a3f7dea04dd1e9c456fe24a5eb98d2592"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a0c50c8ce89e21cbd9d0bfa431389b780"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__avc__interface_8h.html#a0c50c8ce89e21cbd9d0bfa431389b780">le_avc_DeferDownload</a> (uint32_t deferMinutes)</td></tr>
+<tr class="separator:a0c50c8ce89e21cbd9d0bfa431389b780"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ab3ff8076bb7b36ca58efc0ae240efedb"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__avc__interface_8h.html#ab3ff8076bb7b36ca58efc0ae240efedb">le_avc_AcceptInstall</a> (void)</td></tr>
+<tr class="separator:ab3ff8076bb7b36ca58efc0ae240efedb"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a068f714a110bfa4cac179731a17798f3"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__avc__interface_8h.html#a068f714a110bfa4cac179731a17798f3">le_avc_DeferInstall</a> (uint32_t deferMinutes)</td></tr>
+<tr class="separator:a068f714a110bfa4cac179731a17798f3"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aa5b34a29de899b0f333769cd86078e9e"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__avc__interface_8h.html#aa5b34a29de899b0f333769cd86078e9e">le_avc_AcceptUninstall</a> (void)</td></tr>
+<tr class="separator:aa5b34a29de899b0f333769cd86078e9e"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a4da465033b4438cdc75fdba894fd890f"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__avc__interface_8h.html#a4da465033b4438cdc75fdba894fd890f">le_avc_DeferUninstall</a> (uint32_t deferMinutes)</td></tr>
+<tr class="separator:a4da465033b4438cdc75fdba894fd890f"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a1f085c5986e7c473ed70cff32320ce11"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__avc__interface_8h.html#a1f085c5986e7c473ed70cff32320ce11">le_avc_GetUpdateType</a> (<a class="el" href="le__avc__interface_8h.html#af541450f0cbf512f28be786d79a61865">le_avc_UpdateType_t</a> *updateTypePtr)</td></tr>
+<tr class="separator:a1f085c5986e7c473ed70cff32320ce11"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:abf50df00e1df25c4eabfc6b3a004280a"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__avc__interface_8h.html#abf50df00e1df25c4eabfc6b3a004280a">le_avc_GetAppUpdateName</a> (char *updateName, size_t updateNameNumElements)</td></tr>
+<tr class="separator:abf50df00e1df25c4eabfc6b3a004280a"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a4d298bc6d814481205c4db5d24812694"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__avc__interface_8h.html#af331b7d2433e312ee2b6fde1c93c2979">le_avc_BlockRequestRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__avc__interface_8h.html#a4d298bc6d814481205c4db5d24812694">le_avc_BlockInstall</a> (void)</td></tr>
+<tr class="separator:a4d298bc6d814481205c4db5d24812694"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:af5b3dffdd29b7de3288ea1a88c0ecd4e"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__avc__interface_8h.html#af5b3dffdd29b7de3288ea1a88c0ecd4e">le_avc_UnblockInstall</a> (<a class="el" href="le__avc__interface_8h.html#af331b7d2433e312ee2b6fde1c93c2979">le_avc_BlockRequestRef_t</a> blockRef)</td></tr>
+<tr class="separator:af5b3dffdd29b7de3288ea1a88c0ecd4e"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a5c893155e3b5ef0c68405b26b4244f1f"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__avc__interface_8h.html#a9c0a79ba754f64f270821246337c4ce9">le_avc_ErrorCode_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__avc__interface_8h.html#a5c893155e3b5ef0c68405b26b4244f1f">le_avc_GetErrorCode</a> (void)</td></tr>
+<tr class="separator:a5c893155e3b5ef0c68405b26b4244f1f"><td class="memSeparator" colspan="2"> </td></tr>
+</table>
+<a id="details" name="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Legato <a class="el" href="c_le_avc.html">AirVantage Connector</a> include file.</p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div><h2 class="groupheader">Typedef Documentation</h2>
+<a class="anchor" id="af331b7d2433e312ee2b6fde1c93c2979"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef struct le_avc_BlockRequest* <a class="el" href="le__avc__interface_8h.html#af331b7d2433e312ee2b6fde1c93c2979">le_avc_BlockRequestRef_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Reference returned by BlockInstall function and used by UnblockInstall function </p>
+</div>
+</div>
+<a class="anchor" id="aa4848ef1adefe1f273d67d4211233a1f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef struct le_avc_StatusEventHandler* <a class="el" href="le__avc__interface_8h.html#aa4848ef1adefe1f273d67d4211233a1f">le_avc_StatusEventHandlerRef_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Reference type used by Add/Remove functions for EVENT 'le_avc_StatusEvent' </p>
+</div>
+</div>
+<a class="anchor" id="aafeac33fdfce140b8bf33683cd7d9d18"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef void(* le_avc_StatusHandlerFunc_t) (<a class="el" href="le__avc__interface_8h.html#ae45dee5277c9340c8bb083a09ef30cff">le_avc_Status_t</a> updateStatus, int32_t totalNumBytes, int32_t dloadProgress, void *contextPtr)</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Handler for update availability status</p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramname">updateStatus</td><td>status of pending update, if available </td></tr>
+<tr><td class="paramname">totalNumBytes</td><td>Total number of bytes to be downloaded only valid when updateStatus is one of DOWNLOAD_PENDING, DOWNLOAD_IN_PROGRESS or DOWNLOAD_COMPLETE. returns -1 if value is unknown </td></tr>
+<tr><td class="paramname">dloadProgress</td><td>download completion in percentage only valid when updateStatus is one of DOWNLOAD_PENDING, DOWNLOAD_IN_PROGRESS or DOWNLOAD_COMPLETE. returns -1 if value is unknown </td></tr>
+<tr><td class="paramname">contextPtr</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a class="anchor" id="a9c0a79ba754f64f270821246337c4ce9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="le__avc__interface_8h.html#a9c0a79ba754f64f270821246337c4ce9">le_avc_ErrorCode_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Error code used to provide diagnostic information after a failure (includes both download and install failure).</p>
+<dl class="section note"><dt>Note</dt><dd>Additional information may also be available in the target device's system log. </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a9c0a79ba754f64f270821246337c4ce9a23af7d0f6e4f880433b8189f6070cea6"></a>LE_AVC_ERR_NONE </td><td class="fielddoc">
+<p>No error. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a9c0a79ba754f64f270821246337c4ce9a88f3a39f2aa27af2986e31b94febd9ec"></a>LE_AVC_ERR_BAD_PACKAGE </td><td class="fielddoc">
+<p>Encountered a bad package. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a9c0a79ba754f64f270821246337c4ce9a718608913fcee065e2b7076db63c962f"></a>LE_AVC_ERR_INTERNAL </td><td class="fielddoc">
+<p>Something failed while doing install/download. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a9c0a79ba754f64f270821246337c4ce9a891ff0af5c14411c8c9f894212948f5a"></a>LE_AVC_ERR_SECURITY_FAILURE </td><td class="fielddoc">
+<p>Security check failure while installing the package. </p>
+</td></tr>
+</table>
+</div>
+</div>
+<a class="anchor" id="ae45dee5277c9340c8bb083a09ef30cff"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="le__avc__interface_8h.html#ae45dee5277c9340c8bb083a09ef30cff">le_avc_Status_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Status of session or update</p>
+<p>If an update is pending, it must first be downloaded and then installed. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ae45dee5277c9340c8bb083a09ef30cffa1f3c54330817d9ea3f0f2d921f6aaa61"></a>LE_AVC_NO_UPDATE </td><td class="fielddoc">
+<p>No updates pending. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae45dee5277c9340c8bb083a09ef30cffa466215ed9308f7ffa06280ea9b11342a"></a>LE_AVC_DOWNLOAD_PENDING </td><td class="fielddoc">
+<p>Update pending download. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae45dee5277c9340c8bb083a09ef30cffaf0d46a35a5e0308c40c238611a793b34"></a>LE_AVC_DOWNLOAD_IN_PROGRESS </td><td class="fielddoc">
+<p>Download in progress. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae45dee5277c9340c8bb083a09ef30cffa13cafab97db914a705923e0fb3d0b864"></a>LE_AVC_DOWNLOAD_COMPLETE </td><td class="fielddoc">
+<p>Download has completed. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae45dee5277c9340c8bb083a09ef30cffa1d002c2c2b3344f3ca252e34557bd0c1"></a>LE_AVC_DOWNLOAD_FAILED </td><td class="fielddoc">
+<p>An error occurred downloading the update. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae45dee5277c9340c8bb083a09ef30cffa8e8517a1f269a3c24b133e070f41c182"></a>LE_AVC_INSTALL_PENDING </td><td class="fielddoc">
+<p>Install is pending (implies download complete) </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae45dee5277c9340c8bb083a09ef30cffaed27813e7aa84f9f853f17bf36ca5bf3"></a>LE_AVC_INSTALL_IN_PROGRESS </td><td class="fielddoc">
+<p>Install in progress. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae45dee5277c9340c8bb083a09ef30cffa0730c0add28d8e0adc992d5259052b8d"></a>LE_AVC_INSTALL_COMPLETE </td><td class="fielddoc">
+<p>Update has been successfully installed. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae45dee5277c9340c8bb083a09ef30cffa804a229abe688cbe91e65fd8cfa532e8"></a>LE_AVC_INSTALL_FAILED </td><td class="fielddoc">
+<p>An error occurred installing the update. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae45dee5277c9340c8bb083a09ef30cffa1bf857f3a557baf4a34ae184e88a1510"></a>LE_AVC_UNINSTALL_PENDING </td><td class="fielddoc">
+<p>Uninstall is pending. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae45dee5277c9340c8bb083a09ef30cffa339bce11b1eed576f74107514d4ad7be"></a>LE_AVC_UNINSTALL_IN_PROGRESS </td><td class="fielddoc">
+<p>Uninstall in progress. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae45dee5277c9340c8bb083a09ef30cffa2fdeb6f0e01f90750212a97a3b2bbbb8"></a>LE_AVC_UNINSTALL_COMPLETE </td><td class="fielddoc">
+<p>App has been successfully uninstalled. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae45dee5277c9340c8bb083a09ef30cffa2534439c4b73ec8cb8816b7241bed15b"></a>LE_AVC_UNINSTALL_FAILED </td><td class="fielddoc">
+<p>An error occurred uninstalling the update. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae45dee5277c9340c8bb083a09ef30cffafbb67dce39511535897ad23f847cafc1"></a>LE_AVC_SESSION_STARTED </td><td class="fielddoc">
+<p>Session with AV server started. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae45dee5277c9340c8bb083a09ef30cffae8f54bfa941cac982ce845cb0b682ab0"></a>LE_AVC_SESSION_STOPPED </td><td class="fielddoc">
+<p>Session with AV server stopped. </p>
+</td></tr>
+</table>
+</div>
+</div>
+<a class="anchor" id="af541450f0cbf512f28be786d79a61865"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="le__avc__interface_8h.html#af541450f0cbf512f28be786d79a61865">le_avc_UpdateType_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>The type of pending update </p>
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="a3f7dea04dd1e9c456fe24a5eb98d2592"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_avc_AcceptDownload </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Accept the currently pending download</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_FAULT on failure </li>
+</ul>
+</dd></dl>
+</div>
+</div>
+<a class="anchor" id="ab3ff8076bb7b36ca58efc0ae240efedb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_avc_AcceptInstall </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Accept the currently pending install</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_FAULT on failure </li>
+</ul>
+</dd></dl>
+</div>
+</div>
+<a class="anchor" id="aa5b34a29de899b0f333769cd86078e9e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_avc_AcceptUninstall </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Accept the currently pending uninstall</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_FAULT on failure </li>
+</ul>
+</dd></dl>
+</div>
+</div>
+<a class="anchor" id="ac5443791a6e4b8db75342f45fa2f91dc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__avc__interface_8h.html#aa4848ef1adefe1f273d67d4211233a1f">le_avc_StatusEventHandlerRef_t</a> le_avc_AddStatusEventHandler </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__avc__interface_8h.html#aafeac33fdfce140b8bf33683cd7d9d18">le_avc_StatusHandlerFunc_t</a> </td>
+<td class="paramname"><em>handlerPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">void * </td>
+<td class="paramname"><em>contextPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Add handler function for EVENT 'le_avc_StatusEvent'</p>
+<p>This event provides information on update availability status </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">handlerPtr</td><td></td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">contextPtr</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a4d298bc6d814481205c4db5d24812694"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__avc__interface_8h.html#af331b7d2433e312ee2b6fde1c93c2979">le_avc_BlockRequestRef_t</a> le_avc_BlockInstall </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Prevent any pending updates from being installed.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>Reference for block update request (to be used later for unblocking updates)</li>
+<li>NULL if the operation was not successful </li>
+</ul>
+</dd></dl>
+</div>
+</div>
+<a class="anchor" id="a65ddf265fb3236f8035fb0c475a23bd7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_avc_ConnectService </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Connect the current client thread to the service providing this API.</p>
+<p>This function must be called before any other functions in this API. Normally, it's automatically called for the main thread, but must be explicitly called for other threads. For details, see <a class="el" href="api_files_c.html#apiFilesC_client">Client-specific Functions</a>.</p>
+<p>This function is created automatically. </p>
+</div>
+</div>
+<a class="anchor" id="a0c50c8ce89e21cbd9d0bfa431389b780"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_avc_DeferDownload </td>
+<td>(</td>
+<td class="paramtype">uint32_t </td>
+<td class="paramname"><em>deferMinutes</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Defer the currently pending download, for the given number of minutes</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_FAULT on failure </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">deferMinutes</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a068f714a110bfa4cac179731a17798f3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_avc_DeferInstall </td>
+<td>(</td>
+<td class="paramtype">uint32_t </td>
+<td class="paramname"><em>deferMinutes</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Defer the currently pending install</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_FAULT on failure </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">deferMinutes</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a4da465033b4438cdc75fdba894fd890f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_avc_DeferUninstall </td>
+<td>(</td>
+<td class="paramtype">uint32_t </td>
+<td class="paramname"><em>deferMinutes</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Defer the currently pending uninstall</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_FAULT on failure </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">deferMinutes</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ac2b017103029c74d4be4cad63eb9dceb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_avc_DisconnectService </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Disconnect the current client thread from the service providing this API.</p>
+<p>Normally, this function doesn't need to be called. After this function is called, there's no longer a connection to the service, and the functions in this API can't be used. For details, see <a class="el" href="api_files_c.html#apiFilesC_client">Client-specific Functions</a>.</p>
+<p>This function is created automatically. </p>
+</div>
+</div>
+<a class="anchor" id="abf50df00e1df25c4eabfc6b3a004280a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_avc_GetAppUpdateName </td>
+<td>(</td>
+<td class="paramtype">char * </td>
+<td class="paramname"><em>updateName</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>updateNameNumElements</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the name for the currently pending app update</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_FAULT if not available, or isn't APPL_UPDATE type </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[out]</td><td class="paramname">updateName</td><td></td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">updateNameNumElements</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a5c893155e3b5ef0c68405b26b4244f1f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__avc__interface_8h.html#a9c0a79ba754f64f270821246337c4ce9">le_avc_ErrorCode_t</a> le_avc_GetErrorCode </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Function to get error code when update fails.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>Error code of encountered error.</li>
+<li>ERR_NONE if update is in any other state. </li>
+</ul>
+</dd></dl>
+</div>
+</div>
+<a class="anchor" id="a1f085c5986e7c473ed70cff32320ce11"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_avc_GetUpdateType </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__avc__interface_8h.html#af541450f0cbf512f28be786d79a61865">le_avc_UpdateType_t</a> * </td>
+<td class="paramname"><em>updateTypePtr</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the update type of the currently pending update</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_FAULT if not available </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[out]</td><td class="paramname">updateTypePtr</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a11e325085dadb01bbefffd0b899eb207"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_avc_RemoveStatusEventHandler </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__avc__interface_8h.html#aa4848ef1adefe1f273d67d4211233a1f">le_avc_StatusEventHandlerRef_t</a> </td>
+<td class="paramname"><em>addHandlerRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Remove handler function for EVENT 'le_avc_StatusEvent' </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">addHandlerRef</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="aee17b1de43cf946b59a965e6077e7b03"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_avc_StartSession </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Start a session with the AirVantage server</p>
+<p>This will cause a query to be sent to the server, for pending updates. If a download was previously suspended, then this resumes the download.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_FAULT on failure </li>
+</ul>
+</dd></dl>
+</div>
+</div>
+<a class="anchor" id="a5b3e21858181bb972e982046bced1182"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_avc_StopSession </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Stop a session with the AirVantage server</p>
+<p>If a download is in progress, then this suspends the download.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_FAULT on failure </li>
+</ul>
+</dd></dl>
+</div>
+</div>
+<a class="anchor" id="af5b3dffdd29b7de3288ea1a88c0ecd4e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_avc_UnblockInstall </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__avc__interface_8h.html#af331b7d2433e312ee2b6fde1c93c2979">le_avc_BlockRequestRef_t</a> </td>
+<td class="paramname"><em>blockRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Allow any pending updates to be installed </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">blockRef</td><td>block request ref returned by le_avc_BlockInstall </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

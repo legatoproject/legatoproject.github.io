@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>SMS Inbox Service  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">SMS Inbox Service </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p><a class="el" href="le__sms_inbox1__interface_8h.html">API Reference</a></p>
+<hr />
+<p>3rd-party customer applications need to access to SMS messages at anytime without worrying how the resources are managed.</p>
+<p>Legato provides an SMS Inbox service to allow apps to receive SMS messages through their own, private message box, without:</p><ul>
+<li>having to manage SIM or modem memory;</li>
+<li>conflicting with other applications that also receive SMS messages;</li>
+<li>missing messages while being updated or restarted.</li>
+</ul>
+<p>The SMS Inbox Service handles the resource arbitration for the user app: the message reception is always guaranteed, for example the user app doesn't have to worried about freeing space in the SIM (or device's storage area) when it is full.</p>
+<p>In fact, at device's startup or when a SIM is inserted, the SIM content is copied into the "Inbox
+Message Storage" folder allocated in the root file system of the device. Then, the process frees automatically the SIM content. Moreover, every new received SMS message is automatically copied into the "Inbox
+Message Storage" folder and deleted from the SIM. This mechanism keeps the SIM always empty in order to guarantee the reception of SMS messages.</p>
+<p>This process is the same when the SMS message storage is the device's storage area (ME - Mobile Equipment).</p>
+<p>The message box is a persistent storage area. All files are saved into the file system in the directory /mnt/flash/smsInbox.</p>
+<p>The creation of SMS inboxes is done based on the message box configuration settings (cf. <a class="el" href="c_sms_inbox.html#le_smsInbox_configdb">Configuration tree</a> section). This way, the message box contents will be kept up to date automatically by the SMS Inbox Service, even when the user app is slow to start, is stopped while it is being updated, or is being restarted to recover from a fault.</p>
+<p>A message box works as a circular buffer, when the message box is filled, the older messages are deleted to free space for new messages. But, the application can also explicitly delete messages if it doesn't need them anymore.</p>
+<h1><a class="anchor" id="le_smsInbox_binding"></a>
+IPC interfaces binding</h1>
+<p>All the functions of this API are provided by the <b>smsInboxService</b> application service.</p>
+<p>Here's a code sample binding to SMS Inbox services: </p><pre class="fragment">bindings:
+{
+   clientExe.clientComponent.le_smsInbox1 -> smsInboxService.le_smsInbox1
+}
+</pre><dl class="section note"><dt>Note</dt><dd>By default, smsInboxService starts manually. To start it automatically, the user can remove the option from the smsInboxService.adef file.</dd></dl>
+<p>A second message box (named le_smsInbox2) can be used by another application. These 2 message boxes are used independently. All functions of this second message box are prefixed by le_smsInbox2 (instead of le_msmInbox1). The user can implement other message boxes based on le_smsInbox1 and le_smsInbox2 model.</p>
+<h1><a class="anchor" id="le_smsInbox_init"></a>
+Initialise a message box</h1>
+<p>Use the API <a class="el" href="le__sms_inbox1__interface_8h.html#ab5c07622b824f8af32de8a7c6f6aaf53">le_smsInbox1_Open()</a> to open a message box for access.</p>
+<h1><a class="anchor" id="le_smsInbox_receiving"></a>
+Receiving a message</h1>
+<p>To receive messages, register a handler function to obtain incoming messages. Use <a class="el" href="le__sms_inbox1__interface_8h.html#ad1921790ff294865477be5508fc46f87">le_smsInbox1_AddRxMessageHandler()</a> to register that handler.</p>
+<p>The handler must satisfy the following prototype: </p><div class="fragment"><div class="line"><span class="keyword">typedef</span> void (*<a class="code" href="le__sms_inbox1__interface_8h.html#a19b58278c1549e54f5af6ff2542c3458">le_smsInbox1_RxMessageHandlerFunc_t</a>)</div><div class="line">(</div><div class="line">  uint32_t msgId,</div><div class="line"> <span class="keywordtype">void</span>*    contextPtr</div><div class="line">)</div></div><!-- fragment --><p>If a succession of messages is received, a new Message reference is created for each, and the handler is called for each new message.</p>
+<p>Uninstall the handler function by calling <a class="el" href="le__sms_inbox1__interface_8h.html#a58587948e7bf5612bcb38164edfa4fee">le_smsInbox1_RemoveRxMessageHandler()</a>.</p>
+<dl class="section note"><dt>Note</dt><dd><a class="el" href="le__sms_inbox1__interface_8h.html#a58587948e7bf5612bcb38164edfa4fee">le_smsInbox1_RemoveRxMessageHandler()</a> function does not delete the Message Object. The caller has to delete it with <a class="el" href="le__sms_inbox1__interface_8h.html#a2a426505848863678403f5b14c2ce16c">le_smsInbox1_DeleteMsg()</a>.</dd></dl>
+<p>Use the following APIs to retrieve message information and data from the message object:</p><ul>
+<li><a class="el" href="le__sms_inbox1__interface_8h.html#a47b7188457df57060544353824a722e5">le_smsInbox1_GetImsi()</a> - get the IMSI of the message receiver SIM if it applies.</li>
+<li><a class="el" href="le__sms_inbox1__interface_8h.html#a7daf191029452574c2f73be31745ddd5">le_smsInbox1_GetFormat()</a> - determine if it is a binary or a text message.</li>
+<li><a class="el" href="le__sms_inbox1__interface_8h.html#a526785c35a6dcaabaff01b3959b25eb4">le_smsInbox1_GetSenderTel()</a> - get the sender's Telephone number.</li>
+<li><a class="el" href="le__sms_inbox1__interface_8h.html#aea859f08a7d8115d4839a59ce1be987c">le_smsInbox1_GetTimeStamp()</a> - get the timestamp sets by the Service Center.</li>
+<li><a class="el" href="le__sms_inbox1__interface_8h.html#a99ac3b4b8d886a2c797c221a00f01bd6">le_smsInbox1_GetMsgLen()</a> - get the message content length.</li>
+<li><a class="el" href="le__sms_inbox1__interface_8h.html#aa35b73bd6e76889b4ab93e021e14c7a6">le_smsInbox1_GetText()</a> - get the message text.</li>
+<li><a class="el" href="le__sms_inbox1__interface_8h.html#a74a7caad34f457e0c3fb5a741f5089ae">le_smsInbox1_GetBinary()</a> - get the message binary content.</li>
+<li><a class="el" href="le__sms_inbox1__interface_8h.html#ac1f8f65a60e406752394499ee3d60883">le_smsInbox1_GetPdu()</a> - get the PDU message content.</li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>For incoming SMS Inbox, format returned by <a class="el" href="le__sms_inbox1__interface_8h.html#a7daf191029452574c2f73be31745ddd5">le_smsInbox1_GetFormat()</a> is never LE_SMSINBOX1_FORMAT_PDU.</dd></dl>
+<h1><a class="anchor" id="le_smsInbox_listing"></a>
+Getting received messages</h1>
+<p>Call <a class="el" href="le__sms_inbox1__interface_8h.html#ae63652bebbdb65a29212bb7d5636b025">le_smsInbox1_GetFirst()</a> to get the first message from the inbox folder, and then call <a class="el" href="le__sms_inbox1__interface_8h.html#a605986f7e80b0686841e9b3b5e9b2802">le_smsInbox1_GetNext()</a> to get the next message.</p>
+<p>Call <a class="el" href="le__sms_inbox1__interface_8h.html#a9f7be15b8e499a305efdcbed8a009255">le_smsInbox1_IsUnread()</a> to know whether the message has been read or not. The message is marked as "read" when one of those APIs is called: <a class="el" href="le__sms_inbox1__interface_8h.html#a47b7188457df57060544353824a722e5">le_smsInbox1_GetImsi()</a>, <a class="el" href="le__sms_inbox1__interface_8h.html#a7daf191029452574c2f73be31745ddd5">le_smsInbox1_GetFormat()</a>, <a class="el" href="le__sms_inbox1__interface_8h.html#a526785c35a6dcaabaff01b3959b25eb4">le_smsInbox1_GetSenderTel()</a>, <a class="el" href="le__sms_inbox1__interface_8h.html#aea859f08a7d8115d4839a59ce1be987c">le_smsInbox1_GetTimeStamp()</a>, <a class="el" href="le__sms_inbox1__interface_8h.html#a99ac3b4b8d886a2c797c221a00f01bd6">le_smsInbox1_GetMsgLen()</a>, <a class="el" href="le__sms_inbox1__interface_8h.html#aa35b73bd6e76889b4ab93e021e14c7a6">le_smsInbox1_GetText()</a>, <a class="el" href="le__sms_inbox1__interface_8h.html#a74a7caad34f457e0c3fb5a741f5089ae">le_smsInbox1_GetBinary()</a>, <a class="el" href="le__sms_inbox1__interface_8h.html#ac1f8f65a60e406752394499ee3d60883">le_smsInbox1_GetPdu()</a>.</p>
+<p>To finish, you can also modify the received status of a message with <a class="el" href="le__sms_inbox1__interface_8h.html#a19c1e0e3e27a2d44374a1774b582b1ff">le_smsInbox1_MarkRead()</a> and <a class="el" href="le__sms_inbox1__interface_8h.html#a82ad6e7eb4ced962f6205acb87a8f62a">le_smsInbox1_MarkUnread()</a>.</p>
+<dl class="section note"><dt>Note</dt><dd>The message status is tied to the client app.</dd></dl>
+<h1><a class="anchor" id="le_smsInbox1_deleting"></a>
+Deleting a message</h1>
+<p><a class="el" href="le__sms_inbox1__interface_8h.html#a2a426505848863678403f5b14c2ce16c">le_smsInbox1_DeleteMsg()</a> deletes the message from the folder. Message is identified with le_smsInbox1_MsgRef_t object. The function returns an error if the message is not found.</p>
+<h1><a class="anchor" id="le_smsInbox_end"></a>
+Close a message box</h1>
+<p>Use the API <a class="el" href="le__sms_inbox1__interface_8h.html#a2c3b0118016949b77df6bab31c3a986e">le_smsInbox1_Close()</a> to close a message box (the message box is still exist and can be re-opened and retrieve later all the messages).</p>
+<h1><a class="anchor" id="le_smsInbox_configdb"></a>
+Configuration tree</h1>
+<p>The configuration database path for the SMS Inbox Service is: </p><pre class="fragment">/
+    smsInbox/
+        apps/
+            appA<uint> = <# of messages>
+            appB<uint> = <# of messages>
+</pre><p>Each app have its own inbox, containing its own list of messages. The maximum number of messages is specified for each inbox. If the message box is not configured, a default number of 10 messages is applied (only for message boxes configured in le_smsInbox_mboxName[] area).</p>
+<p>The application name is given by the API name provided into the Components.cdef, both must be the same.</p>
+<hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Modem Call Control  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">Modem Call Control </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p><a class="el" href="le__mcc__interface_8h.html">API Reference</a></p>
+<hr />
+<p>The Modem Call Control (mcc) API functions of this API are provided by the <b>modemService</b> service.</p>
+<h1><a class="anchor" id="le_mcc_binding"></a>
+IPC interfaces binding</h1>
+<p>Here's a code sample binding to modem services: </p><pre class="fragment">bindings:
+{
+   clientExe.clientComponent.le_mcc -> modemService.le_mcc
+}
+</pre><h1><a class="anchor" id="le_mcc_starting_a_call"></a>
+Starting a Call</h1>
+<p>To initiate a call, create a new call object with a destination telephone number calling the <a class="el" href="le__mcc__interface_8h.html#aeee65430506230b5744701d08ff8dac4">le_mcc_Create()</a> function.</p>
+<p><a class="el" href="le__mcc__interface_8h.html#a72a32869bb23864b3e86c606368bed70">le_mcc_Start()</a> must still initiate the call when ready.</p>
+<p>The <a class="el" href="le__mcc__interface_8h.html#a72a32869bb23864b3e86c606368bed70">le_mcc_Start()</a> function initiates a call attempt (it's asynchronous because it can take time for a call to connect). If function failed, the <a class="el" href="le__mcc__interface_8h.html#ab16921abc02e0569b129f4a7d92bf3c9">le_mcc_GetTerminationReason()</a> API can be used to retrieve the terminal reason.</p>
+<p>It's essential to register a handler function to get the call events. Use <a class="el" href="le__mcc__interface_8h.html#ab826cf4b9e3911e659a90d483081e7fe">le_mcc_AddCallEventHandler()</a> API to install that handler function. The handler will be called for all calls' events (incoming and outgoing).</p>
+<p>The <a class="el" href="le__mcc__interface_8h.html#a8a12dc6f1707cf52818d9c2d8281630c">le_mcc_RemoveCallEventHandler()</a> API uninstalls the handler function.</p>
+<p>The following APIs can be used to manage incoming or outgoing calls:</p><ul>
+<li><a class="el" href="le__mcc__interface_8h.html#ab16921abc02e0569b129f4a7d92bf3c9">le_mcc_GetTerminationReason()</a> - termination reason.</li>
+<li><a class="el" href="le__mcc__interface_8h.html#a68b9b8ed1b221924dcea1be0fd610a54">le_mcc_GetPlatformSpecificTerminationCode()</a> - the platform specific termination code (refer to your platform documentation for further details).</li>
+<li><a class="el" href="le__mcc__interface_8h.html#a07e4856dffdbf887f51879e39ec43e42">le_mcc_IsConnected()</a> - connection status.</li>
+<li><a class="el" href="le__mcc__interface_8h.html#aeae32829e9a5fa864167df3ee67d0f41">le_mcc_GetRemoteTel()</a> - displays remote party telephone number associated with the call.</li>
+<li><a class="el" href="le__mcc__interface_8h.html#a7b9567715a3cd30c83a3b6886eeb2044">le_mcc_HangUp()</a> will disconnect this call.</li>
+</ul>
+<p>When finished with the call object, call <a class="el" href="le__mcc__interface_8h.html#a1a016e6443df2d3ee99113649f4f34ae">le_mcc_Delete()</a> to free all the allocated resources associated with the object.</p>
+<p>Multi-threading/multi-application behaviour: the callRef is linked to a specific client (i.e. connection with the mcc service). Each client will have its own callRef for a same call. That is, if a call event handler is registered by one thread but <a class="el" href="le__mcc__interface_8h.html#aeee65430506230b5744701d08ff8dac4">le_mcc_Create()</a> is called by another thread, they will each get different call references for the same call. So, when multiple threads are being used to work with the same call, a comparison of the call references themselves can't be used to tell whether or not they refer to the same call.</p>
+<h1><a class="anchor" id="le_mcc_answering_a_call"></a>
+Answering a call</h1>
+<p>Receiving calls is similar sending calls. Add a handler through <a class="el" href="le__mcc__interface_8h.html#ab826cf4b9e3911e659a90d483081e7fe">le_mcc_AddCallEventHandler()</a> to be notified of incoming calls.</p>
+<p>To answer, call <a class="el" href="le__mcc__interface_8h.html#a598349c6ccfa151dbd1d2f2a9c293ca4">le_mcc_Answer()</a>. To reject it, call <a class="el" href="le__mcc__interface_8h.html#a7b9567715a3cd30c83a3b6886eeb2044">le_mcc_HangUp()</a>.</p>
+<h1><a class="anchor" id="le_mcc_ending_all_call"></a>
+Ending all calls</h1>
+<p>A special function can be used to hang-up all the ongoing calls: <a class="el" href="le__mcc__interface_8h.html#a38ac8543a579ecc81430c121a64bd346">le_mcc_HangUpAll()</a>. This function can be used to hang-up any calls that have been initiated through another client like AT commands.</p>
+<h1><a class="anchor" id="le_mcc_ss"></a>
+Supplementary service.</h1>
+<p>Calling Line Identification Restriction (CLIR) can be activated or deactivated by le_mcc_SetCallerIdRestrict API. The status is independent for each call object reference. Status can be read with the <a class="el" href="le__mcc__interface_8h.html#a54093f7d51cae9a186a97aa799ac3ddc">le_mcc_GetCallerIdRestrict()</a> API. Default value is LE_OFF (Enable presentation of own phone number to remote).</p>
+<p>Call waiting and call hold are not yet managed. The event Le_MCC_EVENT_WAITING warns the application for an incoming call, but there's no way to put the current call in hold.</p>
+<h1><a class="anchor" id="le_mcc_samples"></a>
+Sample codes</h1>
+<p>A sample code that implements a dialing call can be found in <b>le_mccTest.c</b> file (please refer to <a class="el" href="c_mcc_test.html">Sample code of Modem Call control</a> page).</p>
+<hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

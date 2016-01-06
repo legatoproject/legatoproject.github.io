@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Port Legacy C App  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">Port Legacy C App </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p>This topic describes how to get a POSIX/Linux legacy app written in C running on a Legato device and using Legato APIs to access services like SMS, SIM, voice calling, and data connections.</p>
+<dl class="section note"><dt>Note</dt><dd>The examples in this topic all use the command-line tools, so you will need to have your shell configured correctly by running <code> bin/legs </code> in the directory in which your framework is installed. <div class="fragment"><div class="line">$ path/to/LegatoFramework/bin/legs</div></div><!-- fragment --></dd>
+<dd>
+These examples assume you are using a Sierra Wireless WP85xx device. If you're using another device, substitute that device wherever you see "WP85" or "wp85".</dd></dl>
+<h1><a class="anchor" id="howtoPortingLegacyC_CrossBuild"></a>
+Cross-Build</h1>
+<p>The most basic way to get your legacy app running on a Legato target device is to recompile it using the provided cross-build tool chain and copy it onto the device using a tool like <code>scp</code>.</p>
+<p><code>1</code>. Build a legacy app executable for your target device using the cross tool chain provided.</p>
+<div class="fragment"><div class="line">$ $WP85_TOOLCHAIN_DIR/arm-poky-linux-gnueabi-gcc -o legacyProgram main.c</div></div><!-- fragment --><p><code>2</code>. Copy the legacy app executable onto the target using a tool like <code>scp:</code> </p>
+<div class="fragment"><div class="line">$ scp legacyProgram 192.168.1.2:</div><div class="line"></div><div class="line">legacyProgram                100% 9366     9.2KB/s   00:00</div></div><!-- fragment --><p><code>3</code>. Run the legacy app from the target command-line:</p>
+<div class="fragment"><div class="line">root@swi-mdm9x15:~# ./legacyProgram</div><div class="line">Hello world.</div></div><!-- fragment --><h1><a class="anchor" id="howtoPortingLegacyC_UseLegatoAppManagementTools"></a>
+Use Legato App Management Tools</h1>
+<p>By bundling your program as a Legato app, you gain access to a wealth of valuable features:</p><ul>
+<li>Tools for installing and removing apps and checking app status on the target and on the development host.</li>
+<li>Remote (over-the-air) installation, upgrade, removal, start, stop.</li>
+<li>Autonomous fault recovery (automatic restart of process, whole app, or whole device) in the field.</li>
+<li>Automatic mandatory access control (MAC) configuration.</li>
+<li>Optional application sandboxing.</li>
+<li>Optional application signing and/or encryption.</li>
+</ul>
+<p><code>1</code>. Create a <code> .adef </code> file (e.g., <code>legacyProgram.adef</code>) that bundles the cross-compiled executable into an application:</p>
+<div class="fragment"><div class="line"><span class="comment">// Disable the sandbox security to make things a little easier.</span></div><div class="line">sandboxed: <span class="keyword">false</span></div><div class="line"></div><div class="line"><span class="comment">// Put the cross-compiled legacy program in the app's bin directory.</span></div><div class="line"><span class="comment">// [x] = make it executable.</span></div><div class="line">bundles:</div><div class="line">{</div><div class="line">    file:</div><div class="line">    {</div><div class="line">        [x] legacyProgram /bin/</div><div class="line">    }</div><div class="line">}</div><div class="line"></div><div class="line"><span class="comment">// Tell the Supervisor to start this program when the application is started.</span></div><div class="line">processes:</div><div class="line">{</div><div class="line">    run:</div><div class="line">    {</div><div class="line">        ( legacyProgram )</div><div class="line">    }</div><div class="line">}</div></div><!-- fragment --><p><code>2</code>. Run <code>mkapp</code> to generate an application bundle for your target:</p>
+<div class="fragment"><div class="line">$ mkapp -t wp85 legacyProgram.adef</div></div><!-- fragment --><p><code>3</code>. Install the app bundle on the target using <code>instapp:</code> </p>
+<div class="fragment"><div class="line">$ instapp legacyProgram.wp85.update</div><div class="line">Installing application <span class="stringliteral">'legacyProgram'</span> from file <span class="stringliteral">'legacyProgram.wp85'</span>.</div><div class="line">Installing app <span class="stringliteral">'legacyProgram'</span>...</div><div class="line">Created user <span class="stringliteral">'applegacyProgram'</span> (uid 1011, gid 1011).</div><div class="line">DONE</div></div><!-- fragment --><p><code>4</code>. From the target's command line, use <code>app start</code> to run the program:</p>
+<div class="fragment"><div class="line">$ ssh root@192.168.1.2</div><div class="line">Linux swi-mdm9x15 3.4.91-8fcd3d08ac_7e84772e18 #1 PREEMPT Wed Jun 3 23:59:46 PDT 2015 armv7l GNU/Linux</div><div class="line">root@swi-mdm9x15:~# app start legacyProgram</div><div class="line">Starting app <span class="stringliteral">'legacyProgram'</span>...</div><div class="line">DONE</div></div><!-- fragment --><p><code>5</code>. Look for the program output in the target device's log using <code>logread</code>.</p>
+<dl class="section note"><dt>Note</dt><dd>You can filter the log to show just your program's output by piping the output from <code>logread</code> into <code>grep</code>.</dd></dl>
+<div class="fragment"><div class="line">root@swi-mdm9x15:~# logread | grep legacyProgram</div><div class="line">Jan 16 04:00:53 swi-mdm9x15 user.info Legato:  INFO | legacyProgram[27271] | Hello world.</div></div><!-- fragment --><h1><a class="anchor" id="howtoPortingLegacyC_useLegatoSvcs"></a>
+Use Legato Services</h1>
+<p>Many Legato services are provided through IPC-based APIs. The <code>ifgen</code> tool can generate the IPC code for you, along with a header (.h) file that you can <code>#include</code> to gain access to the service.</p>
+<p>Here is how to use a Legato modem service API (e.g., le_info). The source code for this example can be found in <code>apps/sample/legacy/useLegatoApi/</code>.</p>
+<p><code>1</code>. Run <code>ifgen</code> to generate the .c and .h files you need to access the interface.</p>
+<ul>
+<li>Use the <code>–gen-interface</code> option to generate the interface header (<code><a class="el" href="le__info__interface_8h.html">le_info_interface.h</a></code>).</li>
+<li>Use the <code>–gen-client</code> option to generate the client-side IPC implementation (<code>le_info_client.c</code>).</li>
+<li>Use the <code>–gen-local</code> option to generate definitions that are shared by both the client side and server side IPC code (<code>le_info_messages.h</code>).</li>
+</ul>
+<pre class="fragment">ifgen --gen-interface --gen-client --gen-local $LEGATO_ROOT/interfaces/modemServices/le_info.api
+</pre><p><code>2</code>. Include <code><a class="el" href="legato_8h.html">legato.h</a></code> in your program.</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include "<a class="code" href="legato_8h.html">legato.h</a>"</span></div></div><!-- fragment --><p><code>3</code>. Include the API's generated "interface" header file.</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include "<a class="code" href="le__info__interface_8h.html">le_info_interface.h</a>"</span></div></div><!-- fragment --><p><code>4</code>. Connect to the service by calling <a class="el" href="le__info__interface_8h.html#ae1a4655ecfee5f91a69c772d204b569d">le_info_ConnectService()</a> (using legacy main function).</p>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv)</div><div class="line">{</div><div class="line"> <a class="code" href="le__info__interface_8h.html#ae1a4655ecfee5f91a69c772d204b569d">le_info_ConnectService</a>();</div><div class="line"></div><div class="line"> <span class="keywordflow">return</span> EXIT_SUCCESS;</div><div class="line">}</div></div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>At runtime, if the <code>le_info</code> service isn't available, this will block until it becomes available. In the meantime, you'll see your app in the WAITING CLIENTS list if you run <a class="el" href="tools_target_sdir.html">sdir list</a>.</dd></dl>
+<p><code>5</code>. Add a call to one of the <code>le_info</code> API functions (e.g., <a class="el" href="le__info__interface_8h.html#a4cd7a99fddb014e25880e6354b1d02f8">le_info_GetDeviceModel()</a> ).</p>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv)</div><div class="line">{</div><div class="line"> <a class="code" href="le__info__interface_8h.html#ae1a4655ecfee5f91a69c772d204b569d">le_info_ConnectService</a>();</div><div class="line"></div><div class="line"> <span class="keywordtype">char</span> deviceModelStr[256];</div><div class="line"></div><div class="line"> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> result = <a class="code" href="le__info__interface_8h.html#a4cd7a99fddb014e25880e6354b1d02f8">le_info_GetDeviceModel</a>(deviceModelStr, <span class="keyword">sizeof</span>(deviceModelStr));</div><div class="line"></div><div class="line"> <span class="keywordflow">if</span> (result == LE_OK)</div><div class="line">    {</div><div class="line">        printf(<span class="stringliteral">"Hello world from %s.\n"</span>, deviceModelStr);</div><div class="line">    }</div><div class="line"> <span class="keywordflow">else</span></div><div class="line">    {</div><div class="line">        printf(<span class="stringliteral">"Failed to get device model. Error = '%s'.\n"</span>, <a class="code" href="le__log_8h.html#a99402d6a983f318e5b8bfcdf5dfe9024">LE_RESULT_TXT</a>(result));</div><div class="line">    }</div><div class="line"></div><div class="line"> <span class="keywordflow">return</span> EXIT_SUCCESS;</div><div class="line">}</div></div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>For hand-written C code, you need to use <code>\n</code> to terminate messages as <code>stdout</code> only displays info in the buffer after it reaches a new line.</dd></dl>
+<p><code>6</code>. Compile and link your executable with the code generated by <code>ifgen:</code> </p><div class="fragment"><div class="line">$ export CC=$WP85_TOOLCHAIN_DIR/arm-poky-linux-gnueabi-gcc</div><div class="line">$ $CC -c main.c -I$LEGATO_ROOT/framework/c/inc</div><div class="line">$ $CC -c le_info_client.c -I$LEGATO_ROOT/framework/c/inc</div><div class="line">$ $CC -o legacyProgram main.o le_info_client.o -L${LEGATO_ROOT}/build/${TARGET}/bin/lib -llegato -lpthread -lrt</div></div><!-- fragment --><p><code>7</code>. Specify which instance of the <code>le_info</code> service your app should use by creating a binding in the <code> .adef </code> file:</p>
+<div class="fragment"><div class="line">bindings:</div><div class="line">{</div><div class="line">     .le_info -> modemService.le_info</div><div class="line">}</div></div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>Actually, there's only one instance of <code>le_info</code> today, but if there were multiple, this would specify which one to use; and even when there's only one instance, we create a binding anyway to explicitly grant access permission so access is never unknowingly granted.</dd></dl>
+<p><code>9</code>. Re-generate your application bundle, install it, and run it on target:</p>
+<div class="fragment"><div class="line">$ mkapp -t wp85 legacyProgram.adef</div><div class="line">$ instapp legacyProgram.update.wp85 192.168.1.2</div><div class="line">Installing application <span class="stringliteral">'legacyProgram'</span> from file <span class="stringliteral">'legacyProgram.wp85'</span>.</div><div class="line">Removing app <span class="stringliteral">'legacyProgram'</span>...</div><div class="line">Deleted user <span class="stringliteral">'applegacyProgram'</span>.</div><div class="line">Installing app <span class="stringliteral">'legacyProgram'</span>...</div><div class="line">Created user <span class="stringliteral">'applegacyProgram'</span> (uid 1011, gid 1011).</div><div class="line">DONE</div><div class="line">$ startapp legacyProgram 192.168.1.2</div></div><!-- fragment --><h1><a class="anchor" id="howtoPortingLegacyC_handlers"></a>
+Callbacks from Legato APIs</h1>
+<p>If you need asynchronous callbacks (i.e., handlers), you'll need to service the Legato event loop for your thread. To do this, use <a class="el" href="le__event_loop_8h.html#a12ce7f92f4bc6f5167d5a6ef86d7d0b1">le_event_GetFd()</a> and <a class="el" href="le__event_loop_8h.html#a096222e98f6a0d92a79722018a752b58">le_event_ServiceLoop()</a>. See <a class="el" href="c_event_loop.html#c_event_integratingLegacyPosix">Integrating with Legacy POSIX Code</a> for more details.</p>
+<p>The sample app for this is found in <code>apps/sample/legacy/useLegatoHandler</code>.</p>
+<p>Here's some sample code:</p>
+<div class="fragment"><div class="line"><span class="keyword">struct </span>pollfd pollControl;</div><div class="line">pollControl.fd = <a class="code" href="le__event_loop_8h.html#a12ce7f92f4bc6f5167d5a6ef86d7d0b1">le_event_GetFd</a>();</div><div class="line">pollControl.events = POLLIN;</div><div class="line"></div><div class="line"><span class="keywordflow">while</span> (<span class="keyword">true</span>)</div><div class="line">{</div><div class="line"> <span class="keywordtype">int</span> result = poll(&pollControl, 1, -1);</div><div class="line"></div><div class="line"> <span class="keywordflow">if</span> (result > 0)</div><div class="line">    {</div><div class="line"> <span class="keywordflow">while</span> (<a class="code" href="le__event_loop_8h.html#a096222e98f6a0d92a79722018a752b58">le_event_ServiceLoop</a>() == LE_OK)</div><div class="line">        {</div><div class="line"> <span class="comment">/* Work was done by le_event_ServiceLoop(), and it has more to do.  */</span></div><div class="line">        }</div><div class="line">    }</div><div class="line"> <span class="keywordflow">else</span></div><div class="line">    {</div><div class="line"> <span class="comment">// Poll failed.  You could check for zero if you're ultra paranoid,</span></div><div class="line"> <span class="comment">// but poll should never return zero when timeout is -1.</span></div><div class="line"> <a class="code" href="le__log_8h.html#a54b4b07f5396e19a8d9fca74238f4795">LE_FATAL</a>(<span class="stringliteral">"poll() failed with errno %m."</span>);</div><div class="line">    }</div><div class="line">}</div></div><!-- fragment --><h1><a class="anchor" id="howtoPortingLegacyC_sandboxing"></a>
+Sandboxing Your App</h1>
+<p>To tell the Supervisor to run your app inside a sandbox, remove the following line from your app's <code> .adef </code> file:</p>
+<div class="fragment"><div class="line">sandboxed: <span class="keyword">false</span></div></div><!-- fragment --><p>Or, you can change <code>false</code> to <code>true:</code> </p>
+<div class="fragment"><div class="line">sandboxed: <span class="keyword">true</span></div></div><!-- fragment --><p>Then re-bundle your app using <code>mkapp</code>.</p>
+<p>The most commonly-used system libraries, such as <code>libc</code> and <code>libpthread</code>, will be visible inside your app's sandbox by default, but you may now find that your app won't run because some other files are missing from its sandbox.</p>
+<p>Use the <a class="el" href="def_files_adef.html#defFilesAdef_requires">requires: section in the app's .adef file</a> to add things to the sandbox.</p>
+<h1><a class="anchor" id="howtoPortingLegacyC_sampleApps"></a>
+Sample Legacy Apps</h1>
+<p>Sample <a class="el" href="sample_apps_legacy.html">Legacy C</a> apps are available in the <code>Legato/apps/sample/legacy</code> directory.</p>
+<hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

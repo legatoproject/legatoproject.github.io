@@ -1,0 +1,939 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>le_log.h File Reference - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Reference.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a href="build_apps_documentation.html">Documentation</a><a class="link-selected" href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="summary">
+<a href="#define-members">Macros</a> |
+<a href="#enum-members">Enumerations</a> |
+<a href="#func-members">Functions</a> </div>
+<div class="headertitle">
+<h1 class="title">le_log.h File Reference</h1> </div>
+</div><div class="contents">
+<p><a href="le__log_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a3e5304f08cf8d2be855a75a5ce133c2f"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__log_8h.html#a3e5304f08cf8d2be855a75a5ce133c2f">_LE_LOG_MSG</a>(level,  formatString, ...)</td></tr>
+<tr class="separator:a3e5304f08cf8d2be855a75a5ce133c2f"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:af45667acfd1b4bdfdc4433db4947cd9e"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__log_8h.html#af45667acfd1b4bdfdc4433db4947cd9e">LE_DEBUG</a>(formatString, ...)         <a class="el" href="le__log_8h.html#a3e5304f08cf8d2be855a75a5ce133c2f">_LE_LOG_MSG</a>(<a class="el" href="le__log_8h.html#aa3de78c088c398afb23c0b582deabc0aa1a5c0e9f9bcf857faad0cc4187002479">LE_LOG_DEBUG</a>, formatString, ##__VA_ARGS__)</td></tr>
+<tr class="memdesc:af45667acfd1b4bdfdc4433db4947cd9e"><td class="mdescLeft"> </td><td class="mdescRight">Debug message.  <a href="#af45667acfd1b4bdfdc4433db4947cd9e">More...</a><br /></td></tr>
+<tr class="separator:af45667acfd1b4bdfdc4433db4947cd9e"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a4ebab29f40ee8eaaa87205fe3f9aaa13"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__log_8h.html#a4ebab29f40ee8eaaa87205fe3f9aaa13">LE_INFO</a>(formatString, ...)           <a class="el" href="le__log_8h.html#a3e5304f08cf8d2be855a75a5ce133c2f">_LE_LOG_MSG</a>(<a class="el" href="le__log_8h.html#aa3de78c088c398afb23c0b582deabc0aa83ea376539849ee701096fdb022e74b3">LE_LOG_INFO</a>, formatString, ##__VA_ARGS__)</td></tr>
+<tr class="memdesc:a4ebab29f40ee8eaaa87205fe3f9aaa13"><td class="mdescLeft"> </td><td class="mdescRight">Informational message. Normally expected.  <a href="#a4ebab29f40ee8eaaa87205fe3f9aaa13">More...</a><br /></td></tr>
+<tr class="separator:a4ebab29f40ee8eaaa87205fe3f9aaa13"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a6e79fdd28f63d612fee5d9f42fc4df77"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__log_8h.html#a6e79fdd28f63d612fee5d9f42fc4df77">LE_WARN</a>(formatString, ...)           <a class="el" href="le__log_8h.html#a3e5304f08cf8d2be855a75a5ce133c2f">_LE_LOG_MSG</a>(<a class="el" href="le__log_8h.html#aa3de78c088c398afb23c0b582deabc0aae0f565809442f7de555d36f76c36627c">LE_LOG_WARN</a>, formatString, ##__VA_ARGS__)</td></tr>
+<tr class="memdesc:a6e79fdd28f63d612fee5d9f42fc4df77"><td class="mdescLeft"> </td><td class="mdescRight">Warning. Possibly indicates a problem. Should be addressed.  <a href="#a6e79fdd28f63d612fee5d9f42fc4df77">More...</a><br /></td></tr>
+<tr class="separator:a6e79fdd28f63d612fee5d9f42fc4df77"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a3ee3d0451bd7351a6252c9487452d175"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__log_8h.html#a3ee3d0451bd7351a6252c9487452d175">LE_ERROR</a>(formatString, ...)         <a class="el" href="le__log_8h.html#a3e5304f08cf8d2be855a75a5ce133c2f">_LE_LOG_MSG</a>(<a class="el" href="le__log_8h.html#aa3de78c088c398afb23c0b582deabc0aaf1203f512370bfec7a05f8adae13c7d9">LE_LOG_ERR</a>, formatString, ##__VA_ARGS__)</td></tr>
+<tr class="separator:a3ee3d0451bd7351a6252c9487452d175"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:adfddb0272111f192957c0ae6704290dd"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__log_8h.html#adfddb0272111f192957c0ae6704290dd">LE_CRIT</a>(formatString, ...)           <a class="el" href="le__log_8h.html#a3e5304f08cf8d2be855a75a5ce133c2f">_LE_LOG_MSG</a>(<a class="el" href="le__log_8h.html#aa3de78c088c398afb23c0b582deabc0aa298894fe77b90cb9b28f25817a620df8">LE_LOG_CRIT</a>, formatString, ##__VA_ARGS__)</td></tr>
+<tr class="separator:adfddb0272111f192957c0ae6704290dd"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a745705de4e8edd16f2bb476ef3fe16c3"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__log_8h.html#a745705de4e8edd16f2bb476ef3fe16c3">LE_EMERG</a>(formatString, ...)         <a class="el" href="le__log_8h.html#a3e5304f08cf8d2be855a75a5ce133c2f">_LE_LOG_MSG</a>(<a class="el" href="le__log_8h.html#aa3de78c088c398afb23c0b582deabc0aa6843cc8d9fb10d02cad1834b236dd5cb">LE_LOG_EMERG</a>, formatString, ##__VA_ARGS__)</td></tr>
+<tr class="memdesc:a745705de4e8edd16f2bb476ef3fe16c3"><td class="mdescLeft"> </td><td class="mdescRight">Emergency. A fatal error has occurred. A process is being terminated.  <a href="#a745705de4e8edd16f2bb476ef3fe16c3">More...</a><br /></td></tr>
+<tr class="separator:a745705de4e8edd16f2bb476ef3fe16c3"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a4c689f24157ca91e6d39827c967de734"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__log_8h.html#a4c689f24157ca91e6d39827c967de734">LE_DEBUG_IF</a>(condition,  formatString, ...)   if (condition) { <a class="el" href="le__log_8h.html#a3e5304f08cf8d2be855a75a5ce133c2f">_LE_LOG_MSG</a>(<a class="el" href="le__log_8h.html#aa3de78c088c398afb23c0b582deabc0aa1a5c0e9f9bcf857faad0cc4187002479">LE_LOG_DEBUG</a>, formatString, ##__VA_ARGS__); }</td></tr>
+<tr class="separator:a4c689f24157ca91e6d39827c967de734"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ad98222f9a0871cde1893eac589841f17"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__log_8h.html#ad98222f9a0871cde1893eac589841f17">LE_INFO_IF</a>(condition,  formatString, ...)   if (condition) { <a class="el" href="le__log_8h.html#a3e5304f08cf8d2be855a75a5ce133c2f">_LE_LOG_MSG</a>(<a class="el" href="le__log_8h.html#aa3de78c088c398afb23c0b582deabc0aa83ea376539849ee701096fdb022e74b3">LE_LOG_INFO</a>, formatString, ##__VA_ARGS__); }</td></tr>
+<tr class="separator:ad98222f9a0871cde1893eac589841f17"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a8d8f204806cd5fc0455fe3caacf1d251"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__log_8h.html#a8d8f204806cd5fc0455fe3caacf1d251">LE_WARN_IF</a>(condition,  formatString, ...)   if (condition) { <a class="el" href="le__log_8h.html#a3e5304f08cf8d2be855a75a5ce133c2f">_LE_LOG_MSG</a>(<a class="el" href="le__log_8h.html#aa3de78c088c398afb23c0b582deabc0aae0f565809442f7de555d36f76c36627c">LE_LOG_WARN</a>, formatString, ##__VA_ARGS__); }</td></tr>
+<tr class="separator:a8d8f204806cd5fc0455fe3caacf1d251"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aceaf11a11691d6c676e36dd317b38dbd"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__log_8h.html#aceaf11a11691d6c676e36dd317b38dbd">LE_ERROR_IF</a>(condition,  formatString, ...)   if (condition) { <a class="el" href="le__log_8h.html#a3e5304f08cf8d2be855a75a5ce133c2f">_LE_LOG_MSG</a>(<a class="el" href="le__log_8h.html#aa3de78c088c398afb23c0b582deabc0aaf1203f512370bfec7a05f8adae13c7d9">LE_LOG_ERR</a>, formatString, ##__VA_ARGS__); }</td></tr>
+<tr class="separator:aceaf11a11691d6c676e36dd317b38dbd"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ae507036675ece2d77e8e285cf864a6f4"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__log_8h.html#ae507036675ece2d77e8e285cf864a6f4">LE_CRIT_IF</a>(condition,  formatString, ...)   if (condition) { <a class="el" href="le__log_8h.html#a3e5304f08cf8d2be855a75a5ce133c2f">_LE_LOG_MSG</a>(<a class="el" href="le__log_8h.html#aa3de78c088c398afb23c0b582deabc0aa298894fe77b90cb9b28f25817a620df8">LE_LOG_CRIT</a>, formatString, ##__VA_ARGS__); }</td></tr>
+<tr class="separator:ae507036675ece2d77e8e285cf864a6f4"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a5dcf8dc55407a8f41ada2e85ff8131fe"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__log_8h.html#a5dcf8dc55407a8f41ada2e85ff8131fe">LE_EMERG_IF</a>(condition,  formatString, ...)   if (condition) { <a class="el" href="le__log_8h.html#a3e5304f08cf8d2be855a75a5ce133c2f">_LE_LOG_MSG</a>(<a class="el" href="le__log_8h.html#aa3de78c088c398afb23c0b582deabc0aa6843cc8d9fb10d02cad1834b236dd5cb">LE_LOG_EMERG</a>, formatString, ##__VA_ARGS__); }</td></tr>
+<tr class="separator:a5dcf8dc55407a8f41ada2e85ff8131fe"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a54b4b07f5396e19a8d9fca74238f4795"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__log_8h.html#a54b4b07f5396e19a8d9fca74238f4795">LE_FATAL</a>(formatString, ...)   { <a class="el" href="le__log_8h.html#a745705de4e8edd16f2bb476ef3fe16c3">LE_EMERG</a>(formatString, ##__VA_ARGS__); exit(EXIT_FAILURE); }</td></tr>
+<tr class="separator:a54b4b07f5396e19a8d9fca74238f4795"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a7a3e66a87026cc9e57bcb748840ab41b"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__log_8h.html#a7a3e66a87026cc9e57bcb748840ab41b">LE_FATAL_IF</a>(condition,  formatString, ...)   if (condition) { <a class="el" href="le__log_8h.html#a54b4b07f5396e19a8d9fca74238f4795">LE_FATAL</a>(formatString, ##__VA_ARGS__) }</td></tr>
+<tr class="separator:a7a3e66a87026cc9e57bcb748840ab41b"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ac0dbbef91dc0fed449d0092ff0557b39"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__log_8h.html#ac0dbbef91dc0fed449d0092ff0557b39">LE_ASSERT</a>(condition)   if (!(condition)) { <a class="el" href="le__log_8h.html#a54b4b07f5396e19a8d9fca74238f4795">LE_FATAL</a>("Assert Failed: '%s'", #condition) }</td></tr>
+<tr class="separator:ac0dbbef91dc0fed449d0092ff0557b39"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a7cd2daa3d4af1de4d29e0eed95187484"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__log_8h.html#a7cd2daa3d4af1de4d29e0eed95187484">LE_ASSERT_OK</a>(condition)   if ((condition) != <a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86ca5066a4bcec691c6b67843b8f79656422">LE_OK</a>) { <a class="el" href="le__log_8h.html#a54b4b07f5396e19a8d9fca74238f4795">LE_FATAL</a>("Assert Failed: '%s' is not <a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86ca5066a4bcec691c6b67843b8f79656422">LE_OK</a> (0)", #condition) }</td></tr>
+<tr class="separator:a7cd2daa3d4af1de4d29e0eed95187484"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a99402d6a983f318e5b8bfcdf5dfe9024"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__log_8h.html#a99402d6a983f318e5b8bfcdf5dfe9024">LE_RESULT_TXT</a>(v)   <a class="el" href="le__log_8h.html#a9402d78fa0ea7040ec3574b227b639ca">_le_log_GetResultCodeString</a>(v)</td></tr>
+<tr class="separator:a99402d6a983f318e5b8bfcdf5dfe9024"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a0746e2e37585f61ccdf7ce4976909936"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__log_8h.html#a0746e2e37585f61ccdf7ce4976909936">LE_IS_TRACE_ENABLED</a>(traceRef)   (<a class="el" href="le__log_8h.html#a9b0f9fed08a2bc5d6563540e4b3be490">le_log_IsTraceEnabled</a>(traceRef))</td></tr>
+<tr class="separator:a0746e2e37585f61ccdf7ce4976909936"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a07bbbb4095720cff330e87e249ce1252"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__log_8h.html#a07bbbb4095720cff330e87e249ce1252">LE_TRACE</a>(traceRef,  string, ...)              </td></tr>
+<tr class="separator:a07bbbb4095720cff330e87e249ce1252"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:aa3de78c088c398afb23c0b582deabc0a"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__log_8h.html#aa3de78c088c398afb23c0b582deabc0a">le_log_Level_t</a> { <br />
+  <a class="el" href="le__log_8h.html#aa3de78c088c398afb23c0b582deabc0aa1a5c0e9f9bcf857faad0cc4187002479">LE_LOG_DEBUG</a>, 
+<a class="el" href="le__log_8h.html#aa3de78c088c398afb23c0b582deabc0aa83ea376539849ee701096fdb022e74b3">LE_LOG_INFO</a>, 
+<a class="el" href="le__log_8h.html#aa3de78c088c398afb23c0b582deabc0aae0f565809442f7de555d36f76c36627c">LE_LOG_WARN</a>, 
+<a class="el" href="le__log_8h.html#aa3de78c088c398afb23c0b582deabc0aaf1203f512370bfec7a05f8adae13c7d9">LE_LOG_ERR</a>, 
+<br />
+  <a class="el" href="le__log_8h.html#aa3de78c088c398afb23c0b582deabc0aa298894fe77b90cb9b28f25817a620df8">LE_LOG_CRIT</a>, 
+<a class="el" href="le__log_8h.html#aa3de78c088c398afb23c0b582deabc0aa6843cc8d9fb10d02cad1834b236dd5cb">LE_LOG_EMERG</a>
+<br />
+ }</td></tr>
+<tr class="separator:aa3de78c088c398afb23c0b582deabc0a"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a9402d78fa0ea7040ec3574b227b639ca"><td align="right" class="memItemLeft" valign="top">const char * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__log_8h.html#a9402d78fa0ea7040ec3574b227b639ca">_le_log_GetResultCodeString</a> (<a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> resultCode)</td></tr>
+<tr class="memdesc:a9402d78fa0ea7040ec3574b227b639ca"><td class="mdescLeft"> </td><td class="mdescRight">Function that does the real work of translating result codes. See <a class="el" href="le__log_8h.html#a99402d6a983f318e5b8bfcdf5dfe9024">LE_RESULT_TXT</a>.  <a href="#a9402d78fa0ea7040ec3574b227b639ca">More...</a><br /></td></tr>
+<tr class="separator:a9402d78fa0ea7040ec3574b227b639ca"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a6d99d8147bcdcd1ed3848c9fdb72afe5"><td align="right" class="memItemLeft" valign="top">static le_log_TraceRef_t </td><td class="memItemRight" valign="bottom"><a class="el" href="le__log_8h.html#a6d99d8147bcdcd1ed3848c9fdb72afe5">le_log_GetTraceRef</a> (const char *keywordPtr)</td></tr>
+<tr class="separator:a6d99d8147bcdcd1ed3848c9fdb72afe5"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a9b0f9fed08a2bc5d6563540e4b3be490"><td align="right" class="memItemLeft" valign="top">static bool </td><td class="memItemRight" valign="bottom"><a class="el" href="le__log_8h.html#a9b0f9fed08a2bc5d6563540e4b3be490">le_log_IsTraceEnabled</a> (const le_log_TraceRef_t traceRef)</td></tr>
+<tr class="separator:a9b0f9fed08a2bc5d6563540e4b3be490"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a06856e82ef8dc28a964d84db1aeee517"><td align="right" class="memItemLeft" valign="top">static void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__log_8h.html#a06856e82ef8dc28a964d84db1aeee517">le_log_SetFilterLevel</a> (<a class="el" href="le__log_8h.html#aa3de78c088c398afb23c0b582deabc0a">le_log_Level_t</a> level)</td></tr>
+<tr class="separator:a06856e82ef8dc28a964d84db1aeee517"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:abb2a75e476fdc54dbd64c46c4853ab9d"><td align="right" class="memItemLeft" valign="top">static <a class="el" href="le__log_8h.html#aa3de78c088c398afb23c0b582deabc0a">le_log_Level_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__log_8h.html#abb2a75e476fdc54dbd64c46c4853ab9d">le_log_GetFilterLevel</a> (void)</td></tr>
+<tr class="separator:abb2a75e476fdc54dbd64c46c4853ab9d"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a7dfe7c6d02a68b473d94d83ae71ff2b3"><td align="right" class="memItemLeft" valign="top">static void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__log_8h.html#a7dfe7c6d02a68b473d94d83ae71ff2b3">le_log_EnableTrace</a> (const le_log_TraceRef_t traceRef)</td></tr>
+<tr class="separator:a7dfe7c6d02a68b473d94d83ae71ff2b3"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a15495177d8e9bf1fe4603cbc6bade8fc"><td align="right" class="memItemLeft" valign="top">static void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__log_8h.html#a15495177d8e9bf1fe4603cbc6bade8fc">le_log_DisableTrace</a> (const le_log_TraceRef_t traceRef)</td></tr>
+<tr class="separator:a15495177d8e9bf1fe4603cbc6bade8fc"><td class="memSeparator" colspan="2"> </td></tr>
+</table>
+<a id="details" name="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Legato <a class="el" href="c_logging.html">Logging API</a> include file.</p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="a3e5304f08cf8d2be855a75a5ce133c2f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define _LE_LOG_MSG</td>
+<td>(</td>
+<td class="paramtype"> </td>
+<td class="paramname">level, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"> </td>
+<td class="paramname">formatString, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"> </td>
+<td class="paramname"><em>...</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> { \</div><div class="line">        if ((LE_LOG_LEVEL_FILTER_PTR == NULL) || (level >= *LE_LOG_LEVEL_FILTER_PTR)) \</div><div class="line">            _le_log_Send(level, NULL, LE_LOG_SESSION, __FILE__, __func__, __LINE__, \</div><div class="line">                    formatString, ##__VA_ARGS__); \</div><div class="line">    } <span class="keywordflow">while</span>(0)</div></div><!-- fragment --><p>Internal macro to filter out messages that do not meet the current filtering level. </p>
+</div>
+</div>
+<a class="anchor" id="ac0dbbef91dc0fed449d0092ff0557b39"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_ASSERT</td>
+<td>(</td>
+<td class="paramtype"> </td>
+<td class="paramname">condition</td><td>)</td>
+<td>   if (!(condition)) { <a class="el" href="le__log_8h.html#a54b4b07f5396e19a8d9fca74238f4795">LE_FATAL</a>("Assert Failed: '%s'", #condition) }</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This macro does nothing if the condition is true, otherwise it logs the condition expression as a message at EMERGENCY level and then kills the calling process. </p>
+</div>
+</div>
+<a class="anchor" id="a7cd2daa3d4af1de4d29e0eed95187484"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_ASSERT_OK</td>
+<td>(</td>
+<td class="paramtype"> </td>
+<td class="paramname">condition</td><td>)</td>
+<td>   if ((condition) != <a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86ca5066a4bcec691c6b67843b8f79656422">LE_OK</a>) { <a class="el" href="le__log_8h.html#a54b4b07f5396e19a8d9fca74238f4795">LE_FATAL</a>("Assert Failed: '%s' is not <a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86ca5066a4bcec691c6b67843b8f79656422">LE_OK</a> (0)", #condition) }</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This macro does nothing if the condition is LE_OK (0), otherwise it logs that the expression did not evaluate to LE_OK (0) in a message at EMERGENCY level and then kills the calling process. </p>
+</div>
+</div>
+<a class="anchor" id="adfddb0272111f192957c0ae6704290dd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_CRIT</td>
+<td>(</td>
+<td class="paramtype"> </td>
+<td class="paramname">formatString, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"> </td>
+<td class="paramname"><em>...</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td>   <a class="el" href="le__log_8h.html#a3e5304f08cf8d2be855a75a5ce133c2f">_LE_LOG_MSG</a>(<a class="el" href="le__log_8h.html#aa3de78c088c398afb23c0b582deabc0aa298894fe77b90cb9b28f25817a620df8">LE_LOG_CRIT</a>, formatString, ##__VA_ARGS__)</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p></p>
+<p>Critical error. Fault that almost certainly has or will result in a system failure. </p>
+</div>
+</div>
+<a class="anchor" id="ae507036675ece2d77e8e285cf864a6f4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_CRIT_IF</td>
+<td>(</td>
+<td class="paramtype"> </td>
+<td class="paramname">condition, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"> </td>
+<td class="paramname">formatString, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"> </td>
+<td class="paramname"><em>...</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td>   if (condition) { <a class="el" href="le__log_8h.html#a3e5304f08cf8d2be855a75a5ce133c2f">_LE_LOG_MSG</a>(<a class="el" href="le__log_8h.html#aa3de78c088c398afb23c0b582deabc0aa298894fe77b90cb9b28f25817a620df8">LE_LOG_CRIT</a>, formatString, ##__VA_ARGS__); }</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p><a class="el" href="le__log_8h.html#adfddb0272111f192957c0ae6704290dd">LE_CRIT</a> if condition is met. </p>
+</div>
+</div>
+<a class="anchor" id="af45667acfd1b4bdfdc4433db4947cd9e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_DEBUG</td>
+<td>(</td>
+<td class="paramtype"> </td>
+<td class="paramname">formatString, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"> </td>
+<td class="paramname"><em>...</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td>   <a class="el" href="le__log_8h.html#a3e5304f08cf8d2be855a75a5ce133c2f">_LE_LOG_MSG</a>(<a class="el" href="le__log_8h.html#aa3de78c088c398afb23c0b582deabc0aa1a5c0e9f9bcf857faad0cc4187002479">LE_LOG_DEBUG</a>, formatString, ##__VA_ARGS__)</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Debug message. </p>
+</div>
+</div>
+<a class="anchor" id="a4c689f24157ca91e6d39827c967de734"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_DEBUG_IF</td>
+<td>(</td>
+<td class="paramtype"> </td>
+<td class="paramname">condition, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"> </td>
+<td class="paramname">formatString, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"> </td>
+<td class="paramname"><em>...</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td>   if (condition) { <a class="el" href="le__log_8h.html#a3e5304f08cf8d2be855a75a5ce133c2f">_LE_LOG_MSG</a>(<a class="el" href="le__log_8h.html#aa3de78c088c398afb23c0b582deabc0aa1a5c0e9f9bcf857faad0cc4187002479">LE_LOG_DEBUG</a>, formatString, ##__VA_ARGS__); }</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p><a class="el" href="le__log_8h.html#af45667acfd1b4bdfdc4433db4947cd9e">LE_DEBUG</a> if condition is met. </p>
+</div>
+</div>
+<a class="anchor" id="a745705de4e8edd16f2bb476ef3fe16c3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_EMERG</td>
+<td>(</td>
+<td class="paramtype"> </td>
+<td class="paramname">formatString, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"> </td>
+<td class="paramname"><em>...</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td>   <a class="el" href="le__log_8h.html#a3e5304f08cf8d2be855a75a5ce133c2f">_LE_LOG_MSG</a>(<a class="el" href="le__log_8h.html#aa3de78c088c398afb23c0b582deabc0aa6843cc8d9fb10d02cad1834b236dd5cb">LE_LOG_EMERG</a>, formatString, ##__VA_ARGS__)</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Emergency. A fatal error has occurred. A process is being terminated. </p>
+</div>
+</div>
+<a class="anchor" id="a5dcf8dc55407a8f41ada2e85ff8131fe"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_EMERG_IF</td>
+<td>(</td>
+<td class="paramtype"> </td>
+<td class="paramname">condition, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"> </td>
+<td class="paramname">formatString, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"> </td>
+<td class="paramname"><em>...</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td>   if (condition) { <a class="el" href="le__log_8h.html#a3e5304f08cf8d2be855a75a5ce133c2f">_LE_LOG_MSG</a>(<a class="el" href="le__log_8h.html#aa3de78c088c398afb23c0b582deabc0aa6843cc8d9fb10d02cad1834b236dd5cb">LE_LOG_EMERG</a>, formatString, ##__VA_ARGS__); }</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p><a class="el" href="le__log_8h.html#a745705de4e8edd16f2bb476ef3fe16c3">LE_EMERG</a> if condition is met. </p>
+</div>
+</div>
+<a class="anchor" id="a3ee3d0451bd7351a6252c9487452d175"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_ERROR</td>
+<td>(</td>
+<td class="paramtype"> </td>
+<td class="paramname">formatString, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"> </td>
+<td class="paramname"><em>...</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td>   <a class="el" href="le__log_8h.html#a3e5304f08cf8d2be855a75a5ce133c2f">_LE_LOG_MSG</a>(<a class="el" href="le__log_8h.html#aa3de78c088c398afb23c0b582deabc0aaf1203f512370bfec7a05f8adae13c7d9">LE_LOG_ERR</a>, formatString, ##__VA_ARGS__)</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p></p>
+<p>Error. Definitely indicates a fault that needs to be addressed. Possibly resulted in a system failure. </p>
+</div>
+</div>
+<a class="anchor" id="aceaf11a11691d6c676e36dd317b38dbd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_ERROR_IF</td>
+<td>(</td>
+<td class="paramtype"> </td>
+<td class="paramname">condition, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"> </td>
+<td class="paramname">formatString, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"> </td>
+<td class="paramname"><em>...</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td>   if (condition) { <a class="el" href="le__log_8h.html#a3e5304f08cf8d2be855a75a5ce133c2f">_LE_LOG_MSG</a>(<a class="el" href="le__log_8h.html#aa3de78c088c398afb23c0b582deabc0aaf1203f512370bfec7a05f8adae13c7d9">LE_LOG_ERR</a>, formatString, ##__VA_ARGS__); }</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p><a class="el" href="le__log_8h.html#a3ee3d0451bd7351a6252c9487452d175">LE_ERROR</a> if condition is met. </p>
+</div>
+</div>
+<a class="anchor" id="a54b4b07f5396e19a8d9fca74238f4795"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_FATAL</td>
+<td>(</td>
+<td class="paramtype"> </td>
+<td class="paramname">formatString, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"> </td>
+<td class="paramname"><em>...</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td>   { <a class="el" href="le__log_8h.html#a745705de4e8edd16f2bb476ef3fe16c3">LE_EMERG</a>(formatString, ##__VA_ARGS__); exit(EXIT_FAILURE); }</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Log fatal errors by killing the calling process after logging the message at EMERGENCY level. This macro never returns.</p>
+<p>Accepts printf-style arguments, consisting of a format string followed by zero or more parameters to be printed (depending on the contents of the format string). </p>
+</div>
+</div>
+<a class="anchor" id="a7a3e66a87026cc9e57bcb748840ab41b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_FATAL_IF</td>
+<td>(</td>
+<td class="paramtype"> </td>
+<td class="paramname">condition, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"> </td>
+<td class="paramname">formatString, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"> </td>
+<td class="paramname"><em>...</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td>   if (condition) { <a class="el" href="le__log_8h.html#a54b4b07f5396e19a8d9fca74238f4795">LE_FATAL</a>(formatString, ##__VA_ARGS__) }</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This macro does nothing if the condition is false, otherwise it logs the message at EMERGENCY level and then kills the calling process.</p>
+<p>Accepts printf-style arguments, consisting of a format string followed by zero or more parameters to be printed (depending on the contents of the format string). </p>
+</div>
+</div>
+<a class="anchor" id="a4ebab29f40ee8eaaa87205fe3f9aaa13"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_INFO</td>
+<td>(</td>
+<td class="paramtype"> </td>
+<td class="paramname">formatString, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"> </td>
+<td class="paramname"><em>...</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td>   <a class="el" href="le__log_8h.html#a3e5304f08cf8d2be855a75a5ce133c2f">_LE_LOG_MSG</a>(<a class="el" href="le__log_8h.html#aa3de78c088c398afb23c0b582deabc0aa83ea376539849ee701096fdb022e74b3">LE_LOG_INFO</a>, formatString, ##__VA_ARGS__)</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Informational message. Normally expected. </p>
+</div>
+</div>
+<a class="anchor" id="ad98222f9a0871cde1893eac589841f17"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_INFO_IF</td>
+<td>(</td>
+<td class="paramtype"> </td>
+<td class="paramname">condition, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"> </td>
+<td class="paramname">formatString, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"> </td>
+<td class="paramname"><em>...</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td>   if (condition) { <a class="el" href="le__log_8h.html#a3e5304f08cf8d2be855a75a5ce133c2f">_LE_LOG_MSG</a>(<a class="el" href="le__log_8h.html#aa3de78c088c398afb23c0b582deabc0aa83ea376539849ee701096fdb022e74b3">LE_LOG_INFO</a>, formatString, ##__VA_ARGS__); }</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p><a class="el" href="le__log_8h.html#a4ebab29f40ee8eaaa87205fe3f9aaa13">LE_INFO</a> if condition is met. </p>
+</div>
+</div>
+<a class="anchor" id="a0746e2e37585f61ccdf7ce4976909936"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_IS_TRACE_ENABLED</td>
+<td>(</td>
+<td class="paramtype"> </td>
+<td class="paramname">traceRef</td><td>)</td>
+<td>   (<a class="el" href="le__log_8h.html#a9b0f9fed08a2bc5d6563540e4b3be490">le_log_IsTraceEnabled</a>(traceRef))</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Queries whether or not a trace keyword is enabled.</p>
+<dl class="section return"><dt>Returns</dt><dd>true if the keyword is enabled. false otherwise. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a99402d6a983f318e5b8bfcdf5dfe9024"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_RESULT_TXT</td>
+<td>(</td>
+<td class="paramtype"> </td>
+<td class="paramname">v</td><td>)</td>
+<td>   <a class="el" href="le__log_8h.html#a9402d78fa0ea7040ec3574b227b639ca">_le_log_GetResultCodeString</a>(v)</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get a null-terminated, printable string representing an le_result_t value.</p>
+<p>For example, <a class="el" href="le__log_8h.html#a99402d6a983f318e5b8bfcdf5dfe9024">LE_RESULT_TXT(LE_NOT_PERMITTED)</a> would return a pointer to a string containing "LE_NOT_PERMITTED".</p>
+<p>"(unknown)" will be returned if the value given is out of range.</p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to a string constant. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a07bbbb4095720cff330e87e249ce1252"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_TRACE</td>
+<td>(</td>
+<td class="paramtype"> </td>
+<td class="paramname">traceRef, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"> </td>
+<td class="paramname">string, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"> </td>
+<td class="paramname"><em>...</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">if</span> (<a class="code" href="le__log_8h.html#a9b0f9fed08a2bc5d6563540e4b3be490">le_log_IsTraceEnabled</a>(traceRef))    \</div><div class="line">        {                                       \</div><div class="line">            _le_log_Send((<a class="code" href="le__log_8h.html#aa3de78c088c398afb23c0b582deabc0a">le_log_Level_t</a>)-1,    \</div><div class="line">                    traceRef,                   \</div><div class="line">                    LE_LOG_SESSION,             \</div><div class="line">                    __FILE__,                   \</div><div class="line">                    __func__,                   \</div><div class="line">                    __LINE__,                   \</div><div class="line"> <span class="keywordtype">string</span>,                     \</div><div class="line">                    ##__VA_ARGS__);             \</div><div class="line">        }</div><div class="ttc" id="le__log_8h_html_aa3de78c088c398afb23c0b582deabc0a"><div class="ttname"><a href="le__log_8h.html#aa3de78c088c398afb23c0b582deabc0a">le_log_Level_t</a></div><div class="ttdeci">le_log_Level_t</div><div class="ttdef"><b>Definition:</b> le_log.h:381</div></div>
+<div class="ttc" id="le__log_8h_html_a9b0f9fed08a2bc5d6563540e4b3be490"><div class="ttname"><a href="le__log_8h.html#a9b0f9fed08a2bc5d6563540e4b3be490">le_log_IsTraceEnabled</a></div><div class="ttdeci">static bool le_log_IsTraceEnabled(const le_log_TraceRef_t traceRef)</div><div class="ttdef"><b>Definition:</b> le_log.h:646</div></div>
+</div><!-- fragment --><p>Logs the string if the keyword has been enabled by a runtime tool or configuration setting. </p>
+</div>
+</div>
+<a class="anchor" id="a6e79fdd28f63d612fee5d9f42fc4df77"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_WARN</td>
+<td>(</td>
+<td class="paramtype"> </td>
+<td class="paramname">formatString, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"> </td>
+<td class="paramname"><em>...</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td>   <a class="el" href="le__log_8h.html#a3e5304f08cf8d2be855a75a5ce133c2f">_LE_LOG_MSG</a>(<a class="el" href="le__log_8h.html#aa3de78c088c398afb23c0b582deabc0aae0f565809442f7de555d36f76c36627c">LE_LOG_WARN</a>, formatString, ##__VA_ARGS__)</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Warning. Possibly indicates a problem. Should be addressed. </p>
+</div>
+</div>
+<a class="anchor" id="a8d8f204806cd5fc0455fe3caacf1d251"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_WARN_IF</td>
+<td>(</td>
+<td class="paramtype"> </td>
+<td class="paramname">condition, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"> </td>
+<td class="paramname">formatString, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"> </td>
+<td class="paramname"><em>...</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td>   if (condition) { <a class="el" href="le__log_8h.html#a3e5304f08cf8d2be855a75a5ce133c2f">_LE_LOG_MSG</a>(<a class="el" href="le__log_8h.html#aa3de78c088c398afb23c0b582deabc0aae0f565809442f7de555d36f76c36627c">LE_LOG_WARN</a>, formatString, ##__VA_ARGS__); }</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p><a class="el" href="le__log_8h.html#a6e79fdd28f63d612fee5d9f42fc4df77">LE_WARN</a> if condition is met. </p>
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a class="anchor" id="aa3de78c088c398afb23c0b582deabc0a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="le__log_8h.html#aa3de78c088c398afb23c0b582deabc0a">le_log_Level_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Local definitions that should not be used directly. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="aa3de78c088c398afb23c0b582deabc0aa1a5c0e9f9bcf857faad0cc4187002479"></a>LE_LOG_DEBUG </td><td class="fielddoc">
+<p>Debug message. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aa3de78c088c398afb23c0b582deabc0aa83ea376539849ee701096fdb022e74b3"></a>LE_LOG_INFO </td><td class="fielddoc">
+<p>Informational message. Normally expected. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aa3de78c088c398afb23c0b582deabc0aae0f565809442f7de555d36f76c36627c"></a>LE_LOG_WARN </td><td class="fielddoc">
+<p>Warning. Possibly indicates a problem. Should be addressed. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aa3de78c088c398afb23c0b582deabc0aaf1203f512370bfec7a05f8adae13c7d9"></a>LE_LOG_ERR </td><td class="fielddoc">
+<p>Error. Definitely indicates a fault that needs to be addressed. Possibly resulted in a system failure. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aa3de78c088c398afb23c0b582deabc0aa298894fe77b90cb9b28f25817a620df8"></a>LE_LOG_CRIT </td><td class="fielddoc">
+<p>Critical error. Fault that almost certainly has or will result in a system failure. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aa3de78c088c398afb23c0b582deabc0aa6843cc8d9fb10d02cad1834b236dd5cb"></a>LE_LOG_EMERG </td><td class="fielddoc">
+<p>Emergency. A fatal error has occurred. A process is being terminated. </p>
+</td></tr>
+</table>
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="a9402d78fa0ea7040ec3574b227b639ca"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">const char* _le_log_GetResultCodeString </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td>
+<td class="paramname"><em>resultCode</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Function that does the real work of translating result codes. See <a class="el" href="le__log_8h.html#a99402d6a983f318e5b8bfcdf5dfe9024">LE_RESULT_TXT</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">resultCode</td><td>Result code value to be translated. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a15495177d8e9bf1fe4603cbc6bade8fc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+<tr>
+<td class="mlabels-left">
+<table class="memname">
+<tr>
+<td class="memname">static void le_log_DisableTrace </td>
+<td>(</td>
+<td class="paramtype">const le_log_TraceRef_t </td>
+<td class="paramname"><em>traceRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</td>
+<td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span> </td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Disables a trace.</p>
+<dl class="section note"><dt>Note</dt><dd>Normally, this is not necessary, since traces can be enabled at runtime using the log control tool and can be persistently configured. See <a class="el" href="c_logging.html#c_log_controlling">Log Controls</a>. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">traceRef</td><td>Trace reference obtained from <a class="el" href="le__log_8h.html#a6d99d8147bcdcd1ed3848c9fdb72afe5">le_log_GetTraceRef()</a> </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a7dfe7c6d02a68b473d94d83ae71ff2b3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+<tr>
+<td class="mlabels-left">
+<table class="memname">
+<tr>
+<td class="memname">static void le_log_EnableTrace </td>
+<td>(</td>
+<td class="paramtype">const le_log_TraceRef_t </td>
+<td class="paramname"><em>traceRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</td>
+<td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span> </td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Enables a trace.</p>
+<dl class="section note"><dt>Note</dt><dd>Normally, this is not necessary, since traces can be enabled at runtime using the log control tool and can be persistently configured. See <a class="el" href="c_logging.html#c_log_controlling">Log Controls</a>. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">traceRef</td><td>Trace reference obtained from <a class="el" href="le__log_8h.html#a6d99d8147bcdcd1ed3848c9fdb72afe5">le_log_GetTraceRef()</a>. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="abb2a75e476fdc54dbd64c46c4853ab9d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+<tr>
+<td class="mlabels-left">
+<table class="memname">
+<tr>
+<td class="memname">static <a class="el" href="le__log_8h.html#aa3de78c088c398afb23c0b582deabc0a">le_log_Level_t</a> le_log_GetFilterLevel </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</td>
+<td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span> </td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the log filter level for the calling component. </p>
+</div>
+</div>
+<a class="anchor" id="a6d99d8147bcdcd1ed3848c9fdb72afe5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+<tr>
+<td class="mlabels-left">
+<table class="memname">
+<tr>
+<td class="memname">static le_log_TraceRef_t le_log_GetTraceRef </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>keywordPtr</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</td>
+<td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span> </td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Gets a reference to a trace keyword's settings.</p>
+<dl class="section return"><dt>Returns</dt><dd>Trace reference. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">keywordPtr</td><td>Pointer to the keyword string. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a9b0f9fed08a2bc5d6563540e4b3be490"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+<tr>
+<td class="mlabels-left">
+<table class="memname">
+<tr>
+<td class="memname">static bool le_log_IsTraceEnabled </td>
+<td>(</td>
+<td class="paramtype">const le_log_TraceRef_t </td>
+<td class="paramname"><em>traceRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</td>
+<td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span> </td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Determines if a trace is currently enabled.</p>
+<dl class="section return"><dt>Returns</dt><dd>true if enabled, false if not. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">traceRef</td><td>Trace reference obtained from <a class="el" href="le__log_8h.html#a6d99d8147bcdcd1ed3848c9fdb72afe5">le_log_GetTraceRef()</a>. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a06856e82ef8dc28a964d84db1aeee517"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+<tr>
+<td class="mlabels-left">
+<table class="memname">
+<tr>
+<td class="memname">static void le_log_SetFilterLevel </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__log_8h.html#aa3de78c088c398afb23c0b582deabc0a">le_log_Level_t</a> </td>
+<td class="paramname"><em>level</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</td>
+<td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span> </td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the log filter level for the calling component.</p>
+<dl class="section note"><dt>Note</dt><dd>Normally not necessary as the log filter level can be controlled at runtime using the log control tool, and can be persistently configured. See <a class="el" href="c_logging.html#c_log_controlling">Log Controls</a>. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">level</td><td>Log filter level to apply to the current log session. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

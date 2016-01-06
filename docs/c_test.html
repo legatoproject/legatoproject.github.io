@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Unit Testing API  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">Unit Testing API </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p><a class="el" href="le__test_8h.html">API Reference</a></p>
+<hr />
+<p>Unit testing is an important aspect of a quantifiable quality assurance methodology. Although unit testing requires some extra overhead (the writing of the unit tests) during the development process it can provide enormous benefits during the project life cycle.</p>
+<p>One benefit of writing unit tests is that it gets the developer using the interface to the unit they designed. This forces the developer to think about, and hopefully design for, usability of the interface early in the development cycle.</p>
+<p>Another major benefit to unit testing is that it provides a documented and verifiable level of correctness for the designed unit. This allows the developer to refactor the code more aggressively and to quickly verify its correctness. Unit tests can also be used to perform regression testing when adding new features.</p>
+<p>Despite the benefits of unit testing, unit tests are often omitted because of the initial overhead of writing the tests and the complexity of testing frameworks. Legato's Unit Test Framework is simple to use and very flexible and lightweight consisting of some handy macros.</p>
+<h1><a class="anchor" id="c_test_modes"></a>
+Modes of Operation</h1>
+<p>The Legato Test Framework can run in one of two modes: <b>pass through</b> or <b>exit on failure</b>. In <b>pass through</b> mode all tests are run even if some of the tests fail. Failed tests are counted and reported on completion. <b>Exit on failure</b> mode also runs all tests but exits right away if any tests fail.</p>
+<p>Mode selection is done through a command line argument. If the test program is run with the command line argument '-p' or '–pass-through' then <b>pass through</b> mode is selected. If the neither the '-p' or '–pass-through' arguments are present then <b>exit on failure</b> mode is selected.</p>
+<h1><a class="anchor" id="c_test_setup"></a>
+Setting Up the Test Framework</h1>
+<p>To setup the Legato Test Framework, call the <code>LE_TEST_INIT</code> macro, once before any tests are started.</p>
+<h1><a class="anchor" id="c_test_testing"></a>
+Performing Tests</h1>
+<p>To perform tests, call the <code>LE_TEST</code> macro and pass in your test function to LE_TEST as a parameter. The test function must have a bool return type which indicates that the test passed (true) or failed (false).</p>
+<p>For example:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include "<a class="code" href="legato_8h.html">legato.h</a>"</span></div><div class="line"></div><div class="line"><span class="comment">// Returns true if the test passes, otherwise returns false.</span></div><div class="line"><span class="keywordtype">bool</span> Test1(<span class="keywordtype">void</span>)</div><div class="line">{</div><div class="line"> <span class="keywordtype">int</span> expectedValue;</div><div class="line"></div><div class="line"> <span class="comment">// Do some initializations and/or calculations.</span></div><div class="line">    ...</div><div class="line"></div><div class="line"> <span class="comment">// Call one of the unit-under-test's interface function and check it's return value against</span></div><div class="line"> <span class="comment">// an expected value that was calculated earlier.</span></div><div class="line"> <span class="keywordflow">return</span> (unitUnderTest_foo() == expectedValue);</div><div class="line">}</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">// Returns true if the test passes, otherwise returns false.</span></div><div class="line"><span class="keywordtype">bool</span> Test2(<span class="keywordtype">void</span>)</div><div class="line">{</div><div class="line"> <span class="keywordtype">int</span> expectedValue;</div><div class="line"></div><div class="line"> <span class="comment">// Do some initializations and/or calculations.</span></div><div class="line">    ...</div><div class="line"></div><div class="line"> <span class="comment">// Call one of the unit-under-test's interface function and check it's return value against</span></div><div class="line"> <span class="comment">// an expected value that was calculated earlier.</span></div><div class="line"> <span class="keywordflow">return</span> (unitUnderTest_foo2() == expectedValue);</div><div class="line">}</div><div class="line"></div><div class="line"></div><div class="line"><span class="keywordtype">int</span> main (<span class="keywordtype">void</span>)</div><div class="line">{</div><div class="line"> <span class="comment">// Setup the Legato Test Framework.</span></div><div class="line"> <a class="code" href="le__test_8h.html#a219d49d27a2a5a1a6dc63f31b0b66c23">LE_TEST_INIT</a>;</div><div class="line"></div><div class="line"> <span class="comment">// Run the tests.</span></div><div class="line"> <a class="code" href="le__test_8h.html#a5fd7d94300087c8bbd0363129f03b729">LE_TEST</a>(Test1());</div><div class="line"> <a class="code" href="le__test_8h.html#a5fd7d94300087c8bbd0363129f03b729">LE_TEST</a>(Test2());</div><div class="line"></div><div class="line"> <span class="comment">// Exit with the number of failed tests as the exit code.</span></div><div class="line"> <a class="code" href="le__test_8h.html#a5f0517641049c368d0a55658c4f4ddec">LE_TEST_EXIT</a>;</div><div class="line">}</div></div><!-- fragment --><h1><a class="anchor" id="c_test_exit"></a>
+Exiting a Test Program</h1>
+<p>When a test program is finished executing tests and needs to exit, it should always exit using the LE_TEST_EXIT macro.</p>
+<p>It's also okay to exit using <a class="el" href="le__log_8h.html#a54b4b07f5396e19a8d9fca74238f4795">LE_FATAL()</a>, <a class="el" href="le__log_8h.html#a7a3e66a87026cc9e57bcb748840ab41b">LE_FATAL_IF()</a> or <a class="el" href="le__log_8h.html#ac0dbbef91dc0fed449d0092ff0557b39">LE_ASSERT()</a>, if the test must be halted immeditately due to some failure that cannot be recovered from.</p>
+<h1><a class="anchor" id="c_test_result"></a>
+Test Results</h1>
+<p>The LE_TEST_EXIT macro will cause the process to exit with the number of failed tests as the exit code.</p>
+<p>Also, LE_TEST will log an error message if the test fails and will log an info message if the test passes.</p>
+<p>If the unit test in the example above was run in "pass-through mode" (continue even when a test fails) and Test1 failed and Test2 passed, the logs will contain the messages:</p>
+<pre class="fragment"> =ERR= | Unit Test Failed: 'Test1()'
+  INFO | Unit Test Passed: 'Test2()'
+</pre><p>And the return code would be 1.</p>
+<dl class="section note"><dt>Note</dt><dd>The log message format depends on the current log settings.</dd></dl>
+<h1><a class="anchor" id="c_test_multiThread"></a>
+Multi-Threaded Tests</h1>
+<p>For unit tests that contain multiple threads run the various tests, the normal testing procedure will work because all the macros in this test framework are thread safe.</p>
+<h1><a class="anchor" id="c_test_multiProcess"></a>
+Multi-Process Tests</h1>
+<p>For unit tests that require the use of multiple concurrent processes, a single process can fork the other processes using <a class="el" href="le__test_8h.html#ac0c538ca3dfcd072464385b2f7e2776f">LE_TEST_FORK()</a> and then wait for them to terminate using <a class="el" href="le__test_8h.html#a28e54f8a323b5c0f96f77fb9910c3f52">LE_TEST_JOIN()</a>.</p>
+<p>When a child that is being waited for terminates, <a class="el" href="le__test_8h.html#a28e54f8a323b5c0f96f77fb9910c3f52">LE_TEST_JOIN()</a> will look at the child's termination status and add the results to the running test summary.</p>
+<p>If the child process exits normally with a non-negative exit code, that exit code will be considered a count of the number of test failures that occurred in that child process.</p>
+<p>If the child exits normally with a negative exit code or if the child is terminated due to a signal (which can be caused by a segmentation fault, etc.), <a class="el" href="le__test_8h.html#a28e54f8a323b5c0f96f77fb9910c3f52">LE_TEST_JOIN()</a> will count one test failure for that child process.</p>
+<div class="fragment"><div class="line"><a class="code" href="le__event_loop_8h.html#abdb9187a56836a93d19cc793cbd4b7ec">COMPONENT_INIT</a></div><div class="line">{</div><div class="line"> <span class="comment">// Setup the Legato Test Framework.</span></div><div class="line"> <a class="code" href="le__test_8h.html#a219d49d27a2a5a1a6dc63f31b0b66c23">LE_TEST_INIT</a>;</div><div class="line"></div><div class="line"> <span class="comment">// Run the test programs.</span></div><div class="line"> <a class="code" href="le__test_8h.html#ab2de7b7c51414646bad2bc4ec2dda444">le_test_ChildRef_t</a> test1 = <a class="code" href="le__test_8h.html#ac0c538ca3dfcd072464385b2f7e2776f">LE_TEST_FORK</a>(<span class="stringliteral">"test1"</span>);</div><div class="line"> <a class="code" href="le__test_8h.html#ab2de7b7c51414646bad2bc4ec2dda444">le_test_ChildRef_t</a> test2 = <a class="code" href="le__test_8h.html#ac0c538ca3dfcd072464385b2f7e2776f">LE_TEST_FORK</a>(<span class="stringliteral">"test2"</span>);</div><div class="line"></div><div class="line"> <span class="comment">// Wait for the test programs to finish and tally the results.</span></div><div class="line"> <a class="code" href="le__test_8h.html#a28e54f8a323b5c0f96f77fb9910c3f52">LE_TEST_JOIN</a>(test1);</div><div class="line"> <a class="code" href="le__test_8h.html#a28e54f8a323b5c0f96f77fb9910c3f52">LE_TEST_JOIN</a>(test2);</div><div class="line"></div><div class="line"> <span class="comment">// Exit with the number of failed tests as the exit code.</span></div><div class="line"> <a class="code" href="le__test_8h.html#a5f0517641049c368d0a55658c4f4ddec">LE_TEST_EXIT</a>;</div><div class="line">}</div></div><!-- fragment --><hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

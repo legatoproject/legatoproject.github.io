@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Components  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">Components </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p>In Legato, a component is a collection of code and other files that are functionally related, along with one or more licenses that apply to the components' files.</p>
+<p>Components can be "built" generating output like object code libraries and other files. These files can be incorporated into applications and run on a target device.</p>
+<p>Legato components can also have <a class="el" href="basic_interfaces.html">language-independent interfaces</a> and <a class="el" href="basic_config.html">configuration data</a>.</p>
+<h1><a class="anchor" id="basicComponentsRationale"></a>
+Rationale</h1>
+<p>It's important to manage complexity. The more complex a system becomes, the harder it is to ensure required behaviour without unwanted effects. However, the more complex the problem, the more complex the software, and there's no avoiding this <em>necessary</em> <em>complexity</em>. But, if complexity is carefully compartmentalized (broken into smaller pieces with like behaviour requirements), human beings can still manage it.</p>
+<p>Many approaches have been devised to reduce complexity like 'divide-and-conquer' where the system is broken down into small, manageable parts that together provide the complete system behaviour. It's proven that decoupling parts from each other (minimizing interconnectedness) can dramatically improve correctness and maintainability. Modularization and packaging support this.</p>
+<p>Component-based software development separates implementation from interface, allowing software components to be swapped-out similar to hardware components E.g., a client component can be written to access a standard telephony interface without knowing the implementation of the interface; and this client can be used with different implementation components, depending on the underlying telephony network (cellular, PSTN, VoIP, etc.) the product supports.</p>
+<p>Legato is designed to make it easier to build systems using a component-based model.</p>
+<p>Decoupling components and hiding implementation details within components (behind their interfaces) has a major impact on maintainability:</p>
+<ul>
+<li>Clearly defining interface and components' roles and responsibilities allow defect sources to be isolated more easily.</li>
+<li>Components can be swapped out with stubs, and interfaces can be instrumented to gather more troubleshooting information.</li>
+<li>Component changes that don't affect its interfaces are constrained to that component. This supports <code><em>refactoring</em>.</code> </li>
+<li>Test suites can be applied to components implementing the same interface so test reuse is also supported.</li>
+</ul>
+<p>Component-based software development also enables creative interconnection of components in previously unimagined ways to discover unique new solutions.</p>
+<p>Components designed for reuse with simple, clean interfaces using standard data types and methods can be recombined into different arrangements that exhibit different overall system behaviours. Web mashups can combine previously-constructed web services into completely new applications because those web services provide well-defined interfaces using standard access mechanisms and data formats. The mashup doesn't care about how the web services are implemented; the mashup only cares about what the interfaces provide.</p>
+<p>A further potential of component-based development is the ease of sharing (for free or for pay) of these reusable components. If a component is very useful to others, it can be shared and reused in accordance with the license that the author has chosen to release it under.</p>
+<h1><a class="anchor" id="basicComponentsLegato"></a>
+Legato Components</h1>
+<p>In the Legato world, each component is kept in its own directory. The name of the directory is also the name of the component.</p>
+<p>The component can contain any number of source code files, pre-compiled binary files, resource files (e.g., audio files or images), or whatever files the component needs.</p>
+<p>Each component must have a <code> <a class="el" href="def_files_cdef.html">Component.cdef</a> </code> file. This file describes the component to the Legato <a class="el" href="build_tools.html">Build</a>. It lists what source files the component includes, what interfaces it uses or implements, what resource files it includes, and what files it needs in the target host runtime environment.</p>
+<p>Components that have source code files can be included in executables inside apps. The build tools will generate the appropriate start-up code for the executable to ensure that the component gets initialized when the executable is started.</p>
+<h1><a class="anchor" id="basicComponentsProgrammingModel"></a>
+Component Programming Model</h1>
+<p>Generally, Legato components are written using an event-driven model. Callback functions called "event handlers" (or "handlers" for short) are attached to specific events, and when events occur, the thread's event loop calls the appropriate handlers.</p>
+<p>Every component implements a special initialization function (<code>COMPONENT_INIT</code> in C). That function does whatever initialization is required for that component (e.g., initializes data structures, registers event handlers, starts threads, etc.) and returns. The process's main thread (auto-generated by the <a class="el" href="build_tools.html">Build</a>) runs all the component initializers for all components in the executable and then enters the Legato event loop. The event loop then reacts to events by and calling registered handlers.</p>
+<p>This model allows multiple components to be deployed to the same process and even share a single thread within that process, without having to know anything about each other. This reduces the risk of multi-threaded race conditions and saves stack memory space, while simplifying many programming tasks.</p>
+<p>Sometimes the <em>judicious</em> use of threads can considerably simplify a program, so multithreading is also supported by Legato, along with the usual thread synchronization tools (mutexes, semaphores, etc.) and the addition of <a class="el" href="c_event_loop.html#c_event_dispatchingToOtherThreads">queued function calls</a>.</p>
+<p>If a component blocks a shared thread, it blocks every component sharing that thread. So, to maximize a component's reusability in different programs, it's best to avoid blocking the main thread. Legato components can start their own, private threads to avoid this. And any thread can run its own event loop if an event-driven thread with blocking event handlers is desired.</p>
+<h1><a class="anchor" id="basicComponentsLegacyCode"></a>
+Legacy Code</h1>
+<p>Sometimes you'll have a legacy program you want to include in your app without rewriting it in the style of a Legato component. This can be done by building your legacy app using your normal build system (but using the appropriate cross-toolchain provided for your target device) and <b>bundling</b> the built programs and libraries into the app.</p>
+<hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Config Tree Transactions  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">Config Tree Transactions </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p>This topic summarizes how to create read and write transactions to manage a target's configuration database (config tree).</p>
+<p>There are also pre-built <a class="el" href="legato_services_config_tree.html">Config Tree</a> APIs and a target <a class="el" href="tools_target_config.html">config</a> tool.</p>
+<h1><a class="anchor" id="howToConfigTree_read"></a>
+Read from own Tree</h1>
+<p>By default, every app gets read access to their own tree.</p>
+<p>This code sample shows how an app can read a value from its own tree:</p>
+<div class="fragment"><div class="line"><a class="code" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a> iteratorRef = <a class="code" href="le__cfg__interface_8h.html#aa766bff3a3ddbd2769b903fc56f6d9d2">le_cfg_CreateReadTxn</a>(<span class="stringliteral">"/test"</span>);</div><div class="line"><span class="keywordtype">bool</span> myBoolVal = <a class="code" href="le__cfg__interface_8h.html#aa3898fcb0d62b03c9a238d36b42d7a63">le_cfg_GetBool</a>(iteratorRef, <span class="stringliteral">"isBoolSet"</span>, <span class="keyword">false</span>);</div><div class="line"></div><div class="line"><span class="keywordflow">if</span> (myBoolVal)</div><div class="line">{</div><div class="line"> <a class="code" href="le__log_8h.html#a4ebab29f40ee8eaaa87205fe3f9aaa13">LE_INFO</a>(<span class="stringliteral">"The test value was set."</span>);</div><div class="line">}</div><div class="line"><span class="keywordflow">else</span></div><div class="line">{</div><div class="line"> <a class="code" href="le__log_8h.html#a4ebab29f40ee8eaaa87205fe3f9aaa13">LE_INFO</a>(<span class="stringliteral">"The test value was not set."</span>);</div><div class="line">}</div></div><!-- fragment --><p>This code tries to read a value from the tree named, <em>myApp</em>. If the value <em>/test/isBoolSet</em> was previously written to the tree, that value will be returned. Otherwise, the default value <em>false</em> is returned.</p>
+<h1><a class="anchor" id="howToConfigTree_write"></a>
+Write to Tree</h1>
+<p>Before you can write to a tree, you need to run as a user with the correct permissions. Permission settings are handled slightly differently, instead of writing under apps in the system tree, you write permission settings under the user's branch.</p>
+<p>Processes running under the root user or those with the same user ID as the config tree process aren't restricted by permissions.</p>
+<p>To create permissions, as the root user on the target console run <code>config set</code> using the <code>write</code> option:</p>
+<div class="fragment"><div class="line">$ config <span class="keyword">set</span> /apps/myApp/configLimits/acl/myApp write</div></div><!-- fragment --><p>The permissions are added to the system tree under <code>/apps/myApp/configLimits/acl/myApp</code>.</p>
+<p>Once the permissions are set, you can add a write function like this:</p>
+<div class="fragment"><div class="line"><a class="code" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a> iteratorRef = <a class="code" href="le__cfg__interface_8h.html#a9c817e5edf0df97034fdc432ce8d0f18">le_cfg_CreateWriteTxn</a>(<span class="stringliteral">"/test"</span>);</div></div><!-- fragment --><h1><a class="anchor" id="howToConfigTree_twoApps"></a>
+Two Apps One Tree</h1>
+<p>You may need to have one app read and another app read and write from a common tree.</p>
+<p>To set permissions for two apps, as the root user on the target console run <code>config set</code> using the <code>common</code> option:</p>
+<div class="fragment"><div class="line">$ config <span class="keyword">set</span> /apps/readerApp/configLimits/acl/common read</div><div class="line">$ config <span class="keyword">set</span> /apps/writerApp/configLimits/acl/common write</div></div><!-- fragment --><p>Granting write permission on a tree also gives read permission.</p>
+<p>Once the permissions are set, you need to create a read to the tree name that includes the iterator path <code>common:</code> like this:</p>
+<div class="fragment"><div class="line"><a class="code" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a> iteratorRef = <a class="code" href="le__cfg__interface_8h.html#aa766bff3a3ddbd2769b903fc56f6d9d2">le_cfg_CreateReadTxn</a>(<span class="stringliteral">"common:/test"</span>);</div><div class="line"><span class="keywordtype">bool</span> myBoolVal = <a class="code" href="le__cfg__interface_8h.html#aa3898fcb0d62b03c9a238d36b42d7a63">le_cfg_GetBool</a>(iteratorRef, <span class="stringliteral">"isBoolSet"</span>, <span class="keyword">false</span>);</div><div class="line"></div><div class="line"><span class="keywordflow">if</span> (myBoolVal)</div><div class="line">{</div><div class="line"> <a class="code" href="le__log_8h.html#a4ebab29f40ee8eaaa87205fe3f9aaa13">LE_INFO</a>(<span class="stringliteral">"The test value was set."</span>);</div><div class="line">}</div><div class="line"><span class="keywordflow">else</span></div><div class="line">{</div><div class="line"> <a class="code" href="le__log_8h.html#a4ebab29f40ee8eaaa87205fe3f9aaa13">LE_INFO</a>(<span class="stringliteral">"The test value was not set."</span>);</div><div class="line">}</div></div><!-- fragment --><p>A write also needs the tree name to include the iterator path <code>common:</code> like this: </p><div class="fragment"><div class="line"><a class="code" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a> iteratorRef = <a class="code" href="le__cfg__interface_8h.html#a9c817e5edf0df97034fdc432ce8d0f18">le_cfg_CreateWriteTxn</a>(<span class="stringliteral">"common:/test"</span>);</div><div class="line"><a class="code" href="le__cfg__interface_8h.html#a1b760f2ef78e9c12dc207a5cbe333c99">le_cfg_SetBool</a>(iteratorRef, <span class="stringliteral">"isBoolSet"</span>, <span class="keyword">true</span>);</div></div><!-- fragment --><h1><a class="anchor" id="howToConfigTree_readAnyTree"></a>
+Read Any Tree</h1>
+<p>You can create read access to <em>any</em> tree, but typically you won't want it to run as a root process.</p>
+<p>This code sample shows a supervisorApp with read access to any tree:</p>
+<div class="fragment"><div class="line">$ config <span class="keyword">set</span> /apps/supervisorApp/configLimits/allAccess read</div></div><!-- fragment --><p>If you don't specify a tree name, the read will be created on the user's default tree: the tree with the same name as the app.</p>
+<h1><a class="anchor" id="howToConfigTree_process"></a>
+Write Process Any Tree</h1>
+<p>You may need to create a write for a process to <em>any</em> tree for a process that isn't part of app. This code sample uses the user name instead of the app name:</p>
+<div class="fragment"><div class="line">$ config <span class="keyword">set</span> /users/testUser/configLimits/allAccess write</div></div><!-- fragment --><hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Sample code for Network Scan  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">Sample code for Network Scan </h1> </div>
+</div><div class="contents">
+<div class="textblock"><div class="fragment"><div class="line"><span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> ReadScanInfo</div><div class="line">(</div><div class="line"> <a class="code" href="le__mrc__interface_8h.html#a3e7fe3e0d8f10fe7853f00eb254529ea">le_mrc_ScanInformationRef_t</a>     scanInfoRef</div><div class="line">)</div><div class="line">{</div><div class="line"> <a class="code" href="le__mrc__interface_8h.html#aaf23906c37ad59fb96a8a48f7fab5b43">le_mrc_Rat_t</a> rat;</div><div class="line"> <span class="keywordtype">bool</span> boolTest;</div><div class="line"> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> res;</div><div class="line"> <span class="keywordtype">char</span> mcc[<a class="code" href="le__mrc__interface_8h.html#aec88b97b54a45f86e6cb34f65b2d0afd">LE_MRC_MCC_BYTES</a>] = {0};</div><div class="line"> <span class="keywordtype">char</span> mnc[<a class="code" href="le__mrc__interface_8h.html#aeae0e240c77730be724ad7ac42596469">LE_MRC_MNC_BYTES</a>] = {0};</div><div class="line"> <span class="keywordtype">char</span> nameStr[100] = {0};</div><div class="line"></div><div class="line">    res = <a class="code" href="le__mrc__interface_8h.html#af4fa2d3f3c9a664b8e46478dba048f2e">le_mrc_GetCellularNetworkMccMnc</a>(scanInfoRef, mcc, LE_MRC_MCC_BYTES, mnc, LE_MRC_MCC_BYTES);</div><div class="line"> <a class="code" href="le__log_8h.html#ac0dbbef91dc0fed449d0092ff0557b39">LE_ASSERT</a>(res == LE_OK);</div><div class="line"></div><div class="line">    res = <a class="code" href="le__mrc__interface_8h.html#a82cb12c5f02baccbb04b0af1be4eb031">le_mrc_GetCellularNetworkName</a>(scanInfoRef, nameStr, 1);</div><div class="line"> <a class="code" href="le__log_8h.html#ac0dbbef91dc0fed449d0092ff0557b39">LE_ASSERT</a>(res == <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86cae42c9d785827fc3a9c47fb55baca7879">LE_OVERFLOW</a>);</div><div class="line">    res = <a class="code" href="le__mrc__interface_8h.html#a82cb12c5f02baccbb04b0af1be4eb031">le_mrc_GetCellularNetworkName</a>(scanInfoRef, nameStr, 100);;</div><div class="line"> <a class="code" href="le__log_8h.html#ac0dbbef91dc0fed449d0092ff0557b39">LE_ASSERT</a>(res == LE_OK);</div><div class="line"> <a class="code" href="le__log_8h.html#a4ebab29f40ee8eaaa87205fe3f9aaa13">LE_INFO</a>(<span class="stringliteral">"1st cellular network name.%s"</span>, nameStr);</div><div class="line"></div><div class="line">    rat = <a class="code" href="le__mrc__interface_8h.html#ad33fbe1d2b7acee0e47f3e54cab78274">le_mrc_GetCellularNetworkRat</a>(scanInfoRef);</div><div class="line"> <a class="code" href="le__log_8h.html#ac0dbbef91dc0fed449d0092ff0557b39">LE_ASSERT</a>((rat>=<a class="code" href="le__mrc__interface_8h.html#aaf23906c37ad59fb96a8a48f7fab5b43a6088198c65a39429fe6a67f322df0480">LE_MRC_RAT_UNKNOWN</a>) && (rat<=<a class="code" href="le__mrc__interface_8h.html#aaf23906c37ad59fb96a8a48f7fab5b43aaf2b25a8ec75f9bacb51967f23247176">LE_MRC_RAT_LTE</a>));</div><div class="line"> <a class="code" href="le__log_8h.html#a4ebab29f40ee8eaaa87205fe3f9aaa13">LE_INFO</a>(<span class="stringliteral">"le_mrc_GetCellularNetworkRat returns rat %d"</span>, rat);</div><div class="line"></div><div class="line">    boolTest = <a class="code" href="le__mrc__interface_8h.html#a4c859fc1364c183aa1d26a022db365c6">le_mrc_IsCellularNetworkInUse</a>(scanInfoRef);</div><div class="line"> <a class="code" href="le__log_8h.html#a4ebab29f40ee8eaaa87205fe3f9aaa13">LE_INFO</a>(<span class="stringliteral">"IsCellularNetworkInUse is %s"</span>, ( (boolTest) ? <span class="stringliteral">"true"</span> : <span class="stringliteral">"false"</span>));</div><div class="line"></div><div class="line">    boolTest = <a class="code" href="le__mrc__interface_8h.html#a72ca8072f90d453169baff44441c41c0">le_mrc_IsCellularNetworkAvailable</a>(scanInfoRef);</div><div class="line"> <a class="code" href="le__log_8h.html#a4ebab29f40ee8eaaa87205fe3f9aaa13">LE_INFO</a>(<span class="stringliteral">"le_mrc_IsCellularNetworkAvailable is %s"</span>, ( (boolTest) ? <span class="stringliteral">"true"</span> : <span class="stringliteral">"false"</span>));</div><div class="line"></div><div class="line">    boolTest = <a class="code" href="le__mrc__interface_8h.html#a7333dfc638f50524f9c6fd81457828ba">le_mrc_IsCellularNetworkHome</a>(scanInfoRef);</div><div class="line"> <a class="code" href="le__log_8h.html#a4ebab29f40ee8eaaa87205fe3f9aaa13">LE_INFO</a>(<span class="stringliteral">"le_mrc_IsCellularNetworkHome is %s"</span>, ( (boolTest) ? <span class="stringliteral">"true"</span> : <span class="stringliteral">"false"</span>));</div><div class="line"></div><div class="line">    boolTest = <a class="code" href="le__mrc__interface_8h.html#a699a52d014550124a5b3362ee888a780">le_mrc_IsCellularNetworkForbidden</a>(scanInfoRef);</div><div class="line"> <a class="code" href="le__log_8h.html#a4ebab29f40ee8eaaa87205fe3f9aaa13">LE_INFO</a>(<span class="stringliteral">"le_mrc_IsCellularNetworkForbidden is %s"</span>, ( (boolTest) ? <span class="stringliteral">"true"</span> : <span class="stringliteral">"false"</span>));</div><div class="line">}</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> Testle_mrc_PerformCellularNetworkScan()</div><div class="line">{</div><div class="line"> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> res;</div><div class="line"> <a class="code" href="le__mrc__interface_8h.html#af643c7005da7f2466302eebdf7a29d93">le_mrc_RatBitMask_t</a> bitMaskOrigin = 0;</div><div class="line"> <a class="code" href="le__mrc__interface_8h.html#a25a9e79cc9078e22cec22444fd959c61">le_mrc_ScanInformationListRef_t</a> scanInfoListRef = NULL;</div><div class="line"> <a class="code" href="le__mrc__interface_8h.html#a3e7fe3e0d8f10fe7853f00eb254529ea">le_mrc_ScanInformationRef_t</a>     scanInfoRef = NULL;</div><div class="line"></div><div class="line"> <span class="comment">// Get the current rat preference.</span></div><div class="line">    res = <a class="code" href="le__mrc__interface_8h.html#ae9fa8655738c63e392c8dcc862bdb1d5">le_mrc_GetRatPreferences</a>(&bitMaskOrigin);</div><div class="line"> <a class="code" href="le__log_8h.html#ac0dbbef91dc0fed449d0092ff0557b39">LE_ASSERT</a>(res == LE_OK);</div><div class="line"></div><div class="line"> <span class="keywordflow">if</span> ((bitMaskOrigin & LE_MRC_BITMASK_RAT_GSM) || (bitMaskOrigin == <a class="code" href="le__mrc__interface_8h.html#af643c7005da7f2466302eebdf7a29d93aa6e87ad274b7f5011413ea0e8375300b">LE_MRC_BITMASK_RAT_ALL</a>))</div><div class="line">    {</div><div class="line"> <a class="code" href="le__log_8h.html#a4ebab29f40ee8eaaa87205fe3f9aaa13">LE_INFO</a>(<span class="stringliteral">"Perform scan on GSM"</span>);</div><div class="line">        scanInfoListRef = <a class="code" href="le__mrc__interface_8h.html#ab4a246dd466fa8175aca0158e0cab227">le_mrc_PerformCellularNetworkScan</a>(LE_MRC_BITMASK_RAT_GSM);</div><div class="line">    }</div><div class="line"> <span class="keywordflow">else</span> <span class="keywordflow">if</span> (bitMaskOrigin & LE_MRC_BITMASK_RAT_UMTS)</div><div class="line">    {</div><div class="line"> <a class="code" href="le__log_8h.html#a4ebab29f40ee8eaaa87205fe3f9aaa13">LE_INFO</a>(<span class="stringliteral">"Perform scan on UMTS"</span>);</div><div class="line">        scanInfoListRef = <a class="code" href="le__mrc__interface_8h.html#ab4a246dd466fa8175aca0158e0cab227">le_mrc_PerformCellularNetworkScan</a>(LE_MRC_BITMASK_RAT_UMTS);</div><div class="line">    }</div><div class="line"> <a class="code" href="le__log_8h.html#ac0dbbef91dc0fed449d0092ff0557b39">LE_ASSERT</a>(scanInfoListRef != NULL);</div><div class="line"></div><div class="line">    scanInfoRef = <a class="code" href="le__mrc__interface_8h.html#ae006d053b037cec589aa85053472a2af">le_mrc_GetFirstCellularNetworkScan</a>(scanInfoListRef);</div><div class="line"> <a class="code" href="le__log_8h.html#ac0dbbef91dc0fed449d0092ff0557b39">LE_ASSERT</a>(scanInfoRef != NULL);</div><div class="line">    ReadScanInfo(scanInfoRef);</div><div class="line"></div><div class="line"> <span class="keywordflow">while</span> ((scanInfoRef = <a class="code" href="le__mrc__interface_8h.html#ae0ca9f0c1c106d6ddeef784c6bb0d69b">le_mrc_GetNextCellularNetworkScan</a>(scanInfoListRef)) != NULL)</div><div class="line">    {</div><div class="line">        ReadScanInfo(scanInfoRef);</div><div class="line">    }</div><div class="line"></div><div class="line"> <a class="code" href="le__mrc__interface_8h.html#ac45ce335b3fa063b83bb925e67eeaeb3">le_mrc_DeleteCellularNetworkScan</a>(scanInfoListRef);</div><div class="line">}</div></div><!-- fragment --></div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

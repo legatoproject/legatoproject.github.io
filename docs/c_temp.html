@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Temperature Monitoring  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">Temperature Monitoring </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p><a class="el" href="le__temp__interface_8h.html">API Reference</a></p>
+<hr />
+<p>The Temperature API is used to retrieve Platform and Radio 's temperature values and set warning and critical thresholds.</p>
+<dl class="section warning"><dt>Warning</dt><dd>When a Critical event occurs, some platform can automatically switch off.</dd></dl>
+<h1><a class="anchor" id="le_temp_binding"></a>
+IPC interfaces binding</h1>
+<p>All the functions of this API are provided by the <b>modemService</b> application service.</p>
+<p>Here's a code sample binding to modem services: </p><pre class="fragment">bindings:
+{
+   clientExe.clientComponent.le_temp -> modemService.le_temp
+}
+</pre><h1><a class="anchor" id="c_temp_radio"></a>
+Radio Temperature Thresholds</h1>
+<p>Two Thresholds are set to notify the Radio temperature state: the warning and the critical radio temperature thresholds.</p>
+<p>if the Radio temperature reachs the:</p><ul>
+<li>"Critical Threshold", a LE_TEMP_RADIO_HI_CRITICAL event occurs.</li>
+<li>"Warning Threshold" but still lower than "Critical Threshold", LE_TEMP_RADIO_HI_WARNING event occurs.</li>
+</ul>
+<p>if the Radio temperature decreases below the:</p><ul>
+<li>"Critical Threshold", a LE_TEMP_RADIO_HI_WARNING event occurs.</li>
+<li>"Warning Threshold", a LE_TEMP_RADIO_NORMAL event occurs.</li>
+</ul>
+<dl class="section warning"><dt>Warning</dt><dd>An hysteresis can be dependent of the platform. Be sure to verify your platform's specifications.</dd></dl>
+<h1><a class="anchor" id="c_temp_platform"></a>
+Platform Temperature Thresholds</h1>
+<p>Fours Thresholds are set to decide the state: the low critical, low warning, high warning and the high critical Platform temperatures thresholds</p>
+<p>if the Platform temperature reachs the:</p><ul>
+<li>"high Critical Threshold", a LE_TEMP_PLATFORM_HI_CRITICALL event occurs.</li>
+<li>"high Warning Threshold" but still lower than "high Critical Threshold", LE_TEMP_PLATFORM_HI_WARNING event occurs</li>
+</ul>
+<p>if the Platform temperature decreases below the:</p><ul>
+<li>"low Warning Threshold" but still higher than "low Critical Threshold", LE_TEMP_PLATFORM_LO_WARNING event occurs.</li>
+<li>"low Critical Threshold", a LE_TEMP_PLATFORM_LO_CRITICALL event occurs.</li>
+</ul>
+<p>if the Platform temperature decreases below the:</p><ul>
+<li>"hi Critical Threshold", a LE_TEMP_PLATFORM_HI_WARNING event occurs.</li>
+<li>"hi Warning Threshold", a LE_TEMP_PLATFORM_NORMAL event occurs.</li>
+</ul>
+<p>if the Platform temperature reachs the:</p><ul>
+<li>"low Warning Threshold", a LE_TEMP_PLATFORM_NORMAL event occurs..</li>
+<li>"low Critical Threshold" but still lower than "high Warning Threshold", a LE_TEMP_PLATFORM_LO_WARNING event occurs..</li>
+</ul>
+<dl class="section warning"><dt>Warning</dt><dd>An hysteresis can be dependent of the platform. Be sure to verify your platform's specifications.</dd></dl>
+<h1><a class="anchor" id="Temperature"></a>
+Monitoring</h1>
+<p>This functionality allows to monitoring the platform temperature by getting the current Platform or Radio temperature and by setting warning and critical thresholds temperature.</p>
+<dl class="section warning"><dt>Warning</dt><dd>On some platforms, the thresholds parameters are persistent and a Platform reboot is required for thresholds change takes effect.</dd></dl>
+<p>When the warning or the critical temperature thresholds are reached an event is sent with the <code>le_temp_ThresholdEvent_t</code> event type .</p>
+<ul>
+<li><a class="el" href="le__temp__interface_8h.html#af02a78a861bb30c2b17049da34b30409">le_temp_GetRadioTemperature()</a> API allows the application to retrieve the Radio temperature.</li>
+<li><a class="el" href="le__temp__interface_8h.html#a476e20b815d3df88ff00ebe1fab42792">le_temp_SetRadioThresholds()</a> API allows the application to set the warning and the critical Radio temperature thresholds.</li>
+<li><a class="el" href="le__temp__interface_8h.html#a275ce92a6ed5376a978b5be5687f6cd1">le_temp_GetRadioThresholds()</a> API allows the application to get the warning and the critical Radio temperature threshold.</li>
+<li><a class="el" href="le__temp__interface_8h.html#ad5a5d27181c71928e3b8a5a0476e8b08">le_temp_GetPlatformTemperature()</a> API allows the application to retrieve the Platform temperature.</li>
+<li><a class="el" href="le__temp__interface_8h.html#aea0cace31c93751db6d48be522e073b8">le_temp_SetPlatformThresholds()</a> API allows the application to set the warning and the critical Platform temperature thresholds.</li>
+<li><a class="el" href="le__temp__interface_8h.html#a00a364d667662c110b51fa1475dcc39f">le_temp_GetPlatformThresholds()</a> API allows the application to get the warning and the critical Platform temperature threshold.</li>
+<li><a class="el" href="le__temp__interface_8h.html#acb2ef2d56777133835b843a786103268">le_temp_AddThresholdEventHandler()</a> API adds a handler to notify when the temperature threshold is reached.</li>
+<li><a class="el" href="le__temp__interface_8h.html#a29fa7d59baed8a6ee058e32e2cddbd74">le_temp_RemoveThresholdEventHandler()</a> API removes the temperature handler.</li>
+</ul>
+<hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

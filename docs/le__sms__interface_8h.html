@@ -1,0 +1,2679 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>le_sms_interface.h File Reference - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Reference.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a href="build_apps_documentation.html">Documentation</a><a class="link-selected" href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="summary">
+<a href="#define-members">Macros</a> |
+<a href="#typedef-members">Typedefs</a> |
+<a href="#enum-members">Enumerations</a> |
+<a href="#func-members">Functions</a> </div>
+<div class="headertitle">
+<h1 class="title">le_sms_interface.h File Reference</h1> </div>
+</div><div class="contents">
+<div class="textblock"><code>#include "<a class="el" href="legato_8h_source.html">legato.h</a>"</code><br />
+<code>#include "<a class="el" href="le__mdm_defs__interface_8h_source.html">le_mdmDefs_interface.h</a>"</code><br />
+</div>
+<p><a href="le__sms__interface_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:accabf44fe7d9f2b85b807eee8da276c3"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#accabf44fe7d9f2b85b807eee8da276c3">LE_SMS_TIMESTAMP_MAX_LEN</a>   20</td></tr>
+<tr class="separator:accabf44fe7d9f2b85b807eee8da276c3"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a9844280f515fbc2b393844e63aa83075"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a9844280f515fbc2b393844e63aa83075">LE_SMS_TIMESTAMP_MAX_BYTES</a>   21</td></tr>
+<tr class="separator:a9844280f515fbc2b393844e63aa83075"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ac1b7b4dad3b9f7f1fe602494123a10b0"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#ac1b7b4dad3b9f7f1fe602494123a10b0">LE_SMS_TEXT_MAX_LEN</a>   160</td></tr>
+<tr class="separator:ac1b7b4dad3b9f7f1fe602494123a10b0"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a0dc5c2cec7c1fb166c47393fbb07e43f"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a0dc5c2cec7c1fb166c47393fbb07e43f">LE_SMS_TEXT_MAX_BYTES</a>   161</td></tr>
+<tr class="separator:a0dc5c2cec7c1fb166c47393fbb07e43f"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a5bf62f998e950de37b56813d8c5d9b95"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a5bf62f998e950de37b56813d8c5d9b95">LE_SMS_BINARY_MAX_BYTES</a>   140</td></tr>
+<tr class="separator:a5bf62f998e950de37b56813d8c5d9b95"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:afda7337666a02e3404152412acb89f75"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#afda7337666a02e3404152412acb89f75">LE_SMS_PDU_MAX_PAYLOAD</a>   140</td></tr>
+<tr class="separator:afda7337666a02e3404152412acb89f75"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aaa740f36bbc6d13d0b355d3dc2d8d4dc"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#aaa740f36bbc6d13d0b355d3dc2d8d4dc">LE_SMS_PDU_MAX_BYTES</a>   176</td></tr>
+<tr class="separator:aaa740f36bbc6d13d0b355d3dc2d8d4dc"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a8eb2a15362fe26516fc68fd7a7d5e3e7"><td align="right" class="memItemLeft" valign="top">typedef struct le_sms_Msg * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a></td></tr>
+<tr class="separator:a8eb2a15362fe26516fc68fd7a7d5e3e7"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:afd91170c5ea21ec7ca98f7ce95049dae"><td align="right" class="memItemLeft" valign="top">typedef struct le_sms_MsgList * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#afd91170c5ea21ec7ca98f7ce95049dae">le_sms_MsgListRef_t</a></td></tr>
+<tr class="separator:afd91170c5ea21ec7ca98f7ce95049dae"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a77d2607cc541bf0369e69bb2d105d4bf"><td align="right" class="memItemLeft" valign="top">typedef struct le_sms_RxMessageHandler * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a77d2607cc541bf0369e69bb2d105d4bf">le_sms_RxMessageHandlerRef_t</a></td></tr>
+<tr class="separator:a77d2607cc541bf0369e69bb2d105d4bf"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a01aa759eb07ab9e8c4a5e0a6d0c7e942"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a01aa759eb07ab9e8c4a5e0a6d0c7e942">le_sms_CallbackResultFunc_t</a>) (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef, <a class="el" href="le__sms__interface_8h.html#a18a1937acb5878ae01a9d668fe5070b6">le_sms_Status_t</a> status, void *contextPtr)</td></tr>
+<tr class="separator:a01aa759eb07ab9e8c4a5e0a6d0c7e942"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a6b6e7403719627629df41529916fa71b"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a6b6e7403719627629df41529916fa71b">le_sms_RxMessageHandlerFunc_t</a>) (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef, void *contextPtr)</td></tr>
+<tr class="separator:a6b6e7403719627629df41529916fa71b"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a337778c44e63660c44fa2116699296c0"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a337778c44e63660c44fa2116699296c0">le_sms_Format_t</a> { <a class="el" href="le__sms__interface_8h.html#a337778c44e63660c44fa2116699296c0a3f6a4a63acbf7aec5a498017ff53a6e8">LE_SMS_FORMAT_PDU</a>, 
+<a class="el" href="le__sms__interface_8h.html#a337778c44e63660c44fa2116699296c0a1bb6a0d76a622b1185ee879e1595dff8">LE_SMS_FORMAT_TEXT</a>, 
+<a class="el" href="le__sms__interface_8h.html#a337778c44e63660c44fa2116699296c0ac70333fc9281ed10aa405d585689c000">LE_SMS_FORMAT_BINARY</a>, 
+<a class="el" href="le__sms__interface_8h.html#a337778c44e63660c44fa2116699296c0abea80bb6058e34a427c02b80bfede497">LE_SMS_FORMAT_UNKNOWN</a>
+ }</td></tr>
+<tr class="separator:a337778c44e63660c44fa2116699296c0"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a9001c5bc939bda5d5865e363bdf7662c"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a9001c5bc939bda5d5865e363bdf7662c">le_sms_Type_t</a> { <a class="el" href="le__sms__interface_8h.html#a9001c5bc939bda5d5865e363bdf7662ca29050c2aa56f58a199d292d51be4fa01">LE_SMS_TYPE_RX</a>, 
+<a class="el" href="le__sms__interface_8h.html#a9001c5bc939bda5d5865e363bdf7662ca2a206e19e871ea98e16e88aeed1a99cc">LE_SMS_TYPE_TX</a>, 
+<a class="el" href="le__sms__interface_8h.html#a9001c5bc939bda5d5865e363bdf7662ca3dff7628faf85524d772f34f52699a47">LE_SMS_TYPE_BROADCAST_RX</a>
+ }</td></tr>
+<tr class="separator:a9001c5bc939bda5d5865e363bdf7662c"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a18a1937acb5878ae01a9d668fe5070b6"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a18a1937acb5878ae01a9d668fe5070b6">le_sms_Status_t</a> { <br />
+  <a class="el" href="le__sms__interface_8h.html#a18a1937acb5878ae01a9d668fe5070b6acf7543162a77df096f714c66555052f1">LE_SMS_RX_READ</a>, 
+<a class="el" href="le__sms__interface_8h.html#a18a1937acb5878ae01a9d668fe5070b6a30d180b7a6410abdd57182014746b8bc">LE_SMS_RX_UNREAD</a>, 
+<a class="el" href="le__sms__interface_8h.html#a18a1937acb5878ae01a9d668fe5070b6ad3254c9e0006f34d438c6e1918d3973f">LE_SMS_STORED_SENT</a>, 
+<a class="el" href="le__sms__interface_8h.html#a18a1937acb5878ae01a9d668fe5070b6a57f62f640b2341ae3ac86310df6759e5">LE_SMS_STORED_UNSENT</a>, 
+<br />
+  <a class="el" href="le__sms__interface_8h.html#a18a1937acb5878ae01a9d668fe5070b6aa20b05cdd468e822268c59d9789ef132">LE_SMS_SENT</a>, 
+<a class="el" href="le__sms__interface_8h.html#a18a1937acb5878ae01a9d668fe5070b6a5fbd6c7f39cc2ed3ea816133d29b5760">LE_SMS_SENDING</a>, 
+<a class="el" href="le__sms__interface_8h.html#a18a1937acb5878ae01a9d668fe5070b6afd992b5c50b6420d37067f8c516d9fef">LE_SMS_UNSENT</a>, 
+<a class="el" href="le__sms__interface_8h.html#a18a1937acb5878ae01a9d668fe5070b6aed2870eb00d4511f2a0c28996f8cd984">LE_SMS_SENDING_FAILED</a>, 
+<br />
+  <a class="el" href="le__sms__interface_8h.html#a18a1937acb5878ae01a9d668fe5070b6aa7381e00701ac73e660ae31c4223e403">LE_SMS_SENDING_TIMEOUT</a>, 
+<a class="el" href="le__sms__interface_8h.html#a18a1937acb5878ae01a9d668fe5070b6ae7b415d976598f3a548d8ab8382d2019">LE_SMS_STATUS_UNKNOWN</a>
+<br />
+ }</td></tr>
+<tr class="separator:a18a1937acb5878ae01a9d668fe5070b6"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ad4ba75a2c1d118cd46ca5e8428fb5ddb"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#ad4ba75a2c1d118cd46ca5e8428fb5ddb">le_sms_Languages_t</a> { <br />
+  <a class="el" href="le__sms__interface_8h.html#ad4ba75a2c1d118cd46ca5e8428fb5ddbad0356a01286311e11035b9ef1ca4ef7c">LE_SMS_LANGUAGE_UNKNOWN</a>, 
+<a class="el" href="le__sms__interface_8h.html#ad4ba75a2c1d118cd46ca5e8428fb5ddba42b1bbed8b017e36fd0389bfa09f42fb">LE_SMS_LANGUAGE_ENGLISH</a>, 
+<a class="el" href="le__sms__interface_8h.html#ad4ba75a2c1d118cd46ca5e8428fb5ddba6c88f276e71935b5fe119a468bba7fa3">LE_SMS_LANGUAGE_FRENCH</a>, 
+<a class="el" href="le__sms__interface_8h.html#ad4ba75a2c1d118cd46ca5e8428fb5ddba8b5e31055b3883661e58f38843601bd9">LE_SMS_LANGUAGE_SPANISH</a>, 
+<br />
+  <a class="el" href="le__sms__interface_8h.html#ad4ba75a2c1d118cd46ca5e8428fb5ddba1bbdfadfec0d7020f2b171b1cf4dbbfe">LE_SMS_LANGUAGE_JAPANESE</a>, 
+<a class="el" href="le__sms__interface_8h.html#ad4ba75a2c1d118cd46ca5e8428fb5ddba58899a6c4374ff8e04072cecca609b0c">LE_SMS_LANGUAGE_KOREAN</a>, 
+<a class="el" href="le__sms__interface_8h.html#ad4ba75a2c1d118cd46ca5e8428fb5ddbafd2f8d23a5676922616f2893c5ce33a2">LE_SMS_LANGUAGE_CHINESE</a>, 
+<a class="el" href="le__sms__interface_8h.html#ad4ba75a2c1d118cd46ca5e8428fb5ddba7d0f3b3f8ab2b76681b28b3ef4628b1d">LE_SMS_LANGUAGE_HEBREW</a>, 
+<br />
+  <b>LE_SMS_LANGUAGE_MAX</b>
+<br />
+ }</td></tr>
+<tr class="separator:ad4ba75a2c1d118cd46ca5e8428fb5ddb"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a4d1e11633722ac519f2d8efb1178167c"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a4d1e11633722ac519f2d8efb1178167c">le_sms_CdmaServiceCat_t</a> { <br />
+  <a class="el" href="le__sms__interface_8h.html#a4d1e11633722ac519f2d8efb1178167ca745c1a522cc4202e9c42ef90791cbe5b">LE_SMS_CDMA_SVC_CAT_UNKNOWN</a>, 
+<a class="el" href="le__sms__interface_8h.html#a4d1e11633722ac519f2d8efb1178167ca6ac396b3ea8ef66b0cc4b639d2034f28">LE_SMS_CDMA_SVC_CAT_EMERGENCY_BROADCAST</a>, 
+<a class="el" href="le__sms__interface_8h.html#a4d1e11633722ac519f2d8efb1178167cab71a684337eb7f63ac2bfc47321055ff">LE_SMS_CDMA_SVC_CAT_ADMINISTRATIVE</a>, 
+<a class="el" href="le__sms__interface_8h.html#a4d1e11633722ac519f2d8efb1178167cabce7ed0ea9dfeebb1cc0b51f76f2dd74">LE_SMS_CDMA_SVC_CAT_MAINTENANCE</a>, 
+<br />
+  <a class="el" href="le__sms__interface_8h.html#a4d1e11633722ac519f2d8efb1178167ca112d5136b5a851348eadcf1fb1b34469">LE_SMS_CDMA_SVC_CAT_GENERAL_NEWS_LOCAL</a>, 
+<a class="el" href="le__sms__interface_8h.html#a4d1e11633722ac519f2d8efb1178167ca486d33af6c2dccbdbdbfa7c1bc6085dc">LE_SMS_CDMA_SVC_CAT_GENERAL_NEWS_REGIONAL</a>, 
+<a class="el" href="le__sms__interface_8h.html#a4d1e11633722ac519f2d8efb1178167cab2b3426f0c2023076ab95fd9ccfbbe5b">LE_SMS_CDMA_SVC_CAT_GENERAL_NEWS_NATIONAL</a>, 
+<a class="el" href="le__sms__interface_8h.html#a4d1e11633722ac519f2d8efb1178167cae066589e00cd71c81b2f53061e63262e">LE_SMS_CDMA_SVC_CAT_GENERAL_NEWS_INTERNATIONAL</a>, 
+<br />
+  <a class="el" href="le__sms__interface_8h.html#a4d1e11633722ac519f2d8efb1178167ca94d8af66d8b5af6d442c1203dcd3912b">LE_SMS_CDMA_SVC_CAT_BUSINESS_NEWS_LOCAL</a>, 
+<a class="el" href="le__sms__interface_8h.html#a4d1e11633722ac519f2d8efb1178167ca8e886e0ed0e05a41f26fb6ce4f0045e7">LE_SMS_CDMA_SVC_CAT_BUSINESS_NEWS_REGIONAL</a>, 
+<a class="el" href="le__sms__interface_8h.html#a4d1e11633722ac519f2d8efb1178167ca0ab2ef7e378fad7fbdfe481fe2b59fce">LE_SMS_CDMA_SVC_CAT_BUSINESS_NEWS_NATIONAL</a>, 
+<a class="el" href="le__sms__interface_8h.html#a4d1e11633722ac519f2d8efb1178167ca8a2d2a021deca7c77a0e1f3cc6ab7c47">LE_SMS_CDMA_SVC_CAT_BUSINESS_NEWS_INTERNATIONAL</a>, 
+<br />
+  <a class="el" href="le__sms__interface_8h.html#a4d1e11633722ac519f2d8efb1178167caa28e220f37e3754d40a1f1b6961eb606">LE_SMS_CDMA_SVC_CAT_SPORTS_NEWS_LOCAL</a>, 
+<a class="el" href="le__sms__interface_8h.html#a4d1e11633722ac519f2d8efb1178167ca02f49ceb4fe720459625255f019f4a8d">LE_SMS_CDMA_SVC_CAT_SPORTS_NEWS_REGIONAL</a>, 
+<a class="el" href="le__sms__interface_8h.html#a4d1e11633722ac519f2d8efb1178167cab20f62fb8e026d5a7e608aee4bed8870">LE_SMS_CDMA_SVC_CAT_SPORTS_NEWS_NATIONAL</a>, 
+<a class="el" href="le__sms__interface_8h.html#a4d1e11633722ac519f2d8efb1178167ca5839cd80d1638c6ec320aa382c89cc4d">LE_SMS_CDMA_SVC_CAT_SPORTS_NEWS_INTERNATIONAL</a>, 
+<br />
+  <a class="el" href="le__sms__interface_8h.html#a4d1e11633722ac519f2d8efb1178167caefd627fa7218c224eca1fcb148077eed">LE_SMS_CDMA_SVC_CAT_ENTERTAINMENT_NEWS_LOCAL</a>, 
+<a class="el" href="le__sms__interface_8h.html#a4d1e11633722ac519f2d8efb1178167ca7220ef8a87ecf2428f75778a4da47f72">LE_SMS_CDMA_SVC_CAT_ENTERTAINMENT_NEWS_REGIONAL</a>, 
+<a class="el" href="le__sms__interface_8h.html#a4d1e11633722ac519f2d8efb1178167cad4e74bd82acbedf2bb8366fc5f781237">LE_SMS_CDMA_SVC_CAT_ENTERTAINMENT_NEWS_NATIONAL</a>, 
+<a class="el" href="le__sms__interface_8h.html#a4d1e11633722ac519f2d8efb1178167ca85b55ece9323db1fe0798a459b871ae0">LE_SMS_CDMA_SVC_CAT_ENTERTAINMENT_NEWS_INTERNATIONAL</a>, 
+<br />
+  <a class="el" href="le__sms__interface_8h.html#a4d1e11633722ac519f2d8efb1178167cabc377330c9a1d24b935dddc1d337cc04">LE_SMS_CDMA_SVC_CAT_LOCAL_WEATHER</a>, 
+<a class="el" href="le__sms__interface_8h.html#a4d1e11633722ac519f2d8efb1178167ca13b9fbc43ce7b4e5f5e26ca36e1075c2">LE_SMS_CDMA_SVC_CAT_TRAFFIC_REPORTS</a>, 
+<a class="el" href="le__sms__interface_8h.html#a4d1e11633722ac519f2d8efb1178167caf861e234fe4b48a302c6569f34c26d67">LE_SMS_CDMA_SVC_CAT_LOCAL_FLIGHT_SCHEDULES</a>, 
+<a class="el" href="le__sms__interface_8h.html#a4d1e11633722ac519f2d8efb1178167ca85ce64c2470a6f743b28b9aedaba00d6">LE_SMS_CDMA_SVC_CAT_RESTAURANTS</a>, 
+<br />
+  <a class="el" href="le__sms__interface_8h.html#a4d1e11633722ac519f2d8efb1178167ca2177833a1bc86c087c70ed45fa8e60f3">LE_SMS_CDMA_SVC_CAT_LODGINGS</a>, 
+<a class="el" href="le__sms__interface_8h.html#a4d1e11633722ac519f2d8efb1178167ca4ad2923be0ced140783a5e0024dd9cc4">LE_SMS_CDMA_SVC_CAT_RETAIL_DIRECTORY</a>, 
+<a class="el" href="le__sms__interface_8h.html#a4d1e11633722ac519f2d8efb1178167caea54439fbdcdbd2589d7f65a6f58856b">LE_SMS_CDMA_SVC_CAT_ADVERTISEMENTS</a>, 
+<a class="el" href="le__sms__interface_8h.html#a4d1e11633722ac519f2d8efb1178167ca964fa5b3596b749ee29a88cc719d2ff1">LE_SMS_CDMA_SVC_CAT_STOCK_QUOTES</a>, 
+<br />
+  <a class="el" href="le__sms__interface_8h.html#a4d1e11633722ac519f2d8efb1178167caf185924712d97732ffad76a9d7aa824c">LE_SMS_CDMA_SVC_CAT_EMPLOYMENT_OPPORTUNITIES</a>, 
+<a class="el" href="le__sms__interface_8h.html#a4d1e11633722ac519f2d8efb1178167ca3bd2cc802451db6962d6d33a4d51b50a">LE_SMS_CDMA_SVC_CAT_MEDICAL</a>, 
+<a class="el" href="le__sms__interface_8h.html#a4d1e11633722ac519f2d8efb1178167caa44cbda1aaec5d12b0e6f4529d4fcd68">LE_SMS_CDMA_SVC_CAT_TECHNOLOGY_NEWS</a>, 
+<a class="el" href="le__sms__interface_8h.html#a4d1e11633722ac519f2d8efb1178167cacc71da12fcff1f0ceb58000830f19107">LE_SMS_CDMA_SVC_CAT_MULTI_CAT</a>, 
+<br />
+  <a class="el" href="le__sms__interface_8h.html#a4d1e11633722ac519f2d8efb1178167ca93013a59eed4f32eb1e9ae059b1cdda4">LE_SMS_CDMA_SVC_CAT_CATPT</a>, 
+<b>LE_SMS_CDMA_SVC_CAT_MAX</b>
+<br />
+ }</td></tr>
+<tr class="separator:a4d1e11633722ac519f2d8efb1178167c"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aeb77e45e90a8257c2b386428fa9397df"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#aeb77e45e90a8257c2b386428fa9397df">le_sms_ErrorCode3GPP2_t</a> { <br />
+  <a class="el" href="le__sms__interface_8h.html#aeb77e45e90a8257c2b386428fa9397dfa3069a7eea9b3a9a9a68d12f1aee8c01b">LE_SMS_ERROR_ADDR_VACANT</a>, 
+<a class="el" href="le__sms__interface_8h.html#aeb77e45e90a8257c2b386428fa9397dfa11443cf726a2516d30daf0975fbc9b00">LE_SMS_ERROR_ADDR_TRANSLATION_FAILURE</a>, 
+<a class="el" href="le__sms__interface_8h.html#aeb77e45e90a8257c2b386428fa9397dfadc54d89915a8f13b542392c4bd1ac54f">LE_SMS_ERROR_NETWORK_RESOURCE_SHORTAGE</a>, 
+<a class="el" href="le__sms__interface_8h.html#aeb77e45e90a8257c2b386428fa9397dfa74a40dce33e6f0f0fc8b8dfea83678cc">LE_SMS_ERROR_NETWORK_FAILURE</a>, 
+<br />
+  <a class="el" href="le__sms__interface_8h.html#aeb77e45e90a8257c2b386428fa9397dfa9eed9e6fd67eaeb811a31b7a32f5ca11">LE_SMS_ERROR_INVALID_TELESERVICE_ID</a>, 
+<a class="el" href="le__sms__interface_8h.html#aeb77e45e90a8257c2b386428fa9397dfaebf95494605aeca44a3972783a785175">LE_SMS_ERROR_NETWORK_OTHER</a>, 
+<a class="el" href="le__sms__interface_8h.html#aeb77e45e90a8257c2b386428fa9397dfa4b31b9969ad773d3d80ce3a50f767cfc">LE_SMS_ERROR_NO_PAGE_RESPONSE</a>, 
+<a class="el" href="le__sms__interface_8h.html#aeb77e45e90a8257c2b386428fa9397dfa3b311d90ceb65333c05f49f222e4baae">LE_SMS_ERROR_DEST_BUSY</a>, 
+<br />
+  <a class="el" href="le__sms__interface_8h.html#aeb77e45e90a8257c2b386428fa9397dfafc6f7027eaf2cea3462db0225684f866">LE_SMS_ERROR_NO_ACK</a>, 
+<a class="el" href="le__sms__interface_8h.html#aeb77e45e90a8257c2b386428fa9397dfae8e6a91885558a9f213e8ed9a18a1886">LE_SMS_ERROR_DEST_RESOURCE_SHORTAGE</a>, 
+<a class="el" href="le__sms__interface_8h.html#aeb77e45e90a8257c2b386428fa9397dfabda6fc462548d4549dfb75e8ec47ed23">LE_SMS_ERROR_SMS_DELIVERY_POSTPONED</a>, 
+<a class="el" href="le__sms__interface_8h.html#aeb77e45e90a8257c2b386428fa9397dfa96ae49ba1f57bf9fdb3754402b1082b3">LE_SMS_ERROR_DEST_OUT_OF_SERV</a>, 
+<br />
+  <a class="el" href="le__sms__interface_8h.html#aeb77e45e90a8257c2b386428fa9397dfae8b22a7d68867dc3d0e2368fa798099e">LE_SMS_ERROR_DEST_NOT_AT_ADDR</a>, 
+<a class="el" href="le__sms__interface_8h.html#aeb77e45e90a8257c2b386428fa9397dfafa34dc0e987f7aedfe754875477f7380">LE_SMS_ERROR_DEST_OTHER</a>, 
+<a class="el" href="le__sms__interface_8h.html#aeb77e45e90a8257c2b386428fa9397dfaea507c5a37a25f30e4bdf95f80239fb5">LE_SMS_ERROR_RADIO_IF_RESOURCE_SHORTAGE</a>, 
+<a class="el" href="le__sms__interface_8h.html#aeb77e45e90a8257c2b386428fa9397dfacb381d5d4bd15ac91f8a7f38905a36df">LE_SMS_ERROR_RADIO_IF_INCOMPATABILITY</a>, 
+<br />
+  <a class="el" href="le__sms__interface_8h.html#aeb77e45e90a8257c2b386428fa9397dfadcf31ba340503ce3f605030dfaddb3eb">LE_SMS_ERROR_RADIO_IF_OTHER</a>, 
+<a class="el" href="le__sms__interface_8h.html#aeb77e45e90a8257c2b386428fa9397dfa38ca09cb888bd51bb5c8c19fb9c1aab4">LE_SMS_ERROR_ENCODING</a>, 
+<a class="el" href="le__sms__interface_8h.html#aeb77e45e90a8257c2b386428fa9397dfab87ede1b50c6c3cc9be747edf7e2511d">LE_SMS_ERROR_SMS_ORIG_DENIED</a>, 
+<a class="el" href="le__sms__interface_8h.html#aeb77e45e90a8257c2b386428fa9397dfa85fa91d1725b6229b05a68c751b48e09">LE_SMS_ERROR_SMS_TERM_DENIED</a>, 
+<br />
+  <a class="el" href="le__sms__interface_8h.html#aeb77e45e90a8257c2b386428fa9397dfab5573ff1bd2b1a2ddae0ff6b4df7fd8a">LE_SMS_ERROR_SUPP_SERV_NOT_SUPP</a>, 
+<a class="el" href="le__sms__interface_8h.html#aeb77e45e90a8257c2b386428fa9397dfa16e5f8f40f88d2eaef991913f0bf0655">LE_SMS_ERROR_SMS_NOT_SUPP</a>, 
+<a class="el" href="le__sms__interface_8h.html#aeb77e45e90a8257c2b386428fa9397dfa3d84f3f3e0918fe9c0aac1f6c00359a8">LE_SMS_ERROR_MISSING_EXPECTED_PARAM</a>, 
+<a class="el" href="le__sms__interface_8h.html#aeb77e45e90a8257c2b386428fa9397dfa04b50427183c5a39b3416942a504771f">LE_SMS_ERROR_MISSING_MAND_PARAM</a>, 
+<br />
+  <a class="el" href="le__sms__interface_8h.html#aeb77e45e90a8257c2b386428fa9397dfa32a15ac94403911520f1cf9a8a2511cd">LE_SMS_ERROR_UNRECOGNIZED_PARAM_VAL</a>, 
+<a class="el" href="le__sms__interface_8h.html#aeb77e45e90a8257c2b386428fa9397dfa43f51da5ac89c31986eb1f0296236348">LE_SMS_ERROR_UNEXPECTED_PARAM_VAL</a>, 
+<a class="el" href="le__sms__interface_8h.html#aeb77e45e90a8257c2b386428fa9397dfac79b7c4b9f1c6f14c81f6f72a05e3931">LE_SMS_ERROR_USER_DATA_SIZE_ERR</a>, 
+<a class="el" href="le__sms__interface_8h.html#aeb77e45e90a8257c2b386428fa9397dfac0d6a3702a8e6b7e5d41e16cf9469559">LE_SMS_ERROR_GENERAL_OTHER</a>, 
+<br />
+  <a class="el" href="le__sms__interface_8h.html#aeb77e45e90a8257c2b386428fa9397dfa9d01f7e0eff05497837d8a23e95fbe3d">LE_SMS_ERROR_3GPP2_PLATFORM_SPECIFIC</a>, 
+<a class="el" href="le__sms__interface_8h.html#aeb77e45e90a8257c2b386428fa9397dfab63802607dd4ff17a59ff7dd32640561">LE_SMS_ERROR_3GPP2_MAX</a>
+<br />
+ }</td></tr>
+<tr class="separator:aeb77e45e90a8257c2b386428fa9397df"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a67bb87987a78f42c1d7192372463305e"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305e">le_sms_ErrorCode_t</a> { <br />
+  <a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305ea26469ea7cb41997513d9ad3c29bea7b9">LE_SMS_RP_ERROR_UNASSIGNED_NUMBER</a>, 
+<a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305ea69644439522bc9cc29f24b6c2b2e6317">LE_SMS_RP_ERROR_OPERATOR_DETERMINED_BARRING</a>, 
+<a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305ea6e54c6597ee96f353fa9ee12793a2963">LE_SMS_RP_ERROR_CALL_BARRED</a>, 
+<a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305ea1cea0bc480adeef1bcd5da9f45a3bd2c">LE_SMS_RP_ERROR_RESERVED</a>, 
+<br />
+  <a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305eac980e73fa0bdb725742742a97cbe812a">LE_SMS_RP_ERROR_SMS_TRANSFER_REJECTED</a>, 
+<a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305eae9d79ae6f657bf9495cd77e8d73577a8">LE_SMS_RP_ERROR_MEMORY_CAP_EXCEEDED</a>, 
+<a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305eaf48bacbdd0ffc07f3d32a90666f0f034">LE_SMS_RP_ERROR_DESTINATION_OUT_OF_ORDER</a>, 
+<a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305eadaae4a5ada1617f98b6d692694f06764">LE_SMS_RP_ERROR_UNIDENTIFIED_SUBSCRIBER</a>, 
+<br />
+  <a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305ea946fc7d11cff398d34ecb1936f2d5cc5">LE_SMS_RP_ERROR_FACILITY_REJECTED</a>, 
+<a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305ea5d00b68c253af7afa9d948069c8124e1">LE_SMS_RP_ERROR_UNKNOWN_SUBSCRIBER</a>, 
+<a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305ea7293082103e20a1f618cdae6ecd5d32d">LE_SMS_RP_ERROR_NETWORK_OUT_OF_ORDER</a>, 
+<a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305eaab13242146287557f50675afe6440513">LE_SMS_RP_ERROR_TEMPORARY_FAILURE</a>, 
+<br />
+  <a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305eac8ccfe2e6cef23f2e847e76e47d8357d">LE_SMS_RP_ERROR_CONGESTION</a>, 
+<a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305eabf541c28adabce273bfdffca35cccc97">LE_SMS_RP_ERROR_RESOURCES_UNAVAILABLE</a>, 
+<a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305eae63106efeecc7f63e9535de7aa7a5be8">LE_SMS_RP_ERROR_REQUESTED_FACILITY_NOT_SUBSCRIBED</a>, 
+<a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305ead4aad611385d801dd7641e3eadcf21ff">LE_SMS_RP_ERROR_REQUESTED_FACILITY_NOT_IMPLEMENTED</a>, 
+<br />
+  <a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305eaeff8eba73f1a87f3c2755579b179b2cb">LE_SMS_RP_ERROR_INVALID_SMS_TRANSFER_REFERENCE_VALUE</a>, 
+<a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305ea45322135d0b7b357df0ba45a8c8fafea">LE_SMS_RP_ERROR_SEMANTICALLY_INCORRECT_MESSAGE</a>, 
+<a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305ea79e3b59aa2bf713b226ac28e0044e33e">LE_SMS_RP_ERROR_INVALID_MANDATORY_INFO</a>, 
+<a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305ea6655cbe6291ef47a3e82e9242b40aebd">LE_SMS_RP_ERROR_MESSAGE_TYPE_NOT_IMPLEMENTED</a>, 
+<br />
+  <a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305ea4ada8a9e58225f53e8eec07ddeccbce2">LE_SMS_RP_ERROR_MESSAGE_NOT_COMPATABLE_WITH_SMS</a>, 
+<a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305eacadcba2389703b4fb8ed7f3b0f7f103c">LE_SMS_RP_ERROR_INFO_ELEMENT_NOT_IMPLEMENTED</a>, 
+<a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305eaf4872bd60bb54de06bef857d3f64a214">LE_SMS_RP_ERROR_PROTOCOL_ERROR</a>, 
+<a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305eab50a5b9da7cade7d2e2d93f81578d6e5">LE_SMS_RP_ERROR_INTERWORKING</a>, 
+<br />
+  <a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305ea7b138c36b955e2e49c55dc725dafe41e">LE_SMS_TP_ERROR_TELE_INTERWORKING_NOT_SUPPORTED</a>, 
+<a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305ea3d0c539a5140865b21f135298a4bd6a3">LE_SMS_TP_ERROR_SHORT_MESSAGE_TYPE_0_NOT_SUPPORTED</a>, 
+<a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305ea4efee0159b5cd037d07a4cd2e48db31f">LE_SMS_TP_ERROR_SHORT_MESSAGE_CANNOT_BE_REPLACED</a>, 
+<a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305eac5a013600a3b89936e09b4c8601d5cf2">LE_SMS_TP_ERROR_UNSPECIFIED_PID_ERROR</a>, 
+<br />
+  <a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305ea49204734cd1bffa274164b4f00f7435d">LE_SMS_TP_ERROR_DCS_NOT_SUPPORTED</a>, 
+<a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305eaf3023324980be6c0e1049c5a4894c602">LE_SMS_TP_ERROR_MESSAGE_CLASS_NOT_SUPPORTED</a>, 
+<a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305ea732473f3eac1f73220a9eb7c659c37bd">LE_SMS_TP_ERROR_UNSPECIFIED_DCS_ERROR</a>, 
+<a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305ea2561bc1f982718076443a68e34c0ad58">LE_SMS_TP_ERROR_COMMAND_CANNOT_BE_ACTIONED</a>, 
+<br />
+  <a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305ea00e5d9aaae4e418a6ade196da3ed7e18">LE_SMS_TP_ERROR_COMMAND_UNSUPPORTED</a>, 
+<a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305ea02611a74fa74100ff33e9470d1b17727">LE_SMS_TP_ERROR_UNSPECIFIED_COMMAND_ERROR</a>, 
+<a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305ea7bb7bcda9425fde4654a01c152e0a3c3">LE_SMS_TP_ERROR_TPDU_NOT_SUPPORTED</a>, 
+<a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305ea7eb7c4cee07b40c3462059d757b46044">LE_SMS_TP_ERROR_SC_BUSY</a>, 
+<br />
+  <a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305ea79bd936f4ebc30173917831ffb2ed695">LE_SMS_TP_ERROR_NO_SC_SUBSCRIPTION</a>, 
+<a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305ead4d9f099ff673f38abe45b10f8139b7a">LE_SMS_TP_ERROR_SC_SYS_FAILURE</a>, 
+<a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305ead0d038fffb6202e8c8880e998b706302">LE_SMS_TP_ERROR_INVALID_SME_ADDRESS</a>, 
+<a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305ea2292252b63178c656a7f3c8cc1662691">LE_SMS_TP_ERROR_DESTINATION_SME_BARRED</a>, 
+<br />
+  <a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305eaafb84552030009e7ff1c3995396ef15a">LE_SMS_TP_ERROR_SM_REJECTED_OR_DUPLICATE</a>, 
+<a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305eaa243b5f59bc92592b73274b7990ef656">LE_SMS_TP_ERROR_TP_VPF_NOT_SUPPORTED</a>, 
+<a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305ea85a6e40b46ab4179aa0e744744591326">LE_SMS_TP_ERROR_TP_VP_NOT_SUPPORTED</a>, 
+<a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305eacbeb3b2dd644f92d893a8e7e2da4370c">LE_SMS_TP_ERROR_SIM_SMS_STORAGE_FULL</a>, 
+<br />
+  <a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305eafb402181dea7da9ccb4214f3793428f9">LE_SMS_TP_ERROR_NO_SMS_STORAGE_CAP_IN_SIM</a>, 
+<a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305ea260c482ae2a77e7be596f68a27093cce">LE_SMS_TP_ERROR_MS_ERROR</a>, 
+<a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305ea0edd43feae63fbcd2cc279c9461bb553">LE_SMS_TP_ERROR_MEMORY_CAP_EXCEEDED</a>, 
+<a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305eacbf84818a3847743132223dfb05e3435">LE_SMS_TP_ERROR_SIM_APP_TOOLKIT_BUSY</a>, 
+<br />
+  <a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305ea4e0769fea8776b0990ed281897a4af17">LE_SMS_TP_ERROR_SIM_DATA_DOWNLOAD_ERROR</a>, 
+<a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305ea08005ab8fbe421dd62a7de20beb380e1">LE_SMS_TP_ERROR_UNSPECIFIED_ERROR</a>, 
+<a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305ea770a9e5f8652cc094bb532cd32f4f56f">LE_SMS_ERROR_3GPP_PLATFORM_SPECIFIC</a>, 
+<a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305ea8aa7f744a47b8ecda30b4d84b94216ae">LE_SMS_ERROR_3GPP_MAX</a>
+<br />
+ }</td></tr>
+<tr class="separator:a67bb87987a78f42c1d7192372463305e"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a1437987e5017d2159dc8dcbbbc50b953"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a1437987e5017d2159dc8dcbbbc50b953">le_sms_ConnectService</a> (void)</td></tr>
+<tr class="separator:a1437987e5017d2159dc8dcbbbc50b953"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a1e445b8db58402de8a97ca6ce42ad155"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a1e445b8db58402de8a97ca6ce42ad155">le_sms_DisconnectService</a> (void)</td></tr>
+<tr class="separator:a1e445b8db58402de8a97ca6ce42ad155"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a844d595f3ae8d170b2fff80d854abb8d"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__sms__interface_8h.html#a77d2607cc541bf0369e69bb2d105d4bf">le_sms_RxMessageHandlerRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a844d595f3ae8d170b2fff80d854abb8d">le_sms_AddRxMessageHandler</a> (<a class="el" href="le__sms__interface_8h.html#a6b6e7403719627629df41529916fa71b">le_sms_RxMessageHandlerFunc_t</a> handlerPtr, void *contextPtr)</td></tr>
+<tr class="separator:a844d595f3ae8d170b2fff80d854abb8d"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a2f474706ba6d7a40083fe1f50f530101"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a2f474706ba6d7a40083fe1f50f530101">le_sms_RemoveRxMessageHandler</a> (<a class="el" href="le__sms__interface_8h.html#a77d2607cc541bf0369e69bb2d105d4bf">le_sms_RxMessageHandlerRef_t</a> addHandlerRef)</td></tr>
+<tr class="separator:a2f474706ba6d7a40083fe1f50f530101"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a668abcbcff2f1f3c5cdf799315a81058"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a668abcbcff2f1f3c5cdf799315a81058">le_sms_Create</a> (void)</td></tr>
+<tr class="separator:a668abcbcff2f1f3c5cdf799315a81058"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a2b14febf0e2285b0b3c2dbcd1c2bb7b0"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a2b14febf0e2285b0b3c2dbcd1c2bb7b0">le_sms_SetTimeout</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef, uint32_t timeout)</td></tr>
+<tr class="separator:a2b14febf0e2285b0b3c2dbcd1c2bb7b0"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a145d3215f5601b88ef80b2674a9df226"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a145d3215f5601b88ef80b2674a9df226">le_sms_SetDestination</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef, const char *dest)</td></tr>
+<tr class="separator:a145d3215f5601b88ef80b2674a9df226"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a34dc999430c46530d6c9067f800c5d72"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a34dc999430c46530d6c9067f800c5d72">le_sms_SetText</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef, const char *text)</td></tr>
+<tr class="separator:a34dc999430c46530d6c9067f800c5d72"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a2abf46b6d57c473bb06caf701a04183e"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a2abf46b6d57c473bb06caf701a04183e">le_sms_SetBinary</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef, const uint8_t *binPtr, size_t binNumElements)</td></tr>
+<tr class="separator:a2abf46b6d57c473bb06caf701a04183e"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ab7295e1cdf2adb865135d657ec8bde09"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#ab7295e1cdf2adb865135d657ec8bde09">le_sms_SetPDU</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef, const uint8_t *pduPtr, size_t pduNumElements)</td></tr>
+<tr class="separator:ab7295e1cdf2adb865135d657ec8bde09"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ab7dee7d2c74cfcadd9ea0d5fe1786dfc"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#ab7dee7d2c74cfcadd9ea0d5fe1786dfc">le_sms_Send</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef)</td></tr>
+<tr class="separator:ab7dee7d2c74cfcadd9ea0d5fe1786dfc"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a0ba61dcf10157e9982702373577c6b45"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a0ba61dcf10157e9982702373577c6b45">le_sms_SendAsync</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef, <a class="el" href="le__sms__interface_8h.html#a01aa759eb07ab9e8c4a5e0a6d0c7e942">le_sms_CallbackResultFunc_t</a> handlerPtr, void *contextPtr)</td></tr>
+<tr class="separator:a0ba61dcf10157e9982702373577c6b45"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a46afe91bbded617ad444ea29a9dd910a"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__sms__interface_8h.html#aeb77e45e90a8257c2b386428fa9397df">le_sms_ErrorCode3GPP2_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a46afe91bbded617ad444ea29a9dd910a">le_sms_Get3GPP2ErrorCode</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef)</td></tr>
+<tr class="separator:a46afe91bbded617ad444ea29a9dd910a"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a9ee511af99c91383344debf532fae1ae"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a9ee511af99c91383344debf532fae1ae">le_sms_GetErrorCode</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef, <a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305e">le_sms_ErrorCode_t</a> *rpCausePtr, <a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305e">le_sms_ErrorCode_t</a> *tpCausePtr)</td></tr>
+<tr class="separator:a9ee511af99c91383344debf532fae1ae"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a9cfbc2131df38f99272a71bf05cb1254"><td align="right" class="memItemLeft" valign="top">int32_t </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a9cfbc2131df38f99272a71bf05cb1254">le_sms_GetPlatformSpecificErrorCode</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef)</td></tr>
+<tr class="separator:a9cfbc2131df38f99272a71bf05cb1254"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a4bf9a993afcf06f8e9927b534ef9861c"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a4bf9a993afcf06f8e9927b534ef9861c">le_sms_SendText</a> (const char *destStr, const char *textStr, <a class="el" href="le__sms__interface_8h.html#a01aa759eb07ab9e8c4a5e0a6d0c7e942">le_sms_CallbackResultFunc_t</a> handlerPtr, void *contextPtr)</td></tr>
+<tr class="separator:a4bf9a993afcf06f8e9927b534ef9861c"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a8e6e66ff683717a8cd3eb20fc6efe6e0"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a8e6e66ff683717a8cd3eb20fc6efe6e0">le_sms_SendPdu</a> (const uint8_t *pduPtr, size_t pduNumElements, <a class="el" href="le__sms__interface_8h.html#a01aa759eb07ab9e8c4a5e0a6d0c7e942">le_sms_CallbackResultFunc_t</a> handlerPtr, void *contextPtr)</td></tr>
+<tr class="separator:a8e6e66ff683717a8cd3eb20fc6efe6e0"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aca1691010c88995cb47225f2889910fa"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#aca1691010c88995cb47225f2889910fa">le_sms_Delete</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef)</td></tr>
+<tr class="separator:aca1691010c88995cb47225f2889910fa"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a5c2b8ce7043b4732c7b0ede7c5d7118c"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__sms__interface_8h.html#a337778c44e63660c44fa2116699296c0">le_sms_Format_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a5c2b8ce7043b4732c7b0ede7c5d7118c">le_sms_GetFormat</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef)</td></tr>
+<tr class="separator:a5c2b8ce7043b4732c7b0ede7c5d7118c"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a2a63c6b5179025a80fb86c7f188e1eb7"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__sms__interface_8h.html#a9001c5bc939bda5d5865e363bdf7662c">le_sms_Type_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a2a63c6b5179025a80fb86c7f188e1eb7">le_sms_GetType</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef)</td></tr>
+<tr class="separator:a2a63c6b5179025a80fb86c7f188e1eb7"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aa28c1d04ff19b88100b766737610b128"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#aa28c1d04ff19b88100b766737610b128">le_sms_GetCellBroadcastId</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef, uint16_t *messageIdPtr)</td></tr>
+<tr class="separator:aa28c1d04ff19b88100b766737610b128"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aa3e075b4a9396b2e4af233e4543f40bd"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#aa3e075b4a9396b2e4af233e4543f40bd">le_sms_GetCellBroadcastSerialNumber</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef, uint16_t *serialNumberPtr)</td></tr>
+<tr class="separator:aa3e075b4a9396b2e4af233e4543f40bd"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a68bfd509a8a3fd4ae39bde7ac5c32d8d"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a68bfd509a8a3fd4ae39bde7ac5c32d8d">le_sms_GetSenderTel</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef, char *tel, size_t telNumElements)</td></tr>
+<tr class="separator:a68bfd509a8a3fd4ae39bde7ac5c32d8d"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aca83e53998bd7105e14011af41ba6499"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#aca83e53998bd7105e14011af41ba6499">le_sms_GetTimeStamp</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef, char *timestamp, size_t timestampNumElements)</td></tr>
+<tr class="separator:aca83e53998bd7105e14011af41ba6499"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a6165464dd3502b3c76b79b32206ba10f"><td align="right" class="memItemLeft" valign="top">size_t </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a6165464dd3502b3c76b79b32206ba10f">le_sms_GetUserdataLen</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef)</td></tr>
+<tr class="separator:a6165464dd3502b3c76b79b32206ba10f"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ac598dec158aed1e9fa134daf22c704db"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#ac598dec158aed1e9fa134daf22c704db">le_sms_GetText</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef, char *text, size_t textNumElements)</td></tr>
+<tr class="separator:ac598dec158aed1e9fa134daf22c704db"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a0de50069a9df99adac983385106d9c09"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a0de50069a9df99adac983385106d9c09">le_sms_GetBinary</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef, uint8_t *binPtr, size_t *binNumElementsPtr)</td></tr>
+<tr class="separator:a0de50069a9df99adac983385106d9c09"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ae4b284d427ab7ec637056a6208fdd89e"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#ae4b284d427ab7ec637056a6208fdd89e">le_sms_GetPDU</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef, uint8_t *pduPtr, size_t *pduNumElementsPtr)</td></tr>
+<tr class="separator:ae4b284d427ab7ec637056a6208fdd89e"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:abb89b302e564f3d55d604bb0c0dda022"><td align="right" class="memItemLeft" valign="top">size_t </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#abb89b302e564f3d55d604bb0c0dda022">le_sms_GetPDULen</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef)</td></tr>
+<tr class="separator:abb89b302e564f3d55d604bb0c0dda022"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aff755186b683b94ba2788b48e28284a3"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#aff755186b683b94ba2788b48e28284a3">le_sms_DeleteFromStorage</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef)</td></tr>
+<tr class="separator:aff755186b683b94ba2788b48e28284a3"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aee4328f9e417108fa16794cc135073d0"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__sms__interface_8h.html#afd91170c5ea21ec7ca98f7ce95049dae">le_sms_MsgListRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#aee4328f9e417108fa16794cc135073d0">le_sms_CreateRxMsgList</a> (void)</td></tr>
+<tr class="separator:aee4328f9e417108fa16794cc135073d0"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a4027c05c4ee7552ab0e081caa315c8a2"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a4027c05c4ee7552ab0e081caa315c8a2">le_sms_DeleteList</a> (<a class="el" href="le__sms__interface_8h.html#afd91170c5ea21ec7ca98f7ce95049dae">le_sms_MsgListRef_t</a> msgListRef)</td></tr>
+<tr class="separator:a4027c05c4ee7552ab0e081caa315c8a2"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a934253dee33a6090656876cff853b2c6"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a934253dee33a6090656876cff853b2c6">le_sms_GetFirst</a> (<a class="el" href="le__sms__interface_8h.html#afd91170c5ea21ec7ca98f7ce95049dae">le_sms_MsgListRef_t</a> msgListRef)</td></tr>
+<tr class="separator:a934253dee33a6090656876cff853b2c6"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ac3b6a30a6d4e4f21749b536184b836ec"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#ac3b6a30a6d4e4f21749b536184b836ec">le_sms_GetNext</a> (<a class="el" href="le__sms__interface_8h.html#afd91170c5ea21ec7ca98f7ce95049dae">le_sms_MsgListRef_t</a> msgListRef)</td></tr>
+<tr class="separator:ac3b6a30a6d4e4f21749b536184b836ec"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ae1843c72eca77cd6da94cb686e5c2ae8"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__sms__interface_8h.html#a18a1937acb5878ae01a9d668fe5070b6">le_sms_Status_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#ae1843c72eca77cd6da94cb686e5c2ae8">le_sms_GetStatus</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef)</td></tr>
+<tr class="separator:ae1843c72eca77cd6da94cb686e5c2ae8"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a3dbd11952804520512fed270d183461d"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a3dbd11952804520512fed270d183461d">le_sms_MarkRead</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef)</td></tr>
+<tr class="separator:a3dbd11952804520512fed270d183461d"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a6ef04e331af6563b79e77bb51b28bc55"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a6ef04e331af6563b79e77bb51b28bc55">le_sms_MarkUnread</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef)</td></tr>
+<tr class="separator:a6ef04e331af6563b79e77bb51b28bc55"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aeef8f1ac8d2aa3f512e15c054e024bea"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#aeef8f1ac8d2aa3f512e15c054e024bea">le_sms_GetSmsCenterAddress</a> (char *tel, size_t telNumElements)</td></tr>
+<tr class="separator:aeef8f1ac8d2aa3f512e15c054e024bea"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a5df138c515944ce955dd54689593b5df"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a5df138c515944ce955dd54689593b5df">le_sms_SetSmsCenterAddress</a> (const char *tel)</td></tr>
+<tr class="separator:a5df138c515944ce955dd54689593b5df"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a4607c63f325465d078514b5682347c7f"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a4607c63f325465d078514b5682347c7f">le_sms_ActivateCellBroadcast</a> (void)</td></tr>
+<tr class="separator:a4607c63f325465d078514b5682347c7f"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aa57c2f717c71b33e93f278673a7806e9"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#aa57c2f717c71b33e93f278673a7806e9">le_sms_DeactivateCellBroadcast</a> (void)</td></tr>
+<tr class="separator:aa57c2f717c71b33e93f278673a7806e9"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a45a160fea5a8f6cd195e3aff33830602"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a45a160fea5a8f6cd195e3aff33830602">le_sms_ActivateCdmaCellBroadcast</a> (void)</td></tr>
+<tr class="separator:a45a160fea5a8f6cd195e3aff33830602"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a26d43a50652431063e0a8e4d88fdba86"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a26d43a50652431063e0a8e4d88fdba86">le_sms_DeactivateCdmaCellBroadcast</a> (void)</td></tr>
+<tr class="separator:a26d43a50652431063e0a8e4d88fdba86"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aae87dacecc438ea9182d370895e5cb3f"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#aae87dacecc438ea9182d370895e5cb3f">le_sms_AddCellBroadcastIds</a> (uint16_t fromId, uint16_t toId)</td></tr>
+<tr class="separator:aae87dacecc438ea9182d370895e5cb3f"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a656fefe815bb965e10087ee65b59faa0"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a656fefe815bb965e10087ee65b59faa0">le_sms_RemoveCellBroadcastIds</a> (uint16_t fromId, uint16_t toId)</td></tr>
+<tr class="separator:a656fefe815bb965e10087ee65b59faa0"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ae3333cbf700035067f2dae8ea0e564d0"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#ae3333cbf700035067f2dae8ea0e564d0">le_sms_ClearCellBroadcastIds</a> (void)</td></tr>
+<tr class="separator:ae3333cbf700035067f2dae8ea0e564d0"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ad57196114a634f36b057a9cfbcb7d58a"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#ad57196114a634f36b057a9cfbcb7d58a">le_sms_AddCdmaCellBroadcastServices</a> (<a class="el" href="le__sms__interface_8h.html#a4d1e11633722ac519f2d8efb1178167c">le_sms_CdmaServiceCat_t</a> serviceCat, <a class="el" href="le__sms__interface_8h.html#ad4ba75a2c1d118cd46ca5e8428fb5ddb">le_sms_Languages_t</a> language)</td></tr>
+<tr class="separator:ad57196114a634f36b057a9cfbcb7d58a"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ae7c58d4ed9ff586d2403232b0cda99e7"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#ae7c58d4ed9ff586d2403232b0cda99e7">le_sms_RemoveCdmaCellBroadcastServices</a> (<a class="el" href="le__sms__interface_8h.html#a4d1e11633722ac519f2d8efb1178167c">le_sms_CdmaServiceCat_t</a> serviceCat, <a class="el" href="le__sms__interface_8h.html#ad4ba75a2c1d118cd46ca5e8428fb5ddb">le_sms_Languages_t</a> language)</td></tr>
+<tr class="separator:ae7c58d4ed9ff586d2403232b0cda99e7"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ac737aaab68b6fa1d51a21b518ad112a9"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#ac737aaab68b6fa1d51a21b518ad112a9">le_sms_ClearCdmaCellBroadcastServices</a> (void)</td></tr>
+<tr class="separator:ac737aaab68b6fa1d51a21b518ad112a9"><td class="memSeparator" colspan="2"> </td></tr>
+</table>
+<a id="details" name="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Legato <a class="el" href="c_sms.html">SMS</a> include file.</p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="a5bf62f998e950de37b56813d8c5d9b95"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_SMS_BINARY_MAX_BYTES   140</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>The raw binary message can be up to 140 bytes long. </p>
+</div>
+</div>
+<a class="anchor" id="aaa740f36bbc6d13d0b355d3dc2d8d4dc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_SMS_PDU_MAX_BYTES   176</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>The PDU message can be up to 36 (header) + 140 (payload) bytes long. </p>
+</div>
+</div>
+<a class="anchor" id="afda7337666a02e3404152412acb89f75"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_SMS_PDU_MAX_PAYLOAD   140</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>The PDU payload bytes long. </p>
+</div>
+</div>
+<a class="anchor" id="a0dc5c2cec7c1fb166c47393fbb07e43f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_SMS_TEXT_MAX_BYTES   161</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Test message string length (including the null-terminator). </p>
+</div>
+</div>
+<a class="anchor" id="ac1b7b4dad3b9f7f1fe602494123a10b0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_SMS_TEXT_MAX_LEN   160</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>The text message can be up to 160 characters long. One extra byte is added for the null character. </p>
+</div>
+</div>
+<a class="anchor" id="a9844280f515fbc2b393844e63aa83075"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_SMS_TIMESTAMP_MAX_BYTES   21</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Time stamp string length (including the null-terminator). </p>
+</div>
+</div>
+<a class="anchor" id="accabf44fe7d9f2b85b807eee8da276c3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_SMS_TIMESTAMP_MAX_LEN   20</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Time stamp string length. The string format is "yy/MM/dd,hh:mm:ss+/-zz" (Year/Month/Day,Hour:Min:Seconds+/-TimeZone). One extra byte is added for the null character. </p>
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a class="anchor" id="a01aa759eb07ab9e8c4a5e0a6d0c7e942"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef void(* le_sms_CallbackResultFunc_t) (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef, <a class="el" href="le__sms__interface_8h.html#a18a1937acb5878ae01a9d668fe5070b6">le_sms_Status_t</a> status, void *contextPtr)</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Handler for Sending result.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramname">msgRef</td><td>Reference to the message object. </td></tr>
+<tr><td class="paramname">status</td><td>Status result. </td></tr>
+<tr><td class="paramname">contextPtr</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="afd91170c5ea21ec7ca98f7ce95049dae"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef struct le_sms_MsgList* <a class="el" href="le__sms__interface_8h.html#afd91170c5ea21ec7ca98f7ce95049dae">le_sms_MsgListRef_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Opaque type for SMS Message Listing. </p>
+</div>
+</div>
+<a class="anchor" id="a8eb2a15362fe26516fc68fd7a7d5e3e7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef struct le_sms_Msg* <a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Declare a reference type for referring to SMS Message objects. </p>
+</div>
+</div>
+<a class="anchor" id="a6b6e7403719627629df41529916fa71b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef void(* le_sms_RxMessageHandlerFunc_t) (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef, void *contextPtr)</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Handler for New Message.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramname">msgRef</td><td>Message reference. </td></tr>
+<tr><td class="paramname">contextPtr</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a77d2607cc541bf0369e69bb2d105d4bf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef struct le_sms_RxMessageHandler* <a class="el" href="le__sms__interface_8h.html#a77d2607cc541bf0369e69bb2d105d4bf">le_sms_RxMessageHandlerRef_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Reference type used by Add/Remove functions for EVENT 'le_sms_RxMessage' </p>
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a class="anchor" id="a4d1e11633722ac519f2d8efb1178167c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="le__sms__interface_8h.html#a4d1e11633722ac519f2d8efb1178167c">le_sms_CdmaServiceCat_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>CDMA Cell broadcast Service Categories. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a4d1e11633722ac519f2d8efb1178167ca745c1a522cc4202e9c42ef90791cbe5b"></a>LE_SMS_CDMA_SVC_CAT_UNKNOWN </td><td class="fielddoc">
+<p>Unknown or Unspecified. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a4d1e11633722ac519f2d8efb1178167ca6ac396b3ea8ef66b0cc4b639d2034f28"></a>LE_SMS_CDMA_SVC_CAT_EMERGENCY_BROADCAST </td><td class="fielddoc">
+<p>Emergency Broadcast. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a4d1e11633722ac519f2d8efb1178167cab71a684337eb7f63ac2bfc47321055ff"></a>LE_SMS_CDMA_SVC_CAT_ADMINISTRATIVE </td><td class="fielddoc">
+<p>Administrative. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a4d1e11633722ac519f2d8efb1178167cabce7ed0ea9dfeebb1cc0b51f76f2dd74"></a>LE_SMS_CDMA_SVC_CAT_MAINTENANCE </td><td class="fielddoc">
+<p>Maintenance. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a4d1e11633722ac519f2d8efb1178167ca112d5136b5a851348eadcf1fb1b34469"></a>LE_SMS_CDMA_SVC_CAT_GENERAL_NEWS_LOCAL </td><td class="fielddoc">
+<p>General News Local. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a4d1e11633722ac519f2d8efb1178167ca486d33af6c2dccbdbdbfa7c1bc6085dc"></a>LE_SMS_CDMA_SVC_CAT_GENERAL_NEWS_REGIONAL </td><td class="fielddoc">
+<p>General News Regional. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a4d1e11633722ac519f2d8efb1178167cab2b3426f0c2023076ab95fd9ccfbbe5b"></a>LE_SMS_CDMA_SVC_CAT_GENERAL_NEWS_NATIONAL </td><td class="fielddoc">
+<p>General News National. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a4d1e11633722ac519f2d8efb1178167cae066589e00cd71c81b2f53061e63262e"></a>LE_SMS_CDMA_SVC_CAT_GENERAL_NEWS_INTERNATIONAL </td><td class="fielddoc">
+<p>General News International. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a4d1e11633722ac519f2d8efb1178167ca94d8af66d8b5af6d442c1203dcd3912b"></a>LE_SMS_CDMA_SVC_CAT_BUSINESS_NEWS_LOCAL </td><td class="fielddoc">
+<p>Business News Local. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a4d1e11633722ac519f2d8efb1178167ca8e886e0ed0e05a41f26fb6ce4f0045e7"></a>LE_SMS_CDMA_SVC_CAT_BUSINESS_NEWS_REGIONAL </td><td class="fielddoc">
+<p>Business News Regional. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a4d1e11633722ac519f2d8efb1178167ca0ab2ef7e378fad7fbdfe481fe2b59fce"></a>LE_SMS_CDMA_SVC_CAT_BUSINESS_NEWS_NATIONAL </td><td class="fielddoc">
+<p>Business News National. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a4d1e11633722ac519f2d8efb1178167ca8a2d2a021deca7c77a0e1f3cc6ab7c47"></a>LE_SMS_CDMA_SVC_CAT_BUSINESS_NEWS_INTERNATIONAL </td><td class="fielddoc">
+<p>Business News International. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a4d1e11633722ac519f2d8efb1178167caa28e220f37e3754d40a1f1b6961eb606"></a>LE_SMS_CDMA_SVC_CAT_SPORTS_NEWS_LOCAL </td><td class="fielddoc">
+<p>Sports News Local. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a4d1e11633722ac519f2d8efb1178167ca02f49ceb4fe720459625255f019f4a8d"></a>LE_SMS_CDMA_SVC_CAT_SPORTS_NEWS_REGIONAL </td><td class="fielddoc">
+<p>Sports News Regional. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a4d1e11633722ac519f2d8efb1178167cab20f62fb8e026d5a7e608aee4bed8870"></a>LE_SMS_CDMA_SVC_CAT_SPORTS_NEWS_NATIONAL </td><td class="fielddoc">
+<p>Sports News National. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a4d1e11633722ac519f2d8efb1178167ca5839cd80d1638c6ec320aa382c89cc4d"></a>LE_SMS_CDMA_SVC_CAT_SPORTS_NEWS_INTERNATIONAL </td><td class="fielddoc">
+<p>Sports News International. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a4d1e11633722ac519f2d8efb1178167caefd627fa7218c224eca1fcb148077eed"></a>LE_SMS_CDMA_SVC_CAT_ENTERTAINMENT_NEWS_LOCAL </td><td class="fielddoc">
+<p>Entertainment News Local. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a4d1e11633722ac519f2d8efb1178167ca7220ef8a87ecf2428f75778a4da47f72"></a>LE_SMS_CDMA_SVC_CAT_ENTERTAINMENT_NEWS_REGIONAL </td><td class="fielddoc">
+<p>Entertainment News Regional. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a4d1e11633722ac519f2d8efb1178167cad4e74bd82acbedf2bb8366fc5f781237"></a>LE_SMS_CDMA_SVC_CAT_ENTERTAINMENT_NEWS_NATIONAL </td><td class="fielddoc">
+<p>Entertainment News National. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a4d1e11633722ac519f2d8efb1178167ca85b55ece9323db1fe0798a459b871ae0"></a>LE_SMS_CDMA_SVC_CAT_ENTERTAINMENT_NEWS_INTERNATIONAL </td><td class="fielddoc">
+<p>Entertainment News International. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a4d1e11633722ac519f2d8efb1178167cabc377330c9a1d24b935dddc1d337cc04"></a>LE_SMS_CDMA_SVC_CAT_LOCAL_WEATHER </td><td class="fielddoc">
+<p>Local weather. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a4d1e11633722ac519f2d8efb1178167ca13b9fbc43ce7b4e5f5e26ca36e1075c2"></a>LE_SMS_CDMA_SVC_CAT_TRAFFIC_REPORTS </td><td class="fielddoc">
+<p>Area Traffic Reports. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a4d1e11633722ac519f2d8efb1178167caf861e234fe4b48a302c6569f34c26d67"></a>LE_SMS_CDMA_SVC_CAT_LOCAL_FLIGHT_SCHEDULES </td><td class="fielddoc">
+<p>Local Airplane Flight Schedules. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a4d1e11633722ac519f2d8efb1178167ca85ce64c2470a6f743b28b9aedaba00d6"></a>LE_SMS_CDMA_SVC_CAT_RESTAURANTS </td><td class="fielddoc">
+<p>Restaurants. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a4d1e11633722ac519f2d8efb1178167ca2177833a1bc86c087c70ed45fa8e60f3"></a>LE_SMS_CDMA_SVC_CAT_LODGINGS </td><td class="fielddoc">
+<p>Lodgings. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a4d1e11633722ac519f2d8efb1178167ca4ad2923be0ced140783a5e0024dd9cc4"></a>LE_SMS_CDMA_SVC_CAT_RETAIL_DIRECTORY </td><td class="fielddoc">
+<p>Retail Directory. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a4d1e11633722ac519f2d8efb1178167caea54439fbdcdbd2589d7f65a6f58856b"></a>LE_SMS_CDMA_SVC_CAT_ADVERTISEMENTS </td><td class="fielddoc">
+<p>Advertisements. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a4d1e11633722ac519f2d8efb1178167ca964fa5b3596b749ee29a88cc719d2ff1"></a>LE_SMS_CDMA_SVC_CAT_STOCK_QUOTES </td><td class="fielddoc">
+<p>Stock Quotes. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a4d1e11633722ac519f2d8efb1178167caf185924712d97732ffad76a9d7aa824c"></a>LE_SMS_CDMA_SVC_CAT_EMPLOYMENT_OPPORTUNITIES </td><td class="fielddoc">
+<p>Employment Opportunities. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a4d1e11633722ac519f2d8efb1178167ca3bd2cc802451db6962d6d33a4d51b50a"></a>LE_SMS_CDMA_SVC_CAT_MEDICAL </td><td class="fielddoc">
+<p>Medical/Health/Hospitals. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a4d1e11633722ac519f2d8efb1178167caa44cbda1aaec5d12b0e6f4529d4fcd68"></a>LE_SMS_CDMA_SVC_CAT_TECHNOLOGY_NEWS </td><td class="fielddoc">
+<p>Technology News. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a4d1e11633722ac519f2d8efb1178167cacc71da12fcff1f0ceb58000830f19107"></a>LE_SMS_CDMA_SVC_CAT_MULTI_CAT </td><td class="fielddoc">
+<p>Multicategory. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a4d1e11633722ac519f2d8efb1178167ca93013a59eed4f32eb1e9ae059b1cdda4"></a>LE_SMS_CDMA_SVC_CAT_CATPT </td><td class="fielddoc">
+<p>Card Application Toolkit Protocol Teleservice. </p>
+</td></tr>
+</table>
+</div>
+</div>
+<a class="anchor" id="aeb77e45e90a8257c2b386428fa9397df"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="le__sms__interface_8h.html#aeb77e45e90a8257c2b386428fa9397df">le_sms_ErrorCode3GPP2_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>3GPP2 Message Error code when the message sending has failed. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="aeb77e45e90a8257c2b386428fa9397dfa3069a7eea9b3a9a9a68d12f1aee8c01b"></a>LE_SMS_ERROR_ADDR_VACANT </td><td class="fielddoc">
+<p>The SMS Destination Address is valid but is not. currently allocated to an SMS terminal. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aeb77e45e90a8257c2b386428fa9397dfa11443cf726a2516d30daf0975fbc9b00"></a>LE_SMS_ERROR_ADDR_TRANSLATION_FAILURE </td><td class="fielddoc">
+<p>The SMS Destination Address is invalid. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aeb77e45e90a8257c2b386428fa9397dfadc54d89915a8f13b542392c4bd1ac54f"></a>LE_SMS_ERROR_NETWORK_RESOURCE_SHORTAGE </td><td class="fielddoc">
+<p>The network transmission failed due to lack of a network resource or link capacity. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aeb77e45e90a8257c2b386428fa9397dfa74a40dce33e6f0f0fc8b8dfea83678cc"></a>LE_SMS_ERROR_NETWORK_FAILURE </td><td class="fielddoc">
+<p>A network node failed, a link failed, or a required operation failed. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aeb77e45e90a8257c2b386428fa9397dfa9eed9e6fd67eaeb811a31b7a32f5ca11"></a>LE_SMS_ERROR_INVALID_TELESERVICE_ID </td><td class="fielddoc">
+<p>The SMS_TeleserviceIdentifier is not known, is not supported, or is not authorized by an addressed functional entity. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aeb77e45e90a8257c2b386428fa9397dfaebf95494605aeca44a3972783a785175"></a>LE_SMS_ERROR_NETWORK_OTHER </td><td class="fielddoc">
+<p>A network problem other than identified above. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aeb77e45e90a8257c2b386428fa9397dfa4b31b9969ad773d3d80ce3a50f767cfc"></a>LE_SMS_ERROR_NO_PAGE_RESPONSE </td><td class="fielddoc">
+<p>The addressed MS-based SME is known, but it does not respond to a page. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aeb77e45e90a8257c2b386428fa9397dfa3b311d90ceb65333c05f49f222e4baae"></a>LE_SMS_ERROR_DEST_BUSY </td><td class="fielddoc">
+<p>The destination MS-based SME is SMS capable, but is currently engaged in a call, a service, or a call mode that precludes the use of SMS, or the destination SME is congested. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aeb77e45e90a8257c2b386428fa9397dfafc6f7027eaf2cea3462db0225684f866"></a>LE_SMS_ERROR_NO_ACK </td><td class="fielddoc">
+<p>The destination SME does not acknowledge receipt of the SMS delivery. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aeb77e45e90a8257c2b386428fa9397dfae8e6a91885558a9f213e8ed9a18a1886"></a>LE_SMS_ERROR_DEST_RESOURCE_SHORTAGE </td><td class="fielddoc">
+<p>A required terminal resource is not available to process this message. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aeb77e45e90a8257c2b386428fa9397dfabda6fc462548d4549dfb75e8ec47ed23"></a>LE_SMS_ERROR_SMS_DELIVERY_POSTPONED </td><td class="fielddoc">
+<p>Delivery is not currently possible. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aeb77e45e90a8257c2b386428fa9397dfa96ae49ba1f57bf9fdb3754402b1082b3"></a>LE_SMS_ERROR_DEST_OUT_OF_SERV </td><td class="fielddoc">
+<p>The addressed destination is out of service for an extended period of time. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aeb77e45e90a8257c2b386428fa9397dfae8b22a7d68867dc3d0e2368fa798099e"></a>LE_SMS_ERROR_DEST_NOT_AT_ADDR </td><td class="fielddoc">
+<p>The MS-based SME is no longer at the temporary SMS routing address. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aeb77e45e90a8257c2b386428fa9397dfafa34dc0e987f7aedfe754875477f7380"></a>LE_SMS_ERROR_DEST_OTHER </td><td class="fielddoc">
+<p>A terminal problem other than described above. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aeb77e45e90a8257c2b386428fa9397dfaea507c5a37a25f30e4bdf95f80239fb5"></a>LE_SMS_ERROR_RADIO_IF_RESOURCE_SHORTAGE </td><td class="fielddoc">
+<p>There is no channel available or there is radio congestion at this time. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aeb77e45e90a8257c2b386428fa9397dfacb381d5d4bd15ac91f8a7f38905a36df"></a>LE_SMS_ERROR_RADIO_IF_INCOMPATABILITY </td><td class="fielddoc">
+<p>The MS for an MS-based SME is operating in a mode that does not support SMS at this time. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aeb77e45e90a8257c2b386428fa9397dfadcf31ba340503ce3f605030dfaddb3eb"></a>LE_SMS_ERROR_RADIO_IF_OTHER </td><td class="fielddoc">
+<p>A radio interface problem to an MS-based SME other than described above. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aeb77e45e90a8257c2b386428fa9397dfa38ca09cb888bd51bb5c8c19fb9c1aab4"></a>LE_SMS_ERROR_ENCODING </td><td class="fielddoc">
+<p>The size of a parameter or field is not what is expected. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aeb77e45e90a8257c2b386428fa9397dfab87ede1b50c6c3cc9be747edf7e2511d"></a>LE_SMS_ERROR_SMS_ORIG_DENIED </td><td class="fielddoc">
+<p>The originating MIN is not recognized. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aeb77e45e90a8257c2b386428fa9397dfa85fa91d1725b6229b05a68c751b48e09"></a>LE_SMS_ERROR_SMS_TERM_DENIED </td><td class="fielddoc">
+<p>The destination is not authorized to receive the SMS message. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aeb77e45e90a8257c2b386428fa9397dfab5573ff1bd2b1a2ddae0ff6b4df7fd8a"></a>LE_SMS_ERROR_SUPP_SERV_NOT_SUPP </td><td class="fielddoc">
+<p>The originating supplementary service is not known or supported. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aeb77e45e90a8257c2b386428fa9397dfa16e5f8f40f88d2eaef991913f0bf0655"></a>LE_SMS_ERROR_SMS_NOT_SUPP </td><td class="fielddoc">
+<p>The originating supplementary service is not known or supported. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aeb77e45e90a8257c2b386428fa9397dfa3d84f3f3e0918fe9c0aac1f6c00359a8"></a>LE_SMS_ERROR_MISSING_EXPECTED_PARAM </td><td class="fielddoc">
+<p>An optional parameter that is required for a particular function. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aeb77e45e90a8257c2b386428fa9397dfa04b50427183c5a39b3416942a504771f"></a>LE_SMS_ERROR_MISSING_MAND_PARAM </td><td class="fielddoc">
+<p>A parameter is missing that is mandatory. for a particular message. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aeb77e45e90a8257c2b386428fa9397dfa32a15ac94403911520f1cf9a8a2511cd"></a>LE_SMS_ERROR_UNRECOGNIZED_PARAM_VAL </td><td class="fielddoc">
+<p>A known parameter has an unknown or unsupported value. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aeb77e45e90a8257c2b386428fa9397dfa43f51da5ac89c31986eb1f0296236348"></a>LE_SMS_ERROR_UNEXPECTED_PARAM_VAL </td><td class="fielddoc">
+<p>A known parameter has a known but unexpected value. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aeb77e45e90a8257c2b386428fa9397dfac79b7c4b9f1c6f14c81f6f72a05e3931"></a>LE_SMS_ERROR_USER_DATA_SIZE_ERR </td><td class="fielddoc">
+<p>The User Data size is too large for access technology, transport network, or call mode, etc </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aeb77e45e90a8257c2b386428fa9397dfac0d6a3702a8e6b7e5d41e16cf9469559"></a>LE_SMS_ERROR_GENERAL_OTHER </td><td class="fielddoc">
+<p>Other general problems. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aeb77e45e90a8257c2b386428fa9397dfa9d01f7e0eff05497837d8a23e95fbe3d"></a>LE_SMS_ERROR_3GPP2_PLATFORM_SPECIFIC </td><td class="fielddoc">
+<p>Platform specific code. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aeb77e45e90a8257c2b386428fa9397dfab63802607dd4ff17a59ff7dd32640561"></a>LE_SMS_ERROR_3GPP2_MAX </td><td class="fielddoc">
+<p>Undefined reason. </p>
+</td></tr>
+</table>
+</div>
+</div>
+<a class="anchor" id="a67bb87987a78f42c1d7192372463305e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305e">le_sms_ErrorCode_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Message Error code when the message sending has failed. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305ea26469ea7cb41997513d9ad3c29bea7b9"></a>LE_SMS_RP_ERROR_UNASSIGNED_NUMBER </td><td class="fielddoc">
+<p>Unassigned (unallocated) number. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305ea69644439522bc9cc29f24b6c2b2e6317"></a>LE_SMS_RP_ERROR_OPERATOR_DETERMINED_BARRING </td><td class="fielddoc">
+<p>Operator determined barring. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305ea6e54c6597ee96f353fa9ee12793a2963"></a>LE_SMS_RP_ERROR_CALL_BARRED </td><td class="fielddoc">
+<p>Call barred. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305ea1cea0bc480adeef1bcd5da9f45a3bd2c"></a>LE_SMS_RP_ERROR_RESERVED </td><td class="fielddoc">
+<p>Reserved. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305eac980e73fa0bdb725742742a97cbe812a"></a>LE_SMS_RP_ERROR_SMS_TRANSFER_REJECTED </td><td class="fielddoc">
+<p>Short message transfer rejected. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305eae9d79ae6f657bf9495cd77e8d73577a8"></a>LE_SMS_RP_ERROR_MEMORY_CAP_EXCEEDED </td><td class="fielddoc">
+<p>Memory capacity exceeded. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305eaf48bacbdd0ffc07f3d32a90666f0f034"></a>LE_SMS_RP_ERROR_DESTINATION_OUT_OF_ORDER </td><td class="fielddoc">
+<p>Destination out of order. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305eadaae4a5ada1617f98b6d692694f06764"></a>LE_SMS_RP_ERROR_UNIDENTIFIED_SUBSCRIBER </td><td class="fielddoc">
+<p>Unidentified subscriber. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305ea946fc7d11cff398d34ecb1936f2d5cc5"></a>LE_SMS_RP_ERROR_FACILITY_REJECTED </td><td class="fielddoc">
+<p>Facility rejected. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305ea5d00b68c253af7afa9d948069c8124e1"></a>LE_SMS_RP_ERROR_UNKNOWN_SUBSCRIBER </td><td class="fielddoc">
+<p>Unknown subscriber. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305ea7293082103e20a1f618cdae6ecd5d32d"></a>LE_SMS_RP_ERROR_NETWORK_OUT_OF_ORDER </td><td class="fielddoc">
+<p>Network out of order. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305eaab13242146287557f50675afe6440513"></a>LE_SMS_RP_ERROR_TEMPORARY_FAILURE </td><td class="fielddoc">
+<p>Temporary failure. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305eac8ccfe2e6cef23f2e847e76e47d8357d"></a>LE_SMS_RP_ERROR_CONGESTION </td><td class="fielddoc">
+<p>Congestion. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305eabf541c28adabce273bfdffca35cccc97"></a>LE_SMS_RP_ERROR_RESOURCES_UNAVAILABLE </td><td class="fielddoc">
+<p>Resources unavailable, unspecified. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305eae63106efeecc7f63e9535de7aa7a5be8"></a>LE_SMS_RP_ERROR_REQUESTED_FACILITY_NOT_SUBSCRIBED </td><td class="fielddoc">
+<p>Resources facility not subscribed. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305ead4aad611385d801dd7641e3eadcf21ff"></a>LE_SMS_RP_ERROR_REQUESTED_FACILITY_NOT_IMPLEMENTED </td><td class="fielddoc">
+<p>Resources facility not implemented. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305eaeff8eba73f1a87f3c2755579b179b2cb"></a>LE_SMS_RP_ERROR_INVALID_SMS_TRANSFER_REFERENCE_VALUE </td><td class="fielddoc">
+<p>Invalid short message transfer reference value </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305ea45322135d0b7b357df0ba45a8c8fafea"></a>LE_SMS_RP_ERROR_SEMANTICALLY_INCORRECT_MESSAGE </td><td class="fielddoc">
+<p>Sementically incorect message. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305ea79e3b59aa2bf713b226ac28e0044e33e"></a>LE_SMS_RP_ERROR_INVALID_MANDATORY_INFO </td><td class="fielddoc">
+<p>Invalid mandatory information. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305ea6655cbe6291ef47a3e82e9242b40aebd"></a>LE_SMS_RP_ERROR_MESSAGE_TYPE_NOT_IMPLEMENTED </td><td class="fielddoc">
+<p>Message type nonexistent or not implemented. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305ea4ada8a9e58225f53e8eec07ddeccbce2"></a>LE_SMS_RP_ERROR_MESSAGE_NOT_COMPATABLE_WITH_SMS </td><td class="fielddoc">
+<p>Message not compatible with short message protocol state </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305eacadcba2389703b4fb8ed7f3b0f7f103c"></a>LE_SMS_RP_ERROR_INFO_ELEMENT_NOT_IMPLEMENTED </td><td class="fielddoc">
+<p>Information element nonexistent or not implemented </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305eaf4872bd60bb54de06bef857d3f64a214"></a>LE_SMS_RP_ERROR_PROTOCOL_ERROR </td><td class="fielddoc">
+<p>Protocol error, unspecified. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305eab50a5b9da7cade7d2e2d93f81578d6e5"></a>LE_SMS_RP_ERROR_INTERWORKING </td><td class="fielddoc">
+<p>Interworking, unspecified. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305ea7b138c36b955e2e49c55dc725dafe41e"></a>LE_SMS_TP_ERROR_TELE_INTERWORKING_NOT_SUPPORTED </td><td class="fielddoc">
+<p>Telematic interworking not supported. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305ea3d0c539a5140865b21f135298a4bd6a3"></a>LE_SMS_TP_ERROR_SHORT_MESSAGE_TYPE_0_NOT_SUPPORTED </td><td class="fielddoc">
+<p>Short Message Type 0 not supported. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305ea4efee0159b5cd037d07a4cd2e48db31f"></a>LE_SMS_TP_ERROR_SHORT_MESSAGE_CANNOT_BE_REPLACED </td><td class="fielddoc">
+<p>Cannot replace short message. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305eac5a013600a3b89936e09b4c8601d5cf2"></a>LE_SMS_TP_ERROR_UNSPECIFIED_PID_ERROR </td><td class="fielddoc">
+<p>Unspecified TP-PID error. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305ea49204734cd1bffa274164b4f00f7435d"></a>LE_SMS_TP_ERROR_DCS_NOT_SUPPORTED </td><td class="fielddoc">
+<p>Data coding scheme (alphabet) not supported </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305eaf3023324980be6c0e1049c5a4894c602"></a>LE_SMS_TP_ERROR_MESSAGE_CLASS_NOT_SUPPORTED </td><td class="fielddoc">
+<p>Message class not supported. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305ea732473f3eac1f73220a9eb7c659c37bd"></a>LE_SMS_TP_ERROR_UNSPECIFIED_DCS_ERROR </td><td class="fielddoc">
+<p>Unspecified TP-DCS error. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305ea2561bc1f982718076443a68e34c0ad58"></a>LE_SMS_TP_ERROR_COMMAND_CANNOT_BE_ACTIONED </td><td class="fielddoc">
+<p>Command cannot be actioned. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305ea00e5d9aaae4e418a6ade196da3ed7e18"></a>LE_SMS_TP_ERROR_COMMAND_UNSUPPORTED </td><td class="fielddoc">
+<p>Command unsupported. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305ea02611a74fa74100ff33e9470d1b17727"></a>LE_SMS_TP_ERROR_UNSPECIFIED_COMMAND_ERROR </td><td class="fielddoc">
+<p>Unspecified TP-Command error. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305ea7bb7bcda9425fde4654a01c152e0a3c3"></a>LE_SMS_TP_ERROR_TPDU_NOT_SUPPORTED </td><td class="fielddoc">
+<p>TPDU not supported. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305ea7eb7c4cee07b40c3462059d757b46044"></a>LE_SMS_TP_ERROR_SC_BUSY </td><td class="fielddoc">
+<p>SC busy. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305ea79bd936f4ebc30173917831ffb2ed695"></a>LE_SMS_TP_ERROR_NO_SC_SUBSCRIPTION </td><td class="fielddoc">
+<p>No SC subscription. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305ead4d9f099ff673f38abe45b10f8139b7a"></a>LE_SMS_TP_ERROR_SC_SYS_FAILURE </td><td class="fielddoc">
+<p>SC system failure. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305ead0d038fffb6202e8c8880e998b706302"></a>LE_SMS_TP_ERROR_INVALID_SME_ADDRESS </td><td class="fielddoc">
+<p>Invalid SME address. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305ea2292252b63178c656a7f3c8cc1662691"></a>LE_SMS_TP_ERROR_DESTINATION_SME_BARRED </td><td class="fielddoc">
+<p>Destination SME barred. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305eaafb84552030009e7ff1c3995396ef15a"></a>LE_SMS_TP_ERROR_SM_REJECTED_OR_DUPLICATE </td><td class="fielddoc">
+<p>SM Rejected-Duplicate SM. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305eaa243b5f59bc92592b73274b7990ef656"></a>LE_SMS_TP_ERROR_TP_VPF_NOT_SUPPORTED </td><td class="fielddoc">
+<p>TP-VPF not supported. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305ea85a6e40b46ab4179aa0e744744591326"></a>LE_SMS_TP_ERROR_TP_VP_NOT_SUPPORTED </td><td class="fielddoc">
+<p>TP-VP not supporte. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305eacbeb3b2dd644f92d893a8e7e2da4370c"></a>LE_SMS_TP_ERROR_SIM_SMS_STORAGE_FULL </td><td class="fielddoc">
+<p>(U)SIM SMS storage full </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305eafb402181dea7da9ccb4214f3793428f9"></a>LE_SMS_TP_ERROR_NO_SMS_STORAGE_CAP_IN_SIM </td><td class="fielddoc">
+<p>No SMS storage capability in (U)SIM. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305ea260c482ae2a77e7be596f68a27093cce"></a>LE_SMS_TP_ERROR_MS_ERROR </td><td class="fielddoc">
+<p>Error in MS. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305ea0edd43feae63fbcd2cc279c9461bb553"></a>LE_SMS_TP_ERROR_MEMORY_CAP_EXCEEDED </td><td class="fielddoc">
+<p>Memory capacity exceeded. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305eacbf84818a3847743132223dfb05e3435"></a>LE_SMS_TP_ERROR_SIM_APP_TOOLKIT_BUSY </td><td class="fielddoc">
+<p>(U)SIM Application Toolkit busy </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305ea4e0769fea8776b0990ed281897a4af17"></a>LE_SMS_TP_ERROR_SIM_DATA_DOWNLOAD_ERROR </td><td class="fielddoc">
+<p>(U)SIM data download error </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305ea08005ab8fbe421dd62a7de20beb380e1"></a>LE_SMS_TP_ERROR_UNSPECIFIED_ERROR </td><td class="fielddoc">
+<p>Unspecified error cause. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305ea770a9e5f8652cc094bb532cd32f4f56f"></a>LE_SMS_ERROR_3GPP_PLATFORM_SPECIFIC </td><td class="fielddoc">
+<p>Platform specific code. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a67bb87987a78f42c1d7192372463305ea8aa7f744a47b8ecda30b4d84b94216ae"></a>LE_SMS_ERROR_3GPP_MAX </td><td class="fielddoc">
+<p>Undefined reason. </p>
+</td></tr>
+</table>
+</div>
+</div>
+<a class="anchor" id="a337778c44e63660c44fa2116699296c0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="le__sms__interface_8h.html#a337778c44e63660c44fa2116699296c0">le_sms_Format_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Message Format. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a337778c44e63660c44fa2116699296c0a3f6a4a63acbf7aec5a498017ff53a6e8"></a>LE_SMS_FORMAT_PDU </td><td class="fielddoc">
+<p>PDU message format. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a337778c44e63660c44fa2116699296c0a1bb6a0d76a622b1185ee879e1595dff8"></a>LE_SMS_FORMAT_TEXT </td><td class="fielddoc">
+<p>Text message format. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a337778c44e63660c44fa2116699296c0ac70333fc9281ed10aa405d585689c000"></a>LE_SMS_FORMAT_BINARY </td><td class="fielddoc">
+<p>Binary message format. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a337778c44e63660c44fa2116699296c0abea80bb6058e34a427c02b80bfede497"></a>LE_SMS_FORMAT_UNKNOWN </td><td class="fielddoc">
+<p>Unknown message format. </p>
+</td></tr>
+</table>
+</div>
+</div>
+<a class="anchor" id="ad4ba75a2c1d118cd46ca5e8428fb5ddb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="le__sms__interface_8h.html#ad4ba75a2c1d118cd46ca5e8428fb5ddb">le_sms_Languages_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>CDMA Cell broadcast message languages. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ad4ba75a2c1d118cd46ca5e8428fb5ddbad0356a01286311e11035b9ef1ca4ef7c"></a>LE_SMS_LANGUAGE_UNKNOWN </td><td class="fielddoc">
+<p>Unknow or Unspecified language. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad4ba75a2c1d118cd46ca5e8428fb5ddba42b1bbed8b017e36fd0389bfa09f42fb"></a>LE_SMS_LANGUAGE_ENGLISH </td><td class="fielddoc">
+<p>English language. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad4ba75a2c1d118cd46ca5e8428fb5ddba6c88f276e71935b5fe119a468bba7fa3"></a>LE_SMS_LANGUAGE_FRENCH </td><td class="fielddoc">
+<p>French language. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad4ba75a2c1d118cd46ca5e8428fb5ddba8b5e31055b3883661e58f38843601bd9"></a>LE_SMS_LANGUAGE_SPANISH </td><td class="fielddoc">
+<p>Spanish language. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad4ba75a2c1d118cd46ca5e8428fb5ddba1bbdfadfec0d7020f2b171b1cf4dbbfe"></a>LE_SMS_LANGUAGE_JAPANESE </td><td class="fielddoc">
+<p>Japanese language. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad4ba75a2c1d118cd46ca5e8428fb5ddba58899a6c4374ff8e04072cecca609b0c"></a>LE_SMS_LANGUAGE_KOREAN </td><td class="fielddoc">
+<p>Korean language. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad4ba75a2c1d118cd46ca5e8428fb5ddbafd2f8d23a5676922616f2893c5ce33a2"></a>LE_SMS_LANGUAGE_CHINESE </td><td class="fielddoc">
+<p>Chinese language. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad4ba75a2c1d118cd46ca5e8428fb5ddba7d0f3b3f8ab2b76681b28b3ef4628b1d"></a>LE_SMS_LANGUAGE_HEBREW </td><td class="fielddoc">
+<p>Hebrew language. </p>
+</td></tr>
+</table>
+</div>
+</div>
+<a class="anchor" id="a18a1937acb5878ae01a9d668fe5070b6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="le__sms__interface_8h.html#a18a1937acb5878ae01a9d668fe5070b6">le_sms_Status_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Message Status. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a18a1937acb5878ae01a9d668fe5070b6acf7543162a77df096f714c66555052f1"></a>LE_SMS_RX_READ </td><td class="fielddoc">
+<p>Message present in the message storage has been read. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a18a1937acb5878ae01a9d668fe5070b6a30d180b7a6410abdd57182014746b8bc"></a>LE_SMS_RX_UNREAD </td><td class="fielddoc">
+<p>Message present in the message storage has not been read. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a18a1937acb5878ae01a9d668fe5070b6ad3254c9e0006f34d438c6e1918d3973f"></a>LE_SMS_STORED_SENT </td><td class="fielddoc">
+<p>Message saved in the message storage has been sent. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a18a1937acb5878ae01a9d668fe5070b6a57f62f640b2341ae3ac86310df6759e5"></a>LE_SMS_STORED_UNSENT </td><td class="fielddoc">
+<p>Message saved in the message storage has not been sent. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a18a1937acb5878ae01a9d668fe5070b6aa20b05cdd468e822268c59d9789ef132"></a>LE_SMS_SENT </td><td class="fielddoc">
+<p>Message has been sent. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a18a1937acb5878ae01a9d668fe5070b6a5fbd6c7f39cc2ed3ea816133d29b5760"></a>LE_SMS_SENDING </td><td class="fielddoc">
+<p>Message has been in the sending pool. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a18a1937acb5878ae01a9d668fe5070b6afd992b5c50b6420d37067f8c516d9fef"></a>LE_SMS_UNSENT </td><td class="fielddoc">
+<p>Message has not been sent. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a18a1937acb5878ae01a9d668fe5070b6aed2870eb00d4511f2a0c28996f8cd984"></a>LE_SMS_SENDING_FAILED </td><td class="fielddoc">
+<p>Message sending has Failed. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a18a1937acb5878ae01a9d668fe5070b6aa7381e00701ac73e660ae31c4223e403"></a>LE_SMS_SENDING_TIMEOUT </td><td class="fielddoc">
+<p>Message sending has Failed due to timeout. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a18a1937acb5878ae01a9d668fe5070b6ae7b415d976598f3a548d8ab8382d2019"></a>LE_SMS_STATUS_UNKNOWN </td><td class="fielddoc">
+<p>Unknown message status. </p>
+</td></tr>
+</table>
+</div>
+</div>
+<a class="anchor" id="a9001c5bc939bda5d5865e363bdf7662c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="le__sms__interface_8h.html#a9001c5bc939bda5d5865e363bdf7662c">le_sms_Type_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Message Type. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a9001c5bc939bda5d5865e363bdf7662ca29050c2aa56f58a199d292d51be4fa01"></a>LE_SMS_TYPE_RX </td><td class="fielddoc">
+<p>SMS mobile terminated message. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a9001c5bc939bda5d5865e363bdf7662ca2a206e19e871ea98e16e88aeed1a99cc"></a>LE_SMS_TYPE_TX </td><td class="fielddoc">
+<p>SMS mobile originated message. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a9001c5bc939bda5d5865e363bdf7662ca3dff7628faf85524d772f34f52699a47"></a>LE_SMS_TYPE_BROADCAST_RX </td><td class="fielddoc">
+<p>SMS Cell Broadcast message. </p>
+</td></tr>
+</table>
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="a45a160fea5a8f6cd195e3aff33830602"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_sms_ActivateCdmaCellBroadcast </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Activate CDMA Cell Broadcast message notification</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT Function failed.</li>
+<li>LE_OK Function succeeded. </li>
+</ul>
+</dd></dl>
+</div>
+</div>
+<a class="anchor" id="a4607c63f325465d078514b5682347c7f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_sms_ActivateCellBroadcast </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Activate Cell Broadcast message notification</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT Function failed.</li>
+<li>LE_OK Function succeeded. </li>
+</ul>
+</dd></dl>
+</div>
+</div>
+<a class="anchor" id="ad57196114a634f36b057a9cfbcb7d58a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_sms_AddCdmaCellBroadcastServices </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a4d1e11633722ac519f2d8efb1178167c">le_sms_CdmaServiceCat_t</a> </td>
+<td class="paramname"><em>serviceCat</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#ad4ba75a2c1d118cd46ca5e8428fb5ddb">le_sms_Languages_t</a> </td>
+<td class="paramname"><em>language</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Add CDMA Cell Broadcast category services.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT Function failed.</li>
+<li>LE_BAD_PARAMETER Parameter is invalid.</li>
+<li>LE_OK Function succeeded. </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">serviceCat</td><td>Service category assignment. Reference to 3GPP2 C.R1001-D v1.0 Section 9.3.1 Standard Service Category Assignments. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">language</td><td>Language Indicator. Reference to 3GPP2 C.R1001-D v1.0 Section 9.2.1 Language Indicator Value Assignments </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="aae87dacecc438ea9182d370895e5cb3f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_sms_AddCellBroadcastIds </td>
+<td>(</td>
+<td class="paramtype">uint16_t </td>
+<td class="paramname"><em>fromId</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">uint16_t </td>
+<td class="paramname"><em>toId</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Add Cell Broadcast message Identifiers range.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT Function failed.</li>
+<li>LE_OK Function succeeded. </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">fromId</td><td>Starting point of the range of cell broadcast message identifier. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">toId</td><td>Ending point of the range of cell broadcast message identifier. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a844d595f3ae8d170b2fff80d854abb8d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__sms__interface_8h.html#a77d2607cc541bf0369e69bb2d105d4bf">le_sms_RxMessageHandlerRef_t</a> le_sms_AddRxMessageHandler </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a6b6e7403719627629df41529916fa71b">le_sms_RxMessageHandlerFunc_t</a> </td>
+<td class="paramname"><em>handlerPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">void * </td>
+<td class="paramname"><em>contextPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Add handler function for EVENT 'le_sms_RxMessage'</p>
+<p>This event provides information on new received messages. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">handlerPtr</td><td></td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">contextPtr</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ac737aaab68b6fa1d51a21b518ad112a9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_sms_ClearCdmaCellBroadcastServices </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Clear CDMA Cell Broadcast category services.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT Function failed.</li>
+<li>LE_OK Function succeeded. </li>
+</ul>
+</dd></dl>
+</div>
+</div>
+<a class="anchor" id="ae3333cbf700035067f2dae8ea0e564d0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_sms_ClearCellBroadcastIds </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Clear Cell Broadcast message Identifiers.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT Function failed.</li>
+<li>LE_OK Function succeeded. </li>
+</ul>
+</dd></dl>
+</div>
+</div>
+<a class="anchor" id="a1437987e5017d2159dc8dcbbbc50b953"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_sms_ConnectService </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Connect the current client thread to the service providing this API.</p>
+<p>This function must be called before any other functions in this API. Normally, it's automatically called for the main thread, but must be explicitly called for other threads. For details, see <a class="el" href="api_files_c.html#apiFilesC_client">Client-specific Functions</a>.</p>
+<p>This function is created automatically. </p>
+</div>
+</div>
+<a class="anchor" id="a668abcbcff2f1f3c5cdf799315a81058"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> le_sms_Create </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Create an SMS Message data structure.</p>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the new Message object.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>On failure, the process exits, so you don't have to worry about checking the returned reference for validity. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="aee4328f9e417108fa16794cc135073d0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__sms__interface_8h.html#afd91170c5ea21ec7ca98f7ce95049dae">le_sms_MsgListRef_t</a> le_sms_CreateRxMsgList </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Create an object's reference of the list of received messages saved in the SMS message storage area.</p>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the List object. Null pointer if no messages have been retrieved. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a26d43a50652431063e0a8e4d88fdba86"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_sms_DeactivateCdmaCellBroadcast </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Deactivate CDMA Cell Broadcast message notification</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT Function failed.</li>
+<li>LE_OK Function succeeded. </li>
+</ul>
+</dd></dl>
+</div>
+</div>
+<a class="anchor" id="aa57c2f717c71b33e93f278673a7806e9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_sms_DeactivateCellBroadcast </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Deactivate Cell Broadcast message notification</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT Function failed.</li>
+<li>LE_OK Function succeeded. </li>
+</ul>
+</dd></dl>
+</div>
+</div>
+<a class="anchor" id="aca1691010c88995cb47225f2889910fa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_sms_Delete </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> </td>
+<td class="paramname"><em>msgRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Delete a Message data structure.</p>
+<p>It deletes the Message data structure and all the allocated memory is freed. If several users own the Message object (e.g., several handler functions registered for SMS message reception), the Message object will only be deleted if one User owns the Message object.</p>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it is a fatal error, the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">msgRef</td><td>Reference to the message object. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="aff755186b683b94ba2788b48e28284a3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_sms_DeleteFromStorage </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> </td>
+<td class="paramname"><em>msgRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Delete an SMS message from the storage area.</p>
+<p>Verifies first if the parameter is valid, then it checks the modem state can support message deleting.</p>
+<dl class="section return"><dt>Returns</dt><dd>LE_FAULT Function failed to perform the deletion. </dd>
+<dd>
+LE_NO_MEMORY Message storage is not available. </dd>
+<dd>
+LE_OK Function succeeded.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it is a fatal error, the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">msgRef</td><td>Reference to the message object. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a4027c05c4ee7552ab0e081caa315c8a2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_sms_DeleteList </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#afd91170c5ea21ec7ca98f7ce95049dae">le_sms_MsgListRef_t</a> </td>
+<td class="paramname"><em>msgListRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Delete the list of the Messages retrieved from the message storage.</p>
+<dl class="section note"><dt>Note</dt><dd>On failure, the process exits, so you don't have to worry about checking the returned reference for validity. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">msgListRef</td><td>Messages list. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a1e445b8db58402de8a97ca6ce42ad155"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_sms_DisconnectService </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Disconnect the current client thread from the service providing this API.</p>
+<p>Normally, this function doesn't need to be called. After this function is called, there's no longer a connection to the service, and the functions in this API can't be used. For details, see <a class="el" href="api_files_c.html#apiFilesC_client">Client-specific Functions</a>.</p>
+<p>This function is created automatically. </p>
+</div>
+</div>
+<a class="anchor" id="a46afe91bbded617ad444ea29a9dd910a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__sms__interface_8h.html#aeb77e45e90a8257c2b386428fa9397df">le_sms_ErrorCode3GPP2_t</a> le_sms_Get3GPP2ErrorCode </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> </td>
+<td class="paramname"><em>msgRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the error code when a 3GPP2 message sending has Failed.</p>
+<dl class="section return"><dt>Returns</dt><dd>The error code</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it is a fatal error, the function will not return.</dd>
+<dd>
+It is only applicable for 3GPP2 message sending failure, otherwise LE_SMS_ERROR_3GPP2_MAX is returned. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">msgRef</td><td>Reference to the message object. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a0de50069a9df99adac983385106d9c09"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_sms_GetBinary </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> </td>
+<td class="paramname"><em>msgRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">uint8_t * </td>
+<td class="paramname"><em>binPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t * </td>
+<td class="paramname"><em>binNumElementsPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the binary Message.</p>
+<p>Output parameters are updated with the binary message content and the length of the raw binary message in bytes. If the binary data exceed the value of 'len' input parameter, a LE_OVERFLOW error code is returned and 'raw' is filled until 'len' bytes.</p>
+<dl class="section return"><dt>Returns</dt><dd>LE_FORMAT_ERROR Message is not in binary format </dd>
+<dd>
+LE_OVERFLOW Message length exceed the maximum length. </dd>
+<dd>
+LE_OK Function succeeded.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it is a fatal error, the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">msgRef</td><td>Reference to the message object. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">binPtr</td><td>Binary message. </td></tr>
+<tr><td class="paramdir">[in,out]</td><td class="paramname">binNumElementsPtr</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="aa28c1d04ff19b88100b766737610b128"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_sms_GetCellBroadcastId </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> </td>
+<td class="paramname"><em>msgRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">uint16_t * </td>
+<td class="paramname"><em>messageIdPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the Cell Broadcast Message Identifier.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT Message is not a cell broadcast type.</li>
+<li>LE_OK Function succeeded.</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it is a fatal error, the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">msgRef</td><td>Reference to the message object. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">messageIdPtr</td><td>Cell Broadcast Message Identifier. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="aa3e075b4a9396b2e4af233e4543f40bd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_sms_GetCellBroadcastSerialNumber </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> </td>
+<td class="paramname"><em>msgRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">uint16_t * </td>
+<td class="paramname"><em>serialNumberPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the Cell Broadcast Message Serial Number.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT Message is not a cell broadcast type.</li>
+<li>LE_OK Function succeeded.</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it is a fatal error, the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">msgRef</td><td>Reference to the message object. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">serialNumberPtr</td><td>Cell Broadcast Serial Number. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a9ee511af99c91383344debf532fae1ae"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_sms_GetErrorCode </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> </td>
+<td class="paramname"><em>msgRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305e">le_sms_ErrorCode_t</a> * </td>
+<td class="paramname"><em>rpCausePtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a67bb87987a78f42c1d7192372463305e">le_sms_ErrorCode_t</a> * </td>
+<td class="paramname"><em>tpCausePtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the Radio Protocol and the Transfer Protocol error code when a 3GPP message sending has failed.</p>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it is a fatal error, the function will not return.</dd>
+<dd>
+It is only applicable for 3GPP message sending failure, otherwise LE_SMS_ERROR_3GPP_MAX is returned. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">msgRef</td><td>Reference to the message object. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">rpCausePtr</td><td>Radio Protocol cause code. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">tpCausePtr</td><td>Transfer Protocol cause code. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a934253dee33a6090656876cff853b2c6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> le_sms_GetFirst </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#afd91170c5ea21ec7ca98f7ce95049dae">le_sms_MsgListRef_t</a> </td>
+<td class="paramname"><em>msgListRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the first Message object reference in the list of messages retrieved with <a class="el" href="le__sms__interface_8h.html#aee4328f9e417108fa16794cc135073d0">le_sms_CreateRxMsgList()</a>.</p>
+<dl class="section return"><dt>Returns</dt><dd>NULL No message found. </dd>
+<dd>
+Msg Message object reference.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it is a fatal error, the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">msgListRef</td><td>Messages list. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a5c2b8ce7043b4732c7b0ede7c5d7118c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__sms__interface_8h.html#a337778c44e63660c44fa2116699296c0">le_sms_Format_t</a> le_sms_GetFormat </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> </td>
+<td class="paramname"><em>msgRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the message format.</p>
+<dl class="section return"><dt>Returns</dt><dd>Message format.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it is a fatal error, the function will not return.</dd>
+<dd>
+For incoming SMS, format returned by le_sms_GetFormat is never LE_SMS_FORMAT_PDU. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">msgRef</td><td>Reference to the message object. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ac3b6a30a6d4e4f21749b536184b836ec"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> le_sms_GetNext </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#afd91170c5ea21ec7ca98f7ce95049dae">le_sms_MsgListRef_t</a> </td>
+<td class="paramname"><em>msgListRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the next Message object reference in the list of messages retrieved with <a class="el" href="le__sms__interface_8h.html#aee4328f9e417108fa16794cc135073d0">le_sms_CreateRxMsgList()</a>.</p>
+<dl class="section return"><dt>Returns</dt><dd>NULL No message found. </dd>
+<dd>
+Msg Message object reference.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it is a fatal error, the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">msgListRef</td><td>Messages list. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ae4b284d427ab7ec637056a6208fdd89e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_sms_GetPDU </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> </td>
+<td class="paramname"><em>msgRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">uint8_t * </td>
+<td class="paramname"><em>pduPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t * </td>
+<td class="paramname"><em>pduNumElementsPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the PDU message.</p>
+<p>Output parameters are updated with the PDU message content and the length of the PDU message in bytes. If the PDU data exceed the value of 'len' input parameter, a LE_OVERFLOW error code is returned and 'pdu' is filled until 'len' bytes.</p>
+<dl class="section return"><dt>Returns</dt><dd>LE_FORMAT_ERROR Unable to encode the message in PDU (only for outgoing messages). </dd>
+<dd>
+LE_OVERFLOW Message length exceed the maximum length. </dd>
+<dd>
+LE_OK Function succeeded.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it is a fatal error, the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">msgRef</td><td>Reference to the message object. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">pduPtr</td><td>PDU message. </td></tr>
+<tr><td class="paramdir">[in,out]</td><td class="paramname">pduNumElementsPtr</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="abb89b302e564f3d55d604bb0c0dda022"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">size_t le_sms_GetPDULen </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> </td>
+<td class="paramname"><em>msgRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the message Length value.</p>
+<dl class="section return"><dt>Returns</dt><dd>Length of the data in bytes of the PDU message.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it is a fatal error, the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">msgRef</td><td>Reference to the message object. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a9cfbc2131df38f99272a71bf05cb1254"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">int32_t le_sms_GetPlatformSpecificErrorCode </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> </td>
+<td class="paramname"><em>msgRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Called to get the platform specific error code.</p>
+<dl class="section return"><dt>Returns</dt><dd>The platform specific error code.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it is a fatal error, the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">msgRef</td><td>Reference to the message object. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a68bfd509a8a3fd4ae39bde7ac5c32d8d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_sms_GetSenderTel </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> </td>
+<td class="paramname"><em>msgRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">char * </td>
+<td class="paramname"><em>tel</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>telNumElements</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the Sender Telephone number.</p>
+<p>Output parameter is updated with the Telephone number. If the Telephone number string exceeds the value of 'len' parameter, LE_OVERFLOW error code is returned and 'tel' is filled until 'len-1' characters and a null-character is implicitly appended at the end of 'tel'.</p>
+<dl class="section return"><dt>Returns</dt><dd>LE_NOT_PERMITTED Message is not a received message. </dd>
+<dd>
+LE_OVERFLOW Telephone number length exceed the maximum length. </dd>
+<dd>
+LE_OK Function succeeded.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it is a fatal error, the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">msgRef</td><td>Reference to the message object. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">tel</td><td>Telephone number string. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">telNumElements</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="aeef8f1ac8d2aa3f512e15c054e024bea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_sms_GetSmsCenterAddress </td>
+<td>(</td>
+<td class="paramtype">char * </td>
+<td class="paramname"><em>tel</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>telNumElements</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the SMS center address.</p>
+<p>Output parameter is updated with the SMS Service center address. If the Telephone number string exceeds the value of 'len' parameter, LE_OVERFLOW error code is returned and 'tel' is filled until 'len-1' characters and a null-character is implicitly appended at the end of 'tel'.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT Service is not available.</li>
+<li>LE_OVERFLOW Telephone number length exceed the maximum length.</li>
+<li>LE_OK Function succeeded. </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[out]</td><td class="paramname">tel</td><td>SMS center address number string. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">telNumElements</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ae1843c72eca77cd6da94cb686e5c2ae8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__sms__interface_8h.html#a18a1937acb5878ae01a9d668fe5070b6">le_sms_Status_t</a> le_sms_GetStatus </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> </td>
+<td class="paramname"><em>msgRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Read the Message status (Received Read, Received Unread, Stored Sent, Stored Unsent).</p>
+<dl class="section return"><dt>Returns</dt><dd>Status of the message.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it is a fatal error, the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">msgRef</td><td>Messages list. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ac598dec158aed1e9fa134daf22c704db"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_sms_GetText </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> </td>
+<td class="paramname"><em>msgRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">char * </td>
+<td class="paramname"><em>text</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>textNumElements</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the text Message.</p>
+<p>Output parameter is updated with the text string encoded in ASCII format. If the text string exceeds the value of 'len' parameter, LE_OVERFLOW error code is returned and 'text' is filled until 'len-1' characters and a null-character is implicitly appended at the end of 'text'.</p>
+<dl class="section return"><dt>Returns</dt><dd>LE_OVERFLOW Message length exceed the maximum length. </dd>
+<dd>
+LE_OK Function succeeded.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it is a fatal error, the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">msgRef</td><td>Reference to the message object. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">text</td><td>SMS text. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">textNumElements</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="aca83e53998bd7105e14011af41ba6499"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_sms_GetTimeStamp </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> </td>
+<td class="paramname"><em>msgRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">char * </td>
+<td class="paramname"><em>timestamp</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>timestampNumElements</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the Service Center Time Stamp string.</p>
+<p>Output parameter is updated with the Time Stamp string. If the Time Stamp string exceeds the value of 'len' parameter, a LE_OVERFLOW error code is returned and 'timestamp' is filled until 'len-1' characters and a null-character is implicitly appended at the end of 'timestamp'.</p>
+<dl class="section return"><dt>Returns</dt><dd>LE_NOT_PERMITTED Message is not a received message. </dd>
+<dd>
+LE_OVERFLOW Timestamp number length exceed the maximum length. </dd>
+<dd>
+LE_OK Function succeeded.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it is a fatal error, the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">msgRef</td><td>Reference to the message object. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">timestamp</td><td>Message time stamp (in text mode). string format: "yy/MM/dd,hh:mm:ss+/-zz" (Year/Month/Day,Hour:Min:Seconds+/-TimeZone) </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">timestampNumElements</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a2a63c6b5179025a80fb86c7f188e1eb7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__sms__interface_8h.html#a9001c5bc939bda5d5865e363bdf7662c">le_sms_Type_t</a> le_sms_GetType </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> </td>
+<td class="paramname"><em>msgRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the message type.</p>
+<dl class="section return"><dt>Returns</dt><dd>Message type.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it is a fatal error, the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">msgRef</td><td>Reference to the message object. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a6165464dd3502b3c76b79b32206ba10f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">size_t le_sms_GetUserdataLen </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> </td>
+<td class="paramname"><em>msgRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the message Length value.</p>
+<dl class="section return"><dt>Returns</dt><dd>Number of characters for text messages, or the length of the data in bytes for raw binary messages.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it is a fatal error, the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">msgRef</td><td>Reference to the message object. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a3dbd11952804520512fed270d183461d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_sms_MarkRead </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> </td>
+<td class="paramname"><em>msgRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Mark a message as 'read'.</p>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it is a fatal error, the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">msgRef</td><td>Messages list. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a6ef04e331af6563b79e77bb51b28bc55"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_sms_MarkUnread </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> </td>
+<td class="paramname"><em>msgRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Mark a message as 'unread'.</p>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it is a fatal error, the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">msgRef</td><td>Messages list. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ae7c58d4ed9ff586d2403232b0cda99e7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_sms_RemoveCdmaCellBroadcastServices </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a4d1e11633722ac519f2d8efb1178167c">le_sms_CdmaServiceCat_t</a> </td>
+<td class="paramname"><em>serviceCat</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#ad4ba75a2c1d118cd46ca5e8428fb5ddb">le_sms_Languages_t</a> </td>
+<td class="paramname"><em>language</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Remove CDMA Cell Broadcast category services.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT Function failed.</li>
+<li>LE_BAD_PARAMETER Parameter is invalid.</li>
+<li>LE_OK Function succeeded. </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">serviceCat</td><td>Service category assignment. Reference to 3GPP2 C.R1001-D v1.0 Section 9.3.1 Standard Service Category Assignments. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">language</td><td>Language Indicator. Reference to 3GPP2 C.R1001-D v1.0 Section 9.2.1 Language Indicator Value Assignments </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a656fefe815bb965e10087ee65b59faa0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_sms_RemoveCellBroadcastIds </td>
+<td>(</td>
+<td class="paramtype">uint16_t </td>
+<td class="paramname"><em>fromId</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">uint16_t </td>
+<td class="paramname"><em>toId</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Remove Cell Broadcast message Identifiers range.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT Function failed.</li>
+<li>LE_OK Function succeeded. </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">fromId</td><td>Starting point of the range of cell broadcast message identifier. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">toId</td><td>Ending point of the range of cell broadcast message identifier. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a2f474706ba6d7a40083fe1f50f530101"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_sms_RemoveRxMessageHandler </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a77d2607cc541bf0369e69bb2d105d4bf">le_sms_RxMessageHandlerRef_t</a> </td>
+<td class="paramname"><em>addHandlerRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Remove handler function for EVENT 'le_sms_RxMessage' </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">addHandlerRef</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ab7dee7d2c74cfcadd9ea0d5fe1786dfc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_sms_Send </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> </td>
+<td class="paramname"><em>msgRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Send an SMS message.</p>
+<p>Verifies first if the parameters are valid, then it checks the modem state can support message sending.</p>
+<dl class="section return"><dt>Returns</dt><dd>LE_FORMAT_ERROR Message content is invalid. </dd>
+<dd>
+LE_FAULT Function failed to send the message. </dd>
+<dd>
+LE_OK Function succeeded. </dd>
+<dd>
+LE_TIMEOUT Timeout before the complete sending.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it is a fatal error, the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">msgRef</td><td>Reference to the message object. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a0ba61dcf10157e9982702373577c6b45"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_sms_SendAsync </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> </td>
+<td class="paramname"><em>msgRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a01aa759eb07ab9e8c4a5e0a6d0c7e942">le_sms_CallbackResultFunc_t</a> </td>
+<td class="paramname"><em>handlerPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">void * </td>
+<td class="paramname"><em>contextPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Send an asynchronous SMS message.</p>
+<p>Verifies first if the parameters are valid, then it checks the modem state can support message sending.</p>
+<dl class="section return"><dt>Returns</dt><dd>LE_FORMAT_ERROR Message content is invalid. </dd>
+<dd>
+LE_FAULT Function failed to send the message. </dd>
+<dd>
+LE_OK Function succeeded. </dd>
+<dd>
+LE_TIMEOUT Timeout before the complete sending.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it is a fatal error, the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">msgRef</td><td>Reference to the message object. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">handlerPtr</td><td></td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">contextPtr</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a8e6e66ff683717a8cd3eb20fc6efe6e0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> le_sms_SendPdu </td>
+<td>(</td>
+<td class="paramtype">const uint8_t * </td>
+<td class="paramname"><em>pduPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>pduNumElements</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a01aa759eb07ab9e8c4a5e0a6d0c7e942">le_sms_CallbackResultFunc_t</a> </td>
+<td class="paramname"><em>handlerPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">void * </td>
+<td class="paramname"><em>contextPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Create and asynchronously send a PDU message.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>le_sms_Msg Reference to the new Message object pooled.</li>
+<li>NULL Not possible to pool a new message. </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">pduPtr</td><td>PDU message. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">pduNumElements</td><td></td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">handlerPtr</td><td></td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">contextPtr</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a4bf9a993afcf06f8e9927b534ef9861c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> le_sms_SendText </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>destStr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>textStr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a01aa759eb07ab9e8c4a5e0a6d0c7e942">le_sms_CallbackResultFunc_t</a> </td>
+<td class="paramname"><em>handlerPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">void * </td>
+<td class="paramname"><em>contextPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Create and asynchronously send a text message.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>le_sms_Msg Reference to the new Message object pooled.</li>
+<li>NULL Not possible to pool a new message.</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If telephone destination number is too long is too long (max LE_MDMDEFS_PHONE_NUM_MAX_LEN digits), it is a fatal error, the function will not return. </dd>
+<dd>
+If message is too long (max LE_SMS_TEXT_MAX_LEN digits), it is a fatal error, the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">destStr</td><td>Telephone number string. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">textStr</td><td>SMS text. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">handlerPtr</td><td></td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">contextPtr</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a2abf46b6d57c473bb06caf701a04183e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_sms_SetBinary </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> </td>
+<td class="paramname"><em>msgRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const uint8_t * </td>
+<td class="paramname"><em>binPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>binNumElements</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Set the binary message content.</p>
+<dl class="section return"><dt>Returns</dt><dd>LE_NOT_PERMITTED Message is Read-Only. </dd>
+<dd>
+LE_BAD_PARAMETER Length of the data is equal to zero. </dd>
+<dd>
+LE_OK Function succeeded.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If length of the data is too long (max LE_SMS_BINARY_MAX_BYTES bytes), it is a fatal error, the function will not return.</dd>
+<dd>
+If the caller is passing a bad pointer into this function, it is a fatal error, the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">msgRef</td><td>Reference to the message object. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">binPtr</td><td>Binary data. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">binNumElements</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a145d3215f5601b88ef80b2674a9df226"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_sms_SetDestination </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> </td>
+<td class="paramname"><em>msgRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>dest</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Set the Telephone destination number.</p>
+<p>Telephone number is defined in ITU-T recommendations E.164/E.163. E.164 numbers can have a maximum of fifteen digits and are usually written with a '+' prefix.</p>
+<dl class="section return"><dt>Returns</dt><dd>LE_NOT_PERMITTED Message is Read-Only. </dd>
+<dd>
+LE_BAD_PARAMETER Telephone destination number length is equal to zero. </dd>
+<dd>
+LE_OK Function succeeded.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If telephone destination number is too long is too long (max LE_MDMDEFS_PHONE_NUM_MAX_LEN digits), it is a fatal error, the function will not return.</dd>
+<dd>
+If the caller is passing a bad pointer into this function, it is a fatal error, the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">msgRef</td><td>Reference to the message object. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">dest</td><td>Telephone number string. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ab7295e1cdf2adb865135d657ec8bde09"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_sms_SetPDU </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> </td>
+<td class="paramname"><em>msgRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const uint8_t * </td>
+<td class="paramname"><em>pduPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>pduNumElements</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Set the PDU message content.</p>
+<dl class="section return"><dt>Returns</dt><dd>LE_NOT_PERMITTED Message is Read-Only. </dd>
+<dd>
+LE_BAD_PARAMETER Length of the data is equal to zero. </dd>
+<dd>
+LE_OK Function succeeded.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If length of the data is too long (max LE_SMS_PDU_MAX_BYTES bytes), it is a fatal error, the function will not return.</dd>
+<dd>
+If the caller is passing a bad pointer into this function, it is a fatal error, the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">msgRef</td><td>Reference to the message object. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">pduPtr</td><td>PDU message. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">pduNumElements</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a5df138c515944ce955dd54689593b5df"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_sms_SetSmsCenterAddress </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>tel</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Set the SMS center address.</p>
+<p>SMS center address number is defined in ITU-T recommendations E.164/E.163. E.164 numbers can have a maximum of fifteen digits and are usually written with a '+' prefix.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT Service is not available..</li>
+<li>LE_OK Function succeeded.</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the SMS center address number is too long (max LE_MDMDEFS_PHONE_NUM_MAX_LEN digits), it is a fatal error, the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">tel</td><td>SMS center address number string. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a34dc999430c46530d6c9067f800c5d72"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_sms_SetText </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> </td>
+<td class="paramname"><em>msgRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>text</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function must be called to set the Text Message content.</p>
+<dl class="section return"><dt>Returns</dt><dd>LE_NOT_PERMITTED Message is Read-Only. </dd>
+<dd>
+LE_BAD_PARAMETER Text message length is equal to zero. </dd>
+<dd>
+LE_OK Function succeeded.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Text Message is encoded in ASCII format (ISO8859-15) and characters have to exist in the GSM 23.038 7 bit alphabet.</dd>
+<dd>
+If message is too long (max LE_SMS_TEXT_MAX_LEN digits), it is a fatal error, the function will not return.</dd>
+<dd>
+If the caller is passing a bad pointer into this function, it is a fatal error, the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">msgRef</td><td>Reference to the message object. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">text</td><td>SMS text. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a2b14febf0e2285b0b3c2dbcd1c2bb7b0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_sms_SetTimeout </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> </td>
+<td class="paramname"><em>msgRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">uint32_t </td>
+<td class="paramname"><em>timeout</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Set the timeout to send a SMS Message.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT Message is not in UNSENT state or is Read-Only.</li>
+<li>LE_OK Function succeeded.</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>On failure, the process exits, so you don't have to worry about checking the returned reference for validity. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">msgRef</td><td>Reference to the message object. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">timeout</td><td>Timeout in seconds. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

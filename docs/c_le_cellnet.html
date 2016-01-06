@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Cellular Network  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">Cellular Network </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p><a class="el" href="le__cellnet__interface_8h.html">API Reference</a></p>
+<hr />
+<p>The Cellular Network service ensures that the modem is registered on the network when an user application makes a request for network access. This includes:</p><ul>
+<li>ensuring that the radio is turned on.</li>
+<li>ensuring that there is a valid SIM, and it is unlocked.</li>
+<li>ensuring that the modem is registered on the network.</li>
+</ul>
+<p>If all of the above conditions are met, then the service indicates that the network is available.</p>
+<h1><a class="anchor" id="le_cellnet_binding"></a>
+IPC interfaces binding</h1>
+<p>All the functions of this API are provided by the <b>cellNetService</b> application service.</p>
+<p>Here's a code sample binding to Cellular Network services: </p><pre class="fragment">bindings:
+{
+   clientExe.clientComponent.le_cellnet -> cellNetService.le_cellnet
+}
+</pre><h1><a class="anchor" id="c_le_cellnet_requesting"></a>
+Requesting the Cellular Network</h1>
+<p>The Cellular Network can be requested using <a class="el" href="le__cellnet__interface_8h.html#adc6770a47ed109a77ae44241a953da5f">le_cellnet_Request()</a>. The le_cellnet_Request function will turn on the radio if it is switched off and it will unlock the SIM if a PIN code is required (it will retrieve the needed information from the config DB, cf. <a class="el" href="c_le_cellnet.html#c_le_cellnet_configdb">Cellular Network configuration tree</a>). Before the cellular network is requested, an application should register a network state handler using <a class="el" href="le__cellnet__interface_8h.html#aa3106518be8b38d94265574736769b6a">le_cellnet_AddStateEventHandler()</a>. Once the cellular network becomes available, the handler will be called to indicate that the modem is now registered on the network.</p>
+<p>If the state of the network changes, then the handler will be called with the new state.</p>
+<p>To release the cellular network, an application can use <a class="el" href="le__cellnet__interface_8h.html#ae3387759b2ae9ecf0992ac685cec5bcd">le_cellnet_Release()</a>. Once all user applications release the cellular network access, then the service will turn off the radio.</p>
+<p>All configuration data required for a network registration, such as the PIN code of the SIM, will be stored in the Config DB.</p>
+<h1><a class="anchor" id="c_le_cellnet_options"></a>
+Network Options</h1>
+<dl class="section note"><dt>Note</dt><dd>The functionaliy described in this section is not currently implemented; this description is provided to outline future functionality.</dd></dl>
+<p>Some applications may have network requirements that are not met by the default cellular network service. For example, it would specify the SIM on which it wants to operate.</p>
+<p>In this case, an application can create a request object using le_cellnet_CreateRequest(), set optional values on that request object, using le_cellnet_SelectSim() and then submits that object to a cellular network request, using le_cellnet_SubmitRequest().</p>
+<h1><a class="anchor" id="c_le_cellnet_configdb"></a>
+Cellular Network configuration tree</h1>
+<p>The configuration database path for the SIM is: </p><pre class="fragment"> /
+     modemServices/
+         sim/
+             1/
+                 pin<string> == <PIN_CODE></pre><ul>
+<li>'1' is the sim slot number that <a class="el" href="le__sim__interface_8h.html#a4c9e3ded0485f14c66e4d51763f2de57">le_sim_GetSelectedCard()</a> is returning.</li>
+<li>'PIN_CODE' is the PIN code for the SIM card.</li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>when a new SIM is inserted and :<ul>
+<li>is locked, Cellular Network Service will read automatically the config DB in order to try to enter the pin for the SIM card.</li>
+<li>is blocked, Cellular Network Service just log an error and did not try to enter the puk code.</li>
+</ul>
+</dd></dl>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license.</p>
+<hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

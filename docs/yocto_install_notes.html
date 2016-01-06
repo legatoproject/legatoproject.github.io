@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Yocto Install Notes  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Platform Yocto Info.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Platform</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Platform')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="platform_constraints.html">Platform Constraints</a><a class="link-selected" href="yocto_main.html">Yocto Info</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">Yocto Install Notes </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p>Here are some helpful tips for Yocto Linux working with Sierra Wireless devices.</p>
+<h1><a class="anchor" id="getstartedInstallNotes_yoctoNoPwd"></a>
+Log on Without Password</h1>
+<p>To log onto the target through the serial interface, log on as <b>root</b> with no password. This allows manual changes to other interfaces (e.g., USB if you want to run CDC-ECM).</p>
+<h1><a class="anchor" id="getstartedInstallNotes_yoctoCDC"></a>
+CDC-ECM for IP vs Ethernet</h1>
+<p>Using CDC-ECM for IP connections will cause the MAC address to change every reboot because the kernel allocates software-defined MAC addresses to interfaces. This may cause new connections to be detected by your host every time you reboot the device. See <a class="el" href="getstarted_config_i_p.html">Configure IP Address</a> and <a class="el" href="tools_target_set_net.html">setNet</a></p>
+<h1><a class="anchor" id="getstartedInstallNotes_yoctoPrefIP"></a>
+Setup Preferred IP</h1>
+<p>Either boot with an Ethernet cable plugged in and let the device obtain an IP address using DHCP, or enable CDC-ECM and the micro-USB cable. You can then determine the IP address using <code>ifconfig</code> on the console or provide a fixed IP from your DHCP server. Then use <code>ssh</code> and <code>scp</code> to access the device and transfer files.</p>
+<h1><a class="anchor" id="getstartedInstallNotes_yoctoDefUSB"></a>
+Change Default USB Classes</h1>
+<p>During the boot sequence, startup scripts run the file <code>/etc/legato/usbsetup</code> that enumerates the USB types listed in <code>/etc/legato/usbmode</code>.</p>
+<p>You can easily override default types by creating your own <code>usbmode</code> file in <code>/mnt/flash/startup/usb</code>. The new file will take precedence over the old one. By default, the device will enumerate an ECM port, an ACM port for AT commands and USB audio.</p>
+<h1><a class="anchor" id="getstartedInstallNotes_yoctoStaticIP"></a>
+Setup Target Static IP</h1>
+<p>You can configure your target and development PC so it doesn't prompt for a password, run: <b>bin/configtargetssh</b> </p>
+<p>It'll look like this: </p><pre class="fragment">dave@devbox:~/legato$ bin/configtargetssh 192.168.1.2
+Generating new key pair... --->>> LEAVE THE PASSPHRASE EMPTY <<<---
+Generating public/private rsa key pair.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /home/dave/.ssh/id_rsa.legatoTarget.
+Your public key has been saved in /home/dave/.ssh/id_rsa.legatoTarget.pub.
+The key fingerprint is:
+af:c5:e4:8c:7d:53:b4:a4:72:c8:67:f3:88:9c:3f:67 dave's key for Legato
+target devices.
+The key's randomart image is:
++--[ RSA 2048]----+
+|                 |
+|                 |
+|              o  |
+|         . . + . |
+|        S = * o  |
+|         X B =   |
+|        . @ + .  |
+|         o o..E  |
+|        .   .+   |
++-----------------+
+/home/dave/.ssh/known_hosts updated.
+Original contents retained as /home/dave/.ssh/known_hosts.old
+Connecting to the target...  (ENTER TARGET'S ROOT PASSWORD WHENEVER
+PROMPTED FOR A PASSWORD)
+(press ENTER if your target doesn't have a root password)
+The authenticity of host '192.168.1.2 (192.168.1.2)' can't be established.
+RSA key fingerprint is f2:2f:66:a5:14:20:bd:46:8f:a2:02:b3:99:6f:72:24.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '192.168.1.2' (RSA) to the list of known hosts.
+root@192.168.1.2's password:
+dave@devpc:~/legato$
+</pre><h1><a class="anchor" id="getstartedInstallNotes_yoctoReadWrite"></a>
+Read/Write rootfs</h1>
+<p>It's convenient right now to enable r/w to rootfs, but it will be moving to a read-only model soon. If you change the rootfs (e.g., in /etc, /lib, /bin), you may cripple your device and have to re-install your rootfs.</p>
+<h1><a class="anchor" id="getstartedInstallNotes_yoctoNoDown"></a>
+Disable New Package Download</h1>
+<p>The Yocto build defaults to disable new package downloads.</p>
+<p>Enable downloading new packages over the Internet, modify:</p>
+<p><code><build-dir>/conf/local</code>.conf value <code>BB_NO_NETWORK</code> to "0" . The file is only present after a build has run once.</p>
+<h1><a class="anchor" id="yoctoBSPTestReport"></a>
+Setup using BSPTestReport.xls</h1>
+<p>The <code>BSPTestReport.xls</code> spreadsheet is used for instructions and reports to help set up different BSP features to test. Start with the Contents sheet.</p>
+<h1><a class="anchor" id="getstartedInstallNotes_yoctoNFSRoot"></a>
+Use nfs root</h1>
+<p>The file <b>meta-swi/meta-swi-mdm9x15/conf/machine/qcom-mdm9615.conf</b> contains examples if you need to include a lot of extra packages in your rootfs or if you build the debug version. See README.bsp for details. Remember to untar the generated rootfs to an exported file system. The file pointed to by the rootfs link contains the most recent root file system. There’s more info available at <a href="https://www.kernel.org/doc/Documentation/filesystems/nfs/nfsroot.txt">kernel docs</a>. </p><hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

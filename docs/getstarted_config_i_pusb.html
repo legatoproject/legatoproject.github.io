@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Micro-USB  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Get Started.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a class="link-selected" href="getstarted_main.html">Get Started</a><a href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">Micro-USB </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p>The WP85 module on a mangOH board is pre-configured to use the micro-USB cable.</p>
+<p>Connect serial, micro-USB, and power cables.</p>
+<h1><a class="anchor" id="getstartedConfigIPusb_target"></a>
+Target</h1>
+<p>In a terminal, run: </p><div class="fragment"><div class="line">minicom /dev/ttyUSB0 </div></div><!-- fragment --><p>Press enter when Minicom starts.</p>
+<p>Sign on as <b>root</b> <b>user</b> (no password required).</p>
+<p>Press enter when prompted for a password.</p>
+<p>Run <code>ifconfig</code>. It should look something like this:</p>
+<pre class="fragment">root@swi-mdm9x15:~# ifconfig
+lo        Link encap:Local Loopback
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:16436  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+usb0      Link encap:Ethernet  HWaddr 32:E4:5E:6F:C4:3C
+          inet addr:192.168.1.2  Bcast:192.168.1.255  Mask:255.255.255.0
+          inet6 addr: fe80::30e4:5eff:fe6f:c43c/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:197 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:57 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:32111 (31.3 KiB)  TX bytes:6725 (6.5 KiB)
+</pre><p>Note that usb0 has an inet addr value. If it doesn't display an inet value, try rebooting the target and rerun <code>ifconfig</code> </p>
+<h1><a class="anchor" id="getstartedConfigIPusb_host"></a>
+Host</h1>
+<p>Open a new terminal on the host.</p>
+<p><code>cd</code> to your Legato directory.</p>
+<p>Run <code>bin/legs</code> to set the Legato environment.</p>
+<p>Run: </p><div class="fragment"><div class="line">ifconfig usb0 <target ip addr> up </div></div><!-- fragment --><p>where the IP address <b>subnet</b> matches the target.</p>
+<p>You may have to use <code>sudo</code> </p>
+<pre class="fragment">local@LocalLinux:~$ sudo ifconfig usb0 192.168.1.20 up
+[sudo] password for local:
+local@LocalLinux:~$
+</pre><p>Run <code>ifconfig</code> again, it should look something like this:</p>
+<pre class="fragment">eth0      Link encap:Ethernet  HWaddr 28:d2:44:36:bd:f6
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+lo        Link encap:Local Loopback
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:6407 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:6407 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0
+          RX bytes:618870 (618.8 KB)  TX bytes:618870 (618.8 KB)
+
+usb0      Link encap:Ethernet  HWaddr 72:ee:fc:17:f3:61
+          inet6 addr: fe80::70ee:fcff:fe17:f361/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:25 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:210 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:5229 (5.2 KB)  TX bytes:42991 (42.9 KB)
+
+wlan0     Link encap:Ethernet  HWaddr 00:c2:c6:13:a2:f9
+          inet addr:192.168.0.17  Bcast:192.168.0.255  Mask:255.255.255.0
+          inet6 addr: fe80::2c2:c6ff:fe13:a2f9/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:657272 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:114077 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:244778069 (244.7 MB)  TX bytes:15624212 (15.6 MB)</pre><p>Ping target to host and vice versa to check everything is working.</p>
+<hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

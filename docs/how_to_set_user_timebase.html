@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Set User Timebase  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">Set User Timebase </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p>This topic provides details on how to set the user timebase along with some overview info.</p>
+<p>Usually, the automated time daemon handles time synchronization, but that may not always be desirable.</p>
+<p>See <a class="el" href="c_rtc.html">User Timebase</a> API reference docs</p>
+<hr />
+<p>You never directly modify the RTC. Instead, the user timebase is stored (internally) as an offset from the RTC (plus/minus) so it's synchronized with the system clock.</p>
+<p>This is how time synchronization works in Legato:</p>
+<div class="image">
+<img alt="le_rtc.png" src="le_rtc.png" />
+</div>
+<h1><a class="anchor" id="howToSetUserTimebase_overview"></a>
+Overview</h1>
+<p>The modem manages a real time clock (battery backed clock VCOIN) that keeps time when the power is removed from the Legato module (if clock battery available). This clock is used by the modem to maintain several timebases derived from different domains (e.g., cellular or GPS). Apps shouldn't directly change the value of the real time clock as it may have undesirable effects on modem function.</p>
+<p>The user timebase is provided to synchronize with the RTC.</p>
+<h2><a class="anchor" id="howToSetUserTimebase_gpsUnixTime"></a>
+GPS and Unix Time</h2>
+<p>The RTC counts milliseconds since the GPS Epoch, which is Jan 6, 1980; it increments on each count so that each second in GPS time has a unique number.</p>
+<p>Unix time starts Jan 1, 1970 and has a fixed number of seconds per day. For days with an extra second in them (i.e., leap second) Unix uses the same second twice. This means that over the years an increasing number of leap seconds have to be accounted for when converting time between GPS and Unix domains. But the rate of drift is low: only 26 leap seconds added since they were introduced in 1972. It's impossible to predict in which years leap seconds will need to be added; the calculation must be done retroactively.</p>
+<p>Under normal conditions, the time will be corrected from an external source (e.g., network time or GPS). If you are synchronizing with cellular network time only, the time-service daemon automatically provides this: call <a class="el" href="le__clock_8h.html#a33197dbd676a37b8c4d5de8f93edc1ee">le_clk_GetAbsoluteTime()</a> or linux 'date' command.</p>
+<p>For most purposes, it's not necessary to convert time to real GPS time; it will suffice to use Unix epoch time.</p>
+<p>The time stored is incremented by the millisecond and Unix time is incremented by the second. This means an arbitrary time stored needs to increment on a millisecond basis to be retrieved later (assuming a battery VCOIN keeps the RTC running).</p>
+<p>When storing Unix time in the user time base, it must be multiplied by 1000 and divided by 1000 when retrieved.</p>
+<h1><a class="anchor" id="howToSetUserTimebase_getSet"></a>
+Get/Set User Timebase</h1>
+<p>If you need to set the user timebase, you need to:</p><ul>
+<li><a class="el" href="c_rtc.html#c_rtc_disableDaemon">Disable Time Daemon</a></li>
+<li><a class="el" href="c_rtc.html#c_rtc_getSet">Get/Set Time Value</a>.</li>
+</ul>
+<p>See <a class="el" href="c_rtc.html">User Timebase</a> and <a class="el" href="c_clock.html">System Clock API</a> reference docs for complete API details.</p>
+<hr />
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

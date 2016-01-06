@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Connect to AirVantage  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">Connect to AirVantage </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p>Also see <a class="el" href="how_to_a_v_install_app.html">Install apps</a></p>
+<hr />
+<p>This topic covers how to create an AirVantage connection to your Legato device.</p>
+<p>Detailed AirVantage documentation: <a href="https://doc.airvantage.net/display/USERGUIDE/Getting+Started">AirVantage Getting Started</a></p>
+<dl class="section note"><dt>Note</dt><dd>You'll need an account on AirVantage Server, you can check with your Sierra Wireless contact.</dd></dl>
+<p>After you connect to your AirVantage account, you can create system and app.</p>
+<h1><a class="anchor" id="howToAVConnect_createSys"></a>
+Create System</h1>
+<p>Create a new System in AirVantage Server:</p><ul>
+<li>From the <code>Inventory menu</code>, choose <code>Systems</code>.</li>
+<li>Click the Create button (+ symbol): enter a Name (used for retrieval).</li>
+<li>In the <code>Gateway</code> tab, click Create a New Gateway (+ symbol), a new windows will appear: enter your device's IMEI and Serial Number.</li>
+<li>Click <code>Create</code>.</li>
+<li>After you return to the system creation window, click the Application field and select the ‘Legato_LWM2M’ (firmware and application update over the air) application model. An application model is an XML file defining the communication contract between AirVantage and the embedded app.</li>
+<li>Select "I want to activate my system after creating it".</li>
+<li>Click <code>Create</code>.</li>
+</ul>
+<h1><a class="anchor" id="howToAVConnect_lwm2m"></a>
+LWM2M</h1>
+<p>Legato provides LWM2M support to connect to AirVantage.</p>
+<p>See <a class="el" href="c_le_avc.html">AirVantage Connector</a>, <a class="el" href="c_le_avdata.html">AirVantage Data</a> and <a class="el" href="def_files_cdef.html#defFilesCdef_assets">Assets</a> for details.</p>
+<h1><a class="anchor" id="howToAVConnect_checkDeviceStatus"></a>
+Device Status</h1>
+<p>Check device status on the AirVantage Server:</p>
+<ul>
+<li>From the <code>Monitor</code> menu, choose <code>Systems</code></li>
+<li>Browse to your device (by the name you created or the IMEI).</li>
+<li>Click Details.</li>
+</ul>
+<p>The <code>Last seen</code> field should be updated with a recent date. You can also see the initial data exchange in the Timeline screen.</p>
+<hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

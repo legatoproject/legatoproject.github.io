@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>System Clock API  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">System Clock API </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p><a class="el" href="le__clock_8h.html">API Reference</a></p>
+<hr />
+<p>This module provides an API for getting/setting date and/or time values, and performing conversions between these values.</p>
+<h1><a class="anchor" id="clk_time"></a>
+Getting/Setting Time</h1>
+<p>Time values can either be absolute or relative. Time is expressed in seconds plus microseconds, and does not stop when the system is suspended (i.e., the clock continues to run even when the system is suspended).</p>
+<p>Absolute time is given as time since the Epoch, 1970-01-01 00:00:00 +0000 (UTC) and is provided by <a class="el" href="le__clock_8h.html#a33197dbd676a37b8c4d5de8f93edc1ee">le_clk_GetAbsoluteTime()</a>. By definition, it is UTC time. The absolute time may jump forward or backward if a new value is set for the absolute time.</p>
+<p>Relative time is a monotonic time from a fixed but unspecified starting point and is provided by <a class="el" href="le__clock_8h.html#a298619d8c1d8f107cb03b8600f09a42b">le_clk_GetRelativeTime()</a>. The relative time is independent of the absolute time. The starting point is fixed during system boot, and cannot be changed, but is reset on each system boot. Since the relative time is monotonic, it is guaranteed to never go backwards. With these characteristics, the relative time is useful for measuring the time between two or more events. For example, at event 1, relative time A is stored, and at some later event 2, relative time B is stored. The relative time between these two events can always be calculated as B-A, and will always be an accurate measure of the relative time between these two events.</p>
+<h1><a class="anchor" id="clk_values"></a>
+Operations on Time Values</h1>
+<p>These operations can be performed on time values:</p><ul>
+<li><a class="el" href="le__clock_8h.html#a6f4bda0268cd9349b6eb81ae350575fc">le_clk_Add</a></li>
+<li><a class="el" href="le__clock_8h.html#ac4a550ee8aa5fad9c81a33024946660a">le_clk_GreaterThan</a></li>
+<li><a class="el" href="le__clock_8h.html#ac5b5ec6f462d598f4e5aa081224725ac">le_clk_Sub</a></li>
+<li><a class="el" href="le__clock_8h.html#a77961175ee422b1418a18eece5192c9c">le_clk_Multiply</a></li>
+</ul>
+<p>The functions use these assumptions:</p><ul>
+<li>All input time values are normalized (i.e., the usec value is less than 1 sec). All time values returned are normalized.</li>
+<li>All input time values or scale factors are positive; a negative time value will not be returned.</li>
+<li>All input time values or scale factors are expected to have reasonable values (i.e., they will not be so large as to cause an overflow of the time value structure).</li>
+</ul>
+<h1><a class="anchor" id="clk_convert"></a>
+Converting Time to Other Formats</h1>
+<p>The current absolute time can be converted to a formatted string in either UTC time or local time, using <a class="el" href="le__clock_8h.html#a5392b8eb7d45ce86c0842a0a69975059">le_clk_GetUTCDateTimeString()</a> or <a class="el" href="le__clock_8h.html#a6f37c2a2171eac23ddc306de1fd55f5c">le_clk_GetLocalDateTimeString()</a> respectively. These functions use the format specification defined for strftime(), with the following additional conversion specifications:</p><ul>
+<li>%J : milliseconds, as a 3 digit zero-padded string, e.g. "015"</li>
+<li>%K : microseconds, as a 6 digit zero-padded string, e.g. "001015"</li>
+</ul>
+<hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

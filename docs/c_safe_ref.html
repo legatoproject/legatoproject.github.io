@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Safe References API  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">Safe References API </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p><a class="el" href="le__safe_ref_8h.html">API Reference</a></p>
+<hr />
+<p>The term "reference" is used to mean "opaque data that refers to some conceptual object". It is intentionally vague to support "information hiding". Behind the scenes, different implementations can use almost anything that fits into a pointer as a "reference". Often, they are indexes into arrays or actual pointers to memory objects. When passing those references through an API to outside clients, the implementation becomes exposed to crash bugs when clients pass those references back into the API damaged or stale ("stale" meaning something that has been deleted).</p>
+<p><b> Safe References </b> are designed to help protect against damaged or stale references being used by clients.</p>
+<h1><a class="anchor" id="c_safeRef_create"></a>
+Create Safe Reference</h1>
+<p>Client calls an API's "Create" function:</p><ul>
+<li>"Create" function creates an object.</li>
+<li>"Create" function creates a "Safe Reference" for the new object <code><a class="el" href="le__safe_ref_8h.html#a458597757cbce48e03413b49f52ec240">le_ref_CreateRef()</a></code> </li>
+<li>"Create" function returns the Safe Reference.</li>
+</ul>
+<h1><a class="anchor" id="c_safeRef_lookup"></a>
+Lookup Pointer</h1>
+<p>Followed by:</p>
+<p>Client calls another API function, passing in the Safe Reference:</p><ul>
+<li>API function translates the Safe Reference back into an object pointer <code><a class="el" href="le__safe_ref_8h.html#a488dddfd579f4a20f39be392c4d7d2e0">le_ref_Lookup()</a></code> </li>
+<li>API function acts on the object.</li>
+</ul>
+<h1><a class="anchor" id="c_safeRef_delete"></a>
+Delete Safe Reference</h1>
+<p>Finishing with:</p>
+<p>Client calls API's "Delete" function, passing in the Safe Reference:</p><ul>
+<li>"Delete" function translates the Safe Reference back into a pointer to its object.</li>
+<li>"Delete" function invalidates the Safe Reference <code><a class="el" href="le__safe_ref_8h.html#a438e18b8ace1d4dda3ca5144a27bd424">le_ref_DeleteRef()</a></code> </li>
+<li>"Delete" function deletes the object.</li>
+</ul>
+<p>At this point, if the Client calls an API function and passes that same (now invalid) Safe Reference (or if the client accidentally passes in some garbage value, like a pointer or zero), the API function will try to translate that into an object pointer. But it'll be told that it's an invalid Safe Reference. The API function can then handle it gracefully, rather than just acting as if it were a valid reference and clobbering the object's deallocated memory or some other object that's reusing the old object's memory.</p>
+<h1><a class="anchor" id="c_safeRef_map"></a>
+Create Referece Map</h1>
+<p>A <b> Reference Map </b> object can be used to create Safe References and keep track of the mappings from Safe References to pointers. At start-up, a Reference Map is created by calling <code><a class="el" href="le__safe_ref_8h.html#a85faf3c75723a1af0e1adf720d9c9dca">le_ref_CreateMap()</a></code>. It takes a single argument, the maximum number of mappings expected to track of at any time.</p>
+<h1><a class="anchor" id="c_safeRef_multithreading"></a>
+Multithreading</h1>
+<p>This API's functions are reentrant, but not thread safe. If there's the slightest possibility the same Reference Map will be accessed by two threads at the same time, use a mutex or some other thread synchronization mechanism to protect the Reference Map from concurrent access.</p>
+<h1><a class="anchor" id="c_safeRef_example"></a>
+Sample Code</h1>
+<p>Here's an API Definition sample:</p>
+<div class="fragment"><div class="line"><span class="comment">// Opaque reference to Foo objects.</span></div><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>xyz_foo_Obj* xyz_foo_ObjRef_t;</div><div class="line"></div><div class="line">xyz_foo_Ref_t xyz_foo_CreateObject</div><div class="line">(</div><div class="line"> <span class="keywordtype">void</span></div><div class="line">);</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> xyz_foo_DoSomething</div><div class="line">(</div><div class="line">    xyz_foo_Ref_t objRef</div><div class="line">);</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> xyz_foo_DeleteObject</div><div class="line">(</div><div class="line">    xyz_foo_Ref_t objRef</div><div class="line">);</div></div><!-- fragment --><p>Here's an API Implementation sample:</p>
+<div class="fragment"><div class="line"><span class="comment">// Maximum number of Foo objects we expect to have at one time.</span></div><div class="line"><span class="preprocessor">#define MAX_FOO_OBJECTS  27</span></div><div class="line"></div><div class="line"><span class="comment">// Actual Foo objects.</span></div><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span></div><div class="line">{</div><div class="line">    ...</div><div class="line">}</div><div class="line">Foo_t;</div><div class="line"></div><div class="line"><span class="comment">// Pool from which Foo objects are allocated.</span></div><div class="line">le_mem_PoolRef_t FooPool;</div><div class="line"></div><div class="line"><span class="comment">// Safe Reference Map for Foo objects.</span></div><div class="line"><a class="code" href="le__safe_ref_8h.html#aaf8fb3412fb840cb50366856affaf69b">le_ref_MapRef_t</a> FooRefMap;</div><div class="line"></div><div class="line"><a class="code" href="le__event_loop_8h.html#abdb9187a56836a93d19cc793cbd4b7ec">COMPONENT_INIT</a></div><div class="line">{</div><div class="line"> <span class="comment">// Create the Foo object pool.</span></div><div class="line">    FooPool = <a class="code" href="le__mem_8h.html#ab91efaa2978c9c1c7b2427d25b33241c">le_mem_CreatePool</a>(<span class="stringliteral">"FooPool"</span>, <span class="keyword">sizeof</span>(Foo_t));</div><div class="line"> <a class="code" href="le__mem_8h.html#a79a4321ffa0345f267eaf3b7d3d3528a">le_mem_ExpandPool</a>(FooPool, MAX_FOO_OBJECTS);</div><div class="line"></div><div class="line"> <span class="comment">// Create the Safe Reference Map to use for Foo object Safe References.</span></div><div class="line">    FooRefMap = <a class="code" href="le__safe_ref_8h.html#a85faf3c75723a1af0e1adf720d9c9dca">le_ref_CreateMap</a>(<span class="stringliteral">"FooMap"</span>, MAX_FOO_OBJECTS);</div><div class="line">};</div><div class="line"></div><div class="line">xyz_foo_Ref_t xyz_foo_CreateObject</div><div class="line">(</div><div class="line"> <span class="keywordtype">void</span></div><div class="line">)</div><div class="line">{</div><div class="line">    Foo_t* fooPtr = <a class="code" href="le__mem_8h.html#af7c289c73d4182835a26a9099f3db359">le_mem_ForceAlloc</a>(FooPool);</div><div class="line"></div><div class="line"> <span class="comment">// Initialize the new Foo object.</span></div><div class="line">    ...</div><div class="line"></div><div class="line"> <span class="comment">// Create and return a Safe Reference for this Foo object.</span></div><div class="line"> <span class="keywordflow">return</span> <a class="code" href="le__safe_ref_8h.html#a458597757cbce48e03413b49f52ec240">le_ref_CreateRef</a>(FooRefMap, fooPtr);</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> xyz_foo_DoSomething</div><div class="line">(</div><div class="line">    xyz_foo_Ref_t objRef</div><div class="line">)</div><div class="line">{</div><div class="line">    Foo_t* fooPtr = <a class="code" href="le__safe_ref_8h.html#a488dddfd579f4a20f39be392c4d7d2e0">le_ref_Lookup</a>(FooRefMap, objRef);</div><div class="line"></div><div class="line"> <span class="keywordflow">if</span> (fooPtr == NULL)</div><div class="line">    {</div><div class="line"> <a class="code" href="le__log_8h.html#adfddb0272111f192957c0ae6704290dd">LE_CRIT</a>(<span class="stringliteral">"Invalid reference (%p) provided!"</span>, objRef);</div><div class="line"> <span class="keywordflow">return</span>;</div><div class="line">    }</div><div class="line"></div><div class="line"> <span class="comment">// Do something to the object.</span></div><div class="line">    ...</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> xyz_foo_DeleteObject</div><div class="line">(</div><div class="line">    xyz_foo_Ref_t objRef</div><div class="line">)</div><div class="line">{</div><div class="line">    Foo_t* fooPtr = <a class="code" href="le__safe_ref_8h.html#a488dddfd579f4a20f39be392c4d7d2e0">le_ref_Lookup</a>(FooRefMap, objRef);</div><div class="line"></div><div class="line"> <span class="keywordflow">if</span> (fooPtr == NULL)</div><div class="line">    {</div><div class="line"> <a class="code" href="le__log_8h.html#adfddb0272111f192957c0ae6704290dd">LE_CRIT</a>(<span class="stringliteral">"Invalid reference (%p) provided!"</span>, objRef);</div><div class="line"> <span class="keywordflow">return</span>;</div><div class="line">    }</div><div class="line"></div><div class="line"> <span class="comment">// Invalidate the Safe Reference.</span></div><div class="line"> <a class="code" href="le__safe_ref_8h.html#a438e18b8ace1d4dda3ca5144a27bd424">le_ref_DeleteRef</a>(FooRefMap, objRef);</div><div class="line"></div><div class="line"> <span class="comment">// Release the Foo object.</span></div><div class="line"> <a class="code" href="le__mem_8h.html#a6d8e3fe430bcb81efe97b57ce30ef2de">le_mem_Release</a>(fooPtr);</div><div class="line">}</div></div><!-- fragment --><hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

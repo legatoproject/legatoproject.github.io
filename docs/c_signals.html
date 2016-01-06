@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Signals API  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">Signals API </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p><a class="el" href="le__signals_8h.html">API Reference</a></p>
+<hr />
+<p>Signals are software interrupts that can be sent to a running process or thread to indicate exceptional situations. The action taken when an event is received depends on the current settings for the signal and may be set to either:</p>
+<ul>
+<li>Operating systems default action.</li>
+<li>Ignore the signal.</li>
+<li>A custom handler.</li>
+</ul>
+<p>When a signal is received, unless it is ignored or blocked the action for the signal will preempt any code that is currently executing. Also, signals are asynchronous and may arrive at any time. See <a href="http://man7.org/linux/man-pages/man7/signal.7.html">http://man7.org/linux/man-pages/man7/signal.7.html</a> for more details.</p>
+<p>The asynchronous and preemptive nature of signals can be difficult to deal with and is often a source of race conditions. Moreover asynchronous and preemptive signal handling is often unnecessary so code often looks something like this:</p>
+<div class="fragment"><div class="line"><span class="comment">// A global volatile atomic flag.</span></div><div class="line"><span class="keyword">static</span> <span class="keyword">volatile</span> <span class="keywordtype">int</span> GotSignal;</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> sigHandler(<span class="keywordtype">int</span> sigNum)</div><div class="line">{</div><div class="line"> <span class="comment">// Must only use asynch-signal-safe functions in this handler, see signals(7) man page for</span></div><div class="line"> <span class="comment">// more details.</span></div><div class="line"></div><div class="line"> <span class="comment">// Set the flag.</span></div><div class="line">     GotSignal = 1;</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keywordtype">int</span> main (<span class="keywordtype">void</span>)</div><div class="line">{</div><div class="line"> <span class="keywordflow">while</span>(1)</div><div class="line">     {</div><div class="line"> <span class="comment">// Do something.</span></div><div class="line">         ...</div><div class="line"></div><div class="line"> <span class="keywordflow">if</span> (GotSignal = 1)</div><div class="line">         {</div><div class="line"> <span class="comment">// Clear the flag.</span></div><div class="line">             GotSignal = 0;</div><div class="line"></div><div class="line"> <span class="comment">// Process the signal.</span></div><div class="line">             ...</div><div class="line">         }</div><div class="line">     }</div><div class="line">}</div></div><!-- fragment --><p>In this code sample, the signal handler is only used to set a flag, while the main loop handles the actual signal processing. But handling signals this way requires the main loop to run continuously. This code is also prone to errors. For example, if the clearing of the flags was done after processing of the signal, any signals received during processing of the signals will be lost.</p>
+<h1><a class="anchor" id="c_signals_eventHandlers"></a>
+Signal Event Handlers</h1>
+<p>The Legato signals API provides a simpler alternative, called signal events. Signal events can be used to receive and handle signals synchronously without the need for a sit-and-wait loop or even a block-and-wait call.</p>
+<p>To use signal events, the desired signals must first be blocked using <a class="el" href="le__signals_8h.html#a095ec12deab6b6ed0475583586a6c4d7">le_sig_Block()</a> (see <a class="el" href="c_signals.html#c_signals_blocking">Blocking signals</a>). Then set a signal event handler for the desired signal using <code><a class="el" href="le__signals_8h.html#a421910132f193dae70e8309dc86a86c4">le_sig_SetEventHandler()</a></code>. Once a signal to the thread is received, the signal event handler is called by the thread's Legato event loop (see <a class="el" href="c_event_loop.html">Event Loop API</a> for more details). The handler is called synchronously in the context of the thread that set the handler. Be aware that if the thread's event loop is not called or is blocked by some other code, the signal event handler will also be blocked.</p>
+<p>Here is an example using signal events to handle the SIGCHLD signals:</p>
+<div class="fragment"><div class="line"><span class="comment">// SIGCHILD event handler that will be called as a synchronous event.</span></div><div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> SigChildEventHandler(<span class="keywordtype">int</span> sigNum)</div><div class="line">{</div><div class="line"> <span class="comment">// Handle SIGCHLD event.</span></div><div class="line">     ...</div><div class="line"></div><div class="line"> <span class="comment">// There is no need to limit ourselves to async-signal-safe functions because we are now in</span></div><div class="line"> <span class="comment">// a synchronous event handler.</span></div><div class="line">}</div><div class="line"></div><div class="line"></div><div class="line"><a class="code" href="le__event_loop_8h.html#abdb9187a56836a93d19cc793cbd4b7ec">COMPONENT_INIT</a></div><div class="line">{</div><div class="line"> <span class="comment">// Block Signals that we are going to set event handlers for.</span></div><div class="line"> <a class="code" href="le__signals_8h.html#a095ec12deab6b6ed0475583586a6c4d7">le_sig_Block</a>(SIGCHLD);</div><div class="line"></div><div class="line"> <span class="comment">// Setup the signal event handler.</span></div><div class="line"> <a class="code" href="le__signals_8h.html#a421910132f193dae70e8309dc86a86c4">le_sig_SetEventHandler</a>(SIGCHILD, SigChildEventHandler);</div><div class="line">}</div></div><!-- fragment --><h1><a class="anchor" id="c_signals_mixedHandlers"></a>
+Mixing Asynchronous Signal Handlers with Synchronous Signal Event Handlers</h1>
+<p>Signal events work well when dealing with signals synchronously, but when signals must be dealt with in an asynchronously, traditional signal handlers are still preferred. In fact, signal event handlers are not allowed for certain signals like program error signals (ie. SIGFPE, etc.) because they indicate a serious error in the program and all code outside of signal handlers are considered unreliable. This means that asynchronous signal handlers are the only option when dealing with program error signals.</p>
+<p>Signal event handlers can be used in conjunction with asynchronous signal handlers but only if they do not deal with the same signals. In fact all signals that use signal events must be blocked for every thread in the process. The Legato framework takes care of this for you when you set the signals you want to use in the Legato build system.</p>
+<p>If your code explicitly unblocks a signal where you currently have signal event handlers, the signal event handlers will no longer be called until the signal is blocked again.</p>
+<h1><a class="anchor" id="c_signals_multiThread"></a>
+Multi-Threading Support</h1>
+<p>In a multi-threaded system, signals can be sent to either the process or a specific thread. Signals directed at a specific thread will be received by that thread; signals directed at the process are received by one of the threads in the process that has a handler for the signal.</p>
+<p>It is unspecified which thread will actually receive the signal so it's recommended to only have one signal event handler per signal.</p>
+<h1><a class="anchor" id="c_signals_limitations"></a>
+Limitations and Warnings</h1>
+<p>A limitation of signals in general (not just with signal events) is called signal merging. Signals that are received but not yet handled are said to be pending. If another signal of the same type is received while the first signal is pending, then the two signals will merge into a single signal and there will be only one handler function call. Consequently, it is not possible to reliably know how many signals arrived.</p>
+<dl class="section warning"><dt>Warning</dt><dd>Signals are difficult to deal with in general because of their asynchronous nature and although, Legato has simplified the situation with signal events certain limitations still exist. If possible, avoid using them.</dd></dl>
+<h1><a class="anchor" id="c_signals_blocking"></a>
+Blocking signals</h1>
+<p>Signals that are to be used with a signal event handlers must be blocked for the entire process. To ensure this use <a class="el" href="le__signals_8h.html#a095ec12deab6b6ed0475583586a6c4d7">le_sig_Block()</a> to block signals in the process' first thread. All other threads will inherit the signal mask from the first thread.</p>
+<p>The example below shows how to use a signal event in a separate thread.</p>
+<div class="fragment"><div class="line"><span class="comment">// SIGCHILD event handler that will be called as a synchronous event in the context of the</span></div><div class="line"><span class="comment">// workThread.</span></div><div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> SigChildEventHandler(<span class="keywordtype">int</span> sigNum)</div><div class="line">{</div><div class="line"> <span class="comment">// Handle SIGCHILD event.</span></div><div class="line">     ...</div><div class="line"></div><div class="line"> <span class="comment">// There is no need to limit ourselves to async-signal-safe functions because we are now in</span></div><div class="line"> <span class="comment">// a synchronous event handler.</span></div><div class="line">}</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">// Work thread's main function.</span></div><div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span>* WorkThreadMain(<span class="keywordtype">void</span>* context)</div><div class="line">{</div><div class="line"> <span class="comment">// Setup the signal event handler.</span></div><div class="line"> <a class="code" href="le__signals_8h.html#a421910132f193dae70e8309dc86a86c4">le_sig_SetEventHandler</a>(SIGCHILD, SigChildEventHandler);</div><div class="line"></div><div class="line"> <span class="comment">// Start this thread's event loop.</span></div><div class="line"> <a class="code" href="le__event_loop_8h.html#ae313b457994371c658be9fe0494a01ff">le_event_RunLoop</a>();</div><div class="line"></div><div class="line"> <span class="keywordflow">return</span> NULL;</div><div class="line">}</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">// Main thread code.</span></div><div class="line"><a class="code" href="le__event_loop_8h.html#abdb9187a56836a93d19cc793cbd4b7ec">COMPONENT_INIT</a></div><div class="line">{</div><div class="line"> <span class="comment">// Block Signals that we are going to set event handlers for in the main thread so that all</span></div><div class="line"> <span class="comment">// subsequent threads will inherit the same signal mask.</span></div><div class="line"> <a class="code" href="le__signals_8h.html#a095ec12deab6b6ed0475583586a6c4d7">le_sig_Block</a>(SIGCHLD);</div><div class="line"></div><div class="line"> <span class="comment">// Create and start a work thread that will actually handle the signal.</span></div><div class="line"> <a class="code" href="le__thread_8h.html#a32121104c6b4ca39008eb79a4d6862f2">le_thread_Ref_t</a> workThread = <a class="code" href="le__thread_8h.html#a87e02a46f92e9e3e11ed28a2b265872f">le_thread_Create</a>(<span class="stringliteral">"workThread"</span>, WorkThread, NULL);</div><div class="line"></div><div class="line"> <a class="code" href="le__thread_8h.html#a38df3877ee5ab9fac17b2fc0be46c27e">le_thread_Start</a>(workThread);</div><div class="line">}</div></div><!-- fragment --><hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

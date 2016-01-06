@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>eCall  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">eCall </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p><a class="el" href="le__ecall__interface_8h.html">API Reference</a> <br />
+<a class="el" href="how_to_ecall.html">Manage eCall</a> <br />
+<a class="el" href="sample_apps_e_call.html">eCall</a> sample app <br />
+<a class="el" href="c_ecall.html#le_ecall_samples">Code samples</a> <br />
+</p>
+<hr />
+<p>eCall is a technology initiative intended to bring rapid assistance to auto accidents anywhere in the European Union. When a serious vehicle accident occurs, sensors automatically trigger an eCall. When activated, the in-vehicle system (IVS) establishes a 112-voice connection.</p>
+<p>The Mobile Network Operator handles the eCall like any other 112 call and routes the call to the most appropriate emergency response centre - Public Safety Answering Point (PSAP).</p>
+<p>At the same time, a digital "minimum set of data" (MSD) message is sent over the voice call using in-band modem signals. The MSD includes accident information like time, location, driving direction, and vehicle description.</p>
+<p>The eCall can also be activated manually. The mobile network operator identifies that the 112 call is an eCall from the “eCall flag” inserted by the vehicle’s communication module.</p>
+<p>This API applies for both PAN-EUROPEAN and ERA-GLONASS standards.</p>
+<dl class="section note"><dt>Note</dt><dd>eCall service is only available on automotive products.</dd></dl>
+<h1><a class="anchor" id="le_ecall_binding"></a>
+IPC interfaces binding</h1>
+<p>All the functions of this API are provided by the <b>modemService</b> service.</p>
+<p>Here's a code sample binding to modem services: </p><pre class="fragment">bindings:
+{
+   clientExe.clientComponent.le_ecall -> modemService.le_ecall
+}
+</pre><h1><a class="anchor" id="le_ecall_operation"></a>
+Operation modes</h1>
+<p>The modem can be configured to operate in three different operation modes:</p><ul>
+<li><a class="el" href="le__ecall__interface_8h.html#a042d52c84b5b679ab32dd814c5b0be9e">le_ecall_ForceOnlyMode()</a>: this function configures the eCall operation mode to eCall only, only emergency number can be used to start an eCall session. The modem doesn't try to register on the Cellular network. This function forces the modem to behave as eCall only mode whatever U/SIM operation mode. The change doesn't persist over power cycles. This function can be called before making an eCall.</li>
+<li><a class="el" href="le__ecall__interface_8h.html#ad468828b0024de378d91ea9c30fd6f3f">le_ecall_ForcePersistentOnlyMode()</a>: Same as <a class="el" href="le__ecall__interface_8h.html#a042d52c84b5b679ab32dd814c5b0be9e">le_ecall_ForceOnlyMode()</a>, but the change persists over power cycles.</li>
+<li><a class="el" href="le__ecall__interface_8h.html#a924114fa7fab10c3f351766a76134f34">le_ecall_ExitOnlyMode()</a>: this function exits from eCall Only mode. It configures the eCall operation mode to Normal mode, the modem uses the default operation mode at power up (or after U/SIM hotswap). The modem behaves following the U/SIM eCall operation mode; for example the U/SIM can be configured only for eCall, or a combination of eCall and commercial service provision.</li>
+<li><a class="el" href="le__ecall__interface_8h.html#a8e245065491b14f46405e415ea17b6b8">le_ecall_GetConfiguredOperationMode()</a>: this function allows the user to retrieve the configured Operation mode. The configured operation mode can be:<ul>
+<li><code>LE_ECALL_NORMAL_MODE</code> : normal mode. The modem behaves following the U/SIM eCall operation mode.</li>
+<li><code>LE_ECALL_ONLY_MODE</code> : eCall only mode according to U/SIM operation mode or forced by application through the <a class="el" href="le__ecall__interface_8h.html#a042d52c84b5b679ab32dd814c5b0be9e">le_ecall_ForceOnlyMode()</a> function.</li>
+<li><code>LE_ECALL_FORCED_PERSISTENT_ONLY_MODE</code> : persistent eCall only mode.</li>
+</ul>
+</li>
+</ul>
+<h1><a class="anchor" id="le_ecall_session"></a>
+eCall Session</h1>
+<p>Start an eCall session by creating an eCall object that calls <a class="el" href="le__ecall__interface_8h.html#aad7fa3b34d9d72a2f1d4baa681ba25cc">le_ecall_Create()</a>. Stop an eCall session with <a class="el" href="le__ecall__interface_8h.html#a85800c86f9709fb7baa7219cc762181c">le_ecall_End()</a>.</p>
+<p>The type of eCall and the kind of activation are specified using different functions to start the eCall session:</p><ul>
+<li><a class="el" href="le__ecall__interface_8h.html#ab106c3ca87fc8dd8239d2849df932122">le_ecall_StartManual()</a>: initiate a manual eCall session (triggered by a passenger)</li>
+<li><a class="el" href="le__ecall__interface_8h.html#aa25256eeacefcf00c14763ef294c7667">le_ecall_StartAutomatic()</a>: initiate an automatic eCall session (automatically triggered by the IVS in case of accident)</li>
+<li><a class="el" href="le__ecall__interface_8h.html#aa5d23a1bea370b1ae29fc52d7a89d947">le_ecall_StartTest()</a>: initiate a test eCall session (to test the communication between the IVS and the PSAP)</li>
+</ul>
+<dl class="section warning"><dt>Warning</dt><dd>An application must wait for <code>LE_ECALL_STATE_DISCONNECTED</code> event before calling again the <code>le_ecall_StartXxx()</code> functions.</dd></dl>
+<p>When the eCall object is no longer needed, call <a class="el" href="le__ecall__interface_8h.html#af1221deb68c46912748f65505b3e4919">le_ecall_Delete()</a> to free all allocated resources associated with the object.</p>
+<p>The current state of an eCall session can be queried using <a class="el" href="le__ecall__interface_8h.html#a7881e794b9249222edde10f76d7663c9">le_ecall_GetState()</a>. Alternatively, an application can register a handler be notified when the session state changes. The handler can be managed using <a class="el" href="le__ecall__interface_8h.html#a453b64579f2884f1d26981bca38a201c">le_ecall_AddStateChangeHandler()</a> and <a class="el" href="le__ecall__interface_8h.html#a6be1fd10666da25882a2c6f78c82664d">le_ecall_RemoveStateChangeHandler()</a>.</p>
+<p>An application can call <a class="el" href="le__ecall__interface_8h.html#a771b2ef399a8fbf3b80c4eb11152c06a">le_ecall_GetTerminationReason()</a> to know the reason of the call termination when call state is LE_ECALL_STATE_DISCONNECTED, and also <a class="el" href="le__ecall__interface_8h.html#a8ffb7fb207537ea4574823285ebb6ca1">le_ecall_GetPlatformSpecificTerminationCode()</a> to get platform specific termination code (refer to your platform documentation for further details).</p>
+<h1><a class="anchor" id="le_ecall_msd"></a>
+Minimum Set of Data (MSD)</h1>
+<p>The dynamic values of the MSD can be set with:</p><ul>
+<li><a class="el" href="le__ecall__interface_8h.html#a2b56b7b7fd7f936c144d30eba7815908">le_ecall_SetMsdPosition()</a> sets the position of the vehicle.</li>
+<li><a class="el" href="le__ecall__interface_8h.html#a8c009bb03d61dcd0ffbd9e986b692a85">le_ecall_SetMsdPassengersCount()</a> sets the number of passengers.</li>
+</ul>
+<p>The MSD is automatically encoded with the dynamic values and the static values retrieved from the configuration tree each time those functions are called.</p>
+<dl class="section warning"><dt>Warning</dt><dd>Those functions return a LE_DUPLICATE error when the MSD has been already imported with <a class="el" href="le__ecall__interface_8h.html#a85c4c3b921b9a6b0bc10f9400e58113e">le_ecall_ImportMsd()</a> function.</dd></dl>
+<p>The MSD transmission mode can be set or get with:</p><ul>
+<li><a class="el" href="le__ecall__interface_8h.html#a00d3dbc99884375cf2487d6640767c40">le_ecall_SetMsdTxMode()</a></li>
+<li><a class="el" href="le__ecall__interface_8h.html#a4319df67dc451fecb72e4e60ba7b6f6e">le_ecall_GetMsdTxMode()</a></li>
+</ul>
+<p>The transmission mode can be:</p><ul>
+<li><code>LE_ECALL_TX_MODE_PUSH</code> : the MSD is pushed by the IVS</li>
+<li><code>LE_ECALL_TX_MODE_PULL</code> : the MSD is sent when requested by the PSAP</li>
+</ul>
+<p>It's possible to import a prepared MSD using the <a class="el" href="le__ecall__interface_8h.html#a85c4c3b921b9a6b0bc10f9400e58113e">le_ecall_ImportMsd()</a> function. The prepared MSD must answer the requirements described in the "EN 15722:2013" publication (this publication has been prepared by Technical Committee CEN/TC 278 “Intelligent Transport Systems").</p>
+<dl class="section warning"><dt>Warning</dt><dd>The imported MSD doesn't take into account the values provided by the le_ecall_SetMsdXxx() functions and the configuration tree. It overwrites any previous imported MSD or encoded MSD.</dd>
+<dd>
+The imported MSD overwrites the control flags (automaticActivation and testCall) set by le_ecall_StartXxx() functions (Manual, Automatic, Test). The User App is in charge of their correct settings.</dd></dl>
+<p>The encoded MSD can be retrieved with <a class="el" href="le__ecall__interface_8h.html#aebdb7744c37081fda6398031d3ee1198">le_ecall_ExportMsd()</a> function.</p>
+<dl class="section note"><dt>Note</dt><dd>The User app must perform the MSD transmission by calling <a class="el" href="le__ecall__interface_8h.html#a344e4c29208e576e81dda113f786529e">le_ecall_SendMsd()</a> when the LE_ECALL_STATE_PSAP_START_IND_RECEIVED event is received. The MSD can be updated before calling <a class="el" href="le__ecall__interface_8h.html#a344e4c29208e576e81dda113f786529e">le_ecall_SendMsd()</a>, using the e_ecall_ImportMsd() function or the le_ecall_SetMsdXxx() functions.</dd></dl>
+<h1><a class="anchor" id="le_ecall_concurrency"></a>
+Concurrency</h1>
+<p>If another application tries to use the eCall service while a session is already in progress, the <a class="el" href="le__ecall__interface_8h.html#ab106c3ca87fc8dd8239d2849df932122">le_ecall_StartManual()</a>, <a class="el" href="le__ecall__interface_8h.html#aa25256eeacefcf00c14763ef294c7667">le_ecall_StartAutomatic()</a>, <a class="el" href="le__ecall__interface_8h.html#aa5d23a1bea370b1ae29fc52d7a89d947">le_ecall_StartTest()</a> functions will return a LE_BUSY error. The eCall session in progress won't be interrupted or disturbed. The application can follow the session progress with 'state' functions like <a class="el" href="le__ecall__interface_8h.html#a7881e794b9249222edde10f76d7663c9">le_ecall_GetState()</a> and <a class="el" href="le__ecall__interface_8h.html#a453b64579f2884f1d26981bca38a201c">le_ecall_AddStateChangeHandler()</a>. A manual eCall can't interrupt an automatic eCall, and an automatic eCall can't interrupt a manual eCall.</p>
+<h1><a class="anchor" id="le_ecall_eraglonass"></a>
+ERA-GLONASS compliancy</h1>
+<p>To perform an emergency call following the ERA-GLONASS requirements, the 'systemStandard' entry of the configuration database must be set to 'ERA-GLONASS'.</p>
+<p>Moreover, the User can set some specific configuration settings in accordance with the PSAP configuration:</p>
+<ul>
+<li><a class="el" href="le__ecall__interface_8h.html#a15127a7b0500796257795aaf64acd1e2">le_ecall_SetEraGlonassManualDialAttempts()</a>: set the MANUAL_DIAL_ATTEMPTS value. If a dial attempt under manual emergency call initiation failed, it should be repeated maximally ECALL_MANUAL_DIAL_ATTEMPTS-1 times within the maximal time limit of ECALL_DIAL_DURATION. The default value is 10. Redial attempts stop once the call has been cleared down correctly, or if counter / timer reached their limits. Available for both manual and test modes.</li>
+<li><a class="el" href="le__ecall__interface_8h.html#a836aaf195c0648d41f4a13f8c7ced736">le_ecall_SetEraGlonassAutoDialAttempts()</a>: set the AUTO_DIAL_ATTEMPTS value. If a dial attempt under automatic emergency call initiation failed, it should be repeated maximally ECALL_AUTO_DIAL_ATTEMPTS-1 times within the maximal time limit of ECALL_DIAL_DURATION. The default value is 10. Redial attempts stop once the call has been cleared down correctly, or if counter / timer reached their limits.</li>
+<li><a class="el" href="le__ecall__interface_8h.html#a6c934a9e5aad11eb6f009a6bf34fca19">le_ecall_SetEraGlonassDialDuration()</a>: set the ECALL_DIAL_DURATION time. It is the maximum time the IVS have to connect the emergency call to the PSAP, including all redial attempts. If the call is not connected within this time (or ManualDialAttempts/AutoDialAttempts dial attempts), it will stop.</li>
+</ul>
+<p>The corresponding getter functions let you retrieve the configuration settings values:</p>
+<ul>
+<li><a class="el" href="le__ecall__interface_8h.html#a579169dbcb91369caa156d2c0e3462c1">le_ecall_GetEraGlonassManualDialAttempts()</a>: get the MANUAL_DIAL_ATTEMPTS value.</li>
+<li><a class="el" href="le__ecall__interface_8h.html#af8beed56bd3be9bee8a771e05c498ac8">le_ecall_GetEraGlonassAutoDialAttempts()</a>: get the AUTO_DIAL_ATTEMPTS value.</li>
+<li><a class="el" href="le__ecall__interface_8h.html#afeb92d26dd8a2c092e96b07f3dc0391d">le_ecall_GetEraGlonassDialDuration()</a>: get the ECALL_DIAL_DURATION time.</li>
+</ul>
+<h1><a class="anchor" id="le_ecall_eraGlonassData"></a>
+ERA-GLONASS MSD additional data</h1>
+<p>ERA-GLONASS additional data are optional and provided in the MSD message if any. They are located in MSD data block number 12 as optional additional data.</p>
+<p>ERA-GLONASS MSD additional data describes:</p><ul>
+<li>The crash severity (Accident Severity Index - ASI15)</li>
+<li>The diagnostic result</li>
+<li>The crash information</li>
+</ul>
+<p>ERA-GLONASS MSD additional data can be specified through the following functions:</p><ul>
+<li><a class="el" href="le__ecall__interface_8h.html#a577f3dcd16e53c8a14295ec58c6d2b9a">le_ecall_SetMsdEraGlonassCrashSeverity()</a>.</li>
+<li><a class="el" href="le__ecall__interface_8h.html#addb2874aacaffba2731354c4ac9428bf">le_ecall_ResetMsdEraGlonassCrashSeverity()</a>.</li>
+<li><a class="el" href="le__ecall__interface_8h.html#a51ad61edf379cfe07f03fbd71b56df9d">le_ecall_SetMsdEraGlonassDiagnosticResult()</a>.</li>
+<li><a class="el" href="le__ecall__interface_8h.html#ad3e06b90843a480d68dc99ead29ae8d0">le_ecall_ResetMsdEraGlonassDiagnosticResult()</a>.</li>
+<li><a class="el" href="le__ecall__interface_8h.html#a08c613df57d34eb2a1309738bced5d76">le_ecall_SetMsdEraGlonassCrashInfo()</a>.</li>
+<li><a class="el" href="le__ecall__interface_8h.html#ab883aa41416ada9746acfbb75a0039a8">le_ecall_ResetMsdEraGlonassCrashInfo()</a>.</li>
+</ul>
+<p>ERA-GLONASS additional data is encoded using the OID version "1.4.1". This was assigned to ERA-GLONASS optional additional data by CEN. Content of data block in the AdditionalData should be:</p>
+<div class="fragment"><div class="line">ERAOADASN1Module</div><div class="line">DEFINITIONS</div><div class="line">AUTOMATIC TAGS ::=</div><div class="line">BEGIN</div><div class="line">ERADataFormatId::= INTEGER (1)</div><div class="line"></div><div class="line">ERAAdditionalData ::= SEQUENCE {</div><div class="line">   crashSeverity INTEGER(0..2047) OPTIONAL,</div><div class="line">   diagnosticResult DiagnosticResult OPTIONAL,</div><div class="line">   crashInfo CrashInfo OPTIONAL,</div><div class="line">   ...</div><div class="line">}</div><div class="line"></div><div class="line">DiagnosticResult ::= SEQUENCE {</div><div class="line">   micConnectionFailure BOOLEAN OPTIONAL,</div><div class="line">   micFailure BOOLEAN OPTIONAL,</div><div class="line">   rightSpeakerFailure BOOLEAN OPTIONAL,</div><div class="line">   leftSpeakerFailure BOOLEAN OPTIONAL,</div><div class="line">   speakersFailure BOOLEAN OPTIONAL,</div><div class="line">   ignitionLineFailure BOOLEAN OPTIONAL,</div><div class="line">   uimFailure BOOLEAN OPTIONAL,</div><div class="line">   statusIndicatorFailure BOOLEAN OPTIONAL,</div><div class="line">   batteryFailure BOOLEAN OPTIONAL,</div><div class="line">   batteryVoltageLow BOOLEAN OPTIONAL,</div><div class="line">   crashSensorFailure BOOLEAN OPTIONAL,</div><div class="line">   firmwareImageCorruption BOOLEAN OPTIONAL,</div><div class="line">   commModuleInterfaceFailure BOOLEAN OPTIONAL,</div><div class="line">   gnssReceiverFailure BOOLEAN OPTIONAL,</div><div class="line">   raimProblem BOOLEAN OPTIONAL,</div><div class="line">   gnssAntennaFailure BOOLEAN OPTIONAL,</div><div class="line">   commModuleFailure BOOLEAN OPTIONAL,</div><div class="line">   eventsMemoryOverflow BOOLEAN OPTIONAL,</div><div class="line">   crashProfileMemoryOverflow BOOLEAN OPTIONAL,</div><div class="line">   otherCriticalFailires BOOLEAN OPTIONAL,</div><div class="line">   otherNotCriticalFailures BOOLEAN OPTIONAL</div><div class="line">}</div><div class="line"></div><div class="line">CrashInfo ::= SEQUENCE {</div><div class="line">   crashFront BOOLEAN OPTIONAL,</div><div class="line">   crashLeft BOOLEAN OPTIONAL,</div><div class="line">   crashRight BOOLEAN OPTIONAL,</div><div class="line">   crashRear BOOLEAN OPTIONAL,</div><div class="line">   crashRollover BOOLEAN OPTIONAL,</div><div class="line">   crashSide BOOLEAN OPTIONAL,</div><div class="line">   crashFrontOrSide BOOLEAN OPTIONAL,</div><div class="line">   crashAnotherType BOOLEAN OPTIONAL</div><div class="line">}</div><div class="line">END</div></div><!-- fragment --><h1><a class="anchor" id="le_ecall_redial"></a>
+Redial management</h1>
+<p>In the case of PAN-EUROPEAN, the redial can be performed as many times as desired but should be performed within 2 minutes. (EN 16062:2014 -7.14.3).</p>
+<p>In the case of ERA-GLONASS, the redial can be performed ECALL_MANUAL_DIAL_ATTEMPTS times within the maximal time limit of ECALL_DIAL_DURATION (GOST 54620 2013 – Appendix A).</p>
+<p>The <b>LE_ECALL_STATE_END_OF_REDIAL_PERIOD</b> state event notifies the User of the redial period end.</p>
+<h1><a class="anchor" id="le_ecall_samples"></a>
+Code samples</h1>
+<p>A sample code that implements an eCall test session with a local voice prompt can be found in <b>eCallWPrompt.c</b> file (please refer to <a class="el" href="c_ecall_w_prompt_sample.html">Sample code of an eCall test session with a local voice prompt</a> page).</p>
+<p>A sample code that implements an eCall test session with a voice call connection can be found in <b>eCallWVoice.c</b> file (please refer to <a class="el" href="c_ecall_w_voice_sample.html">Sample code an eCall test session with a voice call connection</a> page).</p>
+<p>If you want to have a look at a more in-depth usage of these APIs, please refer to the c_ecallAppMain .</p>
+<h1><a class="anchor" id="le_ecall_configuration"></a>
+eCall configuration</h1>
+<p>By default, the number to dial is read from the FDN/SDN (Fixed Dialling Numbers/Service Dialling Numbers) of the U/SIM, depending upon the eCall operating mode.</p>
+<p>However, the PSAP telephone number can be specified and retrieved with:</p><ul>
+<li><a class="el" href="le__ecall__interface_8h.html#a9c13a8582bca84c4ae77643e1f4cfd71">le_ecall_SetPsapNumber()</a></li>
+<li><a class="el" href="le__ecall__interface_8h.html#a91c84ca3f4bb27844bfd2d14859bf31a">le_ecall_GetPsapNumber()</a></li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>That PSAP number is not applied to Manually or Automatically initiated eCall. For those modes, an emergency call is launched.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>These two functions don't modified the U/SIM content nor read the U/SIM content.</dd></dl>
+<p><a class="el" href="le__ecall__interface_8h.html#a034c442fd7c6650ed956822a561c0104">le_ecall_UseUSimNumbers()</a> function can be recalled to indicate the modem to read the number to dial from the FDN/SDN of the U/SIM, depending upon the eCall operating mode.</p>
+<p>The NAD (Network Access Device, i.e. the Modem) deregistration time value can be set or get with:</p><ul>
+<li><a class="el" href="le__ecall__interface_8h.html#a66e454e84db7d337d76bc867b57891a1">le_ecall_SetNadDeregistrationTime()</a></li>
+<li><a class="el" href="le__ecall__interface_8h.html#a0f24b673049d51baf132ace25e2fa161">le_ecall_GetNadDeregistrationTime()</a></li>
+</ul>
+<p>Time is set in hours where:</p><ul>
+<li>from 1 to 60 minutes -> 1 hour</li>
+<li>from 61 to 120 minutes -> 2hours, etc.</li>
+</ul>
+<p>Example: if <code>deregTime</code> parameter unit is minutes, the effective time is: </p><div class="fragment"><div class="line">ECallConfiguration.nad_deregistration_time = (deregTime+59)/60; </div></div><!-- fragment --><p>After termination of an emergency call the in-vehicle system remains registered on the network for the period of time, defined by the installation parameter 'NAD_DEREGISTRATION_TIME'.</p>
+<dl class="section warning"><dt>Warning</dt><dd>Be sure to check the possible values of 'NAD_DEREGISTRATION_TIME' for your specific platform.</dd></dl>
+<p>The minimum interval value between dial attempts can be set or get with:</p><ul>
+<li><a class="el" href="le__ecall__interface_8h.html#af90a8602d4b1d0cacaa3971c508dd188">le_ecall_SetIntervalBetweenDialAttempts()</a></li>
+<li><a class="el" href="le__ecall__interface_8h.html#a3a24ae5a007d0c43db2bc55caa43c19d">le_ecall_GetIntervalBetweenDialAttempts()</a></li>
+</ul>
+<p>The default value is set to 30 seconds.</p>
+<p>The time is counted from the start of the first dial attempt.</p>
+<p>If more time has expired during the dial attempt, it will wait for 1 second to allow hangup before redialing.</p>
+<p>If less time has expired during the dial attempt, it will wait for (interval - 'dial attempt duration') seconds to allow hangup before redialing.</p>
+<p>In the case the call was connected, the redial will be immediate.</p>
+<p><a class="el" href="le__ecall__interface_8h.html#af90a8602d4b1d0cacaa3971c508dd188">le_ecall_SetIntervalBetweenDialAttempts()</a> is available for both manual and test modes.</p>
+<h1><a class="anchor" id="le_ecall_configdb"></a>
+Configuration tree</h1>
+<p>The configuration database path for the eCall is: </p><pre class="fragment">/
+    modemServices/
+        eCall/
+            systemStandard<string> = <eCall system>
+            msdVersion<int> = <MSD value>
+            vehicleType<string> = <vehicle type>
+            vin<string> = <VIN>
+            propulsionType/
+                0<string> = <propulsion type>
+                1<string> = <propulsion type>
+                ...
+</pre><p>The 'systemStandard' is the kind of eCall system:</p><ul>
+<li>PAN-EUROPEAN</li>
+<li>ERA-GLONASS</li>
+</ul>
+<p>If no value or a bad entry is filled, the default value is 'PAN-EUROPEAN'.</p>
+<p>The 'msdVersion' field is the MSD format version. If the field is not present, the default MSD version is version 1.</p>
+<p>The 'vehicleType' field can be set with the following choices (string type):</p><ul>
+<li>"Passenger-M1" (Passenger vehicle, Class M1)</li>
+<li>"Bus-M2" (Buses and coaches, Class M2)</li>
+<li>"Bus-M3" (Buses and coaches, Class M3)</li>
+<li>"Commercial-N1" (Light commercial vehicles, Class N1)</li>
+<li>"Heavy-N2" (Heavy duty vehicles, Class N2)</li>
+<li>"Heavy-N3" (Heavy duty vehicles, Class N3)</li>
+<li>"Motorcycle-L1e" (Motorcycles, Class L1e)</li>
+<li>"Motorcycle-L2e" (Motorcycles, Class L2e)</li>
+<li>"Motorcycle-L3e" (Motorcycles, Class L3e)</li>
+<li>"Motorcycle-L4e" (Motorcycles, Class L4e)</li>
+<li>"Motorcycle-L5e" (Motorcycles, Class L5e)</li>
+<li>"Motorcycle-L6e" (Motorcycles, Class L6e)</li>
+<li>"Motorcycle-L7e" (Motorcycles, Class L7e)</li>
+</ul>
+<p>The 'vin' is the vehicle identification number (string type).</p>
+<p>The 'propulsionType' field can be set with the following choices (string type):</p><ul>
+<li>"Gasoline" (Gasoline propulsion)</li>
+<li>"Diesel" (Diesel propulsion)</li>
+<li>"NaturalGas" (Compressed natural gas propulsion)</li>
+<li>"Propane" (Liquid propane gas propulsion)</li>
+<li>"Electric" (Electric propulsion)</li>
+<li>"Hydrogen" (Hydrogen propulsion)</li>
+<li>"Other" (Other type of propulsion)</li>
+</ul>
+<p>Several 'propulsionType' can be applied.</p>
+<hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license.</p>
+<hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

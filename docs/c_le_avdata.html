@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>AirVantage Data  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">AirVantage Data </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p><a class="el" href="le__avdata__interface_8h.html">API Reference</a></p>
+<hr />
+<p>This API provides a data service to allow apps to manage app-specific data on the AirVantage server.</p>
+<p>Data is setup as <b>assets</b> — a collection of fields that can be managed by the AirVantage server.</p>
+<p>An asset field is a single piece of information that can be managed by the Air Vantage server. There can be multiple fields in an asset.</p>
+<p>A field can be:</p><ul>
+<li><code>variable</code> allows an app to set the value, and can be read from the AV server.</li>
+<li><code>setting</code> allows the AV server to set the value, and can be read by an app.</li>
+<li><code>command</code> allows the AV server to invoke a command or function in the app.</li>
+</ul>
+<p>All fields have names. Variable and setting fields also have a type. The possible field types, along with the default value are:</p><ul>
+<li>string (empty string)</li>
+<li>integer (0)</li>
+<li>float (0.0)</li>
+<li>boolean (false)</li>
+<li>binary (zero-length block).</li>
+</ul>
+<p>Default values can be overwritten in the asset definition. Currently, only string, integer and boolean fields are supported; float and binary fields will be supported in the future.</p>
+<h1><a class="anchor" id="le_avdata_instance"></a>
+Asset Data Instances</h1>
+<p>An app that needs to send data to the AirVantage server must first create an asset instance using le_avc_Create() with the name of the asset definition. Once an asset instance is created, the app can begin accessing the instance's fields.</p>
+<p>Multiple instances of the same asset can be created, as well as multiple instances of different assets.</p>
+<p>Asset definitions are specified in the <a class="el" href="def_files_cdef.html#defFilesCdef_assets">Assets</a> section of the app's <code>cdef</code> file.</p>
+<h1><a class="anchor" id="le_avdata_field"></a>
+Field Values and Activity</h1>
+<p>Set functions are available to set variable field values. Get functions are available to get settings fields' values.</p>
+<p>An app can register a handler so that it can be called when activity occurs on a field. This is optional for variable and setting fields, but is required for command fields.</p><ul>
+<li><code>variable</code> called when the field is read by the AV server. The app can then call the appropriate set function to provide a new value for the field.</li>
+<li><code>setting</code> called when the field has been updated by the AV server with a new value. The app can use the appropriate get function to retrieve the new value.</li>
+<li><code>command</code> called when the AV server wants to invoke a command. The app should perform an appropriate action or call a function to execute this command.</li>
+</ul>
+<p>Currently, registering a handler is only supported for setting and command fields; variable fields will be added in the future.</p>
+<p>Leaving it optional to register handlers for variable and setting fields allows an app to decide how it wants to access variable and setting fields. It can decide to only do something in response to the AV server, or it can work independently of the AV server updating variables when it has a new value, and reading settings only when it needs the value.</p>
+<h1><a class="anchor" id="le_avdata_fatal"></a>
+Fatal Behavior</h1>
+<p>An invalid asset name or field name is treated as a fatal error (i.e. non-recoverable) and will result in the client app being terminated.</p>
+<hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>le_wdog_interface.h File Reference - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Reference.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a href="build_apps_documentation.html">Documentation</a><a class="link-selected" href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="summary">
+<a href="#define-members">Macros</a> |
+<a href="#func-members">Functions</a> </div>
+<div class="headertitle">
+<h1 class="title">le_wdog_interface.h File Reference</h1> </div>
+</div><div class="contents">
+<div class="textblock"><code>#include "<a class="el" href="legato_8h_source.html">legato.h</a>"</code><br />
+</div>
+<p><a href="le__wdog__interface_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a562f74a2b07130836630d84a9ab8152c"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__wdog__interface_8h.html#a562f74a2b07130836630d84a9ab8152c">LE_WDOG_TIMEOUT_NEVER</a>   -1</td></tr>
+<tr class="separator:a562f74a2b07130836630d84a9ab8152c"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a40ce530c86d0e9403dc423dfd9bd7a17"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__wdog__interface_8h.html#a40ce530c86d0e9403dc423dfd9bd7a17">LE_WDOG_TIMEOUT_NOW</a>   0</td></tr>
+<tr class="separator:a40ce530c86d0e9403dc423dfd9bd7a17"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a5ff6a347f6cc3852887d00c20c1f39de"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__wdog__interface_8h.html#a5ff6a347f6cc3852887d00c20c1f39de">le_wdog_ConnectService</a> (void)</td></tr>
+<tr class="separator:a5ff6a347f6cc3852887d00c20c1f39de"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a1eb771dccaff9df76be2b78cee199feb"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__wdog__interface_8h.html#a1eb771dccaff9df76be2b78cee199feb">le_wdog_DisconnectService</a> (void)</td></tr>
+<tr class="separator:a1eb771dccaff9df76be2b78cee199feb"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a43d5abc5c44309942efbe7b9c25d811f"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__wdog__interface_8h.html#a43d5abc5c44309942efbe7b9c25d811f">le_wdog_Kick</a> (void)</td></tr>
+<tr class="separator:a43d5abc5c44309942efbe7b9c25d811f"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a041aed268270e1c3668b6ff28bee8fd7"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__wdog__interface_8h.html#a041aed268270e1c3668b6ff28bee8fd7">le_wdog_Timeout</a> (int32_t milliseconds)</td></tr>
+<tr class="separator:a041aed268270e1c3668b6ff28bee8fd7"><td class="memSeparator" colspan="2"> </td></tr>
+</table>
+<a id="details" name="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Legato <a class="el" href="c_wdog.html">Watchdog Service</a> include file.</p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="a562f74a2b07130836630d84a9ab8152c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_WDOG_TIMEOUT_NEVER   -1</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Suspend the watchdog so that it never times out. </p>
+</div>
+</div>
+<a class="anchor" id="a40ce530c86d0e9403dc423dfd9bd7a17"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_WDOG_TIMEOUT_NOW   0</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Timeout immediately </p>
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="a5ff6a347f6cc3852887d00c20c1f39de"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_wdog_ConnectService </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Special values that have specific meaning when used as durations in Timeout():</p><ul>
+<li><a class="el" href="le__wdog__interface_8h.html#a562f74a2b07130836630d84a9ab8152c">LE_WDOG_TIMEOUT_NEVER</a></li>
+<li><a class="el" href="le__wdog__interface_8h.html#a40ce530c86d0e9403dc423dfd9bd7a17">LE_WDOG_TIMEOUT_NOW</a></li>
+</ul>
+<p>Connect the current client thread to the service providing this API.</p>
+<p>This function must be called before any other functions in this API. Normally, it's automatically called for the main thread, but must be explicitly called for other threads. For details, see <a class="el" href="api_files_c.html#apiFilesC_client">Client-specific Functions</a>.</p>
+<p>This function is created automatically. </p>
+</div>
+</div>
+<a class="anchor" id="a1eb771dccaff9df76be2b78cee199feb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_wdog_DisconnectService </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Disconnect the current client thread from the service providing this API.</p>
+<p>Normally, this function doesn't need to be called. After this function is called, there's no longer a connection to the service, and the functions in this API can't be used. For details, see <a class="el" href="api_files_c.html#apiFilesC_client">Client-specific Functions</a>.</p>
+<p>This function is created automatically. </p>
+</div>
+</div>
+<a class="anchor" id="a43d5abc5c44309942efbe7b9c25d811f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_wdog_Kick </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Kicks the watchdog timer.</p>
+<p>Once the watchdog has been kicked it must be kicked again before the expiration of the current effective timeout else the configured WatchdogAction will be executed. </p>
+</div>
+</div>
+<a class="anchor" id="a041aed268270e1c3668b6ff28bee8fd7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_wdog_Timeout </td>
+<td>(</td>
+<td class="paramtype">int32_t </td>
+<td class="paramname"><em>milliseconds</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Set a time out.</p>
+<p>The watchdog is kicked and a new effective timeout value is set. The new timeout will be effective until the next kick at which point it will revert to the original value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">milliseconds</td><td>The number of milliseconds until this timer expires </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

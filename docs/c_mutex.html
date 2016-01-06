@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Mutex API  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">Mutex API </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p><a class="el" href="le__mutex_8h.html">API Reference</a></p>
+<hr />
+<p>The Mutex API provides standard mutex functionality with added diagnostics capabilities. These mutexes can be shared by threads within the same process, but can't be shared by threads in different processes.</p>
+<dl class="section warning"><dt>Warning</dt><dd>Multithreaded programming is an advanced subject with many pitfalls. A general discussion of why and how mutexes are used in multithreaded programming is beyond the scope of this documentation. If you are not familiar with these concepts <em>please</em> seek out training and mentorship before attempting to work on multithreaded production code.</dd></dl>
+<p>Two kinds of mutex are supported by Legato:</p><ul>
+<li><b>Recursive</b> or</li>
+<li><b>Non-Recursive</b> </li>
+</ul>
+<p>All mutexes can be locked and unlocked. The same lock, unlock, and delete functions work for all the mutexes, regardless of what type they are.</p>
+<p>A recursive mutex can be locked again by the same thread that already has the lock, but a non-recursive mutex can only be locked once before being unlocked.</p>
+<p>If a thread grabs a non-recursive mutex lock and then tries to grab that same lock again, a deadlock occurs. Legato's non-recursive mutexes will detect this deadlock, log a fatal error and terminate the process.</p>
+<p>If a thread grabs a recursive mutex, and then the same thread grabs the same lock again, the mutex's "lock count" is incremented. When the thread unlocks that mutex, the lock count is decremented. Only when the lock count reaches zero will the mutex actually unlock.</p>
+<p>There's a limit to the number of times the same recursive mutex can be locked by the same thread without ever unlocking it, but that limit is so high (at least 2 billion), if that much recursion is going on, there are other, more serious problems with the program.</p>
+<h1><a class="anchor" id="c_mutex_create"></a>
+Creating a Mutex</h1>
+<p>In Legato, mutexes are dynamically allocated objects. Functions that create them return references to them (of type le_mutex_Ref_t).</p>
+<p>Functions for creating mutexes:</p><ul>
+<li><code><a class="el" href="le__mutex_8h.html#ac7dd2b69f4b905d56df969c9085a570b">le_mutex_CreateRecursive()</a></code> - creates a <b>normal</b>, <b>recursive</b> mutex.</li>
+<li><code><a class="el" href="le__mutex_8h.html#a602e2c18e646db7af0d68bb5fb103207">le_mutex_CreateNonRecursive()</a></code> - creates a <b>normal</b>, <b>non-recursive</b> mutex.</li>
+</ul>
+<p>All mutexes have names, required for diagnostic purposes. See <a class="el" href="c_mutex.html#c_mutex_diagnostics">Diagnostics</a> below.</p>
+<h1><a class="anchor" id="c_mutex_locking"></a>
+Using a Mutex</h1>
+<p>Functions for locking and unlocking mutexes:</p><ul>
+<li><code><a class="el" href="le__mutex_8h.html#ad5b7d94710f420cd945229648e7a80e7">le_mutex_Lock()</a></code> </li>
+<li><code><a class="el" href="le__mutex_8h.html#aae68b71222e20c55ff3bf2d7b52e3009">le_mutex_Unlock()</a></code> </li>
+<li><code><a class="el" href="le__mutex_8h.html#a43864999f70f0a825cf8ca87f9a2ee2c">le_mutex_TryLock()</a></code> </li>
+</ul>
+<p>It doesn't matter what type of mutex you are using, you still use the same functions for locking and unlocking your mutex.</p>
+<h1><a class="anchor" id="c_mutex_delete"></a>
+Deleting a Mutex</h1>
+<p>When you are finished with a mutex, you must delete it by calling <a class="el" href="le__mutex_8h.html#a38571fa1d9c15d5f30ea9c480d8810c6">le_mutex_Delete()</a>.</p>
+<p>There must not be anyone using the mutex when it is deleted (i.e., no one can be holding it).</p>
+<h1><a class="anchor" id="c_mutex_diagnostics"></a>
+Diagnostics</h1>
+<p>The command-line diagnostic tool <a class="el" href="tools_target_inspect.html">inspect</a> can be used to list the mutexes that currently exist inside a given process. The state of each mutex can be seen, including a list of any threads that might be waiting for that mutex.</p>
+<hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,393 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>le_basics.h File Reference - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Reference.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a href="build_apps_documentation.html">Documentation</a><a class="link-selected" href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="summary">
+<a href="#define-members">Macros</a> |
+<a href="#enum-members">Enumerations</a> </div>
+<div class="headertitle">
+<h1 class="title">le_basics.h File Reference</h1> </div>
+</div><div class="contents">
+<p><a href="le__basics_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a27404de74c6f19c776aa8f4e8109fdf5"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__basics_8h.html#a27404de74c6f19c776aa8f4e8109fdf5">CONTAINER_OF</a>(memberPtr,  type,  member)                                                                                                             ((type*)(((uint8_t*)(memberPtr))-((size_t)(&(((type*)0)->member)))))</td></tr>
+<tr class="separator:a27404de74c6f19c776aa8f4e8109fdf5"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a8d8f28a045f43b477cafb67a99894c07"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__basics_8h.html#a8d8f28a045f43b477cafb67a99894c07">NUM_ARRAY_MEMBERS</a>(array)   (sizeof(array) / sizeof((array)[0]))</td></tr>
+<tr class="separator:a8d8f28a045f43b477cafb67a99894c07"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a2a5704b99c30d8dddf1227af229bb9df"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__basics_8h.html#a2a5704b99c30d8dddf1227af229bb9df">INDEX_OF_ARRAY_MEMBER</a>(array,  memberPtr)   ((((size_t)memberPtr) - ((size_t)array)) / sizeof(*(memberPtr)))</td></tr>
+<tr class="separator:a2a5704b99c30d8dddf1227af229bb9df"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a3428692efe6051ef30016ffde1a9f7bb"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__basics_8h.html#a3428692efe6051ef30016ffde1a9f7bb">STRINGIZE</a>(x)   <a class="el" href="le__basics_8h.html#a7544491e9ca8040ce26fbba71ab764fb">STRINGIZE_EXPAND</a>(x)</td></tr>
+<tr class="separator:a3428692efe6051ef30016ffde1a9f7bb"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a7544491e9ca8040ce26fbba71ab764fb"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__basics_8h.html#a7544491e9ca8040ce26fbba71ab764fb">STRINGIZE_EXPAND</a>(x)         #x</td></tr>
+<tr class="separator:a7544491e9ca8040ce26fbba71ab764fb"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a1661bfbb29c2e0372ca9f0c556a8fc24"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__basics_8h.html#a1661bfbb29c2e0372ca9f0c556a8fc24">LE_SHARED</a>   __attribute__((visibility ("default")))</td></tr>
+<tr class="separator:a1661bfbb29c2e0372ca9f0c556a8fc24"><td class="memSeparator" colspan="2"> </td></tr>
+<tr><td colspan="2"><div class="groupHeader">Bit Masks</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>Single byte bit definitions that can be used for bit masking. </p>
+</div></td></tr>
+<tr class="memitem:ad4d43f8748b542bce39e18790f845ecc"><td align="right" class="memItemLeft" valign="top"><a class="anchor" id="ad4d43f8748b542bce39e18790f845ecc"></a>
+#define </td><td class="memItemRight" valign="bottom"><b>BIT0</b>   0x01</td></tr>
+<tr class="separator:ad4d43f8748b542bce39e18790f845ecc"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a601923eba46784638244c1ebf2622a2a"><td align="right" class="memItemLeft" valign="top"><a class="anchor" id="a601923eba46784638244c1ebf2622a2a"></a>
+#define </td><td class="memItemRight" valign="bottom"><b>BIT1</b>   0x02</td></tr>
+<tr class="separator:a601923eba46784638244c1ebf2622a2a"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a9c9560bccccb00174801c728f1ed1399"><td align="right" class="memItemLeft" valign="top"><a class="anchor" id="a9c9560bccccb00174801c728f1ed1399"></a>
+#define </td><td class="memItemRight" valign="bottom"><b>BIT2</b>   0x04</td></tr>
+<tr class="separator:a9c9560bccccb00174801c728f1ed1399"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a8e44574a8a8becc885b05f3bc367ef6a"><td align="right" class="memItemLeft" valign="top"><a class="anchor" id="a8e44574a8a8becc885b05f3bc367ef6a"></a>
+#define </td><td class="memItemRight" valign="bottom"><b>BIT3</b>   0x08</td></tr>
+<tr class="separator:a8e44574a8a8becc885b05f3bc367ef6a"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aa731e0b6cf75f4e637ee88959315f5e4"><td align="right" class="memItemLeft" valign="top"><a class="anchor" id="aa731e0b6cf75f4e637ee88959315f5e4"></a>
+#define </td><td class="memItemRight" valign="bottom"><b>BIT4</b>   0x10</td></tr>
+<tr class="separator:aa731e0b6cf75f4e637ee88959315f5e4"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ae692bc3df48028ceb1ddc2534a993bb8"><td align="right" class="memItemLeft" valign="top"><a class="anchor" id="ae692bc3df48028ceb1ddc2534a993bb8"></a>
+#define </td><td class="memItemRight" valign="bottom"><b>BIT5</b>   0x20</td></tr>
+<tr class="separator:ae692bc3df48028ceb1ddc2534a993bb8"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:acc2d074401e2b6322ee8f03476c24677"><td align="right" class="memItemLeft" valign="top"><a class="anchor" id="acc2d074401e2b6322ee8f03476c24677"></a>
+#define </td><td class="memItemRight" valign="bottom"><b>BIT6</b>   0x40</td></tr>
+<tr class="separator:acc2d074401e2b6322ee8f03476c24677"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aa6b8f3261ae9e2e1043380c192f7b5f0"><td align="right" class="memItemLeft" valign="top"><a class="anchor" id="aa6b8f3261ae9e2e1043380c192f7b5f0"></a>
+#define </td><td class="memItemRight" valign="bottom"><b>BIT7</b>   0x80</td></tr>
+<tr class="separator:aa6b8f3261ae9e2e1043380c192f7b5f0"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a1cca095ed6ebab24b57a636382a6c86c"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> { <br />
+  <a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86ca5066a4bcec691c6b67843b8f79656422">LE_OK</a> = 0, 
+<a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86ca77a7505b0443df2fa1bab375c7267637">LE_NOT_FOUND</a> = -1, 
+<a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86ca6bff37e5294d5f5be87549661e30844d">LE_NOT_POSSIBLE</a> = -2, 
+<a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86caef8ecf11fa8556fd2d3ca8faab697717">LE_OUT_OF_RANGE</a> = -3, 
+<br />
+  <a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86ca68b2d1935e287dda88cba448508cfbd7">LE_NO_MEMORY</a> = -4, 
+<a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86cac6c0cac62213b786dabd7bf3e73bcec1">LE_NOT_PERMITTED</a> = -5, 
+<a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86cac409634423b6b1ef09643529f6224798">LE_FAULT</a> = -6, 
+<a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86cae467864059902be006a02328f7079340">LE_COMM_ERROR</a> = -7, 
+<br />
+  <a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86ca82d9e8dc0ed1d6288003fc2819783655">LE_TIMEOUT</a> = -8, 
+<a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86cae42c9d785827fc3a9c47fb55baca7879">LE_OVERFLOW</a> = -9, 
+<a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86ca1aded6356c11613656177dd39867801c">LE_UNDERFLOW</a> = -10, 
+<a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86ca5016e2f65890028d6642e010891a113f">LE_WOULD_BLOCK</a> = -11, 
+<br />
+  <a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86caab24aaac9e6243fa0d7295477de570c4">LE_DEADLOCK</a> = -12, 
+<a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86ca556a4bcd649b2cee7145a6f913d77af3">LE_FORMAT_ERROR</a> = -13, 
+<a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86cac26034778a666ee720b110c2fb1647ea">LE_DUPLICATE</a> = -14, 
+<a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86cabe505065132f6e8850da6f476d8fb783">LE_BAD_PARAMETER</a> = -15, 
+<br />
+  <a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86cab117182636b1a8ff8e912b2653d08f07">LE_CLOSED</a> = -16, 
+<a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86ca92b0367090993d8b41d1560663d01e8d">LE_BUSY</a> = -17, 
+<a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86ca5377262702e8434207b03533259e0c5f">LE_UNSUPPORTED</a> = -18, 
+<a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86ca535f6709af241fb0bf3b92d12801292c">LE_IO_ERROR</a> = -19, 
+<br />
+  <a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86ca35f1e7ea2f397cd3d730065ecfab4461">LE_NOT_IMPLEMENTED</a> = -20, 
+<a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86cabf039026140e8a341a0e9bbd78271f23">LE_UNAVAILABLE</a> = -21, 
+<a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86cadbec9abe033a7f17d8edcbd01fcd1e75">LE_TERMINATED</a> = -22
+<br />
+ }</td></tr>
+<tr class="separator:a1cca095ed6ebab24b57a636382a6c86c"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ae2138c90c41d30e2d510be01d8b374da"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__basics_8h.html#ae2138c90c41d30e2d510be01d8b374da">le_onoff_t</a> { <b>LE_OFF</b> = 0, 
+<b>LE_ON</b> = 1
+ }</td></tr>
+<tr class="separator:ae2138c90c41d30e2d510be01d8b374da"><td class="memSeparator" colspan="2"> </td></tr>
+</table>
+<a id="details" name="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Legato <a class="el" href="c_basics.html">Basic Type and Constant Definitions</a> include file.</p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="a27404de74c6f19c776aa8f4e8109fdf5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define CONTAINER_OF</td>
+<td>(</td>
+<td class="paramtype"> </td>
+<td class="paramname">memberPtr, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"> </td>
+<td class="paramname">type, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"> </td>
+<td class="paramname">member </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td>   ((type*)(((uint8_t*)(memberPtr))-((size_t)(&(((type*)0)->member)))))</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Find the address of a containing structure or union, based on the address of one of its members.</p>
+<p>If <code>countPtr</code> points to the <code>count</code> member of an object type <code>my_class_t</code>, then a pointer to that object should use this:</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span> my_class_t* myObjPtr = CONTAINER_OF(countPtr, my_class_t, count);</div></div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a2a5704b99c30d8dddf1227af229bb9df"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define INDEX_OF_ARRAY_MEMBER</td>
+<td>(</td>
+<td class="paramtype"> </td>
+<td class="paramname">array, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"> </td>
+<td class="paramname">memberPtr </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td>   ((((size_t)memberPtr) - ((size_t)array)) / sizeof(*(memberPtr)))</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Computes the index of a member within an array.</p>
+<p>This code sample prints out "The 'w' is at index 6.":</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span> const char message[] = "Hello world!";</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span> const char* charPtr;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span> int i;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span> </div><div class="line"><a name="l00005"></a><span class="lineno">    5</span> for (i = 0; i < sizeof(message); i++)</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span> {</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>     if (message[i] == 'w')</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>     {</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>         charPtr = &message[i];</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>     }</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span> }</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span> </div><div class="line"><a name="l00013"></a><span class="lineno">   13</span> printf("The 'w' is at index %zu.\n", INDEX_OF_ARRAY_MEMBER(message, charPtr));</div></div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a1661bfbb29c2e0372ca9f0c556a8fc24"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_SHARED   __attribute__((visibility ("default")))</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Macro used to declare that a symbol should be shared outside the dynamic shared object in which it is defined.</p>
+<p>This can be used with either a declaration or a definition.</p>
+<p>E.g., with a declaration (perhaps in a header file):</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span> LE_SHARED void my_Function();</div></div><!-- fragment --><p>E.g., with a definition (in a .c file):</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span> LE_SHARED void my_OtherFunction()</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span> {</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>     LE_INFO("Hello world.");</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span> }</div></div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a8d8f28a045f43b477cafb67a99894c07"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define NUM_ARRAY_MEMBERS</td>
+<td>(</td>
+<td class="paramtype"> </td>
+<td class="paramname">array</td><td>)</td>
+<td>   (sizeof(array) / sizeof((array)[0]))</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Computes number of members in an array at compile time.</p>
+<dl class="section warning"><dt>Warning</dt><dd>Does NOT work for pointers to arrays.</dd></dl>
+<p>Here's a code sample:</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span> const char message[] = "Hello world!";</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span> </div><div class="line"><a name="l00003"></a><span class="lineno">    3</span> size_t x = NUM_ARRAY_MEMBERS(message);</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span> </div><div class="line"><a name="l00005"></a><span class="lineno">    5</span> printf("%lu\n", x);</div></div><!-- fragment --><p>Will print <code>13</code> on a 32-bit target.</p>
+<p>But this example is <b>incorrect:</b> </p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span> const char message[] = "Hello world!";</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span> const char* messagePtr = &message;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span> </div><div class="line"><a name="l00004"></a><span class="lineno">    4</span> size_t x = NUM_ARRAY_MEMBERS(messagePtr);    // NO! BAD PROGRAMMER! BAD!</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span> </div><div class="line"><a name="l00006"></a><span class="lineno">    6</span> printf("%lu\n", x);</div></div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a3428692efe6051ef30016ffde1a9f7bb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define STRINGIZE</td>
+<td>(</td>
+<td class="paramtype"> </td>
+<td class="paramname">x</td><td>)</td>
+<td>   <a class="el" href="le__basics_8h.html#a7544491e9ca8040ce26fbba71ab764fb">STRINGIZE_EXPAND</a>(x)</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function takes the characters as an argument and puts quotes around them.</p>
+<p>Code sample:</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span> const char name[] = STRINGIZE(foo);</div></div><!-- fragment --><p>Is seen by the compiler as</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span> const char name[] = "foo";</div></div><!-- fragment --><p>The <a class="el" href="le__basics_8h.html#a3428692efe6051ef30016ffde1a9f7bb">STRINGIZE()</a> macro function passes names like macro definitions on the compiler's command-line. If the above code were changed to:</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span> const char name[] = STRINGIZE(NAME);</div></div><!-- fragment --><p>then compiling it using the following command line makes it equivalent to the example above:</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span> $ gcc -c -DNAME=foo file.c</div></div><!-- fragment --><p>The <code>-DNAME=foo</code> defines a macro called <code>NAME</code> with a value <code>foo</code>. The C preprocessor then replaces <code><a class="el" href="le__basics_8h.html#a3428692efe6051ef30016ffde1a9f7bb">STRINGIZE(NAME)</a></code> with <code>"foo"</code>. </p>
+</div>
+</div>
+<a class="anchor" id="a7544491e9ca8040ce26fbba71ab764fb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define STRINGIZE_EXPAND</td>
+<td>(</td>
+<td class="paramtype"> </td>
+<td class="paramname">x</td><td>)</td>
+<td>   #x</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Helper macro for <a class="el" href="le__basics_8h.html#a3428692efe6051ef30016ffde1a9f7bb">STRINGIZE(x)</a>. </p>
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a class="anchor" id="ae2138c90c41d30e2d510be01d8b374da"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="le__basics_8h.html#ae2138c90c41d30e2d510be01d8b374da">le_onoff_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>ON/OFF type. </p>
+</div>
+</div>
+<a class="anchor" id="a1cca095ed6ebab24b57a636382a6c86c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Standard result codes.</p>
+<dl class="section note"><dt>Note</dt><dd>All error codes are negative integers. They allow functions with signed integers to return non-negative values when successful or standard error codes on failure. </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a1cca095ed6ebab24b57a636382a6c86ca5066a4bcec691c6b67843b8f79656422"></a>LE_OK </td><td class="fielddoc">
+<p>Successful. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a1cca095ed6ebab24b57a636382a6c86ca77a7505b0443df2fa1bab375c7267637"></a>LE_NOT_FOUND </td><td class="fielddoc">
+<p>Referenced item does not exist or could not be found. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a1cca095ed6ebab24b57a636382a6c86ca6bff37e5294d5f5be87549661e30844d"></a>LE_NOT_POSSIBLE </td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a1cca095ed6ebab24b57a636382a6c86caef8ecf11fa8556fd2d3ca8faab697717"></a>LE_OUT_OF_RANGE </td><td class="fielddoc">
+<p>An index or other value is out of range. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a1cca095ed6ebab24b57a636382a6c86ca68b2d1935e287dda88cba448508cfbd7"></a>LE_NO_MEMORY </td><td class="fielddoc">
+<p>Insufficient memory is available. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a1cca095ed6ebab24b57a636382a6c86cac6c0cac62213b786dabd7bf3e73bcec1"></a>LE_NOT_PERMITTED </td><td class="fielddoc">
+<p>Current user does not have permission to perform requested action. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a1cca095ed6ebab24b57a636382a6c86cac409634423b6b1ef09643529f6224798"></a>LE_FAULT </td><td class="fielddoc">
+<p>Unspecified internal error. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a1cca095ed6ebab24b57a636382a6c86cae467864059902be006a02328f7079340"></a>LE_COMM_ERROR </td><td class="fielddoc">
+<p>Communications error. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a1cca095ed6ebab24b57a636382a6c86ca82d9e8dc0ed1d6288003fc2819783655"></a>LE_TIMEOUT </td><td class="fielddoc">
+<p>A time-out occurred. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a1cca095ed6ebab24b57a636382a6c86cae42c9d785827fc3a9c47fb55baca7879"></a>LE_OVERFLOW </td><td class="fielddoc">
+<p>An overflow occurred or would have occurred. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a1cca095ed6ebab24b57a636382a6c86ca1aded6356c11613656177dd39867801c"></a>LE_UNDERFLOW </td><td class="fielddoc">
+<p>An underflow occurred or would have occurred. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a1cca095ed6ebab24b57a636382a6c86ca5016e2f65890028d6642e010891a113f"></a>LE_WOULD_BLOCK </td><td class="fielddoc">
+<p>Would have blocked if non-blocking behaviour was not requested. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a1cca095ed6ebab24b57a636382a6c86caab24aaac9e6243fa0d7295477de570c4"></a>LE_DEADLOCK </td><td class="fielddoc">
+<p>Would have caused a deadlock. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a1cca095ed6ebab24b57a636382a6c86ca556a4bcd649b2cee7145a6f913d77af3"></a>LE_FORMAT_ERROR </td><td class="fielddoc">
+<p>Format error. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a1cca095ed6ebab24b57a636382a6c86cac26034778a666ee720b110c2fb1647ea"></a>LE_DUPLICATE </td><td class="fielddoc">
+<p>Duplicate entry found or operation already performed. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a1cca095ed6ebab24b57a636382a6c86cabe505065132f6e8850da6f476d8fb783"></a>LE_BAD_PARAMETER </td><td class="fielddoc">
+<p>Parameter is invalid. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a1cca095ed6ebab24b57a636382a6c86cab117182636b1a8ff8e912b2653d08f07"></a>LE_CLOSED </td><td class="fielddoc">
+<p>The resource is closed. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a1cca095ed6ebab24b57a636382a6c86ca92b0367090993d8b41d1560663d01e8d"></a>LE_BUSY </td><td class="fielddoc">
+<p>The resource is busy. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a1cca095ed6ebab24b57a636382a6c86ca5377262702e8434207b03533259e0c5f"></a>LE_UNSUPPORTED </td><td class="fielddoc">
+<p>The underlying resource does not support this operation. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a1cca095ed6ebab24b57a636382a6c86ca535f6709af241fb0bf3b92d12801292c"></a>LE_IO_ERROR </td><td class="fielddoc">
+<p>An IO operation failed. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a1cca095ed6ebab24b57a636382a6c86ca35f1e7ea2f397cd3d730065ecfab4461"></a>LE_NOT_IMPLEMENTED </td><td class="fielddoc">
+<p>Unimplemented functionality. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a1cca095ed6ebab24b57a636382a6c86cabf039026140e8a341a0e9bbd78271f23"></a>LE_UNAVAILABLE </td><td class="fielddoc">
+<p>A transient or temporary loss of a service or resource. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a1cca095ed6ebab24b57a636382a6c86cadbec9abe033a7f17d8edcbd01fcd1e75"></a>LE_TERMINATED </td><td class="fielddoc">
+<p>The process, operation, data stream, session, etc. has stopped. </p>
+</td></tr>
+</table>
+</div>
+</div>
+</div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>le_appInfo_interface.h File Reference - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Reference.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a href="build_apps_documentation.html">Documentation</a><a class="link-selected" href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="summary">
+<a href="#define-members">Macros</a> |
+<a href="#enum-members">Enumerations</a> |
+<a href="#func-members">Functions</a> </div>
+<div class="headertitle">
+<h1 class="title">le_appInfo_interface.h File Reference</h1> </div>
+</div><div class="contents">
+<div class="textblock"><code>#include "<a class="el" href="legato_8h_source.html">legato.h</a>"</code><br />
+<code>#include "<a class="el" href="le__limit__interface_8h_source.html">le_limit_interface.h</a>"</code><br />
+</div>
+<p><a href="le__app_info__interface_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:af7b2553bd09fa1bcdcba32b023f2baea"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__app_info__interface_8h.html#af7b2553bd09fa1bcdcba32b023f2baea">LE_APPINFO_MD5_STR_LEN</a>   32</td></tr>
+<tr class="separator:af7b2553bd09fa1bcdcba32b023f2baea"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ab6c446f20ce5b10f1d560225a359ec8c"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__app_info__interface_8h.html#ab6c446f20ce5b10f1d560225a359ec8c">le_appInfo_State_t</a> { <a class="el" href="le__app_info__interface_8h.html#ab6c446f20ce5b10f1d560225a359ec8ca2208dd2ea64b94a12b5927c8e3afb0fa">LE_APPINFO_STOPPED</a>, 
+<a class="el" href="le__app_info__interface_8h.html#ab6c446f20ce5b10f1d560225a359ec8ca12e5a4980fea343644db0c3c43a9b634">LE_APPINFO_RUNNING</a>
+ }</td></tr>
+<tr class="separator:ab6c446f20ce5b10f1d560225a359ec8c"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a426a8f86552dfbc4094a025484b2b12c"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__app_info__interface_8h.html#a426a8f86552dfbc4094a025484b2b12c">le_appInfo_ProcState_t</a> { <a class="el" href="le__app_info__interface_8h.html#a426a8f86552dfbc4094a025484b2b12cadea893acd0c033beac9c82b76dd9ec5f">LE_APPINFO_PROC_STOPPED</a>, 
+<a class="el" href="le__app_info__interface_8h.html#a426a8f86552dfbc4094a025484b2b12ca8563a7c4a6896660b4ee5460a7a01eb0">LE_APPINFO_PROC_RUNNING</a>, 
+<a class="el" href="le__app_info__interface_8h.html#a426a8f86552dfbc4094a025484b2b12cadfee843f1c788b0a0156ae21a3d165ab">LE_APPINFO_PROC_PAUSED</a>
+ }</td></tr>
+<tr class="separator:a426a8f86552dfbc4094a025484b2b12c"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a74808a1cf4401f8bb24dd5dbdb4f4e26"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__app_info__interface_8h.html#a74808a1cf4401f8bb24dd5dbdb4f4e26">le_appInfo_ConnectService</a> (void)</td></tr>
+<tr class="separator:a74808a1cf4401f8bb24dd5dbdb4f4e26"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a6f91858dcc2d8a4333f5a9bf953a081c"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__app_info__interface_8h.html#a6f91858dcc2d8a4333f5a9bf953a081c">le_appInfo_DisconnectService</a> (void)</td></tr>
+<tr class="separator:a6f91858dcc2d8a4333f5a9bf953a081c"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a58c868b60a679fe7d63ab1e8286cfa94"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__app_info__interface_8h.html#ab6c446f20ce5b10f1d560225a359ec8c">le_appInfo_State_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__app_info__interface_8h.html#a58c868b60a679fe7d63ab1e8286cfa94">le_appInfo_GetState</a> (const char *appName)</td></tr>
+<tr class="separator:a58c868b60a679fe7d63ab1e8286cfa94"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a6857ca395b0fad4dab33291737755643"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__app_info__interface_8h.html#a426a8f86552dfbc4094a025484b2b12c">le_appInfo_ProcState_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__app_info__interface_8h.html#a6857ca395b0fad4dab33291737755643">le_appInfo_GetProcState</a> (const char *appName, const char *procName)</td></tr>
+<tr class="separator:a6857ca395b0fad4dab33291737755643"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ad403b48535ca090859b8096c9cc051cc"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__app_info__interface_8h.html#ad403b48535ca090859b8096c9cc051cc">le_appInfo_GetName</a> (int32_t pid, char *appName, size_t appNameNumElements)</td></tr>
+<tr class="separator:ad403b48535ca090859b8096c9cc051cc"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a4c905cdff5f1ef3c543db2a053d8b09a"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__app_info__interface_8h.html#a4c905cdff5f1ef3c543db2a053d8b09a">le_appInfo_GetHash</a> (const char *appName, char *hashStr, size_t hashStrNumElements)</td></tr>
+<tr class="separator:a4c905cdff5f1ef3c543db2a053d8b09a"><td class="memSeparator" colspan="2"> </td></tr>
+</table>
+<a id="details" name="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Legato <a class="el" href="c_app_info.html">Application Information API</a> include file.</p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="af7b2553bd09fa1bcdcba32b023f2baea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_APPINFO_MD5_STR_LEN   32</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Length of an MD5 hash string. </p>
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a class="anchor" id="a426a8f86552dfbc4094a025484b2b12c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="le__app_info__interface_8h.html#a426a8f86552dfbc4094a025484b2b12c">le_appInfo_ProcState_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Process states. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a426a8f86552dfbc4094a025484b2b12cadea893acd0c033beac9c82b76dd9ec5f"></a>LE_APPINFO_PROC_STOPPED </td><td class="fielddoc">
+<p>Process has been stopped or never started. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a426a8f86552dfbc4094a025484b2b12ca8563a7c4a6896660b4ee5460a7a01eb0"></a>LE_APPINFO_PROC_RUNNING </td><td class="fielddoc">
+<p>Process is running. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a426a8f86552dfbc4094a025484b2b12cadfee843f1c788b0a0156ae21a3d165ab"></a>LE_APPINFO_PROC_PAUSED </td><td class="fielddoc">
+<p>Process has been paused. </p>
+</td></tr>
+</table>
+</div>
+</div>
+<a class="anchor" id="ab6c446f20ce5b10f1d560225a359ec8c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="le__app_info__interface_8h.html#ab6c446f20ce5b10f1d560225a359ec8c">le_appInfo_State_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Application states. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ab6c446f20ce5b10f1d560225a359ec8ca2208dd2ea64b94a12b5927c8e3afb0fa"></a>LE_APPINFO_STOPPED </td><td class="fielddoc">
+<p>Application has been stopped or never started. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ab6c446f20ce5b10f1d560225a359ec8ca12e5a4980fea343644db0c3c43a9b634"></a>LE_APPINFO_RUNNING </td><td class="fielddoc">
+<p>Application is running. </p>
+</td></tr>
+</table>
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="a74808a1cf4401f8bb24dd5dbdb4f4e26"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_appInfo_ConnectService </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Connect the current client thread to the service providing this API.</p>
+<p>This function must be called before any other functions in this API. Normally, it's automatically called for the main thread, but must be explicitly called for other threads. For details, see <a class="el" href="api_files_c.html#apiFilesC_client">Client-specific Functions</a>.</p>
+<p>This function is created automatically. </p>
+</div>
+</div>
+<a class="anchor" id="a6f91858dcc2d8a4333f5a9bf953a081c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_appInfo_DisconnectService </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Disconnect the current client thread from the service providing this API.</p>
+<p>Normally, this function doesn't need to be called. After this function is called, there's no longer a connection to the service, and the functions in this API can't be used. For details, see <a class="el" href="api_files_c.html#apiFilesC_client">Client-specific Functions</a>.</p>
+<p>This function is created automatically. </p>
+</div>
+</div>
+<a class="anchor" id="a4c905cdff5f1ef3c543db2a053d8b09a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_appInfo_GetHash </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>appName</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">char * </td>
+<td class="paramname"><em>hashStr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>hashStrNumElements</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the application hash as a hexidecimal string. The application hash is a unique hash of the current version of the application.</p>
+<dl class="section return"><dt>Returns</dt><dd>LE_OK if the application has was successfully retrieved. LE_OVERFLOW if the application hash could not fit in the provided buffer. LE_NOT_FOUND if the application is not installed. LE_FAULT if there was an error. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">appName</td><td>Application name. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">hashStr</td><td>Hash string. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">hashStrNumElements</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ad403b48535ca090859b8096c9cc051cc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_appInfo_GetName </td>
+<td>(</td>
+<td class="paramtype">int32_t </td>
+<td class="paramname"><em>pid</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">char * </td>
+<td class="paramname"><em>appName</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>appNameNumElements</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the application name of the process with the specified PID.</p>
+<dl class="section return"><dt>Returns</dt><dd>LE_OK if the application name was successfully found. LE_OVERFLOW if the application name could not fit in the provided buffer. LE_NOT_FOUND if the process is not part of an application. LE_FAULT if there was an error. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">pid</td><td>PID of the process. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">appName</td><td>Application name. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">appNameNumElements</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a6857ca395b0fad4dab33291737755643"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__app_info__interface_8h.html#a426a8f86552dfbc4094a025484b2b12c">le_appInfo_ProcState_t</a> le_appInfo_GetProcState </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>appName</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>procName</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the state of the specified process in an application. This function only works for configured processes that the Supervisor starts directly.</p>
+<dl class="section return"><dt>Returns</dt><dd>The state of the specified process. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">appName</td><td>Application name. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">procName</td><td>Process name. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a58c868b60a679fe7d63ab1e8286cfa94"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__app_info__interface_8h.html#ab6c446f20ce5b10f1d560225a359ec8c">le_appInfo_State_t</a> le_appInfo_GetState </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>appName</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the state of the specified application. The state of unknown applications is STOPPED.</p>
+<dl class="section return"><dt>Returns</dt><dd>The state of the specified application. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">appName</td><td>Application name. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

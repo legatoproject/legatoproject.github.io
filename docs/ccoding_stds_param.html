@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Variables & Function Parameters  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">Variables & Function Parameters </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p>Other C language standards' pages:</p>
+<p><a class="el" href="ccoding_stds_naming.html">Naming Standards</a> <br />
+<a class="el" href="ccoding_stds_abbr.html">Abbreviations</a> <br />
+<a class="el" href="ccoding_stds_main.html">C Language Standards</a></p>
+<h1><a class="anchor" id="cstdsparamCamelCase"></a>
+Camel Case</h1>
+<p>Variable names and function parameter names should be in CamelCase.</p>
+<h1><a class="anchor" id="cstdsparamPrefix"></a>
+Prefix</h1>
+<p>Variables are never defined inside header files so they never need prefixes.</p>
+<h1><a class="anchor" id="cstdsparamPointers"></a>
+Pointers</h1>
+<p>Pointers are used differently than non-pointer variables. A range of new operators become available when you use pointers, and mathematical operations take on a whole new meaning. That's why it's important to distinguish pointer variables from non-pointer variables.</p>
+<p>Pointer variable names must end in "Ptr".</p>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> index = 0;</div><div class="line"><span class="keywordtype">int</span>* indexPtr = &index;</div></div><!-- fragment --><p>There's an exception when working with opaque types, because pointers are often used to implement opaque types in C. A header file might contain something like this: </p><div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>foo_Sandwich* foo_SandwichRef_t;</div></div><!-- fragment --><p> This defines a type that can be used to refer to a "Sandwich" object. Note struct foo_Sandwich is never defined outside of the "foo" module (and may not even be defined inside of the foo module). To all outsiders, this reference looks like a pointer to an incomplete type, and can't be dereferenced. Inside the "foo" module, struct foo_Sandwich could be defined or this pointer type could even be used to hold an integer, a char, or anything else that's the same size or smaller than a pointer.</p>
+<p>A "file reference" could be implemented on some systems as an integer file descriptor. If the reference is an opaque type that's never used as a pointer outside of the module that implements it, or might not be a pointer even inside the module that implements it, then variables of opaque pointer types don't need a "Ptr" suffix.</p>
+<h1><a class="anchor" id="cstdsparamStaticVariables"></a>
+Static Variables</h1>
+<p>Variables that exist on the stack are function parameters and automatic variables (non-static variables declared inside of functions). When these variables go out of scope, they disappear; their memory is released so it can be used for other purposes. To make it obvious that these variables are stack variables and not static variables, they must start with a lower-case letter.</p>
+<p>Because the scope of these variables is limited to a specific function or compound block within a function, they don't need a prefix to avoid naming conflicts:</p>
+<div class="fragment"><div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> Function(<span class="keywordtype">int</span> numericParameter)</div><div class="line">{</div><div class="line"> <span class="keywordtype">char</span>* stringAutoVariable;</div><div class="line"></div><div class="line"></div><div class="line">    ...</div><div class="line">}</div></div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>Only stack variable names and struct/union member names can (and <em>must</em>) start with lower-case letters.</dd></dl>
+<p>Static variables aren't stored in either the stack or the heap. They are statically allocated in the data segment of the process's address space. They have scope limited to either a compound statement (if defined inside a function), or a file (if defined outside of all functions). Because these variables are never visible outside a file, they don't need any special prefix to prevent naming conflicts. But they're stored differently than variables on the stack (and don't disappear when they go out of scope), so they start with an upper-case letter to distinguish them from stack variables:</p>
+<div class="fragment"><div class="line"><span class="keyword">static</span> <span class="keywordtype">int</span> CallCounter = 0;  <span class="comment">// This is a file-scope variable.</span></div><div class="line"></div><div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> Function(<span class="keywordtype">int</span> numericParameter)</div><div class="line">{</div><div class="line"> <span class="keyword">static</span> <span class="keywordtype">bool</span> WasCalledBefore = FALSE;</div><div class="line"> <span class="keywordtype">char</span>* stringAutoVariable;</div><div class="line"></div><div class="line"> <span class="keywordflow">if</span> (!WasCalledBefore)</div><div class="line">    {</div><div class="line">        ...</div><div class="line">        WasCalledBefore = TRUE;</div><div class="line">    }</div><div class="line"></div><div class="line">    CallCounter++;</div><div class="line"></div><div class="line">    ...</div><div class="line">}</div></div><!-- fragment --><h1><a class="anchor" id="cstdsparamAbbreviations"></a>
+Abbreviations</h1>
+<p>To keep identifiers a manageable length, developers often abbreviate. If these abbreviations aren't carefully chosen, they can create confusion.</p>
+<p>See <a class="el" href="ccoding_stds_abbr.html">Abbreviations</a>. Other abbreviations should <b>not</b> be used.</p>
+<hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

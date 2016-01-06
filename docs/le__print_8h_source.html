@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>le_print.h - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Reference.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a href="build_apps_documentation.html">Documentation</a><a class="link-selected" href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">le_print.h</h1> </div>
+</div><div class="contents">
+<a href="le__print_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span> </div><div class="line"><a name="l00013"></a><span class="lineno">   13</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><a name="l00022"></a><span class="lineno">   22</span> <span class="comment"></span><span class="preprocessor">#ifndef LEGATO_PRINT_INCLUDE_GUARD</span></div><div class="line"><a name="l00023"></a><span class="lineno">   23</span> <span class="preprocessor">#define LEGATO_PRINT_INCLUDE_GUARD</span></div><div class="line"><a name="l00024"></a><span class="lineno">   24</span> </div><div class="line"><a name="l00025"></a><span class="lineno">   25</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><a name="l00032"></a><span class="lineno">   32</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="le__print_8h.html#a13a6bd881ed7396fdc45ac8d7bb61a7c">   33</a></span> <span class="preprocessor">#define LE_PRINT_VALUE(formatSpec, value)                                                           \</span></div><div class="line"><a name="l00034"></a><span class="lineno">   34</span> <span class="preprocessor">    LE_DEBUG( STRINGIZE(value) "=" formatSpec, value)</span></div><div class="line"><a name="l00035"></a><span class="lineno">   35</span> </div><div class="line"><a name="l00036"></a><span class="lineno">   36</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><a name="l00044"></a><span class="lineno">   44</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="le__print_8h.html#ac062e3cf11ff77a45855c07243e96e1e">   45</a></span> <span class="preprocessor">#define LE_PRINT_VALUE_IF(condition, formatSpec, value)                                             \</span></div><div class="line"><a name="l00046"></a><span class="lineno">   46</span> <span class="preprocessor">    if (condition)                                                                                  \</span></div><div class="line"><a name="l00047"></a><span class="lineno">   47</span> <span class="preprocessor">        { LE_PRINT_VALUE(formatSpec, value); }</span></div><div class="line"><a name="l00048"></a><span class="lineno">   48</span> </div><div class="line"><a name="l00049"></a><span class="lineno">   49</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><a name="l00057"></a><span class="lineno">   57</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="le__print_8h.html#a9bd862451442c6fa12a722b5c0ac4a76">   58</a></span> <span class="preprocessor">#define LE_PRINT_ARRAY(formatSpec, size, array)                                                     \</span></div><div class="line"><a name="l00059"></a><span class="lineno">   59</span> <span class="preprocessor">    {                                                                                               \</span></div><div class="line"><a name="l00060"></a><span class="lineno">   60</span> <span class="preprocessor">        int i;                                                                                      \</span></div><div class="line"><a name="l00061"></a><span class="lineno">   61</span> <span class="preprocessor">        LE_DEBUG( STRINGIZE(array) );                                                               \</span></div><div class="line"><a name="l00062"></a><span class="lineno">   62</span> <span class="preprocessor">        for (i=0; i<(size_t)size; i++)                                                              \</span></div><div class="line"><a name="l00063"></a><span class="lineno">   63</span> <span class="preprocessor">            LE_DEBUG( "\t" STRINGIZE(array) "[%i]=" formatSpec, i, array[i]);                       \</span></div><div class="line"><a name="l00064"></a><span class="lineno">   64</span> <span class="preprocessor">    }</span></div><div class="line"><a name="l00065"></a><span class="lineno">   65</span> </div><div class="line"><a name="l00066"></a><span class="lineno">   66</span> <span class="preprocessor">#endif // LEGATO_PRINT_INCLUDE_GUARD</span></div><div class="line"><a name="l00067"></a><span class="lineno">   67</span> </div></div><!-- fragment --></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

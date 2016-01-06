@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Sample code for Data Statistics  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">Sample code for Data Statistics </h1> </div>
+</div><div class="contents">
+<div class="textblock"><div class="fragment"><div class="line"><span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><span class="keywordtype">void</span> TestConnectivity</div><div class="line">(</div><div class="line"> <a class="code" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef</div><div class="line">)</div><div class="line">{</div><div class="line"> <span class="keywordtype">char</span> systemCmd[200] = {0};</div><div class="line"> <span class="keywordtype">char</span> itfName[<a class="code" href="le__mdc__interface_8h.html#a33ebf9afd03f0ffc91a80c32c15afb42">LE_MDC_INTERFACE_NAME_MAX_BYTES</a>]=<span class="stringliteral">"\0"</span>;</div><div class="line"></div><div class="line"> <a class="code" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527e">le_mdc_DataBearerTechnology_t</a> downlinkDataBearerTech;</div><div class="line"> <a class="code" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527e">le_mdc_DataBearerTechnology_t</a> uplinkDataBearerTech;</div><div class="line"></div><div class="line"> <a class="code" href="le__log_8h.html#ac0dbbef91dc0fed449d0092ff0557b39">LE_ASSERT</a>(<a class="code" href="le__mdc__interface_8h.html#a1b17bb87b347162013b5ad608cdcda2d">le_mdc_GetDataBearerTechnology</a>(profileRef,</div><div class="line">                                             &downlinkDataBearerTech,</div><div class="line">                                             &uplinkDataBearerTech) == LE_OK);</div><div class="line"></div><div class="line"> <a class="code" href="le__log_8h.html#a4ebab29f40ee8eaaa87205fe3f9aaa13">LE_INFO</a>(<span class="stringliteral">"downlinkDataBearerTech %d, uplinkDataBearerTech %d"</span>,</div><div class="line">                downlinkDataBearerTech, uplinkDataBearerTech);</div><div class="line"></div><div class="line"> <span class="comment">// Get interface name</span></div><div class="line"> <a class="code" href="le__log_8h.html#ac0dbbef91dc0fed449d0092ff0557b39">LE_ASSERT</a>(<a class="code" href="le__mdc__interface_8h.html#abf470aa8e252114cbb95b4e337083d52">le_mdc_GetInterfaceName</a>(profileRef, itfName, <a class="code" href="le__mdc__interface_8h.html#a33ebf9afd03f0ffc91a80c32c15afb42">LE_MDC_INTERFACE_NAME_MAX_BYTES</a>)</div><div class="line">                                                                                          == LE_OK);</div><div class="line"></div><div class="line"> <span class="keywordflow">if</span> ( <a class="code" href="le__mdc__interface_8h.html#aa3912e94864a6e5862e07f58b3772cba">le_mdc_IsIPv4</a>(profileRef) )</div><div class="line">    {</div><div class="line">        snprintf(systemCmd, <span class="keyword">sizeof</span>(systemCmd), <span class="stringliteral">"ping -c 4 www.sierrawireless.com -I %s"</span>, itfName);</div><div class="line">    }</div><div class="line"> <span class="keywordflow">else</span></div><div class="line">    {</div><div class="line"> <span class="comment">// TODO ping6 needs raw access to socket and therefore root permissions => find a different</span></div><div class="line"> <span class="comment">// way to test the connectivity</span></div><div class="line">        snprintf(systemCmd, <span class="keyword">sizeof</span>(systemCmd), <span class="stringliteral">"ping6 -c 4 www.sierrawireless.com -I %s"</span>, itfName);</div><div class="line">    }</div><div class="line"></div><div class="line"> <a class="code" href="le__log_8h.html#ac0dbbef91dc0fed449d0092ff0557b39">LE_ASSERT</a>(system(systemCmd) == 0);</div><div class="line"></div><div class="line"> <span class="comment">// Get data counters</span></div><div class="line">    uint64_t rxBytes=0, txBytes=0;</div><div class="line"> <a class="code" href="le__log_8h.html#ac0dbbef91dc0fed449d0092ff0557b39">LE_ASSERT</a>( <a class="code" href="le__mdc__interface_8h.html#aaad833c105f7d0ae77f18195d6739080">le_mdc_GetBytesCounters</a>(&rxBytes, &txBytes) == LE_OK );</div><div class="line"></div><div class="line"> <a class="code" href="le__log_8h.html#a4ebab29f40ee8eaaa87205fe3f9aaa13">LE_INFO</a>(<span class="stringliteral">"rxBytes %ld, txBytes %ld"</span>, (<span class="keywordtype">long</span> <span class="keywordtype">int</span>) rxBytes, (<span class="keywordtype">long</span> <span class="keywordtype">int</span>) txBytes);</div><div class="line">}</div></div><!-- fragment --></div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

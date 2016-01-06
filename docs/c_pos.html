@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Positioning  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">Positioning </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p><a class="el" href="le__pos__interface_8h.html">API Reference</a> <br />
+<a class="el" href="c_pos_ctrl.html">Positioning Control Reference</a></p>
+<hr />
+<p>This API provides access to the device's physical position and movement information.</p>
+<dl class="section note"><dt>Note</dt><dd>Enabling and disabling the positioning system is a privileged operation available only through the <a class="el" href="c_pos_ctrl.html">Positioning Control API</a>.</dd></dl>
+<h1><a class="anchor" id="le_pos_binding"></a>
+IPC interfaces binding</h1>
+<p>All the functions of this API are provided by the <b>positioningService</b> application service.</p>
+<p>Here's a code sample binding to Positioning services: </p><pre class="fragment">bindings:
+{
+   clientExe.clientComponent.le_pos -> positioningService.le_pos
+}
+</pre><h1><a class="anchor" id="le_pos_fix"></a>
+Fix On Demand</h1>
+<p>The <code><a class="el" href="le__pos__interface_8h.html#a0aefc90df207f2e20286ea1be88e70d4">le_pos_Get2DLocation()</a></code> function gets the last updated latitude, longitude and the horizontal accuracy values:</p>
+<ul>
+<li>latitude is in degrees, positive North.</li>
+<li>longitude is in degrees, positive East.</li>
+<li>horizontal accuracy is in metres.</li>
+</ul>
+<p>The latitude and longitude are given in degrees with 6 decimal places like:</p><ul>
+<li>Latitude +48858300 = 48.858300 degrees North</li>
+<li>Longitude +2294400 = 2.294400 degrees East</li>
+</ul>
+<p>The <code><a class="el" href="le__pos__interface_8h.html#ad2e96a853c9e3d4daa351494ff2070ba">le_pos_Get3DLocation()</a></code> function gets the last updated latitude, longitude, altitude and their associated accuracy values.</p><ul>
+<li>altitude is in metres, above Mean Sea Level, with 3 decimal places (3047 = 3.047 metres).</li>
+<li>horizontal and vertical accuracies are in metres.</li>
+</ul>
+<p>The <code><a class="el" href="le__pos__interface_8h.html#a7f8c37ad14a3375eb9b5d6954916be41">le_pos_GetTime()</a></code> function gets the time of last updated position:</p><ul>
+<li>Hours into the day [range 0..23].</li>
+<li>Minutes into the hour [range 0..59].</li>
+<li>Seconds into the minute [range 0..59].</li>
+<li>Milliseconds into the second [range 0..999].</li>
+</ul>
+<p>The <code><a class="el" href="le__pos__interface_8h.html#a190d242995bb06518b5a064df5578c85">le_pos_GetDate()</a></code> function gets the date of last updated position:</p><ul>
+<li>Year A.D. [e.g. 2014].</li>
+<li>Month into the year [range 1...12].</li>
+<li>Days into the month [range 1...31].</li>
+</ul>
+<p>The <code><a class="el" href="le__pos__interface_8h.html#a5b483fdcd812f4da7bdda284e9bb18b6">le_pos_GetMotion()</a></code> function gets the last updated horizontal and vertical speed values and the associated accuracy values:</p><ul>
+<li>horizontal speed is in m/sec.</li>
+<li>vertical speed is in m/sec, positive up.</li>
+</ul>
+<p>The <code><a class="el" href="le__pos__interface_8h.html#ae06eaad71c152ade96d9b3f2e87a2053">le_pos_GetHeading()</a></code> function gets the last updated heading value in degrees (where 0 is True North) and its associated accuracy value. Heading is the direction that the vehicle/person is facing.</p>
+<p>The <code><a class="el" href="le__pos__interface_8h.html#a2b5b4e4ce66c4f1653d6f0982bbd5feb">le_pos_GetDirection()</a></code> function gets the last updated direction value in degrees (where 0 is True North) and its associated accuracy value. Direction of movement is the direction that the vehicle/person is actually moving.</p>
+<h1><a class="anchor" id="le_pos_navigation"></a>
+Navigation</h1>
+<p>To be notified when the device is in motion, you must register an handler function to get the new position's data. The <code><a class="el" href="le__pos__interface_8h.html#a17e99072772110c1609c53247d663ed3">le_pos_AddMovementHandler()</a></code> API registers that handler. The horizontal and vertical change is measured in metres so only movement over the threshhold will trigger notification (0 means we don't care about changes).</p>
+<p>The handler will give a reference to the position sample object that has triggered the notification. You can then access parameters using accessor functions, and release the object when done with it.</p>
+<p>The accessor functions are:</p><ul>
+<li><a class="el" href="le__pos__interface_8h.html#ae7b3b16601465b663b468f12c63ea485">le_pos_sample_Get2DLocation()</a></li>
+<li><a class="el" href="le__pos__interface_8h.html#a8249f20e9d5020aaa23e54ccf6bbeb9d">le_pos_sample_GetDate()</a></li>
+<li><a class="el" href="le__pos__interface_8h.html#a47171bf14bf4f249d3b76a8ed204f13c">le_pos_sample_GetTime()</a></li>
+<li><a class="el" href="le__pos__interface_8h.html#ac6c6868fdc51ce14492adfcd0d7274c0">le_pos_sample_GetAltitude()</a></li>
+<li><a class="el" href="le__pos__interface_8h.html#a0bb7a30675f1dd7891b22c7753d7caec">le_pos_sample_GetHorizontalSpeed()</a></li>
+<li><a class="el" href="le__pos__interface_8h.html#a18162e15ad9a61696312745ec0bec1fd">le_pos_sample_GetVerticalSpeed()</a></li>
+<li><a class="el" href="le__pos__interface_8h.html#a181f453d46f8b5440d91f2af1b4ebbfb">le_pos_sample_GetHeading()</a></li>
+<li><a class="el" href="le__pos__interface_8h.html#ae42d09bb5146b52dd1f628a93611bc31">le_pos_sample_GetDirection()</a></li>
+</ul>
+<p><code><a class="el" href="le__pos__interface_8h.html#af2999e2e4f7eca899b2af1125547e3ea">le_pos_sample_Release()</a></code> releases the object.</p>
+<p>You can uninstall the handler function by calling the <a class="el" href="le__pos__interface_8h.html#a3c1b616489fc29fc578e58c6b570f14b">le_pos_RemoveMovementHandler()</a> API. </p><dl class="section note"><dt>Note</dt><dd>The <a class="el" href="le__pos__interface_8h.html#a3c1b616489fc29fc578e58c6b570f14b">le_pos_RemoveMovementHandler()</a> API does not delete the Position Object. The caller has to delete it by calling the <a class="el" href="le__pos__interface_8h.html#af2999e2e4f7eca899b2af1125547e3ea">le_pos_sample_Release()</a> function.</dd></dl>
+<p>In the following code sample, the function InstallGeoFenceHandler() installs an handler function that triggers an alarm if the device leaves a designated location.</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#define GEOFENCE_CENTRE_LATITUDE            +48070380  // Latitude 48.070380 degrees North</span></div><div class="line"><span class="preprocessor">#define GEOFENCE_CENTRE_LONGITUDE           -11310000  // Longitude 11.310000 degrees West</span></div><div class="line"><span class="preprocessor">#define MAX_METRES_FROM_GEOFENCE_CENTRE     150</span></div><div class="line"></div><div class="line"><span class="keyword">static</span> <a class="code" href="le__event_loop_8h.html#ae7ab96b8e3441b3d484fcf52aa7a9dad">le_event_HandlerRef_t</a> GeoFenceHandlerRef;</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> InstallGeoFenceHandler()</div><div class="line">{</div><div class="line"> <span class="comment">// I set my home latitude and longitude where my device is located</span></div><div class="line">    SetHomeLocation(HOME_LATITUDE, HOME_LONGITUDE);</div><div class="line"></div><div class="line">    MyPositionUpdateHandlerRef = <a class="code" href="le__pos__interface_8h.html#a17e99072772110c1609c53247d663ed3">le_pos_AddMovementHandler</a>(50, <span class="comment">// 50 metres</span></div><div class="line">                                                           0,  <span class="comment">// I don't care about changes of altitude.</span></div><div class="line">                                                           MyPositionUpdateHandler,</div><div class="line">                                                           NULL);</div><div class="line">}</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> MyPositionUpdateHandler</div><div class="line">(</div><div class="line"> <a class="code" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a>     positionSampleRef,</div><div class="line"> <span class="keywordtype">void</span>*                  contextPtr</div><div class="line">)</div><div class="line">{</div><div class="line">    int32_t metresFromCentre;</div><div class="line"></div><div class="line">    int32_t accuracyMetres;</div><div class="line">    int32_t latitude;</div><div class="line">    int32_t longitude;</div><div class="line"></div><div class="line"> <a class="code" href="le__pos__interface_8h.html#ae7b3b16601465b663b468f12c63ea485">le_pos_sample_Get2DLocation</a>(positionSampleRef, &latitude, &longitude, &accuracyMetres);</div><div class="line"></div><div class="line">    metresFromCentre = le_pos_ComputeDistance(GEOFENCE_CENTRE_LATITUDE, GEOFENCE_CENTRE_LONGITUDE</div><div class="line">                                              latitude, longitude);</div><div class="line"></div><div class="line"> <span class="keywordflow">if</span> (metresFromCentre > MAX_METRES_FROM_GEOFENCE_CENTRE)</div><div class="line">    {</div><div class="line"> <span class="comment">// Check it doesn't just look like we are outside the fence because of bad accuracy.</span></div><div class="line"> <span class="keywordflow">if</span> (  (accuracyMetres > metresFromCentre) ||</div><div class="line">              ((metresFromCentre - accuracyMetres) < MAX_METRES_FROM_GEOFENCE_CENTRE)  )</div><div class="line">        {</div><div class="line"> <span class="comment">// Could be outside the fence, but we also could be inside the fence.</span></div><div class="line">        }</div><div class="line"> <span class="keywordflow">else</span></div><div class="line">        {</div><div class="line"> <span class="comment">// Definitely outside the fence!</span></div><div class="line">            RaiseAlarm(positionSampleRef);</div><div class="line">        }</div><div class="line">    }</div><div class="line"></div><div class="line"> <a class="code" href="le__pos__interface_8h.html#af2999e2e4f7eca899b2af1125547e3ea">le_pos_sample_Release</a>(positionSampleRef);</div><div class="line">}</div></div><!-- fragment --><h1><a class="anchor" id="le_pos_configdb"></a>
+Positioning configuration tree</h1>
+<p>The configuration database path for Positioning is: </p><pre class="fragment">/
+    positioning/
+        acquisitionRate<int> == 5
+</pre><ul>
+<li>'acquisitionRate' is the fix acquisition rate in seconds.</li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>If there is no configuration for 'acquisitionRate', it will be automatically set to 5 seconds.</dd></dl>
+<hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Power Manager  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">Power Manager </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p><a class="el" href="le__pm__interface_8h.html">API Reference</a></p>
+<hr />
+<p>Components need access to the Power Manager to control the system's wake-up state. Operations that need fast response times (e.g., maintaining call state or playing/recording a media stream) result in high interrupt rates; keeping the system awake results in better performance and power efficiency.</p>
+<p>Power Manager uses kernel wakeup sources to keep the system awake when at least one of the registered components requests a wakeup source to be held. When all wakeup sources are released, the system may enter a suspend state depending on the status of other (unrelated) wakeup sources.</p>
+<h1><a class="anchor" id="le_pm_binding"></a>
+IPC interfaces binding</h1>
+<p>All the functions of this API are provided by the <b>powerMgr</b> service.</p>
+<p>Here's a code sample binding to Power Manager services: </p><pre class="fragment">bindings:
+{
+   clientExe.clientComponent.le_pm -> powerMgr.le_pm
+}
+</pre><h1><a class="anchor" id="le_pm_request"></a>
+Requesting and releasing a wakeup source</h1>
+<p>The Power Manager service provides basic API for requesting and releasing a wakeup source. Power Manager's clients call <code><a class="el" href="le__pm__interface_8h.html#a85038248bcddc8963f7280ffa53acf62">le_pm_NewWakeupSource()</a></code> to create a wakeup source. This function returns a <a class="el" href="le__pm__interface_8h.html#af959045ad2b6c98fa2bbeb456c7bb9f5">le_pm_WakeupSourceRef_t</a> type that can later be used to acquire and release a wakeup source through <code><a class="el" href="le__pm__interface_8h.html#a6be9b6c443c506b0ce29da79e53e2534">le_pm_StayAwake()</a></code> and <a class="el" href="le__pm__interface_8h.html#a2ffb1fb0d165604226a9df35360080ea">le_pm_Relax()</a>, respectively. Wakeup sources are not reference-counted, which means multiple calls to <a class="el" href="le__pm__interface_8h.html#a6be9b6c443c506b0ce29da79e53e2534">le_pm_StayAwake()</a> can be canceled by a single call to <a class="el" href="le__pm__interface_8h.html#a2ffb1fb0d165604226a9df35360080ea">le_pm_Relax()</a>.</p>
+<p>Power Manager service will automatically release and delete all wakeup sources held on behalf of an exiting or disconnecting client.</p>
+<p>For deterministic behaviour, clients requesting services of Power Manager should have CAP_EPOLLWAKEUP (or CAP_BLOCK_SUSPEND) capability assigned.</p>
+<hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

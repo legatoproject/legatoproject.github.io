@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>GPIO  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">GPIO </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p><a class="el" href="le__gpio__interface_8h.html">API Reference</a> <br />
+<a class="el" href="sample_apps_gpio_cf3.html">GPIO sample app</a></p>
+<hr />
+<p>This API is used by apps to control general-purpose digital input/output pins.</p>
+<p>A GPIO pin typically has one or more of the following features:</p><ul>
+<li>configured as an input pin or an output pin.</li>
+<li>have an internal pull-up resistor or pull-down resistor enabled, or neither.</li>
+<li>if an output, can be push-pull or open-drain.</li>
+<li>if an input, can trigger an <em>interrupt</em> (asynchronous notification of state change).</li>
+</ul>
+<p>Output pins can be driven in three modes:</p><ul>
+<li><b>push-pull</b> one transistor connects to the supply and another transistor connects to ground (only one is operated at a time)</li>
+<li><b>tri-state</b> same as push-pull with an added high-impedance (high Z) state to disconnect pin from both ground and supply.</li>
+<li><b>open drain</b> transistor connects only to ground. Can only be used to pull low.</li>
+</ul>
+<p>Pins also have a <em>polarity</em> mode:</p><ul>
+<li><b> active-high </b> polarity pin is read/written as a digital 1 (true) when its voltage is "high" and 0 (false) when its voltage is "low" (grounded).</li>
+<li><b> active-low </b> pin is read/written as a digital 1 (true) when its voltage is "low" (grounded) and 0 (false) when its voltage is "high".</li>
+</ul>
+<p>The following functions are used to configure the GPIO pin:</p><ul>
+<li>SetInput() - Configure as an input pin.</li>
+<li>SetPushPullOutput() - Configure as push-pull output pin (can drive high or low).</li>
+<li>SetTriStateOutput() - Configure as tri-state output pin (can drive high or low or neither).</li>
+<li>SetOpenDrainOutput() - Configure as open-drain output pin (only pulls low).</li>
+<li>EnablePullUp() - Enables the internal pull-up resistor (and disables the pull-down).</li>
+<li>EnablePullDown() - Enables the internal pull-down resistor (and disables the pull-up).</li>
+<li>DisableResistors() - Disables the internal pull-up/down resistors.</li>
+<li>SetEdgeSense() - Set the edge sensing on an input pin (only works if you have an EventHandler)</li>
+</ul>
+<p>To set the level of an output pin, call Activate(), Deactivate(), or SetHighZ().</p>
+<p>To poll the value of an input pin, call Read().</p>
+<p>Use the ChangeEvent to register a notification callback function to be called when the state of an input pin changes. Thje type of edge detection can then be modified by calling SetEdgeSense() or DisbleEdgeSense() </p><dl class="section note"><dt>Note</dt><dd>Only one handler can be registered per pin. Subsequent attempts to register a handler will result in the client being killed.</dd></dl>
+<p>The following functions can be used to read the current setting for a GPIO Pin. In a Linux environment these values are read from the sysfs and reflect the actual value at the time the function is called.</p><ul>
+<li>IsOutput() - Is the pin currently an output?</li>
+<li>IsInput() - Is the pin currently an input?</li>
+<li>IsActive() - Is an output pin currently being driven? (corresponds to the value file in sysfs)</li>
+<li>GetPolarity() - Retrieve the current polarity i.e. active-low or active-high</li>
+<li>GetEdgeSense() - What edge sensing has been enabled on an input pin?</li>
+<li>GetPullUpDown() - What pull-up or pull-down has been enabled?</li>
+</ul>
+<p>Each GPIO pin is accessed through a single IPC service. This makes it possible to use bindings to control which GPIO pins each app is allowed to access. It also simplifies the API by removing the need to specify which pin is desired and allows the pins to be named differently in the client and the server, so the client can be more portable. Only one client can connect to pin.</p>
+<p>Binding example:</p>
+<pre class="fragment">bindings:
+{
+    ui.frontPanel.powerLed -> gpioService.le_gpio22
+}
+</pre><h1><a class="anchor" id="gpioConfig"></a>
+Configuring available GPIOs</h1>
+<p>The GPIOs which are available for use are advertised in the sysfs at </p><pre class="fragment">/sys/class/gpio/gpiochip1/mask </pre><p> For each entry in this bitmask, a service will be advertised to allow use of the pin. However, if a pin needs to be disabled form being accessed, e.g. it carries out some system function that should not be available to apps, then it can be disabled by adding an entry to the config tree.</p>
+<p>For example, to disable pin 6 from being used, add the entry </p><pre class="fragment">gpioService:/pins/disabled/n </pre><p> where n is the GPIO number. The value should be set to true to disable that service. If the value is either false or absent then the service will run. Entries can be added using the config tool, for example </p><pre class="fragment">config set gpioService:/pins/disabled/13 true bool</pre><p> will disable the service for pin 13. Note that specifying the type as bool is vital as the config tool defaults to the string type, and hence any value set will default to false. </p><hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

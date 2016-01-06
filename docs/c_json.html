@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>JSON Parsing API  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">JSON Parsing API </h1> </div>
+</div><div class="contents">
+<div class="textblock"><dl class="section warning"><dt>Warning</dt><dd>This API is experimental, and is therefore likely to change.</dd></dl>
+<p><a class="el" href="le__json_8h.html">API Reference</a> <br />
+</p>
+<hr />
+<p>The JSON Parsing API is intended to provide fast parsing of a JSON data stream with very little memory required. It is an event-driven API that uses callbacks (handlers) to report when things are found in the JSON document. The parser does not build a document structure for you. You build your structure as needed in response to callbacks from the parser. In this way, the JSON parser avoids potential memory fragmentation issues that can arise when document object models are constructed on the heap (e.g., using malloc()).</p>
+<h1><a class="anchor" id="c_json_start"></a>
+Starting and Stopping Parsing</h1>
+<p>The function <a class="el" href="le__json_8h.html#a610f180628f8e5be75fe5a08533124df">le_json_Parse()</a> is used to start parsing a JSON document obtained from a file descriptor. This function returns immediately, and further parsing proceeds in an event-driven manner: As JSON data is received, asynchronous call-back functions are called to deliver parsed information or an error message.</p>
+<p>Parsing stops automatically when the end of the document is reached or an error is encountered.</p>
+<p><a class="el" href="le__json_8h.html#a688e27c19518c70c0bd279f4451eb973">le_json_Cleanup()</a> must be called to release memory resources allocated by the parser.</p>
+<p>If the document starts with a '{', then it will finish with the matching '}'.</p>
+<p>If it starts with a '[', then it will finish with the matching ']'.</p>
+<p>All documents must start with either '{' or '['.</p>
+<p>To stop parsing early, call <a class="el" href="le__json_8h.html#a688e27c19518c70c0bd279f4451eb973">le_json_Cleanup()</a> early.</p>
+<dl class="section warning"><dt>Warning</dt><dd>Be sure to stop parsing before closing the file descriptor.</dd></dl>
+<h1><a class="anchor" id="c_json_events"></a>
+Event Handling</h1>
+<p>As parsing progresses and the parser finds things inside the JSON document, the parser calls the event handler function to report the findings.</p>
+<p>For example, when the parser finds an object member, it calls the event handler function with the event code LE_JSON_OBJECT_MEMBER; and when if finds a string value, an LE_JSON_STRING event is reported.</p>
+<p>The event handler function can call functions to fetch values, depending on the event:</p><ul>
+<li>LE_JSON_OBJECT_MEMBER: <a class="el" href="le__json_8h.html#a6e3870d9dfb1082f92572042508271a6">le_json_GetString()</a> fetches the object member name.</li>
+<li>LE_JSON_STRING: <a class="el" href="le__json_8h.html#a6e3870d9dfb1082f92572042508271a6">le_json_GetString()</a> fetches the string value.</li>
+<li>LE_JSON_NUMBER: <a class="el" href="le__json_8h.html#a583ed4c1e74317dab7bab49cbdbb7bc2">le_json_GetNumber()</a> fetches the number value.</li>
+</ul>
+<p><a class="el" href="le__json_8h.html#a6e3870d9dfb1082f92572042508271a6">le_json_GetString()</a> and <a class="el" href="le__json_8h.html#a583ed4c1e74317dab7bab49cbdbb7bc2">le_json_GetNumber()</a> can only be called from inside of a JSON parsing event handler function or any function being called (directly or indirectly) from a JSON parsing event handler. Calling these functions elsewhere will be fatal to the calling process.</p>
+<h1><a class="anchor" id="c_json_context"></a>
+Context</h1>
+<p>Each JSON object, object member and array in the JSON document is a "context". Each context has an event handler function and an opaque pointer associated with it. The top level context's event handler and opaque pointer are passed into <a class="el" href="le__json_8h.html#a610f180628f8e5be75fe5a08533124df">le_json_Parse()</a>. Sub-contexts (object members or array elements) will inherit their context from their parent.</p>
+<p>The current context's event handler can be changed from within an event handler function by calling <a class="el" href="le__json_8h.html#a8dda714db610cde2d8c342f8fc44988a">le_json_SetEventHandler()</a>. This will remain in effect until the parser finishes parsing that part of the document and returns back to its parent, at which time the current context will be automatically restored to the parent's context.</p>
+<h1><a class="anchor" id="c_json_errors"></a>
+Error Handling</h1>
+<p>There is a global error handler that is also set when the parsing is started, and can be changed by calling <a class="el" href="le__json_8h.html#aedf060929ec148f846b3c91a4a5c2324">le_json_SetErrorHandler()</a>. Unlike other event handlers, this is not part of the context, and will therefore not get restored to a previous handler when the parsing of a member finishes. The error handler function is passed parameters that indicate what type of error occurred.</p>
+<h1><a class="anchor" id="c_json_errors"></a>
+Error Handling</h1>
+<p>For diagnostic purposes, <a class="el" href="le__json_8h.html#a1c6b4146e44600f62259e1ea72275ca3">le_json_GetEventName()</a> can be called to get a human-readable string containing the name of a given event.</p>
+<p>To get the number of bytes that have been read by the parser since <a class="el" href="le__json_8h.html#a610f180628f8e5be75fe5a08533124df">le_json_Parse()</a> was called, call <a class="el" href="le__json_8h.html#ae78b0bd7d95e3ce100416edd3510fafd">le_json_GetBytesRead()</a>.</p>
+<h1><a class="anchor" id="c_json_example"></a>
+Example</h1>
+<p>If the JSON document is</p>
+<div class="fragment"><div class="line">{ <span class="stringliteral">"x"</span>:1, <span class="stringliteral">"y"</span>:2, <span class="stringliteral">"name"</span>:<span class="stringliteral">"joe"</span> }</div></div><!-- fragment --><p>The following sequence of events will be reported by the parser:</p><ol type="1">
+<li>LE_JSON_OBJECT_START</li>
+<li>LE_JSON_OBJECT_MEMBER - If the event handler calls <a class="el" href="le__json_8h.html#a6e3870d9dfb1082f92572042508271a6">le_json_GetString()</a>, it will return "x".</li>
+<li>LE_JSON_NUMBER - If the event handler calls <a class="el" href="le__json_8h.html#a583ed4c1e74317dab7bab49cbdbb7bc2">le_json_GetNumber()</a>, it will return 1.</li>
+<li>LE_JSON_OBJECT_MEMBER - If the event handler calls <a class="el" href="le__json_8h.html#a6e3870d9dfb1082f92572042508271a6">le_json_GetString()</a>, it will return "y".</li>
+<li>LE_JSON_NUMBER - If the event handler calls <a class="el" href="le__json_8h.html#a583ed4c1e74317dab7bab49cbdbb7bc2">le_json_GetNumber()</a>, it will return 2.</li>
+<li>LE_JSON_OBJECT_MEMBER - If the event handler calls <a class="el" href="le__json_8h.html#a6e3870d9dfb1082f92572042508271a6">le_json_GetString()</a>, it will return "name".</li>
+<li>LE_JSON_STRING - If the event handler calls <a class="el" href="le__json_8h.html#a6e3870d9dfb1082f92572042508271a6">le_json_GetString()</a>, it will return "joe".</li>
+<li>LE_JSON_OBJECT_END</li>
+</ol>
+<ol type="1">
+<li>LE_JSON_DOC_END - At this point, parsing stops.</li>
+</ol>
+<p>If the handler function passed to <a class="el" href="le__json_8h.html#a610f180628f8e5be75fe5a08533124df">le_json_Parse()</a> is called "<c>TopLevelHandler()</c>", TopLevelHandler() will be called for the all events. But, when <code>TopLevelHandler()</code> gets the event LE_JSON_OBJECT_MEMBER for the member "x" and responds by calling <code>le_json_SetEventHandler(XHandler(), NULL)</code>, then the LE_JSON_NUMBER event for "x" will be passed to <code>XHandler()</code>. But, the following LE_JSON_OBJECT_MEMBER event for "y" will still go to <code>TopLevelHandler()</code>, because the context returns to the top level object after the parser finishes parsing member "x".</p>
+<h1><a class="anchor" id="c_json_threads"></a>
+Multi-Threading</h1>
+<p>This API is not thread safe. DO NOT attempt to SHARE parsers between threads.</p>
+<p>If a thread dies, any parsers in use by that thread that have not been cleaned-up by calls to <a class="el" href="le__json_8h.html#a688e27c19518c70c0bd279f4451eb973">le_json_Cleanup()</a> will be cleaned up automatically.</p>
+<hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

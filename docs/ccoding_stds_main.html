@@ -1,0 +1,302 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>C Language Standards  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">C Language Standards </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p>Legato follows the C Language standards outlined in this topic to help simplify coding and help in code reuse.</p>
+<hr />
+<p>There's also detailed info on <a class="el" href="ccoding_stds_naming.html">Naming Standards</a> and <a class="el" href="ccoding_stds_abbr.html">Abbreviations</a></p>
+<h1><a class="anchor" id="cstdsparamCommenting"></a>
+Commenting</h1>
+<p>If it's not completely obvious what's going on, it must be documented clearly using comments.</p>
+<p>Comments should also be used to improve readability, wherever appropriate.</p>
+<p>However, there's no point in commenting the obvious, like this: </p><pre class="fragment">// Set the flag
+isReady = TRUE; </pre><p>Comments should focus mainly on describing why something is happening, rather than what or how. Code should be written so that what it's doing, and how it's doing it, is obvious (because of the well named identifiers and cleanly structured code). If not, your should probably rewrite the code. If that's not practical, then you should comment on what and how.</p>
+<p>The idea of why the code is doing what it's doing can't be conveyed well in the code itself. This is the most valuable information to have in comments to advise of pitfalls and help quickly identify whether design change options are viable. Often, the ''why'' was learned the hard way, so documenting it can save others from having to learn it the hard way, too. Also, sometimes things are done arbitrarily, which is good to know too so people don't have to fear that making changes to it might break something in some subtle way.</p>
+<p>C++ style comments are permitted in C code. All modern compilers support them.</p>
+<p>Each module should contain a comment block at the top of the file that describes the module's purpose. The header comment block should be formatted like this:</p>
+<pre class="copyright">/**
+ * @file le_basics.h
+ *
+ * There are certain cardinal types and commonly-used constants that form the most basic
+ * foundation upon which everything else is built.  These include things such as
+ * error codes, portable integer types, and helpful macros to make ugly things nicer to look
+ * at and easier to use.
+ *
+ * <HR>
+ *
+ * Copyright (C) Sierra Wireless Inc. Use of this work is subject to license.
+ */
+</pre><p>Each function should be preceded by a comment block that describes the purpose of the function, its possible return values, and any side effects it may have. The function blocks should be formatted like this:</p>
+<pre class="fragment">//--------------------------------------------------------------------------------------------------
+/**
+ * Creates a sub-pool.
+ *
+ * See @ref sub_pools for more information.
+ *
+ * @return
+ *      A reference to the sub-pool.
+ */
+//--------------------------------------------------------------------------------------------------
+le_mem_PoolRef_t le_mem_CreateSubPool
+(
+    le_mem_PoolRef_t    pool,       ///< [IN] The super-pool.
+    const char*         name,       ///< [IN] Name of the sub-pool (will be copied into the
+                                    ///   sub-pool).
+    size_t              numObjects  ///< [IN] Number of objects to take from the super-pool.
+);
+</pre><p>Function parameters should be documented with comments after the parameter like above. Placing the comments after the parameters (instead of in the function comment block) keeps the comments and parameters together making it easier to read. It also reminds the developer to update the comments when the parameters are changed.</p>
+<p>A struct should be documented in a similar manner where each field has comments proceeding it like this:</p>
+<pre class="fragment">//--------------------------------------------------------------------------------------------------
+/**
+ * List of memory pool statistics.
+ */
+//--------------------------------------------------------------------------------------------------
+typedef struct
+{
+    uint64_t    numAllocs;      ///< Number of times an object has been allocated from this pool.
+    size_t      numFree;        ///< Number of free objects currently available in this pool.
+    size_t      numOverflows;   ///< Number of times le_mem_ForceAlloc() had to expand the pool.
+}
+le_mem_PoolStats_t;
+</pre><p>Enumerated types should be documented similarly.</p>
+<pre class="fragment">//--------------------------------------------------------------------------------------------------
+/**
+ * Example return codes.
+ *
+ * @note These return codes are only valid within the ExampleModule. Use realMeaning(eg_code_t) to
+ *       translate. The following is strictly fictional and created only to illustrate style.
+ */
+//--------------------------------------------------------------------------------------------------
+typedef enum
+{
+    EG_PERFECT = 0,             ///< Things went well. Nothing to worry about.
+    EG_TROUBLE = -1,            ///< We might want to think about packing our bags.
+    EG_PANIC = -2,              ///< Definitely not good.
+    EG_WARP_CORE_BREACH = -99   ///< Dilithium crystals defocused the anti-matter beam. Should never happen.
+}
+eg_code_t;
+</pre><p>If the meaning of the constants in an enumerated type are obvious based on their names, comments could be omitted like this:</p>
+<pre class="fragment">//--------------------------------------------------------------------------------------------------
+/**
+ * Boolean type.
+ *
+ * 0 is false and 1 is true, in keeping with the C programming language's
+ * Boolean expression evaluation rules.
+ */
+//--------------------------------------------------------------------------------------------------
+typedef enum
+{
+    FALSE = 0,
+    TRUE = 1
+}
+bool;
+</pre><h1><a class="anchor" id="cstdsConstPointers"></a>
+Const Pointers</h1>
+<p>Pointer type function parameters must be declared <code>const</code> if the object pointed to will not be modified by the function being passed.</p>
+<p>Pointer type return values must be declared <code>const</code> if the object being returned must not be modified by the caller.</p>
+<h1><a class="anchor" id="cstdsCyclomatic"></a>
+Cyclomatic Complexity</h1>
+<p><a href="http://en.wikipedia.org/wiki/Cyclomatic_complexity">Cylcomatic Complexity</a> is a measurement of the complexity of code within a function. It's measured by counting branches within a function.</p>
+<p>Each function gets a starting value of 1, and 1 is added for every "if" (or "?"), every loop (for, do, or while), and every "case".</p>
+<p>The following code has a cyclomatic complexity of 3:</p>
+<pre class="fragment">int main(int argc, char** argv)
+{
+    int i;
+    int result = 0;
+
+    if (argc <= 0)
+    {
+        printf("No arguments provided.\n");
+        result = 1;
+    }
+    else
+    {
+        printf("argc = %d\n", argc);
+
+        for (i = 0; i < argc; i++)
+        {
+            printf("argv[%d] = '%s'\n", argv[i]);
+        }
+    }
+    return result;
+}
+</pre><p>Higher levels of cyclomatic complexity are correlated with higher defect density.</p>
+<p>All functions should have a cyclomatic complexity of 10 or less.</p>
+<p>All functions must have a cyclomatic complexity of less than 15.</p>
+<h1><a class="anchor" id="cstdsExistingCode"></a>
+Existing Code</h1>
+<p>When modifying previously written code, the pre-existing style should be used over the Legato standards. But you should apply the Legato standards to the parts you modify unless you're making a very small change.</p>
+<h1><a class="anchor" id="cstdsExtern"></a>
+Extern</h1>
+<p>When global variables aren't used and all inter-module interfaces are defined in header files, the extern keyword isn't needed; don't use it. Using extern indicates poor coding practices.</p>
+<h1><a class="anchor" id="cstdsFanOut"></a>
+Fan Out</h1>
+<p>Fan-out measures the number of different functions called by a function including the number of data structures it updates. High levels of fan-out indicate insufficient abstraction and results in higher defect density.</p>
+<p>The following function has a fan-out of 5: </p><pre class="fragment">static int Log(int value)
+{
+    if (IsAboveThreshold(value))
+    {
+        LogEntry_t* entryPtr = AllocEntry();
+        if (entryPtr == NULL)
+        {
+            ReportError("Out of memory!");
+        }
+        else
+        {
+            entryPtr->value = value;
+            entryPtr->timestamp = GetTimestamp();
+
+            // Add the entry to the log entry list.
+            LogEntryList[NextEntryIndex++] = entryPtr;
+            if (NextExtryIndex >= LOG_SIZE)
+            {
+                NextEntryIndex = 0; // wrap around
+            }
+            if (NextEntryIndex == LastEntryIndex)
+            {
+                ReportError("Log overflow! Log entry discarded.");
+                LastEntryIndex = (LastEntryIndex + 1) % LOG_SIZE;
+            }
+        }
+    }
+}</pre><p>The functions IsAboveThreshold(), AllocEntry(), ReportError(), and GetTimestamp() are called by the Log() function. The "Log" data structure (consisting of the variables LogEntryList, NextEntryIndex, and LastEntryIndex) is updated by the Log() function. The second and subsequent calls to the same function are not counted. Even though ReportError() is called twice by Log(), it only contributes 1 to the fan-out.</p>
+<p>Ideally, fan-out should be kept to 7 or less, and must be kept to 10 or less.</p>
+<h1><a class="anchor" id="cstdsFunctionParameter"></a>
+Function Parameters</h1>
+<p>The number of parameters passed to a function should be kept as low as possible. Functions with less parameters tend to be easier to understand and easier to use. C functions should have 3 parameters or less.</p>
+<h1><a class="anchor" id="cstdsGlobalVariables"></a>
+Global Variables</h1>
+<p>Global variables are variables that are exported to other modules (i.e., have a scope that spans multiple files).</p>
+<p>Global variables are dangerous because they don't protect from multithreaded race conditions, and they reduce maintainability because of the increased coupling.</p>
+<p>Globals must not be used. Use accessor functions instead.</p>
+<p>NOTE: file-scope static variables are fine.</p>
+<h1><a class="anchor" id="cstdsGotos"></a>
+Gotos</h1>
+<p><code>goto</code> statements should not be used. If it's absolutely essential, use them sparingly only as a jump-to-exception-handling mechanism:</p>
+<pre class="fragment">{
+    Rec_t* recPtr = CreateRec();
+
+    ...
+
+    if (x > LIMIT)
+    {
+        goto fault;
+    }
+
+    ...
+
+    SaveRec(recPtr);
+    return SUCCESS;
+
+fault:
+
+    ReleaseRec(recPtr);
+    return FAILED;
+}</pre><h1><a class="anchor" id="cstdsHeap"></a>
+Heap</h1>
+<p>Depending on the algorithm used, dynamic memory allocation using a memory heap (e.g., malloc, free, and variants like calloc, realloc, and strdup) can lead to heap fragmentation resulting in unexpected runtime failures. And heap allocation and deallocation can be very slow in some cases.</p>
+<p>Use memory pools instead. Memory pools eliminate internal fragmentation, run in O(1) time (for both allocation and deallocation), can be named for diagnostics purposes, allow finer-grained memory allocation statistics collection, and can provide OO constructor and destructor functionality.</p>
+<h1><a class="anchor" id="cstdsInterfaceDocumentation"></a>
+Interface Documentation</h1>
+<p>Inter-component interfaces should be documented using Doxygen. This ensures documentation is inside the include (.h) files.</p>
+<h1><a class="anchor" id="cstdsLineLength"></a>
+Line Length</h1>
+<p>Lines of code should not be longer than 100 columns.</p>
+<h1><a class="anchor" id="cstdsMultipleInclusionGuards"></a>
+Multiple Inclusion Guards</h1>
+<p>To prevent declaration errors due to multiple inclusion of the same header file, every header file must include a "multiple inclusion guard" like this:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#ifndef UNIQUE_INCLUDE_GUARD</span></div><div class="line"><span class="preprocessor">#define UNIQUE_INCLUDE_GUARD</span></div><div class="line"></div><div class="line">...</div><div class="line"></div><div class="line">#endif</div></div><!-- fragment --><p><code>UNIQUE_INCLUDE_GUARD</code> must be replaced with a macro name unique to this header file. To ensure uniqueness, the macro name should:</p>
+<ul>
+<li>contain the name of the file (converted to all upper case, with underscores separating words)</li>
+<li>be prefixed with a name or abbreviation that's unique to the module that the header file is a part of</li>
+<li>have "_INCLUDE_GUARD" as a suffix.</li>
+</ul>
+<p>The Converter module's inter-module interface file converter.h' in the Sierra Wireless (SWI) Transmogrifier component could contain a multiple inclusion guard macro named like this: </p><div class="fragment"><div class="line">SWI_TMOG_CONVERTER_INCLUDE_GUARD</div></div><!-- fragment --><p>Code in a header file must be inside the file's multiple inclusion guard (except for comments) like this:</p>
+<div class="fragment"><div class="line"><span class="comment">// Only comments allowed here.</span></div><div class="line"></div><div class="line"><span class="preprocessor">#ifndef SWI_TMOG_CONVERTER_INCLUDE_GUARD</span></div><div class="line"><span class="preprocessor">#define SWI_TMOG_CONVERTER_INCLUDE_GUARD</span></div><div class="line"></div><div class="line"><span class="comment">// Any code can go here.</span></div><div class="line"></div><div class="line"><span class="preprocessor">#endif // SWI_TMOG_CONVERTER_INCLUDE_GUARD</span></div><div class="line"></div><div class="line"><span class="comment">// Only comments allowed here, but preferably nothing but the end of file should be here.</span></div></div><!-- fragment --><p>To allow include guard macros to be renamed (in case the file is renamed, the code changes hands, a naming conflict is found, etc.) and to avoid maintenance confusion, these macros shouldn't be used for anything else other than the multiple inclusion guard.</p>
+<dl class="section note"><dt>Note</dt><dd>If you're modifying existing code that uses multiple inclusion guard, follow the pre-existing code style instead of the Legato standard.</dd></dl>
+<h1><a class="anchor" id="cstdsMultithreading"></a>
+Multithreading</h1>
+<p>Sometimes multithreading can be a powerful tool to allow functionally-related code be grouped into a single control flow where it would otherwise be fragmented into small chunks that can run without blocking. But multithreading can easily create some of the most nasty bugs.</p>
+<p>What can we do in coding standards to help prevent bugs arising from multithreading? Perhaps defining how synchronization is performed? Can we have a standard macro definition for mutual exclusion for example? Maybe that's outside of what coding standards normally define, but it could be useful.</p>
+<h1><a class="anchor" id="cstdsRecursion"></a>
+Recursion</h1>
+<p>Recursion can be dangerous because it can result in stack overruns. <b>Don't use recursion</b> unless you can clearly highlight the recursion and prove that the recursion will be bounded well within the limits of even the smallest stack space that could reasonably be allocated to your thread.</p>
+<h1><a class="anchor" id="cstdsSeparateInterfacefromImplementation"></a>
+Separating Interface from Implementation</h1>
+<p>Header files should contain only interface details. Implementation details should appear only in <code></code>.c files.</p>
+<p>Separating interface from implementation reduces coupling, which increases quality.</p>
+<h1><a class="anchor" id="cstdsTabs"></a>
+Tabs</h1>
+<p>Tab characters are not handled in a consistent way in editors and browsers. Some put tab stops at the equivalent of 8 spaces, others use 4 or other variations. As a result, source code containing tab characters are not rendered properly in all cases.</p>
+<p>Avoid tab characters avoided in C source code. Use spaces to indent lines instead.</p>
+<p>The standard indentation distance is 4 spaces per indentation level.</p>
+<p>Configure your editor(s) now! (...and, while you're at it, tell your editor not to automatically go and change pre-existing code.)</p>
+<hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

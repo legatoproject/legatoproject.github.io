@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>C Runtime Library  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">C Runtime Library </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p>This section contains detailed info about Legato's C Language library used for low-level routines like commonly used data structures and OS services APIs.</p>
+<hr />
+<p>The C APIs' <a class="el" href="c__a_p_is.html#cApiOverview">Overview</a> has high-level info.</p>
+<hr />
+<p><a class="el" href="c_le_build_cfg.html">Legato Build Configuration</a> <br />
+<a class="el" href="c_basics.html">Basic Type and Constant Definitions</a> <br />
+<a class="el" href="c_args.html">Command Line Arguments API</a> <br />
+<a class="el" href="c_dir.html">Directory API</a> <br />
+<a class="el" href="c_doubly_linked_list.html">Doubly Linked List API</a> <br />
+<a class="el" href="c_memory.html">Dynamic Memory Allocation API</a> <br />
+<a class="el" href="c_event_loop.html">Event Loop API</a> <br />
+<a class="el" href="c_fd_monitor.html">File Descriptor Monitor API</a> <br />
+<a class="el" href="c_flock.html">File Locking API</a> <br />
+<a class="el" href="c_hashmap.html">HashMap API</a> <br />
+<a class="el" href="c_hex.html">Hex string API</a> <br />
+<a class="el" href="c_json.html">JSON Parsing API</a> <br />
+<a class="el" href="c_logging.html">Logging API</a> <br />
+<a class="el" href="c_messaging.html">Low-Level Messaging API</a> <br />
+<a class="el" href="c_mutex.html">Mutex API</a> <br />
+<a class="el" href="c_path.html">Path API</a> <br />
+<a class="el" href="c_path_iter.html">Path Iterator API</a> <br />
+<a class="el" href="c_print.html">Print APIs</a> <br />
+<a class="el" href="c_safe_ref.html">Safe References API</a> <br />
+<a class="el" href="c_semaphore.html">Semaphore API</a> <br />
+<a class="el" href="c_signals.html">Signals API</a> <br />
+<a class="el" href="c_singly_linked_list.html">Singly Linked List API</a> <br />
+<a class="el" href="c_clock.html">System Clock API</a> <br />
+<a class="el" href="c_threading.html">Thread Control API</a> <br />
+<a class="el" href="c_timer.html">Timer API</a> <br />
+<a class="el" href="c_test.html">Unit Testing API</a> <br />
+<a class="el" href="c_utf8.html">UTF-8 String Handling API</a></p>
+<h1><a class="anchor" id="cApiOverview"></a>
+Overview</h1>
+<p>Here is some background info on Legato's C Language APIs.</p>
+<h2><a class="anchor" id="Object-Oriented"></a>
+Design</h2>
+<p>The Legato framework is constructed in an object-oriented manner.</p>
+<p>The C programming language was created before object-oriented programming was popular so it doesn't have native support for OOP features like inheritance, private object members, member functions, and overloading. But object-oriented designs can still be implemented in C.</p>
+<p>In the Legato C APIs, classes are hidden behind opaque "reference" data types. You can get references to objects created behind the scenes in Legato, but you can never see the structure of those objects. The implementation is hidden from view. Access to object properties is made available through accessor functions.</p>
+<h2><a class="anchor" id="Opaque"></a>
+Types</h2>
+<p>The basic "opaque data type" offered by the C programming language is the "void pointer" <code>(void *)</code>. The idea is that a pointer to an object of type <em>T</em> can be cast to point to a <code>void</code> type before being passed outside of the module that implements <em>T</em>.</p>
+<p>This makes it impossible for anyone outside of the module that implements <em>T</em> to dereference the pointer or access anything about the implementation of <em>T</em>. This way, the module that implements <em>T</em> is free to change the implementation of <em>T</em> in any way needed without worrying about breaking code outside of that module.</p>
+<p>The problem with the void pointer type is that it throws away type information. At compile time, this makes it impossible to detect that a variable with opaque type <em>T</em> has been passed into a function with some other pointer type <em>P</em>.</p>
+<p>To overcome this, Legato uses "incomplete types" to implement its opaque types. For example, there are declarations similar to the following in Legato C API header files:</p>
+<div class="fragment"><div class="line"><span class="comment">// Declare a reference type for referring to Foo objects.</span></div><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>le_foo* le_foo_Ref_t;</div></div><!-- fragment --><p>But "struct le_foo" would <em>not</em> be defined in the API header or <em>anywhere</em> outside of the hypothetical "Foo" API's implementation files. This makes "struct le_foo" an "incomplete type" for all code outside of the Foo API implementation files. Incomplete types can't be used because the compiler doesn't have enough information about them to generate any code that uses them. But <em>pointers</em> to incomplete types <em>can</em> be passed around because the compiler always knows the pointer size. The compiler knows that one incomplete type is <em>not</em> necessarily interchangeable with another, and it won't allow a pointer to an incomplete type to be used where a pointer to another non-void type is expected.</p>
+<h2><a class="anchor" id="Handlers"></a>
+and Event-Driven Programs</h2>
+<p>"Handler" is an alias for "callback function". Many APIs in the Legato world use callback functions to notify their clients of asynchronous events. For example, to register a function called "SigTermHandler" for notification of receipt of a TERM signal,</p>
+<div class="fragment"><div class="line"><a class="code" href="le__signals_8h.html#a421910132f193dae70e8309dc86a86c4">le_sig_SetEventHandler</a>(SIGTERM, SigTermHandler);</div></div><!-- fragment --><p>Instead of using "CallbackFunction", "CallbackFunc", or some abbreviation like "CbFn" (Cub fun? Cubs fan? What?) that is difficult to read and/or remember, "Handler" is used.</p>
+<p>The term "handler" also fits with the event-driven programming style that is favoured in the Legato world. These callback functions are essentially event handler functions. That is, the function is called when an event occurs to "handle" that event.</p>
+<hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

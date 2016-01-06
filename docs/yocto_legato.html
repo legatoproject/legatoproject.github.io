@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Yocto Legato Builds  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Platform Yocto Info.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Platform</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Platform')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="platform_constraints.html">Platform Constraints</a><a class="link-selected" href="yocto_main.html">Yocto Info</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">Yocto Legato Builds </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p>This topic provides info about working with Legato and Yocto.</p>
+<p>The Yocto Project is an open source collaboration project that provides templates, tools and methods to help you create custom Linux-based systems for embedded products regardless of the hardware architecture.</p>
+<p>Legato is compatible with Yocto 1.7.2</p>
+<h1><a class="anchor" id="getstartedYoctoLinux_yoctoDirectories"></a>
+Yocto Linux Directories</h1>
+<p>Untar the <b>Legato</b> Distribution file to a directory (available at <a href="http://source.sierrawireless.com/resources/legato/legatolinuxdist/">Legato Downloads</a>): </p><div class="fragment"><div class="line">$ cd <some directory></div><div class="line">$ tar xvjf [Legato-Dist-Source file]</div></div><!-- fragment --><p>These file/directories will be extracted:</p><ul>
+<li><b>downloads</b> - Linux kernel</li>
+<li><b>kernel</b> - Sierra Wireless specific layers</li>
+<li><b>meta-swi</b> - Hardware adaptations</li>
+<li><b>meta-swi-extras</b> - Build scripts and proprietary code</li>
+</ul>
+<p>Yocto uses a layered model for its build system. In Legato, device-specific layers are <code>meta-swi-</code>[target] and <code>meta-swi-bin</code>.</p>
+<p>Yocto 1.7.2 and poky environment documentation is available at <a href="https://www.yoctoproject.org/documentation/archived?keys=&amp;field_version_tid=45">Yocto docs</a></p>
+<h1><a class="anchor" id="yoctoWP85"></a>
+WP85 and Yocto</h1>
+<p>The following table lists details about Yocto support for the WP85 module.</p>
+<dl class="section warning"><dt>Warning</dt><dd><code>legato-image.wp85.ubi</code> requires fakeroot 1.10.2 for generation.</dd></dl>
+<table class="doxtable">
+<tr>
+<th>File Type </th><th>Partition </th><th>Filename </th><th>Def. </th><th>Description  </th></tr>
+<tr>
+<td>bootloader image </td><td>mtd0 </td><td>appsboot.mbn </td><td>* </td><td>LK (little-kernel), provides fastboot </td></tr>
+<tr>
+<td>kernel image </td><td>mtd1 </td><td>boot-yocto-mdm9x15.2k.img </td><td>* </td><td>kernel (uncompressed) + mdm9x15-image-initramfs </td></tr>
+<tr>
+<td>rootfs image </td><td>mtd2 </td><td>mdm9x15-image-minimal-swi-mdm9x15.2k.ubi </td><td>* </td><td>rootfs as ubi (actual rootfs filesystem is squashfs, read-only) </td></tr>
+<tr>
+<td></td><td></td><td>mdm9x15-image-minimal-swi-mdm9x15.2k.yaffs2 </td><td></td><td>rootfs as yaffs2 format (not working) </td></tr>
+<tr>
+<td>legato image </td><td>mtd3 </td><td>legato-image.wp85.ubi </td><td>* </td><td>legato as ubi (actual filesystem is squashfs, require fakeroot > 1.10.2 for generation) </td></tr>
+<tr>
+<td></td><td></td><td>legato-image.wp85.yaffs2 </td><td></td><td>legato as yaffs2 (not working) </td></tr>
+<tr>
+<td>packages </td><td></td><td>boot_wp85.cwe </td><td></td><td>package with bootloader </td></tr>
+<tr>
+<td></td><td></td><td>boot-yocto_wp85.cwe </td><td></td><td>package with bootloader + yocto (= kernel + rootfs) </td></tr>
+<tr>
+<td></td><td></td><td>boot-yocto-legato_wp85.cwe </td><td></td><td>package with bootloader + yocto (= kernel + rootfs) + legato </td></tr>
+<tr>
+<td></td><td></td><td>legato-image.wp85.cwe </td><td></td><td>package with legato </td></tr>
+<tr>
+<td></td><td></td><td>yocto_wp85.cwe </td><td></td><td>package with yocto (= kernel + rootfs) </td></tr>
+<tr>
+<td></td><td></td><td>yocto-legato_wp85.cwe </td><td></td><td>package with yocto (= kernel + rootfs) + legato </td></tr>
+</table>
+<h1><a class="anchor" id="getstartedYoctoLinux_prebuiltYoctoImages"></a>
+Pre-built Yocto Image</h1>
+<p>The prebuilt directory contains a kernel and root file system that can be built using the command below. It's the same as what's flashed on the device, and can be used to return to a known state.</p>
+<ul>
+<li><b>kernel</b> - kernel image</li>
+<li><b>rootfs</b> - smallish root file system ready for basic development.</li>
+</ul>
+<p>Instructions on how to flash these images to the device are given in the file README.bsp.</p>
+<h1><a class="anchor" id="getstartedYoctoLinux_rebuildYoctoImages"></a>
+Rebuild Yocto Image</h1>
+<p>Instructions for rebuilding the image are contained in the file Legato-Yocto1_6/meta-swi-extras/README.build</p>
+<p>Running the build script with no arguments will print out the help message. There is also a file called <code>stdbuild.sh</code> to build the images with common options. This can take a long time the first time you run it. Once the build is complete, you'll find new images in the directory: </p><div class="fragment"><div class="line">../build/tmp/deploy/images </div></div><!-- fragment --><p>Links are created at the end of the build to point to the latest kernel (kernel) and root file system (rootfs) </p><dl class="section warning"><dt>Warning</dt><dd>You can’t rebuild Yocto images on Ubuntu 13.10.</dd></dl>
+<h1><a class="anchor" id="getstartedYoctoLinux_flashYoctoImagesLin"></a>
+Linux Flash Yocto</h1>
+<p>You can flash the Yocto images on Linux;, the device must be in <em>fastboot</em> mode. From the shell prompt on the device run: </p><div class="fragment"><div class="line">root@swi-mdm9x15:~# sys_reboot bootloader </div></div><!-- fragment --><p>After a few seconds, the device will enumerate as an Android Bootloader Device. You can test this on the development PC with:</p>
+<div class="fragment"><div class="line"> dave@devpc$ fastboot devices</div><div class="line">MDM9615</div></div><!-- fragment --><p>Then erase and rewrite the kernel and root filesystem partitions using the fastboot command (the partitions are called kernel and rootfs):</p>
+<div class="fragment"><div class="line">dave@devpc $ fastboot erase kernel</div><div class="line">...</div><div class="line">dave@devpc $ fastboot erase rootfs</div><div class="line">...</div><div class="line">dave@devpc $ fastboot flash kernel kernel</div><div class="line">...</div><div class="line">dave@devpc $ fastboot flash rootfs rootfs</div><div class="line">...</div><div class="line">dave@devpc $ fastboot reboot</div><div class="line">rebooting...</div><div class="line">finished. total time: 0.001s</div></div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>You have to use the micro-USB connection for fastboot</dd></dl>
+<h1><a class="anchor" id="getstartedYoctoLinux_custYoctoImages"></a>
+Custom Yocto Image</h1>
+<p>Because the Legato image is a Yocto-compliant BSP, there are many options for customizing.</p>
+<p>Here's the easy way to add some packages to the rootfs:</p>
+<div class="fragment"><div class="line">meta-swi-extras/meta-swi-bin/recipes/images/9615-cdp-sierra-image.inc </div></div><!-- fragment --><p>For more complex customizations, refer to the Yocto documentation.</p>
+<hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

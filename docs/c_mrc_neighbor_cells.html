@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Sample code for Neighboring Cells Information  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">Sample code for Neighboring Cells Information </h1> </div>
+</div><div class="contents">
+<div class="textblock"><div class="fragment"><div class="line"><span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> Testle_mrc_GetNeighboringCellsInfo()</div><div class="line">{</div><div class="line"> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> res;</div><div class="line"> <a class="code" href="le__mrc__interface_8h.html#a672ea94ad892bb95f43836b5fbd24188">le_mrc_NeighborCellsRef_t</a> ngbrRef;</div><div class="line"> <a class="code" href="le__mrc__interface_8h.html#a8fbb2523c254ba473a3f59efa452355e">le_mrc_CellInfoRef_t</a> cellRef;</div><div class="line">    uint32_t i = 0;</div><div class="line">    uint32_t cid = 0;</div><div class="line">    uint32_t lac = 0;</div><div class="line">    int32_t rxLevel = 0;</div><div class="line"> <a class="code" href="le__mrc__interface_8h.html#aaf23906c37ad59fb96a8a48f7fab5b43">le_mrc_Rat_t</a> rat = 0;</div><div class="line">    int32_t ecio = 0;</div><div class="line">    int32_t intraRsrp = 0;</div><div class="line">    int32_t intraRsrq = 0;</div><div class="line">    int32_t interRsrp = 0;</div><div class="line">    int32_t interRsrq = 0;</div><div class="line"></div><div class="line"> <a class="code" href="le__log_8h.html#a4ebab29f40ee8eaaa87205fe3f9aaa13">LE_INFO</a>(<span class="stringliteral">"Start Testle_mrc_GetNeighborCellsInfo"</span>);</div><div class="line"></div><div class="line">    ngbrRef = <a class="code" href="le__mrc__interface_8h.html#a8d44fe46e61f3399c5e0dd6002b042ae">le_mrc_GetNeighborCellsInfo</a>();</div><div class="line"> <a class="code" href="le__log_8h.html#ac0dbbef91dc0fed449d0092ff0557b39">LE_ASSERT</a>(ngbrRef);</div><div class="line"></div><div class="line"> <span class="keywordflow">if</span> (ngbrRef)</div><div class="line">    {</div><div class="line">        i = 0;</div><div class="line"></div><div class="line">        cellRef = <a class="code" href="le__mrc__interface_8h.html#ab50724fd74818d71da1dfcd2217dd795">le_mrc_GetFirstNeighborCellInfo</a>(ngbrRef);</div><div class="line"> <a class="code" href="le__log_8h.html#ac0dbbef91dc0fed449d0092ff0557b39">LE_ASSERT</a>(cellRef);</div><div class="line">        cid = <a class="code" href="le__mrc__interface_8h.html#abdbc94e474235417d8610e2eb95558eb">le_mrc_GetNeighborCellId</a>(cellRef);</div><div class="line">        lac = <a class="code" href="le__mrc__interface_8h.html#a70ba0ca70367bc673a6bca1e246bb88f">le_mrc_GetNeighborCellLocAreaCode</a>(cellRef);</div><div class="line">        rxLevel = <a class="code" href="le__mrc__interface_8h.html#aeae116235802afd041afd9df009642aa">le_mrc_GetNeighborCellRxLevel</a>(cellRef);</div><div class="line">        rat = <a class="code" href="le__mrc__interface_8h.html#a5bb3e75b74260a9cee57247e1968a31f">le_mrc_GetNeighborCellRat</a>(cellRef);</div><div class="line"> <a class="code" href="le__log_8h.html#a4ebab29f40ee8eaaa87205fe3f9aaa13">LE_INFO</a>(<span class="stringliteral">"Cell #%d, cid.%d, lac.%d, rxLevel.%ddBm, RAT.%d"</span>, i, cid, lac, rxLevel, rat);</div><div class="line"> <span class="comment">// Specific values for UMTS and LTE</span></div><div class="line"> <span class="keywordflow">switch</span>(rat)</div><div class="line">        {</div><div class="line"> <span class="keywordflow">case</span> <a class="code" href="le__mrc__interface_8h.html#aaf23906c37ad59fb96a8a48f7fab5b43afe34c4f3a53aa717f5ecb94dd59bf728">LE_MRC_RAT_UMTS</a>:</div><div class="line">                ecio = <a class="code" href="le__mrc__interface_8h.html#a94e452e3d7063d3359dcbb97a31b984b">le_mrc_GetNeighborCellUmtsEcIo</a>(cellRef);</div><div class="line"> <a class="code" href="le__log_8h.html#a4ebab29f40ee8eaaa87205fe3f9aaa13">LE_INFO</a>(<span class="stringliteral">"Cell #%d, UMTS EcIo.%010.1fdB"</span>, i, ((<span class="keywordtype">double</span>)ecio/10));</div><div class="line"> <span class="keywordflow">break</span>;</div><div class="line"></div><div class="line"> <span class="keywordflow">case</span> <a class="code" href="le__mrc__interface_8h.html#aaf23906c37ad59fb96a8a48f7fab5b43aaf2b25a8ec75f9bacb51967f23247176">LE_MRC_RAT_LTE</a>:</div><div class="line">                res = <a class="code" href="le__mrc__interface_8h.html#a7754836120c34cd2610b9777bd56409f">le_mrc_GetNeighborCellLteIntraFreq</a>(cellRef, &intraRsrq, &intraRsrp);</div><div class="line"> <a class="code" href="le__log_8h.html#ac0dbbef91dc0fed449d0092ff0557b39">LE_ASSERT</a>(res == LE_OK);</div><div class="line">                res = <a class="code" href="le__mrc__interface_8h.html#a331545d4e396c513bba028db981c016b">le_mrc_GetNeighborCellLteInterFreq</a>(cellRef, &interRsrq, &interRsrp);</div><div class="line"> <a class="code" href="le__log_8h.html#ac0dbbef91dc0fed449d0092ff0557b39">LE_ASSERT</a>(res == LE_OK);</div><div class="line"></div><div class="line"> <a class="code" href="le__log_8h.html#a4ebab29f40ee8eaaa87205fe3f9aaa13">LE_INFO</a>(<span class="stringliteral">"Cell #%d, LTE Intra-RSRQ.%010.1fdB, Intra-RSRP.%010.1fdBm, "</span></div><div class="line"> <span class="stringliteral">"Inter-RSRQ.%010.1fdB, Inter-RSRP.%010.1fdBm"</span>,</div><div class="line">                        i, ((<span class="keywordtype">double</span>)intraRsrq/10), ((<span class="keywordtype">double</span>)intraRsrp/10),</div><div class="line">                        ((<span class="keywordtype">double</span>)interRsrq/10), ((<span class="keywordtype">double</span>)interRsrp/10));</div><div class="line"> <span class="keywordflow">break</span>;</div><div class="line"></div><div class="line"> <span class="keywordflow">default</span>:</div><div class="line"> <a class="code" href="le__log_8h.html#a4ebab29f40ee8eaaa87205fe3f9aaa13">LE_INFO</a>(<span class="stringliteral">"Nothing more to display"</span>);</div><div class="line"> <span class="keywordflow">break</span>;</div><div class="line">        }</div><div class="line"></div><div class="line"> <span class="keywordflow">while</span> ((cellRef = <a class="code" href="le__mrc__interface_8h.html#a0baede61d9b260a3ec83e3ab320d0715">le_mrc_GetNextNeighborCellInfo</a>(ngbrRef)) != NULL)</div><div class="line">        {</div><div class="line">            i++;</div><div class="line">            cid = <a class="code" href="le__mrc__interface_8h.html#abdbc94e474235417d8610e2eb95558eb">le_mrc_GetNeighborCellId</a>(cellRef);</div><div class="line">            lac = <a class="code" href="le__mrc__interface_8h.html#a70ba0ca70367bc673a6bca1e246bb88f">le_mrc_GetNeighborCellLocAreaCode</a>(cellRef);</div><div class="line">            rxLevel = <a class="code" href="le__mrc__interface_8h.html#aeae116235802afd041afd9df009642aa">le_mrc_GetNeighborCellRxLevel</a>(cellRef);</div><div class="line">            rat = <a class="code" href="le__mrc__interface_8h.html#a5bb3e75b74260a9cee57247e1968a31f">le_mrc_GetNeighborCellRat</a>(cellRef);</div><div class="line"> <a class="code" href="le__log_8h.html#a4ebab29f40ee8eaaa87205fe3f9aaa13">LE_INFO</a>(<span class="stringliteral">"Cell #%d, cid.%d, lac.%d, rxLevel.%ddBm, RAT.%d"</span>, i, cid, lac, rxLevel, rat);</div><div class="line"> <span class="comment">// Specific values for UMTS and LTE</span></div><div class="line"> <span class="keywordflow">switch</span>(rat)</div><div class="line">            {</div><div class="line"> <span class="keywordflow">case</span> <a class="code" href="le__mrc__interface_8h.html#aaf23906c37ad59fb96a8a48f7fab5b43afe34c4f3a53aa717f5ecb94dd59bf728">LE_MRC_RAT_UMTS</a>:</div><div class="line">                    ecio = <a class="code" href="le__mrc__interface_8h.html#a94e452e3d7063d3359dcbb97a31b984b">le_mrc_GetNeighborCellUmtsEcIo</a>(cellRef);</div><div class="line"> <a class="code" href="le__log_8h.html#a4ebab29f40ee8eaaa87205fe3f9aaa13">LE_INFO</a>(<span class="stringliteral">"Cell #%d, UMTS EcIo.%010.1fdB"</span>, i, ((<span class="keywordtype">double</span>)ecio/10));</div><div class="line"> <span class="keywordflow">break</span>;</div><div class="line"></div><div class="line"> <span class="keywordflow">case</span> <a class="code" href="le__mrc__interface_8h.html#aaf23906c37ad59fb96a8a48f7fab5b43aaf2b25a8ec75f9bacb51967f23247176">LE_MRC_RAT_LTE</a>:</div><div class="line">                    res = <a class="code" href="le__mrc__interface_8h.html#a7754836120c34cd2610b9777bd56409f">le_mrc_GetNeighborCellLteIntraFreq</a>(cellRef, &intraRsrq, &intraRsrp);</div><div class="line"> <a class="code" href="le__log_8h.html#ac0dbbef91dc0fed449d0092ff0557b39">LE_ASSERT</a>(res == LE_OK);</div><div class="line">                    res = <a class="code" href="le__mrc__interface_8h.html#a331545d4e396c513bba028db981c016b">le_mrc_GetNeighborCellLteInterFreq</a>(cellRef, &interRsrq, &interRsrp);</div><div class="line"> <a class="code" href="le__log_8h.html#ac0dbbef91dc0fed449d0092ff0557b39">LE_ASSERT</a>(res == LE_OK);</div><div class="line"></div><div class="line"> <a class="code" href="le__log_8h.html#a4ebab29f40ee8eaaa87205fe3f9aaa13">LE_INFO</a>(<span class="stringliteral">"Cell #%d, LTE Intra-RSRQ.%010.1fdB, Intra-RSRP.%010.1fdBm, "</span></div><div class="line"> <span class="stringliteral">"Inter-RSRQ.%010.1fdB, Inter-RSRP.%010.1fdBm"</span>,</div><div class="line">                            i, ((<span class="keywordtype">double</span>)intraRsrq/10), ((<span class="keywordtype">double</span>)intraRsrp/10),</div><div class="line">                            ((<span class="keywordtype">double</span>)interRsrq/10), ((<span class="keywordtype">double</span>)interRsrp/10));</div><div class="line"> <span class="keywordflow">break</span>;</div><div class="line"></div><div class="line"> <span class="keywordflow">default</span>:</div><div class="line"> <a class="code" href="le__log_8h.html#a4ebab29f40ee8eaaa87205fe3f9aaa13">LE_INFO</a>(<span class="stringliteral">"Nothing more to display"</span>);</div><div class="line"> <span class="keywordflow">break</span>;</div><div class="line">            }</div><div class="line">        }</div><div class="line"></div><div class="line"> <a class="code" href="le__mrc__interface_8h.html#a101343359e8d36ab41180aede2891b07">le_mrc_DeleteNeighborCellsInfo</a>(ngbrRef);</div><div class="line">    }</div><div class="line">}</div></div><!-- fragment --></div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

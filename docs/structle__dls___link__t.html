@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>le_dls_Link_t Struct Reference - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Reference.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a href="build_apps_documentation.html">Documentation</a><a class="link-selected" href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="summary">
+<a href="#pub-attribs">Data Fields</a> </div>
+<div class="headertitle">
+<h1 class="title">le_dls_Link_t Struct Reference</h1> </div>
+</div><div class="contents">
+<p><code>#include <<a class="el" href="le__doubly_linked_list_8h_source.html">le_doublyLinkedList.h</a>></code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Data Fields</h2></td></tr>
+<tr class="memitem:aeb5c99f0b4fb15daefef9b81f04b98dc"><td align="right" class="memItemLeft" valign="top"><a class="anchor" id="aeb5c99f0b4fb15daefef9b81f04b98dc"></a>
+struct le_dls_Link * </td><td class="memItemRight" valign="bottom"><a class="el" href="structle__dls___link__t.html#aeb5c99f0b4fb15daefef9b81f04b98dc">nextPtr</a></td></tr>
+<tr class="memdesc:aeb5c99f0b4fb15daefef9b81f04b98dc"><td class="mdescLeft"> </td><td class="mdescRight">Next link pointer. <br /></td></tr>
+<tr class="separator:aeb5c99f0b4fb15daefef9b81f04b98dc"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:acf978c7d31cf7ab2aa0f7b36603f4a12"><td align="right" class="memItemLeft" valign="top"><a class="anchor" id="acf978c7d31cf7ab2aa0f7b36603f4a12"></a>
+struct le_dls_Link * </td><td class="memItemRight" valign="bottom"><a class="el" href="structle__dls___link__t.html#acf978c7d31cf7ab2aa0f7b36603f4a12">prevPtr</a></td></tr>
+<tr class="memdesc:acf978c7d31cf7ab2aa0f7b36603f4a12"><td class="mdescLeft"> </td><td class="mdescRight">Previous link pointer. <br /></td></tr>
+<tr class="separator:acf978c7d31cf7ab2aa0f7b36603f4a12"><td class="memSeparator" colspan="2"> </td></tr>
+</table>
+<a id="details" name="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This link object must be included in each user node. The node's link object is used to add the node to a list. A node may have multiple link objects which would allow the node to be part of multiple lists simultaneously. This link object must be initialized by assigning LE_DLS_LINK_INIT to it.</p>
+<dl class="section warning"><dt>Warning</dt><dd>The structure's content MUST NOT be accessed directly. </dd></dl>
+</div><hr />The documentation for this struct was generated from the following file:<ul>
+<li><a class="el" href="le__doubly_linked_list_8h_source.html">le_doublyLinkedList.h</a></li>
+</ul>
+</div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

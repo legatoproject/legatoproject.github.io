@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Manage Device Power  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">Manage Device Power </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p>This topic summarizes how to manage device power. Information is provided on the Legato power management framework implementation with guidelines how to write power-efficient Legato apps.</p>
+<p>See <a class="el" href="basic_pwr_mgmt.html">Power Management</a> for general info on managing device power.</p>
+<p>Legato uses Linux power management techniques to minimize device power consumption:</p>
+<ul>
+<li>SUSPEND: system saves its state in memory, places all peripherals in low power mode, and puts the app processor into its deepest idle state.</li>
+<li>CPUIDLE: system estimates how long the app processor would be idle and puts it into appropriate low power state.</li>
+<li>CPUFREQ: system estimates how much the app processor is loaded and tunes the CPU frequency and voltage as necessary.</li>
+</ul>
+<p>While CPUIDLE and CPUFREQ seamlessly run in the O/S background, Legato apps have significant impact on the efficiency of system SUSPEND functionality.</p>
+<h1><a class="anchor" id="howToPowerMgmt_wakeupSources"></a>
+Wakeup Sources</h1>
+<p>Legato uses Linux wakeup sources (called wake locks in Android) to control the system power state. If a component with appropriate privileges wants to prevent the system from entering SUSPEND state, it acquires a wakeup source.</p>
+<p>If a component with appropriate privileges has no interest in keeping the system powered, it releases a wakeup source. Linux auto-sleep component monitors the use of all system-wide wakeup sources and triggers entry into SUSPEND state when none of the wakeup sources are held.</p>
+<p>Wakeup sources can roughly be classified as:</p>
+<ul>
+<li><b>Kernel wakeup sources</b> are hard-coded in kernel components and can only be acquired and released by kernel, module and driver code.</li>
+<li><b>User-space wakeup sources</b> are created on-demand, acquired and released by privileged app components. User apps write the wakeup source name to file <code>/sys/power/wake_lock</code> to create and acquire wakeup source, and write the same name to file <code>/sys/power/wake_unlock</code> to release the wakeup source.</li>
+</ul>
+<p>The Legato Power Manager is the only Legato component with the privilege to write to <code>/sys/power/wake_lock</code> and <code>/sys/power/wake_unlock</code> files. Other components that need control over system power state must have the Linux CAP_BLOCK_SUSPEND capability assigned, and perform the following Legato calls to request service from the Power Manager:</p>
+<p><a class="el" href="le__pm__interface_8h.html#a85038248bcddc8963f7280ffa53acf62">le_pm_NewWakeupSource()</a> create a wakeup source with a particular tag,</p>
+<p><a class="el" href="le__pm__interface_8h.html#a6be9b6c443c506b0ce29da79e53e2534">le_pm_StayAwake()</a> acquire a wakeup source, and</p>
+<p><a class="el" href="le__pm__interface_8h.html#a2ffb1fb0d165604226a9df35360080ea">le_pm_Relax()</a> release a wakeup source.</p>
+<p>When the Power Manager receives a request from another component via <a class="el" href="le__pm__interface_8h.html#a85038248bcddc8963f7280ffa53acf62">le_pm_NewWakeupSource()</a>, it'll prefix the requested tag with string <code>legato_</code> and post-fix it with the requestor’s process ID resulting in the wakeup source name format </p><pre class="fragment">legato_<tag>_<process-id> </pre><p>This name format allows for easy traceability of wakeup sources. The process ID refers to a particular Legato app and the tag refers to a particular wakeup source within that app.</p>
+<p>A wakeup source using this name is then created on behalf of the requesting component and a reference to the wakeup source is passed back to the requestor to use it in <a class="el" href="le__pm__interface_8h.html#a6be9b6c443c506b0ce29da79e53e2534">le_pm_StayAwake()</a> and <a class="el" href="le__pm__interface_8h.html#a2ffb1fb0d165604226a9df35360080ea">le_pm_Relax()</a> calls.</p>
+<p>Stale wakeup sources are automatically released by the Power Manager when their requestor exits and/or disconnects from the Power Manager.</p>
+<h1><a class="anchor" id="howToPowerMgmt_wakeupAndDeferrable"></a>
+Wakeup & Deferrable Events</h1>
+<p>Legato apps run in an event-driven model so the app remains idle until there's an event to be processed. Once an event occurs, Legato detects it and dispatches it to one of its threads for processing.</p>
+<p>From a power management aspect, there's no reason for the system to stay powered while it's idle. Also, events may not have the same processing importance, so Legato classifies them like this:</p>
+<ul>
+<li><b>Wakeup events</b>: require immediate attention so the system to must be powered.</li>
+<li><b>Deferrable events</b>: can wait to be processed until the system is powered for another reason.</li>
+</ul>
+<p>These event types are defined in the <code>fdMonitor</code> object. To classify the fdMonitor event as wakeup or deferrable, the app should call <a class="el" href="le__fd_monitor_8h.html#a66a93ae01f1e6faf1d0c7645752d4442">le_fdMonitor_SetDeferrable()</a> with the appropriate ‘isDeferrable’ flag. By default, if <a class="el" href="le__fd_monitor_8h.html#a66a93ae01f1e6faf1d0c7645752d4442">le_fdMonitor_SetDeferrable()</a> is not called; all events on that object will be assumed to be wakeup events.</p>
+<p>The underlying Linux mechanism of waiting for wakeup events from <code>fdMonitor’s</code> file descriptor uses epoll_wait() in conjunction with <code>EPOLLWAKEUP</code> flag. When an epoll_wait() event occurs on a file descriptor that has this flag is set, epoll_wait() will unblock the caller and an <b>eventpoll</b> kernel wakeup source will be signaled. This causes the system to stay awake until one of these conditions are met:</p>
+<ul>
+<li>another epoll_wait() call is made with the same file descriptor in the event list.</li>
+</ul>
+<p>or</p>
+<ul>
+<li>the file descriptor is closed.</li>
+</ul>
+<p>This way, callbacks for this <code>fdMonitor</code> event will be executed while <b>eventpoll</b> wakeup source is held. This guarantees the system stays awake until all callbacks are executed. If a Legato component needs to keep the system powered beyond the scope of a Legato callback, it should acquire its own wakeup source.</p>
+<p>This diagram shows a simple Legato app with process ID 25 that needs to keep the system powered between two Legato events using wakeup source tagged <b>lock</b>. Wakeup sources are handed off to achieve this functionality. The system remains powered from the moment the first event occurs until the second event is fully processed.</p>
+<div class="image">
+<img alt="wakeup_sources.png" src="wakeup_sources.png" />
+</div>
+<p>App components that subscribe to wakeup events must have CAP_BLOCK_SUSPEND Linux capability assigned. If not, all events will be assumed deferrable and calling <a class="el" href="le__fd_monitor_8h.html#a66a93ae01f1e6faf1d0c7645752d4442">le_fdMonitor_SetDeferrable()</a> will have no effect.</p>
+<h1><a class="anchor" id="howToPowerMgmt_clients"></a>
+Power Manager Clients</h1>
+<p>Using wakeup sources and EPOLLWAKEUP provides a simple programming model to write Power Manager clients. Here are some guidelines:</p>
+<ul>
+<li>Make sure that CAP_BLOCK_SUSPEND capability is assigned to the client. Client components usually run sandboxed and unless this capability is not explicitly assigned, they will not be able to control system power state.</li>
+<li>Don't acquire wakeup sources if you just need to process an event callback. In this callback, the system will stay powered due to the <b>eventpoll</b> wakeup source.</li>
+<li>Acquire a wakeup source if system processing occurs outside a Legato callback. A typical use case is e.g. composing and sending a text message: a Legato callback won't be invoked until the message is submitted and hence the message composition operation may be interrupted by system sleep if unprotected by a wakeup source.</li>
+<li>Acquire a wakeup source if the system needs to stay awake monitoring a state transition. State transition events may typically be handled in a callback, but if the system needs to stay powered across multiple states, a wakeup source is required.</li>
+</ul>
+<h1><a class="anchor" id="howToPowerMgmt_troubleshooting"></a>
+Troubleshooting</h1>
+<h4>Problem </h4>
+<p><b>System doesn't suspend. </b></p>
+<p><em>Probable</em> <em>cause</em> </p>
+<p>A wakeup source is being held <br />
+</p>
+<p><em>Test</em> </p>
+<p>Dump contents of /sys/kernel/debug/wakeup_sources to find the fields that have a non-zero active_since field. Also dump contents of <code>/sys/power/wake_lock</code> to find active user-space wakeup sources. <br />
+</p>
+<p><em>Command</em> </p>
+<pre class="fragment"> cat /sys/kernel/debug/wakeup_sources |sed -e s/"^       "/"unnamed"/ | awk '{print $6 "\t" $1}' | grep -v "^0" |sort –n
+ cat /sys/power/wake_lock
+</pre><h4>Problem </h4>
+<p><b>System perpetually suspends and resumes. </b></p>
+<p><em>Probable</em> <em>cause</em> </p>
+<p>Interrupt is constantly triggered.</p>
+<p><em>Test</em> </p>
+<p>Dump contents of <code>/proc/interrupts</code> to find the IRQ that's constantly incrementing.</p>
+<p><em>Command</em> </p>
+<p><code>cat</code> /proc/interrupts</p>
+<h4>Problem </h4>
+<p><b>System doesn't resume. </b></p>
+<p><em>Probable</em> <em>cause</em> </p>
+<p>Wakeup interrupts aren't configured.</p>
+<p><em>Test</em> </p>
+<p>Dump contents of all</p><pre class="fragment">/sys/devices/*/power/wakeup </pre><p> files and check which devices have wakeup interrupts enabled.</p>
+<p><em>Command</em> </p>
+<pre class="fragment">find /sys/devices –name wakeup –exec cat “{}” “;” -print </pre><hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

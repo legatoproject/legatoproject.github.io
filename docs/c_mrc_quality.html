@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Sample code for Signal Quality  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">Sample code for Signal Quality </h1> </div>
+</div><div class="contents">
+<div class="textblock"><div class="fragment"><div class="line"><span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> Testle_mrc_GetStateAndQual()</div><div class="line">{</div><div class="line"> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a>           res;</div><div class="line"> <a class="code" href="le__mrc__interface_8h.html#ae2877a1e1252ac79e6c9cae3d3c25a61">le_mrc_NetRegState_t</a>  state;</div><div class="line">    uint32_t              quality;</div><div class="line"></div><div class="line">    res = <a class="code" href="le__mrc__interface_8h.html#a4f11e27862fef384c0023f5b538e543d">le_mrc_GetNetRegState</a>(&state);</div><div class="line"> <a class="code" href="le__log_8h.html#ac0dbbef91dc0fed449d0092ff0557b39">LE_ASSERT</a>(res == LE_OK);</div><div class="line"> <span class="keywordflow">if</span> (res == LE_OK)</div><div class="line">    {</div><div class="line"> <a class="code" href="le__log_8h.html#ac0dbbef91dc0fed449d0092ff0557b39">LE_ASSERT</a>((state>=<a class="code" href="le__mrc__interface_8h.html#ae2877a1e1252ac79e6c9cae3d3c25a61affdd881b043ba92f868ffef52b0b9124">LE_MRC_REG_NONE</a>) && (state<=<a class="code" href="le__mrc__interface_8h.html#ae2877a1e1252ac79e6c9cae3d3c25a61acdba928b7dfb851adfa0211acccabb65">LE_MRC_REG_UNKNOWN</a>));</div><div class="line">    }</div><div class="line"></div><div class="line">    res = <a class="code" href="le__mrc__interface_8h.html#a717aa0f4e4dc9a83b6adc2f26f3f0258">le_mrc_GetSignalQual</a>(&quality);</div><div class="line"> <a class="code" href="le__log_8h.html#ac0dbbef91dc0fed449d0092ff0557b39">LE_ASSERT</a>(res == LE_OK);</div><div class="line"> <span class="keywordflow">if</span> (res == LE_OK)</div><div class="line">    {</div><div class="line"> <a class="code" href="le__log_8h.html#ac0dbbef91dc0fed449d0092ff0557b39">LE_ASSERT</a>((quality>=0) && (quality<=5));</div><div class="line">    }</div><div class="line">}</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> Testle_mrc_GetSignalMetrics()</div><div class="line">{</div><div class="line"> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a>   res;</div><div class="line"> <a class="code" href="le__mrc__interface_8h.html#aaf23906c37ad59fb96a8a48f7fab5b43">le_mrc_Rat_t</a>  rat;</div><div class="line">    int32_t rxLevel = 0;</div><div class="line">    uint32_t er = 0;</div><div class="line">    int32_t ecio = 0;</div><div class="line">    int32_t rscp = 0;</div><div class="line">    int32_t sinr = 0;</div><div class="line">    int32_t rsrq = 0;</div><div class="line">    int32_t rsrp = 0;</div><div class="line">    int32_t snr = 0;</div><div class="line">    int32_t io = 0;</div><div class="line"></div><div class="line"> <a class="code" href="le__mrc__interface_8h.html#a6ad5afb123492b2e249f3ecd414d6e83">le_mrc_MetricsRef_t</a> metricsRef = <a class="code" href="le__mrc__interface_8h.html#ad3662723a7ed47cf45d9a2eaaa1fb16e">le_mrc_MeasureSignalMetrics</a>();</div><div class="line"> <a class="code" href="le__log_8h.html#ac0dbbef91dc0fed449d0092ff0557b39">LE_ASSERT</a>(metricsRef != NULL);</div><div class="line"></div><div class="line">    rat = <a class="code" href="le__mrc__interface_8h.html#a5564bace31c937bcef096e597f33d3a4">le_mrc_GetRatOfSignalMetrics</a>(metricsRef);</div><div class="line"> <a class="code" href="le__log_8h.html#a4ebab29f40ee8eaaa87205fe3f9aaa13">LE_INFO</a>(<span class="stringliteral">"RAT of signal metrics is %d"</span>,rat);</div><div class="line"> <span class="keywordflow">switch</span>(rat)</div><div class="line">    {</div><div class="line"> <span class="keywordflow">case</span> <a class="code" href="le__mrc__interface_8h.html#aaf23906c37ad59fb96a8a48f7fab5b43ae19505d98b78ac22398bce06605dd1a4">LE_MRC_RAT_GSM</a>:</div><div class="line">            res = <a class="code" href="le__mrc__interface_8h.html#a9d7243b29bf4c705c4eba83fa3799582">le_mrc_GetGsmSignalMetrics</a>(metricsRef, &rxLevel, &er);</div><div class="line"> <a class="code" href="le__log_8h.html#ac0dbbef91dc0fed449d0092ff0557b39">LE_ASSERT</a>(res == LE_OK);</div><div class="line"> <a class="code" href="le__log_8h.html#a4ebab29f40ee8eaaa87205fe3f9aaa13">LE_INFO</a>(<span class="stringliteral">"GSM metrics rxLevel.%ddBm, er.%d"</span>, rxLevel, er);</div><div class="line"> <span class="keywordflow">break</span>;</div><div class="line"></div><div class="line"> <span class="keywordflow">case</span> <a class="code" href="le__mrc__interface_8h.html#aaf23906c37ad59fb96a8a48f7fab5b43afe34c4f3a53aa717f5ecb94dd59bf728">LE_MRC_RAT_UMTS</a>:</div><div class="line">            res = <a class="code" href="le__mrc__interface_8h.html#a456648564abfc8e9711b60a5d8bddc9b">le_mrc_GetUmtsSignalMetrics</a>(metricsRef, &rxLevel, &er, &ecio, &rscp, &sinr);</div><div class="line"> <a class="code" href="le__log_8h.html#ac0dbbef91dc0fed449d0092ff0557b39">LE_ASSERT</a>(res == LE_OK);</div><div class="line"> <a class="code" href="le__log_8h.html#a4ebab29f40ee8eaaa87205fe3f9aaa13">LE_INFO</a>(<span class="stringliteral">"UMTS metrics rxLevel.%ddBm, er.%d, ecio.%010.1fdB, rscp.%ddBm, sinr.%ddB"</span>,</div><div class="line">                    rxLevel, er, ((<span class="keywordtype">double</span>)ecio/10), rscp, sinr);</div><div class="line"> <span class="keywordflow">break</span>;</div><div class="line"></div><div class="line"> <span class="keywordflow">case</span> <a class="code" href="le__mrc__interface_8h.html#aaf23906c37ad59fb96a8a48f7fab5b43aaf2b25a8ec75f9bacb51967f23247176">LE_MRC_RAT_LTE</a>:</div><div class="line">            res = <a class="code" href="le__mrc__interface_8h.html#a030880c064afbf2686726fd2e538adfe">le_mrc_GetLteSignalMetrics</a>(metricsRef, &rxLevel, &er, &rsrq, &rsrp, &snr);</div><div class="line"> <a class="code" href="le__log_8h.html#ac0dbbef91dc0fed449d0092ff0557b39">LE_ASSERT</a>(res == LE_OK);</div><div class="line"> <a class="code" href="le__log_8h.html#a4ebab29f40ee8eaaa87205fe3f9aaa13">LE_INFO</a>(<span class="stringliteral">"LTE metrics rxLevel.%ddBm, er.%d, rsrq.%010.1fdB, "</span></div><div class="line"> <span class="stringliteral">"rsrp.%010.1fdBm, snr.%010.1fdB"</span>,</div><div class="line">                    rxLevel, er, ((<span class="keywordtype">double</span>)rsrq/10), ((<span class="keywordtype">double</span>)rsrp/10), ((<span class="keywordtype">double</span>)snr/10));</div><div class="line"> <span class="keywordflow">break</span>;</div><div class="line"></div><div class="line"> <span class="keywordflow">case</span> <a class="code" href="le__mrc__interface_8h.html#aaf23906c37ad59fb96a8a48f7fab5b43a1634a4ab71f130dd2aae46aa09ca0771">LE_MRC_RAT_CDMA</a>:</div><div class="line">            res = <a class="code" href="le__mrc__interface_8h.html#a09ff33b24fd01be18a145b2b3f1f579a">le_mrc_GetCdmaSignalMetrics</a>(metricsRef,  &rxLevel, &er, &ecio, &sinr, &io);</div><div class="line"> <a class="code" href="le__log_8h.html#ac0dbbef91dc0fed449d0092ff0557b39">LE_ASSERT</a>(res == LE_OK);</div><div class="line"> <a class="code" href="le__log_8h.html#a4ebab29f40ee8eaaa87205fe3f9aaa13">LE_INFO</a>(<span class="stringliteral">"CDMA metrics rxLevel.%ddBm, er.%d, ecio.%010.1fdB, "</span></div><div class="line"> <span class="stringliteral">"sinr.%ddB, io.%ddBm"</span>,</div><div class="line">                    rxLevel, er, ((<span class="keywordtype">double</span>)ecio/10), sinr, io);</div><div class="line"> <span class="keywordflow">break</span>;</div><div class="line"></div><div class="line"> <span class="keywordflow">default</span>:</div><div class="line"> <a class="code" href="le__log_8h.html#a54b4b07f5396e19a8d9fca74238f4795">LE_FATAL</a>(<span class="stringliteral">"Unknown RAT!"</span>);</div><div class="line"> <span class="keywordflow">break</span>;</div><div class="line">    }</div><div class="line"></div><div class="line"> <a class="code" href="le__mrc__interface_8h.html#a20addd98ee6cb07f9ee1a45be01b5203">le_mrc_DeleteSignalMetrics</a>(metricsRef);</div><div class="line">}</div></div><!-- fragment --></div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

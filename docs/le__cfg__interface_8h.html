@@ -1,0 +1,1594 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>le_cfg_interface.h File Reference - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Reference.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a href="build_apps_documentation.html">Documentation</a><a class="link-selected" href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="summary">
+<a href="#define-members">Macros</a> |
+<a href="#typedef-members">Typedefs</a> |
+<a href="#enum-members">Enumerations</a> |
+<a href="#func-members">Functions</a> </div>
+<div class="headertitle">
+<h1 class="title">le_cfg_interface.h File Reference</h1> </div>
+</div><div class="contents">
+<div class="textblock"><code>#include "<a class="el" href="legato_8h_source.html">legato.h</a>"</code><br />
+</div>
+<p><a href="le__cfg__interface_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a883b19e65e43b6f7ab2e1e31f0e88572"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__cfg__interface_8h.html#a883b19e65e43b6f7ab2e1e31f0e88572">LE_CFG_STR_LEN</a>   511</td></tr>
+<tr class="separator:a883b19e65e43b6f7ab2e1e31f0e88572"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aea00ee500b7beccc4bf46ab637190a55"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__cfg__interface_8h.html#aea00ee500b7beccc4bf46ab637190a55">LE_CFG_STR_LEN_BYTES</a>   512</td></tr>
+<tr class="separator:aea00ee500b7beccc4bf46ab637190a55"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a3967baad29e54db0f06459c38696e064"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__cfg__interface_8h.html#a3967baad29e54db0f06459c38696e064">LE_CFG_NAME_LEN</a>   63</td></tr>
+<tr class="separator:a3967baad29e54db0f06459c38696e064"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a28ddb1ec9647e834325a62fbe82c6a85"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__cfg__interface_8h.html#a28ddb1ec9647e834325a62fbe82c6a85">LE_CFG_NAME_LEN_BYTES</a>   64</td></tr>
+<tr class="separator:a28ddb1ec9647e834325a62fbe82c6a85"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a646829934bb23a878e19ade2c3e01eba"><td align="right" class="memItemLeft" valign="top">typedef struct le_cfg_Iterator * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a></td></tr>
+<tr class="separator:a646829934bb23a878e19ade2c3e01eba"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ad02e652d8ea74b6e8ebb8125190e5244"><td align="right" class="memItemLeft" valign="top">typedef struct le_cfg_ChangeHandler * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__cfg__interface_8h.html#ad02e652d8ea74b6e8ebb8125190e5244">le_cfg_ChangeHandlerRef_t</a></td></tr>
+<tr class="separator:ad02e652d8ea74b6e8ebb8125190e5244"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ac9b4508a0faa6a5d91a4bace0b8976c0"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__cfg__interface_8h.html#ac9b4508a0faa6a5d91a4bace0b8976c0">le_cfg_ChangeHandlerFunc_t</a>) (void *contextPtr)</td></tr>
+<tr class="separator:ac9b4508a0faa6a5d91a4bace0b8976c0"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a29c8480b3310d1235487d7ea96d8b57d"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__cfg__interface_8h.html#a29c8480b3310d1235487d7ea96d8b57d">le_cfg_nodeType_t</a> { <br />
+  <a class="el" href="le__cfg__interface_8h.html#a29c8480b3310d1235487d7ea96d8b57da545f7e9317020efc82e268c2c08b7e4b">LE_CFG_TYPE_EMPTY</a>, 
+<a class="el" href="le__cfg__interface_8h.html#a29c8480b3310d1235487d7ea96d8b57da7f65f22b4f8a8baca2f3ac4087a09730">LE_CFG_TYPE_STRING</a>, 
+<a class="el" href="le__cfg__interface_8h.html#a29c8480b3310d1235487d7ea96d8b57dafe64ea58a518cef6fbeefe9ee8fea944">LE_CFG_TYPE_BOOL</a>, 
+<a class="el" href="le__cfg__interface_8h.html#a29c8480b3310d1235487d7ea96d8b57dae15135ce3aea7925fba96a16eefd7d01">LE_CFG_TYPE_INT</a>, 
+<br />
+  <a class="el" href="le__cfg__interface_8h.html#a29c8480b3310d1235487d7ea96d8b57da51f9f84c78b8ce049f85f28da0d3596b">LE_CFG_TYPE_FLOAT</a>, 
+<a class="el" href="le__cfg__interface_8h.html#a29c8480b3310d1235487d7ea96d8b57dab720da857c99845f5fac9499b3bfed4e">LE_CFG_TYPE_STEM</a>, 
+<a class="el" href="le__cfg__interface_8h.html#a29c8480b3310d1235487d7ea96d8b57da2eaa4a8ac9d9b37b4cdd9b43c0168d17">LE_CFG_TYPE_DOESNT_EXIST</a>
+<br />
+ }</td></tr>
+<tr class="separator:a29c8480b3310d1235487d7ea96d8b57d"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:afbcfae9ac989c5cb82d1cf72a32a7079"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__cfg__interface_8h.html#afbcfae9ac989c5cb82d1cf72a32a7079">le_cfg_ConnectService</a> (void)</td></tr>
+<tr class="separator:afbcfae9ac989c5cb82d1cf72a32a7079"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a9a772505f5bd6d7e68ace12aa36e51d9"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__cfg__interface_8h.html#a9a772505f5bd6d7e68ace12aa36e51d9">le_cfg_DisconnectService</a> (void)</td></tr>
+<tr class="separator:a9a772505f5bd6d7e68ace12aa36e51d9"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aa766bff3a3ddbd2769b903fc56f6d9d2"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__cfg__interface_8h.html#aa766bff3a3ddbd2769b903fc56f6d9d2">le_cfg_CreateReadTxn</a> (const char *basePath)</td></tr>
+<tr class="separator:aa766bff3a3ddbd2769b903fc56f6d9d2"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a9c817e5edf0df97034fdc432ce8d0f18"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__cfg__interface_8h.html#a9c817e5edf0df97034fdc432ce8d0f18">le_cfg_CreateWriteTxn</a> (const char *basePath)</td></tr>
+<tr class="separator:a9c817e5edf0df97034fdc432ce8d0f18"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a9825af4d2e007d82f4385ee444a348ef"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__cfg__interface_8h.html#a9825af4d2e007d82f4385ee444a348ef">le_cfg_CommitTxn</a> (<a class="el" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a> iteratorRef)</td></tr>
+<tr class="separator:a9825af4d2e007d82f4385ee444a348ef"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:af5f10497ed85d2e647b41ca460228483"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__cfg__interface_8h.html#af5f10497ed85d2e647b41ca460228483">le_cfg_CancelTxn</a> (<a class="el" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a> iteratorRef)</td></tr>
+<tr class="separator:af5f10497ed85d2e647b41ca460228483"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a3a8519b471bc6f4a5fea3716636dc607"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__cfg__interface_8h.html#a3a8519b471bc6f4a5fea3716636dc607">le_cfg_GoToNode</a> (<a class="el" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a> iteratorRef, const char *newPath)</td></tr>
+<tr class="separator:a3a8519b471bc6f4a5fea3716636dc607"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ad7d7debfc7c78b3a8b3908fcbc1a5966"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__cfg__interface_8h.html#ad7d7debfc7c78b3a8b3908fcbc1a5966">le_cfg_GoToParent</a> (<a class="el" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a> iteratorRef)</td></tr>
+<tr class="separator:ad7d7debfc7c78b3a8b3908fcbc1a5966"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:abb7ab8d52ca9bf5e0977341e18740079"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__cfg__interface_8h.html#abb7ab8d52ca9bf5e0977341e18740079">le_cfg_GoToFirstChild</a> (<a class="el" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a> iteratorRef)</td></tr>
+<tr class="separator:abb7ab8d52ca9bf5e0977341e18740079"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aafcdb4bf55c14d960b7d16bb05af4bbe"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__cfg__interface_8h.html#aafcdb4bf55c14d960b7d16bb05af4bbe">le_cfg_GoToNextSibling</a> (<a class="el" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a> iteratorRef)</td></tr>
+<tr class="separator:aafcdb4bf55c14d960b7d16bb05af4bbe"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ab0c67c75671a9d003fa639b5f2ada51f"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__cfg__interface_8h.html#ab0c67c75671a9d003fa639b5f2ada51f">le_cfg_GetPath</a> (<a class="el" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a> iteratorRef, const char *path, char *pathBuffer, size_t pathBufferNumElements)</td></tr>
+<tr class="separator:ab0c67c75671a9d003fa639b5f2ada51f"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a31df1f796da5a18a74de1110c549d6f8"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__cfg__interface_8h.html#a29c8480b3310d1235487d7ea96d8b57d">le_cfg_nodeType_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__cfg__interface_8h.html#a31df1f796da5a18a74de1110c549d6f8">le_cfg_GetNodeType</a> (<a class="el" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a> iteratorRef, const char *path)</td></tr>
+<tr class="separator:a31df1f796da5a18a74de1110c549d6f8"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a02c84283bc9c62a490e9c7cf3f3d5598"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__cfg__interface_8h.html#a02c84283bc9c62a490e9c7cf3f3d5598">le_cfg_GetNodeName</a> (<a class="el" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a> iteratorRef, const char *path, char *name, size_t nameNumElements)</td></tr>
+<tr class="separator:a02c84283bc9c62a490e9c7cf3f3d5598"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aa9a19e022625fc2c4a2a39e95ac60936"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__cfg__interface_8h.html#ad02e652d8ea74b6e8ebb8125190e5244">le_cfg_ChangeHandlerRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__cfg__interface_8h.html#aa9a19e022625fc2c4a2a39e95ac60936">le_cfg_AddChangeHandler</a> (const char *newPath, <a class="el" href="le__cfg__interface_8h.html#ac9b4508a0faa6a5d91a4bace0b8976c0">le_cfg_ChangeHandlerFunc_t</a> handlerPtr, void *contextPtr)</td></tr>
+<tr class="separator:aa9a19e022625fc2c4a2a39e95ac60936"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a17fa5e63dd1f5a2b7b66c92a76f8c98a"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__cfg__interface_8h.html#a17fa5e63dd1f5a2b7b66c92a76f8c98a">le_cfg_RemoveChangeHandler</a> (<a class="el" href="le__cfg__interface_8h.html#ad02e652d8ea74b6e8ebb8125190e5244">le_cfg_ChangeHandlerRef_t</a> addHandlerRef)</td></tr>
+<tr class="separator:a17fa5e63dd1f5a2b7b66c92a76f8c98a"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a30e8684f89c8e05ca489bc897ab378b9"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__cfg__interface_8h.html#a30e8684f89c8e05ca489bc897ab378b9">le_cfg_DeleteNode</a> (<a class="el" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a> iteratorRef, const char *path)</td></tr>
+<tr class="separator:a30e8684f89c8e05ca489bc897ab378b9"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a46db89aea45bb59128fba40bde081833"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="le__cfg__interface_8h.html#a46db89aea45bb59128fba40bde081833">le_cfg_IsEmpty</a> (<a class="el" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a> iteratorRef, const char *path)</td></tr>
+<tr class="separator:a46db89aea45bb59128fba40bde081833"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a008c17822f0af91639b1fbb257be48ea"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__cfg__interface_8h.html#a008c17822f0af91639b1fbb257be48ea">le_cfg_SetEmpty</a> (<a class="el" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a> iteratorRef, const char *path)</td></tr>
+<tr class="separator:a008c17822f0af91639b1fbb257be48ea"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a33d4fbe741e6a6ff5377f60e8754d1e4"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="le__cfg__interface_8h.html#a33d4fbe741e6a6ff5377f60e8754d1e4">le_cfg_NodeExists</a> (<a class="el" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a> iteratorRef, const char *path)</td></tr>
+<tr class="separator:a33d4fbe741e6a6ff5377f60e8754d1e4"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aabb24e6c90309be03ce5a285d5849658"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__cfg__interface_8h.html#aabb24e6c90309be03ce5a285d5849658">le_cfg_GetString</a> (<a class="el" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a> iteratorRef, const char *path, char *value, size_t valueNumElements, const char *defaultValue)</td></tr>
+<tr class="separator:aabb24e6c90309be03ce5a285d5849658"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a741ade500cc7b10070e45065740d6980"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__cfg__interface_8h.html#a741ade500cc7b10070e45065740d6980">le_cfg_SetString</a> (<a class="el" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a> iteratorRef, const char *path, const char *value)</td></tr>
+<tr class="separator:a741ade500cc7b10070e45065740d6980"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ada4b5ea73868f3d00701d7e76c2e6f38"><td align="right" class="memItemLeft" valign="top">int32_t </td><td class="memItemRight" valign="bottom"><a class="el" href="le__cfg__interface_8h.html#ada4b5ea73868f3d00701d7e76c2e6f38">le_cfg_GetInt</a> (<a class="el" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a> iteratorRef, const char *path, int32_t defaultValue)</td></tr>
+<tr class="separator:ada4b5ea73868f3d00701d7e76c2e6f38"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a46cb4c6dd1068cb07128ca637667bb77"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__cfg__interface_8h.html#a46cb4c6dd1068cb07128ca637667bb77">le_cfg_SetInt</a> (<a class="el" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a> iteratorRef, const char *path, int32_t value)</td></tr>
+<tr class="separator:a46cb4c6dd1068cb07128ca637667bb77"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aeb213c2fbf840931ec8c1427ef6b317e"><td align="right" class="memItemLeft" valign="top">double </td><td class="memItemRight" valign="bottom"><a class="el" href="le__cfg__interface_8h.html#aeb213c2fbf840931ec8c1427ef6b317e">le_cfg_GetFloat</a> (<a class="el" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a> iteratorRef, const char *path, double defaultValue)</td></tr>
+<tr class="separator:aeb213c2fbf840931ec8c1427ef6b317e"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aab1e755f81ef2e4bcbc6d57ea558a7a5"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__cfg__interface_8h.html#aab1e755f81ef2e4bcbc6d57ea558a7a5">le_cfg_SetFloat</a> (<a class="el" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a> iteratorRef, const char *path, double value)</td></tr>
+<tr class="separator:aab1e755f81ef2e4bcbc6d57ea558a7a5"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aa3898fcb0d62b03c9a238d36b42d7a63"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="le__cfg__interface_8h.html#aa3898fcb0d62b03c9a238d36b42d7a63">le_cfg_GetBool</a> (<a class="el" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a> iteratorRef, const char *path, bool defaultValue)</td></tr>
+<tr class="separator:aa3898fcb0d62b03c9a238d36b42d7a63"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a1b760f2ef78e9c12dc207a5cbe333c99"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__cfg__interface_8h.html#a1b760f2ef78e9c12dc207a5cbe333c99">le_cfg_SetBool</a> (<a class="el" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a> iteratorRef, const char *path, bool value)</td></tr>
+<tr class="separator:a1b760f2ef78e9c12dc207a5cbe333c99"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a95f44c1e0d16eb48475465af63300a75"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__cfg__interface_8h.html#a95f44c1e0d16eb48475465af63300a75">le_cfg_QuickDeleteNode</a> (const char *path)</td></tr>
+<tr class="separator:a95f44c1e0d16eb48475465af63300a75"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ae8fd42cad37a0a5d3ad8072b9571cc97"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__cfg__interface_8h.html#ae8fd42cad37a0a5d3ad8072b9571cc97">le_cfg_QuickSetEmpty</a> (const char *path)</td></tr>
+<tr class="separator:ae8fd42cad37a0a5d3ad8072b9571cc97"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a049b354def8c343930816fd79903e483"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__cfg__interface_8h.html#a049b354def8c343930816fd79903e483">le_cfg_QuickGetString</a> (const char *path, char *value, size_t valueNumElements, const char *defaultValue)</td></tr>
+<tr class="separator:a049b354def8c343930816fd79903e483"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aebf43c4763e9e9d9b305200ace67fdac"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__cfg__interface_8h.html#aebf43c4763e9e9d9b305200ace67fdac">le_cfg_QuickSetString</a> (const char *path, const char *value)</td></tr>
+<tr class="separator:aebf43c4763e9e9d9b305200ace67fdac"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a4503bb519a439f3de35d762668947c45"><td align="right" class="memItemLeft" valign="top">int32_t </td><td class="memItemRight" valign="bottom"><a class="el" href="le__cfg__interface_8h.html#a4503bb519a439f3de35d762668947c45">le_cfg_QuickGetInt</a> (const char *path, int32_t defaultValue)</td></tr>
+<tr class="separator:a4503bb519a439f3de35d762668947c45"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aca19ad4032442eb97171769e434d3a60"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__cfg__interface_8h.html#aca19ad4032442eb97171769e434d3a60">le_cfg_QuickSetInt</a> (const char *path, int32_t value)</td></tr>
+<tr class="separator:aca19ad4032442eb97171769e434d3a60"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:acf4ccdd3b7b18b971768db755b8273fc"><td align="right" class="memItemLeft" valign="top">double </td><td class="memItemRight" valign="bottom"><a class="el" href="le__cfg__interface_8h.html#acf4ccdd3b7b18b971768db755b8273fc">le_cfg_QuickGetFloat</a> (const char *path, double defaultValue)</td></tr>
+<tr class="separator:acf4ccdd3b7b18b971768db755b8273fc"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aea4e34e0d4384f3cf0bb1c3bd27d4133"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__cfg__interface_8h.html#aea4e34e0d4384f3cf0bb1c3bd27d4133">le_cfg_QuickSetFloat</a> (const char *path, double value)</td></tr>
+<tr class="separator:aea4e34e0d4384f3cf0bb1c3bd27d4133"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a256c22a1fbe25c69a96af37d388c6805"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="le__cfg__interface_8h.html#a256c22a1fbe25c69a96af37d388c6805">le_cfg_QuickGetBool</a> (const char *path, bool defaultValue)</td></tr>
+<tr class="separator:a256c22a1fbe25c69a96af37d388c6805"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ad8915472ac5e82a8d3942ae8203264f2"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__cfg__interface_8h.html#ad8915472ac5e82a8d3942ae8203264f2">le_cfg_QuickSetBool</a> (const char *path, bool value)</td></tr>
+<tr class="separator:ad8915472ac5e82a8d3942ae8203264f2"><td class="memSeparator" colspan="2"> </td></tr>
+</table>
+<a id="details" name="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Legato <a class="el" href="c_config.html">Config Tree API</a> include file.</p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="a3967baad29e54db0f06459c38696e064"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_CFG_NAME_LEN   63</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Allowed length of a node name. </p>
+</div>
+</div>
+<a class="anchor" id="a28ddb1ec9647e834325a62fbe82c6a85"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_CFG_NAME_LEN_BYTES   64</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>The node name length, including a trailing NULL. </p>
+</div>
+</div>
+<a class="anchor" id="a883b19e65e43b6f7ab2e1e31f0e88572"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_CFG_STR_LEN   511</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Length of the strings used by this API. </p>
+</div>
+</div>
+<a class="anchor" id="aea00ee500b7beccc4bf46ab637190a55"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_CFG_STR_LEN_BYTES   512</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Length of the strings used by this API, including the trailing NULL. </p>
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a class="anchor" id="ac9b4508a0faa6a5d91a4bace0b8976c0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef void(* le_cfg_ChangeHandlerFunc_t) (void *contextPtr)</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Handler for node change notifications.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramname">contextPtr</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ad02e652d8ea74b6e8ebb8125190e5244"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef struct le_cfg_ChangeHandler* <a class="el" href="le__cfg__interface_8h.html#ad02e652d8ea74b6e8ebb8125190e5244">le_cfg_ChangeHandlerRef_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Reference type used by Add/Remove functions for EVENT 'le_cfg_Change' </p>
+</div>
+</div>
+<a class="anchor" id="a646829934bb23a878e19ade2c3e01eba"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef struct le_cfg_Iterator* <a class="el" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Reference to a tree iterator object. </p>
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a class="anchor" id="a29c8480b3310d1235487d7ea96d8b57d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="le__cfg__interface_8h.html#a29c8480b3310d1235487d7ea96d8b57d">le_cfg_nodeType_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Identifies the type of node. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a29c8480b3310d1235487d7ea96d8b57da545f7e9317020efc82e268c2c08b7e4b"></a>LE_CFG_TYPE_EMPTY </td><td class="fielddoc">
+<p>A node with no value. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a29c8480b3310d1235487d7ea96d8b57da7f65f22b4f8a8baca2f3ac4087a09730"></a>LE_CFG_TYPE_STRING </td><td class="fielddoc">
+<p>A string encoded as utf8. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a29c8480b3310d1235487d7ea96d8b57dafe64ea58a518cef6fbeefe9ee8fea944"></a>LE_CFG_TYPE_BOOL </td><td class="fielddoc">
+<p>Boolean value. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a29c8480b3310d1235487d7ea96d8b57dae15135ce3aea7925fba96a16eefd7d01"></a>LE_CFG_TYPE_INT </td><td class="fielddoc">
+<p>Signed 32-bit. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a29c8480b3310d1235487d7ea96d8b57da51f9f84c78b8ce049f85f28da0d3596b"></a>LE_CFG_TYPE_FLOAT </td><td class="fielddoc">
+<p>64-bit floating point value. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a29c8480b3310d1235487d7ea96d8b57dab720da857c99845f5fac9499b3bfed4e"></a>LE_CFG_TYPE_STEM </td><td class="fielddoc">
+<p>Non-leaf node, this node is the parent of other nodes. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a29c8480b3310d1235487d7ea96d8b57da2eaa4a8ac9d9b37b4cdd9b43c0168d17"></a>LE_CFG_TYPE_DOESNT_EXIST </td><td class="fielddoc">
+<p>Node doesn't exist. </p>
+</td></tr>
+</table>
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="aa9a19e022625fc2c4a2a39e95ac60936"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__cfg__interface_8h.html#ad02e652d8ea74b6e8ebb8125190e5244">le_cfg_ChangeHandlerRef_t</a> le_cfg_AddChangeHandler </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>newPath</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="le__cfg__interface_8h.html#ac9b4508a0faa6a5d91a4bace0b8976c0">le_cfg_ChangeHandlerFunc_t</a> </td>
+<td class="paramname"><em>handlerPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">void * </td>
+<td class="paramname"><em>contextPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Add handler function for EVENT 'le_cfg_Change'</p>
+<p>This event provides information on changes to the given node object, or any of it's children, where a change could be either a read, write, create or delete operation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">newPath</td><td>Path to the object to watch. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">handlerPtr</td><td></td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">contextPtr</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="af5f10497ed85d2e647b41ca460228483"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_cfg_CancelTxn </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a> </td>
+<td class="paramname"><em>iteratorRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Close and free the given iterator object. If the iterator is a write iterator, the transaction will be canceled. If the iterator is a read iterator, the transaction will be closed.</p>
+<dl class="section note"><dt>Note</dt><dd>This operation will also delete the iterator object. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">iteratorRef</td><td>Iterator object to close. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a9825af4d2e007d82f4385ee444a348ef"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_cfg_CommitTxn </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a> </td>
+<td class="paramname"><em>iteratorRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Close the write iterator and commit the write transaction. This updates the config tree with all of the writes that occured using the iterator.</p>
+<dl class="section note"><dt>Note</dt><dd>This operation will also delete the iterator object. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">iteratorRef</td><td>Iterator object to commit. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="afbcfae9ac989c5cb82d1cf72a32a7079"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_cfg_ConnectService </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Connect the current client thread to the service providing this API.</p>
+<p>This function must be called before any other functions in this API. Normally, it's automatically called for the main thread, but must be explicitly called for other threads. For details, see <a class="el" href="api_files_c.html#apiFilesC_client">Client-specific Functions</a>.</p>
+<p>This function is created automatically. </p>
+</div>
+</div>
+<a class="anchor" id="aa766bff3a3ddbd2769b903fc56f6d9d2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a> le_cfg_CreateReadTxn </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>basePath</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Create a read transaction and open a new iterator for traversing the config tree.</p>
+<dl class="section note"><dt>Note</dt><dd>This action creates a read lock on the given tree, which will start a read-timeout. Once the read timeout expires, all active read iterators on that tree will be expired and the clients will be killed.</dd>
+<dd>
+A tree transaction is global to that tree; a long-held read transaction will block other user's write transactions from being comitted.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>This will return a newly created iterator reference. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">basePath</td><td>Path to the location to create the new iterator. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a9c817e5edf0df97034fdc432ce8d0f18"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a> le_cfg_CreateWriteTxn </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>basePath</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Create a write transaction and open a new iterator for both reading and writing.</p>
+<dl class="section note"><dt>Note</dt><dd>This action creates a write transaction. If the app holds the iterator for longer than the configured write transaction timeout, the iterator will cancel the transaction. Other reads will fail to return data, and all writes will be thrown away.</dd>
+<dd>
+A tree transaction is global to that tree; a long-held write transaction will block other user's write transactions from being started. Other trees in the system won't be affected.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>This will return a newly created iterator reference. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">basePath</td><td>Path to the location to create the new iterator. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a30e8684f89c8e05ca489bc897ab378b9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_cfg_DeleteNode </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a> </td>
+<td class="paramname"><em>iteratorRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>path</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Delete the node specified by the path. If the node doesn't exist, nothing happens. All child nodes are also deleted.</p>
+<p>If the path is empty, the iterator's current node is deleted.</p>
+<p>Only valid during a write transaction. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">iteratorRef</td><td>Iterator to use as a basis for the transaction. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Path to the target node. Can be an absolute path, or a path relative from the iterator's current position. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a9a772505f5bd6d7e68ace12aa36e51d9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_cfg_DisconnectService </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Disconnect the current client thread from the service providing this API.</p>
+<p>Normally, this function doesn't need to be called. After this function is called, there's no longer a connection to the service, and the functions in this API can't be used. For details, see <a class="el" href="api_files_c.html#apiFilesC_client">Client-specific Functions</a>.</p>
+<p>This function is created automatically. </p>
+</div>
+</div>
+<a class="anchor" id="aa3898fcb0d62b03c9a238d36b42d7a63"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">bool le_cfg_GetBool </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a> </td>
+<td class="paramname"><em>iteratorRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>path</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">bool </td>
+<td class="paramname"><em>defaultValue</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Read a value from the tree as a boolean. If the node is empty or doesn't exist, the default value is returned. Default value is also returned if the node is a different type than expected.</p>
+<p>Valid for both read and write transactions.</p>
+<p>If the path is empty, the iterator's current node will be read. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">iteratorRef</td><td>Iterator to use as a basis for the transaction. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Path to the target node. Can be an absolute path, or a path relative from the iterator's current position. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">defaultValue</td><td>Default value to use if the original can't be read. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="aeb213c2fbf840931ec8c1427ef6b317e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">double le_cfg_GetFloat </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a> </td>
+<td class="paramname"><em>iteratorRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>path</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">double </td>
+<td class="paramname"><em>defaultValue</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Read a 64-bit floating point value from the config tree.</p>
+<p>If the value is an integer then the value will be promoted to a float. Otherwise, if the underlying value is not a float or integer, the default value will be returned.</p>
+<p>If the path is empty, the iterator's current node will be read.</p>
+<dl class="section note"><dt>Note</dt><dd>Floating point values will only be stored up to 6 digits of precision. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">iteratorRef</td><td>Iterator to use as a basis for the transaction. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Path to the target node. Can be an absolute path, or a path relative from the iterator's current position. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">defaultValue</td><td>Default value to use if the original can't be read. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ada4b5ea73868f3d00701d7e76c2e6f38"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">int32_t le_cfg_GetInt </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a> </td>
+<td class="paramname"><em>iteratorRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>path</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">int32_t </td>
+<td class="paramname"><em>defaultValue</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Read a signed integer value from the config tree.</p>
+<p>If the underlying value is not an integer, the default value will be returned instead. The default value is also returned if the node does not exist or if it's empty.</p>
+<p>If the value is a floating point value, then it will be rounded and returned as an integer.</p>
+<p>Valid for both read and write transactions.</p>
+<p>If the path is empty, the iterator's current node will be read. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">iteratorRef</td><td>Iterator to use as a basis for the transaction. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Path to the target node. Can be an absolute path, or a path relative from the iterator's current position. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">defaultValue</td><td>Default value to use if the original can't be read. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a02c84283bc9c62a490e9c7cf3f3d5598"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_cfg_GetNodeName </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a> </td>
+<td class="paramname"><em>iteratorRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>path</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">char * </td>
+<td class="paramname"><em>name</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>nameNumElements</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the name of the node where the iterator is currently pointing.</p>
+<dl class="section return"><dt>Returns</dt><dd>- LE_OK Read was completed successfully.<ul>
+<li>LE_OVERFLOW Supplied string buffer was not large enough to hold the value. </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">iteratorRef</td><td>Iterator object to use to read from the tree. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Path to the target node. Can be an absolute path, or a path relative from the iterator's current position. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">name</td><td>Read the name of the node object. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">nameNumElements</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a31df1f796da5a18a74de1110c549d6f8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__cfg__interface_8h.html#a29c8480b3310d1235487d7ea96d8b57d">le_cfg_nodeType_t</a> le_cfg_GetNodeType </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a> </td>
+<td class="paramname"><em>iteratorRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>path</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the type of node where the iterator is currently pointing.</p>
+<dl class="section return"><dt>Returns</dt><dd>le_cfg_nodeType_t value indicating the stored value. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">iteratorRef</td><td>Iterator object to use to read from the tree. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Path to the target node. Can be an absolute path, or a path relative from the iterator's current position. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ab0c67c75671a9d003fa639b5f2ada51f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_cfg_GetPath </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a> </td>
+<td class="paramname"><em>iteratorRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>path</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">char * </td>
+<td class="paramname"><em>pathBuffer</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>pathBufferNumElements</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get path to the node where the iterator is currently pointed.</p>
+<p>Assuming the following tree:</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span> baseNode/</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>   childA/</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>     valueA</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>     valueB</div></div><!-- fragment --><p>If the iterator was currently pointing at valueA, GetPath would return the following path:</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span> /baseNode/childA/valueA</div></div><!-- fragment --><p>Optionally, a path to another node can be supplied to this function. So, if the iterator is again on valueA and the relative path ".." is supplied then this function will return the following path:</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span> /baseNode/childA/</div></div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>- LE_OK - The write was completed successfully.<ul>
+<li>LE_OVERFLOW - The supplied string buffer was not large enough to hold the value. </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">iteratorRef</td><td>Iterator to move. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Path to the target node. Can be an absolute path, or a path relative from the iterator's current position. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">pathBuffer</td><td>Absolute path to the iterator's current node. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">pathBufferNumElements</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="aabb24e6c90309be03ce5a285d5849658"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_cfg_GetString </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a> </td>
+<td class="paramname"><em>iteratorRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>path</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">char * </td>
+<td class="paramname"><em>value</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>valueNumElements</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>defaultValue</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Read a string value from the config tree. If the value isn't a string, or if the node is empty or doesn't exist, the default value will be returned.</p>
+<p>Valid for both read and write transactions.</p>
+<p>If the path is empty, the iterator's current node will be read.</p>
+<dl class="section return"><dt>Returns</dt><dd>- LE_OK - Read was completed successfully.<ul>
+<li>LE_OVERFLOW - Supplied string buffer was not large enough to hold the value. </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">iteratorRef</td><td>Iterator to use as a basis for the transaction. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Path to the target node. Can be an absolute path, or a path relative from the iterator's current position. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">value</td><td>Buffer to write the value into. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">valueNumElements</td><td></td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">defaultValue</td><td>Default value to use if the original can't be read. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="abb7ab8d52ca9bf5e0977341e18740079"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_cfg_GoToFirstChild </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a> </td>
+<td class="paramname"><em>iteratorRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Move the iterator to the the first child of the node where the iterator is currently pointed.</p>
+<p>For read iterators without children, this function will fail. If the iterator is a write iterator, then a new node is automatically created. If this node or newly created children of this node are not written to, then this node will not persist even if the iterator is comitted.</p>
+<dl class="section return"><dt>Returns</dt><dd>Return code will be one of the following values: <pre class="fragment">    - LE_OK        - Move was completed successfully.
+    - LE_NOT_FOUND - The given node has no children.</pre> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">iteratorRef</td><td>Iterator object to move. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="aafcdb4bf55c14d960b7d16bb05af4bbe"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_cfg_GoToNextSibling </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a> </td>
+<td class="paramname"><em>iteratorRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Jump the iterator to the next child node of the current node. Assuming the following tree:</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span> baseNode/</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>   childA/</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>     valueA</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>     valueB</div></div><!-- fragment --><p>If the iterator is moved to the path, "/baseNode/childA/valueA". After the first GoToNextSibling the iterator will be pointing at valueB. A second call to GoToNextSibling will cause the function to return LE_NOT_FOUND.</p>
+<dl class="section return"><dt>Returns</dt><dd>Returns one of the following values: <pre class="fragment">    - LE_OK            - Commit was completed successfully.
+    - LE_NOT_FOUND     - Iterator has reached the end of the current list of siblings.
+                         Also returned if the the current node has no siblings.</pre> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">iteratorRef</td><td>Iterator to iterate. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a3a8519b471bc6f4a5fea3716636dc607"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_cfg_GoToNode </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a> </td>
+<td class="paramname"><em>iteratorRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>newPath</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Change the node where the iterator is pointing. The path passed can be an absolute or a relative path from the iterators current location.</p>
+<p>The target node does not need to exist. Writing a value to a non-existant node will automatically create that node and any ancestor nodes (parent, parent's parent, etc.) that also don't exist. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">iteratorRef</td><td>Iterator to move. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">newPath</td><td>Absolute or relative path from the current location. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ad7d7debfc7c78b3a8b3908fcbc1a5966"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_cfg_GoToParent </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a> </td>
+<td class="paramname"><em>iteratorRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Move the iterator to the parent of the node.</p>
+<dl class="section return"><dt>Returns</dt><dd>Return code will be one of the following values: <pre class="fragment">    - LE_OK        - Commit was completed successfully.
+    - LE_NOT_FOUND - Current node is the root node: has no parent.</pre> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">iteratorRef</td><td>Iterator to move. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a46db89aea45bb59128fba40bde081833"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">bool le_cfg_IsEmpty </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a> </td>
+<td class="paramname"><em>iteratorRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>path</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Check if the given node is empty. A node is also considered empty if it doesn't yet exist. A node is also considered empty if it has no value or is a stem with no children.</p>
+<p>If the path is empty, the iterator's current node is queried for emptiness.</p>
+<p>Valid for both read and write transactions.</p>
+<dl class="section return"><dt>Returns</dt><dd>A true if the node is considered empty, false if not. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">iteratorRef</td><td>Iterator to use as a basis for the transaction. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Path to the target node. Can be an absolute path, or a path relative from the iterator's current position. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a33d4fbe741e6a6ff5377f60e8754d1e4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">bool le_cfg_NodeExists </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a> </td>
+<td class="paramname"><em>iteratorRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>path</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Check to see if a given node in the config tree exists.</p>
+<dl class="section return"><dt>Returns</dt><dd>True if the specified node exists in the tree. False if not. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">iteratorRef</td><td>Iterator to use as a basis for the transaction. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Path to the target node. Can be an absolute path, or a path relative from the iterator's current position. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a95f44c1e0d16eb48475465af63300a75"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_cfg_QuickDeleteNode </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>path</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Delete the node specified by the path. If the node doesn't exist, nothing happens. All child nodes are also deleted. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Path to the node to delete. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a256c22a1fbe25c69a96af37d388c6805"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">bool le_cfg_QuickGetBool </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>path</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">bool </td>
+<td class="paramname"><em>defaultValue</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Read a value from the tree as a boolean. If the node is empty or doesn't exist, the default value is returned. This is also true if the node is a different type than expected.</p>
+<p>If the value is empty or the node doesn't exist, the default value is returned instead. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Path to the value to write. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">defaultValue</td><td>Default value to use if the original can't be read. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="acf4ccdd3b7b18b971768db755b8273fc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">double le_cfg_QuickGetFloat </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>path</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">double </td>
+<td class="paramname"><em>defaultValue</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Read a 64-bit floating point value from the config tree. If the value is an integer, then it is promoted to a float. Otherwise, if the underlying value is not a float, or an integer the default value will be returned.</p>
+<p>If the value is empty or the node doesn't exist, the default value is returned.</p>
+<dl class="section note"><dt>Note</dt><dd>Floating point values will only be stored up to 6 digits of precision. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Path to the value to write. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">defaultValue</td><td>Default value to use if the original can't be read. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a4503bb519a439f3de35d762668947c45"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">int32_t le_cfg_QuickGetInt </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>path</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">int32_t </td>
+<td class="paramname"><em>defaultValue</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Read a signed integer value from the config tree. If the value is a floating point value, then it will be rounded and returned as an integer. Otherwise If the underlying value is not an integer or a float, the default value will be returned instead.</p>
+<p>If the value is empty or the node doesn't exist, the default value is returned instead. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Path to the value to write. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">defaultValue</td><td>Default value to use if the original can't be read. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a049b354def8c343930816fd79903e483"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_cfg_QuickGetString </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>path</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">char * </td>
+<td class="paramname"><em>value</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>valueNumElements</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>defaultValue</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Read a string value from the config tree. If the value isn't a string, or if the node is empty or doesn't exist, the default value will be returned.</p>
+<dl class="section return"><dt>Returns</dt><dd>- LE_OK - Commit was completed successfully.<ul>
+<li>LE_OVERFLOW - Supplied string buffer was not large enough to hold the value. </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Path to read from. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">value</td><td>Value read from the requested node. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">valueNumElements</td><td></td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">defaultValue</td><td>Default value to use if the original can't be read. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ad8915472ac5e82a8d3942ae8203264f2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_cfg_QuickSetBool </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>path</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">bool </td>
+<td class="paramname"><em>value</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Write a boolean value to the config tree. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Path to the value to write. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>Value to write. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ae8fd42cad37a0a5d3ad8072b9571cc97"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_cfg_QuickSetEmpty </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>path</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Make a given node empty. If the node doesn't currently exist then it is created as a new empty node. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Absolute or relative path to read from. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="aea4e34e0d4384f3cf0bb1c3bd27d4133"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_cfg_QuickSetFloat </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>path</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">double </td>
+<td class="paramname"><em>value</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Write a 64-bit floating point value to the config tree.</p>
+<dl class="section note"><dt>Note</dt><dd>Floating point values will only be stored up to 6 digits of precision. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Path to the value to write. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>Value to write. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="aca19ad4032442eb97171769e434d3a60"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_cfg_QuickSetInt </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>path</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">int32_t </td>
+<td class="paramname"><em>value</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Write a signed integer value to the config tree. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Path to the value to write. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>Value to write. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="aebf43c4763e9e9d9b305200ace67fdac"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_cfg_QuickSetString </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>path</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>value</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Write a string value to the config tree. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Path to the value to write. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>Value to write. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a17fa5e63dd1f5a2b7b66c92a76f8c98a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_cfg_RemoveChangeHandler </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__cfg__interface_8h.html#ad02e652d8ea74b6e8ebb8125190e5244">le_cfg_ChangeHandlerRef_t</a> </td>
+<td class="paramname"><em>addHandlerRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Remove handler function for EVENT 'le_cfg_Change' </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">addHandlerRef</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a1b760f2ef78e9c12dc207a5cbe333c99"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_cfg_SetBool </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a> </td>
+<td class="paramname"><em>iteratorRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>path</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">bool </td>
+<td class="paramname"><em>value</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Write a boolean value to the config tree. Only valid during a write transaction.</p>
+<p>If the path is empty, the iterator's current node will be set. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">iteratorRef</td><td>Iterator to use as a basis for the transaction. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Path to the target node. Can be an absolute path, or a path relative from the iterator's current position. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>Value to write. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a008c17822f0af91639b1fbb257be48ea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_cfg_SetEmpty </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a> </td>
+<td class="paramname"><em>iteratorRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>path</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Clear out the nodes's value. If it doesn't exist it will be created, but have no value.</p>
+<p>If the path is empty, the iterator's current node will be cleared. If the node is a stem then all children will be removed from the tree.</p>
+<p>Only valid during a write transaction. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">iteratorRef</td><td>Iterator to use as a basis for the transaction. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Path to the target node. Can be an absolute path, or a path relative from the iterator's current position. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="aab1e755f81ef2e4bcbc6d57ea558a7a5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_cfg_SetFloat </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a> </td>
+<td class="paramname"><em>iteratorRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>path</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">double </td>
+<td class="paramname"><em>value</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Write a 64-bit floating point value to the config tree. Only valid during a write transaction.</p>
+<p>If the path is empty, the iterator's current node will be set.</p>
+<dl class="section note"><dt>Note</dt><dd>Floating point values will only be stored up to 6 digits of precision. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">iteratorRef</td><td>Iterator to use as a basis for the transaction. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Path to the target node. Can be an absolute path, or a path relative from the iterator's current position. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>Value to write. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a46cb4c6dd1068cb07128ca637667bb77"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_cfg_SetInt </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a> </td>
+<td class="paramname"><em>iteratorRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>path</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">int32_t </td>
+<td class="paramname"><em>value</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Write a signed integer value to the config tree. Only valid during a write transaction.</p>
+<p>If the path is empty, the iterator's current node will be set. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">iteratorRef</td><td>Iterator to use as a basis for the transaction. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Path to the target node. Can be an absolute path, or a path relative from the iterator's current position. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>Value to write. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a741ade500cc7b10070e45065740d6980"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_cfg_SetString </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__cfg__interface_8h.html#a646829934bb23a878e19ade2c3e01eba">le_cfg_IteratorRef_t</a> </td>
+<td class="paramname"><em>iteratorRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>path</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>value</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Write a string value to the config tree. Only valid during a write transaction.</p>
+<p>If the path is empty, the iterator's current node will be set. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">iteratorRef</td><td>Iterator to use as a basis for the transaction. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Path to the target node. Can be an absolute path, or a path relative from the iterator's current position. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>Value to write. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

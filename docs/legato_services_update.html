@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Update Process  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">Update Process </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p><a class="el" href="legato_services_update_pack.html">Update Pack Format</a> <br />
+<a class="el" href="c_update.html">Software Update</a> API <br />
+<a class="el" href="how_to_software_update.html">Use Software Update</a></p>
+<hr />
+<p>This topic provides detailed info about the <a class="el" href="c_update.html">Software Update</a> process.</p>
+<h1><a class="anchor" id="legatoServicesUpdate_summary"></a>
+Summary</h1>
+<p>Software update is primarily carried out by the Update Daemon, but the Supervisor and the start-up code also affect rolling-back when updates fail.</p>
+<p>The Update Daemon accepts <b>update pack</b> files that contain software/firmware update instructions and associated data (e.g., libraries, executables, resource files).</p>
+<p>Update packs can be fed to the Update Daemon through the <a class="el" href="c_update.html">Software Update</a> API or through the <a class="el" href="tools_target_update.html">update</a> tool.</p>
+<p><b>System</b> update packs are created by <a class="el" href="build_toolsmksys.html">mksys</a>.</p>
+<p><b>App</b> update packs are created by <a class="el" href="build_toolsmkapp.html">mkapp</a>.</p>
+<p><b>App removal</b> update packs can be created using <a class="el" href="tools_host_update-pack.html">update-pack</a>.</p>
+<p><b>Firmware</b> update packs can be created from a firmware (.cwe) file using <a class="el" href="tools_host_update-pack.html">update-pack</a>.</p>
+<p>See the <a class="el" href="legato_services_update_pack.html">Update Pack Format</a> file format info.</p>
+<h1><a class="anchor" id="legatoServicesSoftwareUpdate_security"></a>
+Security</h1>
+<p>The Update Daemon includes hooks that allow update packs to be digitally signed and/or encrypted for security reasons. To use this feature, you must build your own signing/encryption tool and replace the file <code>security-unpack</code> in the framework with a program that knows how to check the signature and/or decrypt the signed/encrypted update pack.</p>
+<p>The signing/encryption tool must sign/encrypt a complete update pack file. This <em>secure</em> version of the update pack is then passed to the Update Daemon. The Update Daemon:</p><ol type="1">
+<li>launches the security-unpack program</li>
+<li>feeds the secure update pack through its standard input stream</li>
+<li>reads the decrypted update pack from the security-unpack process's standard output stream.</li>
+</ol>
+<p>If the security-unpack program detects anything wrong with the update pack, it must exit with a non-zero exit code. The Update Daemon responds by cancelling the update. The exit code <code>EXIT_SUCCESS</code> (1) is used to specifically indicate a security violation, such as a failed digital signature check.</p>
+<h1><a class="anchor" id="legatoServicesUpdate_goldenSys"></a>
+Golden System</h1>
+<p>Legato start-up code also supports using a full <em>golden</em> system found in a read-only file system mounted at /mnt/legato. This /mnt/legato system has to be updated through some external mechanism (e.g., a modem firmware update (FOTA) or factory programming tool). The Legato start-up code recognizes that a new system has been placed in /mnt/legato. It will use that system assuming it's <em>good</em> (i.e., it will never roll-back from this system to an older system). Rolling-back past this point isn't possible because the previous <em>good</em> system may have included apps from the old (replaced) /mnt/legato image.</p>
+<hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

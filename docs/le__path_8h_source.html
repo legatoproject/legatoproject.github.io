@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>le_path.h - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Reference.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a href="build_apps_documentation.html">Documentation</a><a class="link-selected" href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">le_path.h</h1> </div>
+</div><div class="contents">
+<a href="le__path_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span> </div><div class="line"><a name="l00002"></a><span class="lineno">    2</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><a name="l00043"></a><span class="lineno">   43</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><a name="l00052"></a><span class="lineno">   52</span> <span class="comment"></span><span class="preprocessor">#ifndef LEGATO_PATH_INCLUDE_GUARD</span></div><div class="line"><a name="l00053"></a><span class="lineno">   53</span> <span class="preprocessor">#define LEGATO_PATH_INCLUDE_GUARD</span></div><div class="line"><a name="l00054"></a><span class="lineno">   54</span> </div><div class="line"><a name="l00055"></a><span class="lineno">   55</span> </div><div class="line"><a name="l00056"></a><span class="lineno">   56</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><a name="l00064"></a><span class="lineno">   64</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><a name="l00065"></a><span class="lineno">   65</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__path_8h.html#a0b0ff4c06db44de9bf4f40b9f5388785">le_path_GetDir</a></div><div class="line"><a name="l00066"></a><span class="lineno">   66</span> (</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>     <span class="keyword">const</span> <span class="keywordtype">char</span>* pathPtr,            </div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>     <span class="keyword">const</span> <span class="keywordtype">char</span>* separatorPtr,       </div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>     <span class="keywordtype">char</span>* dirPtr,                   </div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>     <span class="keywordtype">size_t</span> dirBuffSize              </div><div class="line"><a name="l00071"></a><span class="lineno">   71</span> );</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span> </div><div class="line"><a name="l00073"></a><span class="lineno">   73</span> </div><div class="line"><a name="l00074"></a><span class="lineno">   74</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><a name="l00082"></a><span class="lineno">   82</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><a name="l00083"></a><span class="lineno">   83</span> <span class="keywordtype">char</span>* <a class="code" href="le__path_8h.html#aa58d208512dd5b9b2dc0ea6d5c963c25">le_path_GetBasenamePtr</a></div><div class="line"><a name="l00084"></a><span class="lineno">   84</span> (</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>     <span class="keyword">const</span> <span class="keywordtype">char</span>* pathPtr,            </div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>     <span class="keyword">const</span> <span class="keywordtype">char</span>* separatorPtr        </div><div class="line"><a name="l00087"></a><span class="lineno">   87</span> );</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span> </div><div class="line"><a name="l00089"></a><span class="lineno">   89</span> </div><div class="line"><a name="l00090"></a><span class="lineno">   90</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><a name="l00109"></a><span class="lineno">  109</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><a name="l00110"></a><span class="lineno">  110</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__path_8h.html#a5f0eb2e4882a70c5767cd325b8c5db23">le_path_Concat</a></div><div class="line"><a name="l00111"></a><span class="lineno">  111</span> (</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>     <span class="keyword">const</span> <span class="keywordtype">char</span>* separatorPtr,       </div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>     <span class="keywordtype">char</span>* pathPtr,                  </div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>     <span class="keywordtype">size_t</span> pathSize,                </div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>     ...                             </div><div class="line"><a name="l00117"></a><span class="lineno">  117</span> )</div><div class="line"><a name="l00119"></a><span class="lineno">  119</span> __attribute__((__sentinel__));</div><div class="line"><a name="l00120"></a><span class="lineno">  120</span> </div><div class="line"><a name="l00121"></a><span class="lineno">  121</span> </div><div class="line"><a name="l00122"></a><span class="lineno">  122</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><a name="l00134"></a><span class="lineno">  134</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><a name="l00135"></a><span class="lineno">  135</span> <span class="keywordtype">bool</span> <a class="code" href="le__path_8h.html#a7956881b55456ebfb69bf1e1d682d21d">le_path_IsSubpath</a></div><div class="line"><a name="l00136"></a><span class="lineno">  136</span> (</div><div class="line"><a name="l00137"></a><span class="lineno">  137</span>     const <span class="keywordtype">char</span>* path1Ptr,           </div><div class="line"><a name="l00138"></a><span class="lineno">  138</span>     const <span class="keywordtype">char</span>* path2Ptr,           </div><div class="line"><a name="l00139"></a><span class="lineno">  139</span>     const <span class="keywordtype">char</span>* separatorPtr        </div><div class="line"><a name="l00140"></a><span class="lineno">  140</span> );</div><div class="line"><a name="l00141"></a><span class="lineno">  141</span> </div><div class="line"><a name="l00142"></a><span class="lineno">  142</span> </div><div class="line"><a name="l00143"></a><span class="lineno">  143</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><a name="l00156"></a><span class="lineno">  156</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><a name="l00157"></a><span class="lineno">  157</span> <span class="keywordtype">bool</span> <a class="code" href="le__path_8h.html#a2fa2feacfb29b308d1b35cdfaa5b1716">le_path_IsEquivalent</a></div><div class="line"><a name="l00158"></a><span class="lineno">  158</span> (</div><div class="line"><a name="l00159"></a><span class="lineno">  159</span>     const <span class="keywordtype">char</span>* path1Ptr,           </div><div class="line"><a name="l00160"></a><span class="lineno">  160</span>     const <span class="keywordtype">char</span>* path2Ptr,           </div><div class="line"><a name="l00161"></a><span class="lineno">  161</span>     const <span class="keywordtype">char</span>* separatorPtr        </div><div class="line"><a name="l00162"></a><span class="lineno">  162</span> );</div><div class="line"><a name="l00163"></a><span class="lineno">  163</span> </div><div class="line"><a name="l00164"></a><span class="lineno">  164</span> </div><div class="line"><a name="l00165"></a><span class="lineno">  165</span> <span class="preprocessor">#endif // LEGATO_PATH_INCLUDE_GUARD</span></div><div class="ttc" id="le__path_8h_html_a5f0eb2e4882a70c5767cd325b8c5db23"><div class="ttname"><a href="le__path_8h.html#a5f0eb2e4882a70c5767cd325b8c5db23">le_path_Concat</a></div><div class="ttdeci">le_result_t le_path_Concat(const char *separatorPtr, char *pathPtr, size_t pathSize,...)</div></div>
+<div class="ttc" id="le__basics_8h_html_a1cca095ed6ebab24b57a636382a6c86c"><div class="ttname"><a href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a></div><div class="ttdeci">le_result_t</div><div class="ttdef"><b>Definition:</b> le_basics.h:35</div></div>
+<div class="ttc" id="le__path_8h_html_aa58d208512dd5b9b2dc0ea6d5c963c25"><div class="ttname"><a href="le__path_8h.html#aa58d208512dd5b9b2dc0ea6d5c963c25">le_path_GetBasenamePtr</a></div><div class="ttdeci">char * le_path_GetBasenamePtr(const char *pathPtr, const char *separatorPtr)</div></div>
+<div class="ttc" id="le__path_8h_html_a7956881b55456ebfb69bf1e1d682d21d"><div class="ttname"><a href="le__path_8h.html#a7956881b55456ebfb69bf1e1d682d21d">le_path_IsSubpath</a></div><div class="ttdeci">bool le_path_IsSubpath(const char *path1Ptr, const char *path2Ptr, const char *separatorPtr)</div></div>
+<div class="ttc" id="le__path_8h_html_a0b0ff4c06db44de9bf4f40b9f5388785"><div class="ttname"><a href="le__path_8h.html#a0b0ff4c06db44de9bf4f40b9f5388785">le_path_GetDir</a></div><div class="ttdeci">le_result_t le_path_GetDir(const char *pathPtr, const char *separatorPtr, char *dirPtr, size_t dirBuffSize)</div></div>
+<div class="ttc" id="le__path_8h_html_a2fa2feacfb29b308d1b35cdfaa5b1716"><div class="ttname"><a href="le__path_8h.html#a2fa2feacfb29b308d1b35cdfaa5b1716">le_path_IsEquivalent</a></div><div class="ttdeci">bool le_path_IsEquivalent(const char *path1Ptr, const char *path2Ptr, const char *separatorPtr)</div></div>
+</div><!-- fragment --></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

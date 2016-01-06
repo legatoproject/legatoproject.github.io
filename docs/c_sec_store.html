@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Secure Storage  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">Secure Storage </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p><a class="el" href="le__sec_store__interface_8h.html">API Reference</a> <br />
+<a class="el" href="c_sec_store_admin.html">Secure Storage Admin</a> API</p>
+<hr />
+<p>This API for accessing secure storage.</p>
+<p>Secure storage can be used to store sensitive information like passwords, keys, certificates, etc. All data in the secure storage is in an encrypted format. Each app using this API only has access to its own secure storage data.</p>
+<p>App's items in secure storage have a name and a value. The item name is used to access the item's value and can be maximum 255 characters. The item name can contain path separators, '/', to help organize an app's data. Item names cannot contain a trailing separator.</p>
+<p>To create or update an item, use <a class="el" href="le__sec_store__interface_8h.html#acb8b225d19e1bd1ebde45cddcd962edc">le_secStore_Write()</a> to specify the item's name and value. If the item doesn't exist, it'll be created. Each item can be a maximum of 8192 bytes. If it's larger, <a class="el" href="le__sec_store__interface_8h.html#acb8b225d19e1bd1ebde45cddcd962edc">le_secStore_Write()</a> will fail.</p>
+<p>Additionally, an app's total secure storage usage is limited by the maxSecureStorageBytes setting that may be specified in the xdef files. The maxSecureStorageBytes default is 8192 bytes.</p>
+<p>Writing to secure storage may also fail if the system-wide secure storage is out of memory. The system-wide secure storage memory amount is platform dependent (see <a class="el" href="platform_constraints_sec_storage.html">Secure Storage</a>).</p>
+<p>To read an item, use <a class="el" href="le__sec_store__interface_8h.html#aa09cc29c6c645ae272583c1e23a3c33c">le_secStore_Read()</a>, and specify the item's name. To delete an item, use <a class="el" href="le__sec_store__interface_8h.html#a8d6a2676272cca0a26e9e5d634a39cce">le_secStore_Delete()</a>.</p>
+<p>All the functions in this API are provided by the <b>secStore</b> service.</p>
+<p>Here's a code sample binding to this service: </p><pre class="fragment">bindings:
+{
+   clientExe.clientComponent.le_secStore -> secStore.le_secStore
+}
+</pre><hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

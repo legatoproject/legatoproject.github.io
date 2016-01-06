@@ -1,0 +1,659 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>le_pathIter.h File Reference - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Reference.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a href="build_apps_documentation.html">Documentation</a><a class="link-selected" href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="summary">
+<a href="#typedef-members">Typedefs</a> |
+<a href="#func-members">Functions</a> </div>
+<div class="headertitle">
+<h1 class="title">le_pathIter.h File Reference</h1> </div>
+</div><div class="contents">
+<p><a href="le__path_iter_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a0facb15e56e7ef896384eca415a7147a"><td align="right" class="memItemLeft" valign="top">typedef struct le_pathIter_t * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__path_iter_8h.html#a0facb15e56e7ef896384eca415a7147a">le_pathIter_Ref_t</a></td></tr>
+<tr class="separator:a0facb15e56e7ef896384eca415a7147a"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a73fac1b657b752b17395c66fb1ae324b"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__path_iter_8h.html#a0facb15e56e7ef896384eca415a7147a">le_pathIter_Ref_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__path_iter_8h.html#a73fac1b657b752b17395c66fb1ae324b">le_pathIter_Create</a> (const char *pathPtr, const char *separatorPtr, const char *parentSpecPtr, const char *currentSpecPtr)</td></tr>
+<tr class="separator:a73fac1b657b752b17395c66fb1ae324b"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a35a38b307f9fdc0de82552e96a5a2d1d"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__path_iter_8h.html#a0facb15e56e7ef896384eca415a7147a">le_pathIter_Ref_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__path_iter_8h.html#a35a38b307f9fdc0de82552e96a5a2d1d">le_pathIter_CreateForUnix</a> (const char *pathPtr)</td></tr>
+<tr class="separator:a35a38b307f9fdc0de82552e96a5a2d1d"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a50349a6c2afa4415d65a6efd443894d3"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__path_iter_8h.html#a0facb15e56e7ef896384eca415a7147a">le_pathIter_Ref_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__path_iter_8h.html#a50349a6c2afa4415d65a6efd443894d3">le_pathIter_Clone</a> (<a class="el" href="le__path_iter_8h.html#a0facb15e56e7ef896384eca415a7147a">le_pathIter_Ref_t</a> originalRef)</td></tr>
+<tr class="separator:a50349a6c2afa4415d65a6efd443894d3"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a6b57267a2c0db0210aab96c66459f9a1"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__path_iter_8h.html#a6b57267a2c0db0210aab96c66459f9a1">le_pathIter_Delete</a> (<a class="el" href="le__path_iter_8h.html#a0facb15e56e7ef896384eca415a7147a">le_pathIter_Ref_t</a> iterRef)</td></tr>
+<tr class="separator:a6b57267a2c0db0210aab96c66459f9a1"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a586cd64de7f1a6797da3a17896946ee5"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__path_iter_8h.html#a586cd64de7f1a6797da3a17896946ee5">le_pathIter_GetSeparator</a> (<a class="el" href="le__path_iter_8h.html#a0facb15e56e7ef896384eca415a7147a">le_pathIter_Ref_t</a> iterRef, char *bufferPtr, size_t bufferSize)</td></tr>
+<tr class="separator:a586cd64de7f1a6797da3a17896946ee5"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:af1707a310401be209aeada07f6d0f43f"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__path_iter_8h.html#af1707a310401be209aeada07f6d0f43f">le_pathIter_GetParentSpecifier</a> (<a class="el" href="le__path_iter_8h.html#a0facb15e56e7ef896384eca415a7147a">le_pathIter_Ref_t</a> iterRef, char *bufferPtr, size_t bufferSize)</td></tr>
+<tr class="separator:af1707a310401be209aeada07f6d0f43f"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ac12ea9bbe193fd9239abd10a4b07feba"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__path_iter_8h.html#ac12ea9bbe193fd9239abd10a4b07feba">le_pathIter_GetCurrentSpecifier</a> (<a class="el" href="le__path_iter_8h.html#a0facb15e56e7ef896384eca415a7147a">le_pathIter_Ref_t</a> iterRef, char *bufferPtr, size_t bufferSize)</td></tr>
+<tr class="separator:ac12ea9bbe193fd9239abd10a4b07feba"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a4a1c39584a779518395b41f957765283"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__path_iter_8h.html#a4a1c39584a779518395b41f957765283">le_pathIter_GetPath</a> (<a class="el" href="le__path_iter_8h.html#a0facb15e56e7ef896384eca415a7147a">le_pathIter_Ref_t</a> iterRef, char *bufferPtr, size_t bufferSize)</td></tr>
+<tr class="separator:a4a1c39584a779518395b41f957765283"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:af4352480ab3c9ffb09e740f2899d504e"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__path_iter_8h.html#af4352480ab3c9ffb09e740f2899d504e">le_pathIter_GoToStart</a> (<a class="el" href="le__path_iter_8h.html#a0facb15e56e7ef896384eca415a7147a">le_pathIter_Ref_t</a> iterRef)</td></tr>
+<tr class="separator:af4352480ab3c9ffb09e740f2899d504e"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ab1c0b90132171b3f3cf5cfb614329b13"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__path_iter_8h.html#ab1c0b90132171b3f3cf5cfb614329b13">le_pathIter_GoToEnd</a> (<a class="el" href="le__path_iter_8h.html#a0facb15e56e7ef896384eca415a7147a">le_pathIter_Ref_t</a> iterRef)</td></tr>
+<tr class="separator:ab1c0b90132171b3f3cf5cfb614329b13"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ad83a619dcc34ecf03da1859b3da2f57f"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__path_iter_8h.html#ad83a619dcc34ecf03da1859b3da2f57f">le_pathIter_GoToNext</a> (<a class="el" href="le__path_iter_8h.html#a0facb15e56e7ef896384eca415a7147a">le_pathIter_Ref_t</a> iterRef)</td></tr>
+<tr class="separator:ad83a619dcc34ecf03da1859b3da2f57f"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a92a740759fe5c3b0a18e39dd8c73466b"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__path_iter_8h.html#a92a740759fe5c3b0a18e39dd8c73466b">le_pathIter_GoToPrev</a> (<a class="el" href="le__path_iter_8h.html#a0facb15e56e7ef896384eca415a7147a">le_pathIter_Ref_t</a> iterRef)</td></tr>
+<tr class="separator:a92a740759fe5c3b0a18e39dd8c73466b"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ab00916d853b3a869748b0195cc2a8f11"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__path_iter_8h.html#ab00916d853b3a869748b0195cc2a8f11">le_pathIter_GetCurrentNode</a> (<a class="el" href="le__path_iter_8h.html#a0facb15e56e7ef896384eca415a7147a">le_pathIter_Ref_t</a> iterRef, char *bufferPtr, size_t bufferSize)</td></tr>
+<tr class="separator:ab00916d853b3a869748b0195cc2a8f11"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a04be1341536a3e330a815171e7cdbf7a"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__path_iter_8h.html#a04be1341536a3e330a815171e7cdbf7a">le_pathIter_Truncate</a> (<a class="el" href="le__path_iter_8h.html#a0facb15e56e7ef896384eca415a7147a">le_pathIter_Ref_t</a> iterRef)</td></tr>
+<tr class="separator:a04be1341536a3e330a815171e7cdbf7a"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ae6aa59696c54d2523009037cc78f9725"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__path_iter_8h.html#ae6aa59696c54d2523009037cc78f9725">le_pathIter_Append</a> (<a class="el" href="le__path_iter_8h.html#a0facb15e56e7ef896384eca415a7147a">le_pathIter_Ref_t</a> iterRef, const char *pathStr)</td></tr>
+<tr class="separator:ae6aa59696c54d2523009037cc78f9725"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a657f779873a2220f463f705298c1399f"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="le__path_iter_8h.html#a657f779873a2220f463f705298c1399f">le_pathIter_IsAbsolute</a> (<a class="el" href="le__path_iter_8h.html#a0facb15e56e7ef896384eca415a7147a">le_pathIter_Ref_t</a> iterRef)</td></tr>
+<tr class="separator:a657f779873a2220f463f705298c1399f"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ab4ceddae696158d04fdbc1802614c5d6"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="le__path_iter_8h.html#ab4ceddae696158d04fdbc1802614c5d6">le_pathIter_IsEmpty</a> (<a class="el" href="le__path_iter_8h.html#a0facb15e56e7ef896384eca415a7147a">le_pathIter_Ref_t</a> iterRef)</td></tr>
+<tr class="separator:ab4ceddae696158d04fdbc1802614c5d6"><td class="memSeparator" colspan="2"> </td></tr>
+</table>
+<a id="details" name="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Legato <a class="el" href="c_path_iter.html">Path Iterator API</a> include file.</p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. license. </p>
+</div><h2 class="groupheader">Typedef Documentation</h2>
+<a class="anchor" id="a0facb15e56e7ef896384eca415a7147a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef struct le_pathIter_t* <a class="el" href="le__path_iter_8h.html#a0facb15e56e7ef896384eca415a7147a">le_pathIter_Ref_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Objects of this type are used to iterate and manipulate path strings. </p>
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ae6aa59696c54d2523009037cc78f9725"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_pathIter_Append </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__path_iter_8h.html#a0facb15e56e7ef896384eca415a7147a">le_pathIter_Ref_t</a> </td>
+<td class="paramname"><em>iterRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>pathStr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Take the new string path and combine it with the object's existing path.</p>
+<dl class="section note"><dt>Note</dt><dd>This function looks for the current and parent node strings and treats them specially. So, (assuming defaults,) combining the path "/a/b" with the path "../x" will give you the combined path of: "/a/x".</dd>
+<dd>
+Appending a non-relative path onto an existing path effectivly replaces the current path, for example, appending /a/rooted/path, onto the existing /a/seperate/path will given you the path: /a/rooted/path.</dd>
+<dd>
+This will automatically reset the internal iterator to point at the end of the newly formed path. Also, this function always appends to the end of a path, ignoring the current position of the iterator.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>LE_OK if successful. LE_OVERFLOW if the output buffer is too small for the new string. LE_UNDERFLOW if combining the path the new path tries to traverse past the root. For example: "/a/b" + "../../../x" will result in LE_UNDERFLOW. However if the base path is relative, "a/b", then the resulting string will be "../x" and a return code of LE_OK. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">iterRef</td><td>The path object to write to. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">pathStr</td><td>The new path segment to append. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a50349a6c2afa4415d65a6efd443894d3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__path_iter_8h.html#a0facb15e56e7ef896384eca415a7147a">le_pathIter_Ref_t</a> le_pathIter_Clone </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__path_iter_8h.html#a0facb15e56e7ef896384eca415a7147a">le_pathIter_Ref_t</a> </td>
+<td class="paramname"><em>originalRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Create a clone of an existing path iterator object.</p>
+<dl class="section return"><dt>Returns</dt><dd>A new path iterator object that is a duplicate of the original one. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">originalRef</td><td>The path object to duplicate. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a73fac1b657b752b17395c66fb1ae324b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__path_iter_8h.html#a0facb15e56e7ef896384eca415a7147a">le_pathIter_Ref_t</a> le_pathIter_Create </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>pathPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>separatorPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>parentSpecPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>currentSpecPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Create a new path iterator object. On creation, the default position of the iterator is at the end of the path.</p>
+<dl class="section return"><dt>Returns</dt><dd>A new path object setup with the given parameters. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">pathPtr</td><td>Optional. Pointer to the inital path to use. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">separatorPtr</td><td>Required. Path separator to use. The separator can not be NULL or empty. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">parentSpecPtr</td><td>Optional. Used to traverse upwards in a path. Leave as NULL or empty to not use. This acts like how ".." is used in a filesystem path. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">currentSpecPtr</td><td>Optional. Used to refer to a current node. Much like how a '.' is used in a filesystem path. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a35a38b307f9fdc0de82552e96a5a2d1d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__path_iter_8h.html#a0facb15e56e7ef896384eca415a7147a">le_pathIter_Ref_t</a> le_pathIter_CreateForUnix </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>pathPtr</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Create a new path iterator object that is pre-configured for Unix styled paths. On creation, the default position of the iterator is at the end of the path.</p>
+<p>The parameters are configured as follows:</p>
+<ul>
+<li>separator: "/"</li>
+<li>parentSpec: ".."</li>
+<li>currentSpec: "."</li>
+</ul>
+<dl class="section return"><dt>Returns</dt><dd>A new path iterator object that's ready for iterating on Unix style paths. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">pathPtr</td><td>Optional. Create an iterator for this path, or start with an empty path. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a6b57267a2c0db0210aab96c66459f9a1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_pathIter_Delete </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__path_iter_8h.html#a0facb15e56e7ef896384eca415a7147a">le_pathIter_Ref_t</a> </td>
+<td class="paramname"><em>iterRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Delete an iterator object and free it's memory. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">iterRef</td><td>The iterator object to destroy. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ab00916d853b3a869748b0195cc2a8f11"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_pathIter_GetCurrentNode </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__path_iter_8h.html#a0facb15e56e7ef896384eca415a7147a">le_pathIter_Ref_t</a> </td>
+<td class="paramname"><em>iterRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">char * </td>
+<td class="paramname"><em>bufferPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>bufferSize</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the text for the node the itrator is pointing at.</p>
+<dl class="section return"><dt>Returns</dt><dd>LE_OK if succesful. LE_OVERFLOW if the bufferPtr is too small to hold the whole string. LE_NOT_FOUND if the iterator is at the end of the path. Or if the path is empty, or simply consists of a separator. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">iterRef</td><td>The iterator object to read. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">bufferPtr</td><td>The utf-8 formatted text buffer to write to. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">bufferSize</td><td>The size in bytes of the text buffer. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ac12ea9bbe193fd9239abd10a4b07feba"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_pathIter_GetCurrentSpecifier </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__path_iter_8h.html#a0facb15e56e7ef896384eca415a7147a">le_pathIter_Ref_t</a> </td>
+<td class="paramname"><em>iterRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">char * </td>
+<td class="paramname"><em>bufferPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>bufferSize</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Read the iterators string for the current node specifier. For Unix style paths for this is ".". If an empty string is used, then this is ignored for the purposes of appending and normalizing paths. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">iterRef</td><td>The iterator object to read. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">bufferPtr</td><td>The string buffer to write to. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">bufferSize</td><td>The size of the string buffer being written to. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="af1707a310401be209aeada07f6d0f43f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_pathIter_GetParentSpecifier </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__path_iter_8h.html#a0facb15e56e7ef896384eca415a7147a">le_pathIter_Ref_t</a> </td>
+<td class="paramname"><em>iterRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">char * </td>
+<td class="paramname"><em>bufferPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>bufferSize</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Read the string that represents parent nodes in a path string. By for Unix style paths this is "..". If an empty string is used, then it is ignored for the purposes of appending and normalizing paths. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">iterRef</td><td>The iterator object to read. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">bufferPtr</td><td>The string buffer to write to. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">bufferSize</td><td>The size of the buffer being written to. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a4a1c39584a779518395b41f957765283"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_pathIter_GetPath </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__path_iter_8h.html#a0facb15e56e7ef896384eca415a7147a">le_pathIter_Ref_t</a> </td>
+<td class="paramname"><em>iterRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">char * </td>
+<td class="paramname"><em>bufferPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>bufferSize</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get a copy of the path currently contained within the iterator.</p>
+<dl class="section return"><dt>Returns</dt><dd>LE_OK if the copy is successful. LE_OVERFLOW if the buffer isn't big enough for the path string. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">iterRef</td><td>The iterator object to read. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">bufferPtr</td><td>The string buffer to write to. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">bufferSize</td><td>The size of the buffer being written to. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a586cd64de7f1a6797da3a17896946ee5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_pathIter_GetSeparator </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__path_iter_8h.html#a0facb15e56e7ef896384eca415a7147a">le_pathIter_Ref_t</a> </td>
+<td class="paramname"><em>iterRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">char * </td>
+<td class="paramname"><em>bufferPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>bufferSize</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Read the string that is being used to represent path separators in this iterator object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">iterRef</td><td>The iterator object to read. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">bufferPtr</td><td>The string buffer to write to. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">bufferSize</td><td>The size of the buffer being written to. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ab1c0b90132171b3f3cf5cfb614329b13"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_pathIter_GoToEnd </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__path_iter_8h.html#a0facb15e56e7ef896384eca415a7147a">le_pathIter_Ref_t</a> </td>
+<td class="paramname"><em>iterRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Jump the iterator to the end of the path.</p>
+<dl class="section return"><dt>Returns</dt><dd>LE_OK if the move was successful. LE_NOT_FOUND if the path is empty, or only contains a separator. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">iterRef</td><td>The iterator object to update. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ad83a619dcc34ecf03da1859b3da2f57f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_pathIter_GoToNext </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__path_iter_8h.html#a0facb15e56e7ef896384eca415a7147a">le_pathIter_Ref_t</a> </td>
+<td class="paramname"><em>iterRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Move to the next node in the path.</p>
+<dl class="section return"><dt>Returns</dt><dd>LE_OK if the itrator was successful in jumping to the next node. LE_NOT_FOUND is returned if there are no more nodes to move to in the path. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">iterRef</td><td>The iterator object to update. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a92a740759fe5c3b0a18e39dd8c73466b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_pathIter_GoToPrev </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__path_iter_8h.html#a0facb15e56e7ef896384eca415a7147a">le_pathIter_Ref_t</a> </td>
+<td class="paramname"><em>iterRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Move to the previous node in the path.</p>
+<dl class="section return"><dt>Returns</dt><dd>LE_OK if the iterator was successfuly moved, LE_NOT_FOUND if there are no prior nodes to move to. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">iterRef</td><td>The iterator object to update. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="af4352480ab3c9ffb09e740f2899d504e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_pathIter_GoToStart </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__path_iter_8h.html#a0facb15e56e7ef896384eca415a7147a">le_pathIter_Ref_t</a> </td>
+<td class="paramname"><em>iterRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Jump the iterator to the beginning of the path.</p>
+<dl class="section return"><dt>Returns</dt><dd>LE_OK if the move was successful. LE_NOT_FOUND if the path is empty, or only contains a separator. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">iterRef</td><td>The iterator object to update. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a657f779873a2220f463f705298c1399f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">bool le_pathIter_IsAbsolute </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__path_iter_8h.html#a0facb15e56e7ef896384eca415a7147a">le_pathIter_Ref_t</a> </td>
+<td class="paramname"><em>iterRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Is this an absolute or relative path?</p>
+<dl class="section return"><dt>Returns</dt><dd>True if the path is absolute, that is that it begins with a separator. False if the path is considered relative. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">iterRef</td><td>The iterator object to read. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ab4ceddae696158d04fdbc1802614c5d6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">bool le_pathIter_IsEmpty </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__path_iter_8h.html#a0facb15e56e7ef896384eca415a7147a">le_pathIter_Ref_t</a> </td>
+<td class="paramname"><em>iterRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Is the path object holding an empty string?</p>
+<dl class="section return"><dt>Returns</dt><dd>True if the path is empty, false if not. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramname">iterRef</td><td>The path object to read. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a04be1341536a3e330a815171e7cdbf7a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_pathIter_Truncate </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__path_iter_8h.html#a0facb15e56e7ef896384eca415a7147a">le_pathIter_Ref_t</a> </td>
+<td class="paramname"><em>iterRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Truncate the path at the current iterator node. If the iterator is at the beginning of the path, then the whole path is cleared. If the iterator is at the end of the path, then nothing happens.</p>
+<p>Once done, then the iterator will be pointing at the new end of the path. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">iterRef</td><td>The iterator to update. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

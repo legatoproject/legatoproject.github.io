@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>File Descriptor Monitor API  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">File Descriptor Monitor API </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p><a class="el" href="le__fd_monitor_8h.html">API Reference</a></p>
+<hr />
+<p>In a POSIX environment, like Linux, file descriptors (fds) are used for most process I/O. Many components need to be notified when one or more fds are ready to read from or write to, or if there's an error or hang-up.</p>
+<p>Although it's common to block a thread on a call to <code>read()</code>, <code>write()</code>, <code>accept()</code>, <code>select()</code>, <code>poll()</code> (or some variantion of these), if that's done in a thread shared with other components, the other components won't run when needed. To avoid this, Legato has methods to monitor fds reporting related events so they won't interfere with other software sharing the same thread.</p>
+<h1><a class="anchor" id="c_fdMonitorStartStop"></a>
+Start/Stop Monitoring</h1>
+<p><a class="el" href="le__fd_monitor_8h.html#a52902d634d810f9b7a23c53c9c5164f0">le_fdMonitor_Create()</a> creates a <b> File Descriptor Monitor </b> and starts monitoring an fd. A handler function and set of events is also provided to <a class="el" href="le__fd_monitor_8h.html#a52902d634d810f9b7a23c53c9c5164f0">le_fdMonitor_Create()</a>.</p>
+<div class="fragment"><div class="line"><span class="comment">// Monitor for data available to read.</span></div><div class="line"><a class="code" href="le__fd_monitor_8h.html#a85048556f0b95147af81e76907895d42">le_fdMonitor_Ref_t</a> fdMonitor = <a class="code" href="le__fd_monitor_8h.html#a52902d634d810f9b7a23c53c9c5164f0">le_fdMonitor_Create</a>(<span class="stringliteral">"Serial Port"</span>,      <span class="comment">// Name for diagnostics</span></div><div class="line">                                                   fd,                 <span class="comment">// fd to monitor</span></div><div class="line">                                                   SerialPortHandler,  <span class="comment">// Handler function</span></div><div class="line">                                                   POLLIN);            <span class="comment">// Monitor readability</span></div></div><!-- fragment --><p>When an fd no longer needs to be monitored, the File Descriptor Monitor object is deleted by calling <a class="el" href="le__fd_monitor_8h.html#ad7f0f1a0cd2f99b081403784f048aef0">le_fdMonitor_Delete()</a>.</p>
+<div class="fragment"><div class="line"><a class="code" href="le__fd_monitor_8h.html#ad7f0f1a0cd2f99b081403784f048aef0">le_fdMonitor_Delete</a>(fdMonitor);</div></div><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>Always delete the Monitor object for an fd <b> before closing the fd </b>. After an fd is closed, it could get reused for something completely different. If monitoring of the new fd incarnation is started before the old Monitor object is deleted, deleting the old Monitor will cause monitoring of the new incarnation to fail.</dd></dl>
+<h1><a class="anchor" id="c_fdMonitorEvents"></a>
+Event Types</h1>
+<p>Events that can be handled:</p>
+<ul>
+<li><code>POLLIN</code> = Data available to read.</li>
+<li><code>POLLPRI</code> = Urgent data available to read (e.g., out-of-band data on a socket).</li>
+<li><code>POLLOUT</code> = Writing to the fd should accept some data now.</li>
+<li><code>POLLRDHUP</code> = Other end of stream socket closed or shutdown.</li>
+<li><code>POLLERR</code> = Error occurred.</li>
+<li><code>POLLHUP</code> = Hang up.</li>
+</ul>
+<p>These are bitmask values and can be combined using the bit-wise OR operator ('|') and tested for using the bit-wise <em>and</em> ('&') operator.</p>
+<dl class="section note"><dt>Note</dt><dd><code>POLLRDHUP</code>, <code>POLLERR</code> and <code>POLLHUP</code> can't be disabled. Monitoring these events is always enabled as soon as the File Descriptor Monitor is created regardless of the set of events given to <a class="el" href="le__fd_monitor_8h.html#a52902d634d810f9b7a23c53c9c5164f0">le_fdMonitor_Create()</a>.</dd></dl>
+<h1><a class="anchor" id="c_fdTypes"></a>
+FD Types</h1>
+<p>The fd type affects how events are monitored:</p>
+<ul>
+<li><a class="el" href="c_fd_monitor.html#c_fdTypes_files">Files</a></li>
+<li><a class="el" href="c_fd_monitor.html#c_fdTypes_pipes">Pipes</a></li>
+<li><a class="el" href="c_fd_monitor.html#c_fdTypes_sockets">Sockets</a></li>
+<li><a class="el" href="c_fd_monitor.html#c_fdTypes_terminals">Terminals and Pseudo-Terminals</a></li>
+</ul>
+<h2><a class="anchor" id="c_fdTypes_files"></a>
+Files</h2>
+<ul>
+<li>POLLIN and POLLOUT are always SET</li>
+<li>NONE of the other EVENTS are ever set</li>
+</ul>
+<h2><a class="anchor" id="c_fdTypes_pipes"></a>
+Pipes</h2>
+<p>Pipe fd events indicate two conditions for reading from a pipe and two conditions for writing to a pipe.</p>
+<table class="doxtable">
+<tr>
+<th></th><th>Event </th><th>Condition  </th></tr>
+<tr>
+<td>READING from a pipe </td><td>POLLHUP </td><td>NO DATA in the pipe and the WRITE END is closed </td></tr>
+<tr>
+<td></td><td>POLLIN </td><td>DATA in the pipe and the WRITE END is open </td></tr>
+<tr>
+<td></td><td>POLLIN + POLLHUP </td><td>DATA in the pipe BUT the WRITE END is closed </td></tr>
+<tr>
+<td>WRITING to the pipe </td><td>POLLERR </td><td>NO SPACE in the pipe and the READ END is closed </td></tr>
+<tr>
+<td></td><td>POLLOUT </td><td>SPACE in the pipe and the READ END is open </td></tr>
+<tr>
+<td></td><td>POLLOUT + POLLERR </td><td>SPACE in the pipe BUT the READ END is closed </td></tr>
+</table>
+<h2><a class="anchor" id="c_fdTypes_sockets"></a>
+Sockets</h2>
+<p>Socket activity (establishing/closing) is monitored for connection-orientated sockets including SOCK_STREAM and SOCK_SEQPACKET. Input and output data availability for all socket types is monitored. </p><table class="doxtable">
+<tr>
+<th>Event </th><th>Condition  </th></tr>
+<tr>
+<td>POLLIN </td><td>Input is available from the socket </td></tr>
+<tr>
+<td>POLLOUT </td><td>Possible to send data on the socket </td></tr>
+<tr>
+<td>POLLIN </td><td>Incoming connection being established on the listen port </td></tr>
+<tr>
+<td>POLLPRI </td><td>Out of band data received only on TCP </td></tr>
+<tr>
+<td>POLLIN + POLLOUT + POLLRDHUP </td><td>Peer closed the connection in a connection-orientated socket </td></tr>
+</table>
+<h2><a class="anchor" id="c_fdTypes_terminals"></a>
+Terminals and Pseudo-Terminals</h2>
+<p>Terminals and pseudo-terminals operate in pairs. When one terminal pair closes, an event is generated to indicate the closure. POLLIN, POLLOUT and POLLPRI are the event indicators related to terminal status.</p>
+<table class="doxtable">
+<tr>
+<th>Event </th><th>Condition  </th></tr>
+<tr>
+<td>POLLIN </td><td>Ready to receive data </td></tr>
+<tr>
+<td>POLLOUT </td><td>Ready to send data </td></tr>
+<tr>
+<td>POLLPRI </td><td>Master/pseudo terminal detects slave state has changed (in packet mode only). </td></tr>
+<tr>
+<td>POLLHUP </td><td>Either half of the terminal pair has closed. </td></tr>
+</table>
+<h1><a class="anchor" id="c_fdMonitorHandlers"></a>
+Handler Functions</h1>
+<p>Parameters to the fd event handler functions are the fd and the events active for the fd. The events are passed as a bit mask; the bit-wise AND operator ('&') must be used to check for specific events.</p>
+<div class="fragment"><div class="line"><a class="code" href="le__event_loop_8h.html#abdb9187a56836a93d19cc793cbd4b7ec">COMPONENT_INIT</a></div><div class="line">{</div><div class="line"> <span class="comment">// Open the serial port.</span></div><div class="line"> <span class="keywordtype">int</span> fd = open(<span class="stringliteral">"/dev/ttyS0"</span>, O_RDWR|O_NONBLOCK);</div><div class="line"> <a class="code" href="le__log_8h.html#a7a3e66a87026cc9e57bcb748840ab41b">LE_FATAL_IF</a>(fd == -1, <span class="stringliteral">"open failed with errno %d (%m)"</span>, errno);</div><div class="line"></div><div class="line"> <span class="comment">// Create a File Descriptor Monitor object for the serial port's file descriptor.</span></div><div class="line"> <span class="comment">// Monitor for data available to read.</span></div><div class="line"> <a class="code" href="le__fd_monitor_8h.html#a85048556f0b95147af81e76907895d42">le_fdMonitor_Ref_t</a> fdMonitor = <a class="code" href="le__fd_monitor_8h.html#a52902d634d810f9b7a23c53c9c5164f0">le_fdMonitor_Create</a>(<span class="stringliteral">"Serial Port"</span>,      <span class="comment">// Name for diagnostics</span></div><div class="line">                                                       fd,                 <span class="comment">// fd to monitor</span></div><div class="line">                                                       SerialPortHandler,  <span class="comment">// Handler function</span></div><div class="line">                                                       POLLIN);            <span class="comment">// Monitor readability</span></div><div class="line">}</div><div class="line"></div><div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> SerialPortHandler(<span class="keywordtype">int</span> fd, <span class="keywordtype">short</span> events)</div><div class="line">{</div><div class="line"> <span class="keywordflow">if</span> (events & POLLIN)    <span class="comment">// Data available to read?</span></div><div class="line">    {</div><div class="line"> <span class="keywordtype">char</span> buff[MY_BUFF_SIZE];</div><div class="line"></div><div class="line">        ssize_t bytesRead = read(fd, buff, <span class="keyword">sizeof</span>(buff));</div><div class="line"></div><div class="line">        ...</div><div class="line">    }</div><div class="line"></div><div class="line"> <span class="keywordflow">if</span> ((events & POLLERR) || (events & POLLHUP) || (events & POLLRDHUP))   <span class="comment">// Error or hang-up?</span></div><div class="line">    {</div><div class="line">        ...</div><div class="line">    }</div><div class="line">}</div></div><!-- fragment --><h1><a class="anchor" id="c_fdMonitorEnableDisable"></a>
+Enable/Disable Event Monitoring</h1>
+<p>The set of fd events being monitored can be adjusted using <a class="el" href="le__fd_monitor_8h.html#a497aee19dbedadf884f404958713b414">le_fdMonitor_Enable()</a> and <a class="el" href="le__fd_monitor_8h.html#ada2b1023507b99e9247175dd3ffe5d48">le_fdMonitor_Disable()</a>. However, <code>POLLRDHUP</code>, <code>POLLERR</code> and <code>POLLHUP</code> can't be disabled.</p>
+<p>CPU cycles (and power) can be saved by disabling monitoring when not needed. For example, <code>POLLOUT</code> monitoring should be disabled while nothing needs to be written to the fd, so that the event handler doesn't keep getting called with a <code>POLLOUT</code> event because the fd is writeable.</p>
+<div class="fragment"><div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> StartWriting()</div><div class="line">{</div><div class="line"> <span class="comment">// Enable monitoring for POLLOUT.  When connection is ready, handler will be called.</span></div><div class="line"> <a class="code" href="le__fd_monitor_8h.html#a497aee19dbedadf884f404958713b414">le_fdMonitor_Enable</a>(FdMonitorRef, POLLOUT);</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> ConnectionEventHandler(<span class="keywordtype">int</span> fd, <span class="keywordtype">int</span> event)</div><div class="line">{</div><div class="line"> <span class="keywordflow">if</span> (event & POLLOUT)</div><div class="line">    {</div><div class="line"> <span class="comment">// Connection is ready for us to send some data.</span></div><div class="line"> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> result = SendWaitingData();</div><div class="line"> <span class="keywordflow">if</span> (result == <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86ca77a7505b0443df2fa1bab375c7267637">LE_NOT_FOUND</a>)</div><div class="line">        {</div><div class="line"> <span class="comment">// Buffer empty, stop monitoring POLLOUT so handler doesn't keep getting called.</span></div><div class="line"> <a class="code" href="le__fd_monitor_8h.html#ada2b1023507b99e9247175dd3ffe5d48">le_fdMonitor_Disable</a>(<a class="code" href="le__fd_monitor_8h.html#a688da8b3627d20b01795dfa1ae46bb78">le_fdMonitor_GetMonitor</a>(), POLLOUT);</div><div class="line">        }</div><div class="line">        ...</div><div class="line">    }</div><div class="line">    ...</div><div class="line">}</div></div><!-- fragment --><p>If an event occurs on an fd while monitoring of that event is disabled, the event will be ignored. If that event is later enabled, and that event's trigger condition is still true (e.g., the fd still has data available to be read), then the event will be reported to the handler at that time. If the event trigger condition is gone (e.g., the fd no longer has data available to read), then the event will not be reported until its trigger condition becomes true again.</p>
+<p>If events occur on different fds at the same time, the order in which the handlers are called is implementation-dependent.</p>
+<h1><a class="anchor" id="c_fdMonitorHandlerContext"></a>
+Handler Function Context</h1>
+<p>Calling <a class="el" href="le__fd_monitor_8h.html#a688da8b3627d20b01795dfa1ae46bb78">le_fdMonitor_GetMonitor()</a> inside the handler function fetches a reference to the File Descriptor Monitor object for the event being handled. This is handy to enable and disable event monitoring from inside the handler.</p>
+<p>If additional data needs to be passed to the handler function, the context pointer can be set to use <a class="el" href="le__fd_monitor_8h.html#af88e40be018bcd6cd47a64bde49a9f98">le_fdMonitor_SetContextPtr()</a> and retrieved inside the handler function with <a class="el" href="le__fd_monitor_8h.html#a3073205dc7ee7a054857119bc11c9dfc">le_fdMonitor_GetContextPtr()</a>. <a class="el" href="le__event_loop_8h.html#a1c73916295cc9e17af07e02756aa86c9">le_event_GetContextPtr()</a> can also be used, but <a class="el" href="le__fd_monitor_8h.html#a3073205dc7ee7a054857119bc11c9dfc">le_fdMonitor_GetContextPtr()</a> is preferred as it double checks it's being called inside a File Descriptor Monitor's handler function.</p>
+<div class="fragment"><div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> SerialPortHandler(<span class="keywordtype">int</span> fd, <span class="keywordtype">short</span> events)</div><div class="line">{</div><div class="line">    MyContext_t* contextPtr = <a class="code" href="le__fd_monitor_8h.html#a3073205dc7ee7a054857119bc11c9dfc">le_fdMonitor_GetContextPtr</a>();</div><div class="line"></div><div class="line"> <span class="comment">// Process the fd event(s).</span></div><div class="line">    ...</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> StartDataTransmission(<span class="keyword">const</span> <span class="keywordtype">char</span>* port, uint8_t* txBuffPtr, <span class="keywordtype">size_t</span> txBytes)</div><div class="line">{</div><div class="line"> <span class="comment">// Open the serial port.</span></div><div class="line"> <span class="keywordtype">int</span> fd = open(port, O_RDWR|O_NONBLOCK);</div><div class="line"> <a class="code" href="le__log_8h.html#a7a3e66a87026cc9e57bcb748840ab41b">LE_FATAL_IF</a>(fd == -1, <span class="stringliteral">"open failed with errno %d (%m)"</span>, errno);</div><div class="line"></div><div class="line"> <span class="comment">// Create a File Descriptor Monitor object for the serial port's file descriptor.</span></div><div class="line"> <span class="comment">// Monitor for write buffer space availability.</span></div><div class="line"> <a class="code" href="le__fd_monitor_8h.html#a85048556f0b95147af81e76907895d42">le_fdMonitor_Ref_t</a> fdMonitor = <a class="code" href="le__fd_monitor_8h.html#a52902d634d810f9b7a23c53c9c5164f0">le_fdMonitor_Create</a>(<span class="stringliteral">"Port"</span>, fd, SerialPortHandler, POLLOUT);</div><div class="line"></div><div class="line"> <span class="comment">// Allocate a data block and populate with stuff we need in SerialPortHandler().</span></div><div class="line">    MyContext_t* contextPtr = <a class="code" href="le__mem_8h.html#af7c289c73d4182835a26a9099f3db359">le_mem_ForceAlloc</a>(ContextMemPool);</div><div class="line">    contextPtr->txBuffPtr = txBuffPtr;</div><div class="line">    contextPtr->bytesRemaining = txBytes;</div><div class="line"></div><div class="line"> <span class="comment">// Make this available to SerialPortHandler() via le_fdMonitor_GetContextPtr().</span></div><div class="line"> <a class="code" href="le__fd_monitor_8h.html#af88e40be018bcd6cd47a64bde49a9f98">le_fdMonitor_SetContextPtr</a>(fdMonitor, contextPtr);</div><div class="line">}</div></div><!-- fragment --><h1><a class="anchor" id="c_fdMonitorPowerManagement"></a>
+Power Management</h1>
+<p>If your process has the privilege of being able to block the system from going to sleep, whenever the fd that is being monitored has a pending event, the system will be kept awake. To allow the system to go to sleep while this fd has a pending event, you can call <a class="el" href="le__fd_monitor_8h.html#a66a93ae01f1e6faf1d0c7645752d4442">le_fdMonitor_SetDeferrable()</a> with <code>isDeferrable</code> flag set to 'true'.</p>
+<h1><a class="anchor" id="c_fdMonitorThreading"></a>
+Threading</h1>
+<p>fd monitoring is performed by the Event Loop of the thread that created the Monitor object for that fd. If that the is blocked, events won't be detected for that fd until the thread is unblocked and returns to its Event Loop. Similarly, if the thread that creates a File Descriptor Monitor object doesn't run an Event Loop at all, no events will be detected for that fd.</p>
+<p>It's not recommended to monitor the same fd in two threads at the same time, because the threads will race to handle any events on that fd.</p>
+<h1><a class="anchor" id="c_fdMonitorTroubleshooting"></a>
+Troubleshooting</h1>
+<p>The "fdMonitor" logging keyword can be enabled to view fd monitoring activity.</p>
+<hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

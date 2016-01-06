@@ -72,10 +72,10 @@ ul, li {
 #top {
 	position: relative;
 	width: 100%;
-	background-color: #f1f1f2;
+	background-color: none;
 	text-align: center;
 	height: 430px;
-	border-top: 5px solid #e53b30;
+	border-top: none;
 	color: #a6a6a6;
 	font-family: 'r-lt', sans-serif;
 	font-weight: normal;
@@ -115,7 +115,7 @@ a#sierra-wireless {
 	width: 400px;
 	height: 117px;
 	text-indent: -9000px;
-	background: url('sierra-wireless_legato_github_legato_logo.png') top left no-repeat;
+	background: url('legato_gitHub.png') top left no-repeat;
 	margin-bottom: 25px;
 }
 
@@ -142,11 +142,9 @@ top links {
 	}
 	
 #repositories {
-	position: relative;
-	width: 1000px;
-	padding-left: 250px;
-	margin: 0 auto;
-	text-align: center;
+    margin-left: auto;
+    text-align: center;
+    margin-right: auto;
 }
 
 #repositories h3 {
@@ -173,15 +171,14 @@ top links {
 }
 
 .repository, .repository_s {
-	position: relative;
-	float: left;
+
 	width: 250px;
 	margin-right: 0px;
 }
 
 .repository {
+	display:inline-block;
 	height: 400px;
-	text-align: left;
 	font-family: 'l-lt', sans-serif;
 	font-size: 18px;
 	color: #8b8b8b;

@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>appSmack_interface.h File Reference - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Reference.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a href="build_apps_documentation.html">Documentation</a><a class="link-selected" href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="summary">
+<a href="#define-members">Macros</a> |
+<a href="#enum-members">Enumerations</a> |
+<a href="#func-members">Functions</a> </div>
+<div class="headertitle">
+<h1 class="title">appSmack_interface.h File Reference</h1> </div>
+</div><div class="contents">
+<div class="textblock"><code>#include "<a class="el" href="legato_8h_source.html">legato.h</a>"</code><br />
+<code>#include "<a class="el" href="le__limit__interface_8h_source.html">le_limit_interface.h</a>"</code><br />
+</div>
+<p><a href="app_smack__interface_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a41342324fe2599a79a42da6c998a7667"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="app_smack__interface_8h.html#a41342324fe2599a79a42da6c998a7667">APPSMACK_MAX_LABEL_LEN</a>   255</td></tr>
+<tr class="separator:a41342324fe2599a79a42da6c998a7667"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a333d2301d2d23e6b74bd6bb9b383aa3d"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="app_smack__interface_8h.html#a333d2301d2d23e6b74bd6bb9b383aa3d">appSmack_AccessFlags_t</a> { <b>APPSMACK_ACCESS_FLAG_READ</b> = 0x1, 
+<b>APPSMACK_ACCESS_FLAG_WRITE</b> = 0x2, 
+<b>APPSMACK_ACCESS_FLAG_EXECUTE</b> = 0x4
+ }</td></tr>
+<tr class="separator:a333d2301d2d23e6b74bd6bb9b383aa3d"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ad3e19b9a4a9634d3c12ef9c40a036567"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="app_smack__interface_8h.html#ad3e19b9a4a9634d3c12ef9c40a036567">appSmack_ConnectService</a> (void)</td></tr>
+<tr class="separator:ad3e19b9a4a9634d3c12ef9c40a036567"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a5106468b3ff13d029ed868c13e297c7a"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="app_smack__interface_8h.html#a5106468b3ff13d029ed868c13e297c7a">appSmack_DisconnectService</a> (void)</td></tr>
+<tr class="separator:a5106468b3ff13d029ed868c13e297c7a"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:adb46c9612a7e4af419e8144e6567c2fd"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="app_smack__interface_8h.html#adb46c9612a7e4af419e8144e6567c2fd">appSmack_GetLabel</a> (const char *appName, char *label, size_t labelNumElements)</td></tr>
+<tr class="separator:adb46c9612a7e4af419e8144e6567c2fd"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aa9283290ed50347a040dcd88997088ae"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="app_smack__interface_8h.html#aa9283290ed50347a040dcd88997088ae">appSmack_GetAccessLabel</a> (const char *appName, <a class="el" href="app_smack__interface_8h.html#a333d2301d2d23e6b74bd6bb9b383aa3d">appSmack_AccessFlags_t</a> accessMode, char *label, size_t labelNumElements)</td></tr>
+<tr class="separator:aa9283290ed50347a040dcd88997088ae"><td class="memSeparator" colspan="2"> </td></tr>
+</table>
+<a id="details" name="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Legato <a class="el" href="c_app_smack.html">Application SMACK API</a> include file.</p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="a41342324fe2599a79a42da6c998a7667"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define APPSMACK_MAX_LABEL_LEN   255</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Maximum length of SMACK labels. </p>
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a class="anchor" id="a333d2301d2d23e6b74bd6bb9b383aa3d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="app_smack__interface_8h.html#a333d2301d2d23e6b74bd6bb9b383aa3d">appSmack_AccessFlags_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Access flags. </p>
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ad3e19b9a4a9634d3c12ef9c40a036567"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void appSmack_ConnectService </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Connect the current client thread to the service providing this API.</p>
+<p>This function must be called before any other functions in this API. Normally, it's automatically called for the main thread, but must be explicitly called for other threads. For details, see <a class="el" href="api_files_c.html#apiFilesC_client">Client-specific Functions</a>.</p>
+<p>This function is created automatically. </p>
+</div>
+</div>
+<a class="anchor" id="a5106468b3ff13d029ed868c13e297c7a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void appSmack_DisconnectService </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Disconnect the current client thread from the service providing this API.</p>
+<p>Normally, this function doesn't need to be called. After this function is called, there's no longer a connection to the service, and the functions in this API can't be used. For details, see <a class="el" href="api_files_c.html#apiFilesC_client">Client-specific Functions</a>.</p>
+<p>This function is created automatically. </p>
+</div>
+</div>
+<a class="anchor" id="aa9283290ed50347a040dcd88997088ae"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void appSmack_GetAccessLabel </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>appName</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="app_smack__interface_8h.html#a333d2301d2d23e6b74bd6bb9b383aa3d">appSmack_AccessFlags_t</a> </td>
+<td class="paramname"><em>accessMode</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">char * </td>
+<td class="paramname"><em>label</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>labelNumElements</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get's the application's SMACK label with the access mode appended to it as a string. For example, if the accessMode is ACCESS_FLAG_READ | ACCESS_FLAG_WRITE then "rw" will be appended to the application's SMACK label. If the accessMode is 0 (empty) then "-" will be appended to the app's SMACK label.</p>
+<dl class="section note"><dt>Note</dt><dd>The application need not be installed for this function to succeed.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>This function will kill the client if there is an error. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">appName</td><td>Application name </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">accessMode</td><td>Access mode flags </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">label</td><td>SMACK label for the application </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">labelNumElements</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="adb46c9612a7e4af419e8144e6567c2fd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void appSmack_GetLabel </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>appName</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">char * </td>
+<td class="paramname"><em>label</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>labelNumElements</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the application's SMACK label.</p>
+<dl class="section note"><dt>Note</dt><dd>The app doesn't need to be installed for this function to succeed.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>This function will kill the client if there is an error. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">appName</td><td>Application name </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">label</td><td>SMACK label for the application </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">labelNumElements</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

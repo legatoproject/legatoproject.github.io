@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Semaphore API  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">Semaphore API </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p><a class="el" href="le__semaphore_8h.html">API Reference</a></p>
+<hr />
+<p> This API provides standard semaphore functionality, but with added diagnostic capabilities. These semaphores can only be shared by threads within the same process.</p>
+<p>Semaphores can wait (decrease value by one) and post (increase value by one).</p>
+<p>In Legato, semaphores are dynamically allocated objects.</p>
+<h1><a class="anchor" id="create_semaphore"></a>
+Creating a Semaphore</h1>
+<p><a class="el" href="le__semaphore_8h.html#add9fab5440abcff5a8bc3b8bd1126d99">le_sem_Create()</a> creates a semaphore, returning a reference to it (of type le_sem_Ref_t).</p>
+<p>All semaphores have names. This is required for diagnostic purposes. See <a class="el" href="c_semaphore.html#diagnostics_semaphore">Diagnostics</a> below.</p>
+<h1><a class="anchor" id="use_semaphore"></a>
+Using a Semaphore</h1>
+<p>Functions to increase and decrease semaphores are:</p><ul>
+<li><code><a class="el" href="le__semaphore_8h.html#abb859411cc58fbcc576c986ef52083b2">le_sem_Post()</a></code> </li>
+<li><code><a class="el" href="le__semaphore_8h.html#aecdf87fe330dd008771b7530edbb1f2b">le_sem_Wait()</a></code> </li>
+<li><code><a class="el" href="le__semaphore_8h.html#a6a6c435042dd37a3c78ebbab6ec72689">le_sem_TryWait()</a></code> </li>
+<li><code><a class="el" href="le__semaphore_8h.html#a14475f0c2f5483427279d39220f55eaa">le_sem_WaitWithTimeOut()</a></code> </li>
+</ul>
+<p>Function to get a semaphore's current value is:</p><ul>
+<li><code><a class="el" href="le__semaphore_8h.html#ac4858ccb0ba748ca463bb29807b75c05">le_sem_GetValue()</a></code> </li>
+</ul>
+<h1><a class="anchor" id="delete_semaphore"></a>
+Deleting a Semaphore</h1>
+<p>When you are finished with a semaphore, you must delete it by calling <a class="el" href="le__semaphore_8h.html#a96361b126f59934354ca17bf8b74b8f6">le_sem_Delete()</a>.</p>
+<p>There must not be anything using the semaphore when it is deleted (i.e., no one can be waiting on it).</p>
+<h1><a class="anchor" id="diagnostics_semaphore"></a>
+Diagnostics</h1>
+<p>The command-line <a class="el" href="tools_target_inspect.html">inspect</a> tool can be used to list the semaphores that currently exist inside a given process. The state of each semaphore can be seen, including a list of any threads that might be waiting for that semaphore.</p>
+<hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

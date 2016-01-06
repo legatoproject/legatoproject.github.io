@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Sample code for SIM Identification  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">Sample code for SIM Identification </h1> </div>
+</div><div class="contents">
+<div class="textblock"><div class="fragment"><div class="line"><span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><span class="keywordtype">void</span> Print</div><div class="line">(</div><div class="line"> <span class="keywordtype">char</span>* <span class="keywordtype">string</span></div><div class="line">)</div><div class="line">{</div><div class="line"> <span class="keywordtype">bool</span> sandboxed = (getuid() != 0);</div><div class="line"></div><div class="line"> <span class="keywordflow">if</span>(sandboxed)</div><div class="line">    {</div><div class="line"> <a class="code" href="le__log_8h.html#a4ebab29f40ee8eaaa87205fe3f9aaa13">LE_INFO</a>(<span class="stringliteral">"%s"</span>, <span class="keywordtype">string</span>);</div><div class="line">    }</div><div class="line"> <span class="keywordflow">else</span></div><div class="line">    {</div><div class="line">        fprintf(stderr, <span class="stringliteral">"%s\n"</span>, <span class="keywordtype">string</span>);</div><div class="line">    }</div><div class="line">}</div></div><!-- fragment --><div class="fragment"><div class="line"><span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><span class="keywordtype">void</span> simTest_Create</div><div class="line">(</div><div class="line"> <a class="code" href="le__sim__interface_8h.html#aace49df88426119626fb1ef4e544ccdd">le_sim_Id_t</a> simId,</div><div class="line"> <span class="keyword">const</span> <span class="keywordtype">char</span>* pinPtr</div><div class="line">)</div><div class="line">{</div><div class="line"> <span class="keywordtype">bool</span>            presence = <span class="keyword">false</span>;</div><div class="line"> <span class="keywordtype">char</span>            iccid[<a class="code" href="le__sim__interface_8h.html#a70c33c93f96c8376220b123909654d61">LE_SIM_ICCID_BYTES</a>] = {0};</div><div class="line"> <span class="keywordtype">char</span>            imsi[<a class="code" href="le__sim__interface_8h.html#af25612258426b8b806ab4128e5b055b6">LE_SIM_IMSI_BYTES</a>] = {0};</div><div class="line"> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a>     res;</div><div class="line"></div><div class="line"> <span class="comment">// Enter PIN code</span></div><div class="line">    res = <a class="code" href="le__sim__interface_8h.html#a7d9de57c8931013432cd41b26d1e7585">le_sim_EnterPIN</a>(simId, pinPtr);</div><div class="line"> <a class="code" href="le__log_8h.html#ac0dbbef91dc0fed449d0092ff0557b39">LE_ASSERT</a>(res==LE_OK);</div><div class="line"></div><div class="line"> <span class="comment">// Get ICCID</span></div><div class="line">    res = <a class="code" href="le__sim__interface_8h.html#a90cbc71edc9bee227502f3836f5fa117">le_sim_GetICCID</a>(simId, iccid, <span class="keyword">sizeof</span>(iccid));</div><div class="line"> <a class="code" href="le__log_8h.html#ac0dbbef91dc0fed449d0092ff0557b39">LE_ASSERT</a>(res==LE_OK);</div><div class="line">    Print( iccid );</div><div class="line"></div><div class="line"> <span class="comment">// Get IMSI</span></div><div class="line">    res = <a class="code" href="le__sim__interface_8h.html#aedcba6023de6b7ec0a2cf3d2ca725b49">le_sim_GetIMSI</a>(simId, imsi, <span class="keyword">sizeof</span>(imsi));</div><div class="line"> <a class="code" href="le__log_8h.html#ac0dbbef91dc0fed449d0092ff0557b39">LE_ASSERT</a>(res==LE_OK);</div><div class="line">    Print( imsi );</div><div class="line"></div><div class="line"> <span class="comment">// Check if SIM present</span></div><div class="line">    presence = <a class="code" href="le__sim__interface_8h.html#aa3255a29cec4358c5e0d68b9ac62ff88">le_sim_IsPresent</a>(simId);</div><div class="line"> <a class="code" href="le__log_8h.html#ac0dbbef91dc0fed449d0092ff0557b39">LE_ASSERT</a>(presence);</div><div class="line">}</div></div><!-- fragment --></div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

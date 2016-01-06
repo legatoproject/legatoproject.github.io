@@ -1,0 +1,615 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>le_fileLock.h File Reference - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Reference.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a href="build_apps_documentation.html">Documentation</a><a class="link-selected" href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="summary">
+<a href="#enum-members">Enumerations</a> |
+<a href="#func-members">Functions</a> </div>
+<div class="headertitle">
+<h1 class="title">le_fileLock.h File Reference</h1> </div>
+</div><div class="contents">
+<p><a href="le__file_lock_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a5e5400e33a5e10b7c624748a9ce11280"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__file_lock_8h.html#a5e5400e33a5e10b7c624748a9ce11280">le_flock_AccessMode_t</a> { <br />
+  <a class="el" href="le__file_lock_8h.html#a5e5400e33a5e10b7c624748a9ce11280a887421ec0def966e3ffc65e6bde1f1fc">LE_FLOCK_READ</a>, 
+<a class="el" href="le__file_lock_8h.html#a5e5400e33a5e10b7c624748a9ce11280a058867728a1de4773023f009c2934188">LE_FLOCK_WRITE</a>, 
+<a class="el" href="le__file_lock_8h.html#a5e5400e33a5e10b7c624748a9ce11280adbaa029b7f107f436b170f7c5035420f">LE_FLOCK_APPEND</a>, 
+<a class="el" href="le__file_lock_8h.html#a5e5400e33a5e10b7c624748a9ce11280ac7513bddc0e05c2fff33b25cdd7c73ec">LE_FLOCK_READ_AND_WRITE</a>, 
+<br />
+  <a class="el" href="le__file_lock_8h.html#a5e5400e33a5e10b7c624748a9ce11280ab92a5dd07207a051c58d0bddafa34bf8">LE_FLOCK_READ_AND_APPEND</a>
+<br />
+ }</td></tr>
+<tr class="separator:a5e5400e33a5e10b7c624748a9ce11280"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a35d8c575df68d1da52a1048916f7e7d9"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__file_lock_8h.html#a35d8c575df68d1da52a1048916f7e7d9">le_flock_CreateMode_t</a> { <a class="el" href="le__file_lock_8h.html#a35d8c575df68d1da52a1048916f7e7d9a1bc49344dc291a19f7860fc850376153">LE_FLOCK_OPEN_IF_EXIST</a>, 
+<a class="el" href="le__file_lock_8h.html#a35d8c575df68d1da52a1048916f7e7d9a73c2002338a96be2845fece4bedc1006">LE_FLOCK_REPLACE_IF_EXIST</a>, 
+<a class="el" href="le__file_lock_8h.html#a35d8c575df68d1da52a1048916f7e7d9abc9e73482c03ad0dddf99cf85dba79ad">LE_FLOCK_FAIL_IF_EXIST</a>
+ }</td></tr>
+<tr class="separator:a35d8c575df68d1da52a1048916f7e7d9"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:aac3e11a6f7f363d29b8dbb1eb6c2c287"><td align="right" class="memItemLeft" valign="top">int </td><td class="memItemRight" valign="bottom"><a class="el" href="le__file_lock_8h.html#aac3e11a6f7f363d29b8dbb1eb6c2c287">le_flock_Open</a> (const char *pathNamePtr, <a class="el" href="le__file_lock_8h.html#a5e5400e33a5e10b7c624748a9ce11280">le_flock_AccessMode_t</a> accessMode)</td></tr>
+<tr class="separator:aac3e11a6f7f363d29b8dbb1eb6c2c287"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a8fdca3e28190ef85e4457ebf009410b5"><td align="right" class="memItemLeft" valign="top">int </td><td class="memItemRight" valign="bottom"><a class="el" href="le__file_lock_8h.html#a8fdca3e28190ef85e4457ebf009410b5">le_flock_Create</a> (const char *pathNamePtr, <a class="el" href="le__file_lock_8h.html#a5e5400e33a5e10b7c624748a9ce11280">le_flock_AccessMode_t</a> accessMode, <a class="el" href="le__file_lock_8h.html#a35d8c575df68d1da52a1048916f7e7d9">le_flock_CreateMode_t</a> createMode, mode_t permissions)</td></tr>
+<tr class="separator:a8fdca3e28190ef85e4457ebf009410b5"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:add7b73f75a8e7956a397081987458590"><td align="right" class="memItemLeft" valign="top">int </td><td class="memItemRight" valign="bottom"><a class="el" href="le__file_lock_8h.html#add7b73f75a8e7956a397081987458590">le_flock_TryOpen</a> (const char *pathNamePtr, <a class="el" href="le__file_lock_8h.html#a5e5400e33a5e10b7c624748a9ce11280">le_flock_AccessMode_t</a> accessMode)</td></tr>
+<tr class="separator:add7b73f75a8e7956a397081987458590"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a4f7b134b467adb749401f2ef2ccd92d2"><td align="right" class="memItemLeft" valign="top">int </td><td class="memItemRight" valign="bottom"><a class="el" href="le__file_lock_8h.html#a4f7b134b467adb749401f2ef2ccd92d2">le_flock_TryCreate</a> (const char *pathNamePtr, <a class="el" href="le__file_lock_8h.html#a5e5400e33a5e10b7c624748a9ce11280">le_flock_AccessMode_t</a> accessMode, <a class="el" href="le__file_lock_8h.html#a35d8c575df68d1da52a1048916f7e7d9">le_flock_CreateMode_t</a> createMode, mode_t permissions)</td></tr>
+<tr class="separator:a4f7b134b467adb749401f2ef2ccd92d2"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a457a07dbf8967757322f531d5beb10b6"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__file_lock_8h.html#a457a07dbf8967757322f531d5beb10b6">le_flock_Close</a> (int fd)</td></tr>
+<tr class="separator:a457a07dbf8967757322f531d5beb10b6"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ae9a845ef8afe7cb7c4767573a974e5a0"><td align="right" class="memItemLeft" valign="top">FILE * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__file_lock_8h.html#ae9a845ef8afe7cb7c4767573a974e5a0">le_flock_OpenStream</a> (const char *pathNamePtr, <a class="el" href="le__file_lock_8h.html#a5e5400e33a5e10b7c624748a9ce11280">le_flock_AccessMode_t</a> accessMode, <a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> *resultPtr)</td></tr>
+<tr class="separator:ae9a845ef8afe7cb7c4767573a974e5a0"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a6444d5e3d885a7c346cba6993534020b"><td align="right" class="memItemLeft" valign="top">FILE * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__file_lock_8h.html#a6444d5e3d885a7c346cba6993534020b">le_flock_CreateStream</a> (const char *pathNamePtr, <a class="el" href="le__file_lock_8h.html#a5e5400e33a5e10b7c624748a9ce11280">le_flock_AccessMode_t</a> accessMode, <a class="el" href="le__file_lock_8h.html#a35d8c575df68d1da52a1048916f7e7d9">le_flock_CreateMode_t</a> createMode, mode_t permissions, <a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> *resultPtr)</td></tr>
+<tr class="separator:a6444d5e3d885a7c346cba6993534020b"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aa4712b501c620401a3f269c5cb34d91a"><td align="right" class="memItemLeft" valign="top">FILE * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__file_lock_8h.html#aa4712b501c620401a3f269c5cb34d91a">le_flock_TryOpenStream</a> (const char *pathNamePtr, <a class="el" href="le__file_lock_8h.html#a5e5400e33a5e10b7c624748a9ce11280">le_flock_AccessMode_t</a> accessMode, <a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> *resultPtr)</td></tr>
+<tr class="separator:aa4712b501c620401a3f269c5cb34d91a"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aa1c3c10f1f72a5541f31855b5c2eed98"><td align="right" class="memItemLeft" valign="top">FILE * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__file_lock_8h.html#aa1c3c10f1f72a5541f31855b5c2eed98">le_flock_TryCreateStream</a> (const char *pathNamePtr, <a class="el" href="le__file_lock_8h.html#a5e5400e33a5e10b7c624748a9ce11280">le_flock_AccessMode_t</a> accessMode, <a class="el" href="le__file_lock_8h.html#a35d8c575df68d1da52a1048916f7e7d9">le_flock_CreateMode_t</a> createMode, mode_t permissions, <a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> *resultPtr)</td></tr>
+<tr class="separator:aa1c3c10f1f72a5541f31855b5c2eed98"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a8cd7aad1d732c6719097daf0359bf32f"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__file_lock_8h.html#a8cd7aad1d732c6719097daf0359bf32f">le_flock_CloseStream</a> (FILE *fileStreamPtr)</td></tr>
+<tr class="separator:a8cd7aad1d732c6719097daf0359bf32f"><td class="memSeparator" colspan="2"> </td></tr>
+</table>
+<a id="details" name="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Legato <a class="el" href="c_flock.html">File Locking API</a> include file.</p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div><h2 class="groupheader">Enumeration Type Documentation</h2>
+<a class="anchor" id="a5e5400e33a5e10b7c624748a9ce11280"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="le__file_lock_8h.html#a5e5400e33a5e10b7c624748a9ce11280">le_flock_AccessMode_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>File access modes.</p>
+<dl class="section note"><dt>Note</dt><dd>When writing to a file, the writes are always appended to the end of the file by default. When reading from a file, the reads always starts at the beginning of the file by default. </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a5e5400e33a5e10b7c624748a9ce11280a887421ec0def966e3ffc65e6bde1f1fc"></a>LE_FLOCK_READ </td><td class="fielddoc">
+<p>Opens the file for reading. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a5e5400e33a5e10b7c624748a9ce11280a058867728a1de4773023f009c2934188"></a>LE_FLOCK_WRITE </td><td class="fielddoc">
+<p>Opens the file for writing. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a5e5400e33a5e10b7c624748a9ce11280adbaa029b7f107f436b170f7c5035420f"></a>LE_FLOCK_APPEND </td><td class="fielddoc">
+<p>Opens the file for writing. Writes will be appended to the end of the file. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a5e5400e33a5e10b7c624748a9ce11280ac7513bddc0e05c2fff33b25cdd7c73ec"></a>LE_FLOCK_READ_AND_WRITE </td><td class="fielddoc">
+<p>Opens the file for reading and writing. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a5e5400e33a5e10b7c624748a9ce11280ab92a5dd07207a051c58d0bddafa34bf8"></a>LE_FLOCK_READ_AND_APPEND </td><td class="fielddoc">
+<p>Opens the file for reading and writing. Writes will be appended to the end of the file. </p>
+</td></tr>
+</table>
+</div>
+</div>
+<a class="anchor" id="a35d8c575df68d1da52a1048916f7e7d9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="le__file_lock_8h.html#a35d8c575df68d1da52a1048916f7e7d9">le_flock_CreateMode_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>File creation modes specify the action to take when creating a file that already exists. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a35d8c575df68d1da52a1048916f7e7d9a1bc49344dc291a19f7860fc850376153"></a>LE_FLOCK_OPEN_IF_EXIST </td><td class="fielddoc">
+<p>Opens the file if it already exists. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a35d8c575df68d1da52a1048916f7e7d9a73c2002338a96be2845fece4bedc1006"></a>LE_FLOCK_REPLACE_IF_EXIST </td><td class="fielddoc">
+<p>Replaces the file if it already exists. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a35d8c575df68d1da52a1048916f7e7d9abc9e73482c03ad0dddf99cf85dba79ad"></a>LE_FLOCK_FAIL_IF_EXIST </td><td class="fielddoc">
+<p>Fails if the file already exists. </p>
+</td></tr>
+</table>
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="a457a07dbf8967757322f531d5beb10b6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_flock_Close </td>
+<td>(</td>
+<td class="paramtype">int </td>
+<td class="paramname"><em>fd</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Closes the file and releases the lock. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">fd</td><td>File descriptor of the file to close. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a8cd7aad1d732c6719097daf0359bf32f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_flock_CloseStream </td>
+<td>(</td>
+<td class="paramtype">FILE * </td>
+<td class="paramname"><em>fileStreamPtr</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Closes the file stream and releases the lock. </p>
+</div>
+</div>
+<a class="anchor" id="a8fdca3e28190ef85e4457ebf009410b5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">int le_flock_Create </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>pathNamePtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="le__file_lock_8h.html#a5e5400e33a5e10b7c624748a9ce11280">le_flock_AccessMode_t</a> </td>
+<td class="paramname"><em>accessMode</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="le__file_lock_8h.html#a35d8c575df68d1da52a1048916f7e7d9">le_flock_CreateMode_t</a> </td>
+<td class="paramname"><em>createMode</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">mode_t </td>
+<td class="paramname"><em>permissions</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Creates, opens and locks file.</p>
+<p>If the file does not exist, it will be created with the file permissions specified in the arugment permissions (modified by the process's umask). Refer to the POSIX function open(2) for details of mode_t:</p>
+<p><a href="http://man7.org/linux/man-pages/man2/open.2.html">http://man7.org/linux/man-pages/man2/open.2.html</a></p>
+<p>If the file already exists, then this function will either replace the existing file, open the existing file or fail depending on the createMode argument. The permissions argument is ignored if the file already exists.</p>
+<p>The file can be opened for reading, writing or both as specified in the accessMode argument. If accessMode is either LE_FLOCK_WRITE or LE_FLOCK_READ_AND_WRITE, a write lock will be placed on the file, otherwise a read lock will be placed on the file.</p>
+<p>If attempting to lock a file that already has an incompatible lock on it, this function will block until the lock can be obtained. This function may block even if it creates the file because creating the file and locking it is not atomic.</p>
+<dl class="section return"><dt>Returns</dt><dd>File descriptor to the file specified in pathNamePtr. LE_DUPLICATE if the file already exists and LE_FLOCK_FAIL_IF_EXIST is specified in createMode LE_FAULT if there was an error. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">pathNamePtr</td><td>Pointer to the path name of the file to open. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">accessMode</td><td>Access mode to open the file. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">createMode</td><td>Action to take if the file already exists. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">permissions</td><td>File permissions used when creating the file. See the function header comments for more details. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a6444d5e3d885a7c346cba6993534020b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">FILE* le_flock_CreateStream </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>pathNamePtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="le__file_lock_8h.html#a5e5400e33a5e10b7c624748a9ce11280">le_flock_AccessMode_t</a> </td>
+<td class="paramname"><em>accessMode</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="le__file_lock_8h.html#a35d8c575df68d1da52a1048916f7e7d9">le_flock_CreateMode_t</a> </td>
+<td class="paramname"><em>createMode</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">mode_t </td>
+<td class="paramname"><em>permissions</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> * </td>
+<td class="paramname"><em>resultPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a file, locks it and opens a C standard library buffered file stream to it.</p>
+<p>If the file does not exist it will be created with the file permissions specified in the arugment permissions (modified by the process's umask). Refer to the POSIX function open(2) for details of mode_t:</p>
+<p><a href="http://man7.org/linux/man-pages/man2/open.2.html">http://man7.org/linux/man-pages/man2/open.2.html</a></p>
+<p>If the file already exists then this function will either replace the existing file, open the existing file or fail depending on the createMode argument.</p>
+<p>The file can be opened for reading, writing or both as specified in the accessMode argument. If accessMode is either LE_FLOCK_WRITE or LE_FLOCK_READ_AND_WRITE then a write lock will be placed on the file, otherwise a read lock will be placed on the file.</p>
+<p>If attempting to lock a file that already has an incompatible lock on it this function will block until the lock can be obtained. This function may block even if it creates the file because creating the file and locking it is not atomic.</p>
+<p>If there was an error NULL is returned and resultPtr is set to:</p><ul>
+<li>LE_DUPLICATE if the file already exists and LE_FLOCK_FAIL_IF_EXIST is specified in createMode.</li>
+<li>LE_FAULT if there was an error.</li>
+</ul>
+<dl class="section return"><dt>Returns</dt><dd>Buffered file stream handle to the file if successful. NULL if there was an error. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">pathNamePtr</td><td>Pointer to the path name of the file to open. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">accessMode</td><td>Access mode to open the file. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">createMode</td><td>Action to take if the file already exists. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">permissions</td><td>File permissions used when creating the file. See the function header comments for more details. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">resultPtr</td><td>Pointer to result code. This can be NULL if the result code is not wanted. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="aac3e11a6f7f363d29b8dbb1eb6c2c287"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">int le_flock_Open </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>pathNamePtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="le__file_lock_8h.html#a5e5400e33a5e10b7c624748a9ce11280">le_flock_AccessMode_t</a> </td>
+<td class="paramname"><em>accessMode</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Opens and locks an existing file.</p>
+<p>The file can be open for reading, writing or both as specified in the accessMode argument. If accessMode is either LE_FLOCK_WRITE or LE_FLOCK_READ_AND_WRITE then a write lock will be placed on the file, otherwise a read lock will be placed on the file.</p>
+<p>If attempting to lock a file that already has an incompatible lock on it this function will block until the lock can be obtained.</p>
+<dl class="section return"><dt>Returns</dt><dd>File descriptor to the file specified in pathNamePtr. LE_NOT_FOUND if the file does not exist. LE_FAULT if there was an error. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">pathNamePtr</td><td>Pointer to the path name of the file to open. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">accessMode</td><td>Access mode to open the file. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ae9a845ef8afe7cb7c4767573a974e5a0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">FILE* le_flock_OpenStream </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>pathNamePtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="le__file_lock_8h.html#a5e5400e33a5e10b7c624748a9ce11280">le_flock_AccessMode_t</a> </td>
+<td class="paramname"><em>accessMode</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> * </td>
+<td class="paramname"><em>resultPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Locks an existing file and opens a C standard library buffered file stream to it.</p>
+<p>The file can be open for reading, writing or both read and write as specified in the accessMode argument. If accessMode is either LE_FLOCK_WRITE or LE_FLOCK_READ_AND_WRITE then a write lock will be placed on the file, otherwise a read lock will be placed on the file.</p>
+<p>If attempting to lock a file that already has an incompatible lock on it, this function will block until the lock can be obtained.</p>
+<p>If there was an error NULL is returned and resultPtr is set to:</p><ul>
+<li>LE_NOT_FOUND if the file does not exist.</li>
+<li>LE_FAULT if there was an error.</li>
+</ul>
+<dl class="section return"><dt>Returns</dt><dd>Buffered file stream handle to the file if successful. NULL if there was an error. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">pathNamePtr</td><td>Pointer to the path name of the file to open. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">accessMode</td><td>Access mode to open the file. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">resultPtr</td><td>Pointer to result code. This can be NULL if the result code is not wanted. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a4f7b134b467adb749401f2ef2ccd92d2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">int le_flock_TryCreate </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>pathNamePtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="le__file_lock_8h.html#a5e5400e33a5e10b7c624748a9ce11280">le_flock_AccessMode_t</a> </td>
+<td class="paramname"><em>accessMode</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="le__file_lock_8h.html#a35d8c575df68d1da52a1048916f7e7d9">le_flock_CreateMode_t</a> </td>
+<td class="paramname"><em>createMode</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">mode_t </td>
+<td class="paramname"><em>permissions</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Creates, opens and locks file.</p>
+<p>If the file does not exist, it will be created with the file permissions specified in the argument permissions (modified by the process's umask). Refer to the POSIX function open(2) for details of mode_t:</p>
+<p><a href="http://man7.org/linux/man-pages/man2/open.2.html">http://man7.org/linux/man-pages/man2/open.2.html</a></p>
+<p>If the file already exists, this function will either replace the existing file, open the existing file or fail depending on the createMode argument. The permissions argument is ignored if the file already exists.</p>
+<p>The file can be opened for reading, writing or both as specified in the accessMode argument. f accessMode is either LE_FLOCK_WRITE or LE_FLOCK_READ_AND_WRITE, a write lock will be placed on the file, otherwise a read lock will be placed on the file.</p>
+<p>If attempting to lock a file that already has an incompatible lock on it, this function will fail and return LE_WOULD_BLOCK immediately. This function may fail with LE_WOULD_BLOCK even if it creates the file because creating the file and locking it is not atomic.</p>
+<dl class="section return"><dt>Returns</dt><dd>File descriptor to the file specified in pathNamePtr. LE_DUPLICATE if the file already exists and LE_FLOCK_FAIL_IF_EXIST is specified in createMode LE_WOULD_BLOCK if there is already an incompatible lock on the file. LE_FAULT if there was an error. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">pathNamePtr</td><td>Pointer to the path name of the file to open. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">accessMode</td><td>Access mode to open the file. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">createMode</td><td>Action to take if the file already exists. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">permissions</td><td>File permissions used when creating the file. See the function header comments for more details. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="aa1c3c10f1f72a5541f31855b5c2eed98"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">FILE* le_flock_TryCreateStream </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>pathNamePtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="le__file_lock_8h.html#a5e5400e33a5e10b7c624748a9ce11280">le_flock_AccessMode_t</a> </td>
+<td class="paramname"><em>accessMode</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="le__file_lock_8h.html#a35d8c575df68d1da52a1048916f7e7d9">le_flock_CreateMode_t</a> </td>
+<td class="paramname"><em>createMode</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">mode_t </td>
+<td class="paramname"><em>permissions</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> * </td>
+<td class="paramname"><em>resultPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Creates a file, locks it and opens a C standard library buffered file stream to it.</p>
+<p>If the file does not exist, it will be created with the file permissions specified in the arugment permissions (modified by the process's umask). Refer to the POSIX function open(2) for details of mode_t:</p>
+<p><a href="http://man7.org/linux/man-pages/man2/open.2.html">http://man7.org/linux/man-pages/man2/open.2.html</a></p>
+<p>If the file already exists, this function will either replace the existing file, open the existing file or fail depending on the createMode argument.</p>
+<p>The file can be opened for reading, writing or both as specified in the accessMode argument. If accessMode is either LE_FLOCK_WRITE or LE_FLOCK_READ_AND_WRITE then a write lock will be placed on the file, otherwise a read lock will be placed on the file.</p>
+<p>If attempting to lock a file that already has an incompatible lock on it, this function will return NULL immediately and set resultPtr to LE_WOULD_BLOCK. This function may fail with LE_WOULD_BLOCK even if it creates the file because creating the file and locking it is not atomic.</p>
+<p>If there was an error NULL is returned and resultPtr is set to:</p><ul>
+<li>LE_DUPLICATE if the file already exists and LE_FLOCK_FAIL_IF_EXIST is specified in createMode.</li>
+<li>LE_WOULD_BLOCK if there is already an incompatible lock on the file.</li>
+<li>LE_FAULT if there was an error.</li>
+</ul>
+<dl class="section return"><dt>Returns</dt><dd>Buffered file stream handle to the file if successful. NULL if there was an error. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">pathNamePtr</td><td>Pointer to the path name of the file to open. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">accessMode</td><td>Access mode to open the file. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">createMode</td><td>Action to take if the file already exists. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">permissions</td><td>File permissions used when creating the file. See the function header comments for more details. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">resultPtr</td><td>Pointer to result code. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="add7b73f75a8e7956a397081987458590"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">int le_flock_TryOpen </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>pathNamePtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="le__file_lock_8h.html#a5e5400e33a5e10b7c624748a9ce11280">le_flock_AccessMode_t</a> </td>
+<td class="paramname"><em>accessMode</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Opens and locks an existing file.</p>
+<p>The file can be open for reading, writing or both as specified in the accessMode argument. If accessMode is either LE_FLOCK_WRITE or LE_FLOCK_READ_AND_WRITE, a write lock will be placed on the file, otherwise a read lock will be placed on the file.</p>
+<p>If attempting to lock a file that already has an incompatible lock on it, this function will fail and return LE_WOULD_BLOCK immediately.</p>
+<dl class="section return"><dt>Returns</dt><dd>File descriptor to the file specified in pathNamePtr. LE_NOT_FOUND if the file does not exist. LE_WOULD_BLOCK if there is already an incompatible lock on the file. LE_FAULT if there was an error. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">pathNamePtr</td><td>Pointer to the path name of the file to open. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">accessMode</td><td>Access mode to open the file. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="aa4712b501c620401a3f269c5cb34d91a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">FILE* le_flock_TryOpenStream </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>pathNamePtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="le__file_lock_8h.html#a5e5400e33a5e10b7c624748a9ce11280">le_flock_AccessMode_t</a> </td>
+<td class="paramname"><em>accessMode</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> * </td>
+<td class="paramname"><em>resultPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Locks an existing file and opens a C standard library buffered file stream to it.</p>
+<p>The file can be open for reading, writing or both read and write as specified in the accessMode argument. If accessMode is either LE_FLOCK_WRITE or LE_FLOCK_READ_AND_WRITE then a write lock will be placed on the file, otherwise a read lock will be placed on the file.</p>
+<p>If attempting to lock a file that already has an incompatible lock on it, this function will return NULL immediately and set resultPtr to LE_WOULD_BLOCK.</p>
+<p>If there was an error NULL is returned and resultPtr is set to:</p><ul>
+<li>LE_NOT_FOUND if the file does not exist.</li>
+<li>LE_WOULD_BLOCK if there is already an incompatible lock on the file.</li>
+<li>LE_FAULT if there was an error.</li>
+</ul>
+<dl class="section return"><dt>Returns</dt><dd>Buffered file stream handle to the file if successful. NULL if there was an error. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">pathNamePtr</td><td>Pointer to the path name of the file to open. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">accessMode</td><td>Access mode to open the file. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">resultPtr</td><td>Pointer to result code. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

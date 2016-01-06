@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>le_mutex.h - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Reference.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a href="build_apps_documentation.html">Documentation</a><a class="link-selected" href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">le_mutex.h</h1> </div>
+</div><div class="contents">
+<a href="le__mutex_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span> </div><div class="line"><a name="l00078"></a><span class="lineno">   78</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><a name="l00086"></a><span class="lineno">   86</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><a name="l00087"></a><span class="lineno">   87</span> </div><div class="line"><a name="l00088"></a><span class="lineno">   88</span> <span class="preprocessor">#ifndef LEGATO_MUTEX_INCLUDE_GUARD</span></div><div class="line"><a name="l00089"></a><span class="lineno">   89</span> <span class="preprocessor">#define LEGATO_MUTEX_INCLUDE_GUARD</span></div><div class="line"><a name="l00090"></a><span class="lineno">   90</span> </div><div class="line"><a name="l00091"></a><span class="lineno">   91</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><a name="l00095"></a><span class="lineno">   95</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="le__mutex_8h.html#ab2af11e2077e6bed9962eb7dfd54eb03">   96</a></span> <span class="keyword">typedef</span> <span class="keyword">struct </span>le_mutex* <a class="code" href="le__mutex_8h.html#ab2af11e2077e6bed9962eb7dfd54eb03">le_mutex_Ref_t</a>;</div><div class="line"><a name="l00097"></a><span class="lineno">   97</span> </div><div class="line"><a name="l00098"></a><span class="lineno">   98</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><a name="l00106"></a><span class="lineno">  106</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><a name="l00107"></a><span class="lineno">  107</span> <a class="code" href="le__mutex_8h.html#ab2af11e2077e6bed9962eb7dfd54eb03">le_mutex_Ref_t</a> <a class="code" href="le__mutex_8h.html#ac7dd2b69f4b905d56df969c9085a570b">le_mutex_CreateRecursive</a></div><div class="line"><a name="l00108"></a><span class="lineno">  108</span> (</div><div class="line"><a name="l00109"></a><span class="lineno">  109</span>     <span class="keyword">const</span> <span class="keywordtype">char</span>* nameStr     </div><div class="line"><a name="l00110"></a><span class="lineno">  110</span> );</div><div class="line"><a name="l00111"></a><span class="lineno">  111</span> </div><div class="line"><a name="l00112"></a><span class="lineno">  112</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><a name="l00120"></a><span class="lineno">  120</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><a name="l00121"></a><span class="lineno">  121</span> <a class="code" href="le__mutex_8h.html#ab2af11e2077e6bed9962eb7dfd54eb03">le_mutex_Ref_t</a> <a class="code" href="le__mutex_8h.html#a602e2c18e646db7af0d68bb5fb103207">le_mutex_CreateNonRecursive</a></div><div class="line"><a name="l00122"></a><span class="lineno">  122</span> (</div><div class="line"><a name="l00123"></a><span class="lineno">  123</span>     <span class="keyword">const</span> <span class="keywordtype">char</span>* nameStr     </div><div class="line"><a name="l00124"></a><span class="lineno">  124</span> );</div><div class="line"><a name="l00125"></a><span class="lineno">  125</span> </div><div class="line"><a name="l00126"></a><span class="lineno">  126</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><a name="l00132"></a><span class="lineno">  132</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><a name="l00133"></a><span class="lineno">  133</span> <span class="keywordtype">void</span> <a class="code" href="le__mutex_8h.html#a38571fa1d9c15d5f30ea9c480d8810c6">le_mutex_Delete</a></div><div class="line"><a name="l00134"></a><span class="lineno">  134</span> (</div><div class="line"><a name="l00135"></a><span class="lineno">  135</span>     <a class="code" href="le__mutex_8h.html#ab2af11e2077e6bed9962eb7dfd54eb03">le_mutex_Ref_t</a>    mutexRef   </div><div class="line"><a name="l00136"></a><span class="lineno">  136</span> );</div><div class="line"><a name="l00137"></a><span class="lineno">  137</span> </div><div class="line"><a name="l00138"></a><span class="lineno">  138</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><a name="l00144"></a><span class="lineno">  144</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><a name="l00145"></a><span class="lineno">  145</span> <span class="keywordtype">void</span> <a class="code" href="le__mutex_8h.html#ad5b7d94710f420cd945229648e7a80e7">le_mutex_Lock</a></div><div class="line"><a name="l00146"></a><span class="lineno">  146</span> (</div><div class="line"><a name="l00147"></a><span class="lineno">  147</span>     <a class="code" href="le__mutex_8h.html#ab2af11e2077e6bed9962eb7dfd54eb03">le_mutex_Ref_t</a>    mutexRef   </div><div class="line"><a name="l00148"></a><span class="lineno">  148</span> );</div><div class="line"><a name="l00149"></a><span class="lineno">  149</span> </div><div class="line"><a name="l00150"></a><span class="lineno">  150</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><a name="l00160"></a><span class="lineno">  160</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><a name="l00161"></a><span class="lineno">  161</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__mutex_8h.html#a43864999f70f0a825cf8ca87f9a2ee2c">le_mutex_TryLock</a></div><div class="line"><a name="l00162"></a><span class="lineno">  162</span> (</div><div class="line"><a name="l00163"></a><span class="lineno">  163</span>     <a class="code" href="le__mutex_8h.html#ab2af11e2077e6bed9962eb7dfd54eb03">le_mutex_Ref_t</a>    mutexRef   </div><div class="line"><a name="l00164"></a><span class="lineno">  164</span> );</div><div class="line"><a name="l00165"></a><span class="lineno">  165</span> </div><div class="line"><a name="l00166"></a><span class="lineno">  166</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><a name="l00172"></a><span class="lineno">  172</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><a name="l00173"></a><span class="lineno">  173</span> <span class="keywordtype">void</span> <a class="code" href="le__mutex_8h.html#aae68b71222e20c55ff3bf2d7b52e3009">le_mutex_Unlock</a></div><div class="line"><a name="l00174"></a><span class="lineno">  174</span> (</div><div class="line"><a name="l00175"></a><span class="lineno">  175</span>     <a class="code" href="le__mutex_8h.html#ab2af11e2077e6bed9962eb7dfd54eb03">le_mutex_Ref_t</a>    mutexRef   </div><div class="line"><a name="l00176"></a><span class="lineno">  176</span> );</div><div class="line"><a name="l00177"></a><span class="lineno">  177</span> </div><div class="line"><a name="l00178"></a><span class="lineno">  178</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><a name="l00198"></a><span class="lineno">  198</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><a name="l00199"></a><span class="lineno"><a class="line" href="le__mutex_8h.html#a7bada3ca8908be93ba5b393e460f6e80">  199</a></span> <span class="preprocessor">#define LE_MUTEX_DECLARE_REF(refName) \</span></div><div class="line"><a name="l00200"></a><span class="lineno">  200</span> <span class="preprocessor">    static le_mutex_Ref_t refName; \</span></div><div class="line"><a name="l00201"></a><span class="lineno">  201</span> <span class="preprocessor">    static inline void Lock(void) { le_mutex_Lock(refName); } \</span></div><div class="line"><a name="l00202"></a><span class="lineno">  202</span> <span class="preprocessor">    static inline void Unlock(void) { le_mutex_Unlock(refName); }</span></div><div class="line"><a name="l00203"></a><span class="lineno">  203</span> </div><div class="line"><a name="l00204"></a><span class="lineno">  204</span> <span class="preprocessor">#endif </span><span class="comment">/* LEGATO_MUTEX_INCLUDE_GUARD */</span><span class="preprocessor"></span></div><div class="ttc" id="le__basics_8h_html_a1cca095ed6ebab24b57a636382a6c86c"><div class="ttname"><a href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a></div><div class="ttdeci">le_result_t</div><div class="ttdef"><b>Definition:</b> le_basics.h:35</div></div>
+<div class="ttc" id="le__mutex_8h_html_ab2af11e2077e6bed9962eb7dfd54eb03"><div class="ttname"><a href="le__mutex_8h.html#ab2af11e2077e6bed9962eb7dfd54eb03">le_mutex_Ref_t</a></div><div class="ttdeci">struct le_mutex * le_mutex_Ref_t</div><div class="ttdef"><b>Definition:</b> le_mutex.h:96</div></div>
+<div class="ttc" id="le__mutex_8h_html_ac7dd2b69f4b905d56df969c9085a570b"><div class="ttname"><a href="le__mutex_8h.html#ac7dd2b69f4b905d56df969c9085a570b">le_mutex_CreateRecursive</a></div><div class="ttdeci">le_mutex_Ref_t le_mutex_CreateRecursive(const char *nameStr)</div></div>
+<div class="ttc" id="le__mutex_8h_html_ad5b7d94710f420cd945229648e7a80e7"><div class="ttname"><a href="le__mutex_8h.html#ad5b7d94710f420cd945229648e7a80e7">le_mutex_Lock</a></div><div class="ttdeci">void le_mutex_Lock(le_mutex_Ref_t mutexRef)</div></div>
+<div class="ttc" id="le__mutex_8h_html_a43864999f70f0a825cf8ca87f9a2ee2c"><div class="ttname"><a href="le__mutex_8h.html#a43864999f70f0a825cf8ca87f9a2ee2c">le_mutex_TryLock</a></div><div class="ttdeci">le_result_t le_mutex_TryLock(le_mutex_Ref_t mutexRef)</div></div>
+<div class="ttc" id="le__mutex_8h_html_a602e2c18e646db7af0d68bb5fb103207"><div class="ttname"><a href="le__mutex_8h.html#a602e2c18e646db7af0d68bb5fb103207">le_mutex_CreateNonRecursive</a></div><div class="ttdeci">le_mutex_Ref_t le_mutex_CreateNonRecursive(const char *nameStr)</div></div>
+<div class="ttc" id="le__mutex_8h_html_a38571fa1d9c15d5f30ea9c480d8810c6"><div class="ttname"><a href="le__mutex_8h.html#a38571fa1d9c15d5f30ea9c480d8810c6">le_mutex_Delete</a></div><div class="ttdeci">void le_mutex_Delete(le_mutex_Ref_t mutexRef)</div></div>
+<div class="ttc" id="le__mutex_8h_html_aae68b71222e20c55ff3bf2d7b52e3009"><div class="ttname"><a href="le__mutex_8h.html#aae68b71222e20c55ff3bf2d7b52e3009">le_mutex_Unlock</a></div><div class="ttdeci">void le_mutex_Unlock(le_mutex_Ref_t mutexRef)</div></div>
+</div><!-- fragment --></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

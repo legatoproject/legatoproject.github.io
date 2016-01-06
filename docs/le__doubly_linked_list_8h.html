@@ -1,0 +1,741 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>le_doublyLinkedList.h File Reference - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Reference.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a href="build_apps_documentation.html">Documentation</a><a class="link-selected" href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="summary">
+<a href="#nested-classes">Data Structures</a> |
+<a href="#define-members">Macros</a> |
+<a href="#func-members">Functions</a> </div>
+<div class="headertitle">
+<h1 class="title">le_doublyLinkedList.h File Reference</h1> </div>
+</div><div class="contents">
+<p><a href="le__doubly_linked_list_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td align="right" class="memItemLeft" valign="top">struct  </td><td class="memItemRight" valign="bottom"><a class="el" href="structle__dls___link__t.html">le_dls_Link_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:"><td align="right" class="memItemLeft" valign="top">struct  </td><td class="memItemRight" valign="bottom"><a class="el" href="structle__dls___list__t.html">le_dls_List_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a68f28b61cdfd004591f24730b4d5a740"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__doubly_linked_list_8h.html#a68f28b61cdfd004591f24730b4d5a740">LE_DLS_LIST_INIT</a>   (<a class="el" href="structle__dls___list__t.html">le_dls_List_t</a>){NULL}</td></tr>
+<tr class="separator:a68f28b61cdfd004591f24730b4d5a740"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a616b17e10af5ce6dcc49e34b6ab927c2"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__doubly_linked_list_8h.html#a616b17e10af5ce6dcc49e34b6ab927c2">LE_DLS_LINK_INIT</a>   (<a class="el" href="structle__dls___link__t.html">le_dls_Link_t</a>){NULL, NULL}</td></tr>
+<tr class="separator:a616b17e10af5ce6dcc49e34b6ab927c2"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a90f9072a55ef0cb573bbdad91e34d368"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__doubly_linked_list_8h.html#a90f9072a55ef0cb573bbdad91e34d368">le_dls_Stack</a> (<a class="el" href="structle__dls___list__t.html">le_dls_List_t</a> *listPtr, <a class="el" href="structle__dls___link__t.html">le_dls_Link_t</a> *newLinkPtr)</td></tr>
+<tr class="separator:a90f9072a55ef0cb573bbdad91e34d368"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a264df63b847a9c485df0bf9050ac5deb"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__doubly_linked_list_8h.html#a264df63b847a9c485df0bf9050ac5deb">le_dls_Queue</a> (<a class="el" href="structle__dls___list__t.html">le_dls_List_t</a> *listPtr, <a class="el" href="structle__dls___link__t.html">le_dls_Link_t</a> *newLinkPtr)</td></tr>
+<tr class="separator:a264df63b847a9c485df0bf9050ac5deb"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ad93394ff686d2fe93f5f4ce73c7034cd"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__doubly_linked_list_8h.html#ad93394ff686d2fe93f5f4ce73c7034cd">le_dls_AddAfter</a> (<a class="el" href="structle__dls___list__t.html">le_dls_List_t</a> *listPtr, <a class="el" href="structle__dls___link__t.html">le_dls_Link_t</a> *currentLinkPtr, <a class="el" href="structle__dls___link__t.html">le_dls_Link_t</a> *newLinkPtr)</td></tr>
+<tr class="separator:ad93394ff686d2fe93f5f4ce73c7034cd"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a6b68837b42fc2c68885db0857e7c71bf"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__doubly_linked_list_8h.html#a6b68837b42fc2c68885db0857e7c71bf">le_dls_AddBefore</a> (<a class="el" href="structle__dls___list__t.html">le_dls_List_t</a> *listPtr, <a class="el" href="structle__dls___link__t.html">le_dls_Link_t</a> *currentLinkPtr, <a class="el" href="structle__dls___link__t.html">le_dls_Link_t</a> *newLinkPtr)</td></tr>
+<tr class="separator:a6b68837b42fc2c68885db0857e7c71bf"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a4bd942822ffc97004f46f9d062f62270"><td align="right" class="memItemLeft" valign="top"><a class="el" href="structle__dls___link__t.html">le_dls_Link_t</a> * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__doubly_linked_list_8h.html#a4bd942822ffc97004f46f9d062f62270">le_dls_Pop</a> (<a class="el" href="structle__dls___list__t.html">le_dls_List_t</a> *listPtr)</td></tr>
+<tr class="separator:a4bd942822ffc97004f46f9d062f62270"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a31d98b6cfe8de4e618c07bb06e983e81"><td align="right" class="memItemLeft" valign="top"><a class="el" href="structle__dls___link__t.html">le_dls_Link_t</a> * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__doubly_linked_list_8h.html#a31d98b6cfe8de4e618c07bb06e983e81">le_dls_PopTail</a> (<a class="el" href="structle__dls___list__t.html">le_dls_List_t</a> *listPtr)</td></tr>
+<tr class="separator:a31d98b6cfe8de4e618c07bb06e983e81"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ac5e1d4687e04c4e44359ce697ea9eeb2"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__doubly_linked_list_8h.html#ac5e1d4687e04c4e44359ce697ea9eeb2">le_dls_Remove</a> (<a class="el" href="structle__dls___list__t.html">le_dls_List_t</a> *listPtr, <a class="el" href="structle__dls___link__t.html">le_dls_Link_t</a> *linkToRemovePtr)</td></tr>
+<tr class="separator:ac5e1d4687e04c4e44359ce697ea9eeb2"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ab0a2a83f476727f6aa875e98b213f05c"><td align="right" class="memItemLeft" valign="top"><a class="el" href="structle__dls___link__t.html">le_dls_Link_t</a> * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__doubly_linked_list_8h.html#ab0a2a83f476727f6aa875e98b213f05c">le_dls_Peek</a> (const <a class="el" href="structle__dls___list__t.html">le_dls_List_t</a> *listPtr)</td></tr>
+<tr class="separator:ab0a2a83f476727f6aa875e98b213f05c"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a366bc41775b9dfe265e79a9ffecd0a86"><td align="right" class="memItemLeft" valign="top"><a class="el" href="structle__dls___link__t.html">le_dls_Link_t</a> * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__doubly_linked_list_8h.html#a366bc41775b9dfe265e79a9ffecd0a86">le_dls_PeekTail</a> (const <a class="el" href="structle__dls___list__t.html">le_dls_List_t</a> *listPtr)</td></tr>
+<tr class="separator:a366bc41775b9dfe265e79a9ffecd0a86"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ab6068e41fca76311c0eeab36d9e23504"><td align="right" class="memItemLeft" valign="top">static bool </td><td class="memItemRight" valign="bottom"><a class="el" href="le__doubly_linked_list_8h.html#ab6068e41fca76311c0eeab36d9e23504">le_dls_IsEmpty</a> (const <a class="el" href="structle__dls___list__t.html">le_dls_List_t</a> *listPtr)</td></tr>
+<tr class="separator:ab6068e41fca76311c0eeab36d9e23504"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a3a1a15d3922ec53770f0fde3c8eef9f1"><td align="right" class="memItemLeft" valign="top"><a class="el" href="structle__dls___link__t.html">le_dls_Link_t</a> * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__doubly_linked_list_8h.html#a3a1a15d3922ec53770f0fde3c8eef9f1">le_dls_PeekNext</a> (const <a class="el" href="structle__dls___list__t.html">le_dls_List_t</a> *listPtr, const <a class="el" href="structle__dls___link__t.html">le_dls_Link_t</a> *currentLinkPtr)</td></tr>
+<tr class="separator:a3a1a15d3922ec53770f0fde3c8eef9f1"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ad43e69f235920323d725115cb166de34"><td align="right" class="memItemLeft" valign="top"><a class="el" href="structle__dls___link__t.html">le_dls_Link_t</a> * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__doubly_linked_list_8h.html#ad43e69f235920323d725115cb166de34">le_dls_PeekPrev</a> (const <a class="el" href="structle__dls___list__t.html">le_dls_List_t</a> *listPtr, const <a class="el" href="structle__dls___link__t.html">le_dls_Link_t</a> *currentLinkPtr)</td></tr>
+<tr class="separator:ad43e69f235920323d725115cb166de34"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ad317fec42c2474b8bef3654c89f3d239"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__doubly_linked_list_8h.html#ad317fec42c2474b8bef3654c89f3d239">le_dls_Swap</a> (<a class="el" href="structle__dls___list__t.html">le_dls_List_t</a> *listPtr, <a class="el" href="structle__dls___link__t.html">le_dls_Link_t</a> *linkPtr, <a class="el" href="structle__dls___link__t.html">le_dls_Link_t</a> *otherLinkPtr)</td></tr>
+<tr class="separator:ad317fec42c2474b8bef3654c89f3d239"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a13dd41bc5ca2c0b787bca4f57486f600"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="le__doubly_linked_list_8h.html#a13dd41bc5ca2c0b787bca4f57486f600">le_dls_IsInList</a> (const <a class="el" href="structle__dls___list__t.html">le_dls_List_t</a> *listPtr, const <a class="el" href="structle__dls___link__t.html">le_dls_Link_t</a> *linkPtr)</td></tr>
+<tr class="separator:a13dd41bc5ca2c0b787bca4f57486f600"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a26d774f660a813dfcafb96a071e83dcc"><td align="right" class="memItemLeft" valign="top">static bool </td><td class="memItemRight" valign="bottom"><a class="el" href="le__doubly_linked_list_8h.html#a26d774f660a813dfcafb96a071e83dcc">le_dls_IsHead</a> (const <a class="el" href="structle__dls___list__t.html">le_dls_List_t</a> *listPtr, const <a class="el" href="structle__dls___link__t.html">le_dls_Link_t</a> *linkPtr)</td></tr>
+<tr class="separator:a26d774f660a813dfcafb96a071e83dcc"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a2d9c2ec2f26f1295f080db590fff2f6c"><td align="right" class="memItemLeft" valign="top">static bool </td><td class="memItemRight" valign="bottom"><a class="el" href="le__doubly_linked_list_8h.html#a2d9c2ec2f26f1295f080db590fff2f6c">le_dls_IsTail</a> (const <a class="el" href="structle__dls___list__t.html">le_dls_List_t</a> *listPtr, const <a class="el" href="structle__dls___link__t.html">le_dls_Link_t</a> *linkPtr)</td></tr>
+<tr class="separator:a2d9c2ec2f26f1295f080db590fff2f6c"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a207e3dc720d0121f2e62eb639aea8d24"><td align="right" class="memItemLeft" valign="top">size_t </td><td class="memItemRight" valign="bottom"><a class="el" href="le__doubly_linked_list_8h.html#a207e3dc720d0121f2e62eb639aea8d24">le_dls_NumLinks</a> (const <a class="el" href="structle__dls___list__t.html">le_dls_List_t</a> *listPtr)</td></tr>
+<tr class="separator:a207e3dc720d0121f2e62eb639aea8d24"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a38538339f5eeb2f0c7205fc45a2a3f55"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="le__doubly_linked_list_8h.html#a38538339f5eeb2f0c7205fc45a2a3f55">le_dls_IsListCorrupted</a> (const <a class="el" href="structle__dls___list__t.html">le_dls_List_t</a> *listPtr)</td></tr>
+<tr class="separator:a38538339f5eeb2f0c7205fc45a2a3f55"><td class="memSeparator" colspan="2"> </td></tr>
+</table>
+<a id="details" name="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Legato <a class="el" href="c_doubly_linked_list.html">Doubly Linked List API</a> include file.</p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="a616b17e10af5ce6dcc49e34b6ab927c2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_DLS_LINK_INIT   (<a class="el" href="structle__dls___link__t.html">le_dls_Link_t</a>){NULL, NULL}</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>When a link is created it must be initialized by assigning this macro to the link before it can be used. </p>
+</div>
+</div>
+<a class="anchor" id="a68f28b61cdfd004591f24730b4d5a740"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_DLS_LIST_INIT   (<a class="el" href="structle__dls___list__t.html">le_dls_List_t</a>){NULL}</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>When a list is created it must be initialized by assigning this macro to the list before the list can be used. </p>
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ad93394ff686d2fe93f5f4ce73c7034cd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_dls_AddAfter </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="structle__dls___list__t.html">le_dls_List_t</a> * </td>
+<td class="paramname"><em>listPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="structle__dls___link__t.html">le_dls_Link_t</a> * </td>
+<td class="paramname"><em>currentLinkPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="structle__dls___link__t.html">le_dls_Link_t</a> * </td>
+<td class="paramname"><em>newLinkPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Adds a link after currentLinkPtr. User must ensure that currentLinkPtr is in the list otherwise the behaviour of this function is undefined. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">listPtr</td><td>List to add to. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">currentLinkPtr</td><td>New link will be inserted after this link. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">newLinkPtr</td><td>New link to add. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a6b68837b42fc2c68885db0857e7c71bf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_dls_AddBefore </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="structle__dls___list__t.html">le_dls_List_t</a> * </td>
+<td class="paramname"><em>listPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="structle__dls___link__t.html">le_dls_Link_t</a> * </td>
+<td class="paramname"><em>currentLinkPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="structle__dls___link__t.html">le_dls_Link_t</a> * </td>
+<td class="paramname"><em>newLinkPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Adds a link after currentLinkPtr. User must ensure that currentLinkPtr is in the list otherwise the behaviour of this function is undefined. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">listPtr</td><td>List to add to. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">currentLinkPtr</td><td>New link will be inserted before this link. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">newLinkPtr</td><td>New link to add. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ab6068e41fca76311c0eeab36d9e23504"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+<tr>
+<td class="mlabels-left">
+<table class="memname">
+<tr>
+<td class="memname">static bool le_dls_IsEmpty </td>
+<td>(</td>
+<td class="paramtype">const <a class="el" href="structle__dls___list__t.html">le_dls_List_t</a> * </td>
+<td class="paramname"><em>listPtr</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</td>
+<td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span> </td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Checks if a list is empty.</p>
+<dl class="section return"><dt>Returns</dt><dd>true if empty, false if not empty. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">listPtr</td><td>The list. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a26d774f660a813dfcafb96a071e83dcc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+<tr>
+<td class="mlabels-left">
+<table class="memname">
+<tr>
+<td class="memname">static bool le_dls_IsHead </td>
+<td>(</td>
+<td class="paramtype">const <a class="el" href="structle__dls___list__t.html">le_dls_List_t</a> * </td>
+<td class="paramname"><em>listPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const <a class="el" href="structle__dls___link__t.html">le_dls_Link_t</a> * </td>
+<td class="paramname"><em>linkPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</td>
+<td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span> </td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Checks if a link is at the head of the list (next to be popped).</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>true if the link is at the head of the list.</li>
+<li>false if not. </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">listPtr</td><td>List to check. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">linkPtr</td><td>Check if this link is at the head of the list. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a13dd41bc5ca2c0b787bca4f57486f600"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">bool le_dls_IsInList </td>
+<td>(</td>
+<td class="paramtype">const <a class="el" href="structle__dls___list__t.html">le_dls_List_t</a> * </td>
+<td class="paramname"><em>listPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const <a class="el" href="structle__dls___link__t.html">le_dls_Link_t</a> * </td>
+<td class="paramname"><em>linkPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Checks if a link is in the list.</p>
+<dl class="section return"><dt>Returns</dt><dd>true if the link is in the list. false if the link is not in the list. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">listPtr</td><td>List to check. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">linkPtr</td><td>Check if this link is in the list. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a38538339f5eeb2f0c7205fc45a2a3f55"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">bool le_dls_IsListCorrupted </td>
+<td>(</td>
+<td class="paramtype">const <a class="el" href="structle__dls___list__t.html">le_dls_List_t</a> * </td>
+<td class="paramname"><em>listPtr</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Checks if the list is corrupted.</p>
+<dl class="section return"><dt>Returns</dt><dd>true if the list is corrupted. false if the list is not corrupted. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">listPtr</td><td>List to check. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a2d9c2ec2f26f1295f080db590fff2f6c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+<tr>
+<td class="mlabels-left">
+<table class="memname">
+<tr>
+<td class="memname">static bool le_dls_IsTail </td>
+<td>(</td>
+<td class="paramtype">const <a class="el" href="structle__dls___list__t.html">le_dls_List_t</a> * </td>
+<td class="paramname"><em>listPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const <a class="el" href="structle__dls___link__t.html">le_dls_Link_t</a> * </td>
+<td class="paramname"><em>linkPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</td>
+<td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span> </td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Checks if a link is at the tail of the list (last to be popped).</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>true if the link is at the tail of the list.</li>
+<li>false if not. </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">listPtr</td><td>List to check. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">linkPtr</td><td>Check if this link is at the tail of the list. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a207e3dc720d0121f2e62eb639aea8d24"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">size_t le_dls_NumLinks </td>
+<td>(</td>
+<td class="paramtype">const <a class="el" href="structle__dls___list__t.html">le_dls_List_t</a> * </td>
+<td class="paramname"><em>listPtr</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the number of links in a list.</p>
+<dl class="section return"><dt>Returns</dt><dd>Number of links. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">listPtr</td><td>List to count. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ab0a2a83f476727f6aa875e98b213f05c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="structle__dls___link__t.html">le_dls_Link_t</a>* le_dls_Peek </td>
+<td>(</td>
+<td class="paramtype">const <a class="el" href="structle__dls___list__t.html">le_dls_List_t</a> * </td>
+<td class="paramname"><em>listPtr</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the link at the head of the list without removing it from the list.</p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the head link if successful. NULL if the list is empty. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">listPtr</td><td>The list. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a3a1a15d3922ec53770f0fde3c8eef9f1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="structle__dls___link__t.html">le_dls_Link_t</a>* le_dls_PeekNext </td>
+<td>(</td>
+<td class="paramtype">const <a class="el" href="structle__dls___list__t.html">le_dls_List_t</a> * </td>
+<td class="paramname"><em>listPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const <a class="el" href="structle__dls___link__t.html">le_dls_Link_t</a> * </td>
+<td class="paramname"><em>currentLinkPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the link next to currentLinkPtr (i.e., the link beside currentLinkPtr that is closer to the tail) without removing it from the list. User must ensure that currentLinkPtr is in the list otherwise the behaviour of this function is undefined.</p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the next link if successful. NULL if there is no link next to the currentLinkPtr (currentLinkPtr is at the tail of the list). </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">listPtr</td><td>List containing currentLinkPtr. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">currentLinkPtr</td><td>Get the link that is relative to this link. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ad43e69f235920323d725115cb166de34"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="structle__dls___link__t.html">le_dls_Link_t</a>* le_dls_PeekPrev </td>
+<td>(</td>
+<td class="paramtype">const <a class="el" href="structle__dls___list__t.html">le_dls_List_t</a> * </td>
+<td class="paramname"><em>listPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const <a class="el" href="structle__dls___link__t.html">le_dls_Link_t</a> * </td>
+<td class="paramname"><em>currentLinkPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the link previous to currentLinkPtr without removing it from the list. User must ensure that currentLinkPtr is in the list otherwise the behaviour of this function is undefined.</p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the previous link if successful. NULL if there is no link previous to the currentLinkPtr (currentLinkPtr is at the head of the list). </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">listPtr</td><td>List containing currentLinkPtr. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">currentLinkPtr</td><td>Get the link that is relative to this link. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a366bc41775b9dfe265e79a9ffecd0a86"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="structle__dls___link__t.html">le_dls_Link_t</a>* le_dls_PeekTail </td>
+<td>(</td>
+<td class="paramtype">const <a class="el" href="structle__dls___list__t.html">le_dls_List_t</a> * </td>
+<td class="paramname"><em>listPtr</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the link at the tail of the list without removing it from the list.</p>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the tail link if successful. NULL if the list is empty. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">listPtr</td><td>The list. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a4bd942822ffc97004f46f9d062f62270"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="structle__dls___link__t.html">le_dls_Link_t</a>* le_dls_Pop </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="structle__dls___list__t.html">le_dls_List_t</a> * </td>
+<td class="paramname"><em>listPtr</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Removes and returns the link at the head of the list.</p>
+<dl class="section return"><dt>Returns</dt><dd>Removed link. NULL if the link is not available because the list is empty. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">listPtr</td><td>List to remove from. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a31d98b6cfe8de4e618c07bb06e983e81"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="structle__dls___link__t.html">le_dls_Link_t</a>* le_dls_PopTail </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="structle__dls___list__t.html">le_dls_List_t</a> * </td>
+<td class="paramname"><em>listPtr</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Removes and returns the link at the tail of the list.</p>
+<dl class="section return"><dt>Returns</dt><dd>The removed link. NULL if the link is not available because the list is empty. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">listPtr</td><td>List to remove from. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a264df63b847a9c485df0bf9050ac5deb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_dls_Queue </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="structle__dls___list__t.html">le_dls_List_t</a> * </td>
+<td class="paramname"><em>listPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="structle__dls___link__t.html">le_dls_Link_t</a> * </td>
+<td class="paramname"><em>newLinkPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Adds a link to the tail of the list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">listPtr</td><td>List to add to. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">newLinkPtr</td><td>New link to add. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ac5e1d4687e04c4e44359ce697ea9eeb2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_dls_Remove </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="structle__dls___list__t.html">le_dls_List_t</a> * </td>
+<td class="paramname"><em>listPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="structle__dls___link__t.html">le_dls_Link_t</a> * </td>
+<td class="paramname"><em>linkToRemovePtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Removes the specified link from the list. Ensure the link is in the list otherwise the behaviour of this function is undefined. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">listPtr</td><td>List to remove from. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">linkToRemovePtr</td><td>Link to remove. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a90f9072a55ef0cb573bbdad91e34d368"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_dls_Stack </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="structle__dls___list__t.html">le_dls_List_t</a> * </td>
+<td class="paramname"><em>listPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="structle__dls___link__t.html">le_dls_Link_t</a> * </td>
+<td class="paramname"><em>newLinkPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Adds a link at the head of the list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">listPtr</td><td>List to add to. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">newLinkPtr</td><td>New link to add. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ad317fec42c2474b8bef3654c89f3d239"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_dls_Swap </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="structle__dls___list__t.html">le_dls_List_t</a> * </td>
+<td class="paramname"><em>listPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="structle__dls___link__t.html">le_dls_Link_t</a> * </td>
+<td class="paramname"><em>linkPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="structle__dls___link__t.html">le_dls_Link_t</a> * </td>
+<td class="paramname"><em>otherLinkPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Swaps the position of two links in the list. User must ensure that both links are in the list otherwise the behaviour of this function is undefined. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">listPtr</td><td>List containing the links to swap. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">linkPtr</td><td>One of the two link pointers to swap. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">otherLinkPtr</td><td>Other link pointer to swap. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

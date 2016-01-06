@@ -1,0 +1,2122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>le_mdc_interface.h File Reference - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Reference.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a href="build_apps_documentation.html">Documentation</a><a class="link-selected" href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="summary">
+<a href="#define-members">Macros</a> |
+<a href="#typedef-members">Typedefs</a> |
+<a href="#enum-members">Enumerations</a> |
+<a href="#func-members">Functions</a> </div>
+<div class="headertitle">
+<h1 class="title">le_mdc_interface.h File Reference</h1> </div>
+</div><div class="contents">
+<div class="textblock"><code>#include "<a class="el" href="legato_8h_source.html">legato.h</a>"</code><br />
+</div>
+<p><a href="le__mdc__interface_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ad097b347b1504e36f68cded881fe2d96"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#ad097b347b1504e36f68cded881fe2d96">LE_MDC_INTERFACE_NAME_MAX_LEN</a>   20</td></tr>
+<tr class="separator:ad097b347b1504e36f68cded881fe2d96"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a33ebf9afd03f0ffc91a80c32c15afb42"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#a33ebf9afd03f0ffc91a80c32c15afb42">LE_MDC_INTERFACE_NAME_MAX_BYTES</a>   21</td></tr>
+<tr class="separator:a33ebf9afd03f0ffc91a80c32c15afb42"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ae85dfc41758d1886dc006e01ea3e08f4"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#ae85dfc41758d1886dc006e01ea3e08f4">LE_MDC_IPV4_ADDR_MAX_LEN</a>   15</td></tr>
+<tr class="separator:ae85dfc41758d1886dc006e01ea3e08f4"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a2b8d841986d6cfefcd7a86201b236740"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#a2b8d841986d6cfefcd7a86201b236740">LE_MDC_IPV4_ADDR_MAX_BYTES</a>   16</td></tr>
+<tr class="separator:a2b8d841986d6cfefcd7a86201b236740"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a69a4563aa097e65d26b54c7a0f6dabfb"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#a69a4563aa097e65d26b54c7a0f6dabfb">LE_MDC_IPV6_ADDR_MAX_LEN</a>   45</td></tr>
+<tr class="separator:a69a4563aa097e65d26b54c7a0f6dabfb"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ae6335030b88ae6cb9fd73199a16f7b5f"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#ae6335030b88ae6cb9fd73199a16f7b5f">LE_MDC_IPV6_ADDR_MAX_BYTES</a>   46</td></tr>
+<tr class="separator:ae6335030b88ae6cb9fd73199a16f7b5f"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a94003147532b5c18b83cac9a4e1eb054"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#a94003147532b5c18b83cac9a4e1eb054">LE_MDC_APN_NAME_MAX_LEN</a>   100</td></tr>
+<tr class="separator:a94003147532b5c18b83cac9a4e1eb054"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ac0411dbd4cc176274efb1d2cb3be3cce"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#ac0411dbd4cc176274efb1d2cb3be3cce">LE_MDC_APN_NAME_MAX_BYTES</a>   101</td></tr>
+<tr class="separator:ac0411dbd4cc176274efb1d2cb3be3cce"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ad246bc94c8c69c08d2765cc0570aa3cf"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#ad246bc94c8c69c08d2765cc0570aa3cf">LE_MDC_USER_NAME_MAX_LEN</a>   64</td></tr>
+<tr class="separator:ad246bc94c8c69c08d2765cc0570aa3cf"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a8048b6b33162159555c83da28719efa1"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#a8048b6b33162159555c83da28719efa1">LE_MDC_USER_NAME_MAX_BYTES</a>   65</td></tr>
+<tr class="separator:a8048b6b33162159555c83da28719efa1"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a37643c42ade5141861f6c19c17378c2f"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#a37643c42ade5141861f6c19c17378c2f">LE_MDC_PASSWORD_NAME_MAX_LEN</a>   100</td></tr>
+<tr class="separator:a37643c42ade5141861f6c19c17378c2f"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a97f368b52546916bf8f2e697872d00bd"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#a97f368b52546916bf8f2e697872d00bd">LE_MDC_PASSWORD_NAME_MAX_BYTES</a>   101</td></tr>
+<tr class="separator:a97f368b52546916bf8f2e697872d00bd"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:abf72eaa8891f7591477e229bb4ad5723"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#abf72eaa8891f7591477e229bb4ad5723">LE_MDC_DEFAULT_PROFILE</a>   -1</td></tr>
+<tr class="separator:abf72eaa8891f7591477e229bb4ad5723"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ac7b1c4304ae2d46c60fc6d7506313161"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#ac7b1c4304ae2d46c60fc6d7506313161">LE_MDC_SIMTOOLKIT_BIP_DEFAULT_PROFILE</a>   -2</td></tr>
+<tr class="separator:ac7b1c4304ae2d46c60fc6d7506313161"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a91074d8f0d88c6645e3085dfadf87011"><td align="right" class="memItemLeft" valign="top">typedef struct le_mdc_Profile * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a></td></tr>
+<tr class="separator:a91074d8f0d88c6645e3085dfadf87011"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a1a5079ca540f75d009991c164f1c2a51"><td align="right" class="memItemLeft" valign="top">typedef struct le_mdc_SessionStateHandler * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#a1a5079ca540f75d009991c164f1c2a51">le_mdc_SessionStateHandlerRef_t</a></td></tr>
+<tr class="separator:a1a5079ca540f75d009991c164f1c2a51"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a00399530f88038d5d06823194780793a"><td align="right" class="memItemLeft" valign="top">typedef struct le_mdc_MtPdpSessionStateHandler * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#a00399530f88038d5d06823194780793a">le_mdc_MtPdpSessionStateHandlerRef_t</a></td></tr>
+<tr class="separator:a00399530f88038d5d06823194780793a"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a1f32da683c8a9e061db7101ef5c8bb98"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#a1f32da683c8a9e061db7101ef5c8bb98">le_mdc_SessionStateHandlerFunc_t</a>) (<a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef, <a class="el" href="le__mdc__interface_8h.html#a0727e543d0394422963c8d6297947333">le_mdc_ConState_t</a> ConnectionState, void *contextPtr)</td></tr>
+<tr class="separator:a1f32da683c8a9e061db7101ef5c8bb98"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a285dd997ce1e6a439441dd939df080c8"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#a285dd997ce1e6a439441dd939df080c8">le_mdc_MtPdpSessionStateHandlerFunc_t</a>) (<a class="el" href="le__mdc__interface_8h.html#a0727e543d0394422963c8d6297947333">le_mdc_ConState_t</a> ConnectionState, void *contextPtr)</td></tr>
+<tr class="separator:a285dd997ce1e6a439441dd939df080c8"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a7a9d8c4b2053b048a53257ed810f527e"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527e">le_mdc_DataBearerTechnology_t</a> { <br />
+  <a class="el" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527eaa74ef22bfd51f6bec5d3521080f9537a">LE_MDC_DATA_BEARER_TECHNOLOGY_UNKNOWN</a>, 
+<a class="el" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527ea94176f1b8b893b313de18327d7adaec3">LE_MDC_DATA_BEARER_TECHNOLOGY_GSM</a>, 
+<a class="el" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527eab66accc8a4866e53319773962d328d33">LE_MDC_DATA_BEARER_TECHNOLOGY_GPRS</a>, 
+<a class="el" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527ea7a6d420354b58854ef51236c9dd5ffac">LE_MDC_DATA_BEARER_TECHNOLOGY_EGPRS</a>, 
+<br />
+  <a class="el" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527eaef4c110d2e9f49244e50deb1160a76ba">LE_MDC_DATA_BEARER_TECHNOLOGY_WCDMA</a>, 
+<a class="el" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527ea9cf6c01fefb6d34d9146853914464b89">LE_MDC_DATA_BEARER_TECHNOLOGY_HSPA</a>, 
+<a class="el" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527ea90f0d2e99bae1f7955349d3c69635612">LE_MDC_DATA_BEARER_TECHNOLOGY_HSPA_PLUS</a>, 
+<a class="el" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527eafb22fb13c85a703fd541854d55d84cbd">LE_MDC_DATA_BEARER_TECHNOLOGY_DC_HSPA_PLUS</a>, 
+<br />
+  <a class="el" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527ead74d1b39916f65f547b3c3a263a8eb4d">LE_MDC_DATA_BEARER_TECHNOLOGY_LTE</a>, 
+<a class="el" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527eaf8c16113115e99ef7214284f51895634">LE_MDC_DATA_BEARER_TECHNOLOGY_TD_SCDMA</a>, 
+<a class="el" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527eaf1a513b9966ddce01044f75470419f81">LE_MDC_DATA_BEARER_TECHNOLOGY_CDMA2000_1X</a>, 
+<a class="el" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527eae01ab4b9a842cfbc2eb44abcddd75ff4">LE_MDC_DATA_BEARER_TECHNOLOGY_CDMA2000_EVDO</a>, 
+<br />
+  <a class="el" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527ea27fc297fc07b683df6eb64cdd017a79b">LE_MDC_DATA_BEARER_TECHNOLOGY_CDMA2000_EVDO_REVA</a>, 
+<a class="el" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527eaff19a89df5659dfb03cf054d7d4f464b">LE_MDC_DATA_BEARER_TECHNOLOGY_CDMA2000_EHRPD</a>
+<br />
+ }</td></tr>
+<tr class="separator:a7a9d8c4b2053b048a53257ed810f527e"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a85721ec6046140c2f87c23f877dce247"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#a85721ec6046140c2f87c23f877dce247">le_mdc_Pdp_t</a> { <a class="el" href="le__mdc__interface_8h.html#a85721ec6046140c2f87c23f877dce247a590fd5c933c3751e42053f996d530987">LE_MDC_PDP_UNKNOWN</a>, 
+<a class="el" href="le__mdc__interface_8h.html#a85721ec6046140c2f87c23f877dce247af550adf5bcecb680294f92f28496a830">LE_MDC_PDP_IPV4</a>, 
+<a class="el" href="le__mdc__interface_8h.html#a85721ec6046140c2f87c23f877dce247ac2d2a34bad2d18be1ea8facef0effad0">LE_MDC_PDP_IPV6</a>, 
+<a class="el" href="le__mdc__interface_8h.html#a85721ec6046140c2f87c23f877dce247a4427db8ba7a89ebf66c7b62eacfc8275">LE_MDC_PDP_IPV4V6</a>
+ }</td></tr>
+<tr class="separator:a85721ec6046140c2f87c23f877dce247"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ae9758eecfab89fbc1bc01341393a7723"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#ae9758eecfab89fbc1bc01341393a7723">le_mdc_Auth_t</a> { <a class="el" href="le__mdc__interface_8h.html#ae9758eecfab89fbc1bc01341393a7723a10fb016f4d6f7a7e893cf66846c24de2">LE_MDC_AUTH_NONE</a>, 
+<a class="el" href="le__mdc__interface_8h.html#ae9758eecfab89fbc1bc01341393a7723a151065be441aa8f065d0ead3d739b6f0">LE_MDC_AUTH_PAP</a>, 
+<a class="el" href="le__mdc__interface_8h.html#ae9758eecfab89fbc1bc01341393a7723ae93a464a7ee2f31346aa01676afc7054">LE_MDC_AUTH_CHAP</a>
+ }</td></tr>
+<tr class="separator:ae9758eecfab89fbc1bc01341393a7723"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a0727e543d0394422963c8d6297947333"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#a0727e543d0394422963c8d6297947333">le_mdc_ConState_t</a> { <br />
+  <a class="el" href="le__mdc__interface_8h.html#a0727e543d0394422963c8d6297947333a6d11ee963528c79d73a269eb85202ba7">LE_MDC_DISCONNECTED</a>, 
+<a class="el" href="le__mdc__interface_8h.html#a0727e543d0394422963c8d6297947333a06c37ceba786a0a786008571f9ead8d4">LE_MDC_AUTHENTICATING</a>, 
+<a class="el" href="le__mdc__interface_8h.html#a0727e543d0394422963c8d6297947333a0a8a2113935b881b76c59b94cf7223b8">LE_MDC_CONNECTED</a>, 
+<a class="el" href="le__mdc__interface_8h.html#a0727e543d0394422963c8d6297947333a7a58a20c7df2b0c380ff0b819175044b">LE_MDC_SUSPENDING</a>, 
+<br />
+  <a class="el" href="le__mdc__interface_8h.html#a0727e543d0394422963c8d6297947333a2a61bb66c6afff9fca4957e856d48bda">LE_MDC_INCOMING</a>
+<br />
+ }</td></tr>
+<tr class="separator:a0727e543d0394422963c8d6297947333"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ad1fe8909ae01a2f7e33fdbdc6938bf17"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17">le_mdc_DisconnectionReason_t</a> { <br />
+  <a class="el" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a4b0bf3c47de146dfb256c8a7d2555008">LE_MDC_DISC_NO_SERVICE</a>, 
+<a class="el" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17ad74d5631833f877116b54301f4b551d2">LE_MDC_DISC_OPERATOR_DETERMINED_BARRING</a>, 
+<a class="el" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17af69c8c7dab5a8569cb84aa1c55e199f0">LE_MDC_DISC_INSUFFICIENT_MBMS_CAPABILITIES</a>, 
+<a class="el" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a7cddd67daef05f99316bf2de04a5bb62">LE_MDC_DISC_LLC_SNDCP_FAILURE</a>, 
+<br />
+  <a class="el" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17ab4979cca494637abc973e10ad5f18865">LE_MDC_DISC_INSUFFICIENT_RESOURCES</a>, 
+<a class="el" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17aa2f50c19fd13a0900994849ca92d2125">LE_MDC_DISC_MISSING_OR_UNKNOWN_APN</a>, 
+<a class="el" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17aa53f88c6058ceffa22451433657bf182">LE_MDC_DISC_UNKNOWN_PDP_ADDR_OR_TYPE</a>, 
+<a class="el" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17afe4e899719154b0952108c03748aed86">LE_MDC_DISC_USER_AUTHENTIFICATION_FAILURE</a>, 
+<br />
+  <a class="el" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17aae8b18d5198005cf6cfb7ecad401b8db">LE_MDC_DISC_ACTIVATION_REJECTED_BY_GGSN_OR_GW</a>, 
+<a class="el" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17ad81651aa81ecc9c91756611ea8811a4a">LE_MDC_DISC_ACTIVATION_REJECTED_UNSPECIFIED</a>, 
+<a class="el" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17afeaf658e0acdb7413caef8fee314cfbb">LE_MDC_DISC_SERVICE_OPTION_NOT_SUPPORTED</a>, 
+<a class="el" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17aba9d6aca3394ac28f880456b67ca5b1f">LE_MDC_DISC_REQUESTED_SERVICE_OPTION_UNSUBSCRIBED</a>, 
+<br />
+  <a class="el" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a31d48c551add5d7dc2a09f8564551b7a">LE_MDC_DISC_REQUESTED_SERVICE_OPTION_OUT_OF_ORDER</a>, 
+<a class="el" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a3b4bb956e4b23fc6769b3d8d59f62521">LE_MDC_DISC_NSAPI_ALREADY_USED</a>, 
+<a class="el" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a19c22a1e138f7612e19b89de60732349">LE_MDC_DISC_REGULAR_DEACTIVATION</a>, 
+<a class="el" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17abc70afad936a15351c90141e9eb4dca6">LE_MDC_DISC_QOS_NOT_ACCEPTED</a>, 
+<br />
+  <a class="el" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17aa08661335bfd617b8ee708b9316344bc">LE_MDC_DISC_NETWORK_FAILURE</a>, 
+<a class="el" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17aba25708a0d557aaec2dfe1a27d5fbbea">LE_MDC_DISC_REACTIVATION_REQUESTED</a>, 
+<a class="el" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a447a14f91479512283cf5ddae58e3eff">LE_MDC_DISC_FEATURE_NOT_SUPPORTED</a>, 
+<a class="el" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17ae94f35e11adf576b58219bbb84307e67">LE_MDC_DISC_TFT_SEMANTIC_ERROR</a>, 
+<br />
+  <a class="el" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a157d5799c577ee41886c0e34b4ad1dfb">LE_MDC_DISC_TFT_SYNTACTICAL_ERROR</a>, 
+<a class="el" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17ae020bbb75374fe545348dd0efd02b09c">LE_MDC_DISC_UNKNOWN_PDP_CONTEXT</a>, 
+<a class="el" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a24d91ccf0e7ec5fab2b81b45409ea8f5">LE_MDC_DISC_PACKET_FILTER_SEMANTIC_ERROR</a>, 
+<a class="el" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a46acd5f0a45d5f71e7c3ea7060565ccf">LE_MDC_DISC_PACKET_FILTER_SYNTACTICAL_ERROR</a>, 
+<br />
+  <a class="el" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a50a570e65085ada48cc12e69b0d25edc">LE_MDC_DISC_PDP_CONTEXT_WITHOUT_ACTIVE_TFT</a>, 
+<a class="el" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a4e5e3c5c7d4c85682678679d9660bdbb">LE_MDC_DISC_MULTICAST_TIME_OUT</a>, 
+<a class="el" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a6db98dadba3f8b9332da761a0eb31f21">LE_MDC_DISC_BEARER_CONTROL_MODE_VIOLATION</a>, 
+<a class="el" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17ac0a682063498ae7ec9601af7f3798c7a">LE_MDC_DISC_IPV4_ONLY_ALLOWED</a>, 
+<br />
+  <a class="el" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a2557336c990e378807fff1722d42da6f">LE_MDC_DISC_IPV6_ONLY_ALLOWED</a>, 
+<a class="el" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a853b368b5f56798d835f4e3bed58d5e9">LE_MDC_DISC_SINGLE_ADDR_ONLY_ALLOWED</a>, 
+<a class="el" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a65f02b1c06c889c5d7e9344a6069ae68">LE_MDC_DISC_COLLISION_WITH_NETWORK_INITIATED_REQ</a>, 
+<a class="el" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17acd07cb5199b2482d6031dc2268f2506b">LE_MDC_DISC_BEARER_HANDLING_UNSUPPORTED</a>, 
+<br />
+  <a class="el" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17af336a2033458975c20d9f8f593d1cf68">LE_MDC_DISC_MAX_PDP_CONTEXTS</a>, 
+<a class="el" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a7ad657ac040c4cf169a0af03d7b51325">LE_MDC_DISC_APN_UNSUPPORTED_FOR_RAT_AND_PLMN</a>, 
+<a class="el" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17adbcc071b27d08423fa7239fbd6137563">LE_MDC_DISC_INCOMPATIBLE_APN</a>, 
+<a class="el" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a6541a2df9aef958e78745c35deffbe4d">LE_MDC_DISC_INVALID_TRANSACTION_ID</a>, 
+<br />
+  <a class="el" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a0e0db24bc4566a107d13fb2a735247dc">LE_MDC_DISC_MESSAGE_INCORRECT_SEMANTIC</a>, 
+<a class="el" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a2fcf6fa570f2d1232460f8ac345477da">LE_MDC_DISC_INVALID_MANDATORY_INFORMATION</a>, 
+<a class="el" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17ad15f8293ca2daccd4ec60a83ca1657ef">LE_MDC_DISC_UNSUPPORTED_MESSAGE_TYPE</a>, 
+<a class="el" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17ab86cf3c132a1bfb4bb653b0e5d6e93a1">LE_MDC_DISC_MESSAGE_AND_PROTOCOL_STATE_UNCOMPATIBLE</a>, 
+<br />
+  <a class="el" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17aac98e15b1eddeaab082fc677fbc5c9e3">LE_MDC_DISC_UNKNOWN_INFORMATION_ELEMENT</a>, 
+<a class="el" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17ab7c4eab939b9bfb77fd869ac9284b2a6">LE_MDC_DISC_CONDITIONAL_IE_ERROR</a>, 
+<a class="el" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a6328213c0930135dc96ab7281defb544">LE_MDC_DISC_MESSAGE_AND_STATE_UNCOMPATIBLE</a>, 
+<a class="el" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a7be545dea0d9d93c2ac54d6e315fb578">LE_MDC_DISC_PROTOCOL_ERROR_UNSPECIFIED</a>, 
+<br />
+  <a class="el" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a9302526da171ae2b91f7ccb44d9d9b53">LE_MDC_DISC_PLATFORM_SPECIFIC</a>, 
+<a class="el" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17a1a7921226f32bbb60973380dc4000b3f">LE_MDC_DISC_UNDEFINED</a>
+<br />
+ }</td></tr>
+<tr class="separator:ad1fe8909ae01a2f7e33fdbdc6938bf17"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a2a841ce582ce97f62df6334717b49fcb"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#a2a841ce582ce97f62df6334717b49fcb">le_mdc_ConnectService</a> (void)</td></tr>
+<tr class="separator:a2a841ce582ce97f62df6334717b49fcb"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a3ce7efc114de8b91a7ad61cb6f6f47c8"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#a3ce7efc114de8b91a7ad61cb6f6f47c8">le_mdc_DisconnectService</a> (void)</td></tr>
+<tr class="separator:a3ce7efc114de8b91a7ad61cb6f6f47c8"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a594c85c1ccb56ddfbaf36496f35f681e"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__mdc__interface_8h.html#a1a5079ca540f75d009991c164f1c2a51">le_mdc_SessionStateHandlerRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#a594c85c1ccb56ddfbaf36496f35f681e">le_mdc_AddSessionStateHandler</a> (<a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef, <a class="el" href="le__mdc__interface_8h.html#a1f32da683c8a9e061db7101ef5c8bb98">le_mdc_SessionStateHandlerFunc_t</a> handlerPtr, void *contextPtr)</td></tr>
+<tr class="separator:a594c85c1ccb56ddfbaf36496f35f681e"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a3b89962f4383f42a357f5a5fcc14fdff"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#a3b89962f4383f42a357f5a5fcc14fdff">le_mdc_RemoveSessionStateHandler</a> (<a class="el" href="le__mdc__interface_8h.html#a1a5079ca540f75d009991c164f1c2a51">le_mdc_SessionStateHandlerRef_t</a> addHandlerRef)</td></tr>
+<tr class="separator:a3b89962f4383f42a357f5a5fcc14fdff"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ada19c2a399ba8c0aa038e27c21689472"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__mdc__interface_8h.html#a00399530f88038d5d06823194780793a">le_mdc_MtPdpSessionStateHandlerRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#ada19c2a399ba8c0aa038e27c21689472">le_mdc_AddMtPdpSessionStateHandler</a> (<a class="el" href="le__mdc__interface_8h.html#a1f32da683c8a9e061db7101ef5c8bb98">le_mdc_SessionStateHandlerFunc_t</a> handlerPtr, void *contextPtr)</td></tr>
+<tr class="separator:ada19c2a399ba8c0aa038e27c21689472"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ad296518ad496c960b4b23f89f7a1b222"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#ad296518ad496c960b4b23f89f7a1b222">le_mdc_RemoveMtPdpSessionStateHandler</a> (<a class="el" href="le__mdc__interface_8h.html#a00399530f88038d5d06823194780793a">le_mdc_MtPdpSessionStateHandlerRef_t</a> addHandlerRef)</td></tr>
+<tr class="separator:ad296518ad496c960b4b23f89f7a1b222"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a638b693cd5f644fa5c24f81e1e36483c"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#a638b693cd5f644fa5c24f81e1e36483c">le_mdc_GetProfile</a> (uint32_t index)</td></tr>
+<tr class="separator:a638b693cd5f644fa5c24f81e1e36483c"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a108f7c3db74a377c2ae5482543d4e0d9"><td align="right" class="memItemLeft" valign="top">uint32_t </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#a108f7c3db74a377c2ae5482543d4e0d9">le_mdc_GetProfileIndex</a> (<a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef)</td></tr>
+<tr class="separator:a108f7c3db74a377c2ae5482543d4e0d9"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a2cb08d5c3e6c43297d80448891719649"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#a2cb08d5c3e6c43297d80448891719649">le_mdc_StartSession</a> (<a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef)</td></tr>
+<tr class="separator:a2cb08d5c3e6c43297d80448891719649"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a53453f85065c3cace0922150b7e3d869"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#a53453f85065c3cace0922150b7e3d869">le_mdc_StopSession</a> (<a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef)</td></tr>
+<tr class="separator:a53453f85065c3cace0922150b7e3d869"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ae3b49edad910960b84a9012ecc33c66a"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#ae3b49edad910960b84a9012ecc33c66a">le_mdc_RejectMtPdpSession</a> (<a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef)</td></tr>
+<tr class="separator:ae3b49edad910960b84a9012ecc33c66a"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:add91c364e8b3e4e82a0ce64e480c016b"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#add91c364e8b3e4e82a0ce64e480c016b">le_mdc_GetSessionState</a> (<a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef, <a class="el" href="le__mdc__interface_8h.html#a0727e543d0394422963c8d6297947333">le_mdc_ConState_t</a> *connectionStatePtr)</td></tr>
+<tr class="separator:add91c364e8b3e4e82a0ce64e480c016b"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:abf470aa8e252114cbb95b4e337083d52"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#abf470aa8e252114cbb95b4e337083d52">le_mdc_GetInterfaceName</a> (<a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef, char *interfaceName, size_t interfaceNameNumElements)</td></tr>
+<tr class="separator:abf470aa8e252114cbb95b4e337083d52"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a732acb5823549a1644aa1bb5ba69fea5"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#a732acb5823549a1644aa1bb5ba69fea5">le_mdc_GetIPv4Address</a> (<a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef, char *ipAddr, size_t ipAddrNumElements)</td></tr>
+<tr class="separator:a732acb5823549a1644aa1bb5ba69fea5"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:af4be1afa6d44a4a7041f9f02660704b9"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#af4be1afa6d44a4a7041f9f02660704b9">le_mdc_GetIPv4GatewayAddress</a> (<a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef, char *gatewayAddr, size_t gatewayAddrNumElements)</td></tr>
+<tr class="separator:af4be1afa6d44a4a7041f9f02660704b9"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ae99f6e212de1b0c0ea8a8763b62e0bea"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#ae99f6e212de1b0c0ea8a8763b62e0bea">le_mdc_GetIPv4DNSAddresses</a> (<a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef, char *dns1AddrStr, size_t dns1AddrStrNumElements, char *dns2AddrStr, size_t dns2AddrStrNumElements)</td></tr>
+<tr class="separator:ae99f6e212de1b0c0ea8a8763b62e0bea"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aacd6a0b646f26625cdb26a78d42f8e5f"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#aacd6a0b646f26625cdb26a78d42f8e5f">le_mdc_GetIPv6Address</a> (<a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef, char *ipAddr, size_t ipAddrNumElements)</td></tr>
+<tr class="separator:aacd6a0b646f26625cdb26a78d42f8e5f"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a0b82eac1ed112bd3b82060cc54751246"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#a0b82eac1ed112bd3b82060cc54751246">le_mdc_GetIPv6GatewayAddress</a> (<a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef, char *gatewayAddr, size_t gatewayAddrNumElements)</td></tr>
+<tr class="separator:a0b82eac1ed112bd3b82060cc54751246"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a8aeb3f684567eee2976b851b7d713f01"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#a8aeb3f684567eee2976b851b7d713f01">le_mdc_GetIPv6DNSAddresses</a> (<a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef, char *dns1AddrStr, size_t dns1AddrStrNumElements, char *dns2AddrStr, size_t dns2AddrStrNumElements)</td></tr>
+<tr class="separator:a8aeb3f684567eee2976b851b7d713f01"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aa3912e94864a6e5862e07f58b3772cba"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#aa3912e94864a6e5862e07f58b3772cba">le_mdc_IsIPv4</a> (<a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef)</td></tr>
+<tr class="separator:aa3912e94864a6e5862e07f58b3772cba"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:adde11de0b17b2c937acca6355b6fba11"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#adde11de0b17b2c937acca6355b6fba11">le_mdc_IsIPv6</a> (<a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef)</td></tr>
+<tr class="separator:adde11de0b17b2c937acca6355b6fba11"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a1b17bb87b347162013b5ad608cdcda2d"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#a1b17bb87b347162013b5ad608cdcda2d">le_mdc_GetDataBearerTechnology</a> (<a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef, <a class="el" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527e">le_mdc_DataBearerTechnology_t</a> *downlinkDataBearerTechPtrPtr, <a class="el" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527e">le_mdc_DataBearerTechnology_t</a> *uplinkDataBearerTechPtrPtr)</td></tr>
+<tr class="separator:a1b17bb87b347162013b5ad608cdcda2d"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aaad833c105f7d0ae77f18195d6739080"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#aaad833c105f7d0ae77f18195d6739080">le_mdc_GetBytesCounters</a> (uint64_t *rxBytesPtr, uint64_t *txBytesPtr)</td></tr>
+<tr class="separator:aaad833c105f7d0ae77f18195d6739080"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a63636b2779d2ee6a6520ebfb2d26666c"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#a63636b2779d2ee6a6520ebfb2d26666c">le_mdc_ResetBytesCounter</a> (void)</td></tr>
+<tr class="separator:a63636b2779d2ee6a6520ebfb2d26666c"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a73e66a7a63dc95d7f261fc2a26470386"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#a73e66a7a63dc95d7f261fc2a26470386">le_mdc_SetPDP</a> (<a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef, <a class="el" href="le__mdc__interface_8h.html#a85721ec6046140c2f87c23f877dce247">le_mdc_Pdp_t</a> pdp)</td></tr>
+<tr class="separator:a73e66a7a63dc95d7f261fc2a26470386"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a0a51125579f1d5009dac03c79ddff498"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__mdc__interface_8h.html#a85721ec6046140c2f87c23f877dce247">le_mdc_Pdp_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#a0a51125579f1d5009dac03c79ddff498">le_mdc_GetPDP</a> (<a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef)</td></tr>
+<tr class="separator:a0a51125579f1d5009dac03c79ddff498"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a1777f22b1a400593c3e0fb879acd57c6"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#a1777f22b1a400593c3e0fb879acd57c6">le_mdc_SetAPN</a> (<a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef, const char *apnStr)</td></tr>
+<tr class="separator:a1777f22b1a400593c3e0fb879acd57c6"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ad44bd756fd5cbfd43a5b348054786a4d"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#ad44bd756fd5cbfd43a5b348054786a4d">le_mdc_SetDefaultAPN</a> (<a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef)</td></tr>
+<tr class="separator:ad44bd756fd5cbfd43a5b348054786a4d"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ac9accd1ea303d6840e5e7de19b0dae6f"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#ac9accd1ea303d6840e5e7de19b0dae6f">le_mdc_GetAPN</a> (<a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef, char *apnStr, size_t apnStrNumElements)</td></tr>
+<tr class="separator:ac9accd1ea303d6840e5e7de19b0dae6f"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:abf58f1dd7d4f9b915647e9c0f642065b"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#abf58f1dd7d4f9b915647e9c0f642065b">le_mdc_SetAuthentication</a> (<a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef, <a class="el" href="le__mdc__interface_8h.html#ae9758eecfab89fbc1bc01341393a7723">le_mdc_Auth_t</a> type, const char *userName, const char *password)</td></tr>
+<tr class="separator:abf58f1dd7d4f9b915647e9c0f642065b"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a2bd23fc2f951772a8fa73301affff36f"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#a2bd23fc2f951772a8fa73301affff36f">le_mdc_GetAuthentication</a> (<a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef, <a class="el" href="le__mdc__interface_8h.html#ae9758eecfab89fbc1bc01341393a7723">le_mdc_Auth_t</a> *typePtr, char *userName, size_t userNameNumElements, char *password, size_t passwordNumElements)</td></tr>
+<tr class="separator:a2bd23fc2f951772a8fa73301affff36f"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a790602f1b17d7bf9626a51eac5599439"><td align="right" class="memItemLeft" valign="top">uint32_t </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#a790602f1b17d7bf9626a51eac5599439">le_mdc_NumProfiles</a> (void)</td></tr>
+<tr class="separator:a790602f1b17d7bf9626a51eac5599439"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a160de65c9260e93f7fc2140c0ff429e7"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#a160de65c9260e93f7fc2140c0ff429e7">le_mdc_GetProfileFromApn</a> (const char *apnStr, <a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> *profileRefPtr)</td></tr>
+<tr class="separator:a160de65c9260e93f7fc2140c0ff429e7"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:afe73f44c23b1bd120dd82a85b36c6059"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17">le_mdc_DisconnectionReason_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#afe73f44c23b1bd120dd82a85b36c6059">le_mdc_GetDisconnectionReason</a> (<a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef)</td></tr>
+<tr class="separator:afe73f44c23b1bd120dd82a85b36c6059"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a3e3a92b0f5e3edab9400412170517a62"><td align="right" class="memItemLeft" valign="top">int32_t </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mdc__interface_8h.html#a3e3a92b0f5e3edab9400412170517a62">le_mdc_GetPlatformSpecificDisconnectionCode</a> (<a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef)</td></tr>
+<tr class="separator:a3e3a92b0f5e3edab9400412170517a62"><td class="memSeparator" colspan="2"> </td></tr>
+</table>
+<a id="details" name="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Legato <a class="el" href="c_mdc.html">Modem Data Control</a> include file.</p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="ac0411dbd4cc176274efb1d2cb3be3cce"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_MDC_APN_NAME_MAX_BYTES   101</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Maximum number of bytes in a apn name (including the null-terminator). </p>
+</div>
+</div>
+<a class="anchor" id="a94003147532b5c18b83cac9a4e1eb054"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_MDC_APN_NAME_MAX_LEN   100</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Maximum number of bytes in a apn name (not including the null-terminator). </p>
+</div>
+</div>
+<a class="anchor" id="abf72eaa8891f7591477e229bb4ad5723"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_MDC_DEFAULT_PROFILE   -1</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Default profile definition. </p>
+</div>
+</div>
+<a class="anchor" id="a33ebf9afd03f0ffc91a80c32c15afb42"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_MDC_INTERFACE_NAME_MAX_BYTES   21</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Maximum number of bytes in a profile name (including the null-terminator). </p>
+</div>
+</div>
+<a class="anchor" id="ad097b347b1504e36f68cded881fe2d96"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_MDC_INTERFACE_NAME_MAX_LEN   20</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Maximum number of bytes in a interface name (not including the null-terminator). </p>
+</div>
+</div>
+<a class="anchor" id="a2b8d841986d6cfefcd7a86201b236740"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_MDC_IPV4_ADDR_MAX_BYTES   16</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Maximum number of bytes in an IPv4 address (including the null-terminator). </p>
+</div>
+</div>
+<a class="anchor" id="ae85dfc41758d1886dc006e01ea3e08f4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_MDC_IPV4_ADDR_MAX_LEN   15</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Maximum number of bytes in an IPv4 address (not including the null-terminator). </p>
+</div>
+</div>
+<a class="anchor" id="ae6335030b88ae6cb9fd73199a16f7b5f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_MDC_IPV6_ADDR_MAX_BYTES   46</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Maximum number of bytes in an IPv6 address (including the null-terminator). </p>
+</div>
+</div>
+<a class="anchor" id="a69a4563aa097e65d26b54c7a0f6dabfb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_MDC_IPV6_ADDR_MAX_LEN   45</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Maximum number of bytes in an IPv6 address (not including the null-terminator). </p>
+</div>
+</div>
+<a class="anchor" id="a97f368b52546916bf8f2e697872d00bd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_MDC_PASSWORD_NAME_MAX_BYTES   101</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Maximum number of bytes in a password name (including the null-terminator). </p>
+</div>
+</div>
+<a class="anchor" id="a37643c42ade5141861f6c19c17378c2f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_MDC_PASSWORD_NAME_MAX_LEN   100</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Maximum number of bytes in a password name (not including the null-terminator). </p>
+</div>
+</div>
+<a class="anchor" id="ac7b1c4304ae2d46c60fc6d7506313161"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_MDC_SIMTOOLKIT_BIP_DEFAULT_PROFILE   -2</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Default profile definition for Bearer Independent Protocol (BIP). </p>
+</div>
+</div>
+<a class="anchor" id="a8048b6b33162159555c83da28719efa1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_MDC_USER_NAME_MAX_BYTES   65</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Maximum number of bytes in a user name (including the null-terminator). </p>
+</div>
+</div>
+<a class="anchor" id="ad246bc94c8c69c08d2765cc0570aa3cf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_MDC_USER_NAME_MAX_LEN   64</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Maximum number of bytes in a user name (not including the null-terminator). </p>
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a class="anchor" id="a285dd997ce1e6a439441dd939df080c8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef void(* le_mdc_MtPdpSessionStateHandlerFunc_t) (<a class="el" href="le__mdc__interface_8h.html#a0727e543d0394422963c8d6297947333">le_mdc_ConState_t</a> ConnectionState, void *contextPtr)</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Handler for MT-PDP Data session connection state changes.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramname">ConnectionState</td><td>MT-PDP Data session connection state. </td></tr>
+<tr><td class="paramname">contextPtr</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a00399530f88038d5d06823194780793a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef struct le_mdc_MtPdpSessionStateHandler* <a class="el" href="le__mdc__interface_8h.html#a00399530f88038d5d06823194780793a">le_mdc_MtPdpSessionStateHandlerRef_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Reference type used by Add/Remove functions for EVENT 'le_mdc_MtPdpSessionState' </p>
+</div>
+</div>
+<a class="anchor" id="a91074d8f0d88c6645e3085dfadf87011"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef struct le_mdc_Profile* <a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Reference to a modem data connection profile. </p>
+</div>
+</div>
+<a class="anchor" id="a1f32da683c8a9e061db7101ef5c8bb98"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef void(* le_mdc_SessionStateHandlerFunc_t) (<a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> profileRef, <a class="el" href="le__mdc__interface_8h.html#a0727e543d0394422963c8d6297947333">le_mdc_ConState_t</a> ConnectionState, void *contextPtr)</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Handler for Data session connection state changes.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramname">profileRef</td><td>Profile reference </td></tr>
+<tr><td class="paramname">ConnectionState</td><td>Data session connection state. </td></tr>
+<tr><td class="paramname">contextPtr</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a1a5079ca540f75d009991c164f1c2a51"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef struct le_mdc_SessionStateHandler* <a class="el" href="le__mdc__interface_8h.html#a1a5079ca540f75d009991c164f1c2a51">le_mdc_SessionStateHandlerRef_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Reference type used by Add/Remove functions for EVENT 'le_mdc_SessionState' </p>
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a class="anchor" id="ae9758eecfab89fbc1bc01341393a7723"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="le__mdc__interface_8h.html#ae9758eecfab89fbc1bc01341393a7723">le_mdc_Auth_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Enumeration of Authentication. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ae9758eecfab89fbc1bc01341393a7723a10fb016f4d6f7a7e893cf66846c24de2"></a>LE_MDC_AUTH_NONE </td><td class="fielddoc">
+<p>no authentication </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae9758eecfab89fbc1bc01341393a7723a151065be441aa8f065d0ead3d739b6f0"></a>LE_MDC_AUTH_PAP </td><td class="fielddoc">
+<p>PAP protocol. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae9758eecfab89fbc1bc01341393a7723ae93a464a7ee2f31346aa01676afc7054"></a>LE_MDC_AUTH_CHAP </td><td class="fielddoc">
+<p>CHAP protocol. </p>
+</td></tr>
+</table>
+</div>
+</div>
+<a class="anchor" id="a0727e543d0394422963c8d6297947333"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="le__mdc__interface_8h.html#a0727e543d0394422963c8d6297947333">le_mdc_ConState_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Enumeration of connection state. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a0727e543d0394422963c8d6297947333a6d11ee963528c79d73a269eb85202ba7"></a>LE_MDC_DISCONNECTED </td><td class="fielddoc">
+<p>Data session is disconnected. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a0727e543d0394422963c8d6297947333a06c37ceba786a0a786008571f9ead8d4"></a>LE_MDC_AUTHENTICATING </td><td class="fielddoc">
+<p>Authenticating data session. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a0727e543d0394422963c8d6297947333a0a8a2113935b881b76c59b94cf7223b8"></a>LE_MDC_CONNECTED </td><td class="fielddoc">
+<p>Data session is connected. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a0727e543d0394422963c8d6297947333a7a58a20c7df2b0c380ff0b819175044b"></a>LE_MDC_SUSPENDING </td><td class="fielddoc">
+<p>Suspending data session. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a0727e543d0394422963c8d6297947333a2a61bb66c6afff9fca4957e856d48bda"></a>LE_MDC_INCOMING </td><td class="fielddoc">
+<p>Incoming data session (MT-PDP context request) </p>
+</td></tr>
+</table>
+</div>
+</div>
+<a class="anchor" id="a7a9d8c4b2053b048a53257ed810f527e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527e">le_mdc_DataBearerTechnology_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Enumeration of data bearer technologies. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a7a9d8c4b2053b048a53257ed810f527eaa74ef22bfd51f6bec5d3521080f9537a"></a>LE_MDC_DATA_BEARER_TECHNOLOGY_UNKNOWN </td><td class="fielddoc">
+<p>Unknown. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a7a9d8c4b2053b048a53257ed810f527ea94176f1b8b893b313de18327d7adaec3"></a>LE_MDC_DATA_BEARER_TECHNOLOGY_GSM </td><td class="fielddoc">
+<p>GSM. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a7a9d8c4b2053b048a53257ed810f527eab66accc8a4866e53319773962d328d33"></a>LE_MDC_DATA_BEARER_TECHNOLOGY_GPRS </td><td class="fielddoc">
+<p>GPRS. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a7a9d8c4b2053b048a53257ed810f527ea7a6d420354b58854ef51236c9dd5ffac"></a>LE_MDC_DATA_BEARER_TECHNOLOGY_EGPRS </td><td class="fielddoc">
+<p>Enhanced GPRS (EDGE) </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a7a9d8c4b2053b048a53257ed810f527eaef4c110d2e9f49244e50deb1160a76ba"></a>LE_MDC_DATA_BEARER_TECHNOLOGY_WCDMA </td><td class="fielddoc">
+<p>WCDMA (UMTS) </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a7a9d8c4b2053b048a53257ed810f527ea9cf6c01fefb6d34d9146853914464b89"></a>LE_MDC_DATA_BEARER_TECHNOLOGY_HSPA </td><td class="fielddoc">
+<p>HSPA. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a7a9d8c4b2053b048a53257ed810f527ea90f0d2e99bae1f7955349d3c69635612"></a>LE_MDC_DATA_BEARER_TECHNOLOGY_HSPA_PLUS </td><td class="fielddoc">
+<p>HSPA+. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a7a9d8c4b2053b048a53257ed810f527eafb22fb13c85a703fd541854d55d84cbd"></a>LE_MDC_DATA_BEARER_TECHNOLOGY_DC_HSPA_PLUS </td><td class="fielddoc">
+<p>Dual Cell - HSPA+. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a7a9d8c4b2053b048a53257ed810f527ead74d1b39916f65f547b3c3a263a8eb4d"></a>LE_MDC_DATA_BEARER_TECHNOLOGY_LTE </td><td class="fielddoc">
+<p>LTE. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a7a9d8c4b2053b048a53257ed810f527eaf8c16113115e99ef7214284f51895634"></a>LE_MDC_DATA_BEARER_TECHNOLOGY_TD_SCDMA </td><td class="fielddoc">
+<p>TD-SCDMA. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a7a9d8c4b2053b048a53257ed810f527eaf1a513b9966ddce01044f75470419f81"></a>LE_MDC_DATA_BEARER_TECHNOLOGY_CDMA2000_1X </td><td class="fielddoc">
+<p>CDMA2000 1X. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a7a9d8c4b2053b048a53257ed810f527eae01ab4b9a842cfbc2eb44abcddd75ff4"></a>LE_MDC_DATA_BEARER_TECHNOLOGY_CDMA2000_EVDO </td><td class="fielddoc">
+<p>CDMA2000 HRPD (1xEV-DO) </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a7a9d8c4b2053b048a53257ed810f527ea27fc297fc07b683df6eb64cdd017a79b"></a>LE_MDC_DATA_BEARER_TECHNOLOGY_CDMA2000_EVDO_REVA </td><td class="fielddoc">
+<p>CDMA2000 HRPD (1xEV-DO RevA) </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a7a9d8c4b2053b048a53257ed810f527eaff19a89df5659dfb03cf054d7d4f464b"></a>LE_MDC_DATA_BEARER_TECHNOLOGY_CDMA2000_EHRPD </td><td class="fielddoc">
+<p>CDMA2000 EHRPD. </p>
+</td></tr>
+</table>
+</div>
+</div>
+<a class="anchor" id="ad1fe8909ae01a2f7e33fdbdc6938bf17"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17">le_mdc_DisconnectionReason_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Enumeration of the possible reasons for the disconnection. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ad1fe8909ae01a2f7e33fdbdc6938bf17a4b0bf3c47de146dfb256c8a7d2555008"></a>LE_MDC_DISC_NO_SERVICE </td><td class="fielddoc">
+<p>Modem has no service. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad1fe8909ae01a2f7e33fdbdc6938bf17ad74d5631833f877116b54301f4b551d2"></a>LE_MDC_DISC_OPERATOR_DETERMINED_BARRING </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex I1 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad1fe8909ae01a2f7e33fdbdc6938bf17af69c8c7dab5a8569cb84aa1c55e199f0"></a>LE_MDC_DISC_INSUFFICIENT_MBMS_CAPABILITIES </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex I1 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad1fe8909ae01a2f7e33fdbdc6938bf17a7cddd67daef05f99316bf2de04a5bb62"></a>LE_MDC_DISC_LLC_SNDCP_FAILURE </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex I1 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad1fe8909ae01a2f7e33fdbdc6938bf17ab4979cca494637abc973e10ad5f18865"></a>LE_MDC_DISC_INSUFFICIENT_RESOURCES </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex I1 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad1fe8909ae01a2f7e33fdbdc6938bf17aa2f50c19fd13a0900994849ca92d2125"></a>LE_MDC_DISC_MISSING_OR_UNKNOWN_APN </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex I1 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad1fe8909ae01a2f7e33fdbdc6938bf17aa53f88c6058ceffa22451433657bf182"></a>LE_MDC_DISC_UNKNOWN_PDP_ADDR_OR_TYPE </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex I1 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad1fe8909ae01a2f7e33fdbdc6938bf17afe4e899719154b0952108c03748aed86"></a>LE_MDC_DISC_USER_AUTHENTIFICATION_FAILURE </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex I1 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad1fe8909ae01a2f7e33fdbdc6938bf17aae8b18d5198005cf6cfb7ecad401b8db"></a>LE_MDC_DISC_ACTIVATION_REJECTED_BY_GGSN_OR_GW </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex I1 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad1fe8909ae01a2f7e33fdbdc6938bf17ad81651aa81ecc9c91756611ea8811a4a"></a>LE_MDC_DISC_ACTIVATION_REJECTED_UNSPECIFIED </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex I1 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad1fe8909ae01a2f7e33fdbdc6938bf17afeaf658e0acdb7413caef8fee314cfbb"></a>LE_MDC_DISC_SERVICE_OPTION_NOT_SUPPORTED </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex I1 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad1fe8909ae01a2f7e33fdbdc6938bf17aba9d6aca3394ac28f880456b67ca5b1f"></a>LE_MDC_DISC_REQUESTED_SERVICE_OPTION_UNSUBSCRIBED </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex I1 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad1fe8909ae01a2f7e33fdbdc6938bf17a31d48c551add5d7dc2a09f8564551b7a"></a>LE_MDC_DISC_REQUESTED_SERVICE_OPTION_OUT_OF_ORDER </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex I1 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad1fe8909ae01a2f7e33fdbdc6938bf17a3b4bb956e4b23fc6769b3d8d59f62521"></a>LE_MDC_DISC_NSAPI_ALREADY_USED </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex I1 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad1fe8909ae01a2f7e33fdbdc6938bf17a19c22a1e138f7612e19b89de60732349"></a>LE_MDC_DISC_REGULAR_DEACTIVATION </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex I1 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad1fe8909ae01a2f7e33fdbdc6938bf17abc70afad936a15351c90141e9eb4dca6"></a>LE_MDC_DISC_QOS_NOT_ACCEPTED </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex I1 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad1fe8909ae01a2f7e33fdbdc6938bf17aa08661335bfd617b8ee708b9316344bc"></a>LE_MDC_DISC_NETWORK_FAILURE </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex I1 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad1fe8909ae01a2f7e33fdbdc6938bf17aba25708a0d557aaec2dfe1a27d5fbbea"></a>LE_MDC_DISC_REACTIVATION_REQUESTED </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex I1 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad1fe8909ae01a2f7e33fdbdc6938bf17a447a14f91479512283cf5ddae58e3eff"></a>LE_MDC_DISC_FEATURE_NOT_SUPPORTED </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex I1 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad1fe8909ae01a2f7e33fdbdc6938bf17ae94f35e11adf576b58219bbb84307e67"></a>LE_MDC_DISC_TFT_SEMANTIC_ERROR </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex I1 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad1fe8909ae01a2f7e33fdbdc6938bf17a157d5799c577ee41886c0e34b4ad1dfb"></a>LE_MDC_DISC_TFT_SYNTACTICAL_ERROR </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex I1 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad1fe8909ae01a2f7e33fdbdc6938bf17ae020bbb75374fe545348dd0efd02b09c"></a>LE_MDC_DISC_UNKNOWN_PDP_CONTEXT </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex I1 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad1fe8909ae01a2f7e33fdbdc6938bf17a24d91ccf0e7ec5fab2b81b45409ea8f5"></a>LE_MDC_DISC_PACKET_FILTER_SEMANTIC_ERROR </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex I1 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad1fe8909ae01a2f7e33fdbdc6938bf17a46acd5f0a45d5f71e7c3ea7060565ccf"></a>LE_MDC_DISC_PACKET_FILTER_SYNTACTICAL_ERROR </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex I1 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad1fe8909ae01a2f7e33fdbdc6938bf17a50a570e65085ada48cc12e69b0d25edc"></a>LE_MDC_DISC_PDP_CONTEXT_WITHOUT_ACTIVE_TFT </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex I1 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad1fe8909ae01a2f7e33fdbdc6938bf17a4e5e3c5c7d4c85682678679d9660bdbb"></a>LE_MDC_DISC_MULTICAST_TIME_OUT </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex I1 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad1fe8909ae01a2f7e33fdbdc6938bf17a6db98dadba3f8b9332da761a0eb31f21"></a>LE_MDC_DISC_BEARER_CONTROL_MODE_VIOLATION </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex I1 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad1fe8909ae01a2f7e33fdbdc6938bf17ac0a682063498ae7ec9601af7f3798c7a"></a>LE_MDC_DISC_IPV4_ONLY_ALLOWED </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex I1 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad1fe8909ae01a2f7e33fdbdc6938bf17a2557336c990e378807fff1722d42da6f"></a>LE_MDC_DISC_IPV6_ONLY_ALLOWED </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex I1 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad1fe8909ae01a2f7e33fdbdc6938bf17a853b368b5f56798d835f4e3bed58d5e9"></a>LE_MDC_DISC_SINGLE_ADDR_ONLY_ALLOWED </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex I1 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad1fe8909ae01a2f7e33fdbdc6938bf17a65f02b1c06c889c5d7e9344a6069ae68"></a>LE_MDC_DISC_COLLISION_WITH_NETWORK_INITIATED_REQ </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex I1 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad1fe8909ae01a2f7e33fdbdc6938bf17acd07cb5199b2482d6031dc2268f2506b"></a>LE_MDC_DISC_BEARER_HANDLING_UNSUPPORTED </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex I1 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad1fe8909ae01a2f7e33fdbdc6938bf17af336a2033458975c20d9f8f593d1cf68"></a>LE_MDC_DISC_MAX_PDP_CONTEXTS </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex I1 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad1fe8909ae01a2f7e33fdbdc6938bf17a7ad657ac040c4cf169a0af03d7b51325"></a>LE_MDC_DISC_APN_UNSUPPORTED_FOR_RAT_AND_PLMN </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex I1 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad1fe8909ae01a2f7e33fdbdc6938bf17adbcc071b27d08423fa7239fbd6137563"></a>LE_MDC_DISC_INCOMPATIBLE_APN </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex I1 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad1fe8909ae01a2f7e33fdbdc6938bf17a6541a2df9aef958e78745c35deffbe4d"></a>LE_MDC_DISC_INVALID_TRANSACTION_ID </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex I2 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad1fe8909ae01a2f7e33fdbdc6938bf17a0e0db24bc4566a107d13fb2a735247dc"></a>LE_MDC_DISC_MESSAGE_INCORRECT_SEMANTIC </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex I2 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad1fe8909ae01a2f7e33fdbdc6938bf17a2fcf6fa570f2d1232460f8ac345477da"></a>LE_MDC_DISC_INVALID_MANDATORY_INFORMATION </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex I2 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad1fe8909ae01a2f7e33fdbdc6938bf17ad15f8293ca2daccd4ec60a83ca1657ef"></a>LE_MDC_DISC_UNSUPPORTED_MESSAGE_TYPE </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex I2 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad1fe8909ae01a2f7e33fdbdc6938bf17ab86cf3c132a1bfb4bb653b0e5d6e93a1"></a>LE_MDC_DISC_MESSAGE_AND_PROTOCOL_STATE_UNCOMPATIBLE </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex I2 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad1fe8909ae01a2f7e33fdbdc6938bf17aac98e15b1eddeaab082fc677fbc5c9e3"></a>LE_MDC_DISC_UNKNOWN_INFORMATION_ELEMENT </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex I2 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad1fe8909ae01a2f7e33fdbdc6938bf17ab7c4eab939b9bfb77fd869ac9284b2a6"></a>LE_MDC_DISC_CONDITIONAL_IE_ERROR </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex I2 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad1fe8909ae01a2f7e33fdbdc6938bf17a6328213c0930135dc96ab7281defb544"></a>LE_MDC_DISC_MESSAGE_AND_STATE_UNCOMPATIBLE </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex I2 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad1fe8909ae01a2f7e33fdbdc6938bf17a7be545dea0d9d93c2ac54d6e315fb578"></a>LE_MDC_DISC_PROTOCOL_ERROR_UNSPECIFIED </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex I2 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad1fe8909ae01a2f7e33fdbdc6938bf17a9302526da171ae2b91f7ccb44d9d9b53"></a>LE_MDC_DISC_PLATFORM_SPECIFIC </td><td class="fielddoc">
+<p>Platform specific code. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad1fe8909ae01a2f7e33fdbdc6938bf17a1a7921226f32bbb60973380dc4000b3f"></a>LE_MDC_DISC_UNDEFINED </td><td class="fielddoc">
+<p>Undefined reason. </p>
+</td></tr>
+</table>
+</div>
+</div>
+<a class="anchor" id="a85721ec6046140c2f87c23f877dce247"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="le__mdc__interface_8h.html#a85721ec6046140c2f87c23f877dce247">le_mdc_Pdp_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Enumeration of Packet Data Protocol. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a85721ec6046140c2f87c23f877dce247a590fd5c933c3751e42053f996d530987"></a>LE_MDC_PDP_UNKNOWN </td><td class="fielddoc">
+<p>Unknown. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a85721ec6046140c2f87c23f877dce247af550adf5bcecb680294f92f28496a830"></a>LE_MDC_PDP_IPV4 </td><td class="fielddoc">
+<p>IPv4. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a85721ec6046140c2f87c23f877dce247ac2d2a34bad2d18be1ea8facef0effad0"></a>LE_MDC_PDP_IPV6 </td><td class="fielddoc">
+<p>IPv6. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a85721ec6046140c2f87c23f877dce247a4427db8ba7a89ebf66c7b62eacfc8275"></a>LE_MDC_PDP_IPV4V6 </td><td class="fielddoc">
+<p>IPv4 and IPv6. </p>
+</td></tr>
+</table>
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ada19c2a399ba8c0aa038e27c21689472"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__mdc__interface_8h.html#a00399530f88038d5d06823194780793a">le_mdc_MtPdpSessionStateHandlerRef_t</a> le_mdc_AddMtPdpSessionStateHandler </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mdc__interface_8h.html#a1f32da683c8a9e061db7101ef5c8bb98">le_mdc_SessionStateHandlerFunc_t</a> </td>
+<td class="paramname"><em>handlerPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">void * </td>
+<td class="paramname"><em>contextPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Add handler function for EVENT 'le_mdc_MtPdpSessionState'</p>
+<p>This event provides information on data session connection state changes for the given profileRef. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">handlerPtr</td><td></td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">contextPtr</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a594c85c1ccb56ddfbaf36496f35f681e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__mdc__interface_8h.html#a1a5079ca540f75d009991c164f1c2a51">le_mdc_SessionStateHandlerRef_t</a> le_mdc_AddSessionStateHandler </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> </td>
+<td class="paramname"><em>profileRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="le__mdc__interface_8h.html#a1f32da683c8a9e061db7101ef5c8bb98">le_mdc_SessionStateHandlerFunc_t</a> </td>
+<td class="paramname"><em>handlerPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">void * </td>
+<td class="paramname"><em>contextPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Add handler function for EVENT 'le_mdc_SessionState'</p>
+<p>This event provides information on data session connection state changes for the given profileRef. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">profileRef</td><td>The profile object of interest </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">handlerPtr</td><td></td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">contextPtr</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a2a841ce582ce97f62df6334717b49fcb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_mdc_ConnectService </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Connect the current client thread to the service providing this API.</p>
+<p>This function must be called before any other functions in this API. Normally, it's automatically called for the main thread, but must be explicitly called for other threads. For details, see <a class="el" href="api_files_c.html#apiFilesC_client">Client-specific Functions</a>.</p>
+<p>This function is created automatically. </p>
+</div>
+</div>
+<a class="anchor" id="a3ce7efc114de8b91a7ad61cb6f6f47c8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_mdc_DisconnectService </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Disconnect the current client thread from the service providing this API.</p>
+<p>Normally, this function doesn't need to be called. After this function is called, there's no longer a connection to the service, and the functions in this API can't be used. For details, see <a class="el" href="api_files_c.html#apiFilesC_client">Client-specific Functions</a>.</p>
+<p>This function is created automatically. </p>
+</div>
+</div>
+<a class="anchor" id="ac9accd1ea303d6840e5e7de19b0dae6f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mdc_GetAPN </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> </td>
+<td class="paramname"><em>profileRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">char * </td>
+<td class="paramname"><em>apnStr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>apnStrNumElements</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the Access Point Name (APN) for the given profile.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_BAD_PARAMETER if an input parameter is not valid</li>
+<li>LE_OVERFLOW if the APN is is too long</li>
+<li>LE_FAULT on failed</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The process exits, if an invalid profile object is given </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">profileRef</td><td>Query this profile object </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">apnStr</td><td>The Access Point Name </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">apnStrNumElements</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a2bd23fc2f951772a8fa73301affff36f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mdc_GetAuthentication </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> </td>
+<td class="paramname"><em>profileRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="le__mdc__interface_8h.html#ae9758eecfab89fbc1bc01341393a7723">le_mdc_Auth_t</a> * </td>
+<td class="paramname"><em>typePtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">char * </td>
+<td class="paramname"><em>userName</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>userNameNumElements</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">char * </td>
+<td class="paramname"><em>password</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>passwordNumElements</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get authentication property</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_BAD_PARAMETER if an input parameter is not valid</li>
+<li>LE_OVERFLOW userName or password are too small</li>
+<li>LE_FAULT on failed</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The process exits, if an invalid profile object is given </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">profileRef</td><td>Query this profile object </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">typePtr</td><td>Authentication type </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">userName</td><td>UserName used by authentication </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">userNameNumElements</td><td></td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">password</td><td>Password used by authentication </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">passwordNumElements</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="aaad833c105f7d0ae77f18195d6739080"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mdc_GetBytesCounters </td>
+<td>(</td>
+<td class="paramtype">uint64_t * </td>
+<td class="paramname"><em>rxBytesPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">uint64_t * </td>
+<td class="paramname"><em>txBytesPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get number of bytes received/transmitted without error since the last reset.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_FAULT for all other errors</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd><ul>
+<li>The process exits, if an invalid pointer is given </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[out]</td><td class="paramname">rxBytesPtr</td><td>bytes amount received since the last counter reset </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">txBytesPtr</td><td>bytes amount transmitted since the last counter reset </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a1b17bb87b347162013b5ad608cdcda2d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mdc_GetDataBearerTechnology </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> </td>
+<td class="paramname"><em>profileRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527e">le_mdc_DataBearerTechnology_t</a> * </td>
+<td class="paramname"><em>downlinkDataBearerTechPtrPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="le__mdc__interface_8h.html#a7a9d8c4b2053b048a53257ed810f527e">le_mdc_DataBearerTechnology_t</a> * </td>
+<td class="paramname"><em>uplinkDataBearerTechPtrPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the Data Bearer Technology for the given profile, if the data session is connected.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_FAULT for all other errors</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The process exits, if an invalid profile object is given </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">profileRef</td><td>Query this profile object </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">downlinkDataBearerTechPtrPtr</td><td>downlink data bearer technology </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">uplinkDataBearerTechPtrPtr</td><td>uplink data bearer technology </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="afe73f44c23b1bd120dd82a85b36c6059"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__mdc__interface_8h.html#ad1fe8909ae01a2f7e33fdbdc6938bf17">le_mdc_DisconnectionReason_t</a> le_mdc_GetDisconnectionReason </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> </td>
+<td class="paramname"><em>profileRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Called to get the disconnection reason.</p>
+<dl class="section return"><dt>Returns</dt><dd>The disconnection reason.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it is a fatal error, the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">profileRef</td><td>profile reference </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="abf470aa8e252114cbb95b4e337083d52"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mdc_GetInterfaceName </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> </td>
+<td class="paramname"><em>profileRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">char * </td>
+<td class="paramname"><em>interfaceName</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>interfaceNameNumElements</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the network interface name, if the data session is connected.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_OVERFLOW if the interface name would not fit in interfaceNameStr</li>
+<li>LE_FAULT for all other errors</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The process exits, if an invalid profile object is given </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">profileRef</td><td>Query this profile object </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">interfaceName</td><td>The name of the network interface </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">interfaceNameNumElements</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a732acb5823549a1644aa1bb5ba69fea5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mdc_GetIPv4Address </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> </td>
+<td class="paramname"><em>profileRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">char * </td>
+<td class="paramname"><em>ipAddr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>ipAddrNumElements</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the IPv4 address for the given profile, if the data session is connected and has an IPv4 address.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_OVERFLOW if the IP address would not fit in ipAddrStr</li>
+<li>LE_FAULT for all other errors</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The process exits, if an invalid profile object is given </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">profileRef</td><td>Query this profile object </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">ipAddr</td><td>The IP address in dotted format </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">ipAddrNumElements</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ae99f6e212de1b0c0ea8a8763b62e0bea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mdc_GetIPv4DNSAddresses </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> </td>
+<td class="paramname"><em>profileRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">char * </td>
+<td class="paramname"><em>dns1AddrStr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>dns1AddrStrNumElements</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">char * </td>
+<td class="paramname"><em>dns2AddrStr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>dns2AddrStrNumElements</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the primary/secondary DNS v4 addresses for the given profile, if the data session is connected and has an IPv4 address.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_OVERFLOW if the IP address would not fit in buffer</li>
+<li>LE_FAULT for all other errors</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd><ul>
+<li>If only one DNS address is available, then it will be returned, and an empty string will be returned for the unavailable address</li>
+<li>The process exits, if an invalid profile object is given </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">profileRef</td><td>Query this profile object </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">dns1AddrStr</td><td>The primary DNS IP address in dotted format </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">dns1AddrStrNumElements</td><td></td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">dns2AddrStr</td><td>The secondary DNS IP address in dotted format </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">dns2AddrStrNumElements</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="af4be1afa6d44a4a7041f9f02660704b9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mdc_GetIPv4GatewayAddress </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> </td>
+<td class="paramname"><em>profileRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">char * </td>
+<td class="paramname"><em>gatewayAddr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>gatewayAddrNumElements</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the gateway IPv4 address for the given profile, if the data session is connected and has an IPv4 address.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_OVERFLOW if the IP address would not fit in gatewayAddrStr</li>
+<li>LE_FAULT for all other errors</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The process exits, if an invalid profile object is given </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">profileRef</td><td>Query this profile object </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">gatewayAddr</td><td>The gateway IP address in dotted format </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">gatewayAddrNumElements</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="aacd6a0b646f26625cdb26a78d42f8e5f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mdc_GetIPv6Address </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> </td>
+<td class="paramname"><em>profileRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">char * </td>
+<td class="paramname"><em>ipAddr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>ipAddrNumElements</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the IPv6 address for the given profile, if the data session is connected and has an IPv6 address.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_OVERFLOW if the IP address would not fit in ipAddrStr</li>
+<li>LE_FAULT for all other errors</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The process exits, if an invalid profile object is given </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">profileRef</td><td>Query this profile object </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">ipAddr</td><td>The IP address in dotted format </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">ipAddrNumElements</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a8aeb3f684567eee2976b851b7d713f01"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mdc_GetIPv6DNSAddresses </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> </td>
+<td class="paramname"><em>profileRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">char * </td>
+<td class="paramname"><em>dns1AddrStr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>dns1AddrStrNumElements</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">char * </td>
+<td class="paramname"><em>dns2AddrStr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>dns2AddrStrNumElements</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the primary/secondary DNS v6 addresses, if the data session is connected and has an IPv6 address.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_OVERFLOW if the IP address can't fit in buffer</li>
+<li>LE_FAULT for all other errors</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd><ul>
+<li>If only one DNS address is available, it will be returned, and an empty string will be returned for the unavailable address.</li>
+<li>The process exits, if an invalid profile object is given </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">profileRef</td><td>Query this profile object </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">dns1AddrStr</td><td>The primary DNS IP address in dotted format </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">dns1AddrStrNumElements</td><td></td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">dns2AddrStr</td><td>The secondary DNS IP address in dotted format </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">dns2AddrStrNumElements</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a0b82eac1ed112bd3b82060cc54751246"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mdc_GetIPv6GatewayAddress </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> </td>
+<td class="paramname"><em>profileRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">char * </td>
+<td class="paramname"><em>gatewayAddr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>gatewayAddrNumElements</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the gateway IPv6 address for the given profile, if the data session is connected and has an IPv6 address.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_OVERFLOW if the IP address would not fit in gatewayAddrStr</li>
+<li>LE_FAULT for all other errors</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The process exits, if an invalid profile object is given </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">profileRef</td><td>Query this profile object </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">gatewayAddr</td><td>The gateway IP address in dotted format </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">gatewayAddrNumElements</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a0a51125579f1d5009dac03c79ddff498"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__mdc__interface_8h.html#a85721ec6046140c2f87c23f877dce247">le_mdc_Pdp_t</a> le_mdc_GetPDP </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> </td>
+<td class="paramname"><em>profileRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the Packet Data Protocol (PDP) for the given profile.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>packet data protocol value</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The process exits, if an invalid profile object is given </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">profileRef</td><td>Query this profile object </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a3e3a92b0f5e3edab9400412170517a62"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">int32_t le_mdc_GetPlatformSpecificDisconnectionCode </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> </td>
+<td class="paramname"><em>profileRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Called to get the platform specific disconnection code.</p>
+<dl class="section return"><dt>Returns</dt><dd>The platform specific disconnection code.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it is a fatal error, the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">profileRef</td><td>profile reference </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a638b693cd5f644fa5c24f81e1e36483c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> le_mdc_GetProfile </td>
+<td>(</td>
+<td class="paramtype">uint32_t </td>
+<td class="paramname"><em>index</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get Profile Reference for index</p>
+<dl class="section warning"><dt>Warning</dt><dd>Ensure to check the list of supported data profiles for your specific platform.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>Reference to the data profile</li>
+<li>NULL if the profile index does not exist </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>index of the profile. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a160de65c9260e93f7fc2140c0ff429e7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mdc_GetProfileFromApn </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>apnStr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> * </td>
+<td class="paramname"><em>profileRefPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get a profile selected by its APN</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_BAD_PARAMETER if an input parameter is not valid</li>
+<li>LE_NOT_FOUND if the requested APN is not found </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">apnStr</td><td>The Access Point Name </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">profileRefPtr</td><td>profile reference </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a108f7c3db74a377c2ae5482543d4e0d9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">uint32_t le_mdc_GetProfileIndex </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> </td>
+<td class="paramname"><em>profileRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the index for the given Profile.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>index of the profile in the modem</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The process exits, if an invalid profile object is given </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">profileRef</td><td>Query this profile object </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="add91c364e8b3e4e82a0ce64e480c016b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mdc_GetSessionState </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> </td>
+<td class="paramname"><em>profileRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="le__mdc__interface_8h.html#a0727e543d0394422963c8d6297947333">le_mdc_ConState_t</a> * </td>
+<td class="paramname"><em>connectionStatePtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the current data session state.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_BAD_PARAMETER if an input parameter is not valid</li>
+<li>LE_FAULT on failure</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The process exits, if an invalid profile object is given </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">profileRef</td><td>Query this profile object </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">connectionStatePtr</td><td>The data session state </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="aa3912e94864a6e5862e07f58b3772cba"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">bool le_mdc_IsIPv4 </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> </td>
+<td class="paramname"><em>profileRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Allow the caller to know if the given profile is actually supporting IPv4, if the data session is connected.</p>
+<dl class="section return"><dt>Returns</dt><dd>TRUE if PDP type is IPv4, FALSE otherwise.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it is a fatal error, the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">profileRef</td><td>Query this profile object </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="adde11de0b17b2c937acca6355b6fba11"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">bool le_mdc_IsIPv6 </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> </td>
+<td class="paramname"><em>profileRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Allow the caller to know if the given profile is actually supporting IPv6, if the data session is connected.</p>
+<dl class="section return"><dt>Returns</dt><dd>TRUE if PDP type is IPv6, FALSE otherwise.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it is a fatal error, the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">profileRef</td><td>Query this profile object </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a790602f1b17d7bf9626a51eac5599439"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">uint32_t le_mdc_NumProfiles </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the number of profiles on the modem.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>number of profiles existing on modem </li>
+</ul>
+</dd></dl>
+</div>
+</div>
+<a class="anchor" id="ae3b49edad910960b84a9012ecc33c66a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mdc_RejectMtPdpSession </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> </td>
+<td class="paramname"><em>profileRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Reject MT-PDP profile data session.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_BAD_PARAMETER if the input parameter is not valid</li>
+<li>LE_FAULT for other failures</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The process exits, if an invalid profile object is given </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">profileRef</td><td>Reject MT-PDP data session for this profile object </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ad296518ad496c960b4b23f89f7a1b222"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_mdc_RemoveMtPdpSessionStateHandler </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mdc__interface_8h.html#a00399530f88038d5d06823194780793a">le_mdc_MtPdpSessionStateHandlerRef_t</a> </td>
+<td class="paramname"><em>addHandlerRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Remove handler function for EVENT 'le_mdc_MtPdpSessionState' </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">addHandlerRef</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a3b89962f4383f42a357f5a5fcc14fdff"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_mdc_RemoveSessionStateHandler </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mdc__interface_8h.html#a1a5079ca540f75d009991c164f1c2a51">le_mdc_SessionStateHandlerRef_t</a> </td>
+<td class="paramname"><em>addHandlerRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Remove handler function for EVENT 'le_mdc_SessionState' </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">addHandlerRef</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a63636b2779d2ee6a6520ebfb2d26666c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mdc_ResetBytesCounter </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Reset received/transmitted data flow statistics</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_FAULT for all other errors </li>
+</ul>
+</dd></dl>
+</div>
+</div>
+<a class="anchor" id="a1777f22b1a400593c3e0fb879acd57c6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mdc_SetAPN </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> </td>
+<td class="paramname"><em>profileRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>apnStr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Set the Access Point Name (APN) for the given profile.</p>
+<p>The APN must be an ASCII string.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_BAD_PARAMETER if an input parameter is not valid</li>
+<li>LE_FAULT if the data session is currently connected for the given profile</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If APN is too long (max APN_NAME_MAX_LEN digits), it is a fatal error, the function will not return. </dd>
+<dd>
+The process exits, if an invalid profile object is given </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">profileRef</td><td>Query this profile object </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">apnStr</td><td>The Access Point Name </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="abf58f1dd7d4f9b915647e9c0f642065b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mdc_SetAuthentication </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> </td>
+<td class="paramname"><em>profileRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="le__mdc__interface_8h.html#ae9758eecfab89fbc1bc01341393a7723">le_mdc_Auth_t</a> </td>
+<td class="paramname"><em>type</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>userName</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>password</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Set authentication property</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd><ul>
+<li>The process exits, if userName or password are NULL when type is not PA_MDC_AUTH_NONE</li>
+<li>The process exits, if an invalid profile object is given </li>
+</ul>
+</dd>
+<dd>
+If userName is too long (max USER_NAME_MAX_LEN digits), it is a fatal error, the function will not return. </dd>
+<dd>
+If password is too long (max PASSWORD_NAME_MAX_LEN digits), it is a fatal error, the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">profileRef</td><td>Query this profile object </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>Authentication type </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">userName</td><td>UserName used by authentication </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">password</td><td>Password used by authentication </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ad44bd756fd5cbfd43a5b348054786a4d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mdc_SetDefaultAPN </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> </td>
+<td class="paramname"><em>profileRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Set the Access Point Name (APN) for the given profile according to the home network mcc/mnc.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_BAD_PARAMETER if an input parameter is not valid</li>
+<li>LE_FAULT for all other errors</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The process exits, if an invalid profile object is given </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">profileRef</td><td>Query this profile object </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a73e66a7a63dc95d7f261fc2a26470386"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mdc_SetPDP </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> </td>
+<td class="paramname"><em>profileRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="le__mdc__interface_8h.html#a85721ec6046140c2f87c23f877dce247">le_mdc_Pdp_t</a> </td>
+<td class="paramname"><em>pdp</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Set the Packet Data Protocol (PDP) for the given profile.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_BAD_PARAMETER if the PDP is not supported</li>
+<li>LE_FAULT if the data session is currently connected for the given profile</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The process exits, if an invalid profile object is given </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">profileRef</td><td>Query this profile object </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">pdp</td><td>The Packet Data Protocol </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a2cb08d5c3e6c43297d80448891719649"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mdc_StartSession </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> </td>
+<td class="paramname"><em>profileRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Start profile data session.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_BAD_PARAMETER if input parameter is incorrect</li>
+<li>LE_DUPLICATE if the data session is already connected for the given profile</li>
+<li>LE_FAULT for other failures</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The process exits, if an invalid profile object is given </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">profileRef</td><td>Start data session for this profile object </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a53453f85065c3cace0922150b7e3d869"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mdc_StopSession </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011">le_mdc_ProfileRef_t</a> </td>
+<td class="paramname"><em>profileRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Stop profile data session.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_BAD_PARAMETER if the input parameter is not valid</li>
+<li>LE_FAULT for other failures</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The process exits, if an invalid profile object is given </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">profileRef</td><td>Stop data session for this profile object </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

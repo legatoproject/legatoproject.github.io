@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Power Management  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">Power Management </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p>Peripheral device power management is usually handled by device drivers and the operating system. If a device isn't in use, the driver automatically keeps that device in its lowest power state.</p>
+<p>App behaviour drives power consumption. If app code is uses a peripheral device when it doesn't need to, power will be wasted. Power is also wasted if app code runs busy-wait loops or periodically polls for events.</p>
+<p>To conserve power, apps should register call-back functions only triggered when events occur. This way app code only runs when an event occurs, rather than waking up to check for events that haven't happened. Every CPU cycle uses power, so when a power-sensitive app is woken up, it should execute as few instructions as possible before going back to sleep.</p>
+<p>When all threads are sleeping, the O/S will reduce the CPU power state automatically. When an event handler function returns back to the Legato event loop, it puts the thread to sleep (unless there's another event waiting). If your thread isn't running the Legato event loop, block your thread to put it to sleep when it's not working through <code>poll()</code>, <code>select()</code>, <code>read()</code>, <code>write()</code>, <code>recv()</code>, etc.</p>
+<p>If you use a periodic timer (like <a class="el" href="c_timer.html">Timer API</a>) to wake up your app, it will consume power. Set the timer period as long possible to conserve power, and let the O/S go into deeper sleep states.</p>
+<p>To maximize power savings, the system can use the Linux auto-sleep feature. Unless the system is busy processing a non-deferrable event, this feature puts the hardware into a <code>SUSPEND</code> state where all peripherals and the CPU are placed into low-power mode. Apps with the appropriate credentials have the option to control the system power state while performing critical operations.</p>
+<p>Use Legato's <a class="el" href="c_pm.html">Power Manager</a> to control the system's wake-up (powered) state. Operations needing fast response times or those resulting in high interrupt rates may benefit from keeping the system awake. This provides better performance, but worse power efficiency.</p>
+<p>See <a class="el" href="how_to_power_mgmt.html">Manage Device Power</a> for info on how to write power-efficient apps.</p>
+<hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

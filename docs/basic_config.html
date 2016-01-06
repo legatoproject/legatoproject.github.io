@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Configuration  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">Configuration </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p>This topic describes how target device configuration works in Legato.</p>
+<p>Also see <a class="el" href="how_to_config_tree.html">Manage Config Tree</a></p>
+<hr />
+<p>Device configuration data is vital for most applications. Seldom are all devices in an application identical. Usually, there's some kind of customization on each device: it may be a complex set of user preferences, or it may be just a simple node name. Regardless of the device's customization, the device needs to be:</p><ul>
+<li>stored somewhere it can be retrieved quickly</li>
+<li>easy to modify programmatically from within the device application code</li>
+<li>easy to view and modify remotely via generic network or managed portal service</li>
+<li>protected from<ul>
+<li>malicious snooping and vandalizm</li>
+<li>multi-threaded race conditions</li>
+<li>untimely device reset or power loss</li>
+</ul>
+</li>
+</ul>
+<h1><a class="anchor" id="Tree"></a>
+Structure</h1>
+<p>Configuration data is stored in a tree structure, where each non-leaf node can contain any number of child nodes, each with its own name. At the leaves of the tree, the nodes can contain data.</p>
+<p>This tree structure allows configuration data items to be uniquely identified using path names, much like file system paths, which makes it much easier to access configuration data via HTTP, SNMP, OMA-DM, and other protocols. It also allows the configuration database to be explored using tree walking algorithms and tools.</p>
+<h1><a class="anchor" id="Transactions"></a>
+Transactions</h1>
+<p>Configuration data can be shared by multiple processes and threads. This can sometimes result in race conditions that can threaten data integrity. For example, if threads A and B both use data fields X and Y, it could be bad if thread A interrupts thread B to read those fields just after thread B has updated field X and is about to update field Y to be consistent with the new value of field X.</p>
+<p>A possible reset or power loss may occur at any time, and we must be sure that would not corrupt the configuration data. For example, if power fails just after field X has been updated, but before field Y gets updated to match the new value of field X, then the configuration data could be in an invalid state. Transactions are used to prevent these sorts of problems.</p>
+<p>Before a change can be made to configuration data, a write transaction must be started. All changes are made in the context of such a transaction, and when the changes are complete, the transaction can be "committed". If a fault prevents the entire set of changes from being applied on commit, or if the transaction is cancelled before it is committed, then none of that transaction's changes will be applied.</p>
+<p>Transactions can also be started for reading only. A write transaction will be allowed to start while there is a read transaction in progress. But the commit process will block write transactions until the read transactions have finished. This ensures that anyone reading configuration data fields will see only field values that are consistent.</p>
+<p>To prevent denial of service problems (either accidental or malicious), transactions have a limited lifetime. If a transaction remains open for too long, it will be automatically terminated; the configration database will drop its connection to the offending client.</p>
+<h1><a class="anchor" id="backForwardCompatibility"></a>
+Backward/Forward Compatibility</h1>
+<p>For example, to support a new recurring wake-up schedule that supports waking on particular days of the week, the wake schedule configuration data may need to be completely re-structured. There are several ways to do this.</p>
+<p>One approach is to have a "configuration data upgrade" utility run when the new software is installed. However, if the new software upgrades the configuration data and then fails to fully boot, and the device is forced to fall-back to the old software, then the old software won't be able to read its configuration data anymore. This can be mitigated by keeping a complete backup copy of the configuration data prior to the software upgrade, but this either consumes space in the device's non-volatile memory or it consumes time and over-the-air bandwidth to make backup copies elsewhere in the network.</p>
+<p>However, the recommended approach is to:</p><ul>
+<li>have newer software understand the configuration data structure used by previous versions of the software;</li>
+<li>never write to the configuration data unless settings are being changed;</li>
+<li>when changing settings, write the configuration data using the newest format;</li>
+<li>leave the older version of the configuration data along-side the newer version (in case of later software "downgrade");</li>
+<li>if both multiple versions of the same configuration data are found, use only the newest that is understood by the current running software.</li>
+</ul>
+<h1><a class="anchor" id="configChangeNotification"></a>
+Configuration Change Notifications</h1>
+<p>Sometimes, action needs to be taken whenever a configuration data field changes value. The Configuration Data API allows client software to register for notification when changes are committed to a particular branch of the configuration tree.</p>
+<h1><a class="anchor" id="accessControl"></a>
+Access Control</h1>
+<p>Because the behaviour of applications can be affected by the configuration data that they use, configuration data can be used as an attack vector for malicious software. As a result, access to configuration data must be strictly controlled when there is any possibility that malicious software may be allowed to run on a device.</p>
+<p>The Configuration Data system separates each applications' configration data only allowing access to its own data.</p>
+<hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,785 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>le_args.h File Reference - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Reference.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a href="build_apps_documentation.html">Documentation</a><a class="link-selected" href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="summary">
+<a href="#typedef-members">Typedefs</a> |
+<a href="#func-members">Functions</a> </div>
+<div class="headertitle">
+<h1 class="title">le_args.h File Reference</h1> </div>
+</div><div class="contents">
+<p><a href="le__args_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:af08d8d2301f23074eefa8a61de92b1a6"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__args_8h.html#af08d8d2301f23074eefa8a61de92b1a6">le_arg_FlagCallbackFunc_t</a>) (void)</td></tr>
+<tr class="separator:af08d8d2301f23074eefa8a61de92b1a6"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a9deffd3e2d689aa47a3253ecde42551d"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__args_8h.html#a9deffd3e2d689aa47a3253ecde42551d">le_arg_IntCallbackFunc_t</a>) (int value)</td></tr>
+<tr class="separator:a9deffd3e2d689aa47a3253ecde42551d"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a6069a3f8abaa2b43dd89d84c356bf796"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__args_8h.html#a6069a3f8abaa2b43dd89d84c356bf796">le_arg_StringCallbackFunc_t</a>) (const char *value)</td></tr>
+<tr class="separator:a6069a3f8abaa2b43dd89d84c356bf796"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a45e8d73a4e7f22a46a53ecbf73e3285b"><td align="right" class="memItemLeft" valign="top">typedef size_t(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__args_8h.html#a45e8d73a4e7f22a46a53ecbf73e3285b">le_arg_ErrorHandlerFunc_t</a>) (size_t argIndex, <a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> errorCode)</td></tr>
+<tr class="separator:a45e8d73a4e7f22a46a53ecbf73e3285b"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:add0db0cb93135a6f18f336bd7885cf75"><td align="right" class="memItemLeft" valign="top">const char * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__args_8h.html#add0db0cb93135a6f18f336bd7885cf75">le_arg_GetProgramName</a> (void)</td></tr>
+<tr class="separator:add0db0cb93135a6f18f336bd7885cf75"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a6fbbeb423104e6eb92fe47ef42b7310a"><td align="right" class="memItemLeft" valign="top">size_t </td><td class="memItemRight" valign="bottom"><a class="el" href="le__args_8h.html#a6fbbeb423104e6eb92fe47ef42b7310a">le_arg_NumArgs</a> (void)</td></tr>
+<tr class="separator:a6fbbeb423104e6eb92fe47ef42b7310a"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a5ebca8229facd069785639cb3c1e273a"><td align="right" class="memItemLeft" valign="top">const char * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__args_8h.html#a5ebca8229facd069785639cb3c1e273a">le_arg_GetArg</a> (size_t argIndex)</td></tr>
+<tr class="separator:a5ebca8229facd069785639cb3c1e273a"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:af3b6949dd9d93b8461f3bb64d565fa93"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__args_8h.html#af3b6949dd9d93b8461f3bb64d565fa93">le_arg_GetFlagOption</a> (const char *shortName, const char *longName)</td></tr>
+<tr class="separator:af3b6949dd9d93b8461f3bb64d565fa93"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aac66ccbb038e10c117a685d6eae5a684"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__args_8h.html#aac66ccbb038e10c117a685d6eae5a684">le_arg_GetIntOption</a> (int *varPtr, const char *shortName, const char *longName)</td></tr>
+<tr class="separator:aac66ccbb038e10c117a685d6eae5a684"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:af096ac39dfa56aedaa4490653891c222"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__args_8h.html#af096ac39dfa56aedaa4490653891c222">le_arg_GetStringOption</a> (const char **varPtr, const char *shortName, const char *longName)</td></tr>
+<tr class="separator:af096ac39dfa56aedaa4490653891c222"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a889bb72c62d8590d61170a069219e852"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__args_8h.html#a889bb72c62d8590d61170a069219e852">le_arg_SetFlagVar</a> (bool *varPtr, const char *shortName, const char *longName)</td></tr>
+<tr class="separator:a889bb72c62d8590d61170a069219e852"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a27f1486b1e855559158e218a7d93ce73"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__args_8h.html#a27f1486b1e855559158e218a7d93ce73">le_arg_SetIntVar</a> (int *varPtr, const char *shortName, const char *longName)</td></tr>
+<tr class="separator:a27f1486b1e855559158e218a7d93ce73"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a56d0b80e404966a00c87ec662fea23a8"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__args_8h.html#a56d0b80e404966a00c87ec662fea23a8">le_arg_SetStringVar</a> (const char **varPtr, const char *shortName, const char *longName)</td></tr>
+<tr class="separator:a56d0b80e404966a00c87ec662fea23a8"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a4594892b35d4e0a6d7551e9c371919fc"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__args_8h.html#a4594892b35d4e0a6d7551e9c371919fc">le_arg_SetFlagCallback</a> (<a class="el" href="le__args_8h.html#af08d8d2301f23074eefa8a61de92b1a6">le_arg_FlagCallbackFunc_t</a> func, const char *shortName, const char *longName)</td></tr>
+<tr class="separator:a4594892b35d4e0a6d7551e9c371919fc"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a40e96c54132708b0637c3d696e3d060d"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__args_8h.html#a40e96c54132708b0637c3d696e3d060d">le_arg_SetIntCallback</a> (<a class="el" href="le__args_8h.html#a9deffd3e2d689aa47a3253ecde42551d">le_arg_IntCallbackFunc_t</a> func, const char *shortName, const char *longName)</td></tr>
+<tr class="separator:a40e96c54132708b0637c3d696e3d060d"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a41b845bab467f4b1e7fcae3d600e88b2"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__args_8h.html#a41b845bab467f4b1e7fcae3d600e88b2">le_arg_SetStringCallback</a> (<a class="el" href="le__args_8h.html#a6069a3f8abaa2b43dd89d84c356bf796">le_arg_StringCallbackFunc_t</a> func, const char *shortName, const char *longName)</td></tr>
+<tr class="separator:a41b845bab467f4b1e7fcae3d600e88b2"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a525bef6095a4655e97008e27a4829d44"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__args_8h.html#a525bef6095a4655e97008e27a4829d44">le_arg_AddPositionalCallback</a> (<a class="el" href="le__args_8h.html#a6069a3f8abaa2b43dd89d84c356bf796">le_arg_StringCallbackFunc_t</a> func)</td></tr>
+<tr class="separator:a525bef6095a4655e97008e27a4829d44"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ab646cfcb831e13312bff496221e74acc"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__args_8h.html#ab646cfcb831e13312bff496221e74acc">le_arg_AllowMorePositionalArgsThanCallbacks</a> (void)</td></tr>
+<tr class="separator:ab646cfcb831e13312bff496221e74acc"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aedcaae9ee7e7cc9cf83c30435f6ae653"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__args_8h.html#aedcaae9ee7e7cc9cf83c30435f6ae653">le_arg_AllowLessPositionalArgsThanCallbacks</a> (void)</td></tr>
+<tr class="separator:aedcaae9ee7e7cc9cf83c30435f6ae653"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a5128be1cbe2c7b30f1f697f8b5594479"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__args_8h.html#a5128be1cbe2c7b30f1f697f8b5594479">le_arg_SetErrorHandler</a> (<a class="el" href="le__args_8h.html#a45e8d73a4e7f22a46a53ecbf73e3285b">le_arg_ErrorHandlerFunc_t</a> errorHandlerFunc)</td></tr>
+<tr class="separator:a5128be1cbe2c7b30f1f697f8b5594479"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:af44485fc914a7ac6f562d23d66c3410c"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__args_8h.html#af44485fc914a7ac6f562d23d66c3410c">le_arg_Scan</a> (void)</td></tr>
+<tr class="separator:af44485fc914a7ac6f562d23d66c3410c"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aefd062c124811c5de122a06907e19b56"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__args_8h.html#aefd062c124811c5de122a06907e19b56">le_arg_SetArgs</a> (const size_t argc, char **argv)</td></tr>
+<tr class="separator:aefd062c124811c5de122a06907e19b56"><td class="memSeparator" colspan="2"> </td></tr>
+</table>
+<a id="details" name="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Legato <a class="el" href="c_args.html">Command Line Arguments API</a> include file.</p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div><h2 class="groupheader">Typedef Documentation</h2>
+<a class="anchor" id="a45e8d73a4e7f22a46a53ecbf73e3285b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef size_t(* le_arg_ErrorHandlerFunc_t) (size_t argIndex, <a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> errorCode)</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Error handler function prototype. All argument error handler functions (passed into <a class="el" href="le__args_8h.html#a5128be1cbe2c7b30f1f697f8b5594479">le_arg_SetErrorHandler()</a> ) must conform to this prototype.</p>
+<p>Errors that can be reported to this function are:</p><ul>
+<li>LE_BAD_PARAMETER - The argument is not expected.</li>
+<li>LE_NOT_FOUND - The argument should have a value, but no value was given.</li>
+<li>LE_FORMAT_ERROR - The argument should have a numerical value, but was given something else.</li>
+<li>LE_OUT_OF_RANGE - Magnitude of numerical argument too big to be stored in chosen data type.</li>
+<li>LE_OVERFLOW - Too many positional arguments found on command line.</li>
+<li>LE_UNDERFLOW - Too few positional arguments found on command line.</li>
+<li>LE_UNSUPPORTED - The argument should not have a value but was given one.</li>
+</ul>
+<dl class="section return"><dt>Returns</dt><dd>The number of arguments to skip before resuming argument scanning. 0 = resume scanning at argIndex + 1; 1 = resume at argIndex + 2; etc.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramname">argIndex</td><td>Index of argument that is bad (0 = first arg after program name).</td></tr>
+<tr><td class="paramname">errorCode</td><td>Code indicating the type of error that was encountered. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="af08d8d2301f23074eefa8a61de92b1a6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef void(* le_arg_FlagCallbackFunc_t) (void)</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Flag argument callback functions registered using <a class="el" href="le__args_8h.html#a4594892b35d4e0a6d7551e9c371919fc">le_arg_SetFlagCallback()</a> must conform to this prototype.</p>
+<p>If the flag appears N times on the command line, the callback will be called N times. </p>
+</div>
+</div>
+<a class="anchor" id="a9deffd3e2d689aa47a3253ecde42551d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef void(* le_arg_IntCallbackFunc_t) (int value)</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Integer argument callback functions registered using <a class="el" href="le__args_8h.html#a40e96c54132708b0637c3d696e3d060d">le_arg_SetIntCallback()</a> must conform to this prototype.</p>
+<p>If the option appears N times on the command line, the callback will be called N times.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramname">value</td><td>The value of the integer option. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a6069a3f8abaa2b43dd89d84c356bf796"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef void(* le_arg_StringCallbackFunc_t) (const char *value)</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>String argument callback functions registered using <a class="el" href="le__args_8h.html#a41b845bab467f4b1e7fcae3d600e88b2">le_arg_SetStringCallback()</a> or <a class="el" href="le__args_8h.html#a525bef6095a4655e97008e27a4829d44">le_arg_AddPositionalCallback()</a> must conform to this prototype.</p>
+<p>If the option appears N times on the command line, the callback will be called N times.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramname">value</td><td>Pointer to the value of the string option. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="a525bef6095a4655e97008e27a4829d44"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_arg_AddPositionalCallback </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__args_8h.html#a6069a3f8abaa2b43dd89d84c356bf796">le_arg_StringCallbackFunc_t</a> </td>
+<td class="paramname"><em>func</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Register a callback function to be called if an argument appears outside of any options. For example, in the following command-line, "foo" and "bar" are positional arguments (while "-l" is a flag option and "ls" is the program name):</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span> $ ls -l foo bar</div></div><!-- fragment --><p>Each callback function registered using this method is added to the positional callback list. When the first positional argument is encountered, the first positional callback function is called. When the Nth positional argument is encountered, the Nth positional callback is called. If there are N positional arguments and M positional callbacks, and N > M, then the last positional callback will be called once for each positional argument from M through N, inclusive. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramname">func</td><td>The callback function address. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="aedcaae9ee7e7cc9cf83c30435f6ae653"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_arg_AllowLessPositionalArgsThanCallbacks </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Tell the argument parser to allow less positional arguments than positional callbacks.</p>
+<p>If less positional arguments are encountered than the number of positional callbacks when this is allowed, any positional callbacks that don't have arguments won't be called. If this is not allowed, <a class="el" href="le__args_8h.html#af44485fc914a7ac6f562d23d66c3410c">le_arg_Scan()</a> will print an error message to the standard error stream and exit the process with EXIT_FAILURE if there are less positional arguments than there are positional callbacks. </p>
+</div>
+</div>
+<a class="anchor" id="ab646cfcb831e13312bff496221e74acc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_arg_AllowMorePositionalArgsThanCallbacks </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Tell the argument parser to allow more positional arguments than positional callbacks.</p>
+<p>If more positional arguments are encountered than the number of positional callbacks when this is allowed, <a class="el" href="le__args_8h.html#af44485fc914a7ac6f562d23d66c3410c">le_arg_Scan()</a> will call the last positional callback again for each extra positional argument it finds. If this is not allowed, <a class="el" href="le__args_8h.html#af44485fc914a7ac6f562d23d66c3410c">le_arg_Scan()</a> will print an error message to the standard error stream and exit the process with EXIT_FAILURE if there are more positional arguments than there are positional callbacks. </p>
+</div>
+</div>
+<a class="anchor" id="a5ebca8229facd069785639cb3c1e273a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">const char* le_arg_GetArg </td>
+<td>(</td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>argIndex</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Gets a command line argument by index.</p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the argument string (null-terminated), or NULL if the index is out of range. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">argIndex</td><td>Index of the argument (0 = first argument after the program name). </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="af3b6949dd9d93b8461f3bb64d565fa93"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_arg_GetFlagOption </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>shortName</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>longName</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Searches the argument list for a flag option. Can search for a short name (e.g., <code>-f</code>) or a long name (e.g., <code>–flag</code>) for the same flag at the same time.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK if found,</li>
+<li>LE_NOT_FOUND if not found,</li>
+<li>LE_FORMAT_ERROR if found but has a value (e.g., <code>–flag=foo</code>).</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If both shortName and longName are NULL, LE_NOT_FOUND will be returned. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">shortName</td><td>Name that appears after a single '-' (can be NULL). </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">longName</td><td>Name that appears afer a "--" (can be NULL). </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="aac66ccbb038e10c117a685d6eae5a684"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_arg_GetIntOption </td>
+<td>(</td>
+<td class="paramtype">int * </td>
+<td class="paramname"><em>varPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>shortName</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>longName</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Searches the argument list for an option with an integer value. Can search for a short name (e.g., <code>-c 1234</code>) or a long name (e.g., <code>–count=1234</code>) form of the same option at the same time.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK if found and successfully converted to an integer.</li>
+<li>LE_NOT_FOUND if not found.</li>
+<li>LE_FORMAT_ERROR if the option wasn't provided with an integer value.</li>
+<li>LE_OUT_OF_RANGE - Magnitude of integer value too big to be stored in an int.</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If both shortName and longName are NULL, LE_NOT_FOUND will be returned. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[out]</td><td class="paramname">varPtr</td><td>Variable into which the value will be stored if found. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">shortName</td><td>Name that appears after a single '-' (can be NULL). </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">longName</td><td>Name that appears afer a "--" (can be NULL). </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="add0db0cb93135a6f18f336bd7885cf75"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">const char* le_arg_GetProgramName </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the program name.</p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the null-terminated program name string. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="af096ac39dfa56aedaa4490653891c222"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_arg_GetStringOption </td>
+<td>(</td>
+<td class="paramtype">const char ** </td>
+<td class="paramname"><em>varPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>shortName</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>longName</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Searches the argument list for an option with a string value. Can search for a short name (e.g., <code>-f foo</code>) or a long name (e.g., <code>–file=foo</code>) form of the same option at the same time.</p>
+<dl class="section note"><dt>Note</dt><dd><code>–file=</code> is a valid string option with an empty string ("") value. The equivalent short name version of that option would be something like <code>-f ""</code>.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK if found.</li>
+<li>LE_NOT_FOUND if not found.</li>
+<li>LE_FORMAT_ERROR if the option wasn't provided with a value.</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If both shortName and longName are NULL, LE_NOT_FOUND will be returned. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[out]</td><td class="paramname">varPtr</td><td>Variable into which to store a pointer to the value if found. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">shortName</td><td>Name that appears after a single '-' (can be NULL). </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">longName</td><td>Name that appears afer a "--" (can be NULL). </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a6fbbeb423104e6eb92fe47ef42b7310a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">size_t le_arg_NumArgs </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the number of command line arguments available not including the program name.</p>
+<dl class="section return"><dt>Returns</dt><dd>Number of command line arguments available. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="af44485fc914a7ac6f562d23d66c3410c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_arg_Scan </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Scans the argument list, setting variables and calling callbacks registered using the le_arg_SetXxxVar(), le_arg_SetXxxCallback(), and le_arg_AddPositionalParameters() functions. </p>
+</div>
+</div>
+<a class="anchor" id="aefd062c124811c5de122a06907e19b56"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_arg_SetArgs </td>
+<td>(</td>
+<td class="paramtype">const size_t </td>
+<td class="paramname"><em>argc</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">char ** </td>
+<td class="paramname"><em>argv</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Passes argc and argv to the argument parser for later use by <a class="el" href="le__args_8h.html#af44485fc914a7ac6f562d23d66c3410c">le_arg_Scan()</a>.</p>
+<dl class="section note"><dt>Note</dt><dd>This function is normally called by main(). If the Legato application framework is automatically generating main() for you, then you can just ignore this function. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">argc</td><td>argc from main(). </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">argv</td><td>argv from main(). </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a5128be1cbe2c7b30f1f697f8b5594479"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_arg_SetErrorHandler </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__args_8h.html#a45e8d73a4e7f22a46a53ecbf73e3285b">le_arg_ErrorHandlerFunc_t</a> </td>
+<td class="paramname"><em>errorHandlerFunc</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Register an error handler function to be called by <a class="el" href="le__args_8h.html#af44485fc914a7ac6f562d23d66c3410c">le_arg_Scan()</a> whenever an unexpected argument is encountered or an option's value cannot be converted to the correct data type. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">errorHandlerFunc</td><td>The error handler function. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a4594892b35d4e0a6d7551e9c371919fc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_arg_SetFlagCallback </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__args_8h.html#af08d8d2301f23074eefa8a61de92b1a6">le_arg_FlagCallbackFunc_t</a> </td>
+<td class="paramname"><em>func</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>shortName</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>longName</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Register a callback function to be called if a given flag option appears on the argument list.</p>
+<p>No value is expected after the option name.</p>
+<p>One or the other of shortName or longName may be NULL. If not NULL, these MUST be pointers to strings that are never deallocated or changed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramname">func</td><td>The callback function address. </td></tr>
+<tr><td class="paramname">shortName</td><td>Short form of option name (e.g., "h" will match "-h"). </td></tr>
+<tr><td class="paramname">longName</td><td>Long form of option name (e.g., "help" will match "--help"). </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a889bb72c62d8590d61170a069219e852"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_arg_SetFlagVar </td>
+<td>(</td>
+<td class="paramtype">bool * </td>
+<td class="paramname"><em>varPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>shortName</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>longName</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Register a boolean variable to be set if a given flag option appears on the argument list.</p>
+<p>No value is expected after the option name.</p>
+<p>One or the other of shortName or longName may be NULL. If not NULL, these MUST be pointers to strings that are never deallocated or changed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramname">varPtr</td><td>Ptr to the variable to be set true if the flag option is found. </td></tr>
+<tr><td class="paramname">shortName</td><td>Short form of option name (e.g., "h" will match "-h"). </td></tr>
+<tr><td class="paramname">longName</td><td>Long form of option name (e.g., "help" will match "--help"). </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a40e96c54132708b0637c3d696e3d060d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_arg_SetIntCallback </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__args_8h.html#a9deffd3e2d689aa47a3253ecde42551d">le_arg_IntCallbackFunc_t</a> </td>
+<td class="paramname"><em>func</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>shortName</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>longName</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Register a callback function to be called if a given integer value option appears on the argument list.</p>
+<p>An integer value is expected after the option name.</p>
+<p>One or the other of shortName or longName may be NULL. If not NULL, these MUST be pointers to strings that are never deallocated or changed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramname">func</td><td>The callback function address. </td></tr>
+<tr><td class="paramname">shortName</td><td>Short form of option name (e.g., "n" will match "-n 1234"). </td></tr>
+<tr><td class="paramname">longName</td><td>Long form of name ("max-count" matches "--max-count=1234"). </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a27f1486b1e855559158e218a7d93ce73"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_arg_SetIntVar </td>
+<td>(</td>
+<td class="paramtype">int * </td>
+<td class="paramname"><em>varPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>shortName</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>longName</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Register an integer variable to be set if a given option appears on the argument list.</p>
+<p>An integer value is expected after the option name.</p>
+<p>One or the other of shortName or longName may be NULL. If not NULL, these MUST be pointers to strings that are never deallocated or changed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramname">varPtr</td><td>Ptr to the variable to be set if the option is found. </td></tr>
+<tr><td class="paramname">shortName</td><td>Short form of option name (e.g., "n" will match "-n 1234"). </td></tr>
+<tr><td class="paramname">longName</td><td>Long form of name ("max-count" matches "--max-count=1234"). </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a41b845bab467f4b1e7fcae3d600e88b2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_arg_SetStringCallback </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__args_8h.html#a6069a3f8abaa2b43dd89d84c356bf796">le_arg_StringCallbackFunc_t</a> </td>
+<td class="paramname"><em>func</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>shortName</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>longName</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Register a callback function to be called if a given string option appears on the argument list.</p>
+<p>A string value is expected after the option name.</p>
+<p>One or the other of shortName or longName may be NULL. If not NULL, these MUST be pointers to strings that are never deallocated or changed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramname">func</td><td>The callback function address. </td></tr>
+<tr><td class="paramname">shortName</td><td>Short form of option name (e.g., "n" will match "-n foo"). </td></tr>
+<tr><td class="paramname">longName</td><td>Long form of name ("name" matches "--name=foo"). </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a56d0b80e404966a00c87ec662fea23a8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_arg_SetStringVar </td>
+<td>(</td>
+<td class="paramtype">const char ** </td>
+<td class="paramname"><em>varPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>shortName</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>longName</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Register a string variable to be set if a given option appears on the argument list.</p>
+<p>A value is expected after the option name.</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span> const char* namePtr = "default";</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span> le_arg_SetStringVar(&namePtr, "n", "name");</div></div><!-- fragment --><p>One or the other of shortName or longName may be NULL. If not NULL, these MUST be pointers to strings that are never deallocated or changed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramname">varPtr</td><td>Ptr to the variable to be set if the option is found. </td></tr>
+<tr><td class="paramname">shortName</td><td>Short form of option name (e.g., "n" will match "-n foo"). </td></tr>
+<tr><td class="paramname">longName</td><td>Long form of name ("name" matches "--name=foo"). </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

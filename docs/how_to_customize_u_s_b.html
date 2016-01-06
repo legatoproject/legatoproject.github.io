@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Customize Legato Yocto USB  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">Customize Legato Yocto USB </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p>This topic provides details on how to customize the USB behavior of the Legato Yocto distribution when working with the following Sierra Wireless devices:</p><ul>
+<li>AR755x</li>
+<li>AR8652</li>
+<li>WP85</li>
+</ul>
+<p>The information is based on the USB Driver Developer Guide available from the <a href="http://source.sierrawireless.com/">Source</a>.</p>
+<h1><a class="anchor" id="howToCustomizeUSB_enumeration"></a>
+Enumeration Sequence</h1>
+<p>USB endpoints are enumerated during the boot sequence as follows:</p>
+<p>First, the USB boot script (<code>S41usb</code>) starts <code>/usr/bin/usb/boot_hsusb_composition</code>.</p>
+<p>This script executes the following: </p><pre class="fragment">IF /etc/legato/usbmode exists
+THEN execute /etc/legato/usbsetup
+ELSE setup default composition
+</pre><p>The actions taken are described in the rest of this topic.</p>
+<h1><a class="anchor" id="howToCustomizeUSB_defaultEndpoints"></a>
+Default Endpoints</h1>
+<p>The table shows all the possible USB interfaces available on the AR7 family.</p>
+<div class="image">
+<img alt="USB_interfaces_AR7.png" src="USB_interfaces_AR7.png" />
+</div>
+<p>These endpoints are grouped into compositions, and a fixed set of compositions is provided as shown in the next table. Switching between these compositions is done using the <code>AT!USBCOMP</code> command. The default composition for the AR7 is composition 2.</p>
+<div class="image">
+<img alt="USB_endpointCompositions_AR7.png" src="USB_endpointCompositions_AR7.png" />
+</div>
+<h1><a class="anchor" id="howToCustomizeUSB_customizeEndpoints"></a>
+Customize Endpoints</h1>
+<p>If none of the provided compositions meet your needs it's possible to fine-tune the USB configuration using a mechanism built into Legato. The first step is to create <code>/etc/legato/usbmode</code>. An example file is shipped in this directory in the default distribution, called <code>usbmode.ex</code>. <code>usbmode</code> contains a list, one per line, of the endpoints you wish to enumerate. For example, the default file contains</p>
+<pre class="fragment">ecm
+acm
+nmea
+</pre><p>The full list of supported modes is:</p>
+<table class="doxtable">
+<tr>
+<th>Name </th><th>Interface Type </th><th>Description </th><th>Target endpoint </th><th>Sample host endpoint  </th></tr>
+<tr>
+<td>ecm </td><td>CDC-ECM </td><td>Providing an IP connection over USB </td><td>NIC usb0 </td><td>NIC (eg enp0s20u6i22) </td></tr>
+<tr>
+<td>eem </td><td>CDC-EEM </td><td>Providing an IP connection over USB </td><td>NIC usb0 </td><td>NIC (eg enp0s20u6i22) </td></tr>
+<tr>
+<td>acm </td><td>CDC-ACM </td><td>Providing an AT command port </td><td>N/A </td><td>/dev/ttyACM0 </td></tr>
+<tr>
+<td>nmea </td><td>serial </td><td>NMEA strings when positioning is enabled </td><td>N/A </td><td>/dev/ttyUSB0 </td></tr>
+<tr>
+<td>audio </td><td>USB audio </td><td>Expose the target as a sound card </td><td>N/A </td><td>pcmC2D0c <br />
+ pcmC2D0p </td></tr>
+<tr>
+<td>serial </td><td>serial </td><td>A serial interface to the embedded Linux </td><td>/dev/ttyGS0 </td><td>/dev/ttyUSB0 </td></tr>
+<tr>
+<td>usb_mbim </td><td>CDC-MBIM </td><td>Mobile Broadband Interface Model <br />
+ (an extension of CDC-NCM) </td><td>N/A </td><td>NIC (eg wwp0s20u6i12) <br />
+ + cdc-wdm0 </td></tr>
+</table>
+<hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

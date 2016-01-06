@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Voice Call Service  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">Voice Call Service </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p><a class="el" href="le__voicecall__interface_8h.html">API Reference</a></p>
+<hr />
+<p>A voice call is needed for applications that want to establish a voice communication with a remote party. The voice call can be over a mobile network, or over VoIP.</p>
+<h1><a class="anchor" id="le_voicecall_binding"></a>
+IPC interfaces binding</h1>
+<p>All the functions of this API are provided by the <b>voiceCallService</b> application service.</p>
+<p>Here's a code sample binding to Voice Call services: </p><pre class="fragment">bindings:
+{
+   clientExe.clientComponent.le_voicecall -> voiceCallService.le_voicecall
+}
+</pre><h1><a class="anchor" id="c_le_voicecall_outgoing"></a>
+Starting a Voice call</h1>
+<p>A voice call can be started using <a class="el" href="le__voicecall__interface_8h.html#aac588cbf58e2ea5655b89b9f6e2fd883">le_voicecall_Start()</a> with the destination identifier passed as a parameter.</p>
+<dl class="section note"><dt>Note</dt><dd>Available interfaces depend on used platform.</dd></dl>
+<p>Before the voice call is started, an application registers a state handler using <a class="el" href="le__voicecall__interface_8h.html#a54875833715ef1f81d78d74cb86d0562">le_voicecall_AddStateHandler()</a>. Once the voice call is established, the handler will be called indicating it's now connected. If the state of the voice call changes, then the handler will be called with the new state. To release a voice call, an application can use <a class="el" href="le__voicecall__interface_8h.html#aa4758e37f80ef9fd410ef0a9731d3797">le_voicecall_End()</a>. Application must use <a class="el" href="le__voicecall__interface_8h.html#adb9eeb5c2e344f72b934dc8b72d3db62">le_voicecall_Delete()</a> to release <a class="el" href="le__voicecall__interface_8h.html#a74c8b6a9f13f7a8ef47b6b1d57d8ab56">le_voicecall_CallRef_t</a> voice call reference object when it is no more used.</p>
+<p>If <a class="el" href="le__voicecall__interface_8h.html#aa4758e37f80ef9fd410ef0a9731d3797">le_voicecall_End()</a> failed a LE_VOICECALL_EVENT_END_FAILED event will be sent.</p>
+<p>If a voice call is already started when <a class="el" href="le__voicecall__interface_8h.html#aac588cbf58e2ea5655b89b9f6e2fd883">le_voicecall_Start()</a> is called(), a new voice call will not be established. Instead, <a class="el" href="le__voicecall__interface_8h.html#a51066eb84677e4d4c5447aaf8dd18ff1ad3c8824924d684995308a9e45af95422">LE_VOICECALL_EVENT_RESOURCE_BUSY</a> event will be sent. This event means call was not processed, while a <a class="el" href="le__voicecall__interface_8h.html#a51066eb84677e4d4c5447aaf8dd18ff1a55cdfb321f8b09d5037edeb1ec6b04e6">LE_VOICECALL_EVENT_TERMINATED</a> event means that the call was not processed and then terminated or failed.</p>
+<p>Once an application makes a voice call request, it should monitor the establishment state reported to the registered state handler.</p>
+<p>Once the <a class="el" href="le__voicecall__interface_8h.html#a51066eb84677e4d4c5447aaf8dd18ff1ad3cd30048fd3957b80293e876712e79b">LE_VOICECALL_EVENT_CONNECTED</a> voice call event is received by the application, it must get the Rx and Tx audio streams with <a class="el" href="le__voicecall__interface_8h.html#afd7256c9caa5a1cb8ccca588c7913797">le_voicecall_GetRxAudioStream()</a> and <a class="el" href="le__voicecall__interface_8h.html#ab2dc17c9f027ed291576a1b6f6b6fed1">le_voicecall_GetTxAudioStream()</a> functions in order to set up the audio path. The audio path can be set up thanks to the audio API (cf. <a class="el" href="c_audio.html">Audio</a>).</p>
+<p>If a <a class="el" href="le__voicecall__interface_8h.html#a51066eb84677e4d4c5447aaf8dd18ff1a55cdfb321f8b09d5037edeb1ec6b04e6">LE_VOICECALL_EVENT_TERMINATED</a> event is received, application can get the termination reason by using <a class="el" href="le__voicecall__interface_8h.html#a1e04e5a857e17e67eb75cd1c6136f163">le_voicecall_GetTerminationReason()</a>.</p>
+<dl class="section note"><dt>Note</dt><dd>The voice call use the mobile network. VoIP is not yet supported.</dd></dl>
+<h1><a class="anchor" id="c_le_voicecall_incoming"></a>
+Answering a Voice call</h1>
+<p>An Incoming voice call will be notified by an <a class="el" href="le__voicecall__interface_8h.html#a51066eb84677e4d4c5447aaf8dd18ff1abeff6317fd3fa13e2ad42e20da589dc6">LE_VOICECALL_EVENT_INCOMING</a> event on state handler with a Call reference <a class="el" href="le__voicecall__interface_8h.html#a74c8b6a9f13f7a8ef47b6b1d57d8ab56">le_voicecall_CallRef_t()</a>.</p>
+<p>Application can answer the call by using <a class="el" href="le__voicecall__interface_8h.html#a9dc899a059b3881edb7da244b8c9fbef">le_voicecall_Answer()</a> or reject the call by using <a class="el" href="le__voicecall__interface_8h.html#aa4758e37f80ef9fd410ef0a9731d3797">le_voicecall_End()</a> passing the call reference <a class="el" href="le__voicecall__interface_8h.html#a74c8b6a9f13f7a8ef47b6b1d57d8ab56">le_voicecall_CallRef_t</a>.</p>
+<p>If <a class="el" href="le__voicecall__interface_8h.html#aa4758e37f80ef9fd410ef0a9731d3797">le_voicecall_End()</a> failed a LE_VOICECALL_EVENT_END_FAILED event will be sent. If <a class="el" href="le__voicecall__interface_8h.html#a9dc899a059b3881edb7da244b8c9fbef">le_voicecall_Answer()</a> failed a LE_VOICECALL_EVENT_ANSWER_FAILED event will be sent.</p>
+<p>Application have to use <a class="el" href="le__voicecall__interface_8h.html#adb9eeb5c2e344f72b934dc8b72d3db62">le_voicecall_Delete()</a> to release <a class="el" href="le__voicecall__interface_8h.html#a74c8b6a9f13f7a8ef47b6b1d57d8ab56">le_voicecall_CallRef_t</a> voice call reference object when it is no more used.</p>
+<hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

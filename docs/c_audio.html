@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Audio  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">Audio </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p><a class="el" href="le__audio__interface_8h.html">API Reference</a></p>
+<hr />
+<p>The Audio API handles audio interfaces including play and record supported formats.</p>
+<p>A Legato device can use several audio interfaces. You choose the input and output interfaces to tie together. The Audio stream related to a particular interface is represented with an 'Audio Stream Reference'.</p>
+<p>You can create your own audio path by connecting several audio streams together using audio connectors.</p>
+<p>An audio path can support more than two audio interfaces. You can have a basic output audio path of a voice call to connect the Modem Voice Received interface with the Speaker interface, and at the same time, the Modem Voice Received interface can be also connected to a Recorder Device interface.</p>
+<h1><a class="anchor" id="le_audio_binding"></a>
+IPC interfaces binding</h1>
+<p>All the functions of this API are provided by the <b>audioService</b>.</p>
+<p>Here's a code sample binding to audio services: </p><pre class="fragment">bindings:
+{
+   clientExe.clientComponent.le_audio -> audioService.le_audio
+}
+</pre><h1><a class="anchor" id="le_audio_configuration"></a>
+Configure the Audio</h1>
+<p>The audio profile can be set with the <a class="el" href="le__audio__interface_8h.html#a8526af295a5fe34cbb79f6b6d5c99f6a">le_audio_SetProfile()</a> function.</p>
+<dl class="section warning"><dt>Warning</dt><dd>Ensure to check the number of supported audio profiles for your specific platform.</dd></dl>
+<p>An audio profile can be retrieved with <a class="el" href="le__audio__interface_8h.html#a26d5e3e4e52a821a18c4dd6a84b2fa23">le_audio_GetProfile()</a> and set with <a class="el" href="le__audio__interface_8h.html#a8526af295a5fe34cbb79f6b6d5c99f6a">le_audio_SetProfile()</a>.</p>
+<p>Then, the following functions let you enable or disable the audio settings on the selected audio interface:</p><ul>
+<li><a class="el" href="le__audio__interface_8h.html#ac1af23c9febed1378620370a6961ce89">le_audio_EnableNoiseSuppressor()</a>/le_audio_DisableNoiseSuppressor(): Noise Suppressor.</li>
+<li><a class="el" href="le__audio__interface_8h.html#a54df27e4ab733a1f50e17903d7a9ae88">le_audio_EnableEchoCanceller()</a>/ <a class="el" href="le__audio__interface_8h.html#afc413a569b1e7eb877a3f98c2b52b05d">le_audio_DisableEchoCanceller()</a>: Echo Canceller.</li>
+<li><a class="el" href="le__audio__interface_8h.html#adedb3bb7e372fffa406f001bdb353e96">le_audio_EnableFirFilter()</a>/ <a class="el" href="le__audio__interface_8h.html#ae5be820a7a167c307d64ea2c15b0abb4">le_audio_DisableFirFilter()</a>: downlink FIR Filter (Finite Impulse Response).</li>
+<li><a class="el" href="le__audio__interface_8h.html#ad5eee81a34cc554ddef8a29c64bcd498">le_audio_EnableIirFilter()</a>/ <a class="el" href="le__audio__interface_8h.html#af7958cd14c83c479ede6ae7a7953461b">le_audio_DisableIirFilter()</a>: downlink IIR Filter (Infinite Impulse Response).</li>
+<li><a class="el" href="le__audio__interface_8h.html#ac4978d8d632269730c67e27d66fba818">le_audio_EnableAutomaticGainControl()</a>/ <a class="el" href="le__audio__interface_8h.html#a364cdff3d9fa7b2ced00ef92c0c4e9f7">le_audio_DisableAutomaticGainControl()</a>: automatic gain on the selected audio stream.</li>
+</ul>
+<p>To configure the encoding format, use <a class="el" href="le__audio__interface_8h.html#a62e45a441a7d7ab5b7d20b41849331a2">le_audio_GetEncodingFormat()</a> and <a class="el" href="le__audio__interface_8h.html#aead87ec16d317bb4e4a8e7e9ea37550b">le_audio_SetEncodingFormat()</a>.</p>
+<p>To configure gain settings, use <a class="el" href="le__audio__interface_8h.html#a365dede3aa7e895755f5812d89368f9f">le_audio_GetGain()</a> and <a class="el" href="le__audio__interface_8h.html#a65f11540e6af03a3494b6b9be76ba5fc">le_audio_SetGain()</a>.</p>
+<p>PCM has the following configuration get/set functions:</p><ul>
+<li><a class="el" href="le__audio__interface_8h.html#a36779982278d3f965286582f38917247">le_audio_GetPcmSamplingRate()</a> and <a class="el" href="le__audio__interface_8h.html#ae7c9d76c5377ad5fae13b24477827f45">le_audio_SetPcmSamplingRate()</a> for Hz rate.</li>
+<li><a class="el" href="le__audio__interface_8h.html#a70fbe5e1ae02033e89ad04bbf1ed2b39">le_audio_GetPcmSamplingResolution()</a> and <a class="el" href="le__audio__interface_8h.html#ab3678e77c8d69f248cd339042bd824cc">le_audio_SetPcmSamplingResolution()</a> for bit/sample settings.</li>
+<li><a class="el" href="le__audio__interface_8h.html#aab9a28f3c695b90f8b9f622eb401f6cf">le_audio_GetPcmCompanding()</a> and <a class="el" href="le__audio__interface_8h.html#a593682daa95aec349e48144f5b46c658">le_audio_SetPcmCompanding()</a> for signal settings.</li>
+<li><a class="el" href="le__audio__interface_8h.html#a40bf3633c3050a7526a100562edc97f9">le_audio_GetSamplePcmChannelNumber()</a> and <a class="el" href="le__audio__interface_8h.html#aae7db9f0933119fb5a61162722b3274a">le_audio_SetSamplePcmChannelNumber()</a> for channel numbers.</li>
+</ul>
+<p>To Mute/Unmute the Call Waiting Tone to alert for an incoming voice call when a voice call is already in progress, use <a class="el" href="le__audio__interface_8h.html#a308738761d21ebfb504c0f490ecefec4">le_audio_MuteCallWaitingTone()</a> and <a class="el" href="le__audio__interface_8h.html#ab2cee945145242ebe446ab66eac9aa91">le_audio_UnmuteCallWaitingTone()</a>.</p>
+<dl class="section note"><dt>Note</dt><dd>The Call Waiting Supplementary Service must be enabled.</dd></dl>
+<h1><a class="anchor" id="le_audio_interfaces"></a>
+Open/Close an Audio Interface</h1>
+<p>The following functions let you select the desired interface attributes:</p><ul>
+<li><a class="el" href="le__audio__interface_8h.html#a74f1ef979329f6c2bd56ea622f4d05b2">le_audio_OpenMic()</a>: returns an Audio Stream Reference of the analog audio signal coming from the microphone input.</li>
+<li><a class="el" href="le__audio__interface_8h.html#a5c19afce44021c4abf6193707317f8de">le_audio_OpenSpeaker()</a>: returns an Audio Stream Reference of the analog audio signal routed to the Speaker output.</li>
+<li><a class="el" href="le__audio__interface_8h.html#acd8be89289067cef9441a8ed1d891146">le_audio_OpenUsbRx()</a>: returns an Audio Stream Reference of the digitized audio signal coming from an external device connected via USB Audio Class.</li>
+<li><a class="el" href="le__audio__interface_8h.html#adb38f11ac78cf99160c19f69b4db0eb8">le_audio_OpenUsbTx()</a>: returns an Audio Stream Reference of the digitized audio signal routed to an external device connected via USB Audio Class.</li>
+<li><a class="el" href="le__audio__interface_8h.html#aa0f0b5fcab8844c67a936d88fa050cf5">le_audio_OpenPcmRx()</a>: it returns an Audio Stream Reference of the digitized audio signal coming from an external device connected via the PCM interface.</li>
+<li><a class="el" href="le__audio__interface_8h.html#a5e112543e8525775aa670dc71b320766">le_audio_OpenPcmTx()</a>: it returns an Audio Stream Reference of the digitized audio signal routed to an external device connected via the PCM interface.</li>
+<li><a class="el" href="le__audio__interface_8h.html#a9e7d0042c4f422554eb10d64535608e5">le_audio_OpenI2sRx()</a>: it returns an Audio Stream Reference of the digitized audio signal coming from an external device connected via the I2S interface.</li>
+<li><a class="el" href="le__audio__interface_8h.html#a2633c1368adf60e342d7cadbbfa6278b">le_audio_OpenI2sTx()</a>: it returns an Audio Stream Reference of the digitized audio signal routed to an external device connected via the I2S interface.</li>
+<li><a class="el" href="le__audio__interface_8h.html#ae3ed568ba4d2763ea77e17e77b20ff02">le_audio_OpenModemVoiceRx()</a>: returns an Audio Stream Reference of the digitized audio signal coming from a voice call. The audio format is negotiated with the network when the call is established.</li>
+<li><a class="el" href="le__audio__interface_8h.html#ad745f008bb04873c817da7af3daf783d">le_audio_OpenModemVoiceTx()</a>: returns an Audio Stream Reference of the digitized audio signal routed to a voice call. The audio format is negotiated with the network when the call is established.</li>
+</ul>
+<p>Multiple users can own the same stream at the same time.</p>
+<p><a class="el" href="le__audio__interface_8h.html#a3f87e41dabde5bfb1170df527c380b9d">le_audio_GetDefaultPcmTimeSlot()</a> can be called to get the default PCM time slot used on the current platform.</p>
+<p><a class="el" href="le__audio__interface_8h.html#a0b727e15c16fffe10cdd5d345b297194">le_audio_GetDefaultI2sMode()</a> can be called to get the default I2s channel mode slot used on the current platform.</p>
+<p>Call <a class="el" href="le__audio__interface_8h.html#abafeb411da7b1a14b2d5777fc1d3e394">le_audio_Close()</a> to release it. If several users own the same, corresponding stream reference, the interface will close only after the last user releases the audio stream.</p>
+<p>You can configure the PCM interface with the <a class="el" href="le__audio__interface_8h.html#ae7c9d76c5377ad5fae13b24477827f45">le_audio_SetPcmSamplingRate()</a>, <a class="el" href="le__audio__interface_8h.html#ab3678e77c8d69f248cd339042bd824cc">le_audio_SetPcmSamplingResolution()</a> and <a class="el" href="le__audio__interface_8h.html#a593682daa95aec349e48144f5b46c658">le_audio_SetPcmCompanding()</a> functions. This function must be called before activating an audio path with the PCM interface, in other words you must call this function before connecting the PCM Stream to a connector.</p>
+<p>In addition, the <a class="el" href="le__audio__interface_8h.html#a36779982278d3f965286582f38917247">le_audio_GetPcmSamplingRate()</a>, <a class="el" href="le__audio__interface_8h.html#a70fbe5e1ae02033e89ad04bbf1ed2b39">le_audio_GetPcmSamplingResolution()</a> and <a class="el" href="le__audio__interface_8h.html#aab9a28f3c695b90f8b9f622eb401f6cf">le_audio_GetPcmCompanding()</a> functions allows you to retrieve the PCM interface configuration.</p>
+<h1><a class="anchor" id="le_audio_streams"></a>
+Control an Audio Stream</h1>
+<p>Once the users get an Audio Stream reference, they can control it with the following functions:</p>
+<ul>
+<li><a class="el" href="le__audio__interface_8h.html#a65f11540e6af03a3494b6b9be76ba5fc">le_audio_SetGain()</a>: adjust the gain of an audio stream (gain value is specific to the platform).</li>
+<li><a class="el" href="le__audio__interface_8h.html#a365dede3aa7e895755f5812d89368f9f">le_audio_GetGain()</a>: retrieve the gain of an audio stream (gain value is specific to the platform).</li>
+<li><a class="el" href="le__audio__interface_8h.html#a147e97c49dbc003f63df78f97d5fca32">le_audio_Mute()</a>: mute an audio stream.</li>
+<li><a class="el" href="le__audio__interface_8h.html#adad24547293481964039efe56bc14e2b">le_audio_Unmute()</a>: unmute an audio stream.</li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>Multimedia (playback and recording) must be controled separatly from the main audio path (Microphone/Speaker, I2S, PCM, USB). Muting/Unmuting a multimedia is done by muting/unmuting the multimedia stream, and not the other connected stream. For example, in case of playback + voice on the speaker, if the user wants to mute all the audio outcoming to the speaker, it must mute both the Speaker stream and the playback stream.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Ensure to check the list of supported audio streams for these functions on your specific platform.</dd></dl>
+<p>In the case your platform can support other gains in your audio subsystem, you can set or get the value of them with the following functions:</p>
+<ul>
+<li><a class="el" href="le__audio__interface_8h.html#af7163fc276aaf8855d2ef7b0bbdaf8c3">le_audio_SetPlatformSpecificGain()</a>: adjust the value of a platform specific gain in the audio subsystem.</li>
+<li><a class="el" href="le__audio__interface_8h.html#a56ce044998f69da54f183552666ff352">le_audio_GetPlatformSpecificGain()</a>: retrieve the value of a platform specific gain in the audio subsystem.</li>
+</ul>
+<dl class="section warning"><dt>Warning</dt><dd>Ensure to check the names of supported gains for your specific platform.</dd></dl>
+<h1><a class="anchor" id="le_audio_connectors"></a>
+Create Audio connectors</h1>
+<p>You can create your own audio path by connecting several audio streams together.</p>
+<p><a class="el" href="le__audio__interface_8h.html#a570aaf85086f00aca592acfbaaa237be">le_audio_CreateConnector()</a> function creates a reference to an audio connector.</p>
+<p>You can tie an audio stream to a connector by calling the <a class="el" href="le__audio__interface_8h.html#a338df65b2fb1ae0140d86880adbcf0de">le_audio_Connect()</a> function.</p>
+<p>You can remove an audio stream from a connector by calling the <a class="el" href="le__audio__interface_8h.html#a6b88df9301038375701e4c15a4c8aaf0">le_audio_Disconnect()</a> function.</p>
+<p>When finished with it, delete it using the <a class="el" href="le__audio__interface_8h.html#a3f40b13ff980040503927f59bb3e86a9">le_audio_DeleteConnector()</a> function.</p>
+<p>A sample code that implements audio connectors and audio streams during voice call can be found in <b>audioMccTest.c</b> file (please refer to <a class="el" href="c_audio_mcc.html">Sample code of audio settings for a dialing call</a> page).</p>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to set the connectors before the connected streams are used. In particular, a connector using Modem Voice Rx or Tx interfaces has to be created before dialing or answering the call if the application needs to customize the audio path.</dd></dl>
+<h1><a class="anchor" id="le_audio_pb_playback"></a>
+Playback</h1>
+<p>An audio file can be played to any active output interfaces.</p>
+<p>Open a player interface by calling:</p><ul>
+<li><a class="el" href="le__audio__interface_8h.html#a92eb1b6377f50ff07b97c5b8546f01ec">le_audio_OpenPlayer()</a>: returns an Audio Stream Reference for file playback. An audio file can be played on the local audio interface like Speaker, USB Tx, PCM Tx, I2S Tx or on the remote audio interface Modem Voice Tx depending the kind of connector (input or output) is tied to.</li>
+<li><a class="el" href="le__audio__interface_8h.html#aea2c5d0b394cfab87503639c534300c9">le_audio_PlayFile()</a>: plays a specified file. WAVE (Waveform audio file) and AMR (Adaptive Multi Rate) are supported. AMR is an audio compression format optimized for speech coding. Two codecs are supported:<ul>
+<li>AMR_NB (AMR Narrowband) codec that encodes narrowband (200–3400 Hz) signals at variable bit rates ranging from 4.75 to 12.2 kbit/s. It was adopted as the standard speech codec by 3GPP.</li>
+<li>AMR-WB (AMR Wideband) is an ITU-T standard speech codec which improved speech quality due to a wider speech bandwidth of 50–7000 Hz.</li>
+</ul>
+</li>
+<li><a class="el" href="le__audio__interface_8h.html#afd37d59ab8207338da197554f49d7ff0">le_audio_PlaySamples()</a>: initiates a playback using an audio flow. A pipe has to be opened first, then the PCM samples are sent throught the opened pipe. A play can be done only on a connected stream. For instance, the "I2S Tx", "Modem Voice Rx" and "Player" must be previously connected before playing a file.</li>
+</ul>
+<h1><a class="anchor" id="le_audio_pb_rec"></a>
+Record</h1>
+<p>Audio file recording can be done from any active input interface.</p>
+<p>Open a "File Recording" interface by calling:</p><ul>
+<li><a class="el" href="le__audio__interface_8h.html#aeac35459c36748a4471b6d45f1ebeb24">le_audio_OpenRecorder()</a>: returns an Audio Stream Reference for file recording. The local audio interface like Microphone, USB Rx, PCM Rx, I2S Rx is recorded into an audio file; or the Modem Voice Rx remote audio interface is recorded into an audio file, depending the kind of connector (input or output) is tied to.</li>
+<li><a class="el" href="le__audio__interface_8h.html#a393a26f6cff7fe05c1813fcafeef50f3">le_audio_RecordFile()</a>: records in a specified file.</li>
+<li><a class="el" href="le__audio__interface_8h.html#aead87ec16d317bb4e4a8e7e9ea37550b">le_audio_SetEncodingFormat()</a>: sets the encoding format. The same formats as the player are supported.</li>
+<li><a class="el" href="le__audio__interface_8h.html#a62e45a441a7d7ab5b7d20b41849331a2">le_audio_GetEncodingFormat()</a>: gets the encoding format.</li>
+<li><a class="el" href="le__audio__interface_8h.html#a9c55a59849afcbb2ccef88cd4265782e">le_audio_GetSamples()</a>: gets the audio PCM samples. A pipe has to be opened first, then the PCM samples are sent throught the opened pipe. Recording can only be done on a connected stream. For example, the "I2S Rx", "Modem Voice Tx" and "Recorder" must be previously connected before recording a file.</li>
+</ul>
+<p>A PCM configuration must be set with:</p><ul>
+<li><a class="el" href="le__audio__interface_8h.html#aae7db9f0933119fb5a61162722b3274a">le_audio_SetSamplePcmChannelNumber()</a>: sets the channel number of a PCM sample.</li>
+<li><a class="el" href="le__audio__interface_8h.html#a04adfcc0e8f5796eca53c31cd5dd6528">le_audio_SetSamplePcmSamplingRate()</a>: sets the sampling rate of a PCM sample.</li>
+<li><a class="el" href="le__audio__interface_8h.html#aae37b46c13f76144dd94c48bfe94998b">le_audio_SetSamplePcmSamplingResolution()</a>: sets the sampling resolution (in bits per sample) of a PCM sample.</li>
+</ul>
+<p>The PCM samples configuration can be retrieved with:</p><ul>
+<li><a class="el" href="le__audio__interface_8h.html#a40bf3633c3050a7526a100562edc97f9">le_audio_GetSamplePcmChannelNumber()</a>: gets the channel number of a PCM sample.</li>
+<li><a class="el" href="le__audio__interface_8h.html#a80fb48632ce8f638cea4a3e5d333d66f">le_audio_GetSamplePcmSamplingRate()</a>: gets the sampling rate of a PCM sample.</li>
+<li><a class="el" href="le__audio__interface_8h.html#a70b9f904ce225aad4fb80b8b24a1f92a">le_audio_GetSamplePcmSamplingResolution()</a>: can be called to get the sampling resolution (in bits per sample) of a PCM sample. The default configuration is PCM 16-bit audio @ 8KHz one channel.</li>
+</ul>
+<p>An AMR configuration must be set with:</p><ul>
+<li><a class="el" href="le__audio__interface_8h.html#a18600cdbd3995c9c2ca24f9b15991f7d">le_audio_SetSampleAmrMode()</a>: sets the AMR mode (NB/WB, bitrate).</li>
+<li><a class="el" href="le__audio__interface_8h.html#a5932f51fb1398cc2442c8bb765ca4071">le_audio_SetSampleAmrDtx()</a>: can be called to activate/deactivate the Discontinuous Transmission (DTX) to reduce bandwidth usage during silence periods. The AMR configuration can be retrieved with:</li>
+<li><a class="el" href="le__audio__interface_8h.html#aa293e15d41f7c1c384053947b5a4dbea">le_audio_GetSampleAmrMode()</a>: gets the AMR mode.</li>
+<li><a class="el" href="le__audio__interface_8h.html#ab26d633ee83aed52dae838cb9d721f87">le_audio_GetSampleAmrDtx()</a>: gets the Discontinuous Transmission (DTX).</li>
+</ul>
+<p>To stop a play/record call <a class="el" href="le__audio__interface_8h.html#a4aebc6e8cdc4389c375e93418823af71">le_audio_Stop()</a>:</p><ul>
+<li>The playback/record stops playing/recording, and the read/write position indicator associated with the file stream is rewound to the beginning of the file. A new file can be played/recorded using <a class="el" href="le__audio__interface_8h.html#aea2c5d0b394cfab87503639c534300c9">le_audio_PlayFile()</a>/le_audio_PlaySamples()/le_audio_RecordFile()/le_audio_GetSamples().</li>
+<li><a class="el" href="le__audio__interface_8h.html#a80343ca9800ab80f818bbe0361bb226b">le_audio_Pause()</a>: can be called to pause a play/record. The file playing/recording is put on hold, the read/write position indicator of the file is not moved.</li>
+<li><a class="el" href="le__audio__interface_8h.html#a1dba6618bd8fc9835869ee72c3fbd850">le_audio_Resume()</a>: can be called to resume a paused play/record. The file playing/recording continues at the file's position indicator held after the pause.</li>
+<li><a class="el" href="le__audio__interface_8h.html#a7a5855b7be77110eaca1846b17792597">le_audio_Flush()</a>: can be called to flush the remaining audio samples before sending them to the audio driver.</li>
+</ul>
+<p>You can also register a handler function for media-related notifications like errors or audio events.</p>
+<p><a class="el" href="le__audio__interface_8h.html#a9996ac9d23333cf8219f28b69cac4f81">le_audio_AddMediaHandler()</a> function installs a handler for player/recorder stream notifications.</p>
+<p><a class="el" href="le__audio__interface_8h.html#a60442c840a69155110ae878e03e16059">le_audio_RemoveMediaHandler()</a> function removes the player/recorder handler function.</p>
+<dl class="section note"><dt>Note</dt><dd>The <code>LE_AUDIO_MEDIA_NO_MORE_SAMPLES</code> event indicates when all samples put into the pipe by the user's app have been sent to the audio driver (see <a class="el" href="le__audio__interface_8h.html#afd37d59ab8207338da197554f49d7ff0">le_audio_PlaySamples()</a>).</dd></dl>
+<p>A sample code that implements audio playback and capture can be found in <b>audioPlaybackRec.c</b> file (please refer to <a class="el" href="c_audio_capture_playback.html">Sample code of audio playback and capture</a> page).</p>
+<h1><a class="anchor" id="le_audio_dtmf"></a>
+DTMF</h1>
+<p>The <a class="el" href="le__audio__interface_8h.html#a8b1546842a6e917db9a9458aceb77c82">le_audio_PlayDtmf()</a> function allows the application to play one or several DTMF on a playback stream. The duration and the pause of the DTMFs must also be specified with the input parameters.</p>
+<p>The <a class="el" href="le__audio__interface_8h.html#a852728586cacfcbf63ae59b6f80847eb">le_audio_PlaySignallingDtmf()</a> function allows the application to ask the Mobile Network to generate on the remote audio party the DTMFs. Compared with <a class="el" href="le__audio__interface_8h.html#a8b1546842a6e917db9a9458aceb77c82">le_audio_PlayDtmf()</a>, <a class="el" href="le__audio__interface_8h.html#a852728586cacfcbf63ae59b6f80847eb">le_audio_PlaySignallingDtmf()</a> function may offer a better signal quality, but the the duration and the pause timings may be less accurate.</p>
+<p>The application must register a handler function to detect incoming DTMF characters on a specific input audio stream. The <a class="el" href="le__audio__interface_8h.html#a6e65275798c0db287fc1b540cdc0db8b">le_audio_AddDtmfDetectorHandler()</a> function installs a handler for DTMF detection.</p>
+<p>The <a class="el" href="le__audio__interface_8h.html#a7fd6191ed6ff512407bfe01d20a51459">le_audio_RemoveDtmfDetectorHandler()</a> function uninstalls the handler function.</p>
+<p>The DTMFs are: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, *, #, A, B, C, D. Not case sensitive.</p>
+<dl class="section note"><dt>Note</dt><dd>The DTMF decoding works only on an active audio path.</dd></dl>
+<p>A sample code that implements DTMF playback and decoding can be found in <b>audioDtmfTest.c</b> file (please refer to <a class="el" href="c_audiodtmf.html">Sample code of dtmf playback and decoding</a> page).</p>
+<hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

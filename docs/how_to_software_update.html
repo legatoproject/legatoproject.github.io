@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Use Software Update  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">Use Software Update </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p>This topic describes how to use Legato's software update feature and provides some backgaround info.</p>
+<hr />
+<p>The Legato application framework is designed to solve difficult problems surrounding updating software on devices operating in the field:</p><ul>
+<li>Atomic update of libraries, executables, resource files, and configuration settings.</li>
+<li>Autonomous recovery from failed update attempts (e.g., due to power loss or connection loss).</li>
+<li>Autonomous roll-back when newly updated software fails.</li>
+<li>Reduce flash consumption by sharing read-only app files that are the same in different software versions.</li>
+</ul>
+<h1><a class="anchor" id="howToSoftwareUpdate_processOverview"></a>
+Process Overview</h1>
+<p>The software <a class="el" href="legato_services_update.html">Update Process</a> updates the target including the Legato framework.</p>
+<p>While a system is being installed, it's kept in an <em>unpack</em> directory (/legato/systems/unpack).</p>
+<p>The process handles everything needed to update the system including managing try counts and ensuring the system stays running for a probation period before the Update Daemon marks it as <em>good</em> (or a request marks it as <em>good</em>).</p>
+<p>Functions are also provided that protect against updates during critical operation periods (e.g., performing an emergency call in response to a vehicle collision).</p>
+<p>Security is handled by Update Daemon hooks. Legato start-up code also supports using a full <em>golden</em> system found in a read-only file system mounted at /mnt/legato. See <a class="el" href="legato_services_update.html">Update Process</a> for details.</p>
+<p><a class="el" href="legato_services_update_pack.html">Update packs</a> are created and then fed to the Update Daemon through either the <a class="el" href="c_update.html">Software Update</a> API or the target <a class="el" href="tools_target_update.html">update</a> tool.</p>
+<h1><a class="anchor" id="howToSoftwareUpdate_buildSystem"></a>
+Build Your System</h1>
+<p>It's best to use Legato's software update to build your own system (i.e., don't change the <em>default</em> system or there will be maintenance problems when new Legato versions are released).</p>
+<p>You need to copy <code>system.sdef</code> to your own directory. You can rename it, but keep the <code></code>.sdef extension (e.g., pumpMonitor.sdef).</p>
+<p>Then customize the .sdef to your needs (see <a class="el" href="def_files_sdef.html">System Definition .sdef</a>).</p>
+<p>Here's a sample .sdef file using numerous platform services:</p>
+<div class="fragment"><div class="line">apps:</div><div class="line">{</div><div class="line"> <span class="comment">// Platform services.</span></div><div class="line">    $LEGATO_ROOT/apps/platformServices/airVantage/avcService</div><div class="line">    $LEGATO_ROOT/apps/platformServices/audioService</div><div class="line">    $LEGATO_ROOT/apps/platformServices/cellNetService</div><div class="line">    $LEGATO_ROOT/apps/platformServices/dataConnectionService</div><div class="line">    $LEGATO_ROOT/apps/platformServices/fwupdateService</div><div class="line">    $LEGATO_ROOT/apps/platformServices/modemService</div><div class="line">    $LEGATO_ROOT/apps/platformServices/positioningService</div><div class="line">    $LEGATO_ROOT/apps/platformServices/powerMgr</div><div class="line">    $LEGATO_ROOT/apps/platformServices/secStore</div><div class="line">    $LEGATO_ROOT/apps/platformServices/smsInboxService</div><div class="line">    $LEGATO_ROOT/apps/platformServices/voiceCallService</div><div class="line">    $LEGATO_ROOT/apps/platformServices/gpioService</div><div class="line"></div><div class="line"> <span class="comment">// Command-line tools.</span></div><div class="line">    $LEGATO_ROOT/apps/tools/tools</div><div class="line">}</div><div class="line"></div><div class="line">commands:</div><div class="line">{</div><div class="line">    cm = tools:/bin/cm</div><div class="line">    fwupdate = tools:/bin/fwupdate</div><div class="line">    secstore = tools:/bin/secstore</div><div class="line">}</div></div><!-- fragment --><h2><a class="anchor" id="howToSoftwareUpdate_buildSystem_preserve"></a>
+Preserve App Between Systems</h2>
+<p>To preserve an app between systems, ensure the app is included in the <a class="el" href="def_files_sdef.html#defFilesSdef_apps">apps</a> section of the <code></code>.sdef file.</p>
+<h1><a class="anchor" id="howToSystemUpdate_maintainConfig"></a>
+Maintain Config Settings</h1>
+<p>This is how to maintain system config settings outside of the /apps and /users branches of the config tree:</p>
+<ul>
+<li>Copy old system configuration into new system.</li>
+<li>Import application configuration settings into “/apps” node (which destroys old apps config).</li>
+<li>Import system bindings configuration into “/users” node (which destroys old system bindings).</li>
+</ul>
+<p>See <a class="el" href="how_to_config_tree_import_export.html">Import/Export Config Trees</a> for info on how to create a script for this.</p>
+<h1><a class="anchor" id="howToSoftwareUpdage_changeApp"></a>
+Change Apps Process</h1>
+<p>When an app is installed, removed, or updated individually, it essentially creates a new <em>modified</em> system that's the same as the old system, but now with the change to the app applied.</p>
+<p>Because changing an individual app doesn't touch the framework, changing an individual app doesn't require the whole system to be restarted. Instead, a snapshot of the running system is taken before it's modified to ensure fall back in case the modifications fail. Then, the modifications are applied to the running system.</p>
+<dl class="section note"><dt>Note</dt><dd>If you update apps invidually, two or more apps that depend on each other can't be updated at the same time during one atomic (all or nothing) update. Also, the system was created on the target so there insn't a copy in your dev environment.</dd></dl>
+<p>Changing an individual app in a running <em>good</em> system flows like this:</p>
+<ul>
+<li>snapshot of the current system is taken.</li>
+<li>current system's <code>status</code> file is set to <em>tried</em> <em>1</em>.</li>
+<li>empty file /legato/systems/current/modified is created.</li>
+<li>string _modified is appended to the contents of the version file in the new system.</li>
+<li>MD5 hash of the new system is removed from the current system's info.properties file,</li>
+<li>changes to the app are applied to the running (current) system.</li>
+<li>current system's index is incremented (in the "index" file).</li>
+<li>probation timer is started.</li>
+<li>if this process gets interrupted, it can be detected at startup because the index file of the current system will be the same as the index of a snapshot. The current system is deleted and the snapshot is made the current system.</li>
+</ul>
+<p>Modifiying an already modified <em>good</em> system flows like this:</p>
+<ul>
+<li>a snapshot of the current system is taken.</li>
+<li>current system's <code>status</code> file is set to <em>tried</em> <em>1</em>.</li>
+<li>changes to the app are applied to the running (current) system.</li>
+<li>current system's index is incremented (in the "index" file).</li>
+<li>probation timer is started.</li>
+<li>snapshot isn't taken of the current system if it is not yet <em>good</em>. This saves space while preserving the latest <em>good</em> system to fall back.</li>
+</ul>
+<p>Modifying a <em>tried</em> (probation) system flows like this:</p>
+<ul>
+<li>current system's <code>status</code> file is set to <em>tried</em> <em>1</em>.</li>
+<li>changes to the app are applied to the running (current) system.</li>
+<li>probation timer is restarted.</li>
+</ul>
+<hr />
+<p>See detailed topics</p>
+<p><a class="el" href="legato_services_update.html">Update Process</a> process <br />
+<a class="el" href="legato_services_update_pack.html">Update Pack Format</a> <br />
+<a class="el" href="c_update.html">Software Update</a> API</p>
+<hr />
+<p class="copyright"> Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

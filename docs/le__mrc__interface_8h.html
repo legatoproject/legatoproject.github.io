@@ -1,0 +1,2890 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>le_mrc_interface.h File Reference - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Reference.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a href="build_apps_documentation.html">Documentation</a><a class="link-selected" href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="summary">
+<a href="#define-members">Macros</a> |
+<a href="#typedef-members">Typedefs</a> |
+<a href="#enum-members">Enumerations</a> |
+<a href="#func-members">Functions</a> </div>
+<div class="headertitle">
+<h1 class="title">le_mrc_interface.h File Reference</h1> </div>
+</div><div class="contents">
+<div class="textblock"><code>#include "<a class="el" href="legato_8h_source.html">legato.h</a>"</code><br />
+</div>
+<p><a href="le__mrc__interface_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:aa50ed3f6d70185be4a35c811518895cf"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#aa50ed3f6d70185be4a35c811518895cf">LE_MRC_MCC_LEN</a>   3</td></tr>
+<tr class="separator:aa50ed3f6d70185be4a35c811518895cf"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aec88b97b54a45f86e6cb34f65b2d0afd"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#aec88b97b54a45f86e6cb34f65b2d0afd">LE_MRC_MCC_BYTES</a>   4</td></tr>
+<tr class="separator:aec88b97b54a45f86e6cb34f65b2d0afd"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a0550a0420d5f13f4b68a6c880473e768"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a0550a0420d5f13f4b68a6c880473e768">LE_MRC_MNC_LEN</a>   3</td></tr>
+<tr class="separator:a0550a0420d5f13f4b68a6c880473e768"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aeae0e240c77730be724ad7ac42596469"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#aeae0e240c77730be724ad7ac42596469">LE_MRC_MNC_BYTES</a>   4</td></tr>
+<tr class="separator:aeae0e240c77730be724ad7ac42596469"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a5f5edf129f254904b22595af86cdeaa7"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a5f5edf129f254904b22595af86cdeaa7">LE_MRC_NETWORK_NAME_MAX_LEN</a>   100</td></tr>
+<tr class="separator:a5f5edf129f254904b22595af86cdeaa7"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a3e7fe3e0d8f10fe7853f00eb254529ea"><td align="right" class="memItemLeft" valign="top">typedef struct le_mrc_ScanInformation * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a3e7fe3e0d8f10fe7853f00eb254529ea">le_mrc_ScanInformationRef_t</a></td></tr>
+<tr class="separator:a3e7fe3e0d8f10fe7853f00eb254529ea"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a25a9e79cc9078e22cec22444fd959c61"><td align="right" class="memItemLeft" valign="top">typedef struct le_mrc_ScanInformationList * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a25a9e79cc9078e22cec22444fd959c61">le_mrc_ScanInformationListRef_t</a></td></tr>
+<tr class="separator:a25a9e79cc9078e22cec22444fd959c61"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:add1c18b20b02f57f3d4d1510a2d2d62c"><td align="right" class="memItemLeft" valign="top">typedef struct le_mrc_PreferredOperator * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#add1c18b20b02f57f3d4d1510a2d2d62c">le_mrc_PreferredOperatorRef_t</a></td></tr>
+<tr class="separator:add1c18b20b02f57f3d4d1510a2d2d62c"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ae9f0c124121ac480535d0fd7fd9e452b"><td align="right" class="memItemLeft" valign="top">typedef struct le_mrc_PreferredOperatorList * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#ae9f0c124121ac480535d0fd7fd9e452b">le_mrc_PreferredOperatorListRef_t</a></td></tr>
+<tr class="separator:ae9f0c124121ac480535d0fd7fd9e452b"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a8fbb2523c254ba473a3f59efa452355e"><td align="right" class="memItemLeft" valign="top">typedef struct le_mrc_CellInfo * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a8fbb2523c254ba473a3f59efa452355e">le_mrc_CellInfoRef_t</a></td></tr>
+<tr class="separator:a8fbb2523c254ba473a3f59efa452355e"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a672ea94ad892bb95f43836b5fbd24188"><td align="right" class="memItemLeft" valign="top">typedef struct le_mrc_NeighborCells * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a672ea94ad892bb95f43836b5fbd24188">le_mrc_NeighborCellsRef_t</a></td></tr>
+<tr class="separator:a672ea94ad892bb95f43836b5fbd24188"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a6ad5afb123492b2e249f3ecd414d6e83"><td align="right" class="memItemLeft" valign="top">typedef struct le_mrc_Metrics * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a6ad5afb123492b2e249f3ecd414d6e83">le_mrc_MetricsRef_t</a></td></tr>
+<tr class="separator:a6ad5afb123492b2e249f3ecd414d6e83"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a709ab9eb31ffa85aa85b8b2aaec22a6d"><td align="right" class="memItemLeft" valign="top">typedef struct le_mrc_NetRegStateEventHandler * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a709ab9eb31ffa85aa85b8b2aaec22a6d">le_mrc_NetRegStateEventHandlerRef_t</a></td></tr>
+<tr class="separator:a709ab9eb31ffa85aa85b8b2aaec22a6d"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a5ac252acd68a64b336ae9a98ca6113ac"><td align="right" class="memItemLeft" valign="top">typedef struct le_mrc_RatChangeHandler * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a5ac252acd68a64b336ae9a98ca6113ac">le_mrc_RatChangeHandlerRef_t</a></td></tr>
+<tr class="separator:a5ac252acd68a64b336ae9a98ca6113ac"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aac0e41200cd6bd03c178aeb7e3646744"><td align="right" class="memItemLeft" valign="top">typedef struct le_mrc_SignalStrengthChangeHandler * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#aac0e41200cd6bd03c178aeb7e3646744">le_mrc_SignalStrengthChangeHandlerRef_t</a></td></tr>
+<tr class="separator:aac0e41200cd6bd03c178aeb7e3646744"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:acf72270c80a8f8e8e216d314c5bb9ab5"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#acf72270c80a8f8e8e216d314c5bb9ab5">le_mrc_NetRegStateHandlerFunc_t</a>) (<a class="el" href="le__mrc__interface_8h.html#ae2877a1e1252ac79e6c9cae3d3c25a61">le_mrc_NetRegState_t</a> state, void *contextPtr)</td></tr>
+<tr class="separator:acf72270c80a8f8e8e216d314c5bb9ab5"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a40fddaea0c8a3695000b2679931fbfb2"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a40fddaea0c8a3695000b2679931fbfb2">le_mrc_RatChangeHandlerFunc_t</a>) (<a class="el" href="le__mrc__interface_8h.html#aaf23906c37ad59fb96a8a48f7fab5b43">le_mrc_Rat_t</a> rat, void *contextPtr)</td></tr>
+<tr class="separator:a40fddaea0c8a3695000b2679931fbfb2"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aad70b8ec8988256ac39f5d04bc078a34"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#aad70b8ec8988256ac39f5d04bc078a34">le_mrc_SignalStrengthChangeHandlerFunc_t</a>) (int32_t ss, void *contextPtr)</td></tr>
+<tr class="separator:aad70b8ec8988256ac39f5d04bc078a34"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a048374324f72ee7df52c2e0521c0dda3"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a048374324f72ee7df52c2e0521c0dda3">le_mrc_BandBitMask_t</a> { <br />
+  <b>LE_MRC_BITMASK_BAND_CLASS_0_A_SYSTEM</b> = 0x1, 
+<b>LE_MRC_BITMASK_BAND_CLASS_0_B_SYSTEM</b> = 0x2, 
+<b>LE_MRC_BITMASK_BAND_CLASS_1_ALL_BLOCKS</b> = 0x4, 
+<b>LE_MRC_BITMASK_BAND_CLASS_2_PLACEHOLDER</b> = 0x8, 
+<br />
+  <b>LE_MRC_BITMASK_BAND_CLASS_3_A_SYSTEM</b> = 0x10, 
+<b>LE_MRC_BITMASK_BAND_CLASS_4_ALL_BLOCKS</b> = 0x20, 
+<b>LE_MRC_BITMASK_BAND_CLASS_5_ALL_BLOCKS</b> = 0x40, 
+<b>LE_MRC_BITMASK_BAND_CLASS_6</b> = 0x80, 
+<br />
+  <b>LE_MRC_BITMASK_BAND_CLASS_7</b> = 0x100, 
+<b>LE_MRC_BITMASK_BAND_CLASS_8</b> = 0x200, 
+<b>LE_MRC_BITMASK_BAND_CLASS_9</b> = 0x400, 
+<b>LE_MRC_BITMASK_BAND_CLASS_10</b> = 0x800, 
+<br />
+  <b>LE_MRC_BITMASK_BAND_CLASS_11</b> = 0x1000, 
+<b>LE_MRC_BITMASK_BAND_CLASS_12</b> = 0x2000, 
+<b>LE_MRC_BITMASK_BAND_CLASS_14</b> = 0x4000, 
+<b>LE_MRC_BITMASK_BAND_CLASS_15</b> = 0x8000, 
+<br />
+  <b>LE_MRC_BITMASK_BAND_CLASS_16</b> = 0x10000, 
+<b>LE_MRC_BITMASK_BAND_CLASS_17</b> = 0x20000, 
+<b>LE_MRC_BITMASK_BAND_CLASS_18</b> = 0x40000, 
+<b>LE_MRC_BITMASK_BAND_CLASS_19</b> = 0x80000, 
+<br />
+  <b>LE_MRC_BITMASK_BAND_GSM_DCS_1800</b> = 0x100000, 
+<b>LE_MRC_BITMASK_BAND_EGSM_900</b> = 0x200000, 
+<b>LE_MRC_BITMASK_BAND_PRI_GSM_900</b> = 0x400000, 
+<b>LE_MRC_BITMASK_BAND_GSM_450</b> = 0x800000, 
+<br />
+  <b>LE_MRC_BITMASK_BAND_GSM_480</b> = 0x1000000, 
+<b>LE_MRC_BITMASK_BAND_GSM_750</b> = 0x2000000, 
+<b>LE_MRC_BITMASK_BAND_GSM_850</b> = 0x4000000, 
+<b>LE_MRC_BITMASK_BAND_GSMR_900</b> = 0x8000000, 
+<br />
+  <b>LE_MRC_BITMASK_BAND_GSM_PCS_1900</b> = 0x10000000, 
+<b>LE_MRC_BITMASK_BAND_WCDMA_EU_J_CH_IMT_2100</b> = 0x20000000, 
+<b>LE_MRC_BITMASK_BAND_WCDMA_US_PCS_1900</b> = 0x40000000, 
+<b>LE_MRC_BITMASK_BAND_WCDMA_EU_CH_DCS_1800</b> = 0x80000000, 
+<br />
+  <b>LE_MRC_BITMASK_BAND_WCDMA_US_1700</b> = 0x100000000, 
+<b>LE_MRC_BITMASK_BAND_WCDMA_US_850</b> = 0x200000000, 
+<b>LE_MRC_BITMASK_BAND_WCDMA_J_800</b> = 0x400000000, 
+<b>LE_MRC_BITMASK_BAND_WCDMA_EU_2600</b> = 0x800000000, 
+<br />
+  <b>LE_MRC_BITMASK_BAND_WCDMA_EU_J_900</b> = 0x1000000000, 
+<b>LE_MRC_BITMASK_BAND_WCDMA_J_1700</b> = 0x2000000000
+<br />
+ }</td></tr>
+<tr class="separator:a048374324f72ee7df52c2e0521c0dda3"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a81d705d61ee7ee56eab6aafb1af92579"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a81d705d61ee7ee56eab6aafb1af92579">le_mrc_LteBandBitMask_t</a> { <br />
+  <b>LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_1</b> = 0x1, 
+<b>LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_2</b> = 0x2, 
+<b>LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_3</b> = 0x4, 
+<b>LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_4</b> = 0x8, 
+<br />
+  <b>LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_5</b> = 0x10, 
+<b>LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_6</b> = 0x20, 
+<b>LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_7</b> = 0x40, 
+<b>LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_8</b> = 0x80, 
+<br />
+  <b>LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_9</b> = 0x100, 
+<b>LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_10</b> = 0x200, 
+<b>LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_11</b> = 0x400, 
+<b>LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_12</b> = 0x800, 
+<br />
+  <b>LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_13</b> = 0x1000, 
+<b>LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_14</b> = 0x2000, 
+<b>LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_17</b> = 0x4000, 
+<b>LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_18</b> = 0x8000, 
+<br />
+  <b>LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_19</b> = 0x10000, 
+<b>LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_20</b> = 0x20000, 
+<b>LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_21</b> = 0x40000, 
+<b>LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_24</b> = 0x80000, 
+<br />
+  <b>LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_25</b> = 0x100000, 
+<b>LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_33</b> = 0x200000, 
+<b>LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_34</b> = 0x400000, 
+<b>LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_35</b> = 0x800000, 
+<br />
+  <b>LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_36</b> = 0x1000000, 
+<b>LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_37</b> = 0x2000000, 
+<b>LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_38</b> = 0x4000000, 
+<b>LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_39</b> = 0x8000000, 
+<br />
+  <b>LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_40</b> = 0x10000000, 
+<b>LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_41</b> = 0x20000000, 
+<b>LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_42</b> = 0x40000000, 
+<b>LE_MRC_BITMASK_LTE_BAND_E_UTRA_OP_BAND_43</b> = 0x80000000
+<br />
+ }</td></tr>
+<tr class="separator:a81d705d61ee7ee56eab6aafb1af92579"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a418a508a9a6dbd3a4a68458f0c64a00e"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a418a508a9a6dbd3a4a68458f0c64a00e">le_mrc_TdScdmaBandBitMask_t</a> { <br />
+  <b>LE_MRC_BITMASK_TDSCDMA_BAND_A</b> = 0x1, 
+<b>LE_MRC_BITMASK_TDSCDMA_BAND_B</b> = 0x2, 
+<b>LE_MRC_BITMASK_TDSCDMA_BAND_C</b> = 0x4, 
+<b>LE_MRC_BITMASK_TDSCDMA_BAND_D</b> = 0x8, 
+<br />
+  <b>LE_MRC_BITMASK_TDSCDMA_BAND_E</b> = 0x10, 
+<b>LE_MRC_BITMASK_TDSCDMA_BAND_F</b> = 0x20
+<br />
+ }</td></tr>
+<tr class="separator:a418a508a9a6dbd3a4a68458f0c64a00e"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ae2877a1e1252ac79e6c9cae3d3c25a61"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#ae2877a1e1252ac79e6c9cae3d3c25a61">le_mrc_NetRegState_t</a> { <br />
+  <a class="el" href="le__mrc__interface_8h.html#ae2877a1e1252ac79e6c9cae3d3c25a61affdd881b043ba92f868ffef52b0b9124">LE_MRC_REG_NONE</a>, 
+<a class="el" href="le__mrc__interface_8h.html#ae2877a1e1252ac79e6c9cae3d3c25a61a90fd9c8ee7f965840af2536e2a33316a">LE_MRC_REG_HOME</a>, 
+<a class="el" href="le__mrc__interface_8h.html#ae2877a1e1252ac79e6c9cae3d3c25a61afe4b6da8ae01273d2188456660452eda">LE_MRC_REG_SEARCHING</a>, 
+<a class="el" href="le__mrc__interface_8h.html#ae2877a1e1252ac79e6c9cae3d3c25a61af6b1505fb7f90fa379a9dd8d031e9814">LE_MRC_REG_DENIED</a>, 
+<br />
+  <a class="el" href="le__mrc__interface_8h.html#ae2877a1e1252ac79e6c9cae3d3c25a61a9f5ddbf3dcdceb8e24e46aea83ba4e7f">LE_MRC_REG_ROAMING</a>, 
+<a class="el" href="le__mrc__interface_8h.html#ae2877a1e1252ac79e6c9cae3d3c25a61acdba928b7dfb851adfa0211acccabb65">LE_MRC_REG_UNKNOWN</a>
+<br />
+ }</td></tr>
+<tr class="separator:ae2877a1e1252ac79e6c9cae3d3c25a61"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aaf23906c37ad59fb96a8a48f7fab5b43"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#aaf23906c37ad59fb96a8a48f7fab5b43">le_mrc_Rat_t</a> { <br />
+  <a class="el" href="le__mrc__interface_8h.html#aaf23906c37ad59fb96a8a48f7fab5b43a6088198c65a39429fe6a67f322df0480">LE_MRC_RAT_UNKNOWN</a>, 
+<a class="el" href="le__mrc__interface_8h.html#aaf23906c37ad59fb96a8a48f7fab5b43ae19505d98b78ac22398bce06605dd1a4">LE_MRC_RAT_GSM</a>, 
+<a class="el" href="le__mrc__interface_8h.html#aaf23906c37ad59fb96a8a48f7fab5b43afe34c4f3a53aa717f5ecb94dd59bf728">LE_MRC_RAT_UMTS</a>, 
+<a class="el" href="le__mrc__interface_8h.html#aaf23906c37ad59fb96a8a48f7fab5b43aaf2b25a8ec75f9bacb51967f23247176">LE_MRC_RAT_LTE</a>, 
+<br />
+  <a class="el" href="le__mrc__interface_8h.html#aaf23906c37ad59fb96a8a48f7fab5b43a1634a4ab71f130dd2aae46aa09ca0771">LE_MRC_RAT_CDMA</a>
+<br />
+ }</td></tr>
+<tr class="separator:aaf23906c37ad59fb96a8a48f7fab5b43"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:af643c7005da7f2466302eebdf7a29d93"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#af643c7005da7f2466302eebdf7a29d93">le_mrc_RatBitMask_t</a> { <br />
+  <a class="el" href="le__mrc__interface_8h.html#af643c7005da7f2466302eebdf7a29d93adefd7fd440669e204ca96f3af84bb629">LE_MRC_BITMASK_RAT_GSM</a> = 0x1, 
+<a class="el" href="le__mrc__interface_8h.html#af643c7005da7f2466302eebdf7a29d93a4d0e1bc92e81266f57c6c275234a0ed9">LE_MRC_BITMASK_RAT_UMTS</a> = 0x2, 
+<a class="el" href="le__mrc__interface_8h.html#af643c7005da7f2466302eebdf7a29d93a3994580fe36cd392a2e517b8cc1c3108">LE_MRC_BITMASK_RAT_LTE</a> = 0x4, 
+<a class="el" href="le__mrc__interface_8h.html#af643c7005da7f2466302eebdf7a29d93a1ca9ac815a59af6c10a4f759cef4df3c">LE_MRC_BITMASK_RAT_CDMA</a> = 0x8, 
+<br />
+  <a class="el" href="le__mrc__interface_8h.html#af643c7005da7f2466302eebdf7a29d93aa6e87ad274b7f5011413ea0e8375300b">LE_MRC_BITMASK_RAT_ALL</a> = 0x10, 
+<b>LE_MRC_BITMASK_RAT_MAX</b> = 0x20
+<br />
+ }</td></tr>
+<tr class="separator:af643c7005da7f2466302eebdf7a29d93"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:aa19103931ad3974ee014f0ce2705a4ff"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#aa19103931ad3974ee014f0ce2705a4ff">le_mrc_ConnectService</a> (void)</td></tr>
+<tr class="separator:aa19103931ad3974ee014f0ce2705a4ff"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:af09497272480dfee6d0e75e4b98d22b9"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#af09497272480dfee6d0e75e4b98d22b9">le_mrc_DisconnectService</a> (void)</td></tr>
+<tr class="separator:af09497272480dfee6d0e75e4b98d22b9"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a929745b84719754d28f539540f71a552"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__mrc__interface_8h.html#a709ab9eb31ffa85aa85b8b2aaec22a6d">le_mrc_NetRegStateEventHandlerRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a929745b84719754d28f539540f71a552">le_mrc_AddNetRegStateEventHandler</a> (<a class="el" href="le__mrc__interface_8h.html#acf72270c80a8f8e8e216d314c5bb9ab5">le_mrc_NetRegStateHandlerFunc_t</a> handlerPtr, void *contextPtr)</td></tr>
+<tr class="separator:a929745b84719754d28f539540f71a552"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a4fc57a5a5bc1f4b6617c895c98a09f15"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a4fc57a5a5bc1f4b6617c895c98a09f15">le_mrc_RemoveNetRegStateEventHandler</a> (<a class="el" href="le__mrc__interface_8h.html#a709ab9eb31ffa85aa85b8b2aaec22a6d">le_mrc_NetRegStateEventHandlerRef_t</a> addHandlerRef)</td></tr>
+<tr class="separator:a4fc57a5a5bc1f4b6617c895c98a09f15"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aedd9c526588a8298322525cfba6f875d"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__mrc__interface_8h.html#a5ac252acd68a64b336ae9a98ca6113ac">le_mrc_RatChangeHandlerRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#aedd9c526588a8298322525cfba6f875d">le_mrc_AddRatChangeHandler</a> (<a class="el" href="le__mrc__interface_8h.html#a40fddaea0c8a3695000b2679931fbfb2">le_mrc_RatChangeHandlerFunc_t</a> handlerPtr, void *contextPtr)</td></tr>
+<tr class="separator:aedd9c526588a8298322525cfba6f875d"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aed4f1730c99a1a9204a198e3df3cf6f5"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#aed4f1730c99a1a9204a198e3df3cf6f5">le_mrc_RemoveRatChangeHandler</a> (<a class="el" href="le__mrc__interface_8h.html#a5ac252acd68a64b336ae9a98ca6113ac">le_mrc_RatChangeHandlerRef_t</a> addHandlerRef)</td></tr>
+<tr class="separator:aed4f1730c99a1a9204a198e3df3cf6f5"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ab62b444715b2b530efe5d397eb86a6e8"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__mrc__interface_8h.html#aac0e41200cd6bd03c178aeb7e3646744">le_mrc_SignalStrengthChangeHandlerRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#ab62b444715b2b530efe5d397eb86a6e8">le_mrc_AddSignalStrengthChangeHandler</a> (<a class="el" href="le__mrc__interface_8h.html#aaf23906c37ad59fb96a8a48f7fab5b43">le_mrc_Rat_t</a> rat, int32_t lowerRangeThreshold, int32_t upperRangeThreshold, <a class="el" href="le__mrc__interface_8h.html#aad70b8ec8988256ac39f5d04bc078a34">le_mrc_SignalStrengthChangeHandlerFunc_t</a> handlerPtr, void *contextPtr)</td></tr>
+<tr class="separator:ab62b444715b2b530efe5d397eb86a6e8"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a789dca8360ddf32a0ea1bfdd24efc6d4"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a789dca8360ddf32a0ea1bfdd24efc6d4">le_mrc_RemoveSignalStrengthChangeHandler</a> (<a class="el" href="le__mrc__interface_8h.html#aac0e41200cd6bd03c178aeb7e3646744">le_mrc_SignalStrengthChangeHandlerRef_t</a> addHandlerRef)</td></tr>
+<tr class="separator:a789dca8360ddf32a0ea1bfdd24efc6d4"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:acb434a9f91afb5b6639baf3678ee9388"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#acb434a9f91afb5b6639baf3678ee9388">le_mrc_SetAutomaticRegisterMode</a> (void)</td></tr>
+<tr class="separator:acb434a9f91afb5b6639baf3678ee9388"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a09b890f05a20f4b007d60e595026631f"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a09b890f05a20f4b007d60e595026631f">le_mrc_SetManualRegisterMode</a> (const char *mcc, const char *mnc)</td></tr>
+<tr class="separator:a09b890f05a20f4b007d60e595026631f"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a283c0c092c5a135a8e95f9f091655cb1"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a283c0c092c5a135a8e95f9f091655cb1">le_mrc_GetRegisterMode</a> (bool *isManualPtrPtr, char *mccPtr, size_t mccPtrNumElements, char *mncPtr, size_t mncPtrNumElements)</td></tr>
+<tr class="separator:a283c0c092c5a135a8e95f9f091655cb1"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a2d4abd391bc69c218538f5d8e1be4e01"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a2d4abd391bc69c218538f5d8e1be4e01">le_mrc_SetRatPreferences</a> (<a class="el" href="le__mrc__interface_8h.html#af643c7005da7f2466302eebdf7a29d93">le_mrc_RatBitMask_t</a> ratMask)</td></tr>
+<tr class="separator:a2d4abd391bc69c218538f5d8e1be4e01"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ae9fa8655738c63e392c8dcc862bdb1d5"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#ae9fa8655738c63e392c8dcc862bdb1d5">le_mrc_GetRatPreferences</a> (<a class="el" href="le__mrc__interface_8h.html#af643c7005da7f2466302eebdf7a29d93">le_mrc_RatBitMask_t</a> *ratMaskPtrPtr)</td></tr>
+<tr class="separator:ae9fa8655738c63e392c8dcc862bdb1d5"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ac808b4dc721e031566da92e00663c027"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#ac808b4dc721e031566da92e00663c027">le_mrc_SetBandPreferences</a> (<a class="el" href="le__mrc__interface_8h.html#a048374324f72ee7df52c2e0521c0dda3">le_mrc_BandBitMask_t</a> bandMask)</td></tr>
+<tr class="separator:ac808b4dc721e031566da92e00663c027"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a04418f56480070ba6c4f3d176dafaa37"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a04418f56480070ba6c4f3d176dafaa37">le_mrc_GetBandPreferences</a> (<a class="el" href="le__mrc__interface_8h.html#a048374324f72ee7df52c2e0521c0dda3">le_mrc_BandBitMask_t</a> *bandMaskPtrPtr)</td></tr>
+<tr class="separator:a04418f56480070ba6c4f3d176dafaa37"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a21d2fe7c736e9a4a342dcc461a5d6e02"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a21d2fe7c736e9a4a342dcc461a5d6e02">le_mrc_SetLteBandPreferences</a> (<a class="el" href="le__mrc__interface_8h.html#a81d705d61ee7ee56eab6aafb1af92579">le_mrc_LteBandBitMask_t</a> bandMask)</td></tr>
+<tr class="separator:a21d2fe7c736e9a4a342dcc461a5d6e02"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:af4ec5bd36ba8df68bc12a10618268742"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#af4ec5bd36ba8df68bc12a10618268742">le_mrc_GetLteBandPreferences</a> (<a class="el" href="le__mrc__interface_8h.html#a81d705d61ee7ee56eab6aafb1af92579">le_mrc_LteBandBitMask_t</a> *bandMaskPtrPtr)</td></tr>
+<tr class="separator:af4ec5bd36ba8df68bc12a10618268742"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a8765511597189b64e486fa8f17bcddcd"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a8765511597189b64e486fa8f17bcddcd">le_mrc_SetTdScdmaBandPreferences</a> (<a class="el" href="le__mrc__interface_8h.html#a418a508a9a6dbd3a4a68458f0c64a00e">le_mrc_TdScdmaBandBitMask_t</a> bandMask)</td></tr>
+<tr class="separator:a8765511597189b64e486fa8f17bcddcd"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aed41544004ed7df9de8e874b8bb09d3b"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#aed41544004ed7df9de8e874b8bb09d3b">le_mrc_GetTdScdmaBandPreferences</a> (<a class="el" href="le__mrc__interface_8h.html#a418a508a9a6dbd3a4a68458f0c64a00e">le_mrc_TdScdmaBandBitMask_t</a> *bandMaskPtrPtr)</td></tr>
+<tr class="separator:aed41544004ed7df9de8e874b8bb09d3b"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ac476a122ab91d3607c4eb016e93a3bde"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#ac476a122ab91d3607c4eb016e93a3bde">le_mrc_AddPreferredOperator</a> (const char *mcc, const char *mnc, <a class="el" href="le__mrc__interface_8h.html#af643c7005da7f2466302eebdf7a29d93">le_mrc_RatBitMask_t</a> ratMask)</td></tr>
+<tr class="separator:ac476a122ab91d3607c4eb016e93a3bde"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a0c2d65eb8cdb200aa4bce8766530c39f"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a0c2d65eb8cdb200aa4bce8766530c39f">le_mrc_RemovePreferredOperator</a> (const char *mcc, const char *mnc)</td></tr>
+<tr class="separator:a0c2d65eb8cdb200aa4bce8766530c39f"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a1ea0d2943accd51d3b428e0e6c94d297"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__mrc__interface_8h.html#ae9f0c124121ac480535d0fd7fd9e452b">le_mrc_PreferredOperatorListRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a1ea0d2943accd51d3b428e0e6c94d297">le_mrc_GetPreferredOperatorsList</a> (void)</td></tr>
+<tr class="separator:a1ea0d2943accd51d3b428e0e6c94d297"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a9648b653b7551cd065ec323b96a0aa1b"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__mrc__interface_8h.html#add1c18b20b02f57f3d4d1510a2d2d62c">le_mrc_PreferredOperatorRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a9648b653b7551cd065ec323b96a0aa1b">le_mrc_GetFirstPreferredOperator</a> (<a class="el" href="le__mrc__interface_8h.html#ae9f0c124121ac480535d0fd7fd9e452b">le_mrc_PreferredOperatorListRef_t</a> preferredOperatorListRef)</td></tr>
+<tr class="separator:a9648b653b7551cd065ec323b96a0aa1b"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a896703cabaacf97a70708d944cfbfc87"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__mrc__interface_8h.html#add1c18b20b02f57f3d4d1510a2d2d62c">le_mrc_PreferredOperatorRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a896703cabaacf97a70708d944cfbfc87">le_mrc_GetNextPreferredOperator</a> (<a class="el" href="le__mrc__interface_8h.html#ae9f0c124121ac480535d0fd7fd9e452b">le_mrc_PreferredOperatorListRef_t</a> preferredOperatorListRef)</td></tr>
+<tr class="separator:a896703cabaacf97a70708d944cfbfc87"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a60679f563ffecc8f107425b806edcdf0"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a60679f563ffecc8f107425b806edcdf0">le_mrc_DeletePreferredOperatorsList</a> (<a class="el" href="le__mrc__interface_8h.html#ae9f0c124121ac480535d0fd7fd9e452b">le_mrc_PreferredOperatorListRef_t</a> preferredOperatorListRef)</td></tr>
+<tr class="separator:a60679f563ffecc8f107425b806edcdf0"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ab2204081bc04a108194e1dd915c35acf"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#ab2204081bc04a108194e1dd915c35acf">le_mrc_GetPreferredOperatorDetails</a> (<a class="el" href="le__mrc__interface_8h.html#add1c18b20b02f57f3d4d1510a2d2d62c">le_mrc_PreferredOperatorRef_t</a> preferredOperatorRef, char *mccPtr, size_t mccPtrNumElements, char *mncPtr, size_t mncPtrNumElements, <a class="el" href="le__mrc__interface_8h.html#af643c7005da7f2466302eebdf7a29d93">le_mrc_RatBitMask_t</a> *ratMaskPtr)</td></tr>
+<tr class="separator:ab2204081bc04a108194e1dd915c35acf"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a4f11e27862fef384c0023f5b538e543d"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a4f11e27862fef384c0023f5b538e543d">le_mrc_GetNetRegState</a> (<a class="el" href="le__mrc__interface_8h.html#ae2877a1e1252ac79e6c9cae3d3c25a61">le_mrc_NetRegState_t</a> *statePtr)</td></tr>
+<tr class="separator:a4f11e27862fef384c0023f5b538e543d"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a717aa0f4e4dc9a83b6adc2f26f3f0258"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a717aa0f4e4dc9a83b6adc2f26f3f0258">le_mrc_GetSignalQual</a> (uint32_t *qualityPtr)</td></tr>
+<tr class="separator:a717aa0f4e4dc9a83b6adc2f26f3f0258"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a78bd27d92337e2122320f41bcaa5480f"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a78bd27d92337e2122320f41bcaa5480f">le_mrc_SetRadioPower</a> (<a class="el" href="le__basics_8h.html#ae2138c90c41d30e2d510be01d8b374da">le_onoff_t</a> power)</td></tr>
+<tr class="separator:a78bd27d92337e2122320f41bcaa5480f"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aac51332c6c84e460746eb1ad45c064d6"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#aac51332c6c84e460746eb1ad45c064d6">le_mrc_GetRadioPower</a> (<a class="el" href="le__basics_8h.html#ae2138c90c41d30e2d510be01d8b374da">le_onoff_t</a> *powerPtr)</td></tr>
+<tr class="separator:aac51332c6c84e460746eb1ad45c064d6"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ab4a246dd466fa8175aca0158e0cab227"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__mrc__interface_8h.html#a25a9e79cc9078e22cec22444fd959c61">le_mrc_ScanInformationListRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#ab4a246dd466fa8175aca0158e0cab227">le_mrc_PerformCellularNetworkScan</a> (<a class="el" href="le__mrc__interface_8h.html#af643c7005da7f2466302eebdf7a29d93">le_mrc_RatBitMask_t</a> ratMask)</td></tr>
+<tr class="separator:ab4a246dd466fa8175aca0158e0cab227"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ae006d053b037cec589aa85053472a2af"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__mrc__interface_8h.html#a3e7fe3e0d8f10fe7853f00eb254529ea">le_mrc_ScanInformationRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#ae006d053b037cec589aa85053472a2af">le_mrc_GetFirstCellularNetworkScan</a> (<a class="el" href="le__mrc__interface_8h.html#a25a9e79cc9078e22cec22444fd959c61">le_mrc_ScanInformationListRef_t</a> scanInformationListRef)</td></tr>
+<tr class="separator:ae006d053b037cec589aa85053472a2af"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ae0ca9f0c1c106d6ddeef784c6bb0d69b"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__mrc__interface_8h.html#a3e7fe3e0d8f10fe7853f00eb254529ea">le_mrc_ScanInformationRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#ae0ca9f0c1c106d6ddeef784c6bb0d69b">le_mrc_GetNextCellularNetworkScan</a> (<a class="el" href="le__mrc__interface_8h.html#a25a9e79cc9078e22cec22444fd959c61">le_mrc_ScanInformationListRef_t</a> scanInformationListRef)</td></tr>
+<tr class="separator:ae0ca9f0c1c106d6ddeef784c6bb0d69b"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ac45ce335b3fa063b83bb925e67eeaeb3"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#ac45ce335b3fa063b83bb925e67eeaeb3">le_mrc_DeleteCellularNetworkScan</a> (<a class="el" href="le__mrc__interface_8h.html#a25a9e79cc9078e22cec22444fd959c61">le_mrc_ScanInformationListRef_t</a> scanInformationListRef)</td></tr>
+<tr class="separator:ac45ce335b3fa063b83bb925e67eeaeb3"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:af4fa2d3f3c9a664b8e46478dba048f2e"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#af4fa2d3f3c9a664b8e46478dba048f2e">le_mrc_GetCellularNetworkMccMnc</a> (<a class="el" href="le__mrc__interface_8h.html#a3e7fe3e0d8f10fe7853f00eb254529ea">le_mrc_ScanInformationRef_t</a> scanInformationRef, char *mccPtr, size_t mccPtrNumElements, char *mncPtr, size_t mncPtrNumElements)</td></tr>
+<tr class="separator:af4fa2d3f3c9a664b8e46478dba048f2e"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a82cb12c5f02baccbb04b0af1be4eb031"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a82cb12c5f02baccbb04b0af1be4eb031">le_mrc_GetCellularNetworkName</a> (<a class="el" href="le__mrc__interface_8h.html#a3e7fe3e0d8f10fe7853f00eb254529ea">le_mrc_ScanInformationRef_t</a> scanInformationRef, char *namePtr, size_t namePtrNumElements)</td></tr>
+<tr class="separator:a82cb12c5f02baccbb04b0af1be4eb031"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ad33fbe1d2b7acee0e47f3e54cab78274"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__mrc__interface_8h.html#aaf23906c37ad59fb96a8a48f7fab5b43">le_mrc_Rat_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#ad33fbe1d2b7acee0e47f3e54cab78274">le_mrc_GetCellularNetworkRat</a> (<a class="el" href="le__mrc__interface_8h.html#a3e7fe3e0d8f10fe7853f00eb254529ea">le_mrc_ScanInformationRef_t</a> scanInformationRef)</td></tr>
+<tr class="separator:ad33fbe1d2b7acee0e47f3e54cab78274"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a4c859fc1364c183aa1d26a022db365c6"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a4c859fc1364c183aa1d26a022db365c6">le_mrc_IsCellularNetworkInUse</a> (<a class="el" href="le__mrc__interface_8h.html#a3e7fe3e0d8f10fe7853f00eb254529ea">le_mrc_ScanInformationRef_t</a> scanInformationRef)</td></tr>
+<tr class="separator:a4c859fc1364c183aa1d26a022db365c6"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a72ca8072f90d453169baff44441c41c0"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a72ca8072f90d453169baff44441c41c0">le_mrc_IsCellularNetworkAvailable</a> (<a class="el" href="le__mrc__interface_8h.html#a3e7fe3e0d8f10fe7853f00eb254529ea">le_mrc_ScanInformationRef_t</a> scanInformationRef)</td></tr>
+<tr class="separator:a72ca8072f90d453169baff44441c41c0"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a7333dfc638f50524f9c6fd81457828ba"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a7333dfc638f50524f9c6fd81457828ba">le_mrc_IsCellularNetworkHome</a> (<a class="el" href="le__mrc__interface_8h.html#a3e7fe3e0d8f10fe7853f00eb254529ea">le_mrc_ScanInformationRef_t</a> scanInformationRef)</td></tr>
+<tr class="separator:a7333dfc638f50524f9c6fd81457828ba"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a699a52d014550124a5b3362ee888a780"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a699a52d014550124a5b3362ee888a780">le_mrc_IsCellularNetworkForbidden</a> (<a class="el" href="le__mrc__interface_8h.html#a3e7fe3e0d8f10fe7853f00eb254529ea">le_mrc_ScanInformationRef_t</a> scanInformationRef)</td></tr>
+<tr class="separator:a699a52d014550124a5b3362ee888a780"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a27e5eaddd6df34e4bfcee7d25775591e"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a27e5eaddd6df34e4bfcee7d25775591e">le_mrc_GetCurrentNetworkName</a> (char *nameStr, size_t nameStrNumElements)</td></tr>
+<tr class="separator:a27e5eaddd6df34e4bfcee7d25775591e"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a2e476636ca33c40ce18b73b11a6f9f55"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a2e476636ca33c40ce18b73b11a6f9f55">le_mrc_GetCurrentNetworkMccMnc</a> (char *mccStr, size_t mccStrNumElements, char *mncStr, size_t mncStrNumElements)</td></tr>
+<tr class="separator:a2e476636ca33c40ce18b73b11a6f9f55"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a3ad9533c467cec0902d5d165bb32d67b"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a3ad9533c467cec0902d5d165bb32d67b">le_mrc_GetRadioAccessTechInUse</a> (<a class="el" href="le__mrc__interface_8h.html#aaf23906c37ad59fb96a8a48f7fab5b43">le_mrc_Rat_t</a> *ratPtr)</td></tr>
+<tr class="separator:a3ad9533c467cec0902d5d165bb32d67b"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a8d44fe46e61f3399c5e0dd6002b042ae"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__mrc__interface_8h.html#a672ea94ad892bb95f43836b5fbd24188">le_mrc_NeighborCellsRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a8d44fe46e61f3399c5e0dd6002b042ae">le_mrc_GetNeighborCellsInfo</a> (void)</td></tr>
+<tr class="separator:a8d44fe46e61f3399c5e0dd6002b042ae"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a101343359e8d36ab41180aede2891b07"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a101343359e8d36ab41180aede2891b07">le_mrc_DeleteNeighborCellsInfo</a> (<a class="el" href="le__mrc__interface_8h.html#a672ea94ad892bb95f43836b5fbd24188">le_mrc_NeighborCellsRef_t</a> ngbrCellsRef)</td></tr>
+<tr class="separator:a101343359e8d36ab41180aede2891b07"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ab50724fd74818d71da1dfcd2217dd795"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__mrc__interface_8h.html#a8fbb2523c254ba473a3f59efa452355e">le_mrc_CellInfoRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#ab50724fd74818d71da1dfcd2217dd795">le_mrc_GetFirstNeighborCellInfo</a> (<a class="el" href="le__mrc__interface_8h.html#a672ea94ad892bb95f43836b5fbd24188">le_mrc_NeighborCellsRef_t</a> ngbrCellsRef)</td></tr>
+<tr class="separator:ab50724fd74818d71da1dfcd2217dd795"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a0baede61d9b260a3ec83e3ab320d0715"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__mrc__interface_8h.html#a8fbb2523c254ba473a3f59efa452355e">le_mrc_CellInfoRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a0baede61d9b260a3ec83e3ab320d0715">le_mrc_GetNextNeighborCellInfo</a> (<a class="el" href="le__mrc__interface_8h.html#a672ea94ad892bb95f43836b5fbd24188">le_mrc_NeighborCellsRef_t</a> ngbrCellsRef)</td></tr>
+<tr class="separator:a0baede61d9b260a3ec83e3ab320d0715"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:abdbc94e474235417d8610e2eb95558eb"><td align="right" class="memItemLeft" valign="top">uint32_t </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#abdbc94e474235417d8610e2eb95558eb">le_mrc_GetNeighborCellId</a> (<a class="el" href="le__mrc__interface_8h.html#a8fbb2523c254ba473a3f59efa452355e">le_mrc_CellInfoRef_t</a> ngbrCellInfoRef)</td></tr>
+<tr class="separator:abdbc94e474235417d8610e2eb95558eb"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a70ba0ca70367bc673a6bca1e246bb88f"><td align="right" class="memItemLeft" valign="top">uint32_t </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a70ba0ca70367bc673a6bca1e246bb88f">le_mrc_GetNeighborCellLocAreaCode</a> (<a class="el" href="le__mrc__interface_8h.html#a8fbb2523c254ba473a3f59efa452355e">le_mrc_CellInfoRef_t</a> ngbrCellInfoRef)</td></tr>
+<tr class="separator:a70ba0ca70367bc673a6bca1e246bb88f"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aeae116235802afd041afd9df009642aa"><td align="right" class="memItemLeft" valign="top">int32_t </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#aeae116235802afd041afd9df009642aa">le_mrc_GetNeighborCellRxLevel</a> (<a class="el" href="le__mrc__interface_8h.html#a8fbb2523c254ba473a3f59efa452355e">le_mrc_CellInfoRef_t</a> ngbrCellInfoRef)</td></tr>
+<tr class="separator:aeae116235802afd041afd9df009642aa"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a5bb3e75b74260a9cee57247e1968a31f"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__mrc__interface_8h.html#aaf23906c37ad59fb96a8a48f7fab5b43">le_mrc_Rat_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a5bb3e75b74260a9cee57247e1968a31f">le_mrc_GetNeighborCellRat</a> (<a class="el" href="le__mrc__interface_8h.html#a8fbb2523c254ba473a3f59efa452355e">le_mrc_CellInfoRef_t</a> ngbrCellInfoRef)</td></tr>
+<tr class="separator:a5bb3e75b74260a9cee57247e1968a31f"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a94e452e3d7063d3359dcbb97a31b984b"><td align="right" class="memItemLeft" valign="top">int32_t </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a94e452e3d7063d3359dcbb97a31b984b">le_mrc_GetNeighborCellUmtsEcIo</a> (<a class="el" href="le__mrc__interface_8h.html#a8fbb2523c254ba473a3f59efa452355e">le_mrc_CellInfoRef_t</a> ngbrCellInfoRef)</td></tr>
+<tr class="separator:a94e452e3d7063d3359dcbb97a31b984b"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a7754836120c34cd2610b9777bd56409f"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a7754836120c34cd2610b9777bd56409f">le_mrc_GetNeighborCellLteIntraFreq</a> (<a class="el" href="le__mrc__interface_8h.html#a8fbb2523c254ba473a3f59efa452355e">le_mrc_CellInfoRef_t</a> ngbrCellInfoRef, int32_t *rsrqPtr, int32_t *rsrpPtr)</td></tr>
+<tr class="separator:a7754836120c34cd2610b9777bd56409f"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a331545d4e396c513bba028db981c016b"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a331545d4e396c513bba028db981c016b">le_mrc_GetNeighborCellLteInterFreq</a> (<a class="el" href="le__mrc__interface_8h.html#a8fbb2523c254ba473a3f59efa452355e">le_mrc_CellInfoRef_t</a> ngbrCellInfoRef, int32_t *rsrqPtr, int32_t *rsrpPtr)</td></tr>
+<tr class="separator:a331545d4e396c513bba028db981c016b"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ad3662723a7ed47cf45d9a2eaaa1fb16e"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__mrc__interface_8h.html#a6ad5afb123492b2e249f3ecd414d6e83">le_mrc_MetricsRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#ad3662723a7ed47cf45d9a2eaaa1fb16e">le_mrc_MeasureSignalMetrics</a> (void)</td></tr>
+<tr class="separator:ad3662723a7ed47cf45d9a2eaaa1fb16e"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a20addd98ee6cb07f9ee1a45be01b5203"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a20addd98ee6cb07f9ee1a45be01b5203">le_mrc_DeleteSignalMetrics</a> (<a class="el" href="le__mrc__interface_8h.html#a6ad5afb123492b2e249f3ecd414d6e83">le_mrc_MetricsRef_t</a> MetricsRef)</td></tr>
+<tr class="separator:a20addd98ee6cb07f9ee1a45be01b5203"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a5564bace31c937bcef096e597f33d3a4"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__mrc__interface_8h.html#aaf23906c37ad59fb96a8a48f7fab5b43">le_mrc_Rat_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a5564bace31c937bcef096e597f33d3a4">le_mrc_GetRatOfSignalMetrics</a> (<a class="el" href="le__mrc__interface_8h.html#a6ad5afb123492b2e249f3ecd414d6e83">le_mrc_MetricsRef_t</a> MetricsRef)</td></tr>
+<tr class="separator:a5564bace31c937bcef096e597f33d3a4"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a9d7243b29bf4c705c4eba83fa3799582"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a9d7243b29bf4c705c4eba83fa3799582">le_mrc_GetGsmSignalMetrics</a> (<a class="el" href="le__mrc__interface_8h.html#a6ad5afb123492b2e249f3ecd414d6e83">le_mrc_MetricsRef_t</a> MetricsRef, int32_t *rssiPtr, uint32_t *berPtr)</td></tr>
+<tr class="separator:a9d7243b29bf4c705c4eba83fa3799582"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a456648564abfc8e9711b60a5d8bddc9b"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a456648564abfc8e9711b60a5d8bddc9b">le_mrc_GetUmtsSignalMetrics</a> (<a class="el" href="le__mrc__interface_8h.html#a6ad5afb123492b2e249f3ecd414d6e83">le_mrc_MetricsRef_t</a> MetricsRef, int32_t *ssPtr, uint32_t *blerPtr, int32_t *ecioPtr, int32_t *rscpPtr, int32_t *sinrPtr)</td></tr>
+<tr class="separator:a456648564abfc8e9711b60a5d8bddc9b"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a030880c064afbf2686726fd2e538adfe"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a030880c064afbf2686726fd2e538adfe">le_mrc_GetLteSignalMetrics</a> (<a class="el" href="le__mrc__interface_8h.html#a6ad5afb123492b2e249f3ecd414d6e83">le_mrc_MetricsRef_t</a> MetricsRef, int32_t *ssPtr, uint32_t *blerPtr, int32_t *rsrqPtr, int32_t *rsrpPtr, int32_t *snrPtr)</td></tr>
+<tr class="separator:a030880c064afbf2686726fd2e538adfe"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a09ff33b24fd01be18a145b2b3f1f579a"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a09ff33b24fd01be18a145b2b3f1f579a">le_mrc_GetCdmaSignalMetrics</a> (<a class="el" href="le__mrc__interface_8h.html#a6ad5afb123492b2e249f3ecd414d6e83">le_mrc_MetricsRef_t</a> MetricsRef, int32_t *ssPtr, uint32_t *erPtr, int32_t *ecioPtr, int32_t *sinrPtr, int32_t *ioPtr)</td></tr>
+<tr class="separator:a09ff33b24fd01be18a145b2b3f1f579a"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aafc9fb71c3013b7b26dc386b13ca4a85"><td align="right" class="memItemLeft" valign="top">uint32_t </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#aafc9fb71c3013b7b26dc386b13ca4a85">le_mrc_GetServingCellId</a> (void)</td></tr>
+<tr class="separator:aafc9fb71c3013b7b26dc386b13ca4a85"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a8ba03765e7595f85783f6f6a022311f8"><td align="right" class="memItemLeft" valign="top">uint32_t </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a8ba03765e7595f85783f6f6a022311f8">le_mrc_GetServingCellLocAreaCode</a> (void)</td></tr>
+<tr class="separator:a8ba03765e7595f85783f6f6a022311f8"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a7cb0a206729c652692701cd24226d34f"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a7cb0a206729c652692701cd24226d34f">le_mrc_GetBandCapabilities</a> (<a class="el" href="le__mrc__interface_8h.html#a048374324f72ee7df52c2e0521c0dda3">le_mrc_BandBitMask_t</a> *bandMaskPtrPtr)</td></tr>
+<tr class="separator:a7cb0a206729c652692701cd24226d34f"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ad6b44639b1d9755b92720d5184ee2515"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#ad6b44639b1d9755b92720d5184ee2515">le_mrc_GetLteBandCapabilities</a> (<a class="el" href="le__mrc__interface_8h.html#a81d705d61ee7ee56eab6aafb1af92579">le_mrc_LteBandBitMask_t</a> *bandMaskPtrPtr)</td></tr>
+<tr class="separator:ad6b44639b1d9755b92720d5184ee2515"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:adfa81f2361744bc67697221845713a98"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#adfa81f2361744bc67697221845713a98">le_mrc_GetTdScdmaBandCapabilities</a> (<a class="el" href="le__mrc__interface_8h.html#a418a508a9a6dbd3a4a68458f0c64a00e">le_mrc_TdScdmaBandBitMask_t</a> *bandMaskPtrPtr)</td></tr>
+<tr class="separator:adfa81f2361744bc67697221845713a98"><td class="memSeparator" colspan="2"> </td></tr>
+</table>
+<a id="details" name="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Legato <a class="el" href="c_mrc.html">Modem Radio Control</a> include file.</p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="aec88b97b54a45f86e6cb34f65b2d0afd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_MRC_MCC_BYTES   4</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Mobile Country Code length One extra byte is added for the null character. </p>
+</div>
+</div>
+<a class="anchor" id="aa50ed3f6d70185be4a35c811518895cf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_MRC_MCC_LEN   3</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Mobile Country Code length </p>
+</div>
+</div>
+<a class="anchor" id="aeae0e240c77730be724ad7ac42596469"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_MRC_MNC_BYTES   4</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Mobile Network Code length One extra byte is added for the null character. </p>
+</div>
+</div>
+<a class="anchor" id="a0550a0420d5f13f4b68a6c880473e768"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_MRC_MNC_LEN   3</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Mobile Network Code length </p>
+</div>
+</div>
+<a class="anchor" id="a5f5edf129f254904b22595af86cdeaa7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_MRC_NETWORK_NAME_MAX_LEN   100</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Cellular Network length. </p>
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a class="anchor" id="a8fbb2523c254ba473a3f59efa452355e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef struct le_mrc_CellInfo* <a class="el" href="le__mrc__interface_8h.html#a8fbb2523c254ba473a3f59efa452355e">le_mrc_CellInfoRef_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Reference type for one Cell Information. </p>
+</div>
+</div>
+<a class="anchor" id="a6ad5afb123492b2e249f3ecd414d6e83"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef struct le_mrc_Metrics* <a class="el" href="le__mrc__interface_8h.html#a6ad5afb123492b2e249f3ecd414d6e83">le_mrc_MetricsRef_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Reference type for the signal metrics. </p>
+</div>
+</div>
+<a class="anchor" id="a672ea94ad892bb95f43836b5fbd24188"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef struct le_mrc_NeighborCells* <a class="el" href="le__mrc__interface_8h.html#a672ea94ad892bb95f43836b5fbd24188">le_mrc_NeighborCellsRef_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Reference type for all Neighboring Cells Information. </p>
+</div>
+</div>
+<a class="anchor" id="a709ab9eb31ffa85aa85b8b2aaec22a6d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef struct le_mrc_NetRegStateEventHandler* <a class="el" href="le__mrc__interface_8h.html#a709ab9eb31ffa85aa85b8b2aaec22a6d">le_mrc_NetRegStateEventHandlerRef_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Reference type used by Add/Remove functions for EVENT 'le_mrc_NetRegStateEvent' </p>
+</div>
+</div>
+<a class="anchor" id="acf72270c80a8f8e8e216d314c5bb9ab5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef void(* le_mrc_NetRegStateHandlerFunc_t) (<a class="el" href="le__mrc__interface_8h.html#ae2877a1e1252ac79e6c9cae3d3c25a61">le_mrc_NetRegState_t</a> state, void *contextPtr)</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Handler for Network registration state changes.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramname">state</td><td>Parameter ready to receive the Network Registration state. </td></tr>
+<tr><td class="paramname">contextPtr</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ae9f0c124121ac480535d0fd7fd9e452b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef struct le_mrc_PreferredOperatorList* <a class="el" href="le__mrc__interface_8h.html#ae9f0c124121ac480535d0fd7fd9e452b">le_mrc_PreferredOperatorListRef_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Reference type for Preferred Operator Listing. </p>
+</div>
+</div>
+<a class="anchor" id="add1c18b20b02f57f3d4d1510a2d2d62c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef struct le_mrc_PreferredOperator* <a class="el" href="le__mrc__interface_8h.html#add1c18b20b02f57f3d4d1510a2d2d62c">le_mrc_PreferredOperatorRef_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Reference type for referring to the Preferred Operator objects. </p>
+</div>
+</div>
+<a class="anchor" id="a40fddaea0c8a3695000b2679931fbfb2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef void(* le_mrc_RatChangeHandlerFunc_t) (<a class="el" href="le__mrc__interface_8h.html#aaf23906c37ad59fb96a8a48f7fab5b43">le_mrc_Rat_t</a> rat, void *contextPtr)</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Handler for Radio Access Technology changes.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramname">rat</td><td>Parameter ready to receive the Radio Access Technology. </td></tr>
+<tr><td class="paramname">contextPtr</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a5ac252acd68a64b336ae9a98ca6113ac"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef struct le_mrc_RatChangeHandler* <a class="el" href="le__mrc__interface_8h.html#a5ac252acd68a64b336ae9a98ca6113ac">le_mrc_RatChangeHandlerRef_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Reference type used by Add/Remove functions for EVENT 'le_mrc_RatChange' </p>
+</div>
+</div>
+<a class="anchor" id="a25a9e79cc9078e22cec22444fd959c61"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef struct le_mrc_ScanInformationList* <a class="el" href="le__mrc__interface_8h.html#a25a9e79cc9078e22cec22444fd959c61">le_mrc_ScanInformationListRef_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Reference type for Scan Information Listing. </p>
+</div>
+</div>
+<a class="anchor" id="a3e7fe3e0d8f10fe7853f00eb254529ea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef struct le_mrc_ScanInformation* <a class="el" href="le__mrc__interface_8h.html#a3e7fe3e0d8f10fe7853f00eb254529ea">le_mrc_ScanInformationRef_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Reference type for referring to MRC Scan Information objects. </p>
+</div>
+</div>
+<a class="anchor" id="aad70b8ec8988256ac39f5d04bc078a34"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef void(* le_mrc_SignalStrengthChangeHandlerFunc_t) (int32_t ss, void *contextPtr)</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Handler for Signal Strength value changes.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramname">ss</td><td>Signal strength in dBm </td></tr>
+<tr><td class="paramname">contextPtr</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="aac0e41200cd6bd03c178aeb7e3646744"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef struct le_mrc_SignalStrengthChangeHandler* <a class="el" href="le__mrc__interface_8h.html#aac0e41200cd6bd03c178aeb7e3646744">le_mrc_SignalStrengthChangeHandlerRef_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Reference type used by Add/Remove functions for EVENT 'le_mrc_SignalStrengthChange' </p>
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a class="anchor" id="a048374324f72ee7df52c2e0521c0dda3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="le__mrc__interface_8h.html#a048374324f72ee7df52c2e0521c0dda3">le_mrc_BandBitMask_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>2G/3G Band Bit Mask (64 bits) </p>
+</div>
+</div>
+<a class="anchor" id="a81d705d61ee7ee56eab6aafb1af92579"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="le__mrc__interface_8h.html#a81d705d61ee7ee56eab6aafb1af92579">le_mrc_LteBandBitMask_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>LTE Band Bit Mask (32bits) </p>
+</div>
+</div>
+<a class="anchor" id="ae2877a1e1252ac79e6c9cae3d3c25a61"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="le__mrc__interface_8h.html#ae2877a1e1252ac79e6c9cae3d3c25a61">le_mrc_NetRegState_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Network Registration states. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ae2877a1e1252ac79e6c9cae3d3c25a61affdd881b043ba92f868ffef52b0b9124"></a>LE_MRC_REG_NONE </td><td class="fielddoc">
+<p>Not registered and not currently searching for new operator. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae2877a1e1252ac79e6c9cae3d3c25a61a90fd9c8ee7f965840af2536e2a33316a"></a>LE_MRC_REG_HOME </td><td class="fielddoc">
+<p>Registered, home network. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae2877a1e1252ac79e6c9cae3d3c25a61afe4b6da8ae01273d2188456660452eda"></a>LE_MRC_REG_SEARCHING </td><td class="fielddoc">
+<p>Not registered but currently searching for a new operator. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae2877a1e1252ac79e6c9cae3d3c25a61af6b1505fb7f90fa379a9dd8d031e9814"></a>LE_MRC_REG_DENIED </td><td class="fielddoc">
+<p>Registration was denied, usually because of invalid access credentials. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae2877a1e1252ac79e6c9cae3d3c25a61a9f5ddbf3dcdceb8e24e46aea83ba4e7f"></a>LE_MRC_REG_ROAMING </td><td class="fielddoc">
+<p>Registered to a roaming network. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae2877a1e1252ac79e6c9cae3d3c25a61acdba928b7dfb851adfa0211acccabb65"></a>LE_MRC_REG_UNKNOWN </td><td class="fielddoc">
+<p>Unknown state. </p>
+</td></tr>
+</table>
+</div>
+</div>
+<a class="anchor" id="aaf23906c37ad59fb96a8a48f7fab5b43"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="le__mrc__interface_8h.html#aaf23906c37ad59fb96a8a48f7fab5b43">le_mrc_Rat_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Radio Access Technology enum </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="aaf23906c37ad59fb96a8a48f7fab5b43a6088198c65a39429fe6a67f322df0480"></a>LE_MRC_RAT_UNKNOWN </td><td class="fielddoc">
+<p>Unknown. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aaf23906c37ad59fb96a8a48f7fab5b43ae19505d98b78ac22398bce06605dd1a4"></a>LE_MRC_RAT_GSM </td><td class="fielddoc">
+<p>GSM network. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aaf23906c37ad59fb96a8a48f7fab5b43afe34c4f3a53aa717f5ecb94dd59bf728"></a>LE_MRC_RAT_UMTS </td><td class="fielddoc">
+<p>UMTS network. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aaf23906c37ad59fb96a8a48f7fab5b43aaf2b25a8ec75f9bacb51967f23247176"></a>LE_MRC_RAT_LTE </td><td class="fielddoc">
+<p>LTE network. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aaf23906c37ad59fb96a8a48f7fab5b43a1634a4ab71f130dd2aae46aa09ca0771"></a>LE_MRC_RAT_CDMA </td><td class="fielddoc">
+<p>CDMA network. </p>
+</td></tr>
+</table>
+</div>
+</div>
+<a class="anchor" id="af643c7005da7f2466302eebdf7a29d93"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="le__mrc__interface_8h.html#af643c7005da7f2466302eebdf7a29d93">le_mrc_RatBitMask_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Radio Bitmask Access Technology Bit Mask </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="af643c7005da7f2466302eebdf7a29d93adefd7fd440669e204ca96f3af84bb629"></a>LE_MRC_BITMASK_RAT_GSM </td><td class="fielddoc">
+<p>GSM RAT Bit Mask. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="af643c7005da7f2466302eebdf7a29d93a4d0e1bc92e81266f57c6c275234a0ed9"></a>LE_MRC_BITMASK_RAT_UMTS </td><td class="fielddoc">
+<p>UMTS RAT Bit Mask. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="af643c7005da7f2466302eebdf7a29d93a3994580fe36cd392a2e517b8cc1c3108"></a>LE_MRC_BITMASK_RAT_LTE </td><td class="fielddoc">
+<p>LTE RAT Bit Mask. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="af643c7005da7f2466302eebdf7a29d93a1ca9ac815a59af6c10a4f759cef4df3c"></a>LE_MRC_BITMASK_RAT_CDMA </td><td class="fielddoc">
+<p>CDMA RAT Bit Mask. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="af643c7005da7f2466302eebdf7a29d93aa6e87ad274b7f5011413ea0e8375300b"></a>LE_MRC_BITMASK_RAT_ALL </td><td class="fielddoc">
+<p>To Set all RAT preference Bit Mask. </p>
+</td></tr>
+</table>
+</div>
+</div>
+<a class="anchor" id="a418a508a9a6dbd3a4a68458f0c64a00e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="le__mrc__interface_8h.html#a418a508a9a6dbd3a4a68458f0c64a00e">le_mrc_TdScdmaBandBitMask_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>TDSCDMA Band Bit Mask </p>
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="a929745b84719754d28f539540f71a552"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__mrc__interface_8h.html#a709ab9eb31ffa85aa85b8b2aaec22a6d">le_mrc_NetRegStateEventHandlerRef_t</a> le_mrc_AddNetRegStateEventHandler </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#acf72270c80a8f8e8e216d314c5bb9ab5">le_mrc_NetRegStateHandlerFunc_t</a> </td>
+<td class="paramname"><em>handlerPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">void * </td>
+<td class="paramname"><em>contextPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Add handler function for EVENT 'le_mrc_NetRegStateEvent'</p>
+<p>This event provides information on network registration state changes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">handlerPtr</td><td></td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">contextPtr</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ac476a122ab91d3607c4eb016e93a3bde"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mrc_AddPreferredOperator </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>mcc</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>mnc</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#af643c7005da7f2466302eebdf7a29d93">le_mrc_RatBitMask_t</a> </td>
+<td class="paramname"><em>ratMask</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Add a preferred operator by specifying the MCC/MNC and the Radio Access Technology.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_NOT_FOUND User Preferred operator list is not available.</li>
+<li>LE_FAULT Function failed.</li>
+<li>LE_BAD_PARAMETER RAT mask is invalid.</li>
+<li>LE_OK Function succeeded.</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If one code is too long (max LE_MRC_MCC_LEN/LE_MRC_MNC_LEN digits), it's a fatal error, the function won't return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">mcc</td><td>Mobile Country Code </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">mnc</td><td>Mobile Network Code </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">ratMask</td><td>Bit mask for the Radio Access Technology preferences. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="aedd9c526588a8298322525cfba6f875d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__mrc__interface_8h.html#a5ac252acd68a64b336ae9a98ca6113ac">le_mrc_RatChangeHandlerRef_t</a> le_mrc_AddRatChangeHandler </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#a40fddaea0c8a3695000b2679931fbfb2">le_mrc_RatChangeHandlerFunc_t</a> </td>
+<td class="paramname"><em>handlerPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">void * </td>
+<td class="paramname"><em>contextPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Add handler function for EVENT 'le_mrc_RatChange'</p>
+<p>This event provides information on Radio Access Technology changes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">handlerPtr</td><td></td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">contextPtr</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ab62b444715b2b530efe5d397eb86a6e8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__mrc__interface_8h.html#aac0e41200cd6bd03c178aeb7e3646744">le_mrc_SignalStrengthChangeHandlerRef_t</a> le_mrc_AddSignalStrengthChangeHandler </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#aaf23906c37ad59fb96a8a48f7fab5b43">le_mrc_Rat_t</a> </td>
+<td class="paramname"><em>rat</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">int32_t </td>
+<td class="paramname"><em>lowerRangeThreshold</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">int32_t </td>
+<td class="paramname"><em>upperRangeThreshold</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#aad70b8ec8988256ac39f5d04bc078a34">le_mrc_SignalStrengthChangeHandlerFunc_t</a> </td>
+<td class="paramname"><em>handlerPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">void * </td>
+<td class="paramname"><em>contextPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Add handler function for EVENT 'le_mrc_SignalStrengthChange'</p>
+<p>This event provides information on Signal Strength value changes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">rat</td><td>Radio Access Technology </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">lowerRangeThreshold</td><td>lower-range Signal strength threshold in dBm </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">upperRangeThreshold</td><td>upper-range Signal strength threshold in dBm </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">handlerPtr</td><td></td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">contextPtr</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="aa19103931ad3974ee014f0ce2705a4ff"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_mrc_ConnectService </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Connect the current client thread to the service providing this API.</p>
+<p>This function must be called before any other functions in this API. Normally, it's automatically called for the main thread, but must be explicitly called for other threads. For details, see <a class="el" href="api_files_c.html#apiFilesC_client">Client-specific Functions</a>.</p>
+<p>This function is created automatically. </p>
+</div>
+</div>
+<a class="anchor" id="ac45ce335b3fa063b83bb925e67eeaeb3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_mrc_DeleteCellularNetworkScan </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#a25a9e79cc9078e22cec22444fd959c61">le_mrc_ScanInformationListRef_t</a> </td>
+<td class="paramname"><em>scanInformationListRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function must be called to delete the list of the Scan Information retrieved with le_mrc_PerformNetworkScan().</p>
+<dl class="section note"><dt>Note</dt><dd>On failure, the process exits, so you don't have to worry about checking the returned reference for validity. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">scanInformationListRef</td><td>The list of scan information. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a101343359e8d36ab41180aede2891b07"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_mrc_DeleteNeighborCellsInfo </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#a672ea94ad892bb95f43836b5fbd24188">le_mrc_NeighborCellsRef_t</a> </td>
+<td class="paramname"><em>ngbrCellsRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function must be called to delete the Neighboring Cells information.</p>
+<dl class="section note"><dt>Note</dt><dd>On failure, the process exits, so you don't have to worry about checking the returned reference for validity. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">ngbrCellsRef</td><td>Neighboring Cells reference. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a60679f563ffecc8f107425b806edcdf0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_mrc_DeletePreferredOperatorsList </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#ae9f0c124121ac480535d0fd7fd9e452b">le_mrc_PreferredOperatorListRef_t</a> </td>
+<td class="paramname"><em>preferredOperatorListRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function must be called to delete the list of the preferred operators retrieved with le_mrc_GetPreferredOperators().</p>
+<dl class="section note"><dt>Note</dt><dd>On failure, the process exits, so you don't have to worry about checking the returned reference for validity. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">preferredOperatorListRef</td><td>The list of the preferred operators. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a20addd98ee6cb07f9ee1a45be01b5203"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_mrc_DeleteSignalMetrics </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#a6ad5afb123492b2e249f3ecd414d6e83">le_mrc_MetricsRef_t</a> </td>
+<td class="paramname"><em>MetricsRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function must be called to delete the the signal metrics.</p>
+<dl class="section note"><dt>Note</dt><dd>On failure, the process exits, so you don't have to worry about checking the returned reference for validity. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">MetricsRef</td><td>Signal metrics reference. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="af09497272480dfee6d0e75e4b98d22b9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_mrc_DisconnectService </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Disconnect the current client thread from the service providing this API.</p>
+<p>Normally, this function doesn't need to be called. After this function is called, there's no longer a connection to the service, and the functions in this API can't be used. For details, see <a class="el" href="api_files_c.html#apiFilesC_client">Client-specific Functions</a>.</p>
+<p>This function is created automatically. </p>
+</div>
+</div>
+<a class="anchor" id="a7cb0a206729c652692701cd24226d34f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mrc_GetBandCapabilities </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#a048374324f72ee7df52c2e0521c0dda3">le_mrc_BandBitMask_t</a> * </td>
+<td class="paramname"><em>bandMaskPtrPtr</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the Bit mask for 2G/3G Band capabilities.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT Function failed.</li>
+<li>LE_OK Function succeeded. </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[out]</td><td class="paramname">bandMaskPtrPtr</td><td>Bit mask for 2G/3G Band capabilities. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a04418f56480070ba6c4f3d176dafaa37"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mrc_GetBandPreferences </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#a048374324f72ee7df52c2e0521c0dda3">le_mrc_BandBitMask_t</a> * </td>
+<td class="paramname"><em>bandMaskPtrPtr</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the Bit mask for 2G/3G Band preferences.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT Function failed.</li>
+<li>LE_OK Function succeeded. </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[out]</td><td class="paramname">bandMaskPtrPtr</td><td>Bit mask for 2G/3G Band preferences. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a09ff33b24fd01be18a145b2b3f1f579a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mrc_GetCdmaSignalMetrics </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#a6ad5afb123492b2e249f3ecd414d6e83">le_mrc_MetricsRef_t</a> </td>
+<td class="paramname"><em>MetricsRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">int32_t * </td>
+<td class="paramname"><em>ssPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">uint32_t * </td>
+<td class="paramname"><em>erPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">int32_t * </td>
+<td class="paramname"><em>ecioPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">int32_t * </td>
+<td class="paramname"><em>sinrPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">int32_t * </td>
+<td class="paramname"><em>ioPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function returns the signal metrics measured on CDMA network.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_FAULT on failure</li>
+<li>rscpPtr and sinrPtr return 0xFFFFFFFF when the value isn't available.</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it's a fatal error, the function won't return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">MetricsRef</td><td>Signal metrics reference. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">ssPtr</td><td>Signal strength in dBm </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">erPtr</td><td>Frame/Packet error rate </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">ecioPtr</td><td>ECIO value in dB with 1 decimal place (15 = 1.5 dB) </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">sinrPtr</td><td>SINR level in dB with 1 decimal place, (only applicable for 1xEV-DO). </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">ioPtr</td><td>Received IO in dBm (only applicable for 1xEV-DO) </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="af4fa2d3f3c9a664b8e46478dba048f2e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mrc_GetCellularNetworkMccMnc </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#a3e7fe3e0d8f10fe7853f00eb254529ea">le_mrc_ScanInformationRef_t</a> </td>
+<td class="paramname"><em>scanInformationRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">char * </td>
+<td class="paramname"><em>mccPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>mccPtrNumElements</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">char * </td>
+<td class="paramname"><em>mncPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>mncPtrNumElements</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function must be called to get the Cellular Network Code [mcc:mnc]</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_OVERFLOW if the mcc or mnc would not fit in buffer</li>
+<li>LE_FAULT for all other errors</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>On failure, the process exits, so you don't have to worry about checking the returned reference for validity. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">scanInformationRef</td><td>Scan information reference </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">mccPtr</td><td>Mobile Country Code </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">mccPtrNumElements</td><td></td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">mncPtr</td><td>Mobile Network Code </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">mncPtrNumElements</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a82cb12c5f02baccbb04b0af1be4eb031"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mrc_GetCellularNetworkName </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#a3e7fe3e0d8f10fe7853f00eb254529ea">le_mrc_ScanInformationRef_t</a> </td>
+<td class="paramname"><em>scanInformationRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">char * </td>
+<td class="paramname"><em>namePtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>namePtrNumElements</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function must be called to get the Cellular Network Name.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_OVERFLOW if the operator name would not fit in buffer</li>
+<li>LE_FAULT for all other errors</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>On failure, the process exits, so you don't have to worry about checking the returned reference for validity. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">scanInformationRef</td><td>Scan information reference </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">namePtr</td><td>Name of operator </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">namePtrNumElements</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ad33fbe1d2b7acee0e47f3e54cab78274"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__mrc__interface_8h.html#aaf23906c37ad59fb96a8a48f7fab5b43">le_mrc_Rat_t</a> le_mrc_GetCellularNetworkRat </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#a3e7fe3e0d8f10fe7853f00eb254529ea">le_mrc_ScanInformationRef_t</a> </td>
+<td class="paramname"><em>scanInformationRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function must be called to get the radio access technology of a scanInformationRef.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>the radio access technology</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>On failure, the process exits. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">scanInformationRef</td><td>Scan information reference </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a2e476636ca33c40ce18b73b11a6f9f55"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mrc_GetCurrentNetworkMccMnc </td>
+<td>(</td>
+<td class="paramtype">char * </td>
+<td class="paramname"><em>mccStr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>mccStrNumElements</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">char * </td>
+<td class="paramname"><em>mncStr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>mncStrNumElements</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function must be called to get the current network PLMN information.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_FAULT on any other failure </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[out]</td><td class="paramname">mccStr</td><td>the mobile country code </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">mccStrNumElements</td><td></td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">mncStr</td><td>the mobile network code </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">mncStrNumElements</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a27e5eaddd6df34e4bfcee7d25775591e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mrc_GetCurrentNetworkName </td>
+<td>(</td>
+<td class="paramtype">char * </td>
+<td class="paramname"><em>nameStr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>nameStrNumElements</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function must be called to get the current network name information.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_BAD_PARAMETER if nameStr is NULL</li>
+<li>LE_OVERFLOW if the Home Network Name can't fit in nameStr</li>
+<li>LE_FAULT on any other failure</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it's a fatal error, the function won't return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[out]</td><td class="paramname">nameStr</td><td>the home network Name </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">nameStrNumElements</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ae006d053b037cec589aa85053472a2af"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__mrc__interface_8h.html#a3e7fe3e0d8f10fe7853f00eb254529ea">le_mrc_ScanInformationRef_t</a> le_mrc_GetFirstCellularNetworkScan </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#a25a9e79cc9078e22cec22444fd959c61">le_mrc_ScanInformationListRef_t</a> </td>
+<td class="paramname"><em>scanInformationListRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function must be called to get the first Scan Information object reference in the list of scan Information retrieved with le_mrc_PerformNetworkScan().</p>
+<dl class="section return"><dt>Returns</dt><dd>NULL No scan information found. </dd>
+<dd>
+le_mrc_ScanInformationRef_t The Scan Information object reference.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it's a fatal error, the function won't return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">scanInformationListRef</td><td>The list of scan information. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ab50724fd74818d71da1dfcd2217dd795"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__mrc__interface_8h.html#a8fbb2523c254ba473a3f59efa452355e">le_mrc_CellInfoRef_t</a> le_mrc_GetFirstNeighborCellInfo </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#a672ea94ad892bb95f43836b5fbd24188">le_mrc_NeighborCellsRef_t</a> </td>
+<td class="paramname"><em>ngbrCellsRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function must be called to get the first Cell Information reference in the list of Neighboring Cells information retrieved with <a class="el" href="le__mrc__interface_8h.html#a8d44fe46e61f3399c5e0dd6002b042ae">le_mrc_GetNeighborCellsInfo()</a>.</p>
+<dl class="section return"><dt>Returns</dt><dd>NULL No Cell information object found. </dd>
+<dd>
+le_mrc_CellInfoRef_t The Cell information object reference.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it's a fatal error, the function won't return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">ngbrCellsRef</td><td>Neighboring Cells reference. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a9648b653b7551cd065ec323b96a0aa1b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__mrc__interface_8h.html#add1c18b20b02f57f3d4d1510a2d2d62c">le_mrc_PreferredOperatorRef_t</a> le_mrc_GetFirstPreferredOperator </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#ae9f0c124121ac480535d0fd7fd9e452b">le_mrc_PreferredOperatorListRef_t</a> </td>
+<td class="paramname"><em>preferredOperatorListRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function must be called to get the first Operator object reference in the list of the preferred operators retrieved with le_mrc_GetPreferredOperators().</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>NULL No operator information found.</li>
+<li>le_mrc_PreferredOperatorRef The Operator object reference.</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad reference into this function, it's a fatal error, the function won't return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">preferredOperatorListRef</td><td>The list of the preferred operators. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a9d7243b29bf4c705c4eba83fa3799582"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mrc_GetGsmSignalMetrics </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#a6ad5afb123492b2e249f3ecd414d6e83">le_mrc_MetricsRef_t</a> </td>
+<td class="paramname"><em>MetricsRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">int32_t * </td>
+<td class="paramname"><em>rssiPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">uint32_t * </td>
+<td class="paramname"><em>berPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function returns the signal strength in dBm and the bit error rate measured on GSM network.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_FAULT on failure</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it's a fatal error, the function won't return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">MetricsRef</td><td>Signal metrics reference. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">rssiPtr</td><td>Signal strength in dBm </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">berPtr</td><td>Bit error rate. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ad6b44639b1d9755b92720d5184ee2515"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mrc_GetLteBandCapabilities </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#a81d705d61ee7ee56eab6aafb1af92579">le_mrc_LteBandBitMask_t</a> * </td>
+<td class="paramname"><em>bandMaskPtrPtr</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the Bit mask for LTE Band capabilities.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT Function failed.</li>
+<li>LE_OK Function succeeded. </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[out]</td><td class="paramname">bandMaskPtrPtr</td><td>Bit mask for LTE Band capabilities. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="af4ec5bd36ba8df68bc12a10618268742"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mrc_GetLteBandPreferences </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#a81d705d61ee7ee56eab6aafb1af92579">le_mrc_LteBandBitMask_t</a> * </td>
+<td class="paramname"><em>bandMaskPtrPtr</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the Bit mask for LTE Band preferences.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT Function failed.</li>
+<li>LE_OK Function succeeded. </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[out]</td><td class="paramname">bandMaskPtrPtr</td><td>Bit mask for LTE Band preferences. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a030880c064afbf2686726fd2e538adfe"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mrc_GetLteSignalMetrics </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#a6ad5afb123492b2e249f3ecd414d6e83">le_mrc_MetricsRef_t</a> </td>
+<td class="paramname"><em>MetricsRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">int32_t * </td>
+<td class="paramname"><em>ssPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">uint32_t * </td>
+<td class="paramname"><em>blerPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">int32_t * </td>
+<td class="paramname"><em>rsrqPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">int32_t * </td>
+<td class="paramname"><em>rsrpPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">int32_t * </td>
+<td class="paramname"><em>snrPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function returns the signal metrics measured on LTE network.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_FAULT on failure</li>
+<li>sinrPtr and ioPtr return 0xFFFFFFFF when the value isn't available.</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it's a fatal error, the function won't return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">MetricsRef</td><td>Signal metrics reference. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">ssPtr</td><td>Signal strength in dBm </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">blerPtr</td><td>Block error rate </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">rsrqPtr</td><td>RSRQ value in dB as measured by L1 with 1 decimal place </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">rsrpPtr</td><td>Current RSRP in dBm as measured by L1 with 1 decimal place </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">snrPtr</td><td>SNR level in dB with 1 decimal place (15 = 1.5 dB) </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="abdbc94e474235417d8610e2eb95558eb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">uint32_t le_mrc_GetNeighborCellId </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#a8fbb2523c254ba473a3f59efa452355e">le_mrc_CellInfoRef_t</a> </td>
+<td class="paramname"><em>ngbrCellInfoRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function must be called to get the Cell Identifier.</p>
+<dl class="section return"><dt>Returns</dt><dd>The Cell Identifier.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it's a fatal error, the function won't return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">ngbrCellInfoRef</td><td>Cell information reference. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a70ba0ca70367bc673a6bca1e246bb88f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">uint32_t le_mrc_GetNeighborCellLocAreaCode </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#a8fbb2523c254ba473a3f59efa452355e">le_mrc_CellInfoRef_t</a> </td>
+<td class="paramname"><em>ngbrCellInfoRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function must be called to get the Location Area Code of a cell.</p>
+<dl class="section return"><dt>Returns</dt><dd>The Location Area Code of a cell. 0xFFFF value is returned if the value is not available.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it's a fatal error, the function won't return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">ngbrCellInfoRef</td><td>Cell information reference. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a331545d4e396c513bba028db981c016b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mrc_GetNeighborCellLteInterFreq </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#a8fbb2523c254ba473a3f59efa452355e">le_mrc_CellInfoRef_t</a> </td>
+<td class="paramname"><em>ngbrCellInfoRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">int32_t * </td>
+<td class="paramname"><em>rsrqPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">int32_t * </td>
+<td class="paramname"><em>rsrpPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function must be called to get the RSRP and RSRQ of the Interfrequency of a LTE cell.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_FAULT on failure</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it's a fatal error, the function won't return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">ngbrCellInfoRef</td><td>Cell information reference. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">rsrqPtr</td><td>Reference Signal Received Quality value in dB with 1 decimal place </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">rsrpPtr</td><td>Reference Signal Receiver Power value in dBm with 1 decimal place </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a7754836120c34cd2610b9777bd56409f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mrc_GetNeighborCellLteIntraFreq </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#a8fbb2523c254ba473a3f59efa452355e">le_mrc_CellInfoRef_t</a> </td>
+<td class="paramname"><em>ngbrCellInfoRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">int32_t * </td>
+<td class="paramname"><em>rsrqPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">int32_t * </td>
+<td class="paramname"><em>rsrpPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function must be called to get the RSRP and RSRQ of the Intrafrequency of a LTE cell.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_FAULT on failure</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it's a fatal error, the function won't return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">ngbrCellInfoRef</td><td>Cell information reference. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">rsrqPtr</td><td>Reference Signal Received Quality value in dB with 1 decimal place </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">rsrpPtr</td><td>Reference Signal Receiver Power value in dBm with 1 decimal place </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a5bb3e75b74260a9cee57247e1968a31f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__mrc__interface_8h.html#aaf23906c37ad59fb96a8a48f7fab5b43">le_mrc_Rat_t</a> le_mrc_GetNeighborCellRat </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#a8fbb2523c254ba473a3f59efa452355e">le_mrc_CellInfoRef_t</a> </td>
+<td class="paramname"><em>ngbrCellInfoRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function must be called to get the Radio Access Technology of a cell.</p>
+<dl class="section return"><dt>Returns</dt><dd>The Radio Access Technology of a cell.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it's a fatal error, the function won't return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">ngbrCellInfoRef</td><td>Cell information reference. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="aeae116235802afd041afd9df009642aa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">int32_t le_mrc_GetNeighborCellRxLevel </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#a8fbb2523c254ba473a3f59efa452355e">le_mrc_CellInfoRef_t</a> </td>
+<td class="paramname"><em>ngbrCellInfoRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function must be called to get the signal strength of a cell.</p>
+<dl class="section return"><dt>Returns</dt><dd>The signal strength of a cell in dBm.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it's a fatal error, the function won't return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">ngbrCellInfoRef</td><td>Cell information reference. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a8d44fe46e61f3399c5e0dd6002b042ae"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__mrc__interface_8h.html#a672ea94ad892bb95f43836b5fbd24188">le_mrc_NeighborCellsRef_t</a> le_mrc_GetNeighborCellsInfo </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function must be called to retrieve the Neighboring Cells information. It creates and returns a reference to the Neighboring Cells information.</p>
+<dl class="section return"><dt>Returns</dt><dd>A reference to the Neighboring Cells information. </dd>
+<dd>
+NULL if no Cells Information are available. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a94e452e3d7063d3359dcbb97a31b984b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">int32_t le_mrc_GetNeighborCellUmtsEcIo </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#a8fbb2523c254ba473a3f59efa452355e">le_mrc_CellInfoRef_t</a> </td>
+<td class="paramname"><em>ngbrCellInfoRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function must be called to get the Ec/Io; the received energy per chip divided by the power density in the band measured in dBm on the primary CPICH channel of serving cell.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>The Ec/Io of a cell given in dB with 1 decimal place. (only applicable for UMTS network).</li>
+<li>0xFFFFFFFF when the value isn't available.</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it's a fatal error, the function won't return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">ngbrCellInfoRef</td><td>Cell information reference. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a4f11e27862fef384c0023f5b538e543d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mrc_GetNetRegState </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#ae2877a1e1252ac79e6c9cae3d3c25a61">le_mrc_NetRegState_t</a> * </td>
+<td class="paramname"><em>statePtr</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the network registration state.</p>
+<dl class="section return"><dt>Returns</dt><dd>LE_FAULT The function failed to get the Network registration state. </dd>
+<dd>
+LE_BAD_PARAMETER A bad parameter was passed. </dd>
+<dd>
+LE_OK The function succeeded.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it's a fatal error, the function won't return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[out]</td><td class="paramname">statePtr</td><td>Network Registration state. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ae0ca9f0c1c106d6ddeef784c6bb0d69b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__mrc__interface_8h.html#a3e7fe3e0d8f10fe7853f00eb254529ea">le_mrc_ScanInformationRef_t</a> le_mrc_GetNextCellularNetworkScan </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#a25a9e79cc9078e22cec22444fd959c61">le_mrc_ScanInformationListRef_t</a> </td>
+<td class="paramname"><em>scanInformationListRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function must be called to get the next Scan Information object reference in the list of scan Information retrieved with le_mrc_PerformNetworkScan().</p>
+<dl class="section return"><dt>Returns</dt><dd>NULL No scan information found. </dd>
+<dd>
+le_mrc_ScanInformationRef_t The Scan Information object reference.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it's a fatal error, the function won't return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">scanInformationListRef</td><td>The list of scan information. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a0baede61d9b260a3ec83e3ab320d0715"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__mrc__interface_8h.html#a8fbb2523c254ba473a3f59efa452355e">le_mrc_CellInfoRef_t</a> le_mrc_GetNextNeighborCellInfo </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#a672ea94ad892bb95f43836b5fbd24188">le_mrc_NeighborCellsRef_t</a> </td>
+<td class="paramname"><em>ngbrCellsRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function must be called to get the next Cell Information reference in the list of Neighboring Cells information retrieved with <a class="el" href="le__mrc__interface_8h.html#a8d44fe46e61f3399c5e0dd6002b042ae">le_mrc_GetNeighborCellsInfo()</a>.</p>
+<dl class="section return"><dt>Returns</dt><dd>NULL No Cell information object found. </dd>
+<dd>
+le_mrc_CellInfoRef_t Cell information object reference.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it's a fatal error, the function won't return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">ngbrCellsRef</td><td>Neighboring Cells reference. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a896703cabaacf97a70708d944cfbfc87"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__mrc__interface_8h.html#add1c18b20b02f57f3d4d1510a2d2d62c">le_mrc_PreferredOperatorRef_t</a> le_mrc_GetNextPreferredOperator </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#ae9f0c124121ac480535d0fd7fd9e452b">le_mrc_PreferredOperatorListRef_t</a> </td>
+<td class="paramname"><em>preferredOperatorListRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function must be called to get the next Operator object reference in the list of the preferred operators retrieved with le_mrc_GetPreferredOperators().</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>NULL No operator information found.</li>
+<li>le_mrc_PreferredOperatorRef The Operator object reference.</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad reference into this function, it's a fatal error, the function won't return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">preferredOperatorListRef</td><td>The list of the preferred operators. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ab2204081bc04a108194e1dd915c35acf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mrc_GetPreferredOperatorDetails </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#add1c18b20b02f57f3d4d1510a2d2d62c">le_mrc_PreferredOperatorRef_t</a> </td>
+<td class="paramname"><em>preferredOperatorRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">char * </td>
+<td class="paramname"><em>mccPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>mccPtrNumElements</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">char * </td>
+<td class="paramname"><em>mncPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>mncPtrNumElements</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#af643c7005da7f2466302eebdf7a29d93">le_mrc_RatBitMask_t</a> * </td>
+<td class="paramname"><em>ratMaskPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function must be called to get the Operator information details.</p>
+<dl class="section return"><dt>Returns</dt><dd>LE_FAULT Function failed. </dd>
+<dd>
+LE_OK Function succeeded. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">preferredOperatorRef</td><td>Operator object reference. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">mccPtr</td><td>Mobile Country Code. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">mccPtrNumElements</td><td></td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">mncPtr</td><td>Mobile Network Code. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">mncPtrNumElements</td><td></td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">ratMaskPtr</td><td>Bit mask for the RAT preferences. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a1ea0d2943accd51d3b428e0e6c94d297"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__mrc__interface_8h.html#ae9f0c124121ac480535d0fd7fd9e452b">le_mrc_PreferredOperatorListRef_t</a> le_mrc_GetPreferredOperatorsList </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function must be called to retrieve a list of the preferred operators.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>Reference to the List object.</li>
+<li>Null pointer if there is no preferences list. </li>
+</ul>
+</dd></dl>
+</div>
+</div>
+<a class="anchor" id="a3ad9533c467cec0902d5d165bb32d67b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mrc_GetRadioAccessTechInUse </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#aaf23906c37ad59fb96a8a48f7fab5b43">le_mrc_Rat_t</a> * </td>
+<td class="paramname"><em>ratPtr</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function must be called to get the current Radio Access Technology in use.</p>
+<dl class="section return"><dt>Returns</dt><dd>LE_FAULT Function failed to get the Radio Access Technology. </dd>
+<dd>
+LE_BAD_PARAMETER A bad parameter was passed. </dd>
+<dd>
+LE_OK Function succeeded.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it's a fatal error, the function won't return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[out]</td><td class="paramname">ratPtr</td><td>The Radio Access Technology. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="aac51332c6c84e460746eb1ad45c064d6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mrc_GetRadioPower </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__basics_8h.html#ae2138c90c41d30e2d510be01d8b374da">le_onoff_t</a> * </td>
+<td class="paramname"><em>powerPtr</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Must be called to get the Radio Module power state.</p>
+<dl class="section return"><dt>Returns</dt><dd>LE_FAULT The function failed to get the Radio Module power state. </dd>
+<dd>
+LE_BAD_PARAMETER if powerPtr is NULL. </dd>
+<dd>
+LE_OK The function succeed.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it's a fatal error, the function won't return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[out]</td><td class="paramname">powerPtr</td><td>Power state. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a5564bace31c937bcef096e597f33d3a4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__mrc__interface_8h.html#aaf23906c37ad59fb96a8a48f7fab5b43">le_mrc_Rat_t</a> le_mrc_GetRatOfSignalMetrics </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#a6ad5afb123492b2e249f3ecd414d6e83">le_mrc_MetricsRef_t</a> </td>
+<td class="paramname"><em>MetricsRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function returns the Radio Access Technology of the signal metrics.</p>
+<dl class="section return"><dt>Returns</dt><dd>The Radio Access Technology of the signal measure.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it's a fatal error, the function won't return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">MetricsRef</td><td>Signal metrics reference. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ae9fa8655738c63e392c8dcc862bdb1d5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mrc_GetRatPreferences </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#af643c7005da7f2466302eebdf7a29d93">le_mrc_RatBitMask_t</a> * </td>
+<td class="paramname"><em>ratMaskPtrPtr</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the Radio Access Technology preferences</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT Function failed.</li>
+<li>LE_OK Function succeeded. </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[out]</td><td class="paramname">ratMaskPtrPtr</td><td>Bit mask for the Radio Access Technology preferences. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a283c0c092c5a135a8e95f9f091655cb1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mrc_GetRegisterMode </td>
+<td>(</td>
+<td class="paramtype">bool * </td>
+<td class="paramname"><em>isManualPtrPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">char * </td>
+<td class="paramname"><em>mccPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>mccPtrNumElements</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">char * </td>
+<td class="paramname"><em>mncPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>mncPtrNumElements</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the selected Selection Register mode.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT Function failed.</li>
+<li>LE_OK Function succeeded. </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[out]</td><td class="paramname">isManualPtrPtr</td><td>true if the scan mode is manual, false if the scan mode is automatic. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">mccPtr</td><td>Mobile Country Code </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">mccPtrNumElements</td><td></td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">mncPtr</td><td>Mobile Network Code </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">mncPtrNumElements</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="aafc9fb71c3013b7b26dc386b13ca4a85"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">uint32_t le_mrc_GetServingCellId </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function must be called to get the serving Cell Identifier.</p>
+<dl class="section return"><dt>Returns</dt><dd>The Cell Identifier. 0xFFFFFFFF value is returned if the value is not available. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a8ba03765e7595f85783f6f6a022311f8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">uint32_t le_mrc_GetServingCellLocAreaCode </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function must be called to get the Location Area Code of the serving cell.</p>
+<dl class="section return"><dt>Returns</dt><dd>The Location Area Code. 0xFFFFFFFF value is returned if the value is not available. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a717aa0f4e4dc9a83b6adc2f26f3f0258"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mrc_GetSignalQual </td>
+<td>(</td>
+<td class="paramtype">uint32_t * </td>
+<td class="paramname"><em>qualityPtr</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the signal quality.</p>
+<dl class="section return"><dt>Returns</dt><dd>LE_FAULT The function failed to get the Signal Quality information. </dd>
+<dd>
+LE_BAD_PARAMETER A bad parameter was passed. </dd>
+<dd>
+LE_OK The function succeeded.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it's a fatal error, the function won't return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[out]</td><td class="paramname">qualityPtr</td><td>[OUT] Received signal strength quality (0 = no signal strength, 5 = very good signal strength). </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="adfa81f2361744bc67697221845713a98"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mrc_GetTdScdmaBandCapabilities </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#a418a508a9a6dbd3a4a68458f0c64a00e">le_mrc_TdScdmaBandBitMask_t</a> * </td>
+<td class="paramname"><em>bandMaskPtrPtr</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the Bit mask for TD-SCDMA Band capabilities.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT Function failed.</li>
+<li>LE_OK Function succeeded. </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[out]</td><td class="paramname">bandMaskPtrPtr</td><td>Bit mask for TD-SCDMA Band capabilities. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="aed41544004ed7df9de8e874b8bb09d3b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mrc_GetTdScdmaBandPreferences </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#a418a508a9a6dbd3a4a68458f0c64a00e">le_mrc_TdScdmaBandBitMask_t</a> * </td>
+<td class="paramname"><em>bandMaskPtrPtr</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the Bit mask for TD-SCDMA Band preferences.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT Function failed.</li>
+<li>LE_OK Function succeeded. </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[out]</td><td class="paramname">bandMaskPtrPtr</td><td>Bit mask for TD-SCDMA Band preferences. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a456648564abfc8e9711b60a5d8bddc9b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mrc_GetUmtsSignalMetrics </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#a6ad5afb123492b2e249f3ecd414d6e83">le_mrc_MetricsRef_t</a> </td>
+<td class="paramname"><em>MetricsRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">int32_t * </td>
+<td class="paramname"><em>ssPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">uint32_t * </td>
+<td class="paramname"><em>blerPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">int32_t * </td>
+<td class="paramname"><em>ecioPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">int32_t * </td>
+<td class="paramname"><em>rscpPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">int32_t * </td>
+<td class="paramname"><em>sinrPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function returns the signal metrics measured on UMTS network.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_FAULT on failure</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it's a fatal error, the function won't return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">MetricsRef</td><td>Signal metrics reference. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">ssPtr</td><td>Signal strength in dBm </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">blerPtr</td><td>Block error rate </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">ecioPtr</td><td>Ec/Io value in dB with 1 decimal place (15 = 1.5 dB) </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">rscpPtr</td><td>Measured RSCP in dBm (only applicable for TD-SCDMA network) </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">sinrPtr</td><td>Measured SINR in dB (only applicable for TD-SCDMA network) </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a72ca8072f90d453169baff44441c41c0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">bool le_mrc_IsCellularNetworkAvailable </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#a3e7fe3e0d8f10fe7853f00eb254529ea">le_mrc_ScanInformationRef_t</a> </td>
+<td class="paramname"><em>scanInformationRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function must be called to check if a cellular network is available.</p>
+<dl class="section return"><dt>Returns</dt><dd>true The network is available </dd>
+<dd>
+false The network isn't available</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>On failure, the process exits, so you don't have to worry about checking the returned reference for validity. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">scanInformationRef</td><td>Scan information reference </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a699a52d014550124a5b3362ee888a780"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">bool le_mrc_IsCellularNetworkForbidden </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#a3e7fe3e0d8f10fe7853f00eb254529ea">le_mrc_ScanInformationRef_t</a> </td>
+<td class="paramname"><em>scanInformationRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function must be called to check if a cellular network is forbidden by the operator.</p>
+<dl class="section return"><dt>Returns</dt><dd>true The network is forbidden </dd>
+<dd>
+false The network is allowed</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>On failure, the process exits, so you don't have to worry about checking the returned reference for validity. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">scanInformationRef</td><td>Scan information reference </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a7333dfc638f50524f9c6fd81457828ba"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">bool le_mrc_IsCellularNetworkHome </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#a3e7fe3e0d8f10fe7853f00eb254529ea">le_mrc_ScanInformationRef_t</a> </td>
+<td class="paramname"><em>scanInformationRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function must be called to check if a cellular network is currently in home mode.</p>
+<dl class="section return"><dt>Returns</dt><dd>true The network is home </dd>
+<dd>
+false The network is roaming</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>On failure, the process exits, so you don't have to worry about checking the returned reference for validity. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">scanInformationRef</td><td>Scan information reference </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a4c859fc1364c183aa1d26a022db365c6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">bool le_mrc_IsCellularNetworkInUse </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#a3e7fe3e0d8f10fe7853f00eb254529ea">le_mrc_ScanInformationRef_t</a> </td>
+<td class="paramname"><em>scanInformationRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function must be called to check if a cellular network is currently in use.</p>
+<dl class="section return"><dt>Returns</dt><dd>true The network is in use </dd>
+<dd>
+false The network isn't in use</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>On failure, the process exits, so you don't have to worry about checking the returned reference for validity. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">scanInformationRef</td><td>Scan information reference </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ad3662723a7ed47cf45d9a2eaaa1fb16e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__mrc__interface_8h.html#a6ad5afb123492b2e249f3ecd414d6e83">le_mrc_MetricsRef_t</a> le_mrc_MeasureSignalMetrics </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function must be called to measure the signal metrics. It creates and returns a reference to the signal metrics.</p>
+<dl class="section return"><dt>Returns</dt><dd>A reference to the signal metrics. </dd>
+<dd>
+NULL if no signal metrics are available. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ab4a246dd466fa8175aca0158e0cab227"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__mrc__interface_8h.html#a25a9e79cc9078e22cec22444fd959c61">le_mrc_ScanInformationListRef_t</a> le_mrc_PerformCellularNetworkScan </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#af643c7005da7f2466302eebdf7a29d93">le_mrc_RatBitMask_t</a> </td>
+<td class="paramname"><em>ratMask</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function must be called to perform a cellular network scan.</p>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the List object. Null pointer if the scan failed. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">ratMask</td><td>Radio Access Technology mask </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a4fc57a5a5bc1f4b6617c895c98a09f15"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_mrc_RemoveNetRegStateEventHandler </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#a709ab9eb31ffa85aa85b8b2aaec22a6d">le_mrc_NetRegStateEventHandlerRef_t</a> </td>
+<td class="paramname"><em>addHandlerRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Remove handler function for EVENT 'le_mrc_NetRegStateEvent' </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">addHandlerRef</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a0c2d65eb8cdb200aa4bce8766530c39f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mrc_RemovePreferredOperator </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>mcc</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>mnc</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Remove a preferred operator by specifying the MCC/MNC.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_NOT_FOUND User Preferred operator list is not available.</li>
+<li>LE_FAULT Function failed.</li>
+<li>LE_OK Function succeeded.</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If one code is too long (max LE_MRC_MCC_LEN/LE_MRC_MNC_LEN digits), it's a fatal error, the function won't return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">mcc</td><td>Mobile Country Code </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">mnc</td><td>Mobile Network Code </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="aed4f1730c99a1a9204a198e3df3cf6f5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_mrc_RemoveRatChangeHandler </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#a5ac252acd68a64b336ae9a98ca6113ac">le_mrc_RatChangeHandlerRef_t</a> </td>
+<td class="paramname"><em>addHandlerRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Remove handler function for EVENT 'le_mrc_RatChange' </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">addHandlerRef</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a789dca8360ddf32a0ea1bfdd24efc6d4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_mrc_RemoveSignalStrengthChangeHandler </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#aac0e41200cd6bd03c178aeb7e3646744">le_mrc_SignalStrengthChangeHandlerRef_t</a> </td>
+<td class="paramname"><em>addHandlerRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Remove handler function for EVENT 'le_mrc_SignalStrengthChange' </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">addHandlerRef</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="acb434a9f91afb5b6639baf3678ee9388"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mrc_SetAutomaticRegisterMode </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Enable the automatic Selection Register mode.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT Function failed.</li>
+<li>LE_OK Function succeeded. </li>
+</ul>
+</dd></dl>
+</div>
+</div>
+<a class="anchor" id="ac808b4dc721e031566da92e00663c027"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mrc_SetBandPreferences </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#a048374324f72ee7df52c2e0521c0dda3">le_mrc_BandBitMask_t</a> </td>
+<td class="paramname"><em>bandMask</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Set the 2G/3G Band preferences by using a bit mask.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT Function failed.</li>
+<li>LE_OK Function succeeded. </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">bandMask</td><td>Bit mask for 2G/3G Band preferences. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a21d2fe7c736e9a4a342dcc461a5d6e02"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mrc_SetLteBandPreferences </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#a81d705d61ee7ee56eab6aafb1af92579">le_mrc_LteBandBitMask_t</a> </td>
+<td class="paramname"><em>bandMask</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Set the LTE Band preferences by using a bit mask.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT Function failed.</li>
+<li>LE_OK Function succeeded. </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">bandMask</td><td>Bit mask for LTE Band preferences. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a09b890f05a20f4b007d60e595026631f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mrc_SetManualRegisterMode </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>mcc</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>mnc</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Set the manual Selection Register mode with the MCC/MNC parameters.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT Function failed.</li>
+<li>LE_OK Function succeeded.</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If one code is too long (max LE_MRC_MCC_LEN/LE_MRC_MNC_LEN digits), it's a fatal error, the function won't return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">mcc</td><td>Mobile Country Code </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">mnc</td><td>Mobile Network Code </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a78bd27d92337e2122320f41bcaa5480f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mrc_SetRadioPower </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__basics_8h.html#ae2138c90c41d30e2d510be01d8b374da">le_onoff_t</a> </td>
+<td class="paramname"><em>power</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Set the power of the Radio Module.</p>
+<dl class="section return"><dt>Returns</dt><dd>LE_BAD_PARAMETER Bad power mode specified. </dd>
+<dd>
+LE_FAULT Function failed. </dd>
+<dd>
+LE_OK Function succeed. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">power</td><td>The power state. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a2d4abd391bc69c218538f5d8e1be4e01"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mrc_SetRatPreferences </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#af643c7005da7f2466302eebdf7a29d93">le_mrc_RatBitMask_t</a> </td>
+<td class="paramname"><em>ratMask</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Set the Radio Access Technology preferences by using a bit mask.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT Function failed.</li>
+<li>LE_OK Function succeeded. </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">ratMask</td><td>Bit mask for the Radio Access Technology preferences. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a8765511597189b64e486fa8f17bcddcd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mrc_SetTdScdmaBandPreferences </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#a418a508a9a6dbd3a4a68458f0c64a00e">le_mrc_TdScdmaBandBitMask_t</a> </td>
+<td class="paramname"><em>bandMask</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Set the TD-SCDMA Band preferences by using a bit mask.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT Function failed.</li>
+<li>LE_OK Function succeeded. </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">bandMask</td><td>Bit mask for TD-SCDMA Band preferences. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

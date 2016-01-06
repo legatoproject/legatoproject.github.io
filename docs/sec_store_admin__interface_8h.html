@@ -1,0 +1,474 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>secStoreAdmin_interface.h File Reference - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Reference.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a href="build_apps_documentation.html">Documentation</a><a class="link-selected" href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="summary">
+<a href="#define-members">Macros</a> |
+<a href="#typedef-members">Typedefs</a> |
+<a href="#func-members">Functions</a> </div>
+<div class="headertitle">
+<h1 class="title">secStoreAdmin_interface.h File Reference</h1> </div>
+</div><div class="contents">
+<div class="textblock"><code>#include "<a class="el" href="legato_8h_source.html">legato.h</a>"</code><br />
+<code>#include "<a class="el" href="le__sec_store__interface_8h_source.html">le_secStore_interface.h</a>"</code><br />
+</div>
+<p><a href="sec_store_admin__interface_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a659f4fc5eeb34940d06443436bf55d50"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="sec_store_admin__interface_8h.html#a659f4fc5eeb34940d06443436bf55d50">SECSTOREADMIN_MAX_PATH_SIZE</a>   511</td></tr>
+<tr class="separator:a659f4fc5eeb34940d06443436bf55d50"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:abdd281dcdd0bd6a42ccf4ab6581ad6e9"><td align="right" class="memItemLeft" valign="top">typedef struct secStoreAdmin_Iter * </td><td class="memItemRight" valign="bottom"><a class="el" href="sec_store_admin__interface_8h.html#abdd281dcdd0bd6a42ccf4ab6581ad6e9">secStoreAdmin_IterRef_t</a></td></tr>
+<tr class="separator:abdd281dcdd0bd6a42ccf4ab6581ad6e9"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ad9231c3f63c28740ce137937575512f7"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="sec_store_admin__interface_8h.html#ad9231c3f63c28740ce137937575512f7">secStoreAdmin_ConnectService</a> (void)</td></tr>
+<tr class="separator:ad9231c3f63c28740ce137937575512f7"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ab3077b62ed029fa6d6d286c1b2e1c9bd"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="sec_store_admin__interface_8h.html#ab3077b62ed029fa6d6d286c1b2e1c9bd">secStoreAdmin_DisconnectService</a> (void)</td></tr>
+<tr class="separator:ab3077b62ed029fa6d6d286c1b2e1c9bd"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:af9ad6040381e49255b70c344984f065f"><td align="right" class="memItemLeft" valign="top"><a class="el" href="sec_store_admin__interface_8h.html#abdd281dcdd0bd6a42ccf4ab6581ad6e9">secStoreAdmin_IterRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="sec_store_admin__interface_8h.html#af9ad6040381e49255b70c344984f065f">secStoreAdmin_CreateIter</a> (const char *path)</td></tr>
+<tr class="separator:af9ad6040381e49255b70c344984f065f"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a1b2bfa514f93235bf5fffd3e098abf4a"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="sec_store_admin__interface_8h.html#a1b2bfa514f93235bf5fffd3e098abf4a">secStoreAdmin_DeleteIter</a> (<a class="el" href="sec_store_admin__interface_8h.html#abdd281dcdd0bd6a42ccf4ab6581ad6e9">secStoreAdmin_IterRef_t</a> iterRef)</td></tr>
+<tr class="separator:a1b2bfa514f93235bf5fffd3e098abf4a"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:afb7ecb1215f1fde24ed693ef10069052"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="sec_store_admin__interface_8h.html#afb7ecb1215f1fde24ed693ef10069052">secStoreAdmin_Next</a> (<a class="el" href="sec_store_admin__interface_8h.html#abdd281dcdd0bd6a42ccf4ab6581ad6e9">secStoreAdmin_IterRef_t</a> iterRef)</td></tr>
+<tr class="separator:afb7ecb1215f1fde24ed693ef10069052"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a69e0766bf0200b449f443a348c04bdac"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="sec_store_admin__interface_8h.html#a69e0766bf0200b449f443a348c04bdac">secStoreAdmin_GetEntry</a> (<a class="el" href="sec_store_admin__interface_8h.html#abdd281dcdd0bd6a42ccf4ab6581ad6e9">secStoreAdmin_IterRef_t</a> iterRef, char *name, size_t nameNumElements, bool *isDirPtr)</td></tr>
+<tr class="separator:a69e0766bf0200b449f443a348c04bdac"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a6799053e02e9e9e9a84d286d1bebfedc"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="sec_store_admin__interface_8h.html#a6799053e02e9e9e9a84d286d1bebfedc">secStoreAdmin_Write</a> (const char *path, const uint8_t *bufPtr, size_t bufNumElements)</td></tr>
+<tr class="separator:a6799053e02e9e9e9a84d286d1bebfedc"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a99df42615c4ab6c8ec1eb0f2f69176ea"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="sec_store_admin__interface_8h.html#a99df42615c4ab6c8ec1eb0f2f69176ea">secStoreAdmin_Read</a> (const char *path, uint8_t *bufPtr, size_t *bufNumElementsPtr)</td></tr>
+<tr class="separator:a99df42615c4ab6c8ec1eb0f2f69176ea"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a7099f4b5e2a7b03dee054e73f9ec1c1b"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="sec_store_admin__interface_8h.html#a7099f4b5e2a7b03dee054e73f9ec1c1b">secStoreAdmin_Delete</a> (const char *path)</td></tr>
+<tr class="separator:a7099f4b5e2a7b03dee054e73f9ec1c1b"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a4a7a4ddc84fe087a1dc6e22ec9d6fa28"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="sec_store_admin__interface_8h.html#a4a7a4ddc84fe087a1dc6e22ec9d6fa28">secStoreAdmin_GetSize</a> (const char *path, uint64_t *sizePtr)</td></tr>
+<tr class="separator:a4a7a4ddc84fe087a1dc6e22ec9d6fa28"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ac8eb38a1cdd75ff734a222bb129456f9"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="sec_store_admin__interface_8h.html#ac8eb38a1cdd75ff734a222bb129456f9">secStoreAdmin_GetTotalSpace</a> (uint64_t *totalSizePtr, uint64_t *freeSizePtr)</td></tr>
+<tr class="separator:ac8eb38a1cdd75ff734a222bb129456f9"><td class="memSeparator" colspan="2"> </td></tr>
+</table>
+<a id="details" name="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Legato <a class="el" href="c_sec_store_admin.html">Secure Storage Admin</a> API</p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="a659f4fc5eeb34940d06443436bf55d50"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define SECSTOREADMIN_MAX_PATH_SIZE   511</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Maximum number of characters permitted for a secure storage path. </p>
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a class="anchor" id="abdd281dcdd0bd6a42ccf4ab6581ad6e9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef struct secStoreAdmin_Iter* <a class="el" href="sec_store_admin__interface_8h.html#abdd281dcdd0bd6a42ccf4ab6581ad6e9">secStoreAdmin_IterRef_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Iterator to list entries in secure storage. </p>
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ad9231c3f63c28740ce137937575512f7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void secStoreAdmin_ConnectService </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Connect the current client thread to the service providing this API.</p>
+<p>This function must be called before any other functions in this API. Normally, it's automatically called for the main thread, but must be explicitly called for other threads. For details, see <a class="el" href="api_files_c.html#apiFilesC_client">Client-specific Functions</a>.</p>
+<p>This function is created automatically. </p>
+</div>
+</div>
+<a class="anchor" id="af9ad6040381e49255b70c344984f065f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="sec_store_admin__interface_8h.html#abdd281dcdd0bd6a42ccf4ab6581ad6e9">secStoreAdmin_IterRef_t</a> secStoreAdmin_CreateIter </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>path</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Create an iterator for listing entries in secure storage under the specified path.</p>
+<dl class="section return"><dt>Returns</dt><dd>An iterator reference if successful. NULL if the secure storage is currently unavailable. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Path to iterate over. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a7099f4b5e2a7b03dee054e73f9ec1c1b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> secStoreAdmin_Delete </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>path</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Recursively deletes all items under the specified path and the specified path from secure storage.</p>
+<dl class="section note"><dt>Note</dt><dd>The specified path must be an absolute path.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>LE_OK if successful. LE_NOT_FOUND if the path doesn't exist. LE_UNAVAILABLE if the secure storage is currently unavailable. LE_FAULT if there was some other error. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Path of the secure storage item. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a1b2bfa514f93235bf5fffd3e098abf4a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void secStoreAdmin_DeleteIter </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="sec_store_admin__interface_8h.html#abdd281dcdd0bd6a42ccf4ab6581ad6e9">secStoreAdmin_IterRef_t</a> </td>
+<td class="paramname"><em>iterRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Deletes an iterator. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">iterRef</td><td>Iterator reference. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ab3077b62ed029fa6d6d286c1b2e1c9bd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void secStoreAdmin_DisconnectService </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Disconnect the current client thread from the service providing this API.</p>
+<p>Normally, this function doesn't need to be called. After this function is called, there's no longer a connection to the service, and the functions in this API can't be used. For details, see <a class="el" href="api_files_c.html#apiFilesC_client">Client-specific Functions</a>.</p>
+<p>This function is created automatically. </p>
+</div>
+</div>
+<a class="anchor" id="a69e0766bf0200b449f443a348c04bdac"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> secStoreAdmin_GetEntry </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="sec_store_admin__interface_8h.html#abdd281dcdd0bd6a42ccf4ab6581ad6e9">secStoreAdmin_IterRef_t</a> </td>
+<td class="paramname"><em>iterRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">char * </td>
+<td class="paramname"><em>name</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>nameNumElements</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">bool * </td>
+<td class="paramname"><em>isDirPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the current entry's name.</p>
+<dl class="section return"><dt>Returns</dt><dd>LE_OK if successful. LE_OVERFLOW if the buffer is too small to hold the entry name. LE_UNAVAILABLE if the secure storage is currently unavailable. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">iterRef</td><td>Iterator reference. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">name</td><td>Buffer to store the entry name. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">nameNumElements</td><td></td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">isDirPtr</td><td>True if the entry is a directory, false otherwise. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a4a7a4ddc84fe087a1dc6e22ec9d6fa28"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> secStoreAdmin_GetSize </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>path</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">uint64_t * </td>
+<td class="paramname"><em>sizePtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the size, in bytes, of all items under the specified path.</p>
+<dl class="section note"><dt>Note</dt><dd>The specified path must be an absolute path.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>LE_OK if successful. LE_NOT_FOUND if the path doesn't exist. LE_UNAVAILABLE if the secure storage is currently unavailable. LE_FAULT if there was some other error. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Path of the secure storage item. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">sizePtr</td><td>Size in bytes of all items in the path. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ac8eb38a1cdd75ff734a222bb129456f9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> secStoreAdmin_GetTotalSpace </td>
+<td>(</td>
+<td class="paramtype">uint64_t * </td>
+<td class="paramname"><em>totalSizePtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">uint64_t * </td>
+<td class="paramname"><em>freeSizePtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the total space and the available free space in secure storage.</p>
+<dl class="section return"><dt>Returns</dt><dd>LE_OK if successful. LE_UNAVAILABLE if the secure storage is currently unavailable. LE_FAULT if there was some other error. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[out]</td><td class="paramname">totalSizePtr</td><td>Total size, in bytes, of secure storage. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">freeSizePtr</td><td>Free space, in bytes, in secure storage. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="afb7ecb1215f1fde24ed693ef10069052"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> secStoreAdmin_Next </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="sec_store_admin__interface_8h.html#abdd281dcdd0bd6a42ccf4ab6581ad6e9">secStoreAdmin_IterRef_t</a> </td>
+<td class="paramname"><em>iterRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Go to the next entry in the iterator. This should be called at least once before accessing the entry. After the first time this function is called successfully on an iterator the first entry will be available.</p>
+<dl class="section return"><dt>Returns</dt><dd>LE_OK if successful. LE_NOT_FOUND if there are no more entries available. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">iterRef</td><td>Iterator reference. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a99df42615c4ab6c8ec1eb0f2f69176ea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> secStoreAdmin_Read </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>path</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">uint8_t * </td>
+<td class="paramname"><em>bufPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t * </td>
+<td class="paramname"><em>bufNumElementsPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Reads an item from secure storage.</p>
+<dl class="section note"><dt>Note</dt><dd>The specified path must be an absolute path.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>LE_OK if successful. LE_OVERFLOW if the buffer is too small to hold the entire item. No data will be written to the buffer in this case. LE_NOT_FOUND if the item doesn't exist. LE_UNAVAILABLE if the secure storage is currently unavailable. LE_FAULT if there was some other error. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Path of the secure storage item. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">bufPtr</td><td>Buffer to store the data in. </td></tr>
+<tr><td class="paramdir">[in,out]</td><td class="paramname">bufNumElementsPtr</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a6799053e02e9e9e9a84d286d1bebfedc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> secStoreAdmin_Write </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>path</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const uint8_t * </td>
+<td class="paramname"><em>bufPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>bufNumElements</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Writes a buffer of data into the specified path in secure storage. If the item already exists, it'll be overwritten with the new value. If the item doesn't already exist, it'll be created.</p>
+<dl class="section note"><dt>Note</dt><dd>The specified path must be an absolute path.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>LE_OK if successful. LE_NO_MEMORY if there isn't enough memory to store the item. LE_UNAVAILABLE if the secure storage is currently unavailable. LE_FAULT if there was some other error. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Path of the secure storage item. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">bufPtr</td><td>Buffer containing the data to store. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">bufNumElements</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

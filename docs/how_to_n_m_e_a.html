@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>NMEA Port Setup  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">NMEA Port Setup </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p>This topic summarizes how to setup an NMEA port on the AR755x platform.</p>
+<h1><a class="anchor" id="howToNMEA_setup"></a>
+Setup Target</h1>
+<p>To setup an AR755x target, run the follow commands (only once):</p>
+<div class="fragment"><div class="line">AT!ENTERCND=<span class="stringliteral">"A710"</span></div><div class="line">AT!CUSTOM=<span class="stringliteral">"GPSENABLE"</span>,1</div><div class="line">AT!CUSTOM=<span class="stringliteral">"NMEAENABLE"</span>,1</div><div class="line">AT!CUSTOM=<span class="stringliteral">"GPSSEL"</span>,1</div><div class="line">AT!GPSQMICONFIG=1</div><div class="line">AT!GPSNMEA=1</div><div class="line">AT!GPSNMEACONFIG=1,1</div><div class="line">AT!GPSNMEASENTENCE=29FF</div><div class="line">AT!GPSONLY=0</div><div class="line">AT!RESET</div></div><!-- fragment --><h1><a class="anchor" id="howToNMEA_startNMEA"></a>
+Start NMEA</h1>
+<p>Once, the target is setup, run this on the AR755x Linux console:</p>
+<div class="fragment"><div class="line"> start NMEA device:</div><div class="line">echo <span class="stringliteral">'$GPS_START'</span> > /dev/nmea</div></div><!-- fragment --><p>Then "/dev/nmea" file can be open in order to parse the NMEA frames.</p>
+<dl class="section warning"><dt>Warning</dt><dd>If you need to use Legato positioning service in parallel, you can't use this command; you have to use <a class="el" href="le__pos_ctrl__interface_8h.html#ab0522cfb23a7b34863b7bd9475d38255">le_posCtrl_Request()</a>.</dd></dl>
+<h1><a class="anchor" id="howToNMEA_stopNMEA"></a>
+Stop NMEA</h1>
+<p>To stop the NMEA, run this on the AR755x Linux console: </p><div class="fragment"><div class="line">echo <span class="stringliteral">'$GPS_STOP'</span> > /dev/nmea</div></div><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>If you need to use Legato positioning service in parallel, you can't use this command; you have to use <a class="el" href="le__pos_ctrl__interface_8h.html#a5dfa743e5d134b265b883f7106846428">le_posCtrl_Release()</a>.</dd></dl>
+<h1><a class="anchor" id="howToNMEA_getNMEA"></a>
+Get NMEA stream</h1>
+<p>Here's an example of a dump of GNSS NMEA frames (here only $GNxxx frames): </p><div class="fragment"><div class="line">echo <span class="stringliteral">'$GPS_START'</span> > /dev/nmea</div><div class="line">cat /dev/nmea | grep <span class="stringliteral">'$GN'</span></div><div class="line"></div><div class="line">$GNGNS,094821.0,4849.931307,N,00216.053323,E,AA,14,0.6,161.5,48.0,,*6D</div><div class="line">$GNGSA,A,2,05,13,18,21,27,29,31,,,,,,1.0,0.6,0.7*2C</div><div class="line">$GNGSA,A,2,68,69,74,75,76,84,86,,,,,,1.0,0.6,0.7*2E</div><div class="line">$GNGNS,094822.0,4849.931277,N,00216.053326,E,AA,15,0.6,161.5,48.0,,*6C</div><div class="line">$GNGSA,A,2,05,13,16,18,21,27,29,31,,,,,0.9,0.6,0.7*23</div><div class="line">$GNGSA,A,2,68,69,74,75,76,84,86,,,,,,0.9,0.6,0.7*26</div><div class="line">$GNGNS,094823.0,4849.931249,N,00216.053330,E,AA,15,0.6,161.5,48.0,,*67</div><div class="line">$GNGSA,A,2,05,13,16,18,21,27,29,31,,,,,0.9,0.6,0.7*23</div><div class="line">$GNGSA,A,2,68,69,74,75,76,84,86,,,,,,0.9,0.6,0.7*26</div><div class="line">$GNGNS,094824.0,4849.931225,N,00216.053333,E,AA,15,0.6,161.5,48.0,,*69</div><div class="line">$GNGSA,A,2,05,13,16,18,21,27,29,31,,,,,0.9,0.6,0.7*23</div><div class="line">$GNGSA,A,2,68,69,74,75,76,84,86,,,,,,0.9,0.6,0.7*26</div><div class="line"></div><div class="line"></div><div class="line">Decoding...</div><div class="line"></div><div class="line">$GNGNS: GNSS Fix data</div><div class="line">http:<span class="comment">//www.catb.org/gpsd/NMEA.html#_gns_fix_data</span></div><div class="line"></div><div class="line">$GNGSA: GNSS Active Satellites + Dilution of precision</div><div class="line">http:<span class="comment">//www.catb.org/gpsd/NMEA.html#_gsa_gps_dop_and_active_satellites</span></div><div class="line"></div><div class="line">2D-Fix with:</div><div class="line">- 8 GPS Satellites: 05,13,16,18,21,27,29,31</div><div class="line">- 7 Glonass Satellites: 68,69,74,75,76,84,86</div><div class="line"></div><div class="line">Time: 094824.0 --> 09:48:24 (UTC)</div><div class="line">Latitude: 4849.931225,N --> 48 + (49.931225 / 60) = 48.83218708333333</div><div class="line">Longitude: 00216.053333,E  --> 002 + (16.053333 / 60) = 2.26755555</div><div class="line">https:<span class="comment">//www.google.fr/maps/@48.8321871,2.2675556,17z​</span></div></div><!-- fragment --><hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

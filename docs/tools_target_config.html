@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>config  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">config </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p>Use the Config tool to change a target's configuration database.</p>
+<p>Also see <a class="el" href="how_to_config_tree.html">Manage Config Tree</a></p>
+<p>Functions supported include: inspect a tree, read/write values, and import/export enitre tree sections.</p>
+<h1>Usage</h1>
+<p><b><code> config [OPTIONS] </code></b></p>
+<pre class="fragment">config get <tree path> [--format=json] </pre> <blockquote class="doxtable">
+<p>Read a value. </p>
+</blockquote>
+<pre class="fragment">config set <tree path> <new value> [<type>] </pre> <blockquote class="doxtable">
+<p>Write a value. </p>
+</blockquote>
+<pre class="fragment">config move <node path> <new name> </pre> <blockquote class="doxtable">
+<p>Move a node. </p>
+</blockquote>
+<pre class="fragment">config copy <node path> <new name> </pre> <blockquote class="doxtable">
+<p>Copy a node. </p>
+</blockquote>
+<pre class="fragment">config delete <tree path> </pre> <blockquote class="doxtable">
+<p>Delete a node. </p>
+</blockquote>
+<pre class="fragment">config clear <tree path> </pre> <blockquote class="doxtable">
+<p>Clear a node. Or create a new empty node if it didn't previously exist. </p>
+</blockquote>
+<pre class="fragment">config import <tree path> <file path> [--format=json] </pre> <blockquote class="doxtable">
+<p>Import config data. </p>
+</blockquote>
+<pre class="fragment">config export <tree path> <file path> [--format=json] </pre> <blockquote class="doxtable">
+<p>Export config data. </p>
+</blockquote>
+<pre class="fragment">config list </pre> <blockquote class="doxtable">
+<p>List all config trees. </p>
+</blockquote>
+<pre class="fragment">config rmtree <tree name> </pre> <blockquote class="doxtable">
+<p>Delete a tree. </p>
+</blockquote>
+<pre class="fragment">config help </pre> <blockquote class="doxtable">
+<p>Display help. </p>
+</blockquote>
+<h2>Options</h2>
+<pre class="fragment"><tree path> </pre> <blockquote class="doxtable">
+<p>Path to the tree and node to configure. </p>
+</blockquote>
+<pre class="fragment"><tree name> </pre> <blockquote class="doxtable">
+<p>Is the name of a tree in the system, but without a path. </p>
+</blockquote>
+<pre class="fragment"><file path> </pre> <blockquote class="doxtable">
+<p>Path to the file for import/export. </p>
+</blockquote>
+<pre class="fragment"><new value> </pre> <blockquote class="doxtable">
+<p>String value to write to the config tree. </p>
+</blockquote>
+<pre class="fragment"><type> </pre> <blockquote class="doxtable">
+<p>Optional, must be bool, int, float, or string. If tool, must be true or false. If unspecified, default type is string. </p>
+</blockquote>
+<pre class="fragment">--format=json </pre> <blockquote class="doxtable">
+<p>For imports, then properly formatted JSON will be expected. For exports, then the data will be generated as well. It is also possible to specify JSON for the get sub-command. </p>
+</blockquote>
+<h1><a class="anchor" id="toolsTarget_config_treePaths"></a>
+Tree Paths</h1>
+<p>A tree path is specified similar to a <code>*nix</code> path. With the beginning slash being optional. </p><pre class="fragment">For example:
+
+    /a/path/to/somewhere
+or
+    a/path/to/somewhere
+</pre><p>The configTree supports multiple trees: a default tree is assigned per user. If the config tool is run as root, then alternative trees can be specified in the path by entering a tree name, then a colon and the value path.</p>
+<p>Here's an example using the tree named 'foo' instead of the default tree: </p><pre class="fragment">  foo:/a/path/to/somewhere
+</pre><h2><a class="anchor" id="configtoolsTarget_config_TreeLocation"></a>
+Tree location</h2>
+<p>The trees themselves are stored in the file system at: </p><pre class="fragment">/legato/systems/current/configTree </pre><p>The configTree cycles through the extensions, .rock, .paper, and .scissors to differentiate between versions of the tree file. The base file name is the same as the tree.</p>
+<p>A listing for /legato/systems/current/configTree where the system tree and the user trees are foo and bar looks like this:</p>
+<pre class="fragment">$ ls /legato/systems/current/configTree/ -l
+total 32
+-rw------- 1 user user  3456 May 12 11:02 bar.rock
+-rw------- 1 user user  3456 May  9 11:04 foo.scissors
+-rw------- 1 user user 21037 May  9 11:04 system.paper
+</pre><p>The system, or root user, has its own tree; each application has a separate tree.</p>
+<h1><a class="anchor" id="toolsTarget_config_Samples"></a>
+Config Code Samples</h1>
+<p>To dump a tree, run this to get the default tree for the current user:</p>
+<pre class="fragment">config get / </pre><p>Or to get a specific tree:</p>
+<pre class="fragment">$ config get foo:/
+/
+  helloWorld/
+    greeted<bool> == true
+    ignored<bool> == false
+</pre><p>The config tool can also read and write individual values. You can read the value of greeted like this:</p>
+<pre class="fragment">$ config get /helloWorld/greeted
+true
+</pre><p>If you want to see everything under helloWorld: </p><pre class="fragment">$ config get /helloWorld
+helloWorld/
+  greeted<bool> == true
+  ignored<bool> == false
+</pre><p>If you want to change the value of ignored: </p><pre class="fragment">$ config set /helloWorld/ignored true bool
+</pre><p>You can check it by running: </p><pre class="fragment">$ config get /helloWorld/ignored
+true
+</pre><p>If the config tool is listing a tree, it will display the node name and a / if the current node has children (except for the root node, as the root node does not have a name.)</p>
+<p>For leaf nodes, the config tool will display the value type in angle brackets, <>, as well as its name and actual value:</p>
+<pre class="fragment">/
+  testValues/
+    aBoolValue<bool> == true
+    aStringValue<string> == This is some text I saved.
+    anIntValue<int> == 1024
+    afloatValue<float> == 10.24
+</pre><hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

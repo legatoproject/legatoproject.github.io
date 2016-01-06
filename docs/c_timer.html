@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Timer API  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">Timer API </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p><a class="el" href="le__timer_8h.html">API Reference</a></p>
+<hr />
+<p>This module provides an API for managing and using timers.</p>
+<dl class="section note"><dt>Note</dt><dd>This is an initial version of the API that only provides support for relative timers (e.g., expires in 10 seconds). Absolute timers allow a specific time/date to be used, and will be supported in a future version of this API.</dd></dl>
+<h1><a class="anchor" id="timer_objects"></a>
+Creating/Deleting Timer Objects</h1>
+<p>Timers are created using <a class="el" href="le__timer_8h.html#aee41169a210378b369f440cf99146522">le_timer_Create</a>. The timer name is used for logging purposes only.</p>
+<p>The following attributes of the timer can be set:</p><ul>
+<li><a class="el" href="le__timer_8h.html#a8fb341f11e0da2692453df997613cb8e">le_timer_SetHandler</a></li>
+<li><a class="el" href="le__timer_8h.html#a0a103d5cef5e83fc9088859d527bbd43">le_timer_SetInterval</a></li>
+<li><a class="el" href="le__timer_8h.html#a292b0a7d6dc0796a36a54fd04c6a7eeb">le_timer_SetRepeat</a></li>
+<li><a class="el" href="le__timer_8h.html#af6900bdb4653ff95f7f7be918b9e482d">le_timer_SetContextPtr</a></li>
+</ul>
+<p>The repeat count defaults to 1, so that the timer is initially a one-shot timer. All the other attributes must be explicitly set. At a minimum, the interval must be set before the timer can be used. Note that these attributes can only be set if the timer is not currently running; otherwise, an error will be returned.</p>
+<p>A timer is deleted using <a class="el" href="le__timer_8h.html#ae103f6736bf855e77e5e59bbad1e27a7">le_timer_Delete</a>. If the timer is currently running, then it will be stopped first, before being deleted.</p>
+<h1><a class="anchor" id="timer_usage"></a>
+Using Timers</h1>
+<p>A timer can be started using <a class="el" href="le__timer_8h.html#ada2ce7f8cb1e76ed959e323ae94bbfc0">le_timer_Start</a>. If it's already running, then it won't be modified; instead an error will be returned. To restart a currently running timer, use <a class="el" href="le__timer_8h.html#ab6b83d6302095a46b6046160c0a479bb">le_timer_Restart</a>.</p>
+<p>A timer can be stopped using <a class="el" href="le__timer_8h.html#af310daa378bd6ca39373a47e073f2243">le_timer_Stop</a>. If it's not currently running, an error will be returned, and nothing more will be done.</p>
+<p>To determine if the timer is currently running, use <a class="el" href="le__timer_8h.html#ab33b8568fd394d38274b778130111f70">le_timer_IsRunning</a>.</p>
+<p>When a timer expires, if the timer expiry handler is set by <a class="el" href="le__timer_8h.html#a8fb341f11e0da2692453df997613cb8e">le_timer_SetHandler</a>, the handler will be called with a reference to the expired timer. If additional data is required in the handler, <a class="el" href="le__timer_8h.html#af6900bdb4653ff95f7f7be918b9e482d">le_timer_SetContextPtr</a> can be used to set the appropriate context before starting the timer, and <a class="el" href="le__timer_8h.html#aa0432dbabb32b546c0c0e6ced5ba9d3d">le_timer_GetContextPtr</a> can be used to retrieve the context while in the handler.</p>
+<p>The number of times that a timer has expired can be retrieved by <a class="el" href="le__timer_8h.html#a554cff1d11525bb60115291248f3ff53">le_timer_GetExpiryCount</a>. This count is independent of whether there is an expiry handler for the timer.</p>
+<h1><a class="anchor" id="le_timer_thread"></a>
+Thread Support</h1>
+<p>A timer should only be used by the thread that created it. It's not safe for a thread to use or manipulate a timer that belongs to another thread. The timer expiry handler is called by the event loop of the thread that starts the timer.</p>
+<p>See <a class="el" href="c_event_loop.html">Event Loop API</a> for details on running the event loop of a thread.</p>
+<h1><a class="anchor" id="le_timer_suspend"></a>
+Suspend Support</h1>
+<p>The timer runs even when system is suspended. <br />
+ If the timer expires while the system is suspended, it will wake up the system.</p>
+<h1><a class="anchor" id="timer_errors"></a>
+Fatal Errors</h1>
+<p>The process will exit under any of the following conditions:</p><ul>
+<li>If an invalid timer object is given to:<ul>
+<li><a class="el" href="le__timer_8h.html#ae103f6736bf855e77e5e59bbad1e27a7">le_timer_Delete</a></li>
+<li><a class="el" href="le__timer_8h.html#a8fb341f11e0da2692453df997613cb8e">le_timer_SetHandler</a></li>
+<li><a class="el" href="le__timer_8h.html#a0a103d5cef5e83fc9088859d527bbd43">le_timer_SetInterval</a></li>
+<li><a class="el" href="le__timer_8h.html#a292b0a7d6dc0796a36a54fd04c6a7eeb">le_timer_SetRepeat</a></li>
+<li><a class="el" href="le__timer_8h.html#ada2ce7f8cb1e76ed959e323ae94bbfc0">le_timer_Start</a></li>
+<li><a class="el" href="le__timer_8h.html#af310daa378bd6ca39373a47e073f2243">le_timer_Stop</a></li>
+<li><a class="el" href="le__timer_8h.html#ab6b83d6302095a46b6046160c0a479bb">le_timer_Restart</a></li>
+<li><a class="el" href="le__timer_8h.html#af6900bdb4653ff95f7f7be918b9e482d">le_timer_SetContextPtr</a></li>
+<li><a class="el" href="le__timer_8h.html#aa0432dbabb32b546c0c0e6ced5ba9d3d">le_timer_GetContextPtr</a></li>
+<li><a class="el" href="le__timer_8h.html#a554cff1d11525bb60115291248f3ff53">le_timer_GetExpiryCount</a></li>
+</ul>
+</li>
+</ul>
+<h1><a class="anchor" id="timer_troubleshooting"></a>
+Troubleshooting</h1>
+<p>Timers can be traced by enabling the log trace keyword "timers" in the "framework" component.</p>
+<p>See <a class="el" href="c_logging.html#c_log_controlling">Log Controls</a> for more information.</p>
+<hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Thread Control API  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">Thread Control API </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p><a class="el" href="le__thread_8h.html">API Reference</a></p>
+<hr />
+<p>Generally, using single-threaded, event-driven programming (registering callbacks to be called by an event handling loop running in a single thread) is more efficient than using multiple threads. With single-threaded, event driven designs:</p><ul>
+<li>there's no CPU time spent switching between threads.</li>
+<li>there's only one copy of thread-specific memory objects, like the procedure call stack.</li>
+<li>there's no need to use thread synchronization mechanisms, like mutexes, to prevent race conditions between threads.</li>
+</ul>
+<p>Sometimes, this style doesn't fit well with a problem being solved, so you're forced to implement workarounds that severely complicate the software design. In these cases, it is far better to take advantage of multi-threading to simplify the design, even if it means that the program uses more memory or more CPU cycles. In some cases, the workarounds required to avoid multi-threading will cost more memory and/or CPU cycles than using multi-threading would.</p>
+<p>But you must <b> be careful </b> with multi-threading. Some of the most tenacious, intermittent defects known to humankind have resulted from the misuse of multi-threading. Ensure you know what you are doing.</p>
+<h1><a class="anchor" id="threadCreating"></a>
+Creating a Thread</h1>
+<p>To create a thread, call <code><a class="el" href="le__thread_8h.html#a87e02a46f92e9e3e11ed28a2b265872f">le_thread_Create()</a></code>.</p>
+<p>All threads are <b>named</b> for two reasons:</p><ol type="1">
+<li>To make it possible to address them by name.</li>
+<li>For diagnostics.</li>
+</ol>
+<p>Threads are created in a suspended state. In this state, attributes like scheduling priority and stack size can use the appropriate "Set" functions. All attributes have default values so it is not necessary to set any attributes (other than the name and main function address, which are passed into <a class="el" href="le__thread_8h.html#a87e02a46f92e9e3e11ed28a2b265872f">le_thread_Create()</a> ). When all attributes have been set, the thread can be started by calling <a class="el" href="le__thread_8h.html#a38df3877ee5ab9fac17b2fc0be46c27e">le_thread_Start()</a>.</p>
+<dl class="section warning"><dt>Warning</dt><dd>It is assumed that if a thread <em>T1</em> creates another thread <em>T2</em> then <b>only</b> thread <em>T1</em> will set the attributes and start thread <em>T2</em>. No other thread should try to set any attributes of <em>T2</em> or try to start it.</dd></dl>
+<h1><a class="anchor" id="threadTerminating"></a>
+Terminating a Thread</h1>
+<p>Threads can terminate themselves by:</p><ul>
+<li>returning from their main function</li>
+<li>calling <a class="el" href="le__thread_8h.html#a6b8e349107ae6628ed8807588f044faa">le_thread_Exit()</a>.</li>
+</ul>
+<p>Threads can also tell other threads to terminate by "canceling" them; done through a call to <code><a class="el" href="le__thread_8h.html#a0f1c1b98f354a96e6e31e55a71b58f6a">le_thread_Cancel()</a></code>.</p>
+<p>If a thread terminates itself, and it is "joinable", it can pass a <code>void*</code> value to another thread that "joins" with it. See <a class="el" href="c_threading.html#threadJoining">Joining</a> for more information.</p>
+<p>Canceling a thread may not cause the thread to terminate immediately. If it is in the middle of doing something that can't be interrupted, it will not terminate until it is finished. See 'man 7 pthreads' for more information on cancellation and cancellation points.</p>
+<p>To prevent cancellation during a critical section (e.g., when a mutex lock is held), pthread_setcancelstate() can be called. If a cancellation request is made (by calling <a class="el" href="le__thread_8h.html#a0f1c1b98f354a96e6e31e55a71b58f6a">le_thread_Cancel()</a> or <code>pthread_cancel()</code>), it will be blocked and remain in a pending state until cancellation is unblocked (also using pthread_setcancelstate()), at which time the thread will be immediately cancelled.</p>
+<h1><a class="anchor" id="threadJoining"></a>
+Joining</h1>
+<p>Sometimes, you want single execution thread split (fork) into separate threads of parallel execution and later join back together into one thread later. Forking is done by creating and starting a thread. Joining is done by a call to <a class="el" href="le__thread_8h.html#adf7f24fec4859ca12a52b16ce43fd9b8">le_thread_Join()</a>. le_thread_Join(T) blocks the calling thread until thread T exits.</p>
+<p>For a thread to be joinable, it must have its "joinable" attribute set (using <a class="el" href="le__thread_8h.html#a8959f09f66f365916a6a4fbdaf36cf65">le_thread_SetJoinable()</a>) prior to being started. Normally, when a thread terminates, it disappears. But, a joinable thread doesn't disappear until another thread "joins" with it. This also means that if a thread is joinable, someone must join with it, or its resources will never get cleaned up (until the process terminates).</p>
+<p><a class="el" href="le__thread_8h.html#adf7f24fec4859ca12a52b16ce43fd9b8">le_thread_Join()</a> fetches the return/exit value of the thread that it joined with.</p>
+<h1><a class="anchor" id="threadLocalData"></a>
+Thread-Local Data</h1>
+<p>Often, you want data specific to a particular thread. A classic example of is the ANSI C variable <code>errno</code>. If one instance of <code>errno</code> was shared by all the threads in the process, then it would essentially become useless in a multi-threaded program because it would be impossible to ensure another thread hadn't killed <code>errno</code> before its value could be read. As a result, POSIX has mandated that <code>errno</code> be a <em>thread-local</em> variable; each thread has its own unique copy of <code>errno</code>.</p>
+<p>If a component needs to make use of other thread-local data, it can do so using the pthread functions pthread_key_create(), pthread_getspecific(), pthread_setspecific(), pthread_key_delete(). See the pthread man pages for more details.</p>
+<h1><a class="anchor" id="threadSynchronization"></a>
+Thread Synchronization</h1>
+<p>Nasty multi-threading defects arise as a result of thread synchronization, or a lack of synchronization. If threads share data, they <b>MUST</b> be synchronized with each other to avoid destroying that data and incorrect thread behaviour.</p>
+<dl class="section warning"><dt>Warning</dt><dd>This documentation assumes that the reader is familiar with multi-thread synchronization techniques and mechanisms.</dd></dl>
+<p>The Legato C APIs provide the following thread synchronization mechanisms:</p><ul>
+<li><a class="el" href="c_mutex.html">Mutex API</a></li>
+<li><a class="el" href="c_semaphore.html">Semaphore API</a></li>
+<li><a class="el" href="c_messaging.html">Low-Level Messaging API</a></li>
+</ul>
+<h1><a class="anchor" id="threadDestructors"></a>
+Thread Destructors</h1>
+<p>When a thread dies, some clean-up action is needed (e.g., a connection needs to be closed or some objects need to be released). If a thread doesn't always terminate the same way (e.g., if it might be canceled by another thread or exit in several places due to error detection code), then a clean-up function (destructor) is probably needed.</p>
+<p>A Legato thread can use <code><a class="el" href="le__thread_8h.html#a6cb6d7b1729249d185fbf922fa96d27a">le_thread_AddDestructor()</a></code> to register a function to be called by that thread just before it terminates.</p>
+<p>A parent thread can also call <code><a class="el" href="le__thread_8h.html#a671dbe2927a3b2a13c5150476398f34f">le_thread_AddChildDestructor()</a></code> to register a destructor for a child thread before it starts the child thread.</p>
+<p>Multiple destructors can be registered for the same thread. They will be called in reverse order of registration (i.e, the last destructor to be registered will be called first).</p>
+<p>A Legato thread can also use <a class="el" href="le__thread_8h.html#af9bb895578b783b45c83acfe862f7358">le_thread_RemoveDestructor()</a> to remove its own destructor function that it no longer wants called in the event of its death. (There is no way to remove destructors from other threads.)</p>
+<h1><a class="anchor" id="threadLegatoizing"></a>
+Using Legato APIs from Non-Legato Threads</h1>
+<p>If a thread is started using some other means besides <a class="el" href="le__thread_8h.html#a38df3877ee5ab9fac17b2fc0be46c27e">le_thread_Start()</a> (e.g., if pthread_create() is used directly), then the Legato thread-specific data will not have been initialized for that thread. Therefore, if that thread tries to call some Legato APIs, a fatal error message like, "Legato threading API used in non-Legato thread!" may be seen.</p>
+<p>To work around this, a "non-Legato thread" can call <a class="el" href="le__thread_8h.html#a3e35d530ce76e97a627dc60100fc1475">le_thread_InitLegatoThreadData()</a> to initialize the thread-specific data that the Legato framework needs.</p>
+<p>If you have done this for a thread, and that thread will die before the process it is inside dies, then that thread must call <a class="el" href="le__thread_8h.html#aef59d0ded85da6ddd169a661824670d0">le_thread_CleanupLegatoThreadData()</a> before it exits. Otherwise the process will leak memory. Furthermore, if the thread will ever be cancelled by another thread before the process dies, a cancellation clean-up handler can be used to ensure that the clean-up is done, if the thread's cancellation type is set to "deferred". See 'man 7 pthreads' for more information on cancellation and cancellation points.</p>
+<hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

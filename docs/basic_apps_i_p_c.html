@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Use IPC  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">Use IPC </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p>Lets explore how to use inter-process communication (IPC) between components:</p>
+<ul>
+<li>Define a simple interface protocol that clients can use to ask servers to "Greet".</li>
+<li>Create a server that prints "Hello world" whenever a client asks it to "Greet",</li>
+<li>Create a client that asks the server to "Greet",</li>
+</ul>
+<p>Here's what it looks like at runtime:</p>
+<div class="image">
+<img alt="HelloIPC.png" src="HelloIPC.png" />
+</div>
+<p>When we show the static view of components inside executables, it looks like this:</p>
+<div class="image">
+<img alt="HelloIPCWithComponents.png" src="HelloIPCWithComponents.png" />
+</div>
+<p>Note that each interface has</p><ul>
+<li>an interface protocol</li>
+<li>a friendly name.</li>
+</ul>
+<p>In our example, the client and server both use the same friendly name "hello" for their interfaces, and must use the same protocol (or they wouldn't be able to communicate with each other!).</p>
+<h1><a class="anchor" id="helloIPCDefiningTheAPI"></a>
+Define Interface Protocol</h1>
+<p>First, create a directory for our little project and change directories:</p>
+<pre class="fragment">$ mkdir helloIPC
+$ cd helloIPC
+</pre><p>Next, define the interface protocol to use between the client and the server.</p>
+<p>To create our greet function-call API, we create a definition file called "greet.api".</p>
+<pre class="fragment">$ gedit greet.api
+</pre><p>Add this inside greet.api:</p>
+<pre class="fragment">FUNCTION Greet
+(
+);
+</pre><p>This will declare a function called <code>Greet</code> that takes no arguments and returns nothing.</p>
+<h1><a class="anchor" id="basicAppsIPC_helloIPCCreateServer"></a>
+Create Server Component</h1>
+<p>Next, create a server component called <code>greetServer</code> that offers a greeting service called "hello" to be accessed using our simple "greet" API. Do this by creating a file called "Component.cdef" in a new directory called "greetServer".</p>
+<pre class="fragment">$ mkdir greetServer
+$ gedit greetServer/Component.cdef
+</pre><dl class="section note"><dt>Note</dt><dd>Keeping components in separate directories from each other is a requirement of the framework.</dd></dl>
+<p>greetServer/Component.cdef should contain the following:</p>
+<div class="fragment"><div class="line">provides:</div><div class="line">{</div><div class="line">    api:</div><div class="line">    {</div><div class="line">        hello = greet.api</div><div class="line">    }</div><div class="line">}</div><div class="line"></div><div class="line">sources:</div><div class="line">{</div><div class="line">    greetServer.c</div><div class="line">}</div></div><!-- fragment --><p>This declares that the component named <code>greetServer</code> (the name of the directory is the name of the component) provides a service called <code>hello</code> accessed using the API defined in <code>greet.api</code> where the source code can be found in the file <code>greetServer.c</code>.</p>
+<dl class="section note"><dt>Note</dt><dd>The source code file name extension is used to identify the programming language it's written in.</dd></dl>
+<p>To implement the server (in C), create a file <code>greetServer/greetServer.c</code>:</p>
+<pre class="fragment">$ gedit greetServer/greetServer.c
+</pre><p>Make it contain the following:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include "<a class="code" href="legato_8h.html">legato.h</a>"</span></div><div class="line"><span class="preprocessor">#include "interfaces.h"</span></div><div class="line"></div><div class="line"><span class="keywordtype">void</span> hello_Greet(<span class="keywordtype">void</span>)</div><div class="line">{</div><div class="line"> <a class="code" href="le__log_8h.html#a4ebab29f40ee8eaaa87205fe3f9aaa13">LE_INFO</a>(<span class="stringliteral">"Hello world."</span>);</div><div class="line">}</div><div class="line"></div><div class="line"><a class="code" href="le__event_loop_8h.html#abdb9187a56836a93d19cc793cbd4b7ec">COMPONENT_INIT</a></div><div class="line">{</div><div class="line"></div><div class="line">}</div></div><!-- fragment --><p>The file <code>interfaces.h</code> is auto-generated based on the contents of <code>greet.api</code> and greetServer's <code>Component.cdef</code>. It'll contain a prototype of the function <code>hello_Greet()</code>, which we implemented in <code>greetServer.c</code>.</p>
+<p>The function <code>hello_Greet()</code> will be called when a client binds to our <code>hello</code> service and calls the function <code>Greet()</code>. The name <code>hello_Greet</code> follows this pattern:</p>
+<pre class="fragment"><interface-name> '_' <api-function-name>
+</pre><p>The <interface-name> is the name given to the provided interface. In our example, it's the name <code>hello</code> before the <code>=</code> in the line <code>hello</code> <code>=</code> <code>greet.api</code>.</p>
+<dl class="section note"><dt>Note</dt><dd>If you forget to implement a service function on the server or if you give it the wrong name, the link stage will fail and complain that the symbol is unresolved. You'll know you missed a function, and you'll be able to see what the correct name of the function should be.</dd></dl>
+<h1><a class="anchor" id="basicAppsIPC_helloIPCCreatingTheClient"></a>
+Create Client Component</h1>
+<p>Now that we have a server, let's create a client to use its service.</p>
+<p>First, create a directory for the <code>greetClient</code> component and a file in it called <code>Component.cdef:</code> </p>
+<pre class="fragment">$ mkdir greetClient
+$ gedit greetClient/Component.cdef
+</pre><p>greetClient/Component.cdef should contain:</p>
+<div class="fragment"><div class="line">requires:</div><div class="line">{</div><div class="line">    api:</div><div class="line">    {</div><div class="line">        hello = greet.api</div><div class="line">    }</div><div class="line">}</div><div class="line"></div><div class="line">sources:</div><div class="line">{</div><div class="line">    greetClient.c</div><div class="line">}</div></div><!-- fragment --><p>To implement the client using C, create a file called <code>greetClient/greetClient.c</code>:</p>
+<pre class="fragment">$ gedit greetClient/greetClient.c
+</pre><p>Make it contain the following:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include "<a class="code" href="legato_8h.html">legato.h</a>"</span></div><div class="line"><span class="preprocessor">#include "interfaces.h"</span></div><div class="line"></div><div class="line"><a class="code" href="le__event_loop_8h.html#abdb9187a56836a93d19cc793cbd4b7ec">COMPONENT_INIT</a></div><div class="line">{</div><div class="line">    hello_Greet();</div><div class="line">}</div></div><!-- fragment --><p>The <code>interfaces.h</code> file the client includes is different than the one the server uses. This client one is specially generated based on the contents of <code>greetClient/Component.cdef</code> and <code>greet.api</code>.</p>
+<p>In the client, we use the component initializer to call <code>hello_Greet()</code> at start-up.</p>
+<p>You can add a message to the COMPONENT_INIT so the logs will show the client calling the server: </p><div class="fragment"><div class="line"> {</div><div class="line"> <a class="code" href="le__log_8h.html#a4ebab29f40ee8eaaa87205fe3f9aaa13">LE_INFO</a>(<span class="stringliteral">"greetClient is calling hello_Greet \n"</span>);</div><div class="line">    hello_Greet();</div><div class="line">}</div></div><!-- fragment --><h1><a class="anchor" id="basicAppsIPC_createIPCadef"></a>
+Declare IPC Bindings</h1>
+<p>You can create an <a class="el" href="def_files_adef.html">Application Definition .adef</a> file with an <a class="el" href="def_files_adef.html#defFilesAdef_extern">Extern</a> section to declare it's available for binding:</p>
+<div class="fragment"><div class="line"><span class="keyword">extern</span>:</div><div class="line">{</div><div class="line">    helloWorld.greetServer.greet.api</div><div class="line">}</div></div><!-- fragment --><p>You only need to do this if you want to leave your interface unbound, and bind it later in the <a class="el" href="def_files_sdef.html">System Definition .sdef</a> file <a class="el" href="def_files_sdef.html#defFilesSdef_bindings">bindings</a> section.</p>
+<hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

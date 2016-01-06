@@ -1,0 +1,230 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>cm  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">cm </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p>Use the Cellular Modem tool to control modem functions.</p>
+<h1>Usage</h1>
+<p><b><code> cm [SERVICES] [COMMANDS] </code></b></p>
+<h1><a class="anchor" id="toolsTarget_cm_adc"></a>
+ADC</h1>
+<pre class="fragment">cm adc list </pre> <blockquote class="doxtable">
+<p>Print known <code>adc</code> channels. </p>
+</blockquote>
+<pre class="fragment">cm adc read channel </pre> <blockquote class="doxtable">
+<p>Read and print the value from an adc channel (where <code>channel</code> is one of the names returned). </p>
+</blockquote>
+<h1><a class="anchor" id="toolsTarget_cm_data"></a>
+Data</h1>
+<pre class="fragment">cm data
+cm data info </pre> <blockquote class="doxtable">
+<p>Get info on profile in use. </p>
+</blockquote>
+<pre class="fragment">cm data profile <index> </pre> <blockquote class="doxtable">
+<p>Set profile in use. </p>
+</blockquote>
+<pre class="fragment">cm data apn <apn> </pre> <blockquote class="doxtable">
+<p>Set apn for profile in use. </p>
+</blockquote>
+<pre class="fragment">cm data pdp <pdp> </pre> <blockquote class="doxtable">
+<p>Set pdp type for profile in use. </p>
+</blockquote>
+<pre class="fragment">cm data auth <none/pap/chap> <username> <password> </pre> <blockquote class="doxtable">
+<p>Set authentication for profile in use. </p>
+</blockquote>
+<pre class="fragment">cm data connect <optional timeout (secs)> </pre> <blockquote class="doxtable">
+<p>Start a data connection. </p>
+</blockquote>
+<pre class="fragment">cm data watch </pre> <blockquote class="doxtable">
+<p>Monitor the data connection. </p>
+</blockquote>
+<p>To start a data connection, ensure that your profile is configured correctly. Also ensure your modem is registered to the network. To verify, use <code>cm radio</code> and check <code>Status</code>.</p>
+<p>If you specify a time-out timer when starting a data connection, it will try to start a data connection until the timer expires.</p>
+<p>When starting a data connection, currently it only uses profile 1. Any configuration set for other profiles can't be used to start a data connection through the cm tool.</p>
+<h1><a class="anchor" id="toolsTarget_cm_info"></a>
+Info</h1>
+<pre class="fragment">cm info
+cm info all </pre> <blockquote class="doxtable">
+<p>Print all known info. </p>
+</blockquote>
+<pre class="fragment">cm info device </pre> <blockquote class="doxtable">
+<p>Print the device model. </p>
+</blockquote>
+<pre class="fragment">cm info imei </pre> <blockquote class="doxtable">
+<p>Print the IMEI. </p>
+</blockquote>
+<pre class="fragment">cm info firmware </pre> <blockquote class="doxtable">
+<p>Print the firmware version. </p>
+</blockquote>
+<pre class="fragment">cm info bootloader </pre> <blockquote class="doxtable">
+<p>Print the bootloader version. </p>
+</blockquote>
+<h1><a class="anchor" id="toolsTarget_cm_radio"></a>
+Radio</h1>
+<pre class="fragment">cm radio
+cm radio status </pre> <blockquote class="doxtable">
+<p>Get modem status. </p>
+</blockquote>
+<pre class="fragment">cm radio <on/off> </pre> <blockquote class="doxtable">
+<p>Enable/disable radio. </p>
+</blockquote>
+<pre class="fragment">cm radio rat <CDMA | GSM/UMTS | LTE> </pre> <blockquote class="doxtable">
+<p>Set radio access technology. </p>
+</blockquote>
+<pre class="fragment">cm radio rat AUTO </pre> <blockquote class="doxtable">
+<p>Resume automatic RAT selection. </p>
+</blockquote>
+<p>After setting the radio access technology, you'll need to do a <code>legato restart</code> before it's effective.</p>
+<h1><a class="anchor" id="toolsTarget_cm_sim"></a>
+SIM</h1>
+<p>Regardless if security is enabled or not, the SIM card PIN code must be entered for every operation. The only ways to change the PIN code are through <code>changepin</code> and <code>unblock</code>.</p>
+<pre class="fragment">cm sim
+cm sim status </pre> <blockquote class="doxtable">
+<p>Get sim status </p>
+</blockquote>
+<pre class="fragment">cm sim info </pre> <blockquote class="doxtable">
+<p>Get sim information. </p>
+</blockquote>
+<pre class="fragment">cm sim imsi </pre> <blockquote class="doxtable">
+<p>Get the sim imsi. </p>
+</blockquote>
+<pre class="fragment">cm sim iccid </pre> <blockquote class="doxtable">
+<p>Get the sim iccid. </p>
+</blockquote>
+<pre class="fragment">cm sim number </pre> <blockquote class="doxtable">
+<p>Get the sim phone number. Often M2M SIM cards don't know their number (will return nothing). </p>
+</blockquote>
+<pre class="fragment">cm sim enterpin <pin> </pre> <blockquote class="doxtable">
+<p>Enter pin code that's required before any mobile equipment functionality can be used. </p>
+</blockquote>
+<pre class="fragment">cm sim changepin <oldpin> <newpin> </pre> <blockquote class="doxtable">
+<p>Change the PIN code of the SIM card. </p>
+</blockquote>
+<pre class="fragment">cm sim lock <pin> </pre> <blockquote class="doxtable">
+<p>Lock SIM: enables SIM card security, will request for a PIN code when inserted. </p>
+</blockquote>
+<pre class="fragment">cm sim unlock <pin> </pre> <blockquote class="doxtable">
+<p>Unlock SIM: disables SIM card security, won't request a PIN code when inserted (unsafe). </p>
+</blockquote>
+<pre class="fragment">cm sim unblock <puk> <newpin> </pre> <blockquote class="doxtable">
+<p>Unblocks the SIM card. The SIM card is blocked after X unsuccessful attempts to enter the PIN. </p>
+</blockquote>
+<pre class="fragment">cm sim storepin <pin> </pre> <blockquote class="doxtable">
+<p>Stores PIN. Whether security is enabled or not, the SIM card has a PIN code that must be entered for every operation. You can change the PIN code through <code>changepin</code> and <code>unblock</code>. </p>
+</blockquote>
+<pre class="fragment">cm sim select <EMBEDDED | EXTERNAL_SLOT_1 | EXTERNAL_SLOT_2 | REMOTE> </pre> <blockquote class="doxtable">
+<p>Select the SIM type. </p>
+</blockquote>
+<p>Whether security is enabled or not, the SIM card has a PIN code that must be entered for every operations. Only ways to change this PIN code are through 'changepin' and 'unblock' operations.</p>
+<h1><a class="anchor" id="toolsTarget_cm_sms"></a>
+SMS</h1>
+<pre class="fragment">cm sms monitor </pre> <blockquote class="doxtable">
+<p>Monitor incoming SMS. </p>
+</blockquote>
+<pre class="fragment">cm sms send <number> <content> </pre> <blockquote class="doxtable">
+<p>Send a text SMS. </p>
+</blockquote>
+<pre class="fragment">cm sms sendbin <number> <file> <optional max sms> </pre> <blockquote class="doxtable">
+<p>Send a binary SMS </p>
+</blockquote>
+<p>Options:</p><ul>
+<li><number>: Destination number</li>
+<li><content>: Content as text supported by GSM 03.38 alphabet</li>
+<li><file>: File path OR - for standard input (stdin)</li>
+<li><optional max="" sms>="">: (Optional) Limit for the number of SMS the file is split in</li>
+</ul>
+<pre class="fragment">cm sms list </pre> <blockquote class="doxtable">
+<p>List all stored SMS </p>
+</blockquote>
+<pre class="fragment">cm sms get <idx> </pre> <blockquote class="doxtable">
+<p>Get specific stored SMS. </p>
+</blockquote>
+<pre class="fragment">cm sms clear </pre> <blockquote class="doxtable">
+<p>Clear stored SMS. </p>
+</blockquote>
+<pre class="fragment">cm sms count </pre> <blockquote class="doxtable">
+<p>Count stored SMS. </p>
+</blockquote>
+<h1><a class="anchor" id="toolsTarget_cm_temp"></a>
+Temperature</h1>
+<pre class="fragment">cm temp
+cm temp all </pre> <blockquote class="doxtable">
+<p>Print all known temperatures. </p>
+</blockquote>
+<pre class="fragment">cm temp thresholds </pre> <blockquote class="doxtable">
+<p>Print all thresholds. </p>
+</blockquote>
+<pre class="fragment">cm temp radio </pre> <blockquote class="doxtable">
+<p>Print the radio temperature. </p>
+</blockquote>
+<pre class="fragment">cm temp platform </pre> <blockquote class="doxtable">
+<p>Print the platform temperature. </p>
+</blockquote>
+<hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

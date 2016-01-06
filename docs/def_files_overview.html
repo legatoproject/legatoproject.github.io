@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Overview  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">Overview </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p>Legato definition files are used as input to the <a class="el" href="build_tools.html">Build</a> tools <code>mksys</code>, <code>mkapp</code>, <code>mkcomp</code>, and <code>mkexe</code> (known collectively as the mk tools). The definition files, together with <a class="el" href="api_files.html">API Files</a>, make it easier to develop component-based software, automatically generating a lot of boiler-plate code.</p>
+<p>Interfaces are defined using <code>.api</code> files. Implementations of those interfaces are constructed as reusable components. Components can be combined into apps. Apps can be installed and run on target devices and integrated into systems of inter-communicating applications deployed together to target devices in a single step.</p>
+<p>All def files use a <a class="el" href="def_files_format.html">Common File Format</a>.</p>
+<h1><a class="anchor" id="defFilesOverview_adef"></a>
+.adef Files</h1>
+<p>Application definition <code></code>.adef files are used to specify the external interfaces and internal content of applications that can be built, installed, and run on target devices.</p>
+<p><code>.adef</code> files can also be used to override some settings of components without having to change those components themselves, thereby making the components more reusable.</p>
+<p>Each application has a <code>.adef</code> file that describes:</p><ul>
+<li>which executables should be built from which components</li>
+<li>additional files from the build system to be included in the app</li>
+<li>processes to be started (by running what executables with what command-line arguments and environment variables) when the app starts</li>
+<li>if the app should automatically start when the target device boots</li>
+<li>files (or other file system objects) from the target root file system to be available to the app at runtime</li>
+<li>limits on the app at runtime (e.g., cpu limits, memory limits, etc.)</li>
+<li>overrides for memory pool sizes and configuration settings for components in the app (future)</li>
+<li>IPC bindings between components within the app</li>
+<li>IPC interfaces made visible to other apps</li>
+</ul>
+<h1><a class="anchor" id="defFilesOverview_cdef"></a>
+.cdef Files</h1>
+<p>Component definition <code></code>.cdef files are used to specify the external interfaces and internal content of reusable software components.</p>
+<p>Each component has a single <code>Component.cdef</code> file that defines:</p><ul>
+<li>source code files used to build the component</li>
+<li>files from the build system to be included in any app that includes the component</li>
+<li>files on the target to be accessible to any app that includes the component</li>
+<li>IPC interfaces the component implements</li>
+<li>other components needed by this component</li>
+<li>memory pool sizes</li>
+<li>configuration settings for the component (future)</li>
+</ul>
+<h1><a class="anchor" id="defFilesOverview_sdef"></a>
+.sdef Files</h1>
+<p>System definition <code></code>.sdef files are used to interconnect applications with each other and with the target's runtime environment (e.g., hardware devices).</p>
+<p>.sdef files can also override some app settings.</p>
+<p>An <code>.sdef</code> file defines a system of one or more applications that can be deployed to target devices in the field. Each <code>.sdef</code> file lists:</p><ul>
+<li>apps are to be installed on the device</li>
+<li>IPC connections permitted between apps</li>
+<li>overrides for limits, configuration settings, and IPC bindings within apps</li>
+</ul>
+<h1><a class="anchor" id="defFilesOverview_searchPaths"></a>
+Build Tool Search Paths</h1>
+<p>Two are used:</p><ul>
+<li><b>source</b> search path - lists file system directories where the build tools look for source code files and components.</li>
+<li><b>interface</b> search path - lists file system directories where the build tools look for interface definition files (.h files and .api files).</li>
+</ul>
+<p>The default search path “.” is the current working directory where the build tool ran.</p>
+<p>Search paths can be changed through mk tools command-line options:</p><ul>
+<li>'-s' sets the source search path</li>
+<li>‘-i’ sets the interface search path</li>
+</ul>
+<div class="fragment"><div class="line">$ mksys packageTracker.sdef -i ~/work/interfaces -s ~/work/components</div></div><!-- fragment --><h1><a class="anchor" id="defFilesOverview_overriding"></a>
+Precedence and Overriding</h1>
+<p>Settings in a <code>.sdef</code> file override settings from <em>both</em> the <code>.adef</code> and <code>Component.cdef</code>, while the <code>.adef</code> overrides settings in the <code>Component.cdef</code>. This increases reusability by allowing an integrator to override a component's or app's settings without having to change that component or app.</p>
+<p>Most configuration settings can be overridden on the target device at runtime (although, some won't take effect until the app is restarted).</p>
+<h1><a class="anchor" id="defFilesOverview_unsandboxedApps"></a>
+Unsandboxed App Limits</h1>
+<p>Although it's better for apps to be sandboxed, apps aren't limited to running inside a sandbox. We call these <em>unsandboxed</em> apps.</p>
+<p>Even though unsanboxed apps aren't constrained the same way sandboxed apps are constrained, the Supervisor will still enforce <a class="el" href="def_files_adef.html#defFilesAdef_cpuShare">CPU Share</a> and <a class="el" href="def_files_adef.html#defFilesAdef_processMaxFileBytes">Max File Bytes</a> limits.</p>
+<hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

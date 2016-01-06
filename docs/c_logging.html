@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Logging API  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">Logging API </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p><a class="el" href="le__log_8h.html">API Reference</a> <br />
+<a class="el" href="how_to_logs.html">Use Logs</a> </p><hr />
+<p>The Legato Logging API provides a toolkit allowing code to be instrumented with error, warning, informational, and debugging messages. These messages can be turned on or off remotely and pushed or pulled from the device through a secure shell, cloud services interfaces, e-mail, SMS, etc.</p>
+<h1><a class="anchor" id="c_log_logging"></a>
+Logging Basics</h1>
+<p>Legato's logging can be configured through this API, and there's also a command-line target <a class="el" href="tools_target_log.html">log</a> tool available.</p>
+<h2><a class="anchor" id="c_log_levels"></a>
+Levels</h2>
+<p>Log messages are categorized according to the severity of the information being logged. A log message may be purely informational, describing something that is expected to occur from time-to-time during normal operation; or it may be a report of a fault that might have a significant negative impact on the operation of the system. To differentiate these, each log entry is associated with one of the following log levels:</p>
+<ul>
+<li><a class="el" href="le__log_8h.html#aa3de78c088c398afb23c0b582deabc0aa1a5c0e9f9bcf857faad0cc4187002479">DEBUG</a>: Handy for troubleshooting.</li>
+<li><a class="el" href="le__log_8h.html#aa3de78c088c398afb23c0b582deabc0aa83ea376539849ee701096fdb022e74b3">INFORMATION</a>: Expected to happen; can be interesting even when not troubleshooting.</li>
+<li><a class="el" href="le__log_8h.html#aa3de78c088c398afb23c0b582deabc0aae0f565809442f7de555d36f76c36627c">WARNING</a>: Should not normally happen; may not have any real impact on system performance.</li>
+<li><a class="el" href="le__log_8h.html#aa3de78c088c398afb23c0b582deabc0aaf1203f512370bfec7a05f8adae13c7d9">ERROR</a>: Fault that may result in noticeable short-term system misbehaviour. Needs attention.</li>
+<li><a class="el" href="le__log_8h.html#aa3de78c088c398afb23c0b582deabc0aa298894fe77b90cb9b28f25817a620df8">CRITICAL</a>: Fault needs urgent attention. Will likely result in system failure.</li>
+<li><a class="el" href="le__log_8h.html#aa3de78c088c398afb23c0b582deabc0aa6843cc8d9fb10d02cad1834b236dd5cb">EMERGENCY</a>: Definite system failure.</li>
+</ul>
+<h2><a class="anchor" id="c_log_basic_defaultSyslog"></a>
+Standard Out and Standard Error in Syslog</h2>
+<p>By default, app processes will have their <code>stdout</code> and <code>stderr</code> redirected to the <code>syslog</code>. Each process’s stdout will be logged at INFO severity level; it’s stderr will be logged at “ERR” severity level.</p>
+<p>There are two limitations with this feature:</p><ul>
+<li>the PID reported in the logs generally refer to the PID of the process that generates the stdout/stderr message. If a process forks, then both the parent and child processes’ stdout/stderr will share the same connection to the syslog, and the parent’s PID will be reported in the logs for both processes.</li>
+<li>stdout is line buffered when connected to a terminal, which means <code>printf(“hello<br />
+”)</code> will be printed to the terminal immediately. If stdout is connected to something like a pipe it's bulk buffered, which means a flush doesn't occur until the buffer is full.</li>
+</ul>
+<p>To make your process line buffer stdout so that printf will show up in the logs as expected, the <code>setlinebuf(stdout)</code> system call can be used. Alternatively, <code>fflush(stdout)</code> can be called \ to force a flush of the stdout buffer.</p>
+<p>This issue doesn't exist with stderr as stderr is never buffered.</p>
+<h2><a class="anchor" id="c_log_basic_logging"></a>
+Basic Logging</h2>
+<p>A series of macros are available to make logging easy.</p>
+<p>None of them return anything.</p>
+<p>All of them accept printf-style arguments, consisting of a format string followed by zero or more parameters to be printed (depending on the contents of the format string).</p>
+<p>There is a logging macro for each of the log levels:</p>
+<ul>
+<li><a class="el" href="le__log_8h.html#af45667acfd1b4bdfdc4433db4947cd9e">LE_DEBUG</a>(formatString, ...)</li>
+<li><a class="el" href="le__log_8h.html#a4ebab29f40ee8eaaa87205fe3f9aaa13">LE_INFO</a>(formatString, ...)</li>
+<li><a class="el" href="le__log_8h.html#a6e79fdd28f63d612fee5d9f42fc4df77">LE_WARN</a>(formatString, ...)</li>
+<li><a class="el" href="le__log_8h.html#a3ee3d0451bd7351a6252c9487452d175">LE_ERROR</a>(formatString, ...)</li>
+<li><a class="el" href="le__log_8h.html#adfddb0272111f192957c0ae6704290dd">LE_CRIT</a>(formatString, ...)</li>
+<li><a class="el" href="le__log_8h.html#a745705de4e8edd16f2bb476ef3fe16c3">LE_EMERG</a>(formatString, ...)</li>
+</ul>
+<p>For example, </p><div class="fragment"><div class="line"><a class="code" href="le__log_8h.html#a4ebab29f40ee8eaaa87205fe3f9aaa13">LE_INFO</a>(<span class="stringliteral">"Obtained new IP address %s."</span>, ipAddrStr);</div></div><!-- fragment --><h2><a class="anchor" id="c_log_conditional_logging"></a>
+Conditional Logging</h2>
+<p>Similar to the basic macros, but these contain a conditional expression as their first parameter. If this expression equals true, then the macro will generate this log output:</p>
+<ul>
+<li><a class="el" href="le__log_8h.html#a4c689f24157ca91e6d39827c967de734">LE_DEBUG_IF</a>(expression, formatString, ...)</li>
+<li><a class="el" href="le__log_8h.html#ad98222f9a0871cde1893eac589841f17">LE_INFO_IF</a>(expression, formatString, ...)</li>
+<li><a class="el" href="le__log_8h.html#a8d8f204806cd5fc0455fe3caacf1d251">LE_WARN_IF</a>(expression, formatString, ...)</li>
+<li><a class="el" href="le__log_8h.html#aceaf11a11691d6c676e36dd317b38dbd">LE_ERROR_IF</a>(expression, formatString, ...)</li>
+<li><a class="el" href="le__log_8h.html#ae507036675ece2d77e8e285cf864a6f4">LE_CRIT_IF</a>(expression, formatString, ...)</li>
+<li><a class="el" href="le__log_8h.html#a5dcf8dc55407a8f41ada2e85ff8131fe">LE_EMERG_IF</a>(expression, formatString, ...)</li>
+</ul>
+<p>Instead of writing </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (result == -1)</div><div class="line">{</div><div class="line"> <a class="code" href="le__log_8h.html#a6e79fdd28f63d612fee5d9f42fc4df77">LE_WARN</a>(<span class="stringliteral">"Failed to send message to server.  Errno = %m."</span>);</div><div class="line">}</div></div><!-- fragment --><p>you could write this: </p><div class="fragment"><div class="line"><a class="code" href="le__log_8h.html#a8d8f204806cd5fc0455fe3caacf1d251">LE_WARN_IF</a>(result == -1, <span class="stringliteral">"Failed to send message to server.  Errno = %m."</span>);</div></div><!-- fragment --><h2><a class="anchor" id="c_log_loging_fatals"></a>
+Fatal Errors</h2>
+<p>There are some special logging macros intended for fatal errors:</p>
+<ul>
+<li><a class="el" href="le__log_8h.html#a54b4b07f5396e19a8d9fca74238f4795">LE_FATAL</a>(formatString, ...) <br />
+ Always kills the calling process after logging the message at EMERGENCY level (never returns).</li>
+<li><a class="el" href="le__log_8h.html#a7a3e66a87026cc9e57bcb748840ab41b">LE_FATAL_IF</a>(condition, formatString, ...) <br />
+ If the condition is true, kills the calling process after logging the message at EMERGENCY level.</li>
+<li><a class="el" href="le__log_8h.html#ac0dbbef91dc0fed449d0092ff0557b39">LE_ASSERT(condition)</a> <br />
+ If the condition is true, does nothing. If the condition is false, logs the source code text of the condition at EMERGENCY level and kills the calling process.</li>
+<li><a class="el" href="le__log_8h.html#a7cd2daa3d4af1de4d29e0eed95187484">LE_ASSERT_OK(condition)</a> <br />
+ If the condition is LE_OK (0), does nothing. If the condition is anything else, logs the a message at EMERGENCY level, containing the source code text of the condition, indicating that it did not evaluate to LE_OK, and kills the calling process.</li>
+</ul>
+<p>For example, </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (NULL == objPtr)</div><div class="line">{</div><div class="line"> <a class="code" href="le__log_8h.html#a54b4b07f5396e19a8d9fca74238f4795">LE_FATAL</a>(<span class="stringliteral">"Object pointer is NULL!"</span>);</div><div class="line">}</div><div class="line"></div><div class="line"><span class="comment">// Now I can go ahead and use objPtr, knowing that if it was NULL then LE_FATAL() would have</span></div><div class="line"><span class="comment">// been called and LE_FATAL() never returns.</span></div></div><!-- fragment --><p>or,</p>
+<div class="fragment"><div class="line"><a class="code" href="le__log_8h.html#a7a3e66a87026cc9e57bcb748840ab41b">LE_FATAL_IF</a>(NULL == objPtr, <span class="stringliteral">"Object pointer is NULL!"</span>);</div><div class="line"></div><div class="line"><span class="comment">// Now I can go ahead and use objPtr, knowing that if it was NULL then LE_FATAL_IF() would not</span></div><div class="line"><span class="comment">// have returned.</span></div></div><!-- fragment --><p>or,</p>
+<div class="fragment"><div class="line"><a class="code" href="le__log_8h.html#ac0dbbef91dc0fed449d0092ff0557b39">LE_ASSERT</a>(NULL != objPtr);</div><div class="line"></div><div class="line"><span class="comment">// Now I can go ahead and use objPtr, knowing that if it was NULL then LE_ASSERT() would not</span></div><div class="line"><span class="comment">// have returned.</span></div></div><!-- fragment --><h2><a class="anchor" id="c_log_tracing"></a>
+Tracing</h2>
+<p>Finally, a macro is provided for tracing:</p>
+<ul>
+<li><a class="el" href="le__log_8h.html#a07bbbb4095720cff330e87e249ce1252">LE_TRACE</a>(traceRef, string, ...)</li>
+</ul>
+<p>This macro is special because it's independent of log level. Instead, trace messages are associated with a trace keyword. Tracing can be enabled and disabled based on these keywords.</p>
+<p>If a developer wanted to trace the creation of "shape" objects in their GUI package, they could add trace statements like the following:</p>
+<div class="fragment"><div class="line"><a class="code" href="le__log_8h.html#a07bbbb4095720cff330e87e249ce1252">LE_TRACE</a>(NewShapeTraceRef, <span class="stringliteral">"Created %p with position (%d,%d)."</span>, shapePtr, shapePtr->x, shapePtr->y);</div></div><!-- fragment --><p>The reference to the trace is obtained at start-up as follows:</p>
+<div class="fragment"><div class="line">NewShapeTraceRef = <a class="code" href="le__log_8h.html#a6d99d8147bcdcd1ed3848c9fdb72afe5">le_log_GetTraceRef</a>(<span class="stringliteral">"newShape"</span>);</div></div><!-- fragment --><p>This allows enabling and disabling these <a class="el" href="le__log_8h.html#a07bbbb4095720cff330e87e249ce1252">LE_TRACE()</a> calls using the "newShape" keyword through configuration settings and runtime log control tools. See <a class="el" href="c_logging.html#c_log_controlling">Log Controls</a> below.</p>
+<p>Applications can use <a class="el" href="le__log_8h.html#a0746e2e37585f61ccdf7ce4976909936">LE_IS_TRACE_ENABLED(NewShapeTraceRef)</a> to query whether a trace keyword is enabled.</p>
+<p>These allow apps to hook into the trace management system to use it to implement sophisticated, app-specific tracing or profiling features.</p>
+<h2><a class="anchor" id="c_log_resultTxt"></a>
+Result Code Text</h2>
+<p>The <a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> macro supports printing an error condition in a human-readable text string.</p>
+<div class="fragment"><div class="line">result = le_foo_DoSomething();</div><div class="line"></div><div class="line"><span class="keywordflow">if</span> (result != LE_OK)</div><div class="line">{</div><div class="line"> <a class="code" href="le__log_8h.html#a3ee3d0451bd7351a6252c9487452d175">LE_ERROR</a>(<span class="stringliteral">"Failed to do something. Result = %d (%s)."</span>, result, <a class="code" href="le__log_8h.html#a99402d6a983f318e5b8bfcdf5dfe9024">LE_RESULT_TXT</a>(result));</div><div class="line">}</div></div><!-- fragment --><h1><a class="anchor" id="c_log_controlling"></a>
+Log Controls</h1>
+<p>Log level filtering and tracing can be controlled at runtime using:</p><ul>
+<li>the command-line Log Control Tool (<a class="el" href="tools_target_log.html">log</a>)</li>
+<li>configuration settings</li>
+<li>environment variables</li>
+<li>function calls.</li>
+</ul>
+<h2><a class="anchor" id="c_log_control_tool"></a>
+Log Control Tool</h2>
+<p>The log control tool is used from the command-line to control the log level filtering, log output location (syslog/stderr), and tracing for different components within a running system.</p>
+<p>Online documentation can be accessed from the log control tool by running "log help".</p>
+<p>Here are some code samples.</p>
+<p>To set the log level to INFO for a component "myComp" running in all processes with the name "myProc": </p><pre class="fragment">$ log level INFO myProc/myComp
+</pre><p>To set the log level to DEBUG for a component "myComp" running in a process with PID 1234: </p><pre class="fragment">$ log level DEBUG 1234/myComp
+</pre><p>To enable all LE_TRACE statements tagged with the keyword "foo" in a component called "myComp" running in all processes called "myProc": </p><pre class="fragment">$ log trace foo myProc/myComp
+</pre><p>To disable the trace statements tagged with "foo" in the component "myComp" in processes called "myProc": </p><pre class="fragment">$ log stoptrace foo myProc/myComp
+</pre><p>With all of the above examples "*" can be used in place of the process name or a component name (or both) to mean "all processes" and/or "all components".</p>
+<h2><a class="anchor" id="c_log_control_config"></a>
+Log Control Configuration Settings</h2>
+<dl class="section note"><dt>Note</dt><dd>The configuration settings haven't been implemented yet.</dd></dl>
+<h2><a class="anchor" id="c_log_control_environment_vars"></a>
+Environment Variables</h2>
+<p>Environment variables can be used to control the default log settings, taking effect immediately at process start-up; even before the Log Control Daemon has been connected to.</p>
+<p>Settings in the Log Control Daemon (applied through configuration and/or the log control tool) will override the environment variable settings when the process connects to the Log Control Daemon.</p>
+<h3><a class="anchor" id="c_log_control_env_level"></a>
+LE_LOG_LEVEL</h3>
+<p><code>LE_LOG_LEVEL</code> can be used to set the default log filter level for all components in the process. Valid values are:</p>
+<ul>
+<li><code>EMERGENCY</code> </li>
+<li><code>CRITICAL</code> </li>
+<li><code>ERROR</code> </li>
+<li><code>WARNING</code> </li>
+<li><code>INFO</code> </li>
+<li><code>DEBUG</code> </li>
+</ul>
+<p>For example, </p><pre class="fragment">$ export LE_LOG_LEVEL=DEBUG
+</pre><h3><a class="anchor" id="c_log_control_env_trace"></a>
+LE_LOG_TRACE</h3>
+<p><code>LE_LOG_TRACE</code> allows trace keywords to be enabled by default. The contents of this variable is a colon-separated list of keywords that should be enabled. Each keyword must be prefixed with a component name followed by a slash ('/').</p>
+<p>For example, </p><pre class="fragment">$ export LE_LOG_TRACE=framework/fdMonitor:framework/logControl
+</pre><h2><a class="anchor" id="c_log_control_functions"></a>
+Programmatic Log Control</h2>
+<p>Normally, configuration settings and the log control tool should suffice for controlling logging functionality. In some situations, it can be convenient to control logging programmatically in C.</p>
+<p><a class="el" href="le__log_8h.html#a06856e82ef8dc28a964d84db1aeee517">le_log_SetFilterLevel()</a> sets the log filter level.</p>
+<p><a class="el" href="le__log_8h.html#abb2a75e476fdc54dbd64c46c4853ab9d">le_log_GetFilterLevel()</a> gets the log filter level.</p>
+<p>Trace keywords can be enabled and disabled programmatically by calling <a class="el" href="le__log_8h.html#a7dfe7c6d02a68b473d94d83ae71ff2b3">le_log_EnableTrace()</a> and <a class="el" href="le__log_8h.html#a15495177d8e9bf1fe4603cbc6bade8fc">le_log_DisableTrace()</a>.</p>
+<h1><a class="anchor" id="c_log_format"></a>
+Log Formats</h1>
+<p>Log entries can also contain any of these:</p><ul>
+<li>timestamp (century, year, month, day, hours, minutes, seconds, milliseconds, microseconds)</li>
+<li>level (debug, info, warning, etc.) <b>or</b> trace keyword</li>
+<li>process ID</li>
+<li>component name</li>
+<li>thread name</li>
+<li>source code file name</li>
+<li>function name</li>
+<li>source code line number</li>
+</ul>
+<p>Log messages have the following format:</p>
+<pre class="fragment">Jan  3 02:37:56  INFO  | processName[pid]/componentName T=threadName | fileName.c funcName() lineNum | Message
+</pre><h1><a class="anchor" id="c_log_debugFiles"></a>
+App Crash Logs</h1>
+<p>When a process within an app faults or exits in error, a copy of the current syslog buffer is captured along with a core file of the process crash (if generated).</p>
+<p>The core file maximum size is determined by the process settings <code>maxCoreDumpFileBytes</code> and <code>maxFileBytes</code> found in the processes section of your app's <code></code>.adef file. By default, the <code>maxCoreDumpFileBytes</code> is set to 0, do not create a core file.</p>
+<p>To help save the target from flash burnout, the syslog and core files are stored in the RAM FS under /tmp. When a crash occurs, this directory is created:</p>
+<pre class="fragment"> /tmp/legato_logs/<app-name>/<exe-name>/</pre><p>The path for myApp and myExe would be:</p>
+<pre class="fragment"> /tmp/legato_logs/myApp/myExe/</pre><p>The files in that directory look like this:</p>
+<pre class="fragment"> core-myExe-1418694851
+ syslog-1418694851</pre><p>If the fault action for that app's process is to reboot the target, the output location is changed to this (and is preserved across reboots):</p>
+<pre class="fragment"> /mnt/flash/legato_logs/<app-name>/<exe-name>/</pre><p>To save on RAM and flash space, only the most recent 4 copies of each file are preserved.</p>
+<hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

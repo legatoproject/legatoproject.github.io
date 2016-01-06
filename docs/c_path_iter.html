@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Path Iterator API  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">Path Iterator API </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p><a class="el" href="le__path_iter_8h.html">API Reference</a></p>
+<hr />
+<p>Paths are text strings that contain nodes separated by character separators. Paths are used in many common applications like file system addressing, URLs, etc. so being able to parse them is quite important.</p>
+<p>The Path Iterator API is intended for general purpose use and supports UTF-8 null-terminated strings and multi-character separators.</p>
+<p>This API can be used to iterate over paths, traversing the path node-by-node. Or creating and combining paths together while ensuring that the resultant paths are properly normalized. For instance the following path:</p>
+<pre class="fragment"> /a//path/to/a///some/../place
+</pre><p>Would be normalized to the path:</p>
+<pre class="fragment"> /a/path/to/a/place
+</pre><h1><a class="anchor" id="c_pathIter_create"></a>
+Create a Path Iterator</h1>
+<p>Before iterating over a path, a path object must first be created by calling either <code><a class="el" href="le__path_iter_8h.html#a73fac1b657b752b17395c66fb1ae324b">le_pathIter_Create()</a></code>, or <code><a class="el" href="le__path_iter_8h.html#a35a38b307f9fdc0de82552e96a5a2d1d">le_pathIter_CreateForUnix()</a></code>. <code><a class="el" href="le__path_iter_8h.html#a73fac1b657b752b17395c66fb1ae324b">le_pathIter_Create()</a></code> will allow you to create an iterator for one of many different path styles. While <code><a class="el" href="le__path_iter_8h.html#a35a38b307f9fdc0de82552e96a5a2d1d">le_pathIter_CreateForUnix()</a></code> will create an iterator preconfigured for Unix style paths.</p>
+<p>All strings to this API must be formatted as UTF-8 null-terminated strings.</p>
+<p>When the path object is no longer needed, it can be deleted by calling <a class="el" href="le__path_iter_8h.html#a6b57267a2c0db0210aab96c66459f9a1">le_pathIter_Delete()</a>.</p>
+<h1><a class="anchor" id="c_pathIter_iterate"></a>
+Iterating a Path</h1>
+<p>Once an object is created, the nodes in it can be accessed using <code><a class="el" href="le__path_iter_8h.html#ad83a619dcc34ecf03da1859b3da2f57f">le_pathIter_GoToNext()</a></code>, or <code><a class="el" href="le__path_iter_8h.html#a92a740759fe5c3b0a18e39dd8c73466b">le_pathIter_GoToPrev()</a></code>. To start over at the beginning of the path call <code><a class="el" href="le__path_iter_8h.html#af4352480ab3c9ffb09e740f2899d504e">le_pathIter_GoToStart()</a></code>. To position the iterator at the end of the path, use <code><a class="el" href="le__path_iter_8h.html#ab1c0b90132171b3f3cf5cfb614329b13">le_pathIter_GoToEnd()</a></code>. On creation, the default position of the iterator is at the end of the path.</p>
+<p>Code sample, iterate over an entire path:</p>
+<div class="fragment"><div class="line"><span class="comment">// Create an iterator object, and move it to the front of the path.</span></div><div class="line"><a class="code" href="le__path_iter_8h.html#a0facb15e56e7ef896384eca415a7147a">le_pathIter_Ref_t</a> iteratorRef = <a class="code" href="le__path_iter_8h.html#a35a38b307f9fdc0de82552e96a5a2d1d">le_pathIter_CreateForUnix</a>(myPathPtr);</div><div class="line"></div><div class="line"><span class="keywordflow">if</span> (<a class="code" href="le__path_iter_8h.html#ab4ceddae696158d04fdbc1802614c5d6">le_pathIter_IsEmpty</a>(iteratorRef))</div><div class="line">{</div><div class="line"> <span class="keywordflow">return</span>;</div><div class="line">}</div><div class="line"></div><div class="line"><a class="code" href="le__path_iter_8h.html#af4352480ab3c9ffb09e740f2899d504e">le_pathIter_GoToStart</a>(iteratorRef);</div><div class="line"></div><div class="line"><span class="comment">// Now go through all of the path nodes and print out each one.</span></div><div class="line"><span class="keywordflow">do</span></div><div class="line">{</div><div class="line"> <span class="keywordtype">char</span> buffer[BUFFER_SIZE] = { 0 };</div><div class="line"></div><div class="line"> <span class="keywordflow">if</span> (<a class="code" href="le__path_iter_8h.html#ab00916d853b3a869748b0195cc2a8f11">le_pathIter_GetCurrentNode</a>(iteratorRef, buffer, BUFFER_SIZE) == LE_OK)</div><div class="line">    {</div><div class="line">        printf(<span class="stringliteral">"%s\n"</span>, buffer);</div><div class="line">    }</div><div class="line">}</div><div class="line"><span class="keywordflow">while</span> (<a class="code" href="le__path_iter_8h.html#ad83a619dcc34ecf03da1859b3da2f57f">le_pathIter_GoToNext</a>(iteratorRef) != <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86ca77a7505b0443df2fa1bab375c7267637">LE_NOT_FOUND</a>);</div><div class="line"></div><div class="line"><span class="comment">// All done with the iterator, so free it now.</span></div><div class="line"><a class="code" href="le__path_iter_8h.html#a6b57267a2c0db0210aab96c66459f9a1">le_pathIter_Delete</a>(iteratorRef);</div></div><!-- fragment --><dl class="section note"><dt>Note</dt><dd><code>le_pathIter_GetNextNode()</code> and <code>le_pathIter_GetPreviousNode()</code> treat consecutive separators as a single separator.</dd></dl>
+<h1><a class="anchor" id="c_pathIter_absoluteRelative"></a>
+Absolute versus Relative Paths</h1>
+<p>Absolute paths begin with one or more separators. Relative paths do not begin with a separator. <code><a class="el" href="le__path_iter_8h.html#a657f779873a2220f463f705298c1399f">le_pathIter_IsAbsolute()</a></code> can be used to determine if the path is absolute or relative.</p>
+<h1><a class="anchor" id="c_pathIter_modifyPath"></a>
+Modifying Paths</h1>
+<p>In addition to pure iteration, the path iterator can allow you to modify a path. For instance, you can iterate to a node in the path and use <code><a class="el" href="le__path_iter_8h.html#a04be1341536a3e330a815171e7cdbf7a">le_pathIter_Truncate()</a></code> to truncate everything at and after that point. While you can use <code><a class="el" href="le__path_iter_8h.html#ae6aa59696c54d2523009037cc78f9725">le_pathIter_Append()</a></code> to add new path nodes at the end of the path.</p>
+<p>Take the following code:</p>
+<div class="fragment"><div class="line"><a class="code" href="le__path_iter_8h.html#a0facb15e56e7ef896384eca415a7147a">le_pathIter_Ref_t</a> iteratorRef = <a class="code" href="le__path_iter_8h.html#a35a38b307f9fdc0de82552e96a5a2d1d">le_pathIter_CreateForUnix</a>(<span class="stringliteral">"/a/path/to/a/place"</span>);</div><div class="line"><span class="keywordtype">char</span> fullPath[PATH_SIZE] = { 0 };</div><div class="line"></div><div class="line"><a class="code" href="le__path_iter_8h.html#af4352480ab3c9ffb09e740f2899d504e">le_pathIter_GoToStart</a>(iteratorRef);</div><div class="line"></div><div class="line"><a class="code" href="le__path_iter_8h.html#ad83a619dcc34ecf03da1859b3da2f57f">le_pathIter_GoToNext</a>(iteratorRef);</div><div class="line"><a class="code" href="le__path_iter_8h.html#ad83a619dcc34ecf03da1859b3da2f57f">le_pathIter_GoToNext</a>(iteratorRef);</div><div class="line"><a class="code" href="le__path_iter_8h.html#ad83a619dcc34ecf03da1859b3da2f57f">le_pathIter_GoToNext</a>(iteratorRef);</div><div class="line"></div><div class="line"><a class="code" href="le__path_iter_8h.html#a04be1341536a3e330a815171e7cdbf7a">le_pathIter_Truncate</a>(iteratorRef);</div><div class="line"></div><div class="line"><a class="code" href="le__path_iter_8h.html#ae6aa59696c54d2523009037cc78f9725">le_pathIter_Append</a>(iteratorRef, <span class="stringliteral">"nowhere"</span>);</div><div class="line"></div><div class="line"><a class="code" href="le__path_iter_8h.html#a4a1c39584a779518395b41f957765283">le_pathIter_GetPath</a>(iteratorRef, fullPath, PATH_SIZE);</div><div class="line"></div><div class="line"><a class="code" href="le__log_8h.html#ac0dbbef91dc0fed449d0092ff0557b39">LE_ASSERT</a>(strcmp(fullPath, <span class="stringliteral">"/a/path/to/nowhere"</span>) == 0);</div></div><!-- fragment --><p>Note that <code><a class="el" href="le__path_iter_8h.html#ae6aa59696c54d2523009037cc78f9725">le_pathIter_Append()</a></code> will also normalize paths as it appends. So, the following example has the same effect as the previous one.</p>
+<div class="fragment"><div class="line"><a class="code" href="le__path_iter_8h.html#a0facb15e56e7ef896384eca415a7147a">le_pathIter_Ref_t</a> iteratorRef = <a class="code" href="le__path_iter_8h.html#a35a38b307f9fdc0de82552e96a5a2d1d">le_pathIter_CreateForUnix</a>(<span class="stringliteral">"/a/path/to/a/place"</span>);</div><div class="line"><span class="keywordtype">char</span> fullPath[PATH_SIZE] = { 0 };</div><div class="line"></div><div class="line"><a class="code" href="le__path_iter_8h.html#ae6aa59696c54d2523009037cc78f9725">le_pathIter_Append</a>(iteratorRef, <span class="stringliteral">"../../nowhere"</span>);</div><div class="line"><a class="code" href="le__path_iter_8h.html#a4a1c39584a779518395b41f957765283">le_pathIter_GetPath</a>(iteratorRef, fullPath, PATH_SIZE);</div><div class="line"></div><div class="line"><a class="code" href="le__path_iter_8h.html#a4a1c39584a779518395b41f957765283">le_pathIter_GetPath</a>(iteratorRef, fullPath, PATH_SIZE);</div><div class="line"></div><div class="line"><a class="code" href="le__log_8h.html#ac0dbbef91dc0fed449d0092ff0557b39">LE_ASSERT</a>(strcmp(fullPath, <span class="stringliteral">"/a/path/to/nowhere"</span>) == 0);</div></div><!-- fragment --><hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

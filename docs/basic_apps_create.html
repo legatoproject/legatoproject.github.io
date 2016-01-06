@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Create Apps  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">Create Apps </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p>These are the basic steps to build an app written in C that logs <code>Hello World.</code> when the process it's in starts up:</p>
+<ul>
+<li><a class="el" href="basic_apps_create.html#basicAppsCreate_component">Create Component</a></li>
+<li><a class="el" href="basic_apps_create.html#basicAppsCreate_adef">Create App</a></li>
+<li><a class="el" href="basic_apps_create.html#basicAppsCreate_buildApp">Build App</a></li>
+<li><a class="el" href="basic_apps_create.html#basicAppsCreate_instTarget">Install App to Target</a></li>
+<li><a class="el" href="basic_apps_create.html#basicAppsCreate_usage">Use App</a></li>
+</ul>
+<p>Then you're ready for the next level: <a class="el" href="basic_apps_add_things.html">Add Things</a>, <a class="el" href="basic_apps_i_p_c.html">Use IPC</a>, and <a class="el" href="basic_apps_comp_multi.html">Deploy Multiple Components</a>. </p>
+<h1><a class="anchor" id="basicAppsCreate_sampleDir"></a>
+Sample Directories and Files</h1>
+<p>Typical apps have directories and files that look this: </p><div class="fragment"><div class="line">helloWorld/</div><div class="line">├── helloComp</div><div class="line">│   ├── Component.cdef</div><div class="line">│   └── hello.c</div><div class="line">└── helloWorld.adef</div></div><!-- fragment --><h1><a class="anchor" id="basicAppsCreate_component"></a>
+Create Component</h1>
+<p>Complete these steps to create a component: <a class="el" href="basic_apps_create.html#basicAppsCreate_componentCreateDir">Create Directory</a>, <a class="el" href="basic_apps_create.html#basicAppsCreate_componentC">Create C Source File</a>, and <a class="el" href="basic_apps_create.html#basicAppsCreate_componentCdef">Create cdef File</a></p>
+<h2><a class="anchor" id="basicAppsCreate_componentCreateDir"></a>
+Create Directory</h2>
+<p><code>1</code>. Create a directory: the directory name will become the component name:</p>
+<pre class="fragment">$ mkdir helloComp
+</pre><h2><a class="anchor" id="basicAppsCreate_componentC"></a>
+Create C Source File</h2>
+<p><code>2</code>. Create source (implementation) file <code>hello.c:</code> </p>
+<pre class="fragment">$ gedit helloComp/hello.c
+</pre><p>It should contain the following:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include "<a class="code" href="legato_8h.html">legato.h</a>"</span></div><div class="line"></div><div class="line"><a class="code" href="le__event_loop_8h.html#abdb9187a56836a93d19cc793cbd4b7ec">COMPONENT_INIT</a></div><div class="line">{</div><div class="line"> <a class="code" href="le__log_8h.html#a4ebab29f40ee8eaaa87205fe3f9aaa13">LE_INFO</a>(<span class="stringliteral">"Hello world.\n"</span>);</div><div class="line">}</div></div><!-- fragment --><p>This looks similar to the original C <code>hello</code>, world program from Kernighan's and Richie's "The C Programming Language", except that:</p><ul>
+<li>#include <stdio.h> is replaced with #include "legato.h"</li>
+<li>main() is replaced with COMPONENT_INIT</li>
+</ul>
+<p>In fact, <a class="el" href="legato_8h.html">legato.h</a> will include stdio.h, along with a bunch of other system headers and Legato framework headers. This reduces the amount of time you have to spend including header files to get access to the functions and data types you need.</p>
+<p>The build tools figure out what language the source code is written in by looking at the filename extension. So, because our file <code>hello.c</code> ends in <code></code>.c, the build tools will try to use a C compiler to compile it into a library when it gets included in an executable.</p>
+<h3><a class="anchor" id="basicAppsCreate_componentInit"></a>
+Component Initializer</h3>
+<p>The <code>COMPONENT_INIT</code> macro is used to identify your <b> component initializer</b>. Every component must have a component initializer.</p>
+<p>By using component initializers instead of having each component implement their own main() function, it's possible to run multiple components in the same executable and even share a thread between those components.</p>
+<p>The main process thread (the main() function auto-generated by the build tools) will automatically call the component's initializer at the appropriate time during the process start-up sequence (based on the inter-dependencies between components). If component A is used by component B, then component A's initializer will be run before component B's initializer. Then component B can safely call the API functions of component A knowing that component A has already been initialized. This won't work if both components depend on each other (directly or indirectly through other components). That's one reason why dependency loops are not permitted between components. The framework will detect inter-component dependency loops at build time and terminate the build.</p>
+<p>Component initializers don't take any parameters and don't return anything, but they <b> must always return </b> . Unless they experience a fatal error, in which case they <b> must terminate the process </b> with a non-zero exit code (which can be done using <code><a class="el" href="le__log_8h.html#a54b4b07f5396e19a8d9fca74238f4795">LE_FATAL()</a></code>, <code><a class="el" href="le__log_8h.html#ac0dbbef91dc0fed449d0092ff0557b39">LE_ASSERT()</a></code>, etc. ).</p>
+<dl class="section note"><dt>Note</dt><dd>If a component's initializer doesn't return, the process will not be able to finish initializing all the components that have been deployed to it and the process's main thread will never process any events that are queued to it.</dd></dl>
+<p>In our "Hello World" example, we just use our component initializer to print <code>Hello</code> world to the log using <code><a class="el" href="le__log_8h.html#a4ebab29f40ee8eaaa87205fe3f9aaa13" title="Informational message. Normally expected. ">LE_INFO()</a></code>.</p>
+<h2><a class="anchor" id="basicAppsCreate_componentCdef"></a>
+Create cdef File</h2>
+<p><code>3</code>. Create a <code>cdef</code> file called <code>Component.cdef</code> like this:</p>
+<pre class="fragment">$ gedit helloComp/Component.cdef
+</pre><pre class="fragment"> sources:
+ {
+     hello.c
+ }</pre><p>See <a class="el" href="def_files.html">Definition Files</a> for complete info.</p>
+<h1><a class="anchor" id="basicAppsCreate_adef"></a>
+Create App</h1>
+<p>You need to create an <code>adef</code> file before you can build you app.</p>
+<p><code>4</code>. Create an <code>adef</code> file called <code>helloWorld.adef</code> like this:</p>
+<pre class="fragment">executables:
+{
+    helloWorld = ( helloComp )
+}
+
+processes:
+{
+    run:
+    {
+        (helloWorld)
+    }
+}
+</pre><p>This defines one executable called <code>helloWorld</code> implemented by <code>helloComp</code> and then starts one instance of the helloWorld executable.</p>
+<p>If your executable has multiple components, add more components inside the parentheses after the executable name: "helloWorld = ( helloComp foo bar )".</p>
+<h1><a class="anchor" id="basicAppsCreate_buildApp"></a>
+Build App</h1>
+<p><code>5</code>. Run <code>mkapp</code> to build the executable and bundle it into an app:</p>
+<p>Use the <code>-t</code> option to build for a target other than the default "localhost" target.</p>
+<p>This is how to build the helloWorld app to install on the Sierra Wireless WP85 module:</p>
+<pre class="fragment">$ mkapp -t wp85 helloWorld.adef
+</pre><dl class="section note"><dt>Note</dt><dd>If you're building an AR7, substitute <code>ar7</code> in the mkapp run command.</dd></dl>
+<h1><a class="anchor" id="basicAppsCreate_instTarget"></a>
+Install App to Target</h1>
+<p><code>6</code>. Use <code>instapp</code> to install the app on your target:</p>
+<pre class="fragment">$ instapp helloWorld.wp85.update <ip addr>
+</pre><p>The second argument is the target device's IP address where to install the app. This will connect to the target and install the app.</p>
+<h1><a class="anchor" id="basicAppsCreate_usage"></a>
+Usage</h1>
+<p>These usage tips are based on running a secure shell (SSH) to interface with the target. See <a class="el" href="getstarted_target_main.html">Setup Target Device</a> if you need to setup your target device and communications.</p>
+<h2><a class="anchor" id="basicAppsCreate_usageLogin"></a>
+Target Login</h2>
+<p>Login to your target using a secure shell connection:</p>
+<pre class="fragment">ssh root@192.168.1.2
+</pre><h2><a class="anchor" id="basicAppsCreate_usageStartApp"></a>
+Target Start App</h2>
+<p>Start your application using the <code>app start</code> command:</p>
+<pre class="fragment">app start helloWorld
+</pre><h2><a class="anchor" id="basicAppsCreate_usageViewLogs"></a>
+View Logs</h2>
+<p>Your installed app's <code>LE_INFO</code> log message will appear in the system log ("syslog") on the target device.</p>
+<p>Run <code>logread</code> (on the target) to view the system log.</p>
+<pre class="fragment"># logread
+</pre><p>Use logread's <em>-f</em> option to start monitoring the logs and display messages as they are logged.</p>
+<pre class="fragment"># logread -f
+</pre><p>Here's a code sample accessing the logs on a target device with IP address 192.168.1.2 through an ssh connection: </p><pre class="fragment">ssh root@192.168.1.2 '/sbin/logread -f'
+</pre><h2><a class="anchor" id="basicAppsCreate_usageRmApp"></a>
+Remove App</h2>
+<p>From the host PC, run <code>rmapp</code> to uninstall the app:</p>
+<pre class="fragment">$ rmapp helloWorld.wp85 <ip addr>
+</pre><p>From the target run: </p><pre class="fragment">app remove <app name>
+</pre><h2><a class="anchor" id="basicAppsCreate_usageLsApp"></a>
+List App</h2>
+<p>Use <code>lsapp</code> to list the apps installed on a target.</p>
+<pre class="fragment">$ lsapp <ip addr>
+</pre><hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Common File Format  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">Common File Format </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p>All of the definition files have the same format. They're divided into sections. Each section type has a set of permitted content, which could be simple, numerical or text values, named items, or other sections (subsections).</p>
+<h1><a class="anchor" id="defFileFormatSections"></a>
+Sections</h1>
+<p>A section always starts with a section name followed by a colon (':').</p>
+<div class="fragment"><div class="line">faultAction: restart</div><div class="line"></div><div class="line">maxFileSystemBytes: 200K</div></div><!-- fragment --><p>Sections that can have multiple content items always have curly braces around their content.</p>
+<div class="fragment"><div class="line">sources:</div><div class="line">{</div><div class="line">    helloWorld.c</div><div class="line">    myClass.cpp</div><div class="line">}</div></div><!-- fragment --><p>All sections are optional; they can be empty or omitted.</p>
+<p>Sections can be in any order, multiple occurrences are permitted, and some sections have sub-sections.</p>
+<div class="fragment"><div class="line">requires:</div><div class="line">{</div><div class="line">    file:</div><div class="line">    {</div><div class="line">        /dev/ttyS0  /dev/uart</div><div class="line">    }</div><div class="line"></div><div class="line">    file:</div><div class="line">    {</div><div class="line">        /tmp/foo  /tmp/</div><div class="line">    }</div><div class="line"></div><div class="line">    dir:</div><div class="line">    {</div><div class="line">    }</div><div class="line">}</div></div><!-- fragment --><h1><a class="anchor" id="defFileFormatNamedItems"></a>
+Named Items</h1>
+<p>A named item always begins with the item name followed by an equals sign ('=').</p>
+<div class="fragment"><div class="line">myPool = 45</div></div><!-- fragment --><p>If a named item can have multiple content items, then it must have curly braces around its content.</p>
+<div class="fragment"><div class="line">myExe = { myComponent otherComponent }</div></div><!-- fragment --><h1><a class="anchor" id="defFileFormatNumberValues"></a>
+Numerical Values</h1>
+<p>Integers are required in some sections.</p>
+<div class="fragment"><div class="line">maxFileDescriptors: 100</div></div><!-- fragment --><p>Numbers can be expressed in multiples of 1024 by adding the 'K' suffix.</p>
+<div class="fragment"><div class="line">maxFileSystemBytes: 120K</div></div><!-- fragment --><h1><a class="anchor" id="defFileFormatTextValues"></a>
+Text Values</h1>
+<p>Some sections contain text-based values. The format of these varies depending on the type of section.</p>
+<h1><a class="anchor" id="defFileFormatUsingEnvVarsIn"></a>
+Environment Variables</h1>
+<p>It's possible to use environment variables inside of <code>.sdef</code>, <code>.adef</code>, and <code>Component.cdef</code> files.</p>
+<p>This works the same way as in shell scripts, by prefixing the environment variable name with a dollar sign ($):</p>
+<div class="fragment"><div class="line">requires:</div><div class="line">{</div><div class="line">    api:</div><div class="line">    {</div><div class="line">        $BUILD_ROOT/interfaces/httpdCtrl.api</div><div class="line">    }</div><div class="line">}</div></div><!-- fragment --><p>If necessary, the variable name can also be enclosed in curly braces.</p>
+<div class="fragment"><div class="line">requires:</div><div class="line">{</div><div class="line">    api:</div><div class="line">    {</div><div class="line">        ${PRODUCT_FAMILY}_interfaces/httpdCtrl.api</div><div class="line">    }</div><div class="line">}</div></div><!-- fragment --><p>Some useful environment variables:</p>
+<ul>
+<li><code>LEGATO_ROOT</code> = path to where the Legato framework sources are located</li>
+<li><code>LEGATO_TARGET</code> = build target (e.g., wp85, localhost)</li>
+<li><code>LEGATO_BUILD</code> = shorthand for <code>$LEGATO_ROOT/build/$TARGET</code></li>
+<li><code>LEGATO_SYSROOT</code> = path of the directory containing the target device's system files</li>
+</ul>
+<h1><a class="anchor" id="defFileFormatWhitespace"></a>
+Whitespace</h1>
+<p>Tabs, spaces, new-lines, carriage-returns and comments act as token separators only, and are otherwise all ignored. Consequently, choice of indentation and spacing style is relatively unrestricted.</p>
+<h1><a class="anchor" id="defFileFormatComments"></a>
+Comments</h1>
+<p>Comments can be included using </p><div class="fragment"><div class="line"><span class="comment">// C++-style one-line comments.</span></div><div class="line"></div><div class="line"><span class="comment">/* or</span></div><div class="line"><span class="comment">   C-style multi-line comments. */</span></div></div><!-- fragment --><h1><a class="anchor" id="defFileFormatSample"></a>
+Sample</h1>
+<div class="fragment"><div class="line"><span class="comment">/* Component.cdef file for a hypothetical web server component that provides a control API</span></div><div class="line"><span class="comment"> * (defined in httpdCtrl.api) that allows other apps to start and stop the web server via IPC.</span></div><div class="line"><span class="comment"> */</span></div><div class="line"></div><div class="line">bundles:</div><div class="line">{</div><div class="line"> <span class="comment">// Include all the web pages from the build host in the application, and have them appear</span></div><div class="line"> <span class="comment">// to the application under /var/www.</span></div><div class="line">    dir:</div><div class="line">    {</div><div class="line">        htdocs   /var/www</div><div class="line">    }</div><div class="line">}</div><div class="line"></div><div class="line">provides :     <span class="comment">// Note that space is allowed between the section name and the colon.</span></div><div class="line">{</div><div class="line">    api:    {   httpdCtrl.api</div><div class="line">            }</div><div class="line">}</div><div class="line"></div><div class="line">sources: {httpd.c}</div></div><!-- fragment --><hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,699 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>le_eventLoop.h File Reference - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Reference.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a href="build_apps_documentation.html">Documentation</a><a class="link-selected" href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="summary">
+<a href="#define-members">Macros</a> |
+<a href="#typedef-members">Typedefs</a> |
+<a href="#func-members">Functions</a> </div>
+<div class="headertitle">
+<h1 class="title">le_eventLoop.h File Reference</h1> </div>
+</div><div class="contents">
+<p><a href="le__event_loop_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a3973e227dd6ff4e79b2f97c42b105662"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__event_loop_8h.html#a3973e227dd6ff4e79b2f97c42b105662">LE_CI_LINKAGE</a></td></tr>
+<tr class="separator:a3973e227dd6ff4e79b2f97c42b105662"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:abdb9187a56836a93d19cc793cbd4b7ec"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__event_loop_8h.html#abdb9187a56836a93d19cc793cbd4b7ec">COMPONENT_INIT</a>   <a class="el" href="le__event_loop_8h.html#a3973e227dd6ff4e79b2f97c42b105662">LE_CI_LINKAGE</a> <a class="el" href="le__basics_8h.html#a1661bfbb29c2e0372ca9f0c556a8fc24">LE_SHARED</a> void _le_event_InitializeComponent(void)</td></tr>
+<tr class="separator:abdb9187a56836a93d19cc793cbd4b7ec"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a47faa85db57fa5243f12a4a1e55fbfec"><td align="right" class="memItemLeft" valign="top"><a class="anchor" id="a47faa85db57fa5243f12a4a1e55fbfec"></a>
+#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__event_loop_8h.html#a47faa85db57fa5243f12a4a1e55fbfec">LE_EVENT_INIT_HANDLER</a>   <a class="el" href="le__event_loop_8h.html#abdb9187a56836a93d19cc793cbd4b7ec">COMPONENT_INIT</a></td></tr>
+<tr class="memdesc:a47faa85db57fa5243f12a4a1e55fbfec"><td class="mdescLeft"> </td><td class="mdescRight">Deprecated name for <a class="el" href="le__event_loop_8h.html#abdb9187a56836a93d19cc793cbd4b7ec">COMPONENT_INIT</a>. <br /></td></tr>
+<tr class="separator:a47faa85db57fa5243f12a4a1e55fbfec"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ae6e351b38bc95954f159d16d19d2d55c"><td align="right" class="memItemLeft" valign="top">typedef struct le_event_Id * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__event_loop_8h.html#ae6e351b38bc95954f159d16d19d2d55c">le_event_Id_t</a></td></tr>
+<tr class="separator:ae6e351b38bc95954f159d16d19d2d55c"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ada421dec46f51fcb3421ef7058f16944"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__event_loop_8h.html#ada421dec46f51fcb3421ef7058f16944">le_event_HandlerFunc_t</a>) (void *reportPtr)</td></tr>
+<tr class="separator:ada421dec46f51fcb3421ef7058f16944"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a325afcc96343fde371e4c63639ace2ef"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__event_loop_8h.html#a325afcc96343fde371e4c63639ace2ef">le_event_LayeredHandlerFunc_t</a>) (void *reportPtr, void *secondLayerFunc)</td></tr>
+<tr class="separator:a325afcc96343fde371e4c63639ace2ef"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a6f86581d4d2bf24647d5efaff1046d5d"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__event_loop_8h.html#a6f86581d4d2bf24647d5efaff1046d5d">le_event_DeferredFunc_t</a>) (void *param1Ptr, void *param2Ptr)</td></tr>
+<tr class="separator:a6f86581d4d2bf24647d5efaff1046d5d"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ae7ab96b8e3441b3d484fcf52aa7a9dad"><td align="right" class="memItemLeft" valign="top">typedef struct le_event_Handler * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__event_loop_8h.html#ae7ab96b8e3441b3d484fcf52aa7a9dad">le_event_HandlerRef_t</a></td></tr>
+<tr class="separator:ae7ab96b8e3441b3d484fcf52aa7a9dad"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a41a96eb3affb07184b519164cf54e213"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__event_loop_8h.html#ae6e351b38bc95954f159d16d19d2d55c">le_event_Id_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__event_loop_8h.html#a41a96eb3affb07184b519164cf54e213">le_event_CreateId</a> (const char *name, size_t payloadSize)</td></tr>
+<tr class="separator:a41a96eb3affb07184b519164cf54e213"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a31bef8276ad0e911fd84fb710d58ca2b"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__event_loop_8h.html#ae6e351b38bc95954f159d16d19d2d55c">le_event_Id_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__event_loop_8h.html#a31bef8276ad0e911fd84fb710d58ca2b">le_event_CreateIdWithRefCounting</a> (const char *name)</td></tr>
+<tr class="separator:a31bef8276ad0e911fd84fb710d58ca2b"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ae65a65b4111618f47d7e6d57a48289e5"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__event_loop_8h.html#ae7ab96b8e3441b3d484fcf52aa7a9dad">le_event_HandlerRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__event_loop_8h.html#ae65a65b4111618f47d7e6d57a48289e5">le_event_AddHandler</a> (const char *name, <a class="el" href="le__event_loop_8h.html#ae6e351b38bc95954f159d16d19d2d55c">le_event_Id_t</a> eventId, <a class="el" href="le__event_loop_8h.html#ada421dec46f51fcb3421ef7058f16944">le_event_HandlerFunc_t</a> handlerFunc)</td></tr>
+<tr class="separator:ae65a65b4111618f47d7e6d57a48289e5"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a8b906d38935f64953482f42c745e1c18"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__event_loop_8h.html#ae7ab96b8e3441b3d484fcf52aa7a9dad">le_event_HandlerRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__event_loop_8h.html#a8b906d38935f64953482f42c745e1c18">le_event_AddLayeredHandler</a> (const char *name, <a class="el" href="le__event_loop_8h.html#ae6e351b38bc95954f159d16d19d2d55c">le_event_Id_t</a> eventId, <a class="el" href="le__event_loop_8h.html#a325afcc96343fde371e4c63639ace2ef">le_event_LayeredHandlerFunc_t</a> firstLayerFunc, void *secondLayerFunc)</td></tr>
+<tr class="separator:a8b906d38935f64953482f42c745e1c18"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ae31a85d4acbef72451b5411a613eea58"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__event_loop_8h.html#ae31a85d4acbef72451b5411a613eea58">le_event_RemoveHandler</a> (<a class="el" href="le__event_loop_8h.html#ae7ab96b8e3441b3d484fcf52aa7a9dad">le_event_HandlerRef_t</a> handlerRef)</td></tr>
+<tr class="separator:ae31a85d4acbef72451b5411a613eea58"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ae3ffe6990b70fb572b4eef06739b4f54"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__event_loop_8h.html#ae3ffe6990b70fb572b4eef06739b4f54">le_event_Report</a> (<a class="el" href="le__event_loop_8h.html#ae6e351b38bc95954f159d16d19d2d55c">le_event_Id_t</a> eventId, void *payloadPtr, size_t payloadSize)</td></tr>
+<tr class="separator:ae3ffe6990b70fb572b4eef06739b4f54"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:af0277165493b512216fabb6086ec7d9c"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__event_loop_8h.html#af0277165493b512216fabb6086ec7d9c">le_event_ReportWithRefCounting</a> (<a class="el" href="le__event_loop_8h.html#ae6e351b38bc95954f159d16d19d2d55c">le_event_Id_t</a> eventId, void *objectPtr)</td></tr>
+<tr class="separator:af0277165493b512216fabb6086ec7d9c"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ae0c4307a9715794c720e525032aa0bfd"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__event_loop_8h.html#ae0c4307a9715794c720e525032aa0bfd">le_event_SetContextPtr</a> (<a class="el" href="le__event_loop_8h.html#ae7ab96b8e3441b3d484fcf52aa7a9dad">le_event_HandlerRef_t</a> handlerRef, void *contextPtr)</td></tr>
+<tr class="separator:ae0c4307a9715794c720e525032aa0bfd"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a1c73916295cc9e17af07e02756aa86c9"><td align="right" class="memItemLeft" valign="top">void * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__event_loop_8h.html#a1c73916295cc9e17af07e02756aa86c9">le_event_GetContextPtr</a> (void)</td></tr>
+<tr class="separator:a1c73916295cc9e17af07e02756aa86c9"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a6dcc88f96060c5bc107a81a978132f38"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__event_loop_8h.html#a6dcc88f96060c5bc107a81a978132f38">le_event_QueueFunction</a> (<a class="el" href="le__event_loop_8h.html#a6f86581d4d2bf24647d5efaff1046d5d">le_event_DeferredFunc_t</a> func, void *param1Ptr, void *param2Ptr)</td></tr>
+<tr class="separator:a6dcc88f96060c5bc107a81a978132f38"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a228da2d1f53ffa74517f108b0dcfa4d9"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__event_loop_8h.html#a228da2d1f53ffa74517f108b0dcfa4d9">le_event_QueueFunctionToThread</a> (<a class="el" href="le__thread_8h.html#a32121104c6b4ca39008eb79a4d6862f2">le_thread_Ref_t</a> thread, <a class="el" href="le__event_loop_8h.html#a6f86581d4d2bf24647d5efaff1046d5d">le_event_DeferredFunc_t</a> func, void *param1Ptr, void *param2Ptr)</td></tr>
+<tr class="separator:a228da2d1f53ffa74517f108b0dcfa4d9"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ae313b457994371c658be9fe0494a01ff"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__event_loop_8h.html#ae313b457994371c658be9fe0494a01ff">le_event_RunLoop</a> (void)</td></tr>
+<tr class="separator:ae313b457994371c658be9fe0494a01ff"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a12ce7f92f4bc6f5167d5a6ef86d7d0b1"><td align="right" class="memItemLeft" valign="top">int </td><td class="memItemRight" valign="bottom"><a class="el" href="le__event_loop_8h.html#a12ce7f92f4bc6f5167d5a6ef86d7d0b1">le_event_GetFd</a> (void)</td></tr>
+<tr class="separator:a12ce7f92f4bc6f5167d5a6ef86d7d0b1"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a096222e98f6a0d92a79722018a752b58"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__event_loop_8h.html#a096222e98f6a0d92a79722018a752b58">le_event_ServiceLoop</a> (void)</td></tr>
+<tr class="separator:a096222e98f6a0d92a79722018a752b58"><td class="memSeparator" colspan="2"> </td></tr>
+</table>
+<a id="details" name="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Legato <a class="el" href="c_event_loop.html">Event Loop API</a> include file.</p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="abdb9187a56836a93d19cc793cbd4b7ec"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define COMPONENT_INIT   <a class="el" href="le__event_loop_8h.html#a3973e227dd6ff4e79b2f97c42b105662">LE_CI_LINKAGE</a> <a class="el" href="le__basics_8h.html#a1661bfbb29c2e0372ca9f0c556a8fc24">LE_SHARED</a> void _le_event_InitializeComponent(void)</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Initialization event handler function. </p>
+</div>
+</div>
+<a class="anchor" id="a3973e227dd6ff4e79b2f97c42b105662"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_CI_LINKAGE</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Initialization event handler function declaration macro.</p>
+<p>Use this macro instead of a normal function prototype to create an Initialization Event Handler function. E.g.,</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span> COMPONENT_INIT</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span> {</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>     // Do my initialization here...</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span> }</div></div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>Nothing. </dd></dl>
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a class="anchor" id="a6f86581d4d2bf24647d5efaff1046d5d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef void(* le_event_DeferredFunc_t) (void *param1Ptr, void *param2Ptr)</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Prototype for deferred functions look like this: </p><dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramname">param1Ptr</td><td>[in] Value passed in as param1Ptr to <a class="el" href="le__event_loop_8h.html#a6dcc88f96060c5bc107a81a978132f38">le_event_QueueFunction()</a>. </td></tr>
+<tr><td class="paramname">param2Ptr</td><td>[in] Value passed in as param2Ptr to <a class="el" href="le__event_loop_8h.html#a6dcc88f96060c5bc107a81a978132f38">le_event_QueueFunction()</a>.</td></tr>
+</table>
+</dd>
+</dl>
+<p>See <a class="el" href="c_event_loop.html#c_event_deferredFunctionCalls">Deferred Function Calls</a> for more information. </p>
+</div>
+</div>
+<a class="anchor" id="ada421dec46f51fcb3421ef7058f16944"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef void(* le_event_HandlerFunc_t) (void *reportPtr)</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Prototype for publish-subscribe event handler functions look like this:</p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramname">reportPtr</td><td>[in] Pointer to the event report payload.</td></tr>
+</table>
+</dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>The reportPtr is only valid until the handler function returns. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ae7ab96b8e3441b3d484fcf52aa7a9dad"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef struct le_event_Handler* <a class="el" href="le__event_loop_8h.html#ae7ab96b8e3441b3d484fcf52aa7a9dad">le_event_HandlerRef_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Handler reference.</p>
+<p>Used to refer to handlers that have been added for events. Only needed if you want to set the handler's context pointer or need to remove the handler later. </p>
+</div>
+</div>
+<a class="anchor" id="ae6e351b38bc95954f159d16d19d2d55c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef struct le_event_Id* <a class="el" href="le__event_loop_8h.html#ae6e351b38bc95954f159d16d19d2d55c">le_event_Id_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Event ID.</p>
+<p>An Event ID ties event reports to event handlers. See <a class="el" href="c_event_loop.html#c_event_publishSubscribe">Publish-Subscribe Events</a> for more details. </p>
+</div>
+</div>
+<a class="anchor" id="a325afcc96343fde371e4c63639ace2ef"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef void(* le_event_LayeredHandlerFunc_t) (void *reportPtr, void *secondLayerFunc)</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Prototype for the first layer of a layered publish-subscribe event handler function look like this:</p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramname">reportPtr</td><td>[in] Pointer to the event report payload.</td></tr>
+<tr><td class="paramname">secondLayerFunc</td><td>[in] Address of the second layer handler function.</td></tr>
+</table>
+</dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>The reportPtr is only valid until the handler function returns. </dd></dl>
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ae65a65b4111618f47d7e6d57a48289e5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__event_loop_8h.html#ae7ab96b8e3441b3d484fcf52aa7a9dad">le_event_HandlerRef_t</a> le_event_AddHandler </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>name</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="le__event_loop_8h.html#ae6e351b38bc95954f159d16d19d2d55c">le_event_Id_t</a> </td>
+<td class="paramname"><em>eventId</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="le__event_loop_8h.html#ada421dec46f51fcb3421ef7058f16944">le_event_HandlerFunc_t</a> </td>
+<td class="paramname"><em>handlerFunc</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Adds a handler function for a publish-subscribe event ID.</p>
+<p>Tells the calling thread event loop to call a specified handler function when a defined event reaches the front of the event queue.</p>
+<dl class="section return"><dt>Returns</dt><dd>Handler reference, only needed to remove the handler (using <a class="el" href="le__event_loop_8h.html#ae31a85d4acbef72451b5411a613eea58">le_event_RemoveHandler()</a> ). Can be ignored if the handler will never be removed.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Doesn't return on failure, there's no need to check the return value for errors. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Handler name. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">eventId</td><td>Event ID. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">handlerFunc</td><td>Handler function. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a8b906d38935f64953482f42c745e1c18"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__event_loop_8h.html#ae7ab96b8e3441b3d484fcf52aa7a9dad">le_event_HandlerRef_t</a> le_event_AddLayeredHandler </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>name</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="le__event_loop_8h.html#ae6e351b38bc95954f159d16d19d2d55c">le_event_Id_t</a> </td>
+<td class="paramname"><em>eventId</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="le__event_loop_8h.html#a325afcc96343fde371e4c63639ace2ef">le_event_LayeredHandlerFunc_t</a> </td>
+<td class="paramname"><em>firstLayerFunc</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">void * </td>
+<td class="paramname"><em>secondLayerFunc</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Adds a layered handler function for a publish-subscribe event ID.</p>
+<p>Tells the calling thread event loop to call a specified handler function when a defined event reaches the front of the event queue. Passes the required handler functions when called.</p>
+<p>This is intended for use in implementing <a class="el" href="c_event_loop.html#c_event_layeredPublishSubscribe">Layered Publish-Subscribe Handlers</a>.</p>
+<dl class="section return"><dt>Returns</dt><dd>Handler reference, only needed for later removal of the handler (using <a class="el" href="le__event_loop_8h.html#ae31a85d4acbef72451b5411a613eea58">le_event_RemoveHandler()</a> ). Can be ignored if the handler will never be removed.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Doesn't return on failure, there's no need to check the return value for errors. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Handler name. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">eventId</td><td>Event ID. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">firstLayerFunc</td><td>Pointer to first-layer handler func. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">secondLayerFunc</td><td>Pointer to second-layer handler func. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a41a96eb3affb07184b519164cf54e213"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__event_loop_8h.html#ae6e351b38bc95954f159d16d19d2d55c">le_event_Id_t</a> le_event_CreateId </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>name</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>payloadSize</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Create a new event ID.</p>
+<dl class="section return"><dt>Returns</dt><dd>Event ID.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Doesn't return on failure, there's no need to check the return value for errors. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Name of the event ID. (Named for diagnostic purposes.) </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">payloadSize</td><td>Data payload size (in bytes) of the event reports (can be 0). </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a31bef8276ad0e911fd84fb710d58ca2b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__event_loop_8h.html#ae6e351b38bc95954f159d16d19d2d55c">le_event_Id_t</a> le_event_CreateIdWithRefCounting </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>name</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Create a new event ID to report events where the payload is a pointer to a reference-counted memory pool object allocated using the <a class="el" href="c_memory.html">Dynamic Memory Allocation API</a>.</p>
+<dl class="section return"><dt>Returns</dt><dd>Event ID.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Doesn't return on failure, there's no need to check the return value for errors. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Name of the event ID. (Named for diagnostic purposes.) </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a1c73916295cc9e17af07e02756aa86c9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void* le_event_GetContextPtr </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Fetches the context pointer for the currently running event handler.</p>
+<p>Can only be called from within an event handler function.</p>
+<dl class="section return"><dt>Returns</dt><dd>Context pointer that was set using <a class="el" href="le__event_loop_8h.html#ae0c4307a9715794c720e525032aa0bfd">le_event_SetContextPtr()</a>, or NULL if <a class="el" href="le__event_loop_8h.html#ae0c4307a9715794c720e525032aa0bfd">le_event_SetContextPtr()</a> was not called. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a12ce7f92f4bc6f5167d5a6ef86d7d0b1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">int le_event_GetFd </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Fetches a file descriptor that will appear readable to poll(), select(), epoll_wait(), etc. when the calling thread's Event Loop needs servicing (via a call to <a class="el" href="le__event_loop_8h.html#a096222e98f6a0d92a79722018a752b58">le_event_ServiceLoop()</a>).</p>
+<dl class="section warning"><dt>Warning</dt><dd>Only intended for use when integrating with legacy POSIX-based software that cannot be easily refactored to use the Legato Event Loop. The preferred approach is to call <a class="el" href="le__event_loop_8h.html#ae313b457994371c658be9fe0494a01ff">le_event_RunLoop()</a>.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The file descriptor. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a6dcc88f96060c5bc107a81a978132f38"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_event_QueueFunction </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__event_loop_8h.html#a6f86581d4d2bf24647d5efaff1046d5d">le_event_DeferredFunc_t</a> </td>
+<td class="paramname"><em>func</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">void * </td>
+<td class="paramname"><em>param1Ptr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">void * </td>
+<td class="paramname"><em>param2Ptr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Queue a function onto the calling thread's Event Queue. When it reaches the head of the Event Queue, it will be called by the calling thread's Event Loop. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>Function to be called later. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">param1Ptr</td><td>Value to be passed to the function when called. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">param2Ptr</td><td>Value to be passed to the function when called. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a228da2d1f53ffa74517f108b0dcfa4d9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_event_QueueFunctionToThread </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__thread_8h.html#a32121104c6b4ca39008eb79a4d6862f2">le_thread_Ref_t</a> </td>
+<td class="paramname"><em>thread</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="le__event_loop_8h.html#a6f86581d4d2bf24647d5efaff1046d5d">le_event_DeferredFunc_t</a> </td>
+<td class="paramname"><em>func</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">void * </td>
+<td class="paramname"><em>param1Ptr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">void * </td>
+<td class="paramname"><em>param2Ptr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Queue a function onto a specific thread's Event Queue. When it reaches the head of that Event Queue, it will be called by that thread's Event Loop. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">thread</td><td>Thread to queue the function to. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>The function. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">param1Ptr</td><td>Value to be passed to the function when called. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">param2Ptr</td><td>Value to be passed to the function when called. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ae31a85d4acbef72451b5411a613eea58"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_event_RemoveHandler </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__event_loop_8h.html#ae7ab96b8e3441b3d484fcf52aa7a9dad">le_event_HandlerRef_t</a> </td>
+<td class="paramname"><em>handlerRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Remove Handler</p>
+<p>Removes a previously added event handler function. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">handlerRef</td><td>Handler reference. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ae3ffe6990b70fb572b4eef06739b4f54"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_event_Report </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__event_loop_8h.html#ae6e351b38bc95954f159d16d19d2d55c">le_event_Id_t</a> </td>
+<td class="paramname"><em>eventId</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">void * </td>
+<td class="paramname"><em>payloadPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>payloadSize</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Report an Event</p>
+<p>Queues an Event Report to any and all event loops that have handlers for that event.</p>
+<dl class="section note"><dt>Note</dt><dd>Copies the event report payload, so it is safe to release or reuse the buffer that payloadPtr points to as soon as <a class="el" href="le__event_loop_8h.html#ae3ffe6990b70fb572b4eef06739b4f54">le_event_Report()</a> returns. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">eventId</td><td>Event ID created using <a class="el" href="le__event_loop_8h.html#a41a96eb3affb07184b519164cf54e213">le_event_CreateId()</a>. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">payloadPtr</td><td>Pointer to the payload bytes to be copied into the report. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">payloadSize</td><td>Number of bytes of payload to copy into the report. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="af0277165493b512216fabb6086ec7d9c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_event_ReportWithRefCounting </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__event_loop_8h.html#ae6e351b38bc95954f159d16d19d2d55c">le_event_Id_t</a> </td>
+<td class="paramname"><em>eventId</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">void * </td>
+<td class="paramname"><em>objectPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Sends an Event Report with a pointer to a reference-counted object as its payload. The pointer must have been obtained from a memory pool using the <a class="el" href="c_memory.html">Dynamic Memory Allocation API</a>.</p>
+<p>Calling this function passes ownership of the reference to the Event Loop API. The Event Loop API will ensure that the reference is properly counted while it passes through the event report dispatching system. Each handler will receive one counted reference to the object, so the handler is responsible for releasing the object when it is finished with it. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">eventId</td><td>Event ID created using <a class="el" href="le__event_loop_8h.html#a31bef8276ad0e911fd84fb710d58ca2b">le_event_CreateIdWithRefCounting()</a>. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">objectPtr</td><td>Pointer to an object allocated from a memory pool (using the <a class="el" href="c_memory.html">Dynamic Memory Allocation API</a>). </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ae313b457994371c658be9fe0494a01ff"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_event_RunLoop </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Runs the event loop for the calling thread.</p>
+<p>This starts processing events by the calling thread.</p>
+<p>Can only be called once for each thread, and must never be called in the process's main thread.</p>
+<dl class="section note"><dt>Note</dt><dd>Function never returns. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a096222e98f6a0d92a79722018a752b58"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_event_ServiceLoop </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Services the calling thread's Event Loop.</p>
+<dl class="section warning"><dt>Warning</dt><dd>Only intended for use when integrating with legacy POSIX-based software that can't be easily refactored to use the Legato Event Loop. The preferred approach is to call <a class="el" href="le__event_loop_8h.html#ae313b457994371c658be9fe0494a01ff">le_event_RunLoop()</a>.</dd></dl>
+<p>See also: <a class="el" href="le__event_loop_8h.html#a12ce7f92f4bc6f5167d5a6ef86d7d0b1">le_event_GetFd()</a>.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK if there is more to be done. DO NOT GO BACK TO SLEEP without calling <a class="el" href="le__event_loop_8h.html#a096222e98f6a0d92a79722018a752b58">le_event_ServiceLoop()</a> again.</li>
+<li>LE_WOULD_BLOCK if there is nothing left to do for now and it is safe to go back to sleep. </li>
+</ul>
+</dd></dl>
+</div>
+</div>
+<a class="anchor" id="ae0c4307a9715794c720e525032aa0bfd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_event_SetContextPtr </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__event_loop_8h.html#ae7ab96b8e3441b3d484fcf52aa7a9dad">le_event_HandlerRef_t</a> </td>
+<td class="paramname"><em>handlerRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">void * </td>
+<td class="paramname"><em>contextPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the context pointer for a given event handler.</p>
+<p>This can later be retrieved using <a class="el" href="le__event_loop_8h.html#a1c73916295cc9e17af07e02756aa86c9">le_event_GetContextPtr()</a> from within the handler function when it is called. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">handlerRef</td><td>Handler where context pointer is to be set. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">contextPtr</td><td>Context pointer value. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Software Package Manager  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Legato Documentation</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Legato Documentation')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">Software Package Manager </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p>You can install Legato using the Developer Studio Software Package Manager (SPM).</p>
+<h1><a class="anchor" id="getstartedDSspm_installSPMapt"></a>
+Setup apt sources</h1>
+<p>Run the follow to reference the Developer Studio APT repository:</p>
+<div class="fragment"><div class="line">wget http:<span class="comment">//updatesite.sierrawireless.com/developerStudio3/debian/devstudio.list -O - | sudo tee /etc/apt/sources.list.d/devstudio.list</span></div><div class="line">wget http:<span class="comment">//updatesite.sierrawireless.com/developerStudio3/debian/devstudio.key -O - | sudo apt-key add -</span></div><div class="line">sudo apt-<span class="keyword">get</span> update</div></div><!-- fragment --><h1><a class="anchor" id="getstartedDSspm_installSPM"></a>
+Install Packages</h1>
+<p>Install Software Package Manager for Legato by running: </p><pre class="fragment">sudo apt-get install devstudio-legato-spm
+</pre><h1><a class="anchor" id="getstartedDSspm_useSPM"></a>
+Use SPM</h1>
+<p>Here's how to use the SPM.</p>
+<h2><a class="anchor" id="getstartedComLine_useSPMoptions"></a>
+Run Options</h2>
+<p><b><code>legato-spm [OPTION]</code></b></p>
+<p>Options:</p>
+<pre class="fragment">tree </pre> <blockquote class="doxtable">
+<p>Displays repository tree of available releases and modules. </p>
+</blockquote>
+<pre class="fragment">-r <release> -m <module> browse</pre> <blockquote class="doxtable">
+<p>Displays available packages that can be installed from the repository for a specified release and module. </p>
+</blockquote>
+<pre class="fragment">-r <release> -m <module> install</pre> <blockquote class="doxtable">
+<p>Installs packages from the repository for a specified release and module. </p>
+</blockquote>
+<pre class="fragment">list</pre> <blockquote class="doxtable">
+<p>Lists currently installed Legato packages. </p>
+</blockquote>
+<h2><a class="anchor" id="getstartedDSspm_useSPMpkgs"></a>
+Packages Installed</h2>
+<p>Packages are installed by default to your <code>~/</code>.devstudio/packages directory: </p><pre class="fragment">legato.framework.* - Prebuilt Legato framework packages
+legato.toolchain.* - GCC cross compiler Toolchains
+legato.devimg.* - Device Images allowing to upgrade Legato devices system software
+</pre><h2><a class="anchor" id="getstartedDSspm_useSPMconfig"></a>
+Config Legato</h2>
+<p>Use this script to confirgure Legato:</p>
+<pre class="fragment">source ~/.devstudio/packages/legato.sdk.VERSION/resources/configlegatoenv
+</pre><p>Your environment is now ready to <a class="el" href="getstarted_sample_apps.html">Use Sample Apps</a>. <br />
+</p>
+<hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

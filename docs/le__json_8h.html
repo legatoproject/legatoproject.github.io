@@ -1,0 +1,600 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>le_json.h File Reference - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Reference.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a href="build_apps_documentation.html">Documentation</a><a class="link-selected" href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="summary">
+<a href="#typedef-members">Typedefs</a> |
+<a href="#enum-members">Enumerations</a> |
+<a href="#func-members">Functions</a> </div>
+<div class="headertitle">
+<h1 class="title">le_json.h File Reference</h1> </div>
+</div><div class="contents">
+<p><a href="le__json_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a3d0e516a3f0893f4b27d0e0e81d9615f"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__json_8h.html#a3d0e516a3f0893f4b27d0e0e81d9615f">le_json_EventHandler_t</a>) (<a class="el" href="le__json_8h.html#afc256534945eddc76d57b21d0938b7a9">le_json_Event_t</a> event)</td></tr>
+<tr class="separator:a3d0e516a3f0893f4b27d0e0e81d9615f"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a04bc128775367c9eff2e67861c178d2e"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__json_8h.html#a04bc128775367c9eff2e67861c178d2e">le_json_ErrorHandler_t</a>) (<a class="el" href="le__json_8h.html#ae16b8d9006b37bd7efb69869d8b8bc21">le_json_Error_t</a> error, const char *msg)</td></tr>
+<tr class="separator:a04bc128775367c9eff2e67861c178d2e"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ac245fec94486c2d3a01a270c1188d023"><td align="right" class="memItemLeft" valign="top">typedef struct le_json_ParsingSession * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__json_8h.html#ac245fec94486c2d3a01a270c1188d023">le_json_ParsingSessionRef_t</a></td></tr>
+<tr class="separator:ac245fec94486c2d3a01a270c1188d023"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:afc256534945eddc76d57b21d0938b7a9"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__json_8h.html#afc256534945eddc76d57b21d0938b7a9">le_json_Event_t</a> { <br />
+  <a class="el" href="le__json_8h.html#afc256534945eddc76d57b21d0938b7a9a3bd8d3a16fa9b67c63d1765ed32125df">LE_JSON_OBJECT_START</a>, 
+<a class="el" href="le__json_8h.html#afc256534945eddc76d57b21d0938b7a9a01fdebcf839ef494319666436b90c540">LE_JSON_OBJECT_MEMBER</a>, 
+<a class="el" href="le__json_8h.html#afc256534945eddc76d57b21d0938b7a9a7f09b48319727fdd1713b0295a6abe2e">LE_JSON_OBJECT_END</a>, 
+<a class="el" href="le__json_8h.html#afc256534945eddc76d57b21d0938b7a9a8c32a78504f336076f8da84e5b9b3dfa">LE_JSON_ARRAY_START</a>, 
+<br />
+  <a class="el" href="le__json_8h.html#afc256534945eddc76d57b21d0938b7a9a9c467d71cfa19407f9175136dbac80d7">LE_JSON_ARRAY_END</a>, 
+<a class="el" href="le__json_8h.html#afc256534945eddc76d57b21d0938b7a9a4d74ed91c726c958fdbe8b9dcddb3c0b">LE_JSON_STRING</a>, 
+<a class="el" href="le__json_8h.html#afc256534945eddc76d57b21d0938b7a9a6306cee51e5ae46b3f82f5d9bcd1e17d">LE_JSON_NUMBER</a>, 
+<a class="el" href="le__json_8h.html#afc256534945eddc76d57b21d0938b7a9a47747bb38466475b6d56d5c770b21ba3">LE_JSON_TRUE</a>, 
+<br />
+  <a class="el" href="le__json_8h.html#afc256534945eddc76d57b21d0938b7a9a0f3bc62d76a0d89575601bd901121af3">LE_JSON_FALSE</a>, 
+<a class="el" href="le__json_8h.html#afc256534945eddc76d57b21d0938b7a9a4a9207b6e1fbd1cdc80b1ab3c47d4230">LE_JSON_NULL</a>, 
+<a class="el" href="le__json_8h.html#afc256534945eddc76d57b21d0938b7a9a881fd6c9c97b42be3ca3760c598472a8">LE_JSON_DOC_END</a>
+<br />
+ }</td></tr>
+<tr class="separator:afc256534945eddc76d57b21d0938b7a9"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ae16b8d9006b37bd7efb69869d8b8bc21"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__json_8h.html#ae16b8d9006b37bd7efb69869d8b8bc21">le_json_Error_t</a> { <a class="el" href="le__json_8h.html#ae16b8d9006b37bd7efb69869d8b8bc21addf2f30f990a6abe9f51541bef99bf0d">LE_JSON_SYNTAX_ERROR</a>, 
+<a class="el" href="le__json_8h.html#ae16b8d9006b37bd7efb69869d8b8bc21a646f9c0f20fde13ed1e0e6f8591affc8">LE_JSON_READ_ERROR</a>
+ }</td></tr>
+<tr class="separator:ae16b8d9006b37bd7efb69869d8b8bc21"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:afe24167ad9e64118dcd2c29b6c159c5b"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__json_8h.html#afe24167ad9e64118dcd2c29b6c159c5b">le_json_ContextType_t</a> { <br />
+  <a class="el" href="le__json_8h.html#afe24167ad9e64118dcd2c29b6c159c5baedf94d30fb770e905861ba037ad07138">LE_JSON_CONTEXT_DOC</a>, 
+<a class="el" href="le__json_8h.html#afe24167ad9e64118dcd2c29b6c159c5ba0d63aee47f71a98622ba7dd39447b876">LE_JSON_CONTEXT_OBJECT</a>, 
+<a class="el" href="le__json_8h.html#afe24167ad9e64118dcd2c29b6c159c5ba1f9395567e149b29f2c0a4a248be7190">LE_JSON_CONTEXT_MEMBER</a>, 
+<a class="el" href="le__json_8h.html#afe24167ad9e64118dcd2c29b6c159c5ba66fafbcd058d9809674853ef579d4cd2">LE_JSON_CONTEXT_ARRAY</a>, 
+<br />
+  <a class="el" href="le__json_8h.html#afe24167ad9e64118dcd2c29b6c159c5ba5a0d9c46c36f797600877478b286f41d">LE_JSON_CONTEXT_STRING</a>, 
+<a class="el" href="le__json_8h.html#afe24167ad9e64118dcd2c29b6c159c5bae5f7395f377f662ea9ec06536f2d4808">LE_JSON_CONTEXT_NUMBER</a>, 
+<a class="el" href="le__json_8h.html#afe24167ad9e64118dcd2c29b6c159c5bace8e3b47c95fb5c42ff1b90888dddaa6">LE_JSON_CONTEXT_TRUE</a>, 
+<a class="el" href="le__json_8h.html#afe24167ad9e64118dcd2c29b6c159c5bae86bff432b92de48354a36b701086b6d">LE_JSON_CONTEXT_FALSE</a>, 
+<br />
+  <a class="el" href="le__json_8h.html#afe24167ad9e64118dcd2c29b6c159c5badc933df63d5535a73b452caf4efddf7d">LE_JSON_CONTEXT_NULL</a>
+<br />
+ }</td></tr>
+<tr class="separator:afe24167ad9e64118dcd2c29b6c159c5b"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a610f180628f8e5be75fe5a08533124df"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__json_8h.html#ac245fec94486c2d3a01a270c1188d023">le_json_ParsingSessionRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__json_8h.html#a610f180628f8e5be75fe5a08533124df">le_json_Parse</a> (int fd, <a class="el" href="le__json_8h.html#a3d0e516a3f0893f4b27d0e0e81d9615f">le_json_EventHandler_t</a> eventHandler, <a class="el" href="le__json_8h.html#a04bc128775367c9eff2e67861c178d2e">le_json_ErrorHandler_t</a> errorHandler, void *opaquePtr)</td></tr>
+<tr class="separator:a610f180628f8e5be75fe5a08533124df"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a688e27c19518c70c0bd279f4451eb973"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__json_8h.html#a688e27c19518c70c0bd279f4451eb973">le_json_Cleanup</a> (<a class="el" href="le__json_8h.html#ac245fec94486c2d3a01a270c1188d023">le_json_ParsingSessionRef_t</a> session)</td></tr>
+<tr class="separator:a688e27c19518c70c0bd279f4451eb973"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a8dda714db610cde2d8c342f8fc44988a"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__json_8h.html#a8dda714db610cde2d8c342f8fc44988a">le_json_SetEventHandler</a> (<a class="el" href="le__json_8h.html#a3d0e516a3f0893f4b27d0e0e81d9615f">le_json_EventHandler_t</a> callbackFunc)</td></tr>
+<tr class="separator:a8dda714db610cde2d8c342f8fc44988a"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a8a6bdf88293b8760e2ab846184de58a0"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__json_8h.html#afe24167ad9e64118dcd2c29b6c159c5b">le_json_ContextType_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__json_8h.html#a8a6bdf88293b8760e2ab846184de58a0">le_json_GetContextType</a> (void)</td></tr>
+<tr class="separator:a8a6bdf88293b8760e2ab846184de58a0"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aeacd44e948bc43b1b84f5680f1e7a959"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__json_8h.html#aeacd44e948bc43b1b84f5680f1e7a959">le_json_SetOpaquePtr</a> (void *ptr)</td></tr>
+<tr class="separator:aeacd44e948bc43b1b84f5680f1e7a959"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a66f18224f16a76d877859b193c1f3cfd"><td align="right" class="memItemLeft" valign="top">void * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__json_8h.html#a66f18224f16a76d877859b193c1f3cfd">le_json_GetOpaquePtr</a> (void)</td></tr>
+<tr class="separator:a66f18224f16a76d877859b193c1f3cfd"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aedf060929ec148f846b3c91a4a5c2324"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__json_8h.html#aedf060929ec148f846b3c91a4a5c2324">le_json_SetErrorHandler</a> (<a class="el" href="le__json_8h.html#a04bc128775367c9eff2e67861c178d2e">le_json_ErrorHandler_t</a> callbackFunc)</td></tr>
+<tr class="separator:aedf060929ec148f846b3c91a4a5c2324"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a6e3870d9dfb1082f92572042508271a6"><td align="right" class="memItemLeft" valign="top">const char * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__json_8h.html#a6e3870d9dfb1082f92572042508271a6">le_json_GetString</a> (void)</td></tr>
+<tr class="separator:a6e3870d9dfb1082f92572042508271a6"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a583ed4c1e74317dab7bab49cbdbb7bc2"><td align="right" class="memItemLeft" valign="top">double </td><td class="memItemRight" valign="bottom"><a class="el" href="le__json_8h.html#a583ed4c1e74317dab7bab49cbdbb7bc2">le_json_GetNumber</a> (void)</td></tr>
+<tr class="separator:a583ed4c1e74317dab7bab49cbdbb7bc2"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a1c6b4146e44600f62259e1ea72275ca3"><td align="right" class="memItemLeft" valign="top">const char * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__json_8h.html#a1c6b4146e44600f62259e1ea72275ca3">le_json_GetEventName</a> (<a class="el" href="le__json_8h.html#afc256534945eddc76d57b21d0938b7a9">le_json_Event_t</a> event)</td></tr>
+<tr class="separator:a1c6b4146e44600f62259e1ea72275ca3"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:af49af7b8cfa0a6b00f80e043985f1747"><td align="right" class="memItemLeft" valign="top">const char * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__json_8h.html#af49af7b8cfa0a6b00f80e043985f1747">le_json_GetContextName</a> (<a class="el" href="le__json_8h.html#afe24167ad9e64118dcd2c29b6c159c5b">le_json_ContextType_t</a> context)</td></tr>
+<tr class="separator:af49af7b8cfa0a6b00f80e043985f1747"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ae78b0bd7d95e3ce100416edd3510fafd"><td align="right" class="memItemLeft" valign="top">size_t </td><td class="memItemRight" valign="bottom"><a class="el" href="le__json_8h.html#ae78b0bd7d95e3ce100416edd3510fafd">le_json_GetBytesRead</a> (<a class="el" href="le__json_8h.html#ac245fec94486c2d3a01a270c1188d023">le_json_ParsingSessionRef_t</a> session)</td></tr>
+<tr class="separator:ae78b0bd7d95e3ce100416edd3510fafd"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a209c9988e92394a02e55d7c8d96ebd6e"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__json_8h.html#ac245fec94486c2d3a01a270c1188d023">le_json_ParsingSessionRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__json_8h.html#a209c9988e92394a02e55d7c8d96ebd6e">le_json_GetSession</a> (void)</td></tr>
+<tr class="separator:a209c9988e92394a02e55d7c8d96ebd6e"><td class="memSeparator" colspan="2"> </td></tr>
+</table>
+<a id="details" name="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Legato <a class="el" href="c_json.html">JSON Parsing API</a> include file.</p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div><h2 class="groupheader">Typedef Documentation</h2>
+<a class="anchor" id="a04bc128775367c9eff2e67861c178d2e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef void(*  le_json_ErrorHandler_t) (<a class="el" href="le__json_8h.html#ae16b8d9006b37bd7efb69869d8b8bc21">le_json_Error_t</a> error, const char *msg)</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Callbacks for errors look like this.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramname">error</td><td>[in] Indicates what type of error occured.</td></tr>
+<tr><td class="paramname">msg</td><td>[in] Human-readable message describing the error. (Valid until handler returns.) </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a3d0e516a3f0893f4b27d0e0e81d9615f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef void(*  le_json_EventHandler_t) (<a class="el" href="le__json_8h.html#afc256534945eddc76d57b21d0938b7a9">le_json_Event_t</a> event)</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Callbacks for (non-error) parsing events look like this.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramname">event</td><td>[in] Indicates what type of event occured. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ac245fec94486c2d3a01a270c1188d023"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef struct le_json_ParsingSession* <a class="el" href="le__json_8h.html#ac245fec94486c2d3a01a270c1188d023">le_json_ParsingSessionRef_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Parsing session reference. Refers to a parsing session started by <a class="el" href="le__json_8h.html#a610f180628f8e5be75fe5a08533124df">le_json_Parse()</a>. Pass this to <a class="el" href="le__json_8h.html#a688e27c19518c70c0bd279f4451eb973">le_json_Cleanup()</a> to stop the parsing and clean up memory allocated by the parser. </p>
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a class="anchor" id="afe24167ad9e64118dcd2c29b6c159c5b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="le__json_8h.html#afe24167ad9e64118dcd2c29b6c159c5b">le_json_ContextType_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Enumeration of the different types of "contexts" that can exist during a parsing session. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="afe24167ad9e64118dcd2c29b6c159c5baedf94d30fb770e905861ba037ad07138"></a>LE_JSON_CONTEXT_DOC </td><td class="fielddoc">
+<p>Top level of document, outside the main object/array. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="afe24167ad9e64118dcd2c29b6c159c5ba0d63aee47f71a98622ba7dd39447b876"></a>LE_JSON_CONTEXT_OBJECT </td><td class="fielddoc">
+<p>Parsing an object (set of named members). </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="afe24167ad9e64118dcd2c29b6c159c5ba1f9395567e149b29f2c0a4a248be7190"></a>LE_JSON_CONTEXT_MEMBER </td><td class="fielddoc">
+<p>Parsing a member of an object. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="afe24167ad9e64118dcd2c29b6c159c5ba66fafbcd058d9809674853ef579d4cd2"></a>LE_JSON_CONTEXT_ARRAY </td><td class="fielddoc">
+<p>Parsing an array (list of unnamed elements). </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="afe24167ad9e64118dcd2c29b6c159c5ba5a0d9c46c36f797600877478b286f41d"></a>LE_JSON_CONTEXT_STRING </td><td class="fielddoc">
+<p>Parsing a string value. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="afe24167ad9e64118dcd2c29b6c159c5bae5f7395f377f662ea9ec06536f2d4808"></a>LE_JSON_CONTEXT_NUMBER </td><td class="fielddoc">
+<p>Parsing number value. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="afe24167ad9e64118dcd2c29b6c159c5bace8e3b47c95fb5c42ff1b90888dddaa6"></a>LE_JSON_CONTEXT_TRUE </td><td class="fielddoc">
+<p>Parsing a true value. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="afe24167ad9e64118dcd2c29b6c159c5bae86bff432b92de48354a36b701086b6d"></a>LE_JSON_CONTEXT_FALSE </td><td class="fielddoc">
+<p>Parsing a false value. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="afe24167ad9e64118dcd2c29b6c159c5badc933df63d5535a73b452caf4efddf7d"></a>LE_JSON_CONTEXT_NULL </td><td class="fielddoc">
+<p>Parsing a null value. </p>
+</td></tr>
+</table>
+</div>
+</div>
+<a class="anchor" id="ae16b8d9006b37bd7efb69869d8b8bc21"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="le__json_8h.html#ae16b8d9006b37bd7efb69869d8b8bc21">le_json_Error_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Enumeration of the different types of errors that can be reported during JSON document parsing. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ae16b8d9006b37bd7efb69869d8b8bc21addf2f30f990a6abe9f51541bef99bf0d"></a>LE_JSON_SYNTAX_ERROR </td><td class="fielddoc">
+<p>Syntax error, such as a missing comma or extra comma. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae16b8d9006b37bd7efb69869d8b8bc21a646f9c0f20fde13ed1e0e6f8591affc8"></a>LE_JSON_READ_ERROR </td><td class="fielddoc">
+<p>Error when reading from the input byte stream. </p>
+</td></tr>
+</table>
+</div>
+</div>
+<a class="anchor" id="afc256534945eddc76d57b21d0938b7a9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="le__json_8h.html#afc256534945eddc76d57b21d0938b7a9">le_json_Event_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Enumeration of all the different events that can be reported during JSON document parsing. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="afc256534945eddc76d57b21d0938b7a9a3bd8d3a16fa9b67c63d1765ed32125df"></a>LE_JSON_OBJECT_START </td><td class="fielddoc">
+<p>object started, subsequent object members are part of this object </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="afc256534945eddc76d57b21d0938b7a9a01fdebcf839ef494319666436b90c540"></a>LE_JSON_OBJECT_MEMBER </td><td class="fielddoc">
+<p>object member name received: Call <a class="el" href="le__json_8h.html#a6e3870d9dfb1082f92572042508271a6">le_json_GetString()</a> to get name </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="afc256534945eddc76d57b21d0938b7a9a7f09b48319727fdd1713b0295a6abe2e"></a>LE_JSON_OBJECT_END </td><td class="fielddoc">
+<p>object finished, subsequent members/values are outside this object </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="afc256534945eddc76d57b21d0938b7a9a8c32a78504f336076f8da84e5b9b3dfa"></a>LE_JSON_ARRAY_START </td><td class="fielddoc">
+<p>array started, upcoming values are elements of this array </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="afc256534945eddc76d57b21d0938b7a9a9c467d71cfa19407f9175136dbac80d7"></a>LE_JSON_ARRAY_END </td><td class="fielddoc">
+<p>array finished, subsequent values are outside this array </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="afc256534945eddc76d57b21d0938b7a9a4d74ed91c726c958fdbe8b9dcddb3c0b"></a>LE_JSON_STRING </td><td class="fielddoc">
+<p>string value received: call <a class="el" href="le__json_8h.html#a6e3870d9dfb1082f92572042508271a6">le_json_GetString()</a> to get value </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="afc256534945eddc76d57b21d0938b7a9a6306cee51e5ae46b3f82f5d9bcd1e17d"></a>LE_JSON_NUMBER </td><td class="fielddoc">
+<p>number value received: call <a class="el" href="le__json_8h.html#a583ed4c1e74317dab7bab49cbdbb7bc2">le_json_GetNumber()</a> to get value </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="afc256534945eddc76d57b21d0938b7a9a47747bb38466475b6d56d5c770b21ba3"></a>LE_JSON_TRUE </td><td class="fielddoc">
+<p>true value received </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="afc256534945eddc76d57b21d0938b7a9a0f3bc62d76a0d89575601bd901121af3"></a>LE_JSON_FALSE </td><td class="fielddoc">
+<p>false value received </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="afc256534945eddc76d57b21d0938b7a9a4a9207b6e1fbd1cdc80b1ab3c47d4230"></a>LE_JSON_NULL </td><td class="fielddoc">
+<p>null value received </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="afc256534945eddc76d57b21d0938b7a9a881fd6c9c97b42be3ca3760c598472a8"></a>LE_JSON_DOC_END </td><td class="fielddoc">
+<p>End of the document reached. Parsing has stopped. </p>
+</td></tr>
+</table>
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="a688e27c19518c70c0bd279f4451eb973"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_json_Cleanup </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__json_8h.html#ac245fec94486c2d3a01a270c1188d023">le_json_ParsingSessionRef_t</a> </td>
+<td class="paramname"><em>session</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Stops parsing and cleans up memory allocated by the parser.</p>
+<dl class="section warning"><dt>Warning</dt><dd>Be sure to stop parsing before closing the file descriptor. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramname">session</td><td>The parsing session to clean up (see <a class="el" href="le__json_8h.html#a610f180628f8e5be75fe5a08533124df">le_json_Parse()</a>). </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ae78b0bd7d95e3ce100416edd3510fafd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">size_t le_json_GetBytesRead </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__json_8h.html#ac245fec94486c2d3a01a270c1188d023">le_json_ParsingSessionRef_t</a> </td>
+<td class="paramname"><em>session</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>The number of bytes that have been read from the input stream so far. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramname">session</td><td>Parsing session. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="af49af7b8cfa0a6b00f80e043985f1747"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">const char* le_json_GetContextName </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__json_8h.html#afe24167ad9e64118dcd2c29b6c159c5b">le_json_ContextType_t</a> </td>
+<td class="paramname"><em>context</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>Human readable string containing the name of a given JSON parsing context. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a8a6bdf88293b8760e2ab846184de58a0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__json_8h.html#afe24167ad9e64118dcd2c29b6c159c5b">le_json_ContextType_t</a> le_json_GetContextType </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the type of parsing context that the parser is currently in.</p>
+<dl class="section return"><dt>Returns</dt><dd>The context type.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>This function can only be called inside event or error handlers. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a1c6b4146e44600f62259e1ea72275ca3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">const char* le_json_GetEventName </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__json_8h.html#afc256534945eddc76d57b21d0938b7a9">le_json_Event_t</a> </td>
+<td class="paramname"><em>event</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>Human readable string containing the name of a given JSON parsing event. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a583ed4c1e74317dab7bab49cbdbb7bc2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">double le_json_GetNumber </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Fetches the value of a parsed number.</p>
+<dl class="section warning"><dt>Warning</dt><dd>This function can only be called inside event handlers when LE_JSON_NUMBER events are being handled. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a66f18224f16a76d877859b193c1f3cfd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void* le_json_GetOpaquePtr </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the opaque pointer attached to the parser.</p>
+<dl class="section return"><dt>Returns</dt><dd>The pointer previously set by <a class="el" href="le__json_8h.html#a610f180628f8e5be75fe5a08533124df">le_json_Parse()</a> or a subsequent call to <a class="el" href="le__json_8h.html#aeacd44e948bc43b1b84f5680f1e7a959">le_json_SetOpaquePtr()</a>.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>This function can only be called inside event or error handlers. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a209c9988e92394a02e55d7c8d96ebd6e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__json_8h.html#ac245fec94486c2d3a01a270c1188d023">le_json_ParsingSessionRef_t</a> le_json_GetSession </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>For use by an event handler or error handler to fetch the JSON parsing session reference for the session that called its handler function.</p>
+<dl class="section return"><dt>Returns</dt><dd>The session reference of the JSON parsing session.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>This function can only be called inside event or error handlers. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a6e3870d9dfb1082f92572042508271a6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">const char* le_json_GetString </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Fetches a pointer to a string value or object member name.</p>
+<p>This pointer is only valid until the event handler returns.</p>
+<dl class="section warning"><dt>Warning</dt><dd>This function can only be called inside event handlers when LE_JSON_OBJECT_MEMBER or LE_JSON_STRING events are being handled. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a610f180628f8e5be75fe5a08533124df"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__json_8h.html#ac245fec94486c2d3a01a270c1188d023">le_json_ParsingSessionRef_t</a> le_json_Parse </td>
+<td>(</td>
+<td class="paramtype">int </td>
+<td class="paramname"><em>fd</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="le__json_8h.html#a3d0e516a3f0893f4b27d0e0e81d9615f">le_json_EventHandler_t</a> </td>
+<td class="paramname"><em>eventHandler</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="le__json_8h.html#a04bc128775367c9eff2e67861c178d2e">le_json_ErrorHandler_t</a> </td>
+<td class="paramname"><em>errorHandler</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">void * </td>
+<td class="paramname"><em>opaquePtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Parse a JSON document received via a file descriptor.</p>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the JSON parsing session started by this function call. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramname">fd</td><td>File descriptor to read the JSON document from. </td></tr>
+<tr><td class="paramname">eventHandler</td><td>Function to call when normal parsing events happen. </td></tr>
+<tr><td class="paramname">errorHandler</td><td>Function to call when errors happen. </td></tr>
+<tr><td class="paramname">opaquePtr</td><td>Opaque pointer to be fetched by handlers using <a class="el" href="le__json_8h.html#a66f18224f16a76d877859b193c1f3cfd">le_json_GetOpaquePtr()</a>. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="aedf060929ec148f846b3c91a4a5c2324"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_json_SetErrorHandler </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__json_8h.html#a04bc128775367c9eff2e67861c178d2e">le_json_ErrorHandler_t</a> </td>
+<td class="paramname"><em>callbackFunc</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Set the error handler function</p>
+<dl class="section warning"><dt>Warning</dt><dd>This function can only be called inside event or error handlers. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramname">callbackFunc</td><td>Function to call when parsing errors happen. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a8dda714db610cde2d8c342f8fc44988a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_json_SetEventHandler </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__json_8h.html#a3d0e516a3f0893f4b27d0e0e81d9615f">le_json_EventHandler_t</a> </td>
+<td class="paramname"><em>callbackFunc</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Set the current context's event handler function.</p>
+<dl class="section warning"><dt>Warning</dt><dd>This function can only be called inside event or error handlers. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramname">callbackFunc</td><td>Function to call when parsing events happen. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="aeacd44e948bc43b1b84f5680f1e7a959"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_json_SetOpaquePtr </td>
+<td>(</td>
+<td class="paramtype">void * </td>
+<td class="paramname"><em>ptr</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Set the opaque pointer attached to the parser.</p>
+<dl class="section warning"><dt>Warning</dt><dd>This function can only be called inside event or error handlers. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramname">ptr</td><td>Opaque pointer to be fetched using <a class="el" href="le__json_8h.html#a66f18224f16a76d877859b193c1f3cfd">le_json_GetOpaquePtr()</a>. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

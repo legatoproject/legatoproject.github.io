@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Types  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">Types </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p>Other C language standards' pages:</p>
+<p><a class="el" href="ccoding_stds_naming.html">Naming Standards</a> <br />
+<a class="el" href="ccoding_stds_abbr.html">Abbreviations</a> <br />
+<a class="el" href="ccoding_stds_main.html">C Language Standards</a></p>
+<h1><a class="anchor" id="cstdsNameSuffix"></a>
+Suffix</h1>
+<p>Types are distinctly different from instances, but it's possible to choose name so it's hard to know whether something is a type or a variable. Naming conflicts can occur between types and variables and even between types and functions.</p>
+<p>Type names are always given <code>_t</code> suffix.</p>
+<h1><a class="anchor" id="cstdsNameTypesPrefix"></a>
+Prefix</h1>
+<p>If a type is defined in a header file, there's a possibility its name will conflict with the name of another type defined elsewhere.</p>
+<p>All types defined inside header files must have a prefix.</p>
+<p>Types defined inside implementation (.c) files don't need a prefix. They have file scope, and imported types will have prefixes, so naming conflicts are highly unlikely.</p>
+<p>The prefix (if any) must be all lower-case.</p>
+<h1><a class="anchor" id="cstdsNameType"></a>
+Name</h1>
+<p>After the prefix (if any), the rest of the type name must be in CamelCase, beginning with an uppercase character. </p><pre class="fragment">// Inside a .c file:
+typedef size_t ObjectCount_t;
+
+
+
+// Inside the Sierra Wireless "Foo" component's API .h file:
+typedef size_t swi_foo_ObjectCount_t;</pre><h1><a class="anchor" id="cstdsCardinalTypes"></a>
+Cardinal Types</h1>
+<p>Cardinal types (e.g., int, uint, int32, bool) are exempt from having a prefix or suffix because:</p>
+<ul>
+<li>naming a variable "bool" or "int" won't be very descriptive, so there's little point to include those.</li>
+<li>most cardinal types are built into the language and we're not allowed to change their names (and we wouldn't want to-imagine the confusion and the 3rd-party integration problems!).</li>
+</ul>
+<h1><a class="anchor" id="cstdsEnumerationMembers"></a>
+Enumeration Members</h1>
+<p>Enumeration members are constants used in a similar way to macro constants. To clearly identify them as literal constants, they must be named using all upper-case with underscores separating words.</p>
+<p>Also like macros, names of enumeration members can also conflict with the names of macros and enumeration members defined in include files from other modules. Any members of enumerations exported to other modules must have a prefix. Even members of enumerations only used within a single file should have a prefix if the names are likely to conflict with names defined in standard C libraries or other included code that doesn't use prefixes.</p>
+<h1><a class="anchor" id="cstdsStructandUnionNamespaces"></a>
+Struct and Union Namespaces</h1>
+<p>When a structure or union is defined, it's possible to give a name to that structure or union within a separate namespace. This example uses "MessageBody" and "Message" in the union and struct namespaces, but "MessageBody_t" and "Message_t" are not:</p>
+<div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">union </span>MessageBody</div><div class="line">{</div><div class="line">    Request_t request;</div><div class="line">    Response_t response;</div><div class="line">}</div><div class="line">MessageBody_t;</div><div class="line"></div><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>Message</div><div class="line">{</div><div class="line">    MessageType_t type;</div><div class="line">    MessageBody_t body;</div><div class="line">}</div><div class="line">Message_t;</div></div><!-- fragment --><p>All names in the struct namespace must be preceded by the keyword "struct". All names in the union namespace must be preceded by the keyword "union". This way, there's no confusion, and they're in a separate namespace so there's no possibility of naming conflicts with identifiers outside the namespaces. That's why these names are exempt from having an "_t" suffix. Athough if these are defined in a header file, they still need a prefix to prevent naming conflicts with other identifiers defined by other components in the same namespace.</p>
+<h1><a class="anchor" id="cstdsStructandUnionMembers"></a>
+Struct and Union Members</h1>
+<p>The names of members of structures and unions must start with a lower-case letter and use CamelCase to separate words.</p>
+<p>Because structure and union member names are always used in context (in a dereference expression), there's no confusing them with other types' members (assuming the structure or union reference identifier is well named). No prefix is needed on structure or union member names:</p>
+<div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span></div><div class="line">{</div><div class="line"> <span class="keywordtype">char</span>* textBufferPtr;</div><div class="line"> <span class="keywordtype">int</span>   textLength;</div><div class="line"></div><div class="line">    ...</div><div class="line">}</div><div class="line">MyStructure_t;</div><div class="line"></div><div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> PrintTextBuffer(MyStructure_t* objectPtr)</div><div class="line">{</div><div class="line"> <span class="keywordtype">int</span> i;</div><div class="line"> <span class="keywordflow">for</span> (i = 0; i < objectPtr->textLength; i++)</div><div class="line">    {</div><div class="line">        PrintChar(objectPtr->textBufferPtr[i]);</div><div class="line">    }</div><div class="line">}</div></div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>Only stack variable names and struct/union member names can (and <em>must</em>) start with lower-case letters.</dd></dl>
+<hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

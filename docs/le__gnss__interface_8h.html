@@ -1,0 +1,1529 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>le_gnss_interface.h File Reference - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Reference.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a href="build_apps_documentation.html">Documentation</a><a class="link-selected" href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="summary">
+<a href="#define-members">Macros</a> |
+<a href="#typedef-members">Typedefs</a> |
+<a href="#enum-members">Enumerations</a> |
+<a href="#func-members">Functions</a> </div>
+<div class="headertitle">
+<h1 class="title">le_gnss_interface.h File Reference</h1> </div>
+</div><div class="contents">
+<div class="textblock"><code>#include "<a class="el" href="legato_8h_source.html">legato.h</a>"</code><br />
+</div>
+<p><a href="le__gnss__interface_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:aad83794e1452ffce131332a7d5d615f0"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__gnss__interface_8h.html#aad83794e1452ffce131332a7d5d615f0">LE_GNSS_MAX_SUPL_SERVER_URL_LEN</a>   256</td></tr>
+<tr class="separator:aad83794e1452ffce131332a7d5d615f0"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a55a09e781cec3a35c15fd88e17bdbad1"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__gnss__interface_8h.html#a55a09e781cec3a35c15fd88e17bdbad1">LE_GNSS_MAX_SUPL_CERTIFICATE_LEN</a>   2000</td></tr>
+<tr class="separator:a55a09e781cec3a35c15fd88e17bdbad1"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a9f33a36bc52937226b8e231bb238444b"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__gnss__interface_8h.html#a9f33a36bc52937226b8e231bb238444b">LE_GNSS_MAX_SV_INFO_NUMBER</a>   80</td></tr>
+<tr class="separator:a9f33a36bc52937226b8e231bb238444b"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ac9577035f26d6b7f48615670eb72102a"><td align="right" class="memItemLeft" valign="top">typedef struct le_gnss_Sample * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__gnss__interface_8h.html#ac9577035f26d6b7f48615670eb72102a">le_gnss_SampleRef_t</a></td></tr>
+<tr class="separator:ac9577035f26d6b7f48615670eb72102a"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a55a27b330b348c8d78073fe0e3e784eb"><td align="right" class="memItemLeft" valign="top">typedef struct le_gnss_PositionHandler * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__gnss__interface_8h.html#a55a27b330b348c8d78073fe0e3e784eb">le_gnss_PositionHandlerRef_t</a></td></tr>
+<tr class="separator:a55a27b330b348c8d78073fe0e3e784eb"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:abc0f34de9b91ed31cb10ccd5d432def8"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__gnss__interface_8h.html#abc0f34de9b91ed31cb10ccd5d432def8">le_gnss_PositionHandlerFunc_t</a>) (<a class="el" href="le__gnss__interface_8h.html#ac9577035f26d6b7f48615670eb72102a">le_gnss_SampleRef_t</a> positionSampleRef, void *contextPtr)</td></tr>
+<tr class="separator:abc0f34de9b91ed31cb10ccd5d432def8"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:abcb86aa054abc7a32d2f5a7363387ef1"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__gnss__interface_8h.html#abcb86aa054abc7a32d2f5a7363387ef1">le_gnss_FixState_t</a> { <a class="el" href="le__gnss__interface_8h.html#abcb86aa054abc7a32d2f5a7363387ef1a8d85fe09a65c69af21102b4bacc64055">LE_GNSS_STATE_FIX_NO_POS</a>, 
+<a class="el" href="le__gnss__interface_8h.html#abcb86aa054abc7a32d2f5a7363387ef1a1325f1c092b36936bb75b5087499b82b">LE_GNSS_STATE_FIX_2D</a>, 
+<a class="el" href="le__gnss__interface_8h.html#abcb86aa054abc7a32d2f5a7363387ef1a6eef37535d6eb582771825a1e0ccbb90">LE_GNSS_STATE_FIX_3D</a>, 
+<a class="el" href="le__gnss__interface_8h.html#abcb86aa054abc7a32d2f5a7363387ef1a14dc297db5983ab7d1b838b7bf50499e">LE_GNSS_STATE_FIX_ESTIMATED</a>
+ }</td></tr>
+<tr class="separator:abcb86aa054abc7a32d2f5a7363387ef1"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a70085fe9ff78ec5c7426fd4c9dc2f9dc"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__gnss__interface_8h.html#a70085fe9ff78ec5c7426fd4c9dc2f9dc">le_gnss_AssistedMode_t</a> { <a class="el" href="le__gnss__interface_8h.html#a70085fe9ff78ec5c7426fd4c9dc2f9dca32336a5d9f3cf42251c081fbc0ae7b36">LE_GNSS_STANDALONE_MODE</a>, 
+<a class="el" href="le__gnss__interface_8h.html#a70085fe9ff78ec5c7426fd4c9dc2f9dca4d21852db64fad5ca5c90b35efaaefff">LE_GNSS_MS_BASED_MODE</a>, 
+<a class="el" href="le__gnss__interface_8h.html#a70085fe9ff78ec5c7426fd4c9dc2f9dca185c89cade65e4e40dc69c55327c726a">LE_GNSS_MS_ASSISTED_MODE</a>
+ }</td></tr>
+<tr class="separator:a70085fe9ff78ec5c7426fd4c9dc2f9dc"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:adac6fdd4f73229bc9af14e0a11335efc"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__gnss__interface_8h.html#adac6fdd4f73229bc9af14e0a11335efc">le_gnss_ConstellationBitMask_t</a> { <a class="el" href="le__gnss__interface_8h.html#adac6fdd4f73229bc9af14e0a11335efcad8f92688bcc53bb744cb1466609d49a7">LE_GNSS_CONSTELLATION_GPS</a> = 0x1, 
+<a class="el" href="le__gnss__interface_8h.html#adac6fdd4f73229bc9af14e0a11335efca8031dcacac5aac40d2b2e1b574c5b878">LE_GNSS_CONSTELLATION_GLONASS</a> = 0x2
+ }</td></tr>
+<tr class="separator:adac6fdd4f73229bc9af14e0a11335efc"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a3b352251c2764092c56f20592f5894ca"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__gnss__interface_8h.html#a3b352251c2764092c56f20592f5894ca">le_gnss_ConnectService</a> (void)</td></tr>
+<tr class="separator:a3b352251c2764092c56f20592f5894ca"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aeb249461b02547251a5b5e1e8bb28a95"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__gnss__interface_8h.html#aeb249461b02547251a5b5e1e8bb28a95">le_gnss_DisconnectService</a> (void)</td></tr>
+<tr class="separator:aeb249461b02547251a5b5e1e8bb28a95"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a6dbdc58f23e480e65ea16c583ef5340f"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__gnss__interface_8h.html#a6dbdc58f23e480e65ea16c583ef5340f">le_gnss_SetConstellation</a> (<a class="el" href="le__gnss__interface_8h.html#adac6fdd4f73229bc9af14e0a11335efc">le_gnss_ConstellationBitMask_t</a> constellationMask)</td></tr>
+<tr class="separator:a6dbdc58f23e480e65ea16c583ef5340f"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a150835481ab3751e3ab1821362e34e84"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__gnss__interface_8h.html#a150835481ab3751e3ab1821362e34e84">le_gnss_GetConstellation</a> (<a class="el" href="le__gnss__interface_8h.html#adac6fdd4f73229bc9af14e0a11335efc">le_gnss_ConstellationBitMask_t</a> *constellationMaskPtr)</td></tr>
+<tr class="separator:a150835481ab3751e3ab1821362e34e84"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a3474bb912febeca6e258c6039144f39f"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__gnss__interface_8h.html#a3474bb912febeca6e258c6039144f39f">le_gnss_EnableExtendedEphemerisFile</a> (void)</td></tr>
+<tr class="separator:a3474bb912febeca6e258c6039144f39f"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a49d596f01c010f7828c949f1436246df"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__gnss__interface_8h.html#a49d596f01c010f7828c949f1436246df">le_gnss_DisableExtendedEphemerisFile</a> (void)</td></tr>
+<tr class="separator:a49d596f01c010f7828c949f1436246df"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aea1811e39dfae1516b08404adfbaec22"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__gnss__interface_8h.html#aea1811e39dfae1516b08404adfbaec22">le_gnss_LoadExtendedEphemerisFile</a> (int fd)</td></tr>
+<tr class="separator:aea1811e39dfae1516b08404adfbaec22"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a1fbfc55e9e7585646fb312d7017061ff"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__gnss__interface_8h.html#a1fbfc55e9e7585646fb312d7017061ff">le_gnss_GetExtendedEphemerisValidity</a> (<a class="el" href="structle__clk___time__t.html">le_clk_Time_t</a> *startTimePtr, <a class="el" href="structle__clk___time__t.html">le_clk_Time_t</a> *stopTimePtr)</td></tr>
+<tr class="separator:a1fbfc55e9e7585646fb312d7017061ff"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:add90639835a531c4b9d15554e4f3ba16"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__gnss__interface_8h.html#add90639835a531c4b9d15554e4f3ba16">le_gnss_Start</a> (void)</td></tr>
+<tr class="separator:add90639835a531c4b9d15554e4f3ba16"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a93d63fdc76dbced071956b87de2abff7"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__gnss__interface_8h.html#a93d63fdc76dbced071956b87de2abff7">le_gnss_Stop</a> (void)</td></tr>
+<tr class="separator:a93d63fdc76dbced071956b87de2abff7"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a29ff5b1e5bada1a9d15d19b3a0d2d4d1"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__gnss__interface_8h.html#a29ff5b1e5bada1a9d15d19b3a0d2d4d1">le_gnss_ForceHotRestart</a> (void)</td></tr>
+<tr class="separator:a29ff5b1e5bada1a9d15d19b3a0d2d4d1"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a1f5b3008db50d34c7962fb73c306f3d1"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__gnss__interface_8h.html#a1f5b3008db50d34c7962fb73c306f3d1">le_gnss_ForceWarmRestart</a> (void)</td></tr>
+<tr class="separator:a1f5b3008db50d34c7962fb73c306f3d1"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aa702703bbeebbefd65dd51b1f9fd4ce5"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__gnss__interface_8h.html#aa702703bbeebbefd65dd51b1f9fd4ce5">le_gnss_ForceColdRestart</a> (void)</td></tr>
+<tr class="separator:aa702703bbeebbefd65dd51b1f9fd4ce5"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a18219097f3e8c8e6e613462a5467f546"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__gnss__interface_8h.html#a18219097f3e8c8e6e613462a5467f546">le_gnss_ForceFactoryRestart</a> (void)</td></tr>
+<tr class="separator:a18219097f3e8c8e6e613462a5467f546"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a6b2fbb3902c9fd3336b5940b2abacb12"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__gnss__interface_8h.html#a6b2fbb3902c9fd3336b5940b2abacb12">le_gnss_GetTtff</a> (uint32_t *ttffPtr)</td></tr>
+<tr class="separator:a6b2fbb3902c9fd3336b5940b2abacb12"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a8e1d96b1b64055b298a74cad1acfbbf8"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__gnss__interface_8h.html#a8e1d96b1b64055b298a74cad1acfbbf8">le_gnss_Enable</a> (void)</td></tr>
+<tr class="separator:a8e1d96b1b64055b298a74cad1acfbbf8"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aa2cd87c616f968370e9e2113570437ea"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__gnss__interface_8h.html#aa2cd87c616f968370e9e2113570437ea">le_gnss_Disable</a> (void)</td></tr>
+<tr class="separator:aa2cd87c616f968370e9e2113570437ea"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a75d96ec7ac6e0d6b58525e4c523d3b2c"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__gnss__interface_8h.html#a75d96ec7ac6e0d6b58525e4c523d3b2c">le_gnss_SetAcquisitionRate</a> (uint32_t rate)</td></tr>
+<tr class="separator:a75d96ec7ac6e0d6b58525e4c523d3b2c"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:acfa9b25ac13f601921bd9123a1d0daba"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__gnss__interface_8h.html#acfa9b25ac13f601921bd9123a1d0daba">le_gnss_GetAcquisitionRate</a> (uint32_t *ratePtr)</td></tr>
+<tr class="separator:acfa9b25ac13f601921bd9123a1d0daba"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ac300457f532757caf79d60b6dba60d67"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__gnss__interface_8h.html#a55a27b330b348c8d78073fe0e3e784eb">le_gnss_PositionHandlerRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__gnss__interface_8h.html#ac300457f532757caf79d60b6dba60d67">le_gnss_AddPositionHandler</a> (<a class="el" href="le__gnss__interface_8h.html#abc0f34de9b91ed31cb10ccd5d432def8">le_gnss_PositionHandlerFunc_t</a> handlerPtr, void *contextPtr)</td></tr>
+<tr class="separator:ac300457f532757caf79d60b6dba60d67"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a3fc94954cc139340f447ae0ae87e8c2d"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__gnss__interface_8h.html#a3fc94954cc139340f447ae0ae87e8c2d">le_gnss_RemovePositionHandler</a> (<a class="el" href="le__gnss__interface_8h.html#a55a27b330b348c8d78073fe0e3e784eb">le_gnss_PositionHandlerRef_t</a> addHandlerRef)</td></tr>
+<tr class="separator:a3fc94954cc139340f447ae0ae87e8c2d"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a0a0df2ffe42b6277f43af0e52e617339"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__gnss__interface_8h.html#a0a0df2ffe42b6277f43af0e52e617339">le_gnss_GetPositionState</a> (<a class="el" href="le__gnss__interface_8h.html#ac9577035f26d6b7f48615670eb72102a">le_gnss_SampleRef_t</a> positionSampleRef, <a class="el" href="le__gnss__interface_8h.html#abcb86aa054abc7a32d2f5a7363387ef1">le_gnss_FixState_t</a> *statePtr)</td></tr>
+<tr class="separator:a0a0df2ffe42b6277f43af0e52e617339"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ada100f53f9ad9f3df852fcc6639c15bc"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__gnss__interface_8h.html#ada100f53f9ad9f3df852fcc6639c15bc">le_gnss_GetLocation</a> (<a class="el" href="le__gnss__interface_8h.html#ac9577035f26d6b7f48615670eb72102a">le_gnss_SampleRef_t</a> positionSampleRef, int32_t *latitudePtr, int32_t *longitudePtr, int32_t *hAccuracyPtr)</td></tr>
+<tr class="separator:ada100f53f9ad9f3df852fcc6639c15bc"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a5cc278268a4e75c5e2a5f8c1ffb64fa9"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__gnss__interface_8h.html#a5cc278268a4e75c5e2a5f8c1ffb64fa9">le_gnss_GetAltitude</a> (<a class="el" href="le__gnss__interface_8h.html#ac9577035f26d6b7f48615670eb72102a">le_gnss_SampleRef_t</a> positionSampleRef, int32_t *altitudePtr, int32_t *vAccuracyPtr)</td></tr>
+<tr class="separator:a5cc278268a4e75c5e2a5f8c1ffb64fa9"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a0d014a96fc8b15b736d04747d51082d9"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__gnss__interface_8h.html#a0d014a96fc8b15b736d04747d51082d9">le_gnss_GetTime</a> (<a class="el" href="le__gnss__interface_8h.html#ac9577035f26d6b7f48615670eb72102a">le_gnss_SampleRef_t</a> positionSampleRef, uint16_t *hoursPtr, uint16_t *minutesPtr, uint16_t *secondsPtr, uint16_t *millisecondsPtr)</td></tr>
+<tr class="separator:a0d014a96fc8b15b736d04747d51082d9"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a29602d1e12325d0076802af0db7f23ca"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__gnss__interface_8h.html#a29602d1e12325d0076802af0db7f23ca">le_gnss_GetDate</a> (<a class="el" href="le__gnss__interface_8h.html#ac9577035f26d6b7f48615670eb72102a">le_gnss_SampleRef_t</a> positionSampleRef, uint16_t *yearPtr, uint16_t *monthPtr, uint16_t *dayPtr)</td></tr>
+<tr class="separator:a29602d1e12325d0076802af0db7f23ca"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a483fba8fc6b0fa116bcbd889af95fc4f"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__gnss__interface_8h.html#a483fba8fc6b0fa116bcbd889af95fc4f">le_gnss_GetHorizontalSpeed</a> (<a class="el" href="le__gnss__interface_8h.html#ac9577035f26d6b7f48615670eb72102a">le_gnss_SampleRef_t</a> positionSampleRef, uint32_t *hspeedPtr, uint32_t *hspeedAccuracyPtr)</td></tr>
+<tr class="separator:a483fba8fc6b0fa116bcbd889af95fc4f"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a37a370cec19610be1f99d9c9db291a1e"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__gnss__interface_8h.html#a37a370cec19610be1f99d9c9db291a1e">le_gnss_GetVerticalSpeed</a> (<a class="el" href="le__gnss__interface_8h.html#ac9577035f26d6b7f48615670eb72102a">le_gnss_SampleRef_t</a> positionSampleRef, int32_t *vspeedPtr, int32_t *vspeedAccuracyPtr)</td></tr>
+<tr class="separator:a37a370cec19610be1f99d9c9db291a1e"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a86f3e812fa009379b3e7e49011e6a229"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__gnss__interface_8h.html#a86f3e812fa009379b3e7e49011e6a229">le_gnss_GetDirection</a> (<a class="el" href="le__gnss__interface_8h.html#ac9577035f26d6b7f48615670eb72102a">le_gnss_SampleRef_t</a> positionSampleRef, int32_t *directionPtr, int32_t *directionAccuracyPtr)</td></tr>
+<tr class="separator:a86f3e812fa009379b3e7e49011e6a229"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a70504e7c542d626aa07948d8330020c7"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__gnss__interface_8h.html#a70504e7c542d626aa07948d8330020c7">le_gnss_GetDop</a> (<a class="el" href="le__gnss__interface_8h.html#ac9577035f26d6b7f48615670eb72102a">le_gnss_SampleRef_t</a> positionSampleRef, uint16_t *hdopPtr, uint16_t *vdopPtr, uint16_t *pdopPtr)</td></tr>
+<tr class="separator:a70504e7c542d626aa07948d8330020c7"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a89cdf0fb25e8204befc65db7aa6837db"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__gnss__interface_8h.html#a89cdf0fb25e8204befc65db7aa6837db">le_gnss_ReleaseSampleRef</a> (<a class="el" href="le__gnss__interface_8h.html#ac9577035f26d6b7f48615670eb72102a">le_gnss_SampleRef_t</a> positionSampleRef)</td></tr>
+<tr class="separator:a89cdf0fb25e8204befc65db7aa6837db"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a5d74c2ad91a504a1d0ac35b4f4f2c382"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__gnss__interface_8h.html#a5d74c2ad91a504a1d0ac35b4f4f2c382">le_gnss_SetSuplAssistedMode</a> (<a class="el" href="le__gnss__interface_8h.html#a70085fe9ff78ec5c7426fd4c9dc2f9dc">le_gnss_AssistedMode_t</a> assistedMode)</td></tr>
+<tr class="separator:a5d74c2ad91a504a1d0ac35b4f4f2c382"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a2b5eb5e1efbc31683e717dd7181ff1d3"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__gnss__interface_8h.html#a2b5eb5e1efbc31683e717dd7181ff1d3">le_gnss_GetSuplAssistedMode</a> (<a class="el" href="le__gnss__interface_8h.html#a70085fe9ff78ec5c7426fd4c9dc2f9dc">le_gnss_AssistedMode_t</a> *assistedModePtr)</td></tr>
+<tr class="separator:a2b5eb5e1efbc31683e717dd7181ff1d3"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:abff6d8ae251972df157b5b38829230ed"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__gnss__interface_8h.html#abff6d8ae251972df157b5b38829230ed">le_gnss_SetSuplServerUrl</a> (const char *suplServerUrl)</td></tr>
+<tr class="separator:abff6d8ae251972df157b5b38829230ed"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a3bd8f5067d4bba2e7ed5fce95c2c1a74"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__gnss__interface_8h.html#a3bd8f5067d4bba2e7ed5fce95c2c1a74">le_gnss_InjectSuplCertificate</a> (uint8_t suplCertificateId, uint16_t suplCertificateLen, const char *suplCertificate)</td></tr>
+<tr class="separator:a3bd8f5067d4bba2e7ed5fce95c2c1a74"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aec8d50c209ce21a979b7e9f552353aec"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__gnss__interface_8h.html#aec8d50c209ce21a979b7e9f552353aec">le_gnss_DeleteSuplCertificate</a> (uint8_t suplCertificateId)</td></tr>
+<tr class="separator:aec8d50c209ce21a979b7e9f552353aec"><td class="memSeparator" colspan="2"> </td></tr>
+</table>
+<a id="details" name="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Legato <a class="el" href="c_gnss.html">GNSS</a> include file.</p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="a55a09e781cec3a35c15fd88e17bdbad1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_GNSS_MAX_SUPL_CERTIFICATE_LEN   2000</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Maximum SUPL certificate size. </p>
+</div>
+</div>
+<a class="anchor" id="aad83794e1452ffce131332a7d5d615f0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_GNSS_MAX_SUPL_SERVER_URL_LEN   256</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Maximum length of the SUP Server URL string. </p>
+</div>
+</div>
+<a class="anchor" id="a9f33a36bc52937226b8e231bb238444b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_GNSS_MAX_SV_INFO_NUMBER   80</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Define the maximum length of the Satellites Vehicle information list </p>
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a class="anchor" id="abc0f34de9b91ed31cb10ccd5d432def8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef void(* le_gnss_PositionHandlerFunc_t) (<a class="el" href="le__gnss__interface_8h.html#ac9577035f26d6b7f48615670eb72102a">le_gnss_SampleRef_t</a> positionSampleRef, void *contextPtr)</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Handler for position information.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramname">positionSampleRef</td><td>Position's sample reference </td></tr>
+<tr><td class="paramname">contextPtr</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a55a27b330b348c8d78073fe0e3e784eb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef struct le_gnss_PositionHandler* <a class="el" href="le__gnss__interface_8h.html#a55a27b330b348c8d78073fe0e3e784eb">le_gnss_PositionHandlerRef_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Reference type used by Add/Remove functions for EVENT 'le_gnss_Position' </p>
+</div>
+</div>
+<a class="anchor" id="ac9577035f26d6b7f48615670eb72102a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef struct le_gnss_Sample* <a class="el" href="le__gnss__interface_8h.html#ac9577035f26d6b7f48615670eb72102a">le_gnss_SampleRef_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Reference type for dealing with GNSS position samples. </p>
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a class="anchor" id="a70085fe9ff78ec5c7426fd4c9dc2f9dc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="le__gnss__interface_8h.html#a70085fe9ff78ec5c7426fd4c9dc2f9dc">le_gnss_AssistedMode_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Assisted-GNSS mode </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a70085fe9ff78ec5c7426fd4c9dc2f9dca32336a5d9f3cf42251c081fbc0ae7b36"></a>LE_GNSS_STANDALONE_MODE </td><td class="fielddoc">
+<p>Standalone mode. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a70085fe9ff78ec5c7426fd4c9dc2f9dca4d21852db64fad5ca5c90b35efaaefff"></a>LE_GNSS_MS_BASED_MODE </td><td class="fielddoc">
+<p>MS-Based mode. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a70085fe9ff78ec5c7426fd4c9dc2f9dca185c89cade65e4e40dc69c55327c726a"></a>LE_GNSS_MS_ASSISTED_MODE </td><td class="fielddoc">
+<p>MS-Assisted mode. </p>
+</td></tr>
+</table>
+</div>
+</div>
+<a class="anchor" id="adac6fdd4f73229bc9af14e0a11335efc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="le__gnss__interface_8h.html#adac6fdd4f73229bc9af14e0a11335efc">le_gnss_ConstellationBitMask_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>GNSS constellation Bit Mask (8 bits) indicating the GNSS constellation(s) used in solution. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="adac6fdd4f73229bc9af14e0a11335efcad8f92688bcc53bb744cb1466609d49a7"></a>LE_GNSS_CONSTELLATION_GPS </td><td class="fielddoc">
+<p>GPS constellation used in solution. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="adac6fdd4f73229bc9af14e0a11335efca8031dcacac5aac40d2b2e1b574c5b878"></a>LE_GNSS_CONSTELLATION_GLONASS </td><td class="fielddoc">
+<p>GLONASS constellation used in solution. </p>
+</td></tr>
+</table>
+</div>
+</div>
+<a class="anchor" id="abcb86aa054abc7a32d2f5a7363387ef1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="le__gnss__interface_8h.html#abcb86aa054abc7a32d2f5a7363387ef1">le_gnss_FixState_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>GNSS fix position states. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="abcb86aa054abc7a32d2f5a7363387ef1a8d85fe09a65c69af21102b4bacc64055"></a>LE_GNSS_STATE_FIX_NO_POS </td><td class="fielddoc">
+<p>The GNSS fix position is not fixed. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abcb86aa054abc7a32d2f5a7363387ef1a1325f1c092b36936bb75b5087499b82b"></a>LE_GNSS_STATE_FIX_2D </td><td class="fielddoc">
+<p>2-Dimensional position fix. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abcb86aa054abc7a32d2f5a7363387ef1a6eef37535d6eb582771825a1e0ccbb90"></a>LE_GNSS_STATE_FIX_3D </td><td class="fielddoc">
+<p>3-Dimensional position fix. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abcb86aa054abc7a32d2f5a7363387ef1a14dc297db5983ab7d1b838b7bf50499e"></a>LE_GNSS_STATE_FIX_ESTIMATED </td><td class="fielddoc">
+<p>Estimated (i.e. forward predicted) position fix. </p>
+</td></tr>
+</table>
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ac300457f532757caf79d60b6dba60d67"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__gnss__interface_8h.html#a55a27b330b348c8d78073fe0e3e784eb">le_gnss_PositionHandlerRef_t</a> le_gnss_AddPositionHandler </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__gnss__interface_8h.html#abc0f34de9b91ed31cb10ccd5d432def8">le_gnss_PositionHandlerFunc_t</a> </td>
+<td class="paramname"><em>handlerPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">void * </td>
+<td class="paramname"><em>contextPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Add handler function for EVENT 'le_gnss_Position'</p>
+<p>This event provides information on position.</p>
+<ul>
+<li>A handler reference, which is only needed for later removal of the handler.</li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>Doesn't return on failure, so there's no need to check the return value for errors. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">handlerPtr</td><td></td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">contextPtr</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a3b352251c2764092c56f20592f5894ca"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_gnss_ConnectService </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Connect the current client thread to the service providing this API.</p>
+<p>This function must be called before any other functions in this API. Normally, it's automatically called for the main thread, but must be explicitly called for other threads. For details, see <a class="el" href="api_files_c.html#apiFilesC_client">Client-specific Functions</a>.</p>
+<p>This function is created automatically. </p>
+</div>
+</div>
+<a class="anchor" id="aec8d50c209ce21a979b7e9f552353aec"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_gnss_DeleteSuplCertificate </td>
+<td>(</td>
+<td class="paramtype">uint8_t </td>
+<td class="paramname"><em>suplCertificateId</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function deletes the SUPL certificate.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_FAULT on failure</li>
+<li>LE_BUSY service is busy</li>
+<li>LE_TIMEOUT a time-out occurred </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">suplCertificateId</td><td>Certificate ID of the SUPL certificate. Certificate ID range is 0 to 9 </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="aa2cd87c616f968370e9e2113570437ea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_gnss_Disable </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function disables the GNSS device.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT The function failed.</li>
+<li>LE_DUPLICATE If the GNSS device is already disabled.</li>
+<li>LE_NOT_PERMITTED If the GNSS device is not initialized or started.</li>
+<li>LE_OK The function succeeded. </li>
+</ul>
+</dd></dl>
+</div>
+</div>
+<a class="anchor" id="a49d596f01c010f7828c949f1436246df"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_gnss_DisableExtendedEphemerisFile </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function disables the use of the 'Extended Ephemeris' file into the GNSS device.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT The function failed.</li>
+<li>LE_OK The function succeeded. </li>
+</ul>
+</dd></dl>
+</div>
+</div>
+<a class="anchor" id="aeb249461b02547251a5b5e1e8bb28a95"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_gnss_DisconnectService </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Disconnect the current client thread from the service providing this API.</p>
+<p>Normally, this function doesn't need to be called. After this function is called, there's no longer a connection to the service, and the functions in this API can't be used. For details, see <a class="el" href="api_files_c.html#apiFilesC_client">Client-specific Functions</a>.</p>
+<p>This function is created automatically. </p>
+</div>
+</div>
+<a class="anchor" id="a8e1d96b1b64055b298a74cad1acfbbf8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_gnss_Enable </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function enables the GNSS device.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT The function failed.</li>
+<li>LE_DUPLICATE If the GNSS device is already enabled.</li>
+<li>LE_NOT_PERMITTED If the GNSS device is not initialized.</li>
+<li>LE_OK The function succeeded. </li>
+</ul>
+</dd></dl>
+</div>
+</div>
+<a class="anchor" id="a3474bb912febeca6e258c6039144f39f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_gnss_EnableExtendedEphemerisFile </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function enables the use of the 'Extended Ephemeris' file into the GNSS device.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT The function failed.</li>
+<li>LE_OK The function succeeded. </li>
+</ul>
+</dd></dl>
+</div>
+</div>
+<a class="anchor" id="aa702703bbeebbefd65dd51b1f9fd4ce5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_gnss_ForceColdRestart </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function performs a "COLD" restart of the GNSS device.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT The function failed.</li>
+<li>LE_NOT_PERMITTED If the GNSS device is not enabled or not started.</li>
+<li>LE_OK The function succeeded. </li>
+</ul>
+</dd></dl>
+</div>
+</div>
+<a class="anchor" id="a18219097f3e8c8e6e613462a5467f546"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_gnss_ForceFactoryRestart </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function performs a "FACTORY" restart of the GNSS device.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT The function failed.</li>
+<li>LE_NOT_PERMITTED If the GNSS device is not enabled or not started.</li>
+<li>LE_OK The function succeeded. </li>
+</ul>
+</dd></dl>
+</div>
+</div>
+<a class="anchor" id="a29ff5b1e5bada1a9d15d19b3a0d2d4d1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_gnss_ForceHotRestart </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function performs a "HOT" restart of the GNSS device.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT The function failed.</li>
+<li>LE_NOT_PERMITTED If the GNSS device is not enabled or not started.</li>
+<li>LE_OK The function succeeded. </li>
+</ul>
+</dd></dl>
+</div>
+</div>
+<a class="anchor" id="a1f5b3008db50d34c7962fb73c306f3d1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_gnss_ForceWarmRestart </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function performs a "WARM" restart of the GNSS device.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT The function failed.</li>
+<li>LE_NOT_PERMITTED If the GNSS device is not enabled or not started.</li>
+<li>LE_OK The function succeeded. </li>
+</ul>
+</dd></dl>
+</div>
+</div>
+<a class="anchor" id="acfa9b25ac13f601921bd9123a1d0daba"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_gnss_GetAcquisitionRate </td>
+<td>(</td>
+<td class="paramtype">uint32_t * </td>
+<td class="paramname"><em>ratePtr</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function gets the GNSS device acquisition rate.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_FAULT on failure</li>
+<li>LE_NOT_PERMITTED If the GNSS device is not in "ready" state. </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[out]</td><td class="paramname">ratePtr</td><td>Acquisition rate in milliseconds. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a5cc278268a4e75c5e2a5f8c1ffb64fa9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_gnss_GetAltitude </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__gnss__interface_8h.html#ac9577035f26d6b7f48615670eb72102a">le_gnss_SampleRef_t</a> </td>
+<td class="paramname"><em>positionSampleRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">int32_t * </td>
+<td class="paramname"><em>altitudePtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">int32_t * </td>
+<td class="paramname"><em>vAccuracyPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the position sample's altitude.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT Function failed to get the altitude.</li>
+<li>LE_OUT_OF_RANGE One of the retrieved parameter is invalid (set to INT32_MAX).</li>
+<li>LE_OK Function succeeded.</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Altitude is in metres, above Mean Sea Level, with 3 decimal places (3047 = 3.047 metres).</dd>
+<dd>
+For a 2D position fix, the altitude will be indicated as invalid and set to INT32_MAX</dd>
+<dd>
+If the caller is passing an invalid Position reference into this function, it is a fatal error, the function will not return.</dd>
+<dd>
+altitudePtr, altitudeAccuracyPtr can be set to NULL if not needed. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">positionSampleRef</td><td>Position sample's reference. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">altitudePtr</td><td>Altitude in metres, above Mean Sea Level [resolution 1e-3]. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">vAccuracyPtr</td><td>Vertical position's accuracy in metres [resolution 1e-1]. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a150835481ab3751e3ab1821362e34e84"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_gnss_GetConstellation </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__gnss__interface_8h.html#adac6fdd4f73229bc9af14e0a11335efc">le_gnss_ConstellationBitMask_t</a> * </td>
+<td class="paramname"><em>constellationMaskPtr</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the GNSS constellation bit mask</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_FAULT on failure </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[out]</td><td class="paramname">constellationMaskPtr</td><td>GNSS constellation used in solution. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a29602d1e12325d0076802af0db7f23ca"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_gnss_GetDate </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__gnss__interface_8h.html#ac9577035f26d6b7f48615670eb72102a">le_gnss_SampleRef_t</a> </td>
+<td class="paramname"><em>positionSampleRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">uint16_t * </td>
+<td class="paramname"><em>yearPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">uint16_t * </td>
+<td class="paramname"><em>monthPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">uint16_t * </td>
+<td class="paramname"><em>dayPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the position sample's date.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT Function failed to get the date.</li>
+<li>LE_OUT_OF_RANGE The retrieved date is invalid (all fields are set to 0).</li>
+<li>LE_OK Function succeeded.</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing an invalid Position sample reference into this function, it is a fatal error, the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">positionSampleRef</td><td>Position sample's reference. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">yearPtr</td><td>UTC Year A.D. [e.g. 2014]. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">monthPtr</td><td>UTC Month into the year [range 1...12]. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">dayPtr</td><td>UTC Days into the month [range 1...31]. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a86f3e812fa009379b3e7e49011e6a229"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_gnss_GetDirection </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__gnss__interface_8h.html#ac9577035f26d6b7f48615670eb72102a">le_gnss_SampleRef_t</a> </td>
+<td class="paramname"><em>positionSampleRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">int32_t * </td>
+<td class="paramname"><em>directionPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">int32_t * </td>
+<td class="paramname"><em>directionAccuracyPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the position sample's direction. Direction of movement is the direction that the vehicle/person is actually moving.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT Function failed to find the positionSample.</li>
+<li>LE_OUT_OF_RANGE One of the retrieved parameter is invalid (set to INT32_MAX).</li>
+<li>LE_OK Function succeeded.</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>directionPtr, directionAccuracyPtr can be set to NULL if not needed.</dd>
+<dd>
+If the caller is passing an invalid Position sample reference into this function, it is a fatal error, the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">positionSampleRef</td><td>Position sample's reference. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">directionPtr</td><td>Direction in degrees [resolution 1e-1]. (where 0 is True North) </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">directionAccuracyPtr</td><td>Direction's accuracy estimate in degrees [resolution 1e-1]. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a70504e7c542d626aa07948d8330020c7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_gnss_GetDop </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__gnss__interface_8h.html#ac9577035f26d6b7f48615670eb72102a">le_gnss_SampleRef_t</a> </td>
+<td class="paramname"><em>positionSampleRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">uint16_t * </td>
+<td class="paramname"><em>hdopPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">uint16_t * </td>
+<td class="paramname"><em>vdopPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">uint16_t * </td>
+<td class="paramname"><em>pdopPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the DOP parameters (Dilution Of Precision) for the fixed position.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT Function failed to find the positionSample.</li>
+<li>LE_OUT_OF_RANGE One of the retrieved parameter is invalid (set to INT16_MAX).</li>
+<li>LE_OK Function succeeded.</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The DOP values are given with 3 decimal places like: DOP value 2200 = 2.20</dd>
+<dd>
+If the caller is passing an invalid Position sample reference into this function, it is a fatal error, the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">positionSampleRef</td><td>Position sample's reference. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">hdopPtr</td><td>Horizontal Dilution of Precision [resolution 1e-3]. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">vdopPtr</td><td>Vertical Dilution of Precision [resolution 1e-3]. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">pdopPtr</td><td>Position Dilution of Precision [resolution 1e-3]. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a1fbfc55e9e7585646fb312d7017061ff"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_gnss_GetExtendedEphemerisValidity </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="structle__clk___time__t.html">le_clk_Time_t</a> * </td>
+<td class="paramname"><em>startTimePtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="structle__clk___time__t.html">le_clk_Time_t</a> * </td>
+<td class="paramname"><em>stopTimePtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function must be called to get the validity of the last injected Extended Ephemeris.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT The function failed to get the validity</li>
+<li>LE_OK The function succeeded. </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[out]</td><td class="paramname">startTimePtr</td><td>Start time </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">stopTimePtr</td><td>Stop time </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a483fba8fc6b0fa116bcbd889af95fc4f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_gnss_GetHorizontalSpeed </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__gnss__interface_8h.html#ac9577035f26d6b7f48615670eb72102a">le_gnss_SampleRef_t</a> </td>
+<td class="paramname"><em>positionSampleRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">uint32_t * </td>
+<td class="paramname"><em>hspeedPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">uint32_t * </td>
+<td class="paramname"><em>hspeedAccuracyPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the position sample's horizontal speed.</p>
+<ul>
+<li>LE_FAULT Function failed to find the positionSample.</li>
+<li>LE_OUT_OF_RANGE One of the retrieved parameter is invalid (set to UINT32_MAX).</li>
+<li>LE_OK Function succeeded.</li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>hSpeedPtr, hSpeedAccuracyPtr can be set to NULL if not needed.</dd>
+<dd>
+If the caller is passing an invalid Position sample reference into this function, it is a fatal error, the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">positionSampleRef</td><td>Position sample's reference. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">hspeedPtr</td><td>Horizontal speed in meters/second [resolution 1e-2]. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">hspeedAccuracyPtr</td><td>Horizontal speed's accuracy estimate in meters/second [resolution 1e-1]. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ada100f53f9ad9f3df852fcc6639c15bc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_gnss_GetLocation </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__gnss__interface_8h.html#ac9577035f26d6b7f48615670eb72102a">le_gnss_SampleRef_t</a> </td>
+<td class="paramname"><em>positionSampleRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">int32_t * </td>
+<td class="paramname"><em>latitudePtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">int32_t * </td>
+<td class="paramname"><em>longitudePtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">int32_t * </td>
+<td class="paramname"><em>hAccuracyPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the location's data (Latitude, Longitude, Horizontal accuracy).</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT Function failed to get the location's data</li>
+<li>LE_OUT_OF_RANGE One of the retrieved parameter is invalid (set to INT32_MAX).</li>
+<li>LE_OK Function succeeded.</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>latitudePtr, longitudePtr, hAccuracyPtr, altitudePtr, vAccuracyPtr can be set to NULL if not needed.</dd>
+<dd>
+: The latitude and longitude values are based on the WGS84 standard coordinate system.</dd>
+<dd>
+The latitude and longitude are given in degrees with 6 decimal places like: Latitude +48858300 = 48.858300 degrees North Longitude +2294400 = 2.294400 degrees East</dd>
+<dd>
+Altitude is in metres, above Mean Sea Level, with 3 decimal places (3047 = 3.047 metres).</dd>
+<dd>
+If the caller is passing an invalid Position sample reference into this function, it is a fatal error, the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">positionSampleRef</td><td>Position sample's reference. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">latitudePtr</td><td>WGS84 Latitude in degrees, positive North [resolution 1e-6]. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">longitudePtr</td><td>WGS84 Longitude in degrees, positive East [resolution 1e-6]. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">hAccuracyPtr</td><td>Horizontal position's accuracy in metres [resolution 1e-2]. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a0a0df2ffe42b6277f43af0e52e617339"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_gnss_GetPositionState </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__gnss__interface_8h.html#ac9577035f26d6b7f48615670eb72102a">le_gnss_SampleRef_t</a> </td>
+<td class="paramname"><em>positionSampleRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="le__gnss__interface_8h.html#abcb86aa054abc7a32d2f5a7363387ef1">le_gnss_FixState_t</a> * </td>
+<td class="paramname"><em>statePtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function gets the position sample's fix state</p>
+<ul>
+<li>LE_OK on success</li>
+<li>LE_FAULT on failure</li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing an invalid Position sample reference into this function, it is a fatal error, the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">positionSampleRef</td><td>Position sample's reference. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">statePtr</td><td>Position fix state. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a2b5eb5e1efbc31683e717dd7181ff1d3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_gnss_GetSuplAssistedMode </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__gnss__interface_8h.html#a70085fe9ff78ec5c7426fd4c9dc2f9dc">le_gnss_AssistedMode_t</a> * </td>
+<td class="paramname"><em>assistedModePtr</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function gets the SUPL Assisted-GNSS mode.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_FAULT on failure </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[out]</td><td class="paramname">assistedModePtr</td><td>Assisted-GNSS mode. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a0d014a96fc8b15b736d04747d51082d9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_gnss_GetTime </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__gnss__interface_8h.html#ac9577035f26d6b7f48615670eb72102a">le_gnss_SampleRef_t</a> </td>
+<td class="paramname"><em>positionSampleRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">uint16_t * </td>
+<td class="paramname"><em>hoursPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">uint16_t * </td>
+<td class="paramname"><em>minutesPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">uint16_t * </td>
+<td class="paramname"><em>secondsPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">uint16_t * </td>
+<td class="paramname"><em>millisecondsPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the position sample's time.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT Function failed to get the time.</li>
+<li>LE_OUT_OF_RANGE The retrieved time is invalid (all fields are set to 0).</li>
+<li>LE_OK Function succeeded.</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing an invalid Position sample reference into this function, it is a fatal error, the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">positionSampleRef</td><td>Position sample's reference. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">hoursPtr</td><td>UTC Hours into the day [range 0..23]. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">minutesPtr</td><td>UTC Minutes into the hour [range 0..59]. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">secondsPtr</td><td>UTC Seconds into the minute [range 0..59]. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">millisecondsPtr</td><td>UTC Milliseconds into the second [range 0..999]. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a6b2fbb3902c9fd3336b5940b2abacb12"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_gnss_GetTtff </td>
+<td>(</td>
+<td class="paramtype">uint32_t * </td>
+<td class="paramname"><em>ttffPtr</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the TTFF in milliseconds</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_BUSY The position is not fixed and TTFF can't be measured.</li>
+<li>LE_NOT_PERMITTED If the GNSS device is not enabled or not started.</li>
+<li>LE_OK Function succeeded. </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[out]</td><td class="paramname">ttffPtr</td><td>TTFF in milliseconds </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a37a370cec19610be1f99d9c9db291a1e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_gnss_GetVerticalSpeed </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__gnss__interface_8h.html#ac9577035f26d6b7f48615670eb72102a">le_gnss_SampleRef_t</a> </td>
+<td class="paramname"><em>positionSampleRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">int32_t * </td>
+<td class="paramname"><em>vspeedPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">int32_t * </td>
+<td class="paramname"><em>vspeedAccuracyPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the position sample's vertical speed.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT The function failed to find the positionSample.</li>
+<li>LE_OUT_OF_RANGE One of the retrieved parameter is not valid (set to INT32_MAX).</li>
+<li>LE_OK The function succeeded.</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>vSpeedPtr, vSpeedAccuracyPtr can be set to NULL if not needed.</dd>
+<dd>
+For a 2D position Fix, the vertical speed will be indicated as invalid and set to INT32_MAX.</dd>
+<dd>
+If the caller is passing an invalid Position sample reference into this function, it is a fatal error, the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">positionSampleRef</td><td>Position sample's reference. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">vspeedPtr</td><td>Vertical speed in meters/second [resolution 1e-2]. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">vspeedAccuracyPtr</td><td>Vertical speed's accuracy estimate in meters/second [resolution 1e-1]. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a3bd8f5067d4bba2e7ed5fce95c2c1a74"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_gnss_InjectSuplCertificate </td>
+<td>(</td>
+<td class="paramtype">uint8_t </td>
+<td class="paramname"><em>suplCertificateId</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">uint16_t </td>
+<td class="paramname"><em>suplCertificateLen</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>suplCertificate</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function injects the SUPL certificate to be used in A-GNSS sessions.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_FAULT on failure</li>
+<li>LE_BUSY service is busy</li>
+<li>LE_TIMEOUT a time-out occurred </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">suplCertificateId</td><td>Certificate ID of the SUPL certificate. Certificate ID range is 0 to 9 </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">suplCertificateLen</td><td>SUPL certificate size in Bytes. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">suplCertificate</td><td>SUPL certificate contents. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="aea1811e39dfae1516b08404adfbaec22"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_gnss_LoadExtendedEphemerisFile </td>
+<td>(</td>
+<td class="paramtype">int </td>
+<td class="paramname"><em>fd</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function must be called to load an 'Extended Ephemeris' file into the GNSS device.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT The function failed to inject the 'Extended Ephemeris' file.</li>
+<li>LE_TIMEOUT A time-out occurred.</li>
+<li>LE_FORMAT_ERROR 'Extended Ephemeris' file format error.</li>
+<li>LE_OK The function succeeded. </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">fd</td><td>Extended ephemeris file descriptor </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a89cdf0fb25e8204befc65db7aa6837db"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_gnss_ReleaseSampleRef </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__gnss__interface_8h.html#ac9577035f26d6b7f48615670eb72102a">le_gnss_SampleRef_t</a> </td>
+<td class="paramname"><em>positionSampleRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function must be called to release the position sample.</p>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing an invalid Position sample reference into this function, it is a fatal error, the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">positionSampleRef</td><td>Position sample's reference. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a3fc94954cc139340f447ae0ae87e8c2d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_gnss_RemovePositionHandler </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__gnss__interface_8h.html#a55a27b330b348c8d78073fe0e3e784eb">le_gnss_PositionHandlerRef_t</a> </td>
+<td class="paramname"><em>addHandlerRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Remove handler function for EVENT 'le_gnss_Position' </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">addHandlerRef</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a75d96ec7ac6e0d6b58525e4c523d3b2c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_gnss_SetAcquisitionRate </td>
+<td>(</td>
+<td class="paramtype">uint32_t </td>
+<td class="paramname"><em>rate</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function sets the GNSS device acquisition rate.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_FAULT on failure</li>
+<li>LE_UNSUPPORTED request not supported</li>
+<li>LE_TIMEOUT a time-out occurred</li>
+<li>LE_NOT_PERMITTED If the GNSS device is not in "ready" state. </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">rate</td><td>Acquisition rate in milliseconds. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a6dbdc58f23e480e65ea16c583ef5340f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_gnss_SetConstellation </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__gnss__interface_8h.html#adac6fdd4f73229bc9af14e0a11335efc">le_gnss_ConstellationBitMask_t</a> </td>
+<td class="paramname"><em>constellationMask</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Set the GNSS constellation bit mask</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT The function failed.</li>
+<li>LE_UNSUPPORTED If the request is not supported.</li>
+<li>LE_NOT_PERMITTED If the GNSS device is not initialized, disabled or active.</li>
+<li>LE_OK The function succeeded. </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">constellationMask</td><td>GNSS constellation used in solution. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a5d74c2ad91a504a1d0ac35b4f4f2c382"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_gnss_SetSuplAssistedMode </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__gnss__interface_8h.html#a70085fe9ff78ec5c7426fd4c9dc2f9dc">le_gnss_AssistedMode_t</a> </td>
+<td class="paramname"><em>assistedMode</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function sets the SUPL Assisted-GNSS mode.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_FAULT on failure</li>
+<li>LE_UNSUPPORTED request not supported</li>
+<li>LE_TIMEOUT a time-out occurred </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">assistedMode</td><td>Assisted-GNSS mode. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="abff6d8ae251972df157b5b38829230ed"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_gnss_SetSuplServerUrl </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>suplServerUrl</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function sets the SUPL server URL. That server URL is a NULL-terminated string with a maximum string length (including NULL terminator) equal to 256. Optionally the port number is specified after a colon.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_FAULT on failure</li>
+<li>LE_BUSY service is busy</li>
+<li>LE_TIMEOUT a time-out occurred </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">suplServerUrl</td><td>SUPL server URL. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="add90639835a531c4b9d15554e4f3ba16"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_gnss_Start </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function starts the GNSS device.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT The function failed.</li>
+<li>LE_DUPLICATE If the GNSS device is already started.</li>
+<li>LE_NOT_PERMITTED If the GNSS device is not initialized or disabled.</li>
+<li>LE_OK The function succeeded. </li>
+</ul>
+</dd></dl>
+</div>
+</div>
+<a class="anchor" id="a93d63fdc76dbced071956b87de2abff7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_gnss_Stop </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function stops the GNSS device.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT The function failed.</li>
+<li>LE_DUPLICATE If the GNSS device is already stopped.</li>
+<li>LE_NOT_PERMITTED If the GNSS device is not initialized or disabled.</li>
+<li>LE_OK The function succeeded. </li>
+</ul>
+</dd></dl>
+</div>
+</div>
+</div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>le_dir.h - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Reference.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a href="build_apps_documentation.html">Documentation</a><a class="link-selected" href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">le_dir.h</h1> </div>
+</div><div class="contents">
+<a href="le__dir_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span> </div><div class="line"><a name="l00031"></a><span class="lineno">   31</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><a name="l00039"></a><span class="lineno">   39</span> <span class="comment"></span><span class="preprocessor">#ifndef LEGATO_DIR_INCLUDE_GUARD</span></div><div class="line"><a name="l00040"></a><span class="lineno">   40</span> <span class="preprocessor">#define LEGATO_DIR_INCLUDE_GUARD</span></div><div class="line"><a name="l00041"></a><span class="lineno">   41</span> </div><div class="line"><a name="l00042"></a><span class="lineno">   42</span> </div><div class="line"><a name="l00043"></a><span class="lineno">   43</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><a name="l00054"></a><span class="lineno">   54</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><a name="l00055"></a><span class="lineno">   55</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__dir_8h.html#a7ac7d25b67f2e47127084677626d5344">le_dir_Make</a></div><div class="line"><a name="l00056"></a><span class="lineno">   56</span> (</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>     <span class="keyword">const</span> <span class="keywordtype">char</span>* pathNamePtr,    </div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>     mode_t mode                 </div><div class="line"><a name="l00059"></a><span class="lineno">   59</span> );</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span> </div><div class="line"><a name="l00061"></a><span class="lineno">   61</span> </div><div class="line"><a name="l00062"></a><span class="lineno">   62</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><a name="l00075"></a><span class="lineno">   75</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><a name="l00076"></a><span class="lineno">   76</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__dir_8h.html#a41fc915e2a21ea91dabe335f1316df74">le_dir_MakePath</a></div><div class="line"><a name="l00077"></a><span class="lineno">   77</span> (</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>     <span class="keyword">const</span> <span class="keywordtype">char</span>* pathNamePtr,    </div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>     mode_t mode                 </div><div class="line"><a name="l00080"></a><span class="lineno">   80</span> );</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span> </div><div class="line"><a name="l00082"></a><span class="lineno">   82</span> </div><div class="line"><a name="l00083"></a><span class="lineno">   83</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><a name="l00095"></a><span class="lineno">   95</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><a name="l00096"></a><span class="lineno">   96</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> <a class="code" href="le__dir_8h.html#a9eca51d0e3031f9dee7b875a62c8b1e0">le_dir_RemoveRecursive</a></div><div class="line"><a name="l00097"></a><span class="lineno">   97</span> (</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>     <span class="keyword">const</span> <span class="keywordtype">char</span>* pathNamePtr           </div><div class="line"><a name="l00099"></a><span class="lineno">   99</span> );</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span> </div><div class="line"><a name="l00101"></a><span class="lineno">  101</span> </div><div class="line"><a name="l00102"></a><span class="lineno">  102</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><a name="l00109"></a><span class="lineno">  109</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div><div class="line"><a name="l00110"></a><span class="lineno">  110</span> <span class="keywordtype">bool</span> <a class="code" href="le__dir_8h.html#a21759e0bd1e3aeae2664b955c36baa58">le_dir_IsDir</a></div><div class="line"><a name="l00111"></a><span class="lineno">  111</span> (</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>     <span class="keyword">const</span> <span class="keywordtype">char</span>* pathNamePtr     </div><div class="line"><a name="l00113"></a><span class="lineno">  113</span> );</div><div class="line"><a name="l00114"></a><span class="lineno">  114</span> </div><div class="line"><a name="l00115"></a><span class="lineno">  115</span> </div><div class="line"><a name="l00116"></a><span class="lineno">  116</span> <span class="preprocessor">#endif // LEGATO_DIR_INCLUDE_GUARD</span></div><div class="ttc" id="le__basics_8h_html_a1cca095ed6ebab24b57a636382a6c86c"><div class="ttname"><a href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a></div><div class="ttdeci">le_result_t</div><div class="ttdef"><b>Definition:</b> le_basics.h:35</div></div>
+<div class="ttc" id="le__dir_8h_html_a9eca51d0e3031f9dee7b875a62c8b1e0"><div class="ttname"><a href="le__dir_8h.html#a9eca51d0e3031f9dee7b875a62c8b1e0">le_dir_RemoveRecursive</a></div><div class="ttdeci">le_result_t le_dir_RemoveRecursive(const char *pathNamePtr)</div></div>
+<div class="ttc" id="le__dir_8h_html_a41fc915e2a21ea91dabe335f1316df74"><div class="ttname"><a href="le__dir_8h.html#a41fc915e2a21ea91dabe335f1316df74">le_dir_MakePath</a></div><div class="ttdeci">le_result_t le_dir_MakePath(const char *pathNamePtr, mode_t mode)</div></div>
+<div class="ttc" id="le__dir_8h_html_a21759e0bd1e3aeae2664b955c36baa58"><div class="ttname"><a href="le__dir_8h.html#a21759e0bd1e3aeae2664b955c36baa58">le_dir_IsDir</a></div><div class="ttdeci">bool le_dir_IsDir(const char *pathNamePtr)</div></div>
+<div class="ttc" id="le__dir_8h_html_a7ac7d25b67f2e47127084677626d5344"><div class="ttname"><a href="le__dir_8h.html#a7ac7d25b67f2e47127084677626d5344">le_dir_Make</a></div><div class="ttdeci">le_result_t le_dir_Make(const char *pathNamePtr, mode_t mode)</div></div>
+</div><!-- fragment --></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

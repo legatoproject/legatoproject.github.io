@@ -1,0 +1,465 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>le_update_interface.h File Reference - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Reference.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a href="build_apps_documentation.html">Documentation</a><a class="link-selected" href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="summary">
+<a href="#typedef-members">Typedefs</a> |
+<a href="#enum-members">Enumerations</a> |
+<a href="#func-members">Functions</a> </div>
+<div class="headertitle">
+<h1 class="title">le_update_interface.h File Reference</h1> </div>
+</div><div class="contents">
+<div class="textblock"><code>#include "<a class="el" href="legato_8h_source.html">legato.h</a>"</code><br />
+<code>#include "<a class="el" href="le__limit__interface_8h_source.html">le_limit_interface.h</a>"</code><br />
+</div>
+<p><a href="le__update__interface_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a20a94b986a9ba0e6772b146f98b95f92"><td align="right" class="memItemLeft" valign="top">typedef struct le_update_ProgressHandler * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__update__interface_8h.html#a20a94b986a9ba0e6772b146f98b95f92">le_update_ProgressHandlerRef_t</a></td></tr>
+<tr class="separator:a20a94b986a9ba0e6772b146f98b95f92"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a6926f0dc18bfe5bfe23e1cea26d464c2"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__update__interface_8h.html#a6926f0dc18bfe5bfe23e1cea26d464c2">le_update_ProgressHandlerFunc_t</a>) (<a class="el" href="le__update__interface_8h.html#ae9758536ebaf1842cdaaddd6cf95a672">le_update_State_t</a> updateState, uint percentDone, void *contextPtr)</td></tr>
+<tr class="separator:a6926f0dc18bfe5bfe23e1cea26d464c2"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ae9758536ebaf1842cdaaddd6cf95a672"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__update__interface_8h.html#ae9758536ebaf1842cdaaddd6cf95a672">le_update_State_t</a> { <a class="el" href="le__update__interface_8h.html#ae9758536ebaf1842cdaaddd6cf95a672a01cdf8340b000eb108dd8d9a350147db">LE_UPDATE_STATE_UNPACKING</a>, 
+<a class="el" href="le__update__interface_8h.html#ae9758536ebaf1842cdaaddd6cf95a672ae950e649ac258bc23ba0c315904bca77">LE_UPDATE_STATE_APPLYING</a>, 
+<a class="el" href="le__update__interface_8h.html#ae9758536ebaf1842cdaaddd6cf95a672ae18d6a3b4f86d5cbfc693cb054d91845">LE_UPDATE_STATE_SUCCESS</a>, 
+<a class="el" href="le__update__interface_8h.html#ae9758536ebaf1842cdaaddd6cf95a672a67f0990e9adccbc2cda0ad78ab98d894">LE_UPDATE_STATE_FAILED</a>
+ }</td></tr>
+<tr class="separator:ae9758536ebaf1842cdaaddd6cf95a672"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a24bac90fc939c561c64d13608cc78a20"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__update__interface_8h.html#a24bac90fc939c561c64d13608cc78a20">le_update_ErrorCode_t</a> { <a class="el" href="le__update__interface_8h.html#a24bac90fc939c561c64d13608cc78a20a5473b80d9e60fc1a8fd5f78a47b1c69e">LE_UPDATE_ERR_NONE</a>, 
+<a class="el" href="le__update__interface_8h.html#a24bac90fc939c561c64d13608cc78a20a75e035563341a91a77d85055545ce9de">LE_UPDATE_ERR_BAD_PACKAGE</a>, 
+<a class="el" href="le__update__interface_8h.html#a24bac90fc939c561c64d13608cc78a20a9dfcb8ef952d81438c5bc07ed7a15171">LE_UPDATE_ERR_INTERNAL_ERROR</a>, 
+<a class="el" href="le__update__interface_8h.html#a24bac90fc939c561c64d13608cc78a20a4007eb89df91afad15ddd268d1d7e943">LE_UPDATE_ERR_SECURITY_FAILURE</a>
+ }</td></tr>
+<tr class="separator:a24bac90fc939c561c64d13608cc78a20"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a338754ee167108f8da4a6023487e4d78"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__update__interface_8h.html#a338754ee167108f8da4a6023487e4d78">le_update_ConnectService</a> (void)</td></tr>
+<tr class="separator:a338754ee167108f8da4a6023487e4d78"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a5e49e9b047c622ab7e3f617336907f1d"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__update__interface_8h.html#a5e49e9b047c622ab7e3f617336907f1d">le_update_DisconnectService</a> (void)</td></tr>
+<tr class="separator:a5e49e9b047c622ab7e3f617336907f1d"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:af112ef0dec3807ff24ec5840732cc47f"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__update__interface_8h.html#a20a94b986a9ba0e6772b146f98b95f92">le_update_ProgressHandlerRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__update__interface_8h.html#af112ef0dec3807ff24ec5840732cc47f">le_update_AddProgressHandler</a> (<a class="el" href="le__update__interface_8h.html#a6926f0dc18bfe5bfe23e1cea26d464c2">le_update_ProgressHandlerFunc_t</a> handlerPtr, void *contextPtr)</td></tr>
+<tr class="separator:af112ef0dec3807ff24ec5840732cc47f"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a5c0b5527aaa493f05612f85926d71400"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__update__interface_8h.html#a5c0b5527aaa493f05612f85926d71400">le_update_RemoveProgressHandler</a> (<a class="el" href="le__update__interface_8h.html#a20a94b986a9ba0e6772b146f98b95f92">le_update_ProgressHandlerRef_t</a> addHandlerRef)</td></tr>
+<tr class="separator:a5c0b5527aaa493f05612f85926d71400"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a5b2d287f2403b1228df7ac257f3becd7"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__update__interface_8h.html#a5b2d287f2403b1228df7ac257f3becd7">le_update_Start</a> (int fd)</td></tr>
+<tr class="separator:a5b2d287f2403b1228df7ac257f3becd7"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a2cc57488db74a0a308402bacb14007b1"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__update__interface_8h.html#a2cc57488db74a0a308402bacb14007b1">le_update_End</a> (void)</td></tr>
+<tr class="separator:a2cc57488db74a0a308402bacb14007b1"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ae839f8383c594c13d8c20b9861919447"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__update__interface_8h.html#a24bac90fc939c561c64d13608cc78a20">le_update_ErrorCode_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__update__interface_8h.html#ae839f8383c594c13d8c20b9861919447">le_update_GetErrorCode</a> (void)</td></tr>
+<tr class="separator:ae839f8383c594c13d8c20b9861919447"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a7ae02132ca690606a1d556aff5f3a4c4"><td align="right" class="memItemLeft" valign="top">int32_t </td><td class="memItemRight" valign="bottom"><a class="el" href="le__update__interface_8h.html#a7ae02132ca690606a1d556aff5f3a4c4">le_update_GetCurrentSysIndex</a> (void)</td></tr>
+<tr class="separator:a7ae02132ca690606a1d556aff5f3a4c4"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aab3efd60e6c19a17d38f19ae14401ac2"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__update__interface_8h.html#aab3efd60e6c19a17d38f19ae14401ac2">le_update_GetSystemHash</a> (int32_t systemIndex, char *hashStr, size_t hashStrNumElements)</td></tr>
+<tr class="separator:aab3efd60e6c19a17d38f19ae14401ac2"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a82196efdc87d57f62d40a195cbafd2eb"><td align="right" class="memItemLeft" valign="top">int32_t </td><td class="memItemRight" valign="bottom"><a class="el" href="le__update__interface_8h.html#a82196efdc87d57f62d40a195cbafd2eb">le_update_GetPreviousSystemIndex</a> (int32_t systemIndex)</td></tr>
+<tr class="separator:a82196efdc87d57f62d40a195cbafd2eb"><td class="memSeparator" colspan="2"> </td></tr>
+</table>
+<a id="details" name="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Legato <a class="el" href="c_update.html">Software Update</a> include file.</p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div><h2 class="groupheader">Typedef Documentation</h2>
+<a class="anchor" id="a6926f0dc18bfe5bfe23e1cea26d464c2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef void(* le_update_ProgressHandlerFunc_t) (<a class="el" href="le__update__interface_8h.html#ae9758536ebaf1842cdaaddd6cf95a672">le_update_State_t</a> updateState, uint percentDone, void *contextPtr)</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>The client callback function (handler) passed to <a class="el" href="le__update__interface_8h.html#a5b2d287f2403b1228df7ac257f3becd7">le_update_Start()</a> must look like this.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramname">updateState</td><td>Current state of update. </td></tr>
+<tr><td class="paramname">percentDone</td><td>Percent done for current state. For example, in state UNPACKING, a percentDone of 80 means that 80% of the update data has been unpacked. </td></tr>
+<tr><td class="paramname">contextPtr</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a20a94b986a9ba0e6772b146f98b95f92"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef struct le_update_ProgressHandler* <a class="el" href="le__update__interface_8h.html#a20a94b986a9ba0e6772b146f98b95f92">le_update_ProgressHandlerRef_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Reference type used by Add/Remove functions for EVENT 'le_update_Progress' </p>
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a class="anchor" id="a24bac90fc939c561c64d13608cc78a20"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="le__update__interface_8h.html#a24bac90fc939c561c64d13608cc78a20">le_update_ErrorCode_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Error code used to provide diagnostic information after a failed update.</p>
+<dl class="section note"><dt>Note</dt><dd>Additional information may also be available in the target device's system log. </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a24bac90fc939c561c64d13608cc78a20a5473b80d9e60fc1a8fd5f78a47b1c69e"></a>LE_UPDATE_ERR_NONE </td><td class="fielddoc">
+<p>No error. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a24bac90fc939c561c64d13608cc78a20a75e035563341a91a77d85055545ce9de"></a>LE_UPDATE_ERR_BAD_PACKAGE </td><td class="fielddoc">
+<p>Encountered bad update package. Check logs. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a24bac90fc939c561c64d13608cc78a20a9dfcb8ef952d81438c5bc07ed7a15171"></a>LE_UPDATE_ERR_INTERNAL_ERROR </td><td class="fielddoc">
+<p>Something failed while doing update. Check logs. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a24bac90fc939c561c64d13608cc78a20a4007eb89df91afad15ddd268d1d7e943"></a>LE_UPDATE_ERR_SECURITY_FAILURE </td><td class="fielddoc">
+<p>Error while doing security check of the package. </p>
+</td></tr>
+</table>
+</div>
+</div>
+<a class="anchor" id="ae9758536ebaf1842cdaaddd6cf95a672"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="le__update__interface_8h.html#ae9758536ebaf1842cdaaddd6cf95a672">le_update_State_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Different states in the update state machine. The state machine is maintained to track the update task underway.</p>
+<p>Example: for successful installation task, state transitions look like:</p>
+<pre class="fragment">    --> UNPACKING --> APPLYING --> SUCCESS.
+            |            |
+            +------------+-------> FAILED.
+</pre> <table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ae9758536ebaf1842cdaaddd6cf95a672a01cdf8340b000eb108dd8d9a350147db"></a>LE_UPDATE_STATE_UNPACKING </td><td class="fielddoc">
+<p>Unpacking update data. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae9758536ebaf1842cdaaddd6cf95a672ae950e649ac258bc23ba0c315904bca77"></a>LE_UPDATE_STATE_APPLYING </td><td class="fielddoc">
+<p>Applying update(i.e. installation/removal operation going on). </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae9758536ebaf1842cdaaddd6cf95a672ae18d6a3b4f86d5cbfc693cb054d91845"></a>LE_UPDATE_STATE_SUCCESS </td><td class="fielddoc">
+<p>Successfully completed all update task. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae9758536ebaf1842cdaaddd6cf95a672a67f0990e9adccbc2cda0ad78ab98d894"></a>LE_UPDATE_STATE_FAILED </td><td class="fielddoc">
+<p>Update failed due to some error or deletion request. </p>
+</td></tr>
+</table>
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="af112ef0dec3807ff24ec5840732cc47f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__update__interface_8h.html#a20a94b986a9ba0e6772b146f98b95f92">le_update_ProgressHandlerRef_t</a> le_update_AddProgressHandler </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__update__interface_8h.html#a6926f0dc18bfe5bfe23e1cea26d464c2">le_update_ProgressHandlerFunc_t</a> </td>
+<td class="paramname"><em>handlerPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">void * </td>
+<td class="paramname"><em>contextPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Add handler function for EVENT 'le_update_Progress'</p>
+<p>Register for notification of the progress of a given update. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">handlerPtr</td><td></td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">contextPtr</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a338754ee167108f8da4a6023487e4d78"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_update_ConnectService </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Connect the current client thread to the service providing this API.</p>
+<p>This function must be called before any other functions in this API. Normally, it's automatically called for the main thread, but must be explicitly called for other threads. For details, see <a class="el" href="api_files_c.html#apiFilesC_client">Client-specific Functions</a>.</p>
+<p>This function is created automatically. </p>
+</div>
+</div>
+<a class="anchor" id="a5e49e9b047c622ab7e3f617336907f1d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_update_DisconnectService </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Disconnect the current client thread from the service providing this API.</p>
+<p>Normally, this function doesn't need to be called. After this function is called, there's no longer a connection to the service, and the functions in this API can't be used. For details, see <a class="el" href="api_files_c.html#apiFilesC_client">Client-specific Functions</a>.</p>
+<p>This function is created automatically. </p>
+</div>
+</div>
+<a class="anchor" id="a2cc57488db74a0a308402bacb14007b1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_update_End </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Ends an update session. If the update isn't finished yet, cancels it. </p>
+</div>
+</div>
+<a class="anchor" id="a7ae02132ca690606a1d556aff5f3a4c4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">int32_t le_update_GetCurrentSysIndex </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the index of the currently running system.</p>
+<dl class="section return"><dt>Returns</dt><dd>The index of the running system. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ae839f8383c594c13d8c20b9861919447"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__update__interface_8h.html#a24bac90fc939c561c64d13608cc78a20">le_update_ErrorCode_t</a> le_update_GetErrorCode </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Function to get error code when update fails.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>Error code of encountered error.</li>
+<li>ERR_NONE if update is in any other state. </li>
+</ul>
+</dd></dl>
+</div>
+</div>
+<a class="anchor" id="a82196efdc87d57f62d40a195cbafd2eb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">int32_t le_update_GetPreviousSystemIndex </td>
+<td>(</td>
+<td class="paramtype">int32_t </td>
+<td class="paramname"><em>systemIndex</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the index for the previous system in the chain, using the current system as a starting point.</p>
+<dl class="section return"><dt>Returns</dt><dd>The index to the system that's previous to the given system. -1 is returned if the previous system was not found. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">systemIndex</td><td>Get the system that's older than this system. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="aab3efd60e6c19a17d38f19ae14401ac2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_update_GetSystemHash </td>
+<td>(</td>
+<td class="paramtype">int32_t </td>
+<td class="paramname"><em>systemIndex</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">char * </td>
+<td class="paramname"><em>hashStr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>hashStrNumElements</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the hash ID for a given system.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK if no problems are encountered.</li>
+<li>LE_NOT_FOUND if the given index does not correspond to an available system.</li>
+<li>LE_OVERFLOW if the supplied buffer is too small.</li>
+<li>LE_FORMAT_ERROR if there are problems reading the hash for the system. </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">systemIndex</td><td>The system to read the hash for. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">hashStr</td><td>Buffer to hold the system hash string. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">hashStrNumElements</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a5c0b5527aaa493f05612f85926d71400"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_update_RemoveProgressHandler </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__update__interface_8h.html#a20a94b986a9ba0e6772b146f98b95f92">le_update_ProgressHandlerRef_t</a> </td>
+<td class="paramname"><em>addHandlerRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Remove handler function for EVENT 'le_update_Progress' </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">addHandlerRef</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a5b2d287f2403b1228df7ac257f3becd7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_update_Start </td>
+<td>(</td>
+<td class="paramtype">int </td>
+<td class="paramname"><em>fd</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Starts an update.</p>
+<p>Progress is reported via the progress handler callback.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK if accepted.</li>
+<li>LE_BUSY if another update is in progress.</li>
+<li>LE_UNAVAILABLE if the system is still in "probation" (not marked "good" yet). </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">fd</td><td>Open file descriptor from which the update can be read. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

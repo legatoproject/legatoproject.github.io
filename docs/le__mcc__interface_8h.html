@@ -1,0 +1,939 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>le_mcc_interface.h File Reference - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Reference.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a href="build_apps_documentation.html">Documentation</a><a class="link-selected" href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="summary">
+<a href="#typedef-members">Typedefs</a> |
+<a href="#enum-members">Enumerations</a> |
+<a href="#func-members">Functions</a> </div>
+<div class="headertitle">
+<h1 class="title">le_mcc_interface.h File Reference</h1> </div>
+</div><div class="contents">
+<div class="textblock"><code>#include "<a class="el" href="legato_8h_source.html">legato.h</a>"</code><br />
+<code>#include "<a class="el" href="le__mdm_defs__interface_8h_source.html">le_mdmDefs_interface.h</a>"</code><br />
+</div>
+<p><a href="le__mcc__interface_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a8ae6dac3ca12854884d63e17d5388a7a"><td align="right" class="memItemLeft" valign="top">typedef struct le_mcc_Call * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mcc__interface_8h.html#a8ae6dac3ca12854884d63e17d5388a7a">le_mcc_CallRef_t</a></td></tr>
+<tr class="separator:a8ae6dac3ca12854884d63e17d5388a7a"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a0bb9fd4ec67450a267bc372bf9a90cb9"><td align="right" class="memItemLeft" valign="top">typedef struct le_mcc_CallEventHandler * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mcc__interface_8h.html#a0bb9fd4ec67450a267bc372bf9a90cb9">le_mcc_CallEventHandlerRef_t</a></td></tr>
+<tr class="separator:a0bb9fd4ec67450a267bc372bf9a90cb9"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ace811e84500b2f008d8c95c43872d82c"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mcc__interface_8h.html#ace811e84500b2f008d8c95c43872d82c">le_mcc_CallEventHandlerFunc_t</a>) (<a class="el" href="le__mcc__interface_8h.html#a8ae6dac3ca12854884d63e17d5388a7a">le_mcc_CallRef_t</a> callRef, <a class="el" href="le__mcc__interface_8h.html#aefc4679ffa76d0e04c578572c22f06cf">le_mcc_Event_t</a> event, void *contextPtr)</td></tr>
+<tr class="separator:ace811e84500b2f008d8c95c43872d82c"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:aefc4679ffa76d0e04c578572c22f06cf"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mcc__interface_8h.html#aefc4679ffa76d0e04c578572c22f06cf">le_mcc_Event_t</a> { <br />
+  <a class="el" href="le__mcc__interface_8h.html#aefc4679ffa76d0e04c578572c22f06cfa57dc02ca807a7a7c616e947f3651de9f">LE_MCC_EVENT_SETUP</a>, 
+<a class="el" href="le__mcc__interface_8h.html#aefc4679ffa76d0e04c578572c22f06cfab37936f33d31259ea0c16169ba852bd0">LE_MCC_EVENT_INCOMING</a>, 
+<a class="el" href="le__mcc__interface_8h.html#aefc4679ffa76d0e04c578572c22f06cfa1fa56f470ae87b06edb532f9e2b593e0">LE_MCC_EVENT_ORIGINATING</a>, 
+<a class="el" href="le__mcc__interface_8h.html#aefc4679ffa76d0e04c578572c22f06cfa05261a9fdb7ee59a0dae1cc27bb30e07">LE_MCC_EVENT_ALERTING</a>, 
+<br />
+  <a class="el" href="le__mcc__interface_8h.html#aefc4679ffa76d0e04c578572c22f06cfa86702531207c50314b10ae3278c7ca0d">LE_MCC_EVENT_CONNECTED</a>, 
+<a class="el" href="le__mcc__interface_8h.html#aefc4679ffa76d0e04c578572c22f06cfa38b7c4ab21fa9828be8169372e41ae98">LE_MCC_EVENT_TERMINATED</a>, 
+<a class="el" href="le__mcc__interface_8h.html#aefc4679ffa76d0e04c578572c22f06cfaaeed6c549d3cdc9353a9c80d3b893800">LE_MCC_EVENT_WAITING</a>, 
+<a class="el" href="le__mcc__interface_8h.html#aefc4679ffa76d0e04c578572c22f06cfa11c957908799cc338bf6d700e4677200">LE_MCC_EVENT_ON_HOLD</a>, 
+<br />
+  <a class="el" href="le__mcc__interface_8h.html#aefc4679ffa76d0e04c578572c22f06cfa8f0eb84e9153674494832b002929c0e1">LE_MCC_EVENT_MAX</a>
+<br />
+ }</td></tr>
+<tr class="separator:aefc4679ffa76d0e04c578572c22f06cf"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:abda706f723ba619f9bc460bcc9a4960d"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960d">le_mcc_TerminationReason_t</a> { <br />
+  <a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960daf4262288191582892e6f84e51e3082c1">LE_MCC_TERM_LOCAL_ENDED</a>, 
+<a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960dad33c3e71bdfd7513392f28bf2a7e9c9b">LE_MCC_TERM_REMOTE_ENDED</a>, 
+<a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960da2ef2a4a77e51faec38a2c131ff5d6f24">LE_MCC_TERM_NETWORK_FAIL</a>, 
+<a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960da2efa341f50cb8abef243d8ea2b9fac7d">LE_MCC_TERM_UNASSIGNED_NUMBER</a>, 
+<br />
+  <a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960da9fae77718439c9ff41343b4df74a74d2">LE_MCC_TERM_NO_ROUTE_TO_DESTINATION</a>, 
+<a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960da181f6bb0cd5e308532c1518041825331">LE_MCC_TERM_CHANNEL_UNACCEPTABLE</a>, 
+<a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960da4f91eb4e6eec8ed84c3b4b6d1ab949fd">LE_MCC_TERM_OPERATOR_DETERMINED_BARRING</a>, 
+<a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960dad7664d1f5a0c6517861637d0a083020c">LE_MCC_TERM_USER_BUSY</a>, 
+<br />
+  <a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960da72c8ed7aca206c32556e221e6cd97869">LE_MCC_TERM_NO_USER_RESPONDING</a>, 
+<a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960da3370631abc64539d95dc6deb945fcf58">LE_MCC_TERM_USER_ALERTING_NO_ANSWER</a>, 
+<a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960daa52ecac95e442fe5eed20bfa70dec1f8">LE_MCC_TERM_CALL_REJECTED</a>, 
+<a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960da2cbbae27090616accf64bde775363716">LE_MCC_TERM_NUMBER_CHANGED</a>, 
+<br />
+  <a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960da60bb1111d23d5a24477da0446f15e370">LE_MCC_TERM_PREEMPTION</a>, 
+<a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960da7cea5949f6f678cea632613cf5938c8f">LE_MCC_TERM_DESTINATION_OUT_OF_ORDER</a>, 
+<a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960da647559e730bf064dd1ea82f17b26a231">LE_MCC_TERM_INVALID_NUMBER_FORMAT</a>, 
+<a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960da2b673787abb7ff82ae6fbac3c8c6909f">LE_MCC_TERM_FACILITY_REJECTED</a>, 
+<br />
+  <a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960da4890cd46f1b41b980b870f5eca0dbc35">LE_MCC_TERM_RESP_TO_STATUS_ENQUIRY</a>, 
+<a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960dadc7be57ac34fae106a87d79b5e394b88">LE_MCC_TERM_NORMAL_UNSPECIFIED</a>, 
+<a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960dab02d909fd7c141368e07876b8c273f72">LE_MCC_TERM_NO_CIRCUIT_OR_CHANNEL_AVAILABLE</a>, 
+<a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960da1850b2619aca6b4e342f35fed210b3bc">LE_MCC_TERM_NETWORK_OUT_OF_ORDER</a>, 
+<br />
+  <a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960da02a6e105d2decbc2add4c92a50264e89">LE_MCC_TERM_TEMPORARY_FAILURE</a>, 
+<a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960dac105f26531824ef3f865d72a4bacde67">LE_MCC_TERM_SWITCHING_EQUIPMENT_CONGESTION</a>, 
+<a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960da7cd807a21402f93e7e8a3ecb4d74b438">LE_MCC_TERM_ACCESS_INFORMATION_DISCARDED</a>, 
+<a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960dacd9492ad9625370c17c85880e377a891">LE_MCC_TERM_REQUESTED_CIRCUIT_OR_CHANNEL_NOT_AVAILABLE</a>, 
+<br />
+  <a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960da54ac813e876033304db02643a933bbcf">LE_MCC_TERM_RESOURCES_UNAVAILABLE_OR_UNSPECIFIED</a>, 
+<a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960dae03f5ad79dddd1cbb6458e2ead483909">LE_MCC_TERM_QOS_UNAVAILABLE</a>, 
+<a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960da92bbe7234225d056720ab3af6e7081a9">LE_MCC_TERM_REQUESTED_FACILITY_NOT_SUBSCRIBED</a>, 
+<a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960da298e1befd70ef48d0aa97a5857b53bec">LE_MCC_TERM_INCOMING_CALLS_BARRED_WITHIN_CUG</a>, 
+<br />
+  <a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960daba9a9099951d42ac33eccf27b52898fd">LE_MCC_TERM_BEARER_CAPABILITY_NOT_AUTH</a>, 
+<a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960da965ed9bbae4e81e42e0ada643672192f">LE_MCC_TERM_BEARER_CAPABILITY_UNAVAILABLE</a>, 
+<a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960da64175f29b072b80896aeb2678868a0d0">LE_MCC_TERM_SERVICE_OPTION_NOT_AVAILABLE</a>, 
+<a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960dab4872eda90686b773f592a9b058e29d0">LE_MCC_TERM_ACM_LIMIT_EXCEEDED</a>, 
+<br />
+  <a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960dae4484c88d5a0e1e985d23821d332aa64">LE_MCC_TERM_BEARER_SERVICE_NOT_IMPLEMENTED</a>, 
+<a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960dac66eec5597cc041dc2776bf975ae8ec8">LE_MCC_TERM_REQUESTED_FACILITY_NOT_IMPLEMENTED</a>, 
+<a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960dafbae02c1bfb58226563f822731b4e989">LE_MCC_TERM_ONLY_DIGITAL_INFORMATION_BEARER_AVAILABLE</a>, 
+<a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960da8ef5309c92c450c751b1c892a13a50db">LE_MCC_TERM_SERVICE_OR_OPTION_NOT_IMPLEMENTED</a>, 
+<br />
+  <a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960da740f04d90f0f07bc3081be17e1ac2e3f">LE_MCC_TERM_INVALID_TRANSACTION_IDENTIFIER</a>, 
+<a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960daaf4161b78f6a843c7378dfce8d1904f9">LE_MCC_TERM_USER_NOT_MEMBER_OF_CUG</a>, 
+<a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960da6a54d746be1703d563f7b172c69255ea">LE_MCC_TERM_INCOMPATIBLE_DESTINATION</a>, 
+<a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960da10559d35e8c02b0fb4e86d3d01a48715">LE_MCC_TERM_INVALID_TRANSIT_NW_SELECTION</a>, 
+<br />
+  <a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960da2515195268a36b2354bdbffeb69d4775">LE_MCC_TERM_SEMANTICALLY_INCORRECT_MESSAGE</a>, 
+<a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960daabdbc9ac3fc56309470ea97b042b33fd">LE_MCC_TERM_INVALID_MANDATORY_INFORMATION</a>, 
+<a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960daa5b025a1f604deb19af33ab1d52fa144">LE_MCC_TERM_MESSAGE_TYPE_NON_IMPLEMENTED</a>, 
+<a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960da07f68f049b14f356be6a26d02fa6892e">LE_MCC_TERM_MESSAGE_TYPE_NOT_COMPATIBLE_WITH_PROTOCOL_STATE</a>, 
+<br />
+  <a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960da5710a9de4ac2ece44910406f918f6980">LE_MCC_TERM_INFORMATION_ELEMENT_NON_EXISTENT</a>, 
+<a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960daf98c25d8a99b2db60c962dc301938255">LE_MCC_TERM_CONDITONAL_IE_ERROR</a>, 
+<a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960daa9b1e57cc4644623c120f3327564c254">LE_MCC_TERM_MESSAGE_NOT_COMPATIBLE_WITH_PROTOCOL_STATE</a>, 
+<a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960dafde90114bb6f40153384de22b76a3c8d">LE_MCC_TERM_RECOVERY_ON_TIMER_EXPIRY</a>, 
+<br />
+  <a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960da112a0e09ddb9cf2c408bdcbbb1824e73">LE_MCC_TERM_PROTOCOL_ERROR_UNSPECIFIED</a>, 
+<a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960daf7fdcba6877ed8afe2776c1e81a0d88b">LE_MCC_TERM_INTERWORKING_UNSPECIFIED</a>, 
+<a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960da8d196aa90a2d624d6b6665c2ed1828f8">LE_MCC_TERM_SERVICE_TEMPORARILY_OUT_OF_ORDER</a>, 
+<a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960dac3b888429481ec4ea6cd94de80d11a2c">LE_MCC_TERM_NOT_ALLOWED</a>, 
+<br />
+  <a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960dad24334b942be14ab63255b29492ec3f9">LE_MCC_TERM_FDN_ACTIVE</a>, 
+<a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960da4e0eb63003598ed7103a45ea5521598d">LE_MCC_TERM_NO_SERVICE</a>, 
+<a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960da18ea36d3713331bcbc016db95e10f75c">LE_MCC_TERM_PLATFORM_SPECIFIC</a>, 
+<a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960da3dbb90bf0628971a6afbd4773fc97c1a">LE_MCC_TERM_UNDEFINED</a>
+<br />
+ }</td></tr>
+<tr class="separator:abda706f723ba619f9bc460bcc9a4960d"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ac639c6d7ea04e8a82782fbed1765ff71"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mcc__interface_8h.html#ac639c6d7ea04e8a82782fbed1765ff71">le_mcc_ConnectService</a> (void)</td></tr>
+<tr class="separator:ac639c6d7ea04e8a82782fbed1765ff71"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a19d524087a3ab345616fca3f8c08be33"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mcc__interface_8h.html#a19d524087a3ab345616fca3f8c08be33">le_mcc_DisconnectService</a> (void)</td></tr>
+<tr class="separator:a19d524087a3ab345616fca3f8c08be33"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aeee65430506230b5744701d08ff8dac4"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__mcc__interface_8h.html#a8ae6dac3ca12854884d63e17d5388a7a">le_mcc_CallRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mcc__interface_8h.html#aeee65430506230b5744701d08ff8dac4">le_mcc_Create</a> (const char *phoneNumPtr)</td></tr>
+<tr class="separator:aeee65430506230b5744701d08ff8dac4"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a1a016e6443df2d3ee99113649f4f34ae"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mcc__interface_8h.html#a1a016e6443df2d3ee99113649f4f34ae">le_mcc_Delete</a> (<a class="el" href="le__mcc__interface_8h.html#a8ae6dac3ca12854884d63e17d5388a7a">le_mcc_CallRef_t</a> callRef)</td></tr>
+<tr class="separator:a1a016e6443df2d3ee99113649f4f34ae"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a72a32869bb23864b3e86c606368bed70"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mcc__interface_8h.html#a72a32869bb23864b3e86c606368bed70">le_mcc_Start</a> (<a class="el" href="le__mcc__interface_8h.html#a8ae6dac3ca12854884d63e17d5388a7a">le_mcc_CallRef_t</a> callRef)</td></tr>
+<tr class="separator:a72a32869bb23864b3e86c606368bed70"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a07e4856dffdbf887f51879e39ec43e42"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mcc__interface_8h.html#a07e4856dffdbf887f51879e39ec43e42">le_mcc_IsConnected</a> (<a class="el" href="le__mcc__interface_8h.html#a8ae6dac3ca12854884d63e17d5388a7a">le_mcc_CallRef_t</a> callRef)</td></tr>
+<tr class="separator:a07e4856dffdbf887f51879e39ec43e42"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aeae32829e9a5fa864167df3ee67d0f41"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mcc__interface_8h.html#aeae32829e9a5fa864167df3ee67d0f41">le_mcc_GetRemoteTel</a> (<a class="el" href="le__mcc__interface_8h.html#a8ae6dac3ca12854884d63e17d5388a7a">le_mcc_CallRef_t</a> callRef, char *telPtr, size_t telPtrNumElements)</td></tr>
+<tr class="separator:aeae32829e9a5fa864167df3ee67d0f41"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ab16921abc02e0569b129f4a7d92bf3c9"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960d">le_mcc_TerminationReason_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mcc__interface_8h.html#ab16921abc02e0569b129f4a7d92bf3c9">le_mcc_GetTerminationReason</a> (<a class="el" href="le__mcc__interface_8h.html#a8ae6dac3ca12854884d63e17d5388a7a">le_mcc_CallRef_t</a> callRef)</td></tr>
+<tr class="separator:ab16921abc02e0569b129f4a7d92bf3c9"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a68b9b8ed1b221924dcea1be0fd610a54"><td align="right" class="memItemLeft" valign="top">int32_t </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mcc__interface_8h.html#a68b9b8ed1b221924dcea1be0fd610a54">le_mcc_GetPlatformSpecificTerminationCode</a> (<a class="el" href="le__mcc__interface_8h.html#a8ae6dac3ca12854884d63e17d5388a7a">le_mcc_CallRef_t</a> callRef)</td></tr>
+<tr class="separator:a68b9b8ed1b221924dcea1be0fd610a54"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a598349c6ccfa151dbd1d2f2a9c293ca4"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mcc__interface_8h.html#a598349c6ccfa151dbd1d2f2a9c293ca4">le_mcc_Answer</a> (<a class="el" href="le__mcc__interface_8h.html#a8ae6dac3ca12854884d63e17d5388a7a">le_mcc_CallRef_t</a> callRef)</td></tr>
+<tr class="separator:a598349c6ccfa151dbd1d2f2a9c293ca4"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a7b9567715a3cd30c83a3b6886eeb2044"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mcc__interface_8h.html#a7b9567715a3cd30c83a3b6886eeb2044">le_mcc_HangUp</a> (<a class="el" href="le__mcc__interface_8h.html#a8ae6dac3ca12854884d63e17d5388a7a">le_mcc_CallRef_t</a> callRef)</td></tr>
+<tr class="separator:a7b9567715a3cd30c83a3b6886eeb2044"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a38ac8543a579ecc81430c121a64bd346"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mcc__interface_8h.html#a38ac8543a579ecc81430c121a64bd346">le_mcc_HangUpAll</a> (void)</td></tr>
+<tr class="separator:a38ac8543a579ecc81430c121a64bd346"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a54093f7d51cae9a186a97aa799ac3ddc"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mcc__interface_8h.html#a54093f7d51cae9a186a97aa799ac3ddc">le_mcc_GetCallerIdRestrict</a> (<a class="el" href="le__mcc__interface_8h.html#a8ae6dac3ca12854884d63e17d5388a7a">le_mcc_CallRef_t</a> callRef, <a class="el" href="le__basics_8h.html#ae2138c90c41d30e2d510be01d8b374da">le_onoff_t</a> *clirStatusPtrPtr)</td></tr>
+<tr class="separator:a54093f7d51cae9a186a97aa799ac3ddc"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a6b7fda9b1d0f0208a99b4bdcafe97538"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mcc__interface_8h.html#a6b7fda9b1d0f0208a99b4bdcafe97538">le_mcc_SetCallerIdRestrict</a> (<a class="el" href="le__mcc__interface_8h.html#a8ae6dac3ca12854884d63e17d5388a7a">le_mcc_CallRef_t</a> callRef, <a class="el" href="le__basics_8h.html#ae2138c90c41d30e2d510be01d8b374da">le_onoff_t</a> clirStatus)</td></tr>
+<tr class="separator:a6b7fda9b1d0f0208a99b4bdcafe97538"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ab826cf4b9e3911e659a90d483081e7fe"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__mcc__interface_8h.html#a0bb9fd4ec67450a267bc372bf9a90cb9">le_mcc_CallEventHandlerRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mcc__interface_8h.html#ab826cf4b9e3911e659a90d483081e7fe">le_mcc_AddCallEventHandler</a> (<a class="el" href="le__mcc__interface_8h.html#ace811e84500b2f008d8c95c43872d82c">le_mcc_CallEventHandlerFunc_t</a> handlerPtr, void *contextPtr)</td></tr>
+<tr class="separator:ab826cf4b9e3911e659a90d483081e7fe"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a8a12dc6f1707cf52818d9c2d8281630c"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mcc__interface_8h.html#a8a12dc6f1707cf52818d9c2d8281630c">le_mcc_RemoveCallEventHandler</a> (<a class="el" href="le__mcc__interface_8h.html#a0bb9fd4ec67450a267bc372bf9a90cb9">le_mcc_CallEventHandlerRef_t</a> addHandlerRef)</td></tr>
+<tr class="separator:a8a12dc6f1707cf52818d9c2d8281630c"><td class="memSeparator" colspan="2"> </td></tr>
+</table>
+<a id="details" name="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Legato <a class="el" href="c_mcc.html">Modem Call Control</a> include file.</p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div><h2 class="groupheader">Typedef Documentation</h2>
+<a class="anchor" id="ace811e84500b2f008d8c95c43872d82c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef void(* le_mcc_CallEventHandlerFunc_t) (<a class="el" href="le__mcc__interface_8h.html#a8ae6dac3ca12854884d63e17d5388a7a">le_mcc_CallRef_t</a> callRef, <a class="el" href="le__mcc__interface_8h.html#aefc4679ffa76d0e04c578572c22f06cf">le_mcc_Event_t</a> event, void *contextPtr)</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Handler for call state changes.</p>
+<dl class="section note"><dt>Note</dt><dd>The callRef has to be deleted using <a class="el" href="le__mcc__interface_8h.html#a1a016e6443df2d3ee99113649f4f34ae">le_mcc_Delete()</a> when LE_MCC_TERMINATED event is received, except if is has to be used for a future usage (with le_mcc_profile handler for instance, or dialing again the same number).</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramname">callRef</td><td>The call reference. </td></tr>
+<tr><td class="paramname">event</td><td>Call event. </td></tr>
+<tr><td class="paramname">contextPtr</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a0bb9fd4ec67450a267bc372bf9a90cb9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef struct le_mcc_CallEventHandler* <a class="el" href="le__mcc__interface_8h.html#a0bb9fd4ec67450a267bc372bf9a90cb9">le_mcc_CallEventHandlerRef_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Reference type used by Add/Remove functions for EVENT 'le_mcc_CallEvent' </p>
+</div>
+</div>
+<a class="anchor" id="a8ae6dac3ca12854884d63e17d5388a7a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef struct le_mcc_Call* <a class="el" href="le__mcc__interface_8h.html#a8ae6dac3ca12854884d63e17d5388a7a">le_mcc_CallRef_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Reference type for managing active calls. </p>
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a class="anchor" id="aefc4679ffa76d0e04c578572c22f06cf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="le__mcc__interface_8h.html#aefc4679ffa76d0e04c578572c22f06cf">le_mcc_Event_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Enumeration of the possible events that may be reported to a call event handler. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="aefc4679ffa76d0e04c578572c22f06cfa57dc02ca807a7a7c616e947f3651de9f"></a>LE_MCC_EVENT_SETUP </td><td class="fielddoc">
+<p>Call is being set up. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aefc4679ffa76d0e04c578572c22f06cfab37936f33d31259ea0c16169ba852bd0"></a>LE_MCC_EVENT_INCOMING </td><td class="fielddoc">
+<p>Incoming call attempt (new call). </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aefc4679ffa76d0e04c578572c22f06cfa1fa56f470ae87b06edb532f9e2b593e0"></a>LE_MCC_EVENT_ORIGINATING </td><td class="fielddoc">
+<p>Outgoing call attempt. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aefc4679ffa76d0e04c578572c22f06cfa05261a9fdb7ee59a0dae1cc27bb30e07"></a>LE_MCC_EVENT_ALERTING </td><td class="fielddoc">
+<p>Far end is now alerting its user (outgoing call). </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aefc4679ffa76d0e04c578572c22f06cfa86702531207c50314b10ae3278c7ca0d"></a>LE_MCC_EVENT_CONNECTED </td><td class="fielddoc">
+<p>Call has been established, and is media is active. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aefc4679ffa76d0e04c578572c22f06cfa38b7c4ab21fa9828be8169372e41ae98"></a>LE_MCC_EVENT_TERMINATED </td><td class="fielddoc">
+<p>Call has terminated. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aefc4679ffa76d0e04c578572c22f06cfaaeed6c549d3cdc9353a9c80d3b893800"></a>LE_MCC_EVENT_WAITING </td><td class="fielddoc">
+<p>Call is waiting. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aefc4679ffa76d0e04c578572c22f06cfa11c957908799cc338bf6d700e4677200"></a>LE_MCC_EVENT_ON_HOLD </td><td class="fielddoc">
+<p>Remote party has put the call on hold. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aefc4679ffa76d0e04c578572c22f06cfa8f0eb84e9153674494832b002929c0e1"></a>LE_MCC_EVENT_MAX </td><td class="fielddoc">
+<p>Enumerate max value. </p>
+</td></tr>
+</table>
+</div>
+</div>
+<a class="anchor" id="abda706f723ba619f9bc460bcc9a4960d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960d">le_mcc_TerminationReason_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Enumeration of the possible reasons for call termination. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960daf4262288191582892e6f84e51e3082c1"></a>LE_MCC_TERM_LOCAL_ENDED </td><td class="fielddoc">
+<p>Local party ended the call (Normal Call Clearing). </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960dad33c3e71bdfd7513392f28bf2a7e9c9b"></a>LE_MCC_TERM_REMOTE_ENDED </td><td class="fielddoc">
+<p>Remote party ended the call (Normal Call Clearing). </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960da2ef2a4a77e51faec38a2c131ff5d6f24"></a>LE_MCC_TERM_NETWORK_FAIL </td><td class="fielddoc">
+<p>Network could not complete the call. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960da2efa341f50cb8abef243d8ea2b9fac7d"></a>LE_MCC_TERM_UNASSIGNED_NUMBER </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex H </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960da9fae77718439c9ff41343b4df74a74d2"></a>LE_MCC_TERM_NO_ROUTE_TO_DESTINATION </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex H </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960da181f6bb0cd5e308532c1518041825331"></a>LE_MCC_TERM_CHANNEL_UNACCEPTABLE </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex H </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960da4f91eb4e6eec8ed84c3b4b6d1ab949fd"></a>LE_MCC_TERM_OPERATOR_DETERMINED_BARRING </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex H </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960dad7664d1f5a0c6517861637d0a083020c"></a>LE_MCC_TERM_USER_BUSY </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex H </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960da72c8ed7aca206c32556e221e6cd97869"></a>LE_MCC_TERM_NO_USER_RESPONDING </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex H </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960da3370631abc64539d95dc6deb945fcf58"></a>LE_MCC_TERM_USER_ALERTING_NO_ANSWER </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex H </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960daa52ecac95e442fe5eed20bfa70dec1f8"></a>LE_MCC_TERM_CALL_REJECTED </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex H </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960da2cbbae27090616accf64bde775363716"></a>LE_MCC_TERM_NUMBER_CHANGED </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex H </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960da60bb1111d23d5a24477da0446f15e370"></a>LE_MCC_TERM_PREEMPTION </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex H </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960da7cea5949f6f678cea632613cf5938c8f"></a>LE_MCC_TERM_DESTINATION_OUT_OF_ORDER </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex H </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960da647559e730bf064dd1ea82f17b26a231"></a>LE_MCC_TERM_INVALID_NUMBER_FORMAT </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex H </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960da2b673787abb7ff82ae6fbac3c8c6909f"></a>LE_MCC_TERM_FACILITY_REJECTED </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex H </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960da4890cd46f1b41b980b870f5eca0dbc35"></a>LE_MCC_TERM_RESP_TO_STATUS_ENQUIRY </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex H </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960dadc7be57ac34fae106a87d79b5e394b88"></a>LE_MCC_TERM_NORMAL_UNSPECIFIED </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex H </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960dab02d909fd7c141368e07876b8c273f72"></a>LE_MCC_TERM_NO_CIRCUIT_OR_CHANNEL_AVAILABLE </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex H </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960da1850b2619aca6b4e342f35fed210b3bc"></a>LE_MCC_TERM_NETWORK_OUT_OF_ORDER </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex H </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960da02a6e105d2decbc2add4c92a50264e89"></a>LE_MCC_TERM_TEMPORARY_FAILURE </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex H </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960dac105f26531824ef3f865d72a4bacde67"></a>LE_MCC_TERM_SWITCHING_EQUIPMENT_CONGESTION </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex H </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960da7cd807a21402f93e7e8a3ecb4d74b438"></a>LE_MCC_TERM_ACCESS_INFORMATION_DISCARDED </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex H </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960dacd9492ad9625370c17c85880e377a891"></a>LE_MCC_TERM_REQUESTED_CIRCUIT_OR_CHANNEL_NOT_AVAILABLE </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex H </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960da54ac813e876033304db02643a933bbcf"></a>LE_MCC_TERM_RESOURCES_UNAVAILABLE_OR_UNSPECIFIED </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex H </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960dae03f5ad79dddd1cbb6458e2ead483909"></a>LE_MCC_TERM_QOS_UNAVAILABLE </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex H </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960da92bbe7234225d056720ab3af6e7081a9"></a>LE_MCC_TERM_REQUESTED_FACILITY_NOT_SUBSCRIBED </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex H </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960da298e1befd70ef48d0aa97a5857b53bec"></a>LE_MCC_TERM_INCOMING_CALLS_BARRED_WITHIN_CUG </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex H </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960daba9a9099951d42ac33eccf27b52898fd"></a>LE_MCC_TERM_BEARER_CAPABILITY_NOT_AUTH </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex H </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960da965ed9bbae4e81e42e0ada643672192f"></a>LE_MCC_TERM_BEARER_CAPABILITY_UNAVAILABLE </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex H </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960da64175f29b072b80896aeb2678868a0d0"></a>LE_MCC_TERM_SERVICE_OPTION_NOT_AVAILABLE </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex H </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960dab4872eda90686b773f592a9b058e29d0"></a>LE_MCC_TERM_ACM_LIMIT_EXCEEDED </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex H </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960dae4484c88d5a0e1e985d23821d332aa64"></a>LE_MCC_TERM_BEARER_SERVICE_NOT_IMPLEMENTED </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex H </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960dac66eec5597cc041dc2776bf975ae8ec8"></a>LE_MCC_TERM_REQUESTED_FACILITY_NOT_IMPLEMENTED </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex H </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960dafbae02c1bfb58226563f822731b4e989"></a>LE_MCC_TERM_ONLY_DIGITAL_INFORMATION_BEARER_AVAILABLE </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex H </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960da8ef5309c92c450c751b1c892a13a50db"></a>LE_MCC_TERM_SERVICE_OR_OPTION_NOT_IMPLEMENTED </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex H </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960da740f04d90f0f07bc3081be17e1ac2e3f"></a>LE_MCC_TERM_INVALID_TRANSACTION_IDENTIFIER </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex H </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960daaf4161b78f6a843c7378dfce8d1904f9"></a>LE_MCC_TERM_USER_NOT_MEMBER_OF_CUG </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex H </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960da6a54d746be1703d563f7b172c69255ea"></a>LE_MCC_TERM_INCOMPATIBLE_DESTINATION </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex H </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960da10559d35e8c02b0fb4e86d3d01a48715"></a>LE_MCC_TERM_INVALID_TRANSIT_NW_SELECTION </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex H </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960da2515195268a36b2354bdbffeb69d4775"></a>LE_MCC_TERM_SEMANTICALLY_INCORRECT_MESSAGE </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex H </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960daabdbc9ac3fc56309470ea97b042b33fd"></a>LE_MCC_TERM_INVALID_MANDATORY_INFORMATION </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex H </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960daa5b025a1f604deb19af33ab1d52fa144"></a>LE_MCC_TERM_MESSAGE_TYPE_NON_IMPLEMENTED </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex H </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960da07f68f049b14f356be6a26d02fa6892e"></a>LE_MCC_TERM_MESSAGE_TYPE_NOT_COMPATIBLE_WITH_PROTOCOL_STATE </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex H </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960da5710a9de4ac2ece44910406f918f6980"></a>LE_MCC_TERM_INFORMATION_ELEMENT_NON_EXISTENT </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex H </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960daf98c25d8a99b2db60c962dc301938255"></a>LE_MCC_TERM_CONDITONAL_IE_ERROR </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex H </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960daa9b1e57cc4644623c120f3327564c254"></a>LE_MCC_TERM_MESSAGE_NOT_COMPATIBLE_WITH_PROTOCOL_STATE </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex H </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960dafde90114bb6f40153384de22b76a3c8d"></a>LE_MCC_TERM_RECOVERY_ON_TIMER_EXPIRY </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex H </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960da112a0e09ddb9cf2c408bdcbbb1824e73"></a>LE_MCC_TERM_PROTOCOL_ERROR_UNSPECIFIED </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex H </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960daf7fdcba6877ed8afe2776c1e81a0d88b"></a>LE_MCC_TERM_INTERWORKING_UNSPECIFIED </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 Annex H </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960da8d196aa90a2d624d6b6665c2ed1828f8"></a>LE_MCC_TERM_SERVICE_TEMPORARILY_OUT_OF_ORDER </td><td class="fielddoc">
+<p>cf. 3GPP 24.008 10.5.3.6 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960dac3b888429481ec4ea6cd94de80d11a2c"></a>LE_MCC_TERM_NOT_ALLOWED </td><td class="fielddoc">
+<p>Call operations not allowed (i.e. Radio off). </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960dad24334b942be14ab63255b29492ec3f9"></a>LE_MCC_TERM_FDN_ACTIVE </td><td class="fielddoc">
+<p>FDN is active and number is not in the FDN. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960da4e0eb63003598ed7103a45ea5521598d"></a>LE_MCC_TERM_NO_SERVICE </td><td class="fielddoc">
+<p>No service or bad signal quality. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960da18ea36d3713331bcbc016db95e10f75c"></a>LE_MCC_TERM_PLATFORM_SPECIFIC </td><td class="fielddoc">
+<p>Platform specific code. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abda706f723ba619f9bc460bcc9a4960da3dbb90bf0628971a6afbd4773fc97c1a"></a>LE_MCC_TERM_UNDEFINED </td><td class="fielddoc">
+<p>Undefined reason. </p>
+</td></tr>
+</table>
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ab826cf4b9e3911e659a90d483081e7fe"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__mcc__interface_8h.html#a0bb9fd4ec67450a267bc372bf9a90cb9">le_mcc_CallEventHandlerRef_t</a> le_mcc_AddCallEventHandler </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mcc__interface_8h.html#ace811e84500b2f008d8c95c43872d82c">le_mcc_CallEventHandlerFunc_t</a> </td>
+<td class="paramname"><em>handlerPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">void * </td>
+<td class="paramname"><em>contextPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Add handler function for EVENT 'le_mcc_CallEvent'</p>
+<p>Register an event handler that will be notified when an call's event occurs.</p>
+<dl class="section return"><dt>Returns</dt><dd>A reference to the new event handler object.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is a fatal error if this function does succeed. If this function fails, it will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">handlerPtr</td><td></td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">contextPtr</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a598349c6ccfa151dbd1d2f2a9c293ca4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mcc_Answer </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mcc__interface_8h.html#a8ae6dac3ca12854884d63e17d5388a7a">le_mcc_CallRef_t</a> </td>
+<td class="paramname"><em>callRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Answers incoming call.</p>
+<dl class="section return"><dt>Returns</dt><dd>LE_TIMEOUT No response was received from the Modem. </dd>
+<dd>
+LE_OK The function succeeded.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it is a fatal error, the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">callRef</td><td>The call reference. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ac639c6d7ea04e8a82782fbed1765ff71"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_mcc_ConnectService </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Connect the current client thread to the service providing this API.</p>
+<p>This function must be called before any other functions in this API. Normally, it's automatically called for the main thread, but must be explicitly called for other threads. For details, see <a class="el" href="api_files_c.html#apiFilesC_client">Client-specific Functions</a>.</p>
+<p>This function is created automatically. </p>
+</div>
+</div>
+<a class="anchor" id="aeee65430506230b5744701d08ff8dac4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__mcc__interface_8h.html#a8ae6dac3ca12854884d63e17d5388a7a">le_mcc_CallRef_t</a> le_mcc_Create </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>phoneNumPtr</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Create a call reference.</p>
+<dl class="section note"><dt>Note</dt><dd>Return NULL if call reference can't be created</dd>
+<dd>
+If destination number is too long (max LE_MDMDEFS_PHONE_NUM_MAX_LEN digits), it is a fatal error, the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">phoneNumPtr</td><td>The target number we are going to call. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a1a016e6443df2d3ee99113649f4f34ae"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mcc_Delete </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mcc__interface_8h.html#a8ae6dac3ca12854884d63e17d5388a7a">le_mcc_CallRef_t</a> </td>
+<td class="paramname"><em>callRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Call to free up a call reference.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK The function succeed.</li>
+<li>LE_NOT_FOUND The call reference was not found.</li>
+<li>LE_FAULT The function failed. </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">callRef</td><td>The call object to free. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a19d524087a3ab345616fca3f8c08be33"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_mcc_DisconnectService </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Disconnect the current client thread from the service providing this API.</p>
+<p>Normally, this function doesn't need to be called. After this function is called, there's no longer a connection to the service, and the functions in this API can't be used. For details, see <a class="el" href="api_files_c.html#apiFilesC_client">Client-specific Functions</a>.</p>
+<p>This function is created automatically. </p>
+</div>
+</div>
+<a class="anchor" id="a54093f7d51cae9a186a97aa799ac3ddc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mcc_GetCallerIdRestrict </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mcc__interface_8h.html#a8ae6dac3ca12854884d63e17d5388a7a">le_mcc_CallRef_t</a> </td>
+<td class="paramname"><em>callRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="le__basics_8h.html#ae2138c90c41d30e2d510be01d8b374da">le_onoff_t</a> * </td>
+<td class="paramname"><em>clirStatusPtrPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function return the Calling Line Identification Restriction (CLIR) status on the specific call.</p>
+<p>The output parameter is updated with the CLIR status.</p><ul>
+<li>LE_ON Disable presentation of own phone number to remote.</li>
+<li>LE_OFF Enable presentation of own phone number to remote.</li>
+</ul>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK The function succeed.</li>
+<li>LE_NOT_FOUND The call reference was not found. </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">callRef</td><td>The call reference. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">clirStatusPtrPtr</td><td>the Calling Line Identification Restriction (CLIR) status </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a68b9b8ed1b221924dcea1be0fd610a54"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">int32_t le_mcc_GetPlatformSpecificTerminationCode </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mcc__interface_8h.html#a8ae6dac3ca12854884d63e17d5388a7a">le_mcc_CallRef_t</a> </td>
+<td class="paramname"><em>callRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Called to get the platform specific termination code.</p>
+<dl class="section return"><dt>Returns</dt><dd>The platform specific termination code.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it is a fatal error, the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">callRef</td><td>The call reference to read from. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="aeae32829e9a5fa864167df3ee67d0f41"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mcc_GetRemoteTel </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mcc__interface_8h.html#a8ae6dac3ca12854884d63e17d5388a7a">le_mcc_CallRef_t</a> </td>
+<td class="paramname"><em>callRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">char * </td>
+<td class="paramname"><em>telPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>telPtrNumElements</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Read out the remote party telephone number associated with the call.</p>
+<p>Output parameter is updated with the telephone number. If the Telephone number string length exceeds the value of 'len' parameter, the LE_OVERFLOW error code is returned and 'telPtr' is used until 'len-1' characters and a null-character is implicitly appended at the end of 'telPtr'. Note that 'len' sould be at least equal to LE_MDMDEFS_PHONE_NUM_MAX_BYTES, otherwise LE_OVERFLOW error code will be common.</p>
+<dl class="section return"><dt>Returns</dt><dd>LE_OVERFLOW The Telephone number length exceed the maximum length. </dd>
+<dd>
+LE_OK The function succeeded.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it is a fatal error, the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">callRef</td><td>The call reference to read from. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">telPtr</td><td>The telephone number string. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">telPtrNumElements</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ab16921abc02e0569b129f4a7d92bf3c9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960d">le_mcc_TerminationReason_t</a> le_mcc_GetTerminationReason </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mcc__interface_8h.html#a8ae6dac3ca12854884d63e17d5388a7a">le_mcc_CallRef_t</a> </td>
+<td class="paramname"><em>callRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Called to get the termination reason.</p>
+<dl class="section return"><dt>Returns</dt><dd>The termination reason.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it is a fatal error, the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">callRef</td><td>The call reference to read from. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a7b9567715a3cd30c83a3b6886eeb2044"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mcc_HangUp </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mcc__interface_8h.html#a8ae6dac3ca12854884d63e17d5388a7a">le_mcc_CallRef_t</a> </td>
+<td class="paramname"><em>callRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Disconnect, or hang up, the specifed call. Any active call handlers will be notified.</p>
+<dl class="section return"><dt>Returns</dt><dd>LE_FAULT The function failed. </dd>
+<dd>
+LE_TIMEOUT No response was received from the Modem. </dd>
+<dd>
+LE_OK Function succeeded.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it is a fatal error, the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">callRef</td><td>The call to end. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a38ac8543a579ecc81430c121a64bd346"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mcc_HangUpAll </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function will disconnect, or hang up all the ongoing calls. Any active call handlers will be notified.</p>
+<dl class="section return"><dt>Returns</dt><dd>LE_FAULT The function failed. </dd>
+<dd>
+LE_TIMEOUT No response was received from the Modem. </dd>
+<dd>
+LE_OK The function succeeded. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a07e4856dffdbf887f51879e39ec43e42"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">bool le_mcc_IsConnected </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mcc__interface_8h.html#a8ae6dac3ca12854884d63e17d5388a7a">le_mcc_CallRef_t</a> </td>
+<td class="paramname"><em>callRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Allow the caller to know if the given call is actually connected or not.</p>
+<dl class="section return"><dt>Returns</dt><dd>TRUE if the call is connected, FALSE otherwise.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it is a fatal error, the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">callRef</td><td>The call reference to read. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a8a12dc6f1707cf52818d9c2d8281630c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_mcc_RemoveCallEventHandler </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mcc__interface_8h.html#a0bb9fd4ec67450a267bc372bf9a90cb9">le_mcc_CallEventHandlerRef_t</a> </td>
+<td class="paramname"><em>addHandlerRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Remove handler function for EVENT 'le_mcc_CallEvent' </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">addHandlerRef</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a6b7fda9b1d0f0208a99b4bdcafe97538"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mcc_SetCallerIdRestrict </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mcc__interface_8h.html#a8ae6dac3ca12854884d63e17d5388a7a">le_mcc_CallRef_t</a> </td>
+<td class="paramname"><em>callRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="le__basics_8h.html#ae2138c90c41d30e2d510be01d8b374da">le_onoff_t</a> </td>
+<td class="paramname"><em>clirStatus</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function set the Calling Line Identification Restriction (CLIR) status on the specific call. Default value is LE_OFF (Enable presentation of own phone number to remote).</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK The function succeed.</li>
+<li>LE_NOT_FOUND The call reference was not found. </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">callRef</td><td>The call reference. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">clirStatus</td><td>The Calling Line Identification Restriction (CLIR) status. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a72a32869bb23864b3e86c606368bed70"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mcc_Start </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mcc__interface_8h.html#a8ae6dac3ca12854884d63e17d5388a7a">le_mcc_CallRef_t</a> </td>
+<td class="paramname"><em>callRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Start a call attempt.</p>
+<p>Asynchronous due to possible time to connect.</p>
+<p>As the call attempt proceeds, the profile's registered call event handler receives events.</p>
+<dl class="section return"><dt>Returns</dt><dd>LE_OK Function succeed.</dd></dl>
+<ul>
+<li><dl class="section note"><dt>Note</dt><dd>As this is an asynchronous call, a successful only confirms a call has been started. Don't assume a call has been successful yet.</dd>
+<dd>
+If the caller is passing a bad pointer into this function, it is a fatal error, the function will not return. </dd></dl>
+</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">callRef</td><td>Reference to the call object. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>
