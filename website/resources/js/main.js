@@ -6,7 +6,7 @@ $(function() {
         if(split.length == 2) {
             var target = $("#" + split[1]);
             if(target) {
-                var duration = 1400;
+                var duration = 500;
                 $(item).click(function(e) {
                     links.each(function(index, link) {
                         $(link).removeClass("link-selected");
@@ -14,15 +14,10 @@ $(function() {
                     $(this).addClass("link-selected");
                     e.preventDefault();
                     var offset = target.offset();
-                    $("body,html,document").animate({scrollTop: offset.top}, {
+                    $("body,html").animate({scrollTop: offset.top}, {
                         "duration": duration,
                         "complete": function() {
-                            var div = $("<div style='height: 101%;'></div>");
-                            $("body").append(div);
-                            setTimeout(function() {
-                                div.remove();
-                                window.location.href = loc + "#" + split[1];
-                            }, 100);
+           
                         }
                     });
                     return false;

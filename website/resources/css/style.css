@@ -89,9 +89,9 @@ div.wrapper {
 	z-index: 900;
 	height: 100%;
 	background-color: #FFF;
-	transition: left 1s ease-in-out;
-	-moz-transition: left 1s ease-in-out;
-	-webkit-transition: left 1s ease-in-out;
+	transition: left 0.3s ease-in-out;
+	-moz-transition: left 0.3s ease-in-out;
+	-webkit-transition: left 0.3s ease-in-out;
 }
 	
 #top.menu-open {
@@ -368,7 +368,8 @@ nav a:hover {
 	background-color: #00677A;
 }
 
-#topMenu h2 {
+#topMenu h2, .biglink {
+	display: block;
 	font-family: 'Open Sans', arial, sans-serif;
 	font-weight: 300;
 	font-weight: normal;
@@ -535,7 +536,7 @@ ul.slides a {
 	padding-right: 25px;
 }
 
-.docsWidget h4 {
+.docsWidget h4, .sectionlink h4 {
 	font-family: 'Open Sans', arial, sans-serif;
 	font-weight: 400;
 	font-size: 24px;
@@ -544,7 +545,7 @@ ul.slides a {
 	margin-bottom: 10px;
 }
 
-.docsWidget h4 a {
+.docsWidget h4 a, .sectionlink h4 a {
 	border-left: 2px solid #00AEAF;
 	color: #00AEAF;
 	padding-left: 25px;
@@ -556,7 +557,7 @@ ul.slides a {
 	color: #e53b30;
 }
 
-.docsWidget.blue a:hover {
+.docsWidget.blue a:hover, .sectionlink.blue a:hover {
 	color: #006892;
 }
 
