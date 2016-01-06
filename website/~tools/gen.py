@@ -23,7 +23,7 @@ def file_dispatch(dir, filename):
             print("Found %s in %s with depth %s" % (filename, dir, i))
             return data, dir
         except EnvironmentError:
-            if os.path.abspath(dir) == os.path.abspath("sources/"):
+            if os.path.samefile(os.path.abspath(dir), os.path.abspath("sources/")):
                 return None, dir
             else:
                 dir = os.path.dirname(dir)

@@ -1,9 +1,8 @@
 {
     "links": {
-        "Learn": "/apps/docs/learn/",
-        "API Guides": "/apps/docs/api/",
-        "Tools": "/apps/docs/tools/",
-        "Reference": "/apps/docs/reference/"
+        "Port to a new micro-controller": "/platform/docs/port/",
+        "Customize Linux Distribution": "/platform/docs/linux/",
+        "Customize Application Framework": "/platform/docs/af/"
     },
     "innerHTML":"<a href=\"{0}\"{1}>{2}</a>",
     "title":"Build Platform Documentation",
