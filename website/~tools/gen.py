@@ -12,6 +12,7 @@ def match_link(href, filepath):
     return filepath.startswith(href) or filepath.endswith(href)
 
 # This looks for filename in dir, and if it doesn't find it, checks the parent directory, and so on
+# After that, it reads the contents and returns them along with the directory.
 def file_dispatch(dir, filename):
     MAX_DEPTH = 5
     print("Looking for " + filename)
@@ -23,12 +24,13 @@ def file_dispatch(dir, filename):
             return data, dir
         except EnvironmentError:
             if os.path.abspath(dir) == os.path.abspath("sources/"):
-                return None
+                return None, dir
             else:
                 dir = os.path.dirname(dir)
                 print("Descending to " + dir)
                 continue
-    print("%%%%Couldn't find " + filename)
+    print("###Couldn't find " + filename)
+    return None, dir
 
 def gen_nav(json_file, current_filepath):
     dir = os.path.dirname(join(os.getcwd(), "sources/", current_filepath)) # ehhh
@@ -40,8 +42,8 @@ def gen_nav(json_file, current_filepath):
         #print("{0} & {1} >> {2}".format(links[x],current_filepath,match_link(links[x], current_filepath)))
         innerHTML += jsondata["innerHTML"].format( links[x], ' class="link-selected"' if match_link(links[x], current_filepath) else "", x)
     
-    with open(join(dir, "_templates/",jsondata["template"]), 'r') as f:
-        outerHTML = f.read().format(innerHTML)
+
+    outerHTML = file_dispatch(dir, join("_templates/",jsondata["template"]))[0].format(innerHTML, jsondata.get("title",""))
     return outerHTML
 
 

@@ -6,6 +6,6 @@
         "Reference": "/apps/docs/reference/"
     },
     "innerHTML":"<a href=\"{0}\"{1}>{2}</a>",
-    "title":"Build Apps Documentation",
+    "title":"Build Platform Documentation",
     "template":"doc_header.html"
 }
