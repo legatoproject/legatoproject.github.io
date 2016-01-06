@@ -7,11 +7,11 @@ import shutil
 
     
 def match_link(x, filepath):
-    x = x.replace("/docs/apps/","") # i need to improve this
+    x = x.replace("/docs/apps/","") #  dumb
     x = x.replace("/docs/apps/","") #
     return filepath.startswith(x) or filepath.endswith(x)
 
-
+#
 def gen_nav(json_file, current_filepath, prefix, postfix, link_innerhtml='<a href="{0}"{1}>{2}</a>\n'):
     with open("sources/"+json_file) as f:
         j = json.loads(f.read(), object_pairs_hook=OrderedDict)
@@ -22,13 +22,13 @@ def gen_nav(json_file, current_filepath, prefix, postfix, link_innerhtml='<a hre
     return html
 
 
-def gen_topmenu(dir, filename, contents):
+def gen_learn_topmenu(dir, filename, contents):
     print("Generating topmenu for " + filename)
     prefix = '''<div id="topMenu">
             <a href=/docs/apps/learn/ class="biglink">Learn</a>
             <nav>\n'''
     postfix = '</nav></div>\n'
-    return gen_nav(os.path.join(dir,"topmenu.json"),os.path.join(dir,filename),prefix,postfix)
+    return gen_nav(os.path.join(dir,"learn_topmenu.json"),os.path.join(dir,filename),prefix,postfix)
 
 
 def gen_header(dir, filename, contents):
@@ -48,7 +48,7 @@ def gen_header(dir, filename, contents):
 # marker->function mapping here
 funcs = {
     "%%%HEADER%%%": gen_header,
-    "%%%LEARN_TOPMENU%%%": gen_topmenu,
+    "%%%LEARN_TOPMENU%%%": gen_learn_topmenu,
 }
 
 
