@@ -14,23 +14,23 @@
                "children": [
                     {
                          "title": "Introduction",
-                         "href": "/apps/"
+                         "href": "/apps/intro"
                     },
                     {
                          "title": "Get started",
-                         "href": "/apps/"
+                         "href": "/apps/getstarted"
                     },
                     {
                          "title": "Documentation",
-                         "href": "/apps/"
+                         "href": "/apps/docs/learn"
                     },
                     {
                          "title": "Community",
-                         "href": "/apps/"
+                         "href": "/apps/community"
                     },
                     {
                          "title": "License",
-                         "href": "/apps/"
+                         "href": "/apps/license"
                     }
                ]
           },

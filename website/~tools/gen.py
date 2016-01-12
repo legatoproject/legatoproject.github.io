@@ -1,10 +1,12 @@
 #dmitry's fantastic templating engine, kinda like django but worse
 
 import os
+import sys
 import json
 from collections import OrderedDict
 import shutil 
 from os.path import join
+import unittest
 
 src_dir = "sources/"
 
@@ -13,8 +15,20 @@ src_dir = "sources/"
 
 # This figures out if a link to href from document filepath should be considered as 'link-selected' 
 def match_link(href, filepath):
-    href = href.lstrip("/")
-    return filepath.startswith(href) or filepath.endswith(href)
+    shref = href.lstrip("/")
+    if not href.startswith("/"):
+        return filepath.endswith(href)
+    else:
+        return filepath.startswith(shref)
+
+class MatchTest(unittest.TestCase):     
+    def test(self):
+        self.assertTrue(match_link("/platform/", "platform/docs/index.html"))
+        self.assertTrue(match_link("/apps/docs/learn/", "apps/docs/learn/basics.html"))
+        self.assertTrue(match_link("basics.html", "apps/docs/learn/basics.html"))
+        self.assertTrue(match_link("/index.html", "index.html"))
+        self.assertFalse(match_link("/index.html","platform/docs/index.html"))
+
 
 # This looks for filename in dir, and if it doesn't find it, checks the parent directory, and so on
 # After that, it reads the contents and returns them along with the directory.
@@ -46,6 +60,7 @@ def gen_nav(json_file, current_filepath):
     innerHTML = ""
     links = jsondata["links"]
     for x in links:
+        print("match_link(%s, %s) = %s" % (x["href"], current_filepath,match_link(x["href"], current_filepath)))
         #print("{0} & {1} >> {2}".format(links[x],current_filepath,match_link(links[x], current_filepath)))
         innerHTML += format_nav_link(jsondata["innerHTML"],x, current_filepath)
     outerHTML = file_dispatch(dir, join("_templates/",jsondata["template"]))[0].format(innerHTML, jsondata.get("title",""))
@@ -84,11 +99,16 @@ def gen_sidemenu(dir, filename, contents):
 
 # not tail recursive... but there are bigger problems if the documentation nav tree exceeds callstack size...
 def format_sidemenu_link(template, json_link, target_file, depth = 0):
+    #print("match_link(%s, %s) = %s" % (json_link["href"], target_file,match_link(json_link["href"], target_file)))
     childrenHTML = ""
     if "children" in json_link:
         for c in json_link["children"]:
             childrenHTML += format_sidemenu_link(template, c, target_file, depth + 1)
-    return template.format( json_link["href"], 'class=' + ("navlink" if depth == 0 else "subnavlink"), json_link["title"]) + childrenHTML
+    ADD_LINKSELECTED = True     # false because at time of writing, this causes the link to be invisible on non-doc sidemenu, just because of the stylesheet   
+    return template.format( json_link["href"], 'class="' + ("navlink" if depth == 0 else "subnavlink") + (" link-selected" if ADD_LINKSELECTED and match_link(json_link["href"], target_file) else "") + '"', json_link["title"]) + childrenHTML
+
+
+
 
 # marker->function mapping here
 funcs = {
@@ -96,6 +116,9 @@ funcs = {
     "%%%LEARN_TOPMENU%%%": gen_learn_topmenu,
     "%%%SIDEMENU%%%" : gen_sidemenu,
 }
+
+
+
 def render(filepath, rel_dir):
     with open(filepath, 'r') as f:
         contents = f.read()
@@ -106,7 +129,9 @@ def render(filepath, rel_dir):
             print("%s <-- %s" % (filename, f.__name__))
             contents = contents.replace(k,f(rel_dir,filename , contents)) # take the appropriate function and replace the marker with its output
     return contents
+
 if __name__ == "__main__":
+    #unittest.main() 
     print("src_dir = %s" % src_dir)
     for dir, subdirs, files in os.walk(join(os.getcwd(), src_dir)):
         if "_templates" in subdirs:
@@ -125,4 +150,8 @@ if __name__ == "__main__":
                     os.makedirs(outdir)
                 with open(join(outdir, file), 'w+') as f:
                     f.write(contents)
+
+
+
+
 

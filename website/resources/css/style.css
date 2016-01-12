@@ -109,7 +109,13 @@ div.wrapper {
 	position: relative;
 	padding-top: 100px;
 }
-
+/* TODO: THIS IS JUST TEMPORARY DMITRY STUFF; */
+#top .link-selected:after{
+	content: " ◀";
+}
+#top .link-selected:before{
+	content: "▶ ";
+}
 #mainmenu {
     position: fixed;
 	width: 100%;
@@ -334,7 +340,7 @@ nav a:hover {
 	padding: 5px 10px 5px 15px;
 }
 
-#menudocumentation nav a:hover, nav a.link-selected {
+#menudocumentation nav a:hover,#menudocumentation nav a.link-selected {
 	border-bottom: 2px solid rgba(255,255,255,0.75);
 	color: rgba(255,255,255,0.75);
 }
