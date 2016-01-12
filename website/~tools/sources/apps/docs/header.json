@@ -1,11 +1,23 @@
 {
-    "links": {
-        "Learn": "/apps/docs/learn/",
-        "API Guides": "/apps/docs/api/",
-        "Tools": "/apps/docs/tools/",
-        "Reference": "/apps/docs/reference/"
-    },
-    "innerHTML":"<a href=\"{0}\"{1}>{2}</a>",
-    "title":"Build Apps Documentation",
-    "template":"doc_header.html"
+    "links": [
+        {
+            "title": "Learn",
+            "href": "/apps/docs/learn/"
+        },
+        {
+            "title": "API Guides",
+            "href": "/apps/docs/api/"
+        },
+        {
+            "title": "Tools",
+            "href": "/apps/docs/tools/"
+        },
+        {
+            "title": "Reference",
+            "href": "/apps/docs/reference/"
+        }
+    ],
+    "innerHTML": "<a href=\"{0}\"{1}>{2}</a>",
+    "title": "Build Apps Documentation",
+    "template": "doc_header.html"
 }

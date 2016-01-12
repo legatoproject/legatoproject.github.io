@@ -80,7 +80,12 @@ div.wrapper {
 #menu-trigger.trigger-open {
 	color: #00687a;
 }
-
+#menu-trigger:hover{
+	color: #00AEAF;
+}
+#menu-trigger.documentation:hover{
+	color: #9CDBE6;
+}
 #top {
 	position: fixed;
 	top: 0px;
