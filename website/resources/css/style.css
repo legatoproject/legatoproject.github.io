@@ -109,13 +109,11 @@ div.wrapper {
 	position: relative;
 	padding-top: 100px;
 }
-/* TODO: THIS IS JUST TEMPORARY DMITRY STUFF; */
+/* TODO: THIS IS DMITRY STUFF; */
 #top .link-selected:after{
 	content: " ◀";
 }
-#top .link-selected:before{
-	content: "▶ ";
-}
+
 #mainmenu {
     position: fixed;
 	width: 100%;
@@ -193,7 +191,7 @@ nav {
 
 nav a.navlink {
 	color: #00AEAF;
-	font-size: 14px;
+	font-size: 16px;
 	text-transform: uppercase;
 	padding: 15px 0px 5px 20px; 
 	display: block;
@@ -387,14 +385,14 @@ nav a:hover {
 	font-weight: normal;
 	font-size: 24px;
 	color: rgba(255,255,255,1);
-	padding-left: 205px;
+	padding-left: 235px;
 	padding-top: 15px;
 }
 
 #topMenu nav {
 	position: absolute;
 	top: 25px;
-	left: 190px;
+	left: 215px;
 	height: 50px;
 	padding-top: 35px;	
 }
