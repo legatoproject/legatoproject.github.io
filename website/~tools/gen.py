@@ -30,24 +30,34 @@ class MatchTest(unittest.TestCase):
         self.assertFalse(match_link("/index.html","platform/docs/index.html"))
 
 
+# helper for file_dispatch
+class UnsuitableDir(Exception):
+    pass
+
 # This looks for filename in dir, and if it doesn't find it, checks the parent directory, and so on
 # After that, it reads the contents and returns them along with the directory.
 # That way, we can make a template more generic by moving it up directories, and then individual sections can override it.
-def file_dispatch(dir, filename):
+# subdir can be set to "_templates" to descend into that dir when possible, and only return files from it 
+def file_dispatch(dir, filename, subdir = None):
     MAX_DEPTH = 6
     #print("Looking for " + filename)
     for i in range(MAX_DEPTH):
         try:
             with open(join(dir, filename)) as f:
+                if subdir and os.path.basename(dir) != subdir.strip(os.path.sep):
+                    raise UnsuitableDir
                 data = f.read()
             #print("Found %s in %s with depth %s" % (filename, dir, i))
             return data, dir
         except IOError:
-            if os.path.samefile(os.path.abspath(dir), os.path.abspath(src_dir)):
+            if os.path.samefile(os.path.abspath(dir), os.path.abspath(src_dir)): # if we can't find it in src_dir, don't ascend further
                 return None, dir
+            elif subdir and os.path.isdir(join(dir, subdir)):
+                dir = join(dir, subdir)
+                continue
             else:
                 dir = os.path.dirname(dir)
-                #print("Descending to " + dir)
+                #print("Ascending to " + dir)
                 continue
     print("###Couldn't find " + filename)
     return None, dir
@@ -60,7 +70,7 @@ def gen_nav(json_file, current_filepath):
     innerHTML = ""
     links = jsondata["links"]
     for x in links:
-        #print("match_link(%s, %s) = %s" % (x["href"], current_filepath,match_link(x["href"], current_filepath)))
+        print("match_link(%s, %s) = %s" % (x["href"], current_filepath,match_link(x["href"], current_filepath)))
         innerHTML += format_nav_link(jsondata["innerHTML"],x, current_filepath)
     outerHTML = file_dispatch(dir, join("_templates/",jsondata["template"]))[0].format(innerHTML, jsondata.get("title",""))
     return outerHTML
@@ -89,7 +99,7 @@ def gen_sidemenu(dir, filename, contents):
         innerHTML += format_sidemenu_link(jsondata["innerHTML"],x,current_filepath)
     templateHTML, templatedir = file_dispatch(dir, join("_templates/",jsondata["template"]))
     # this is important: render uses the current dir as a working directory, not the templates dir.
-    outerHTML = render(join(templatedir,"_templates/", jsondata["template"]), dir).format(innerHTML, jsondata.get("title","")) # RECURSION HAPPENS HERE!!!!!
+    outerHTML = render_file(join(templatedir,"_templates/", jsondata["template"]), dir).format(innerHTML, jsondata.get("title","")) # RECURSION HAPPENS HERE!!!!!
     return outerHTML
 
 
@@ -114,9 +124,12 @@ funcs = {
 
 
 
-def render(filepath, rel_dir):
+def render_file(filepath, rel_dir):
     with open(filepath, 'r') as f:
         contents = f.read()
+    return render(filepath,rel_dir,contents)
+
+def render(filepath, rel_dir, contents):
     filename = os.path.basename(filepath)
     for k in funcs.keys():
         if k in contents:
@@ -124,6 +137,7 @@ def render(filepath, rel_dir):
             print("%s for %s" % (f.__name__, os.path.relpath(filepath, src_dir)))
             contents = contents.replace(k,f(rel_dir,filename , contents)) # take the appropriate function and replace the marker with its output
     return contents
+
 
 if __name__ == "__main__":
     unittest.main(exit=False) 
@@ -136,14 +150,24 @@ if __name__ == "__main__":
             rel_dir = rel_dir[len(src_dir):] # set root to be sources/
         else:
             print("### rel_dir (%s) doesn't start with src_dir (%s)... what's going on?" % (rel_dir, src_dir))
+        outdir = join(os.getcwd(), "out/", rel_dir) 
+        if not os.path.exists(outdir):
+            os.makedirs(outdir)
         for file in files:
             filepath = join(dir, file)
             if filepath.endswith(".html"):
-                outdir = join(os.getcwd(), "out/", rel_dir) 
-                contents = render(filepath,rel_dir)
-                if not os.path.exists(outdir):
-                    os.makedirs(outdir)
-                with open(join(outdir, file), 'w+') as f:
+                split = file.split(".")
+                if len(split) > 2:  # if the file is like foo.bar.html, we wanna insert the file into the bar.html template
+                    template = split[-2] + ".html"
+                    with open(filepath) as f:
+                        resulting_filename = split[0] + ".html"
+                        resulting_filepath = join(dir, resulting_filename)
+                        contents = render(resulting_filepath, rel_dir, file_dispatch(dir, template, subdir = "_templates")[0]).replace("{content}",f.read())
+                        savefile = resulting_filename           
+                else:
+                    contents = render_file(filepath,rel_dir)
+                    savefile=file
+                with open(join(outdir, savefile), 'w+') as f:
                     f.write(contents)
 
 

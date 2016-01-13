@@ -42,38 +42,16 @@
     <div class="wrapper">
     	<div id="menu-trigger" class="fa fa-bars documentation"></div>
         <div id="top">
-            <header>
-                <nav>
-                    <a href="/index.html"class="navlink">Introduction</a><a href="/partners/"class="navlink">Partners</a><a href="/apps/"class="navlink link-selected">Build Apps</a><a href="/apps/intro"class="subnavlink">Introduction</a><a href="/apps/getstarted"class="subnavlink">Get started</a><a href="/apps/docs/learn"class="subnavlink link-selected">Documentation</a><a href="/apps/community"class="subnavlink">Community</a><a href="/apps/license"class="subnavlink">License</a><a href="/platform/"class="navlink">Build Platform</a><a href="/platform/"class="subnavlink">Introduction</a><a href="/platform/"class="subnavlink">Get started</a><a href="/platform/docs"class="subnavlink">Documentation</a><a href="/platform/"class="subnavlink">Community</a><a href="/platform/"class="subnavlink">License</a>
-                </nav>
-            </header>
+            %%%SIDEMENU%%%
         </div>
-        <div id="menudocumentation">
-	<header>
-		<h1><a title="back to Legato homepage" href="/" class="navlink">Legato</a></h1>
-		<h2>/ Build Apps Documentation</h2>
-		<nav>
-			<a href="/apps/docs/learn/" class="link-selected">Learn</a><a href="/apps/docs/api/">API Guides</a><a href="/apps/docs/tools/">Tools</a><a href="/apps/docs/reference/">Reference</a>
-			<i class="fa fa-search"></i>
-			<input id="autocomplete" onkeyup="getdata()"> <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label>
-		<ul id="search_result" class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" tabindex="0"></ul>
-	</nav>
-</header>
-</div>
-        <div id="topMenu">
-	<a href=/apps/docs/learn/ class="biglink">Learn</a>
-	<nav>
-	<a href="basics.html" class="link-selected">Basics</a><a href="sample-apps.html">Sample Apps</a><a href="how-tos.html">How Tos</a><a href="def-files.html">Definition Files</a>
-	</nav>
-</div>
+        %%%HEADER%%%
+        %%%TOPMENU%%%
         <div id="left">
         	<div id="tree1">test text</div>
         </div>
 
         <div class="content">
-            <h2>Basics</h2>
-
-Legato, not to be confused with Spanish "el gato" <i>(the cat)</i>, is a platform for IoT protyping.
+            {content}
             <br clear="left" />
         </div>
         <div id="footer">
