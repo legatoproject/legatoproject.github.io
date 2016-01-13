@@ -1,5 +1,5 @@
 echo "Cleaning..."
-rm -rv out/*
+rm -r out/*
 echo "Running templater..."
 python gen.py
 echo "Copying..."

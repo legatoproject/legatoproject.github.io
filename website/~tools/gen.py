@@ -70,7 +70,7 @@ def gen_nav(json_file, current_filepath):
 def format_nav_link(template, json_link, target_file):
     return template.format( json_link["href"], ' class="link-selected"' if match_link(json_link["href"], target_file) else "", json_link["title"])
 
-def gen_learn_topmenu(dir, filename, contents):
+def gen_topmenu(dir, filename, contents):
     return gen_nav("topmenu.json",join(dir,filename))
 
 
@@ -88,17 +88,14 @@ def gen_sidemenu(dir, filename, contents):
         #print("{0} & {1} >> {2}".format(links[x],current_filepath,match_link(links[x], current_filepath)))
         innerHTML += format_sidemenu_link(jsondata["innerHTML"],x,current_filepath)
     templateHTML, templatedir = file_dispatch(dir, join("_templates/",jsondata["template"]))
-    outerHTML = render(join(templatedir,"_templates/", jsondata["template"]), templatedir).format(innerHTML, jsondata.get("title","")) # RECURSION HAPPENS HERE!!!!!
+    # this is important: render uses the current dir as a working directory, not the templates dir.
+    outerHTML = render(join(templatedir,"_templates/", jsondata["template"]), dir).format(innerHTML, jsondata.get("title","")) # RECURSION HAPPENS HERE!!!!!
     return outerHTML
-#####
-# TODO: recursive templating is broken because it tries to look for stuff in the templates dir. go up a dir somewhere
-#####
-
 
 
 # not tail recursive... but there are bigger problems if the documentation nav tree exceeds callstack size...
 def format_sidemenu_link(template, json_link, target_file, depth = 0):
-    print("match_link(%s, %s) = %s" % (json_link["href"], target_file,match_link(json_link["href"], target_file)))
+    #print("match_link(%s, %s) = %s" % (json_link["href"], target_file,match_link(json_link["href"], target_file)))
     childrenHTML = ""
     if "children" in json_link:
         for c in json_link["children"]:
@@ -111,7 +108,7 @@ def format_sidemenu_link(template, json_link, target_file, depth = 0):
 # marker->function mapping here
 funcs = {
     "%%%HEADER%%%": gen_header,
-    "%%%LEARN_TOPMENU%%%": gen_learn_topmenu,
+    "%%%TOPMENU%%%": gen_topmenu,
     "%%%SIDEMENU%%%" : gen_sidemenu,
 }
 
@@ -124,7 +121,7 @@ def render(filepath, rel_dir):
     for k in funcs.keys():
         if k in contents:
             f = funcs[k]
-            print("%s <-- %s" % (filename, f.__name__))
+            print("%s for %s" % (f.__name__, os.path.relpath(filepath, src_dir)))
             contents = contents.replace(k,f(rel_dir,filename , contents)) # take the appropriate function and replace the marker with its output
     return contents
 
