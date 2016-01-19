@@ -1,8 +1,8 @@
 {
     "links": [
         {
-            "title": "This is converted",
-            "href": "basics.html"
+            "title": "Converted documentation",
+            "href": "/apps/docs/converted/"
         },
         {
             "title": "Sample Apps",

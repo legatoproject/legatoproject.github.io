@@ -423,7 +423,7 @@ nav a:hover {
  *******************/
  
 #left {
-	position: fixed;
+	position: absolute; /* changed from fixed */
 	top: 0;
 	left: 0;
 	width: 150px;

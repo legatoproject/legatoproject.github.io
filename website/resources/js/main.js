@@ -97,4 +97,31 @@ function checkbox(){
     console.log($('#tree1').css('display'));
     }
 
-
+function setupTree(){
+     $(document).ready(function(){
+        $.getJSON(
+    '/apps/docs/converted/toc.json',
+    function(data) {
+        $('#tree1').tree({
+            data: data.topic.children
+        });
+    }
+);
+          //bind click event to tree
+      $('#tree1').bind(
+        'tree.click',
+        function(event) {
+        // The clicked node is 'event.node'
+        var node = event.node;
+        console.log(node.name);
+        console.log(node.href);
+        //$('.content').html(node.href);
+        var href = "/apps/docs/converted/"+node.href;
+        //var href = node.href.replace(".html",".part.html");
+       console.log(href);
+        $('.content').load(href);
+        }
+      );
+      //bind end
+            });
+}

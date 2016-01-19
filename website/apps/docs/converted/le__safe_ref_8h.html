@@ -20,34 +20,12 @@
     <![endif]-->
     
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-    <script>
-      $(document).ready(function(){
-		$("#menu-trigger").click(function() {
-			$("#top")[this.opened ? "removeClass" : "addClass"]("menu-open");
-			$(this)[this.opened ? "removeClass" : "addClass"]("trigger-open");
-			this.opened = !this.opened;
-	    });
-		
-		$("#top a").click(function() {
-	        $("#top").removeClass("menu-open");
-			$("#menu-trigger").removeClass("trigger-open").get(0).opened = false;
-			
-	    });
-		
-      });
-    </script>
+
     <script src="/resources/js/main.js"></script>    
     <link rel="stylesheet" type="text/css" href="/resources/css/jqtree.css">
     <script type="text/javascript" src="/resources/js/tree.jquery.js"></script>
     <script>
-    $.getJSON(
-    '/apps/docs/converted/toc.json',
-    function(data) {
-        $('#tree1').tree({
-            data: data.topic.children
-        });
-    }
-);
+    setupTree();
     </script>
 </head>
 <body>
@@ -74,13 +52,13 @@
 </div>
 
         <div id="topMenu">
-	<a href=/apps/docs/learn/ class="biglink">Learn</a>
+	<a href=/apps/docs/converted/ class="biglink">App docs?</a>
 	<nav>
-	<a href="basics.html">This is converted</a><a href="sample-apps.html">Sample Apps</a><a href="how-tos.html">How Tos</a><a href="def-files.html">Definition Files</a>
+	<a href="/apps/docs/converted/" class="link-selected">Converted documentation</a><a href="sample-apps.html">Sample Apps</a><a href="how-tos.html">How Tos</a><a href="def-files.html">Definition Files</a>
 	</nav>
 </div>
         <div id="left">
-        	<div id="tree1">test text</div>
+        	<div id="tree1">Loading nav tree...</div>
         </div>
 
         <div class="content">
