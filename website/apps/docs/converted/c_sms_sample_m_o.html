@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Legato - Build Apps - Documentation</title>
+	<meta name="description" content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" />
+	<meta name="keywords" content="#keywords" />
+	<meta name="robots" content="noindex, nofollow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="/resources/images/legato.ico">
+    <link rel="apple-touch-icon" href="#">
+    <link rel="apple-touch-icon" sizes="72x72" href="#">
+    <link rel="apple-touch-icon" sizes="114x114" href="#">
+    <link rel="stylesheet" type="text/css" href="/resources/css/style.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/resources/css/font-awesome.css">
+    
+    <!--[if IE]>
+    <script src="/resources/js/html5shiv.js"></script>
+    <script src="/resources/js/respond.js"></script>
+    <![endif]-->
+    
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+		$("#menu-trigger").click(function() {
+			$("#top")[this.opened ? "removeClass" : "addClass"]("menu-open");
+			$(this)[this.opened ? "removeClass" : "addClass"]("trigger-open");
+			this.opened = !this.opened;
+	    });
+		
+		$("#top a").click(function() {
+	        $("#top").removeClass("menu-open");
+			$("#menu-trigger").removeClass("trigger-open").get(0).opened = false;
+			
+	    });
+		
+      });
+    </script>
+    
+</head>
+<body>
+    <div class="wrapper">
+    	<div id="menu-trigger" class="fa fa-bars documentation"></div>
+        <div id="top">
+            <header>
+                <nav>
+                    <a href="/index.html"class="navlink">Introduction</a><a href="/partners/"class="navlink">Partners</a><a href="/apps/"class="navlink">Build Apps</a><a href="/apps/intro"class="subnavlink">Introduction</a><a href="/apps/getstarted"class="subnavlink">Get started</a><a href="/apps/docs/learn"class="subnavlink">Documentation</a><a href="/apps/community"class="subnavlink">Community</a><a href="/apps/license"class="subnavlink">License</a><a href="/platform/"class="navlink">Build Platform</a><a href="/platform/"class="subnavlink">Introduction</a><a href="/platform/"class="subnavlink">Get started</a><a href="/platform/docs"class="subnavlink">Documentation</a><a href="/platform/"class="subnavlink">Community</a><a href="/platform/"class="subnavlink">License</a>
+                </nav>
+            </header>
+        </div>
+        <div id="menudocumentation">
+	<header>
+		<h1><a title="back to Legato homepage" href="/" class="navlink">Legato</a></h1>
+		<h2>/ Build Apps Documentation</h2>
+		<nav>
+			<a href="/apps/docs/learn/">Learn</a><a href="/apps/docs/api/">API Guides</a><a href="/apps/docs/tools/">Tools</a><a href="/apps/docs/reference/">Reference</a>
+			<i class="fa fa-search"></i>
+			<input id="autocomplete" onkeyup="getdata()"> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+		<ul id="search_result" class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" tabindex="0"></ul>
+	</nav>
+</header>
+</div>
+
+        <div id="left">
+        	<div id="tree1">test text</div>
+        </div>
+
+        <div class="content">
+            <div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow" onkeydown="return searchBox.OnSearchSelectKey(event)" onmouseout="return searchBox.OnSearchSelectHide()" onmouseover="return searchBox.OnSearchSelectShow()">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark"> </span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark"> </span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark"> </span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark"> </span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark"> </span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark"> </span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark"> </span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark"> </span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark"> </span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark"> </span>Pages</a></div>
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe frameborder="0" id="MSearchResults" name="MSearchResults" src="javascript:void(0)">
+</iframe>
+</div>
+<div class="header">
+<div class="headertitle">
+<div class="title">Sample code for Mobile Originated SMS message </div> </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><div class="fragment"><div class="line"></div>
+<div class="line"><span class="preprocessor">#include "<a class="code" href="legato_8h.html">legato.h</a>"</span></div>
+<div class="line"><span class="preprocessor">#include "interfaces.h"</span></div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line"><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> smsmo_SendMessage</div>
+<div class="line">(</div>
+<div class="line"> <span class="keyword">const</span> <span class="keywordtype">char</span>*   destinationPtr, </div>
+<div class="line"> <span class="keyword">const</span> <span class="keywordtype">char</span>*   textPtr         </div>
+<div class="line">)</div>
+<div class="line">{</div>
+<div class="line"> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a>           res;</div>
+<div class="line"> <a class="code" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a>      myMsg;</div>
+<div class="line"></div>
+<div class="line">    myMsg = <a class="code" href="le__sms__interface_8h.html#a668abcbcff2f1f3c5cdf799315a81058">le_sms_Create</a>();</div>
+<div class="line"> <span class="keywordflow">if</span> (!myMsg)</div>
+<div class="line">    {</div>
+<div class="line"> <a class="code" href="le__log_8h.html#a353590f91b3143a7ba3a416ae5a50c3d">LE_ERROR</a>(<span class="stringliteral">"SMS message creation has failed!"</span>);</div>
+<div class="line"> <span class="keywordflow">return</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86cac409634423b6b1ef09643529f6224798">LE_FAULT</a>;</div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line">    res = <a class="code" href="le__sms__interface_8h.html#a145d3215f5601b88ef80b2674a9df226">le_sms_SetDestination</a>(myMsg, destinationPtr);</div>
+<div class="line"> <span class="keywordflow">if</span> (res != LE_OK)</div>
+<div class="line">    {</div>
+<div class="line"> <a class="code" href="le__log_8h.html#a353590f91b3143a7ba3a416ae5a50c3d">LE_ERROR</a>(<span class="stringliteral">"le_sms_SetDestination has failed (res.%d)!"</span>, res);</div>
+<div class="line"> <span class="keywordflow">return</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86cac409634423b6b1ef09643529f6224798">LE_FAULT</a>;</div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line">    res = <a class="code" href="le__sms__interface_8h.html#a34dc999430c46530d6c9067f800c5d72">le_sms_SetText</a>(myMsg, textPtr);</div>
+<div class="line"> <span class="keywordflow">if</span> (res != LE_OK)</div>
+<div class="line">    {</div>
+<div class="line"> <a class="code" href="le__log_8h.html#a353590f91b3143a7ba3a416ae5a50c3d">LE_ERROR</a>(<span class="stringliteral">"le_sms_SetText has failed (res.%d)!"</span>, res);</div>
+<div class="line"> <span class="keywordflow">return</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86cac409634423b6b1ef09643529f6224798">LE_FAULT</a>;</div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line">    res = <a class="code" href="le__sms__interface_8h.html#ab7dee7d2c74cfcadd9ea0d5fe1786dfc">le_sms_Send</a>(myMsg);</div>
+<div class="line"> <span class="keywordflow">if</span> (res != LE_OK)</div>
+<div class="line">    {</div>
+<div class="line"> <a class="code" href="le__log_8h.html#a353590f91b3143a7ba3a416ae5a50c3d">LE_ERROR</a>(<span class="stringliteral">"le_sms_Send has failed (res.%d)!"</span>, res);</div>
+<div class="line"> <span class="keywordflow">return</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86cac409634423b6b1ef09643529f6224798">LE_FAULT</a>;</div>
+<div class="line">    }</div>
+<div class="line"> <span class="keywordflow">else</span></div>
+<div class="line">    {</div>
+<div class="line"> <a class="code" href="le__log_8h.html#a23e6d206faa64f612045d688cdde5808">LE_INFO</a>(<span class="stringliteral">"\"%s\" has been successfully sent to %s."</span>, textPtr, destinationPtr);</div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line"> <a class="code" href="le__sms__interface_8h.html#aca1691010c88995cb47225f2889910fa">le_sms_Delete</a>(myMsg);</div>
+<div class="line"></div>
+<div class="line"> <span class="keywordflow">return</span> <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86ca5066a4bcec691c6b67843b8f79656422">LE_OK</a>;</div>
+<div class="line">}</div>
+<div class="line"></div>
+</div><!-- fragment --> </div></div><!-- contents -->
+<meta content="API Guides" name="category"></meta></div>
+            <br clear="left" />
+        </div>
+        <div id="footer">
+        	Copyright © Sierra Wireless Inc. Use of this work is subject to license.
+        </div>
+	</div>
+</body>
+</html>

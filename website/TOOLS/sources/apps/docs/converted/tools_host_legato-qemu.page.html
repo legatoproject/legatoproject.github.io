@@ -1,0 +1,35 @@
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow" onkeydown="return searchBox.OnSearchSelectKey(event)" onmouseout="return searchBox.OnSearchSelectHide()" onmouseover="return searchBox.OnSearchSelectShow()">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark"> </span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark"> </span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark"> </span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark"> </span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark"> </span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark"> </span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark"> </span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark"> </span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark"> </span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark"> </span>Pages</a></div>
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe frameborder="0" id="MSearchResults" name="MSearchResults" src="javascript:void(0)">
+</iframe>
+</div>
+<div class="header">
+<div class="headertitle">
+<div class="title">legato-qemu </div> </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><pre class="fragment">NAME
+    legato-qemu - launch qemu
+
+DESCRIPTION
+    Prepare an launch qemu to host an instance of Legato.
+    Also fetch qemu images and check for updates.
+
+ENVIRONMENT
+    This script is parametrized through environment variables.
+        OPT_TARGET: Platform to emulate
+        OPT_PERSIST: Make changes to the image persistant or not
+        OPT_KMESG: Kernel messages to console
+        OPT_GDB: Launch GDB server to qemu
+        OPT_SERIAL: Bearer for serial port
+                    - (blank, default) = Serial to console
+                    - telnet = Serial to telnet
+        OPT_NET: Networking interface
+                 - user (default) = simulated internal qemu networking
+                 - tap = Uses a tap interface (requires priviledges)
+</pre> </div></div><!-- contents -->
+<meta content="Tools" name="category"></meta></div>

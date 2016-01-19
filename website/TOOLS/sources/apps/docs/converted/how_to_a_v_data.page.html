@@ -1,0 +1,27 @@
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow" onkeydown="return searchBox.OnSearchSelectKey(event)" onmouseout="return searchBox.OnSearchSelectHide()" onmouseover="return searchBox.OnSearchSelectShow()">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark"> </span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark"> </span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark"> </span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark"> </span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark"> </span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark"> </span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark"> </span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark"> </span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark"> </span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark"> </span>Pages</a></div>
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe frameborder="0" id="MSearchResults" name="MSearchResults" src="javascript:void(0)">
+</iframe>
+</div>
+<div class="header">
+<div class="headertitle">
+<div class="title">Manage AirVantage Data </div> </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>This topic describes how to manage data (read/write/execute) for cloud sevices like AirVantage.</p>
+<p>Legato provides easy LWM2M connectivity to AirVantage through a .cdef file <a class="el" href="def_files_cdef.html#defFilesCdef_assets">Assets</a> section using pre-built APIs.</p>
+<h1><a class="anchor" id="howToAVData_APIs"></a>
+AirVantage APIs</h1>
+<p>Use the <a class="el" href="c_le_avc.html">AirVantage Connector</a> API to configure your AirVantage connectivity to handle app updates.</p>
+<p>Use the <a class="el" href="c_le_avdata.html">AirVantage Data</a> API to setup your AirVantage data including read (variable), write (settings), and commands (executables).</p>
+<h1><a class="anchor" id="howToAVData_assets"></a>
+.cdef Assets</h1>
+<p>You add an <a class="el" href="def_files_cdef.html#defFilesCdef_assets">Assets</a>' section to your app's component definition file (<code></code>.cdef) customizing AirVantage data including associating data types, setting default values, and executing commands using the pre-built <a class="el" href="c_le_avdata.html">AirVantage Data</a> APIs.</p>
+<hr />
+<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div><!-- contents -->
+<meta content="Learn" name="category"></meta></div>

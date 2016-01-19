@@ -1,0 +1,31 @@
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow" onkeydown="return searchBox.OnSearchSelectKey(event)" onmouseout="return searchBox.OnSearchSelectHide()" onmouseover="return searchBox.OnSearchSelectShow()">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark"> </span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark"> </span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark"> </span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark"> </span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark"> </span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark"> </span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark"> </span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark"> </span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark"> </span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark"> </span>Pages</a></div>
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe frameborder="0" id="MSearchResults" name="MSearchResults" src="javascript:void(0)">
+</iframe>
+</div>
+<div class="header">
+<div class="headertitle">
+<div class="title">Linux Android SDK </div> </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>You can setup a Linux Android host to upgrade or recover a device.</p>
+<p>Only a 64-bit Ubuntu 15.04 distribution is currently being tested. Other distributions are unknown at this time, but can be tried.</p>
+<h1><a class="anchor" id="instLinuxAndroid"></a>
+Setup fastboot</h1>
+<p>Android tools use fastboot to replace the kernel and root filesystem on devices.</p>
+<p>Download Android SDK tools from <a href="http://developer.android.com/sdk/index.html">here</a>.</p>
+<p>Extract the file and add the directory containing the fastboot command to your path.</p>
+<h1><a class="anchor" id="createDevRules"></a>
+Create Udev Rules</h1>
+<p>By default, fastboot on Ubuntu can't communicate with a USB-connected device because of the default permissions. Create udev rules to overcome this. In the file /etc/udev/rules.d/51-android.rules insert the following two lines and save: </p>
+<div class="fragment"><div class="line">SUBSYSTEM==<span class="stringliteral">"usb"</span>, ATTRS{idVendor}==<span class="stringliteral">"1199"</span>, MODE=<span class="stringliteral">"0666"</span> </div>
+</div><!-- fragment --> <div class="fragment"><div class="line">SUBSYSTEM==<span class="stringliteral">"usb"</span>, ATTRS{idVendor}==<span class="stringliteral">"18d1"</span>, MODE=<span class="stringliteral">"0666"</span> </div>
+</div><!-- fragment --><p> Then reboot your PC.</p>
+<hr />
+<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div><!-- contents -->
+<meta content="Get Started" name="category"></meta></div>

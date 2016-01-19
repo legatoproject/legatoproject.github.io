@@ -1,0 +1,34 @@
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow" onkeydown="return searchBox.OnSearchSelectKey(event)" onmouseout="return searchBox.OnSearchSelectHide()" onmouseover="return searchBox.OnSearchSelectShow()">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark"> </span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark"> </span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark"> </span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark"> </span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark"> </span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark"> </span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark"> </span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark"> </span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark"> </span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark"> </span>Pages</a></div>
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe frameborder="0" id="MSearchResults" name="MSearchResults" src="javascript:void(0)">
+</iframe>
+</div>
+<div class="header">
+<div class="headertitle">
+<div class="title">mkapp </div> </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>Make Application: run <code>mkapp</code> to generate an app bundle to install and run on a target.</p>
+<p>Application bundles are compressed archives containing everything that needs to be sent to your target device to install your app.</p>
+<p>The main input for <code>mkapp</code> is an <a class="el" href="def_files_adef.html">Application Definition .adef</a> file that contains these definitions:</p>
+<ul>
+<li>executables to build when the app is built</li>
+<li>components and/or other files to build into those executables</li>
+<li>other files to be included as a part of the app</li>
+<li>if the app will run in a sandbox, files to access outside the sandbox</li>
+<li>executables to run when the app is started</li>
+<li>command-line arguments and environment variables to pass to those apps</li>
+<li>limits to place on the app (CPU, memory, etc.)</li>
+</ul>
+<p><code>mkapp</code> will parse the .adef file, determine which components, interface definitions, and other source files are needed, build those into the libraries and executables required, generate the on-target configuration data needed, and add everything to an app bundle ready for installation on the target.</p>
+<p>To display usage, run </p>
+<pre class="fragment">mkapp --help</pre><dl class="section note"><dt>Note</dt><dd><code>mkapp</code> only knows about the app it's building. Typos in binding values won't be detected, but your app will hang. The note in <a class="el" href="build_toolsmksys.html">mksys</a> has details how to troubleshoot.</dd></dl>
+<p>See <a class="el" href="def_files_adef.html">Application Definition .adef</a> files for details on app def files.</p>
+<hr />
+<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div><!-- contents -->
+<meta content="Tools" name="category"></meta></div>

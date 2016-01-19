@@ -1,0 +1,33 @@
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow" onkeydown="return searchBox.OnSearchSelectKey(event)" onmouseout="return searchBox.OnSearchSelectHide()" onmouseover="return searchBox.OnSearchSelectShow()">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark"> </span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark"> </span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark"> </span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark"> </span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark"> </span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark"> </span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark"> </span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark"> </span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark"> </span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark"> </span>Pages</a></div>
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe frameborder="0" id="MSearchResults" name="MSearchResults" src="javascript:void(0)">
+</iframe>
+</div>
+<div class="header">
+<div class="headertitle">
+<div class="title">mklegatoimg </div> </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1>NAME</h1>
+<p><b>mklegatoimg</b> - create Legato image partition</p>
+<h1>SYNOPSIS</h1>
+<p><code>mklegatoimg [OPTIONS]</code><br />
+</p>
+<h1>DESCRIPTION</h1>
+<p>Generate a partition for a Legato target.</p>
+<p>Options:</p>
+<ul>
+<li>-t [TARGET]: target the image should be generated for (ar7, ...)</li>
+<li>-d [STAGING_DIR]: staging directory for that platform</li>
+<li>-o [OUTPUT_DIR]: output directory where the image will be stored</li>
+</ul>
+<p>For ar7/ar86/wp7/ap85 targets:</p>
+<p>This creates a partition that you can use with fwupdate or airvantage to update the legato within your target.</p>
+<hr />
+<p> Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div><!-- contents -->
+<meta content="Tools" name="category"></meta></div>

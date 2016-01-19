@@ -1,0 +1,26 @@
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow" onkeydown="return searchBox.OnSearchSelectKey(event)" onmouseout="return searchBox.OnSearchSelectHide()" onmouseover="return searchBox.OnSearchSelectShow()">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark"> </span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark"> </span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark"> </span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark"> </span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark"> </span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark"> </span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark"> </span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark"> </span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark"> </span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark"> </span>Pages</a></div>
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe frameborder="0" id="MSearchResults" name="MSearchResults" src="javascript:void(0)">
+</iframe>
+</div>
+<div class="header">
+<div class="headertitle">
+<div class="title">Legato Build Configuration </div> </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>In the file <code>le_build_conifg.h</code> are a number of preprocessor macros. Uncommenting these macros enables a non-standard feature of the framework.</p>
+<hr />
+<h1><a class="anchor" id="bld_cfg_mem_trace"></a>
+LE_MEM_TRACE</h1>
+<p>When <code>LE_MEM_TRACE</code> is defined, the memory subsystem will create a trace point for every memory pool created. The name of the tracepoint will be the same of the pool, and is of the form "component.poolName".</p>
+<h1><a class="anchor" id="bld_cfg_mem_valgrind"></a>
+LE_MEM_VALGRIND</h1>
+<p>When <code>LE_MEM_VALGRIND</code> is enabled the memory system doesn't use pools anymore but in fact switches to use malloc/free per-block. This way, tools like valgrind can be used on a Legato executable.</p>
+<hr />
+<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div><!-- contents -->
+<meta content="API Guides" name="category"></meta></div>

@@ -1,0 +1,50 @@
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow" onkeydown="return searchBox.OnSearchSelectKey(event)" onmouseout="return searchBox.OnSearchSelectHide()" onmouseover="return searchBox.OnSearchSelectShow()">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark"> </span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark"> </span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark"> </span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark"> </span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark"> </span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark"> </span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark"> </span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark"> </span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark"> </span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark"> </span>Pages</a></div>
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe frameborder="0" id="MSearchResults" name="MSearchResults" src="javascript:void(0)">
+</iframe>
+</div>
+<div class="header">
+<div class="headertitle">
+<div class="title">app </div> </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>The <code>app</code> tool can be used to list and control apps installed on the target device.</p>
+<h1>Usage</h1>
+<p><b><code>app [start|stop|restart|remove|status|version|info] APP_NAME [ APP_NAME ... ] <br />
+ app [start|stop|restart|remove|status|version|info] '*' <br />
+ app [list|status|info] <br />
+ app help <br />
+</code></b></p>
+<pre class="fragment">app [start|stop|restart|remove|status|version|info] APP_NAME [ APP_NAME ... ]</pre> <blockquote class="doxtable">
+<p>Multiple app names can be specified.</p>
+<p></p>
+</blockquote>
+<pre class="fragment">app [start|stop|restart|remove|status|version|info] '*'</pre> <blockquote class="doxtable">
+<p>A wildcard '*' can be used to apply action to all apps.</p>
+<p></p>
+</blockquote>
+<dl class="section warning"><dt>Warning</dt><dd>Be careful not to accidentally remove system services apps that you might need (e.g., modemService app).</dd></dl>
+<pre class="fragment">app list</pre> <blockquote class="doxtable">
+<p>Lists apps.</p>
+<p></p>
+</blockquote>
+<pre class="fragment">app status</pre> <blockquote class="doxtable">
+<p>List apps and their current status.</p>
+<p></p>
+</blockquote>
+<pre class="fragment">app info </pre> <blockquote class="doxtable">
+<p>Provides info on one or more apps' running state and processes' state (stopped or never started, running, paused).</p>
+<p></p>
+</blockquote>
+<pre class="fragment">app help </pre> <blockquote class="doxtable">
+<p>Prints help text to standard out and exits.</p>
+<p></p>
+</blockquote>
+<hr />
+<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div><!-- contents -->
+<meta content="Tools" name="category"></meta></div>

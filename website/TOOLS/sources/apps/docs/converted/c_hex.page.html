@@ -1,0 +1,32 @@
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow" onkeydown="return searchBox.OnSearchSelectKey(event)" onmouseout="return searchBox.OnSearchSelectHide()" onmouseover="return searchBox.OnSearchSelectShow()">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark"> </span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark"> </span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark"> </span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark"> </span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark"> </span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark"> </span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark"> </span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark"> </span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark"> </span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark"> </span>Pages</a></div>
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe frameborder="0" id="MSearchResults" name="MSearchResults" src="javascript:void(0)">
+</iframe>
+</div>
+<div class="header">
+<div class="headertitle">
+<div class="title">Hex string API </div> </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="el" href="le__hex_8h.html">API Reference</a></p>
+<hr />
+<p>This API provides convertion tools to switch between:</p>
+<ul>
+<li><a class="el" href="le__hex_8h.html#a2ad2c35d567e8fc3fc962a58272b093d">le_hex_StringToBinary</a> Hex-String to binary</li>
+<li><a class="el" href="le__hex_8h.html#a2482e5240d47b176e41369fc5a654551">le_hex_BinaryToString</a> Binary to Hex-String</li>
+</ul>
+<h1><a class="anchor" id="hex_conversion"></a>
+Conversion</h1>
+<p>Code sample:</p>
+<div class="fragment"><div class="line"><span class="keywordtype">char</span>     HexString[] = <span class="stringliteral">"136ABC"</span>;</div>
+<div class="line">uint8_t  binString[] = {0x13,0x6A,0xBC};</div>
+</div><!-- fragment --><p>So <a class="el" href="le__hex_8h.html#a2ad2c35d567e8fc3fc962a58272b093d">le_hex_StringToBinary</a> will convert HexString to binString.</p>
+<p>and <a class="el" href="le__hex_8h.html#a2482e5240d47b176e41369fc5a654551">le_hex_BinaryToString</a> will convert binString to HexString.</p>
+<hr />
+<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div><!-- contents -->
+<meta content="API Guides" name="category"></meta></div>

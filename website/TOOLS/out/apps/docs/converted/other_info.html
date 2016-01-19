@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Legato - Build Apps - Documentation</title>
+	<meta name="description" content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" />
+	<meta name="keywords" content="#keywords" />
+	<meta name="robots" content="noindex, nofollow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="/resources/images/legato.ico">
+    <link rel="apple-touch-icon" href="#">
+    <link rel="apple-touch-icon" sizes="72x72" href="#">
+    <link rel="apple-touch-icon" sizes="114x114" href="#">
+    <link rel="stylesheet" type="text/css" href="/resources/css/style.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/resources/css/font-awesome.css">
+    
+    <!--[if IE]>
+    <script src="/resources/js/html5shiv.js"></script>
+    <script src="/resources/js/respond.js"></script>
+    <![endif]-->
+    
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+		$("#menu-trigger").click(function() {
+			$("#top")[this.opened ? "removeClass" : "addClass"]("menu-open");
+			$(this)[this.opened ? "removeClass" : "addClass"]("trigger-open");
+			this.opened = !this.opened;
+	    });
+		
+		$("#top a").click(function() {
+	        $("#top").removeClass("menu-open");
+			$("#menu-trigger").removeClass("trigger-open").get(0).opened = false;
+			
+	    });
+		
+      });
+    </script>
+    
+</head>
+<body>
+    <div class="wrapper">
+    	<div id="menu-trigger" class="fa fa-bars documentation"></div>
+        <div id="top">
+            <header>
+                <nav>
+                    <a href="/index.html"class="navlink">Introduction</a><a href="/partners/"class="navlink">Partners</a><a href="/apps/"class="navlink">Build Apps</a><a href="/apps/intro"class="subnavlink">Introduction</a><a href="/apps/getstarted"class="subnavlink">Get started</a><a href="/apps/docs/learn"class="subnavlink">Documentation</a><a href="/apps/community"class="subnavlink">Community</a><a href="/apps/license"class="subnavlink">License</a><a href="/platform/"class="navlink">Build Platform</a><a href="/platform/"class="subnavlink">Introduction</a><a href="/platform/"class="subnavlink">Get started</a><a href="/platform/docs"class="subnavlink">Documentation</a><a href="/platform/"class="subnavlink">Community</a><a href="/platform/"class="subnavlink">License</a>
+                </nav>
+            </header>
+        </div>
+        <div id="menudocumentation">
+	<header>
+		<h1><a title="back to Legato homepage" href="/" class="navlink">Legato</a></h1>
+		<h2>/ Build Apps Documentation</h2>
+		<nav>
+			<a href="/apps/docs/learn/">Learn</a><a href="/apps/docs/api/">API Guides</a><a href="/apps/docs/tools/">Tools</a><a href="/apps/docs/reference/">Reference</a>
+			<i class="fa fa-search"></i>
+			<input id="autocomplete" onkeyup="getdata()"> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+		<ul id="search_result" class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" tabindex="0"></ul>
+	</nav>
+</header>
+</div>
+
+        <div id="left">
+        	<div id="tree1">test text</div>
+        </div>
+
+        <div class="content">
+            <div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow" onkeydown="return searchBox.OnSearchSelectKey(event)" onmouseout="return searchBox.OnSearchSelectHide()" onmouseover="return searchBox.OnSearchSelectShow()">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark"> </span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark"> </span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark"> </span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark"> </span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark"> </span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark"> </span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark"> </span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark"> </span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark"> </span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark"> </span>Pages</a></div>
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe frameborder="0" id="MSearchResults" name="MSearchResults" src="javascript:void(0)">
+</iframe>
+</div>
+<div class="header">
+<div class="headertitle">
+<div class="title">Other Info </div> </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>This section contains details about known platform constraints and advanced info about Yocto and Legato.</p>
+<hr />
+<p><a class="el" href="platform_constraints.html">Platform Constraints</a> <br />
+<a class="el" href="yocto_main.html">Yocto Info</a> <br />
+</p>
+<hr />
+<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div><!-- contents -->
+<meta content="Learn" name="category"></meta></div>
+            <br clear="left" />
+        </div>
+        <div id="footer">
+        	Copyright © Sierra Wireless Inc. Use of this work is subject to license.
+        </div>
+	</div>
+</body>
+</html>

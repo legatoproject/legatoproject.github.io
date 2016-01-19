@@ -1,0 +1,33 @@
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow" onkeydown="return searchBox.OnSearchSelectKey(event)" onmouseout="return searchBox.OnSearchSelectHide()" onmouseover="return searchBox.OnSearchSelectShow()">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark"> </span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark"> </span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark"> </span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark"> </span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark"> </span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark"> </span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark"> </span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark"> </span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark"> </span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark"> </span>Pages</a></div>
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe frameborder="0" id="MSearchResults" name="MSearchResults" src="javascript:void(0)">
+</iframe>
+</div>
+<div class="header">
+<div class="headertitle">
+<div class="title">update </div> </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1>NAME</h1>
+<p><b>update</b> - apply update to target device</p>
+<h1>SYNOPSIS</h1>
+<p><code>update UPDATE_FILE [DEST_IP]</code><br />
+</p>
+<h1>DESCRIPTION</h1>
+<p>Apply the given update pack to the target device at a given IP address.</p>
+<p>UPDATE_FILE is the update pack file to be applied. E.g., 'myApp.ar7.update' or 'system.wp85.update'.</p>
+<p>DEST_IP is the IP address of the target device. If DEST_IP is not specified on the command line, the contents of the DEST_IP environment variable will be used.</p>
+<p>System update files are created by 'mksys'. App update files are created by 'mkapp'. App removal update packs and firmware update packs can be created using 'update-pack'.</p>
+<p>NOTE: App removal and app update packs can be concatenated together. E.g., to remove an app called 'myApp' and re-install it, </p>
+<pre class="fragment">update-pack -ar myApp -o myApp.remove.update
+cat myApp.remove.update myApp.wp85.update > myApp.reinstall.wp85.update
+update myApp.reinstall.wp85.update
+</pre><p>Other types of update packs cannot be combined.</p>
+<hr />
+<p> Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div><!-- contents -->
+<meta content="Tools" name="category"></meta></div>

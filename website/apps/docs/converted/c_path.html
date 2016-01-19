@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Legato - Build Apps - Documentation</title>
+	<meta name="description" content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" />
+	<meta name="keywords" content="#keywords" />
+	<meta name="robots" content="noindex, nofollow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="/resources/images/legato.ico">
+    <link rel="apple-touch-icon" href="#">
+    <link rel="apple-touch-icon" sizes="72x72" href="#">
+    <link rel="apple-touch-icon" sizes="114x114" href="#">
+    <link rel="stylesheet" type="text/css" href="/resources/css/style.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/resources/css/font-awesome.css">
+    
+    <!--[if IE]>
+    <script src="/resources/js/html5shiv.js"></script>
+    <script src="/resources/js/respond.js"></script>
+    <![endif]-->
+    
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+		$("#menu-trigger").click(function() {
+			$("#top")[this.opened ? "removeClass" : "addClass"]("menu-open");
+			$(this)[this.opened ? "removeClass" : "addClass"]("trigger-open");
+			this.opened = !this.opened;
+	    });
+		
+		$("#top a").click(function() {
+	        $("#top").removeClass("menu-open");
+			$("#menu-trigger").removeClass("trigger-open").get(0).opened = false;
+			
+	    });
+		
+      });
+    </script>
+    
+</head>
+<body>
+    <div class="wrapper">
+    	<div id="menu-trigger" class="fa fa-bars documentation"></div>
+        <div id="top">
+            <header>
+                <nav>
+                    <a href="/index.html"class="navlink">Introduction</a><a href="/partners/"class="navlink">Partners</a><a href="/apps/"class="navlink">Build Apps</a><a href="/apps/intro"class="subnavlink">Introduction</a><a href="/apps/getstarted"class="subnavlink">Get started</a><a href="/apps/docs/learn"class="subnavlink">Documentation</a><a href="/apps/community"class="subnavlink">Community</a><a href="/apps/license"class="subnavlink">License</a><a href="/platform/"class="navlink">Build Platform</a><a href="/platform/"class="subnavlink">Introduction</a><a href="/platform/"class="subnavlink">Get started</a><a href="/platform/docs"class="subnavlink">Documentation</a><a href="/platform/"class="subnavlink">Community</a><a href="/platform/"class="subnavlink">License</a>
+                </nav>
+            </header>
+        </div>
+        <div id="menudocumentation">
+	<header>
+		<h1><a title="back to Legato homepage" href="/" class="navlink">Legato</a></h1>
+		<h2>/ Build Apps Documentation</h2>
+		<nav>
+			<a href="/apps/docs/learn/">Learn</a><a href="/apps/docs/api/">API Guides</a><a href="/apps/docs/tools/">Tools</a><a href="/apps/docs/reference/">Reference</a>
+			<i class="fa fa-search"></i>
+			<input id="autocomplete" onkeyup="getdata()"> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+		<ul id="search_result" class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" tabindex="0"></ul>
+	</nav>
+</header>
+</div>
+
+        <div id="left">
+        	<div id="tree1">test text</div>
+        </div>
+
+        <div class="content">
+            <div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow" onkeydown="return searchBox.OnSearchSelectKey(event)" onmouseout="return searchBox.OnSearchSelectHide()" onmouseover="return searchBox.OnSearchSelectShow()">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark"> </span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark"> </span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark"> </span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark"> </span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark"> </span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark"> </span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark"> </span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark"> </span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark"> </span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark"> </span>Pages</a></div>
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe frameborder="0" id="MSearchResults" name="MSearchResults" src="javascript:void(0)">
+</iframe>
+</div>
+<div class="header">
+<div class="headertitle">
+<div class="title">Path API </div> </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="el" href="le__path_8h.html">API Reference</a></p>
+<hr />
+<p>Paths are text strings that contain nodes separated by character separators. Paths are used in many common applications like file system addressing, URLs, etc. so being able to parse them is quite important.</p>
+<p>The Path API is intended for general purpose use and supports UTF-8 null-terminated strings and multi-character separators.</p>
+<h1><a class="anchor" id="c_path_dirAndBasename"></a>
+Directory and Basename</h1>
+<p>The function <code><a class="el" href="le__path_8h.html#a0b0ff4c06db44de9bf4f40b9f5388785">le_path_GetDir()</a></code> is a convenient way to get the path's directory without having to create an iterator. The directory is the portion of the path up to and including the last separator. <a class="el" href="le__path_8h.html#a0b0ff4c06db44de9bf4f40b9f5388785">le_path_GetDir()</a> does not modify the path in anyway (i.e., consecutive paths are left as is), except to drop the node after the last separator.</p>
+<p>The function <a class="el" href="le__path_8h.html#aa58d208512dd5b9b2dc0ea6d5c963c25">le_path_GetBasenamePtr()</a> is an efficient and convenient function for accessing the last node in the path without having to create an iterator. The returned pointer points to the character following the last separator in the path. Because the basename is actually a portion of the path string, not a copy, any changes to the returned basename will also affect the original path string.</p>
+<h1><a class="anchor" id="c_path_threads"></a>
+Thread Safety</h1>
+<p>All the functions in this API are thread safe and reentrant unless of course the path iterators or the buffers passed into the functions are shared between threads. If the path iterators or buffers are shared by multiple threads then some other mechanism must be used to ensure these functions are thread safe.</p>
+<hr />
+<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. license. </p>
+</div></div><!-- contents -->
+<meta content="API Guides" name="category"></meta></div>
+            <br clear="left" />
+        </div>
+        <div id="footer">
+        	Copyright © Sierra Wireless Inc. Use of this work is subject to license.
+        </div>
+	</div>
+</body>
+</html>
