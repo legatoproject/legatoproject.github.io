@@ -45,25 +45,28 @@ class FileNotFoundError(Exception):
 # subdir can be set to "_templates" to descend into that dir when possible, and only return files from it 
 def file_dispatch(dir, filename, subdir = None):
     MAX_DEPTH = 6
+    already = []
     #print("Looking for " + filename)
     for i in range(MAX_DEPTH):
         try:
             with open(join(dir, filename)) as f:
-                if subdir and os.path.basename(dir) != subdir.strip(os.path.sep):
+                if dir in already or (subdir and os.path.basename(dir) != subdir.strip(os.path.sep)):
                     raise UnsuitableDir()
                 data = f.read()
             #print("Found %s in %s with depth %s" % (filename, dir, i))
             return data, dir
         except IOError, UnsuitableDirError:
+            already.append(dir)
+            #print "Not in " + dir
             if os.path.samefile(os.path.abspath(dir), os.path.abspath(src_dir)): # if we can't find it in src_dir, don't ascend further
                 raise FileNotFoundError("Couldn't find %s" % filename)
             elif subdir and os.path.isdir(join(dir, subdir)): # if subdir exists in the current dir, descend to it.
-                dir = join(dir, subdir)
-                continue
-            else:
-                dir = os.path.dirname(dir) # otherwise just ascend up one level
-                #print("Ascending to " + dir)
-                continue
+                if join(dir, subdir) not in already:
+                    dir = join(dir, subdir)
+                    continue
+            dir = os.path.dirname(dir) # otherwise just ascend up one level
+            #print("Ascending to " + dir)
+            continue
     print("###Couldn't find " + filename)
     return None, dir
 
