@@ -1,0 +1,12 @@
+# untested (as in, I've been doing this manually) script  
+# for going from doxygen to searchable v2 website
+
+
+# input files are in current_html/
+python uploadwithCategory.py
+rename 's/.html/.page.html/' ./category_upload/*.html
+extractDocStructure.py current_html/toc.xml 
+cp ./current_html/toc.json ~/website/apps/docs/converted/
+mv  ./category_upload/ ~/website/TOOLS/apps/docs/converted/
+cd ~/website/TOOLS/
+build.sh

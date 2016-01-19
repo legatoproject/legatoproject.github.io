@@ -35,64 +35,20 @@
 	    });
 		
       });
-
-    $("#Tutorial").bind("click", function(){
-    $("#tree1").hide();
-    $("#tree2").show();
-    $("#tree3").hide();
-    $("#tree4").hide();
-});
-
-    $("#Guides").bind("click", function(){
-    $("#tree1").show();
-    $("#tree2").hide();
-    $("#tree3").hide();
-    $("#tree4").hide();
-});
-    
-    $("#API").bind("click", function(){
-    $("#tree1").hide();
-    $("#tree2").hide();
-    $("#tree3").show();
-    $("#tree4").hide();
-});
-    $("#Tools").bind("click", function(){
-    $("#tree1").hide();
-    $("#tree2").hide();
-    $("#tree3").hide();
-    $("#tree4").show();
-});
-
-function getdata(){
-    var invoke_url="";
-    var domain="";
-    invoke_url="http://search-dmitry-legato-c23azpit2gnttqniivoexmuqwy.us-west-2.cloudsearch.amazonaws.com/2013-01-01/search"; //API Gateway endpoint-search all documents;
-        $("#search_result").empty();
-        var keyword=$('#autocomplete').val();
-        console.log(keyword);
-        $.get( invoke_url+"?q="+keyword+"&size=15"+"&sort=_score desc", function( data ) {
-              //console.log(datadata.hits.hit.fields.content);
-              var hits=data.hits.hit;
-              console.log("Total Found: "+data.hits.found);
-              var i;
-              for (i=0;i<hits.length;i++){
-                  console.log(hits[i].id);
-                  console.log(hits[i].fields.title);
-                  domain="<strong>"+hits[i].fields.category+" - </strong>";
-                  $("#search_result").append("<a href='http://localhost:8000/apps/docs/converted/"+hits[i].id+"'><li>"+domain+hits[i].fields.title+"</li></a>");
-                }
-            });
-            
-    }
-    
-function checkbox(){
-    console.log($("#category").is(":checked"));
-    console.log($('#tree1').css('display'));
-    }
-
-
     </script>
-    
+    <script src="/resources/js/main.js"></script>    
+    <link rel="stylesheet" type="text/css" href="/resources/css/jqtree.css">
+    <script type="text/javascript" src="/resources/js/tree.jquery.js"></script>
+    <script>
+    $.getJSON(
+    '/apps/docs/converted/toc.json',
+    function(data) {
+        $('#tree1').tree({
+            data: data.topic.children
+        });
+    }
+);
+    </script>
 </head>
 <body>
     <div class="wrapper">
@@ -101,6 +57,7 @@ function checkbox(){
             %%%SIDEMENU%%%
         </div>
         %%%HEADER%%%
+        %%%TOPMENU%%%
         <div id="left">
         	<div id="tree1">test text</div>
         </div>

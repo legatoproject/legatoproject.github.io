@@ -2,8 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Legato™ - Build Apps</title>
-	<meta name="description" content="legato™ is an open source Linux-based embedded platform<br />designed to simplify connected IoT application development" />
+    <title>Legato - Build Apps - Documentation</title>
+	<meta name="description" content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" />
 	<meta name="keywords" content="#keywords" />
 	<meta name="robots" content="noindex, nofollow" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -13,61 +13,45 @@
     <link rel="apple-touch-icon" sizes="114x114" href="#">
     <link rel="stylesheet" type="text/css" href="/resources/css/style.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="/resources/css/font-awesome.css">
-    <link rel="stylesheet" type="text/css" href="/resources/css/flexslider.css" >
     
     <!--[if IE]>
-    <script src="resources/js/html5shiv.js"></script>
-    <script src="resources/js/respond.js"></script>
+    <script src="/resources/js/html5shiv.js"></script>
+    <script src="/resources/js/respond.js"></script>
     <![endif]-->
     
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-	<script src="resources/js/jquery.flexslider.js"></script>
-    <script src="resources/js/main.js"></script>
-    <script>
-      $(document).ready(function(){
-		$("#menu-trigger").click(function() {
-			$("#top")[this.opened ? "removeClass" : "addClass"]("menu-open");
-			$(this)[this.opened ? "removeClass" : "addClass"]("trigger-open");
-			this.opened = !this.opened;
-	    });
-		
-		$("#top a").click(function() {
-	        $("#top").removeClass("menu-open");
-			$("#menu-trigger").removeClass("trigger-open").get(0).opened = false;
-			
-	    });
-		
-      });
-    </script>
-    
-    <script type="text/javascript" charset="utf-8">
-	  $(window).load(function() {
-		$('.flexslider').flexslider();
-	  });
-	</script>
-
+    <script src="/resources/js/main.js"></script>
     
 </head>
 <body>
     <div class="wrapper">
-    	<div id="menu-trigger" class="fa fa-bars"></div>
+    	<div id="menu-trigger" class="fa fa-bars documentation"></div>
         <div id="top">
-       <header>
+            <header>
                 <nav>
                     <a href="/index.html"class="navlink">Introduction</a><a href="/partners/"class="navlink">Partners</a><a href="/apps/"class="navlink link-selected">Build Apps</a><a href="/apps/intro"class="subnavlink">Introduction</a><a href="/apps/getstarted"class="subnavlink">Get started</a><a href="/apps/docs/learn"class="subnavlink">Documentation</a><a href="/apps/community"class="subnavlink">Community</a><a href="/apps/license"class="subnavlink">License</a><a href="/platform/"class="navlink">Build Platform</a><a href="/platform/"class="subnavlink">Introduction</a><a href="/platform/"class="subnavlink">Get started</a><a href="/platform/docs"class="subnavlink">Documentation</a><a href="/platform/"class="subnavlink">Community</a><a href="/platform/"class="subnavlink">License</a>
                 </nav>
             </header>
         </div>
-        <div id="mainmenu" class="white">
-        	<h1><a title="back to home" href="/" class="navlink">Legato</a></h1>
-            <ul>
-                <li><a href="#">Get Started</a></li>
-                <li><a href="/apps/docs">Documentation</a></li>
-                <li><a href="#">Community</a></li>
-                <li><a href="#">License</a></li>
-        	</ul>
+        <div id="menudocumentation">
+	<header>
+		<h1><a title="back to Legato homepage" href="/" class="navlink">Legato</a></h1>
+		<h2>/ Build Apps Documentation</h2>
+		<nav>
+			<a href="/apps/docs/learn/">Learn</a><a href="/apps/docs/api/">API Guides</a><a href="/apps/docs/tools/">Tools</a><a href="/apps/docs/reference/">Reference</a>
+			<i class="fa fa-search"></i>
+			<input id="autocomplete" onkeyup="getdata()"> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+		<ul id="search_result" class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" tabindex="0"></ul>
+	</nav>
+</header>
+</div>
+
+        <div id="left">
+        	<div id="tree1">test text</div>
         </div>
+
         <div class="content">
+            
         	<h2>Build Apps</h2>
             <h3>Legato is an open source embedded platform built on Linux designed to simplify embedded IoT development.</h3>
             Legato has everything you need to connect the IoT fast:<br />
@@ -98,6 +82,8 @@
             	<h4 class=""><a href="prototyping-tools.html">License</a></h4>
                 <a href="#">Application Framework license</a>
             </div>
+            <br clear="left" />
+
             <br clear="left" />
         </div>
         <div id="footer">

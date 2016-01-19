@@ -47,6 +47,7 @@ def file_dispatch(dir, filename, subdir = None):
     MAX_DEPTH = 6
     already = []
     #print("Looking for " + filename)
+    odir = dir
     for i in range(MAX_DEPTH):
         try:
             with open(join(dir, filename)) as f:
@@ -59,7 +60,7 @@ def file_dispatch(dir, filename, subdir = None):
             already.append(dir)
             #print "Not in " + dir
             if os.path.samefile(os.path.abspath(dir), os.path.abspath(src_dir)): # if we can't find it in src_dir, don't ascend further
-                raise FileNotFoundError("Couldn't find %s" % filename)
+                raise FileNotFoundError("Couldn't find %s. We started at %s." % (filename,odir))
             elif subdir and os.path.isdir(join(dir, subdir)): # if subdir exists in the current dir, descend to it.
                 if join(dir, subdir) not in already:
                     dir = join(dir, subdir)
@@ -172,8 +173,10 @@ if __name__ == "__main__":
                     template = split[-2] + ".html"
                     resulting_filename = split[0] + ".html"
                     resulting_filepath = join(dir, resulting_filename)
-                    print("%s >> %s -> %s" % (file, template, os.path.relpath(resulting_filepath, src_dir)))
-                    rendered_template = render(resulting_filepath, rel_dir, file_dispatch(dir, template, subdir = "_templates")[0])
+
+                    tp, tpdir = file_dispatch(dir, template, subdir = "_templates")
+                    print("%s >> %s -> %s" % (file, join(tpdir, template), os.path.relpath(resulting_filepath, src_dir)))
+                    rendered_template = render(resulting_filepath, rel_dir, tp)
                     with open(filepath) as f:
                         contents = rendered_template.replace("{content}",f.read())
                     savefile = resulting_filename           
