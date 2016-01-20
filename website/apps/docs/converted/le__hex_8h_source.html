@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Legato - Build Apps - Documentation</title>
+	<meta name="description" content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" />
+	<meta name="keywords" content="#keywords" />
+	<meta name="robots" content="noindex, nofollow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="/resources/images/legato.ico">
+    <link rel="apple-touch-icon" href="#">
+    <link rel="apple-touch-icon" sizes="72x72" href="#">
+    <link rel="apple-touch-icon" sizes="114x114" href="#">
+    <link rel="stylesheet" type="text/css" href="/resources/css/style.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/resources/css/font-awesome.css">
+    
+    <!--[if IE]>
+    <script src="/resources/js/html5shiv.js"></script>
+    <script src="/resources/js/respond.js"></script>
+    <![endif]-->
+    
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+
+    <script src="/resources/js/main.js"></script>    
+    <link rel="stylesheet" type="text/css" href="/resources/css/jqtree.css">
+    <script type="text/javascript" src="/resources/js/tree.jquery.js"></script>
+    <script src="/resources/js/jquery.cookie.js"></script>
+    <script>
+    setupTree();
+    </script>
+
+</head>
+<body>
+    <div class="wrapper">
+    	<div id="menu-trigger" class="fa fa-bars documentation"></div>
+        <div id="top">
+            <header>
+                <nav>
+                    <a href="/index.html"class="navlink">Introduction</a><a href="/partners/"class="navlink">Partners</a><a href="/apps/"class="navlink">Build Apps</a><a href="/apps/intro"class="subnavlink">Introduction</a><a href="/apps/getstarted"class="subnavlink">Get started</a><a href="/apps/docs/learn"class="subnavlink">Documentation</a><a href="/apps/community"class="subnavlink">Community</a><a href="/apps/license"class="subnavlink">License</a><a href="/platform/"class="navlink">Build Platform</a><a href="/platform/"class="subnavlink">Introduction</a><a href="/platform/"class="subnavlink">Get started</a><a href="/platform/docs"class="subnavlink">Documentation</a><a href="/platform/"class="subnavlink">Community</a><a href="/platform/"class="subnavlink">License</a>
+                </nav>
+            </header>
+        </div>
+        <div id="menudocumentation">
+	<header>
+		<h1><a title="back to Legato homepage" href="/" class="navlink">Legato</a></h1>
+		<h2>/ Build Apps Documentation</h2>
+		<nav>
+			<a href="/apps/docs/learn/">Learn</a><a href="/apps/docs/converted/" class="link-selected">Converted API</a><a href="/apps/docs/api/">API Guides</a><a href="/apps/docs/tools/">Tools</a><a href="/apps/docs/reference/">Reference</a>
+			<i class="fa fa-search"></i>
+			<input id="autocomplete" onkeyup="getdata()"> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+		<ul id="search_result" class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" tabindex="0"></ul>
+	</nav>
+</header>
+</div>
+
+        <div id="topMenu">
+	<a href=/apps/docs/converted/ class="biglink">App docs?</a>
+	<nav>
+	<a href="/apps/docs/converted/" class="link-selected">Converted stuff?</a><a href="sample-apps.html">Sample Apps</a><a href="how-tos.html">How Tos</a><a href="def-files.html">Definition Files</a>
+	</nav>
+</div>
+        <div id="left">
+        	<div id="tree1">Loading nav tree...</div>
+        </div>
+
+        <div class="content">
+            <div class="contents">
+<a href="le__hex_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span> <span class="preprocessor">#ifndef LEGATO_HEX_INCLUDE_GUARD</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span> <span class="preprocessor"></span><span class="preprocessor">#define LEGATO_HEX_INCLUDE_GUARD</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span> <span class="preprocessor"></span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span> int32_t <a class="code" href="le__hex_8h.html#a2ad2c35d567e8fc3fc962a58272b093d">le_hex_StringToBinary</a></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span> (</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>     <span class="keyword">const</span> <span class="keywordtype">char</span> *stringPtr,     </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>     uint32_t    stringLength,  </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>     uint8_t    *binaryPtr,     </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>     uint32_t    binarySize     </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span> );</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span> int32_t <a class="code" href="le__hex_8h.html#a2482e5240d47b176e41369fc5a654551">le_hex_BinaryToString</a></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span> (</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>     <span class="keyword">const</span> uint8_t *binaryPtr,  </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>     uint32_t       binarySize, </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>     <span class="keywordtype">char</span>          *stringPtr,  </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>     uint32_t       stringSize  </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span> );</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span> <span class="keywordtype">int</span> <a class="code" href="le__hex_8h.html#a7dec6b9dc93d709033e2caf2a8e77500">le_hex_HexaToInteger</a>(<span class="keywordtype">char</span> s[]);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span> <span class="preprocessor">#endif // LEGATO_HEX_INCLUDE_GUARD</span></div>
+<div class="ttc" id="le__hex_8h_html_a7dec6b9dc93d709033e2caf2a8e77500"><div class="ttname"><a href="le__hex_8h.html#a7dec6b9dc93d709033e2caf2a8e77500">le_hex_HexaToInteger</a></div><div class="ttdeci">int le_hex_HexaToInteger(char s[])</div></div>
+<div class="ttc" id="le__hex_8h_html_a2482e5240d47b176e41369fc5a654551"><div class="ttname"><a href="le__hex_8h.html#a2482e5240d47b176e41369fc5a654551">le_hex_BinaryToString</a></div><div class="ttdeci">int32_t le_hex_BinaryToString(const uint8_t *binaryPtr, uint32_t binarySize, char *stringPtr, uint32_t stringSize)</div></div>
+<div class="ttc" id="le__hex_8h_html_a2ad2c35d567e8fc3fc962a58272b093d"><div class="ttname"><a href="le__hex_8h.html#a2ad2c35d567e8fc3fc962a58272b093d">le_hex_StringToBinary</a></div><div class="ttdeci">int32_t le_hex_StringToBinary(const char *stringPtr, uint32_t stringLength, uint8_t *binaryPtr, uint32_t binarySize)</div></div>
+</div><!-- fragment --></div>
+            <br clear="left" />
+        </div>
+        <div id="footer">
+        	Copyright © Sierra Wireless Inc. Use of this work is subject to license.
+        </div>
+	</div>
+</body>
+</html>

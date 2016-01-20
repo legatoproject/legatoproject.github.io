@@ -24,9 +24,11 @@
     <script src="/resources/js/main.js"></script>    
     <link rel="stylesheet" type="text/css" href="/resources/css/jqtree.css">
     <script type="text/javascript" src="/resources/js/tree.jquery.js"></script>
+    <script src="/resources/js/jquery.cookie.js"></script>
     <script>
     setupTree();
     </script>
+
 </head>
 <body>
     <div class="wrapper">
@@ -43,7 +45,7 @@
 		<h1><a title="back to Legato homepage" href="/" class="navlink">Legato</a></h1>
 		<h2>/ Build Apps Documentation</h2>
 		<nav>
-			<a href="/apps/docs/learn/">Learn</a><a href="/apps/docs/api/">API Guides</a><a href="/apps/docs/tools/">Tools</a><a href="/apps/docs/reference/">Reference</a>
+			<a href="/apps/docs/learn/">Learn</a><a href="/apps/docs/converted/" class="link-selected">Converted API</a><a href="/apps/docs/api/">API Guides</a><a href="/apps/docs/tools/">Tools</a><a href="/apps/docs/reference/">Reference</a>
 			<i class="fa fa-search"></i>
 			<input id="autocomplete" onkeyup="getdata()"> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
 		<ul id="search_result" class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" tabindex="0"></ul>
@@ -54,7 +56,7 @@
         <div id="topMenu">
 	<a href=/apps/docs/converted/ class="biglink">App docs?</a>
 	<nav>
-	<a href="/apps/docs/converted/" class="link-selected">Converted documentation</a><a href="sample-apps.html">Sample Apps</a><a href="how-tos.html">How Tos</a><a href="def-files.html">Definition Files</a>
+	<a href="/apps/docs/converted/" class="link-selected">Converted stuff?</a><a href="sample-apps.html">Sample Apps</a><a href="how-tos.html">How Tos</a><a href="def-files.html">Definition Files</a>
 	</nav>
 </div>
         <div id="left">
@@ -62,20 +64,7 @@
         </div>
 
         <div class="content">
-            <div id="doc-content">
-<!-- window showing the filter options -->
-<div id="MSearchSelectWindow" onkeydown="return searchBox.OnSearchSelectKey(event)" onmouseout="return searchBox.OnSearchSelectHide()" onmouseover="return searchBox.OnSearchSelectShow()">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark"> </span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark"> </span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark"> </span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark"> </span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark"> </span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark"> </span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark"> </span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark"> </span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark"> </span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark"> </span>Pages</a></div>
-<!-- iframe showing the search results (closed by default) -->
-<div id="MSearchResultsWindow">
-<iframe frameborder="0" id="MSearchResults" name="MSearchResults" src="javascript:void(0)">
-</iframe>
-</div>
-<div class="header">
-<div class="headertitle">
-<div class="title">Variables & Function Parameters </div> </div>
-</div><!--header-->
-<div class="contents">
+            <div class="contents">
 <div class="textblock"><p>Other C language standards' pages:</p>
 <p><a class="el" href="ccoding_stds_naming.html">Naming Standards</a> <br />
 <a class="el" href="ccoding_stds_abbr.html">Abbreviations</a> <br />
@@ -132,8 +121,7 @@ Abbreviations</h1>
 <p>See <a class="el" href="ccoding_stds_abbr.html">Abbreviations</a>. Other abbreviations should <b>not</b> be used.</p>
 <hr />
 <p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
-</div></div><!-- contents -->
-<meta content="Learn" name="category"></meta></div>
+</div></div>
             <br clear="left" />
         </div>
         <div id="footer">

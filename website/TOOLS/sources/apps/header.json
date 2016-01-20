@@ -4,6 +4,10 @@
             "title": "Learn",
             "href": "/apps/docs/learn/"
         },
+	{
+       	     "title": "Converted API",
+            "href": "/apps/docs/converted/"
+	},
         {
             "title": "API Guides",
             "href": "/apps/docs/api/"

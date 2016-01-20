@@ -1,0 +1,30 @@
+<div class="contents">
+<a href="le__print_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span> <span class="comment"></span><span class="preprocessor">#ifndef LEGATO_PRINT_INCLUDE_GUARD</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span> <span class="preprocessor"></span><span class="preprocessor">#define LEGATO_PRINT_INCLUDE_GUARD</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span> <span class="preprocessor"></span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="le__print_8h.html#a1a6709c55d8d08c496846ba2295138b7">   33</a></span> <span class="preprocessor">#define LE_PRINT_VALUE(formatSpec, value)                                                           \</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span> <span class="preprocessor">    LE_DEBUG( STRINGIZE(value) "=" formatSpec, value)</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span> <span class="preprocessor"></span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="le__print_8h.html#a7a95fdc058538bf3cc99a2f85847126b">   45</a></span> <span class="preprocessor">#define LE_PRINT_VALUE_IF(condition, formatSpec, value)                                             \</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span> <span class="preprocessor">    if (condition)                                                                                  \</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span> <span class="preprocessor">        { LE_PRINT_VALUE(formatSpec, value); }</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span> <span class="preprocessor"></span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span> <span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span> <span class="comment"></span><span class="comment">//--------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="le__print_8h.html#ac45833de67d2e15f1fb99240573e31bf">   58</a></span> <span class="preprocessor">#define LE_PRINT_ARRAY(formatSpec, size, array)                                                     \</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span> <span class="preprocessor">    {                                                                                               \</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span> <span class="preprocessor">        int i;                                                                                      \</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span> <span class="preprocessor">        LE_DEBUG( STRINGIZE(array) );                                                               \</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span> <span class="preprocessor">        for (i=0; i<(size_t)size; i++)                                                              \</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span> <span class="preprocessor">            LE_DEBUG( "\t" STRINGIZE(array) "[%i]=" formatSpec, i, array[i]);                       \</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span> <span class="preprocessor">    }</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span> <span class="preprocessor"></span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span> <span class="preprocessor">#endif // LEGATO_PRINT_INCLUDE_GUARD</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span> <span class="preprocessor"></span></div>
+</div><!-- fragment --></div>
