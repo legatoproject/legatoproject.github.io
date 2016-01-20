@@ -86,7 +86,7 @@ function getdata() {
 
 
             $.ajax({
-                url: "http://search-dmitry-legato-c23azpit2gnttqniivoexmuqwy.us-west-2.cloudsearch.amazonaws.com/2013-01-01/search?",
+                url: "https://crossorigin.me/https://search-dmitry-legato-c23azpit2gnttqniivoexmuqwy.us-west-2.cloudsearch.amazonaws.com/2013-01-01/search?",
                 dataType: "json",
                 data: {
                     q: request.term,
@@ -97,9 +97,6 @@ function getdata() {
                     var hits = data.hits.hit;
                     var results = []
                     for (i = 0; i < hits.length; i++) {
-                        //    console.log(hits[i].id);
-                        //    console.log(hits[i].fields.title);
-                        domain = "<strong>" + hits[i].fields.category + " - </strong>";
                         var result = new Object();
                         result.value = hits[i].id;
                         result.label = hits[i].fields.category + " : " + hits[i].fields.title;
@@ -112,7 +109,7 @@ function getdata() {
         },
         minLength: 1,
         focus: function(event, ui) {
-            event.preventDefault();
+            event.preventDefault(); // so the textbox's value doesn't get replaced.
         },
         select: function(event, ui) {
             event.preventDefault();
