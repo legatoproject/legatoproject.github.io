@@ -165,7 +165,7 @@ function checkbox() {
 }
 
 function setupTree() {
-    //   $(document).ready(function() {
+       $(document).ready(function() {
     String.prototype.endsWith = function(suffix) {
         return this.indexOf(suffix, this.length - suffix.length) !== -1;
     };
@@ -174,7 +174,7 @@ function setupTree() {
         function(data) {
             $tree = $('#tree1');
             $tree.tree({
-                data: data.topic.children,
+                data: data.toc.children,
                 saveState: true,
                 useContextMenu: false
             });
@@ -252,5 +252,5 @@ function setupTree() {
 
 
 
-    //  });
+      });
 }
