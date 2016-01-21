@@ -75,7 +75,7 @@ Use Legato Services</h1>
 <ul>
 <li>Use the <code>–gen-interface</code> option to generate the interface header (<code><a class="el" href="le__info__interface_8h.html">le_info_interface.h</a></code>).</li>
 <li>Use the <code>–gen-client</code> option to generate the client-side IPC implementation (<code>le_info_client.c</code>).</li>
-<li>Use the <code>–gen-local</code> option to generate definitions that are shared by both the client side and server side IPC code (<code>le_info_local.h</code>).</li>
+<li>Use the <code>–gen-local</code> option to generate definitions that are shared by both the client side and server side IPC code (<code>le_info_messages.h</code>).</li>
 </ul>
 <pre class="fragment">ifgen --gen-interface --gen-client --gen-local $LEGATO_ROOT/interfaces/modemServices/le_info.api
 </pre><p><code>2</code>. Include <code><a class="el" href="legato_8h.html">legato.h</a></code> in your program.</p>

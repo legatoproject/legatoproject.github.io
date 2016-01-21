@@ -116,6 +116,22 @@ Max Priority</h2>
 <div class="line">    }</div>
 <div class="line">}</div>
 </div><!-- fragment --><p>Another process in the same .adef configured to start at low priority will still start at low priority.</p>
+<h2><a class="anchor" id="defFilesSdef_appsPreloaded"></a>
+Preloaded</h2>
+<p>Indicates whether or not an app must be preloaded onto the target device separately from the rest of the system.</p>
+<p>The legato AF supports being installed in a read-only partition, mounted as <code>/mnt/legato</code> in the target file system. Writeable files will be kept in another file system mounted as <code>/legato</code> in the target file system.</p>
+<p>If the read-only partition must be updated, but there are other (possibly very large) apps in the writeable file system, it may be impossible to deliver an update containing the apps over-the-air at the same time that the read-only partition is updated.</p>
+<p>Usually, the read-only partition does not need to be updated, but in some cases, it may be desireable, and this feature can help.</p>
+<p>For example, a customer has a giant app containing pictures and audio files. In the factory, the framework and a few apps are loaded into the read-only <code>/mnt/legato</code>, and other apps, including the huge app, are installed in the writeable <code>/legato</code>. Later, when the device is in the field, a change needs to be made to both the modem firmware and the Legato framework, and must be delivered together, as a single FOTA (firmware over the air) update. A new system is built using <code>mksys</code>. But, the resulting system update file is too large to fit in the FOTA update image (and likely very expensive to deliver over the air to hundreds of thousands of devices). Fortunately, the audio files don't need to be updated at the same time, and the audio app can be marked "preloaded" in the .sdef file to exclude it from the system update file. After the FOTA update, the new system will use the audio file that already exists on the target's writeable file system.</p>
+<div class="fragment"><div class="line">apps:</div>
+<div class="line">{</div>
+<div class="line">    modemService</div>
+<div class="line">    audioService</div>
+<div class="line">    dataConnectionService</div>
+<div class="line">    controller</div>
+<div class="line">    userInterface { preloaded: <span class="keyword">true</span> }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>If you are not sure whether or not you need this feature, you probably don't. Use of this feature is intended for very specific use cases. It is encouraged that delta updates of systems be used instead, whenever practical.</p>
 <h1><a class="anchor" id="defFilesSdef_bindings"></a>
 bindings</h1>
 <p>Lists IPC <code>bindings</code> that connect apps’ external IPC interfaces. They're listed in the <a class="el" href="def_files_adef.html#defFilesAdef_extern">extern section of their <code></code>.adef files</a>. Each binding connects one client-side interface to one server-side interface.</p>

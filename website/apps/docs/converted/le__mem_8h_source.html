@@ -71,8 +71,8 @@
 <div class="line"><a name="l00400"></a><span class="lineno">  400</span> <span class="preprocessor">#ifndef LEGATO_MEM_INCLUDE_GUARD</span></div>
 <div class="line"><a name="l00401"></a><span class="lineno">  401</span> <span class="preprocessor"></span><span class="preprocessor">#define LEGATO_MEM_INCLUDE_GUARD</span></div>
 <div class="line"><a name="l00402"></a><span class="lineno">  402</span> <span class="preprocessor"></span></div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span> <span class="preprocessor">#ifndef LEGATO_COMPONENT</span></div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span> <span class="preprocessor"></span><span class="preprocessor">#define LEGATO_COMPONENT</span></div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span> <span class="preprocessor">#ifndef LE_COMPONENT_NAME</span></div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span> <span class="preprocessor"></span><span class="preprocessor">#define LE_COMPONENT_NAME</span></div>
 <div class="line"><a name="l00405"></a><span class="lineno">  405</span> <span class="preprocessor"></span><span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00406"></a><span class="lineno">  406</span> <span class="preprocessor"></span></div>
 <div class="line"><a name="l00407"></a><span class="lineno">  407</span> </div>
@@ -156,7 +156,7 @@
 <div class="line"><a name="l00531"></a><span class="lineno">  531</span>     <span class="keywordtype">size_t</span>      objSize </div>
 <div class="line"><a name="l00532"></a><span class="lineno">  532</span> )</div>
 <div class="line"><a name="l00534"></a><span class="lineno">  534</span> {</div>
-<div class="line"><a name="l00535"></a><span class="lineno">  535</span>     <span class="keywordflow">return</span> _le_mem_CreatePool(<a class="code" href="le__basics_8h.html#a3428692efe6051ef30016ffde1a9f7bb">STRINGIZE</a>(LEGATO_COMPONENT), name, objSize);</div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>     <span class="keywordflow">return</span> _le_mem_CreatePool(<a class="code" href="le__basics_8h.html#a3428692efe6051ef30016ffde1a9f7bb">STRINGIZE</a>(LE_COMPONENT_NAME), name, objSize);</div>
 <div class="line"><a name="l00536"></a><span class="lineno">  536</span> }</div>
 <div class="line"><a name="l00537"></a><span class="lineno">  537</span> </div>
 <div class="line"><a name="l00538"></a><span class="lineno">  538</span> </div>
@@ -366,7 +366,7 @@
 <div class="line"><a name="l00884"></a><span class="lineno">  884</span>     <span class="keyword">const</span> <span class="keywordtype">char</span>* name    </div>
 <div class="line"><a name="l00885"></a><span class="lineno">  885</span> )</div>
 <div class="line"><a name="l00886"></a><span class="lineno">  886</span> {</div>
-<div class="line"><a name="l00887"></a><span class="lineno">  887</span>     <span class="keywordflow">return</span> _le_mem_FindPool(<a class="code" href="le__basics_8h.html#a3428692efe6051ef30016ffde1a9f7bb">STRINGIZE</a>(LEGATO_COMPONENT), name);</div>
+<div class="line"><a name="l00887"></a><span class="lineno">  887</span>     <span class="keywordflow">return</span> _le_mem_FindPool(<a class="code" href="le__basics_8h.html#a3428692efe6051ef30016ffde1a9f7bb">STRINGIZE</a>(LE_COMPONENT_NAME), name);</div>
 <div class="line"><a name="l00888"></a><span class="lineno">  888</span> }</div>
 <div class="line"><a name="l00889"></a><span class="lineno">  889</span> </div>
 <div class="line"><a name="l00890"></a><span class="lineno">  890</span> </div>
@@ -390,7 +390,7 @@
 <div class="line"><a name="l00924"></a><span class="lineno">  924</span>     <span class="keywordtype">size_t</span>              numObjects  </div>
 <div class="line"><a name="l00926"></a><span class="lineno">  926</span> )</div>
 <div class="line"><a name="l00927"></a><span class="lineno">  927</span> {</div>
-<div class="line"><a name="l00928"></a><span class="lineno">  928</span>     <span class="keywordflow">return</span> _le_mem_CreateSubPool(superPool, <a class="code" href="le__basics_8h.html#a3428692efe6051ef30016ffde1a9f7bb">STRINGIZE</a>(LEGATO_COMPONENT), name, numObjects);</div>
+<div class="line"><a name="l00928"></a><span class="lineno">  928</span>     <span class="keywordflow">return</span> _le_mem_CreateSubPool(superPool, <a class="code" href="le__basics_8h.html#a3428692efe6051ef30016ffde1a9f7bb">STRINGIZE</a>(LE_COMPONENT_NAME), name, numObjects);</div>
 <div class="line"><a name="l00929"></a><span class="lineno">  929</span> }</div>
 <div class="line"><a name="l00930"></a><span class="lineno">  930</span> </div>
 <div class="line"><a name="l00931"></a><span class="lineno">  931</span> </div>

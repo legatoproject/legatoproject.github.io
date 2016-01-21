@@ -12,7 +12,6 @@ src_dir = "sources/"
 
 
 
-
 # This figures out if a link to href from document filepath should be considered as 'link-selected' 
 def match_link(href, filepath, category_match = True):
     if not category_match and href.endswith("/"):
@@ -185,6 +184,8 @@ if __name__ == "__main__":
                     savefile=file
                 with open(join(outdir, savefile), 'w+') as f:
                     f.write(contents)
+            else:
+                shutil.copy(filepath, join(outdir, file))
 
 
 
