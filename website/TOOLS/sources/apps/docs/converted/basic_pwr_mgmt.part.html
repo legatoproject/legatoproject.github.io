@@ -1,4 +1,7 @@
-<div class="contents">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">Power Management </h1> </div>
+</div><div class="contents">
 <div class="textblock"><p>Peripheral device power management is usually handled by device drivers and the operating system. If a device isn't in use, the driver automatically keeps that device in its lowest power state.</p>
 <p>App behaviour drives power consumption. If app code is uses a peripheral device when it doesn't need to, power will be wasted. Power is also wasted if app code runs busy-wait loops or periodically polls for events.</p>
 <p>To conserve power, apps should register call-back functions only triggered when events occur. This way app code only runs when an event occurs, rather than waking up to check for events that haven't happened. Every CPU cycle uses power, so when a power-sensitive app is woken up, it should execute as few instructions as possible before going back to sleep.</p>
