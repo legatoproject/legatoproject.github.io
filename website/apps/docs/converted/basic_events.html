@@ -63,10 +63,7 @@
                 <div id="tree1">Loading nav tree...</div>
             </div>
             <div class="content">
-                <div class="header">
-<div class="headertitle">
-<h1 class="title">Event-driven Programming </h1> </div>
-</div><div class="contents">
+                <div class="contents">
 <div class="textblock"><p>In event-drivent programming, the flow of a program is determined by events triggered through a defined interaction (e.g., user interaction, exceeding threshold limit, etc. ). Usually, a main loop listens for events, and then triggers a callback function when an event is detected.</p>
 <p>Overall, Legato components are written using an event-driven model. Callback functions are attached to specific events, and when events occur, the thread's event loop triggers the appropriate callbacks. Legato components can also start other threads that run their own Legato event loops.</p>
 <p>Every component implements an initialization function called at process start-up by the main thread. That function does whatever initialization is required for that component (e.g., initializes data structures, registers callbacks, starts threads, etc.) and returns. After all initialization functions have run to completion and returned, the main thread enters the Legato event loop and begins reacting to events and calling registered callbacks.</p>
