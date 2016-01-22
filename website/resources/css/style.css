@@ -165,7 +165,7 @@ div#mainmenu.white {
     position: absolute;
     left: 150px;
     text-indent: -9000px;
-    top: 29px;
+    top: 29px;"API Guides"
     width: 200px;
 	height: 60px;
     background: url('../images/legato_logo.png') no-repeat 0px 0px;
@@ -297,8 +297,12 @@ nav a:hover {
     border-radius: 10px;
 	height: 15px;
 	padding-left: 15px;
-	width: 100px;
+	width: 150px;
 }
+
+
+
+
 
 #menudocumentation nav label {
 	text-transform: uppercase;
@@ -329,7 +333,9 @@ nav a:hover {
 	font-weight: 400;
 	padding: 0px;
 }
-
+a.sr-api{
+	color:orange !important;
+}
 #menudocumentation nav ul#search_result li:hover {
 	color: #00AEAF;
 }

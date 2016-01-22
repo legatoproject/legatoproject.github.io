@@ -42,22 +42,23 @@ class FileNotFoundError(Exception):
 # After that, it reads the contents and returns them along with the directory.
 # That way, we can make a template more generic by moving it up directories, and then individual sections can override it.
 # subdir can be set to "_templates" to descend into that dir when possible, and only return files from it 
-def file_dispatch(dir, filename, subdir = None):
-    MAX_DEPTH = 6
+def file_dispatch(dir, filename, subdir = None, only_in_subdir = True):
+    print("Looking for %s" % filename)
+    MAX_DEPTH = 64
     already = []
     #print("Looking for " + filename)
     odir = dir
     for i in range(MAX_DEPTH):
         try:
             with open(join(dir, filename)) as f:
-                if dir in already or (subdir and os.path.basename(dir) != subdir.strip(os.path.sep)):
-                    raise UnsuitableDir()
+                if dir in already or (subdir and only_in_subdir and os.path.basename(dir) != subdir.strip(os.path.sep)):
+                    raise UnsuitableDirError("Dir %s isn't suitable" % dir)
                 data = f.read()
-            #print("Found %s in %s with depth %s" % (filename, dir, i))
+            print("Found %s in %s with depth %s" % (filename, dir, i))
             return data, dir
-        except IOError, UnsuitableDirError:
+        except (UnsuitableDirError, IOError) as e:
             already.append(dir)
-            #print "Not in " + dir
+            print "Not in " + dir
             if os.path.samefile(os.path.abspath(dir), os.path.abspath(src_dir)): # if we can't find it in src_dir, don't ascend further
                 raise FileNotFoundError("Couldn't find %s. We started at %s." % (filename,odir))
             elif subdir and os.path.isdir(join(dir, subdir)): # if subdir exists in the current dir, descend to it.
@@ -65,7 +66,7 @@ def file_dispatch(dir, filename, subdir = None):
                     dir = join(dir, subdir)
                     continue
             dir = os.path.dirname(dir) # otherwise just ascend up one level
-            #print("Ascending to " + dir)
+            print("Ascending to " + dir)
             continue
     print("###Couldn't find " + filename)
     return None, dir
@@ -73,7 +74,7 @@ def file_dispatch(dir, filename, subdir = None):
 # Generates a navbar from json. Current filepath is the document it's on, since we need to know which link should light up.
 def gen_nav(json_file, current_filepath):
     dir = os.path.dirname(join(os.getcwd(), src_dir, current_filepath))
-    jsn, dir = file_dispatch(dir, json_file)
+    jsn, dir = file_dispatch(dir, json_file,"_templates/", False)
     jsondata = json.loads(jsn, object_pairs_hook=OrderedDict)
     innerHTML = ""
     links = jsondata["links"]
@@ -145,7 +146,7 @@ def render(filepath, rel_dir, contents):
     for k in funcs.keys():
         if k in contents:
             f = funcs[k]
-            print("%s -> %s" % (f.__name__, os.path.relpath(filepath, src_dir)))
+            #print("%s -> %s" % (f.__name__, os.path.relpath(filepath, src_dir)))
             contents = contents.replace(k,f(rel_dir,filename , contents)) # take the appropriate function and replace the marker with its output
     return contents
 
