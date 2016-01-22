@@ -7,6 +7,7 @@ from collections import OrderedDict
 import shutil 
 from os.path import join
 import unittest
+from bs4 import BeautifulSoup
 
 src_dir = "sources/"
 
@@ -33,7 +34,7 @@ class MatchTest(unittest.TestCase):
         self.assertFalse(match_link("/index.html","platform/docs/index.html"))
 
 
-# helper for file_dispatch
+# helpers for file_dispatch
 class UnsuitableDirError(Exception):
     pass
 class FileNotFoundError(Exception):
@@ -43,7 +44,7 @@ class FileNotFoundError(Exception):
 # That way, we can make a template more generic by moving it up directories, and then individual sections can override it.
 # subdir can be set to "_templates" to descend into that dir when possible, and only return files from it 
 def file_dispatch(dir, filename, subdir = None, only_in_subdir = True):
-    print("Looking for %s" % filename)
+    #print("Looking for %s" % filename)
     MAX_DEPTH = 64
     already = []
     #print("Looking for " + filename)
@@ -54,11 +55,11 @@ def file_dispatch(dir, filename, subdir = None, only_in_subdir = True):
                 if dir in already or (subdir and only_in_subdir and os.path.basename(dir) != subdir.strip(os.path.sep)):
                     raise UnsuitableDirError("Dir %s isn't suitable" % dir)
                 data = f.read()
-            print("Found %s in %s with depth %s" % (filename, dir, i))
+            #print("Found %s in %s with depth %s" % (filename, dir, i))
             return data, dir
         except (UnsuitableDirError, IOError) as e:
             already.append(dir)
-            print "Not in " + dir
+            #print "Not in " + dir
             if os.path.samefile(os.path.abspath(dir), os.path.abspath(src_dir)): # if we can't find it in src_dir, don't ascend further
                 raise FileNotFoundError("Couldn't find %s. We started at %s." % (filename,odir))
             elif subdir and os.path.isdir(join(dir, subdir)): # if subdir exists in the current dir, descend to it.
@@ -66,7 +67,7 @@ def file_dispatch(dir, filename, subdir = None, only_in_subdir = True):
                     dir = join(dir, subdir)
                     continue
             dir = os.path.dirname(dir) # otherwise just ascend up one level
-            print("Ascending to " + dir)
+            #print("Ascending to " + dir)
             continue
     print("###Couldn't find " + filename)
     return None, dir
@@ -150,6 +151,16 @@ def render(filepath, rel_dir, contents):
             contents = contents.replace(k,f(rel_dir,filename , contents)) # take the appropriate function and replace the marker with its output
     return contents
 
+def meta_to_title(html):
+    soup = BeautifulSoup(html)
+    titletag = soup.find("meta", attrs={"name":"title"})
+    if titletag:
+        title = titletag.attrs["content"]
+        soup.html.head.title.string = title + " - Legato Docs"# because apparently soup.title is read only
+        print title
+    else:
+        print "No title meta tag."
+    return str(soup)
 
 if __name__ == "__main__":
     unittest.main(exit=False) 
@@ -176,9 +187,10 @@ if __name__ == "__main__":
 
                     tp, tpdir = file_dispatch(dir, template, subdir = "_templates")
                     print("%s >> %s -> %s" % (file, join(tpdir, template), os.path.relpath(resulting_filepath, src_dir)))
-                    rendered_template = render(resulting_filepath, rel_dir, tp)
+                    rendered_template = render(resulting_filepath, rel_dir, tp) # render elements in template
                     with open(filepath) as f:
-                        contents = rendered_template.replace("{content}",f.read())
+                        contents = rendered_template.replace("{content}",f.read()) # insert content into rendered template
+                    contents = meta_to_title(contents)
                     savefile = resulting_filename           
                 else:
                     contents = render_file(filepath,rel_dir)

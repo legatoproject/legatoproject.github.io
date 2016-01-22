@@ -132,9 +132,13 @@ function getdata() {
 
     ac.data("ui-autocomplete")._renderItem = function(ul, item) {
         var itemclass;
+        // TODO: maintain this stuff :
         switch(item.cat){
             case "API Guides":
                 itemclass = "sr-api";
+                break;
+            case "Get Started":
+                itemclass = "sr-getstarted";
                 break;
             case "Learn":
                 itemclass = "sr-learn";
@@ -187,8 +191,6 @@ function setupTree() {
                     useContextMenu: false
                 });
 
-
-                // the below code should open the 
                 var path = window.location.pathname;
                 var page = path.split("/").pop();
                 var hash = window.location.hash.substr(1);
@@ -202,11 +204,8 @@ function setupTree() {
                             // This will open the folder
                             $tree.tree('openNode', node);
                             $tree.tree('selectNode', node);
-
-
                             return false;
                         }
-
                         return true;
                     }
                 );
@@ -220,8 +219,7 @@ function setupTree() {
             function(event) {
                 // The clicked node
                 var node = event.node;
-                // TODO: HARDCODED PATH
-                var href = "/apps/docs/converted/" + node.href;
+                var href = node.href;
 
                 // console.log(node.name);
                 // console.log(node.href);

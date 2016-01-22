@@ -324,21 +324,28 @@ nav a:hover {
     position: absolute;
 	background-color: rgba(255,255,255,0.9);
 	overflow: auto;
+
 }
 
 #menudocumentation nav ul#search_result a {
+	  transition: all 0.05s ease-in-out !important;
 	color: #00677A;
 	font-size: 11px;
 	font-family: 'Open Sans', arial, sans-serif;
 	font-weight: 400;
 	padding: 0px;
 }
-a.sr-api{
-	color:orange !important;
+#menudocumentation nav ul#search_result a.sr-api{
+	color:green;
 }
+#menudocumentation nav a.ui-state-focus { 
+border-bottom: 1px dotted;
+	color:orange !important;
+} 
+/*
 #menudocumentation nav ul#search_result li:hover {
 	color: #00AEAF;
-}
+}*/
 
 #menudocumentation nav ul#search_result a li {
 	padding: 5px 10px 5px 15px;
