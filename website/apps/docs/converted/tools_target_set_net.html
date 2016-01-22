@@ -61,7 +61,7 @@
 <div class="header">
 <div class="headertitle">
 <h1 class="title">setNet </h1> </div>
-</div><meta content="setNet " name="title" /><div class="contents">
+</div><div class="contents">
 <div class="textblock"><p>Use the Set MAC Address tool to set your MAC address and optionally a static IP address.</p>
 <p>The dev kit board Ethernet port doesn't have a permanent MAC address. Each time the target starts, a locally administered MAC address is generated. With DHCP, this will likely also cause your IP address to change. With a static IP address, the IP address won't change, but switching equipment may result in errors because the IP address is being used by a new target.</p>
 <p>If you're confident editing the <code>/etc/network/interfaces</code> file (e.g., created some up/down rules for <code>eth0</code>), then you probably don't want to use <code>setNet</code> (it won't merge well). You can restore your <code>/etc/network/interfaces</code> file after running <code>setNet:</code> <code>/etc/network/interfaces</code> is renamed with a date and time suffix.</p>
@@ -79,8 +79,7 @@
 <br clear="left" />
 </div>
 <div id="footer">
-                Copyright © Sierra Wireless Inc. Use of this work is subject to license.
-            </div>
+</div>
 </div>
 </body>
 </html>

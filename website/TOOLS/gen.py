@@ -155,6 +155,7 @@ def meta_to_title(html):
     soup = BeautifulSoup(html)
     titletag = soup.find("meta", attrs={"name":"title"})
     if titletag:
+        titletag.extract()
         title = titletag.attrs["content"]
         soup.html.head.title.string = title + " - Legato Docs"# because apparently soup.title is read only
         print title
