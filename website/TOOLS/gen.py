@@ -147,7 +147,7 @@ def gen_autotopmenu(dir, filename, contents):
     innerHTML = '<a href="{0}"{1}>{2}</a>'
     outerHTML = """
     <div id="topMenu">
-    <a href=/apps/docs/converted/ class="biglink">App docs?</a>
+    <a href=/apps/docs/ class="biglink">App docs</a>
     <nav>
     {0}
     </nav>
