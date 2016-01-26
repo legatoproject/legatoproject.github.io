@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Syntax  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/partners/">Partners</a><a class="navlink" href="/apps/">Build Apps</a><a class="subnavlink" href="/apps/intro">Introduction</a><a class="subnavlink" href="/apps/getstarted">Get started</a><a class="subnavlink" href="/apps/docs/learn">Documentation</a><a class="subnavlink" href="/apps/community">Community</a><a class="subnavlink" href="/apps/license">License</a><a class="navlink" href="/platform/">Build Platform</a><a class="subnavlink" href="/platform/">Introduction</a><a class="subnavlink" href="/platform/">Get started</a><a class="subnavlink" href="/platform/docs">Documentation</a><a class="subnavlink" href="/platform/">Community</a><a class="subnavlink" href="/platform/">License</a>
+</nav>
+</header>
+</div>
+<div id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps Documentation</h2>
+<nav class="ui-front" id="searchresult">
+<a href="/apps/docs/learn/">Learn</a><a href="/apps/docs/converted/">Converted API</a><a href="/apps/docs/api/">API Guides</a><a href="/apps/docs/tools/">Tools</a><a href="/apps/docs/reference/">Reference</a>
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata()" /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+<ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="search_result" tabindex="0"></ul>
+</nav>
+</header>
+</div>
+<div id="topMenu">
+<a class="biglink" href="/apps/docs/converted/">App docs?</a>
+<nav>
+<a href="getstarted_main.html">Get Started</a><a href="learn_main.html">Learn</a><a href="api_guides_main.html">API Guides</a><a href="tools.html">Tools</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">Syntax </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p>The API file supports defining functions, events, handlers (callback functions) and user-defined types.</p>
+<p><a class="el" href="interface_def_lang_syntax.html#interfaceDefLangSyntax_function">Functions</a> are similar to C functions. They can take input and output parameters, and can return a result.</p>
+<p>A <a class="el" href="interface_def_lang_syntax.html#interfaceDefLangSyntax_handler">handler</a> is a callback function, which can be passed as a parameter to a function and can be registered to be called when <a class="el" href="interface_def_lang_syntax.html#interfaceDefLangSyntax_event">events</a> occur.</p>
+<p>The API file currently supports a limited number of pre-defined types. There is also support for a number of different user-defined types.</p>
+<h1><a class="anchor" id="interfaceDefLangSyntax_types"></a>
+Type Support</h1>
+<p>The API file currently supports a limited number of pre-defined types. These are:</p>
+<pre class="fragment">uint8
+uint16
+uint32
+uint64
+
+int8
+int16
+int32
+int64
+
+string
+file
+handler
+</pre><p>The unsigned and signed integer types are self-explanatory. See <a class="el" href="interface_def_lang_syntax.html#interfaceDefLangSyntax_function">Specifying a Function</a> for details on the <code>string</code> type. The <code>file</code> type is used to pass an open file descriptor (fd) as a parameter. This is used for passing an fd between a client and server. The <code>handler</code> type is used for passing a handler as a parameter.</p>
+<p>The following user-defined types are supported:</p>
+<ul>
+<li>DEFINE</li>
+<li>ENUM</li>
+<li>BITMAP</li>
+<li>REFERENCE</li>
+</ul>
+<p>Type definitions can also be shared between API files with USETYPES.</p>
+<p>Also, all C types defined in the <code><a class="el" href="legato_8h.html">legato.h</a></code> file are available. The most commonly used of these is the <a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> type. Support for directly using these C types is a temporary measure and will be removed in a future release.</p>
+<h2><a class="anchor" id="interfaceDefLangSyntax_typesDefine"></a>
+DEFINE</h2>
+<p>A DEFINE is specified as:</p>
+<pre class="fragment">DEFINE <name> = <value>;
+</value></name></pre><p>The <code>value</code> can be a string or an expression evaluated to a numeric value (when the definition is read).</p>
+<h2><a class="anchor" id="interfaceDefLangSyntax_typesEnum"></a>
+ENUM</h2>
+<p>An ENUM is specified as:</p>
+<pre class="fragment">ENUM <name>
+{
+    [<elementlist>]
+};
+</elementlist></name></pre><p>The <code>elementList</code> is a comma separated list of elements. The elements should all be uppper-case. Element values assigned are internally generated and can't be explicitly given.</p>
+<h2><a class="anchor" id="interfaceDefLangSyntax_typesBitmask"></a>
+BITMASK</h2>
+<p>A BITMASK is a special type of ENUM. It is specified the same way as an ENUM, but the internally generated element values are bit positions, i.e. 0x1, 0x2, 0x4, etc.</p>
+<h2><a class="anchor" id="interfaceDefLangSyntax_typesReference"></a>
+REFERENCE</h2>
+<p>A REFERENCE is specified as:</p>
+<pre class="fragment">REFERENCE <name>;
+</name></pre><p>The REFERENCE is used to define a reference to an object. The object reference is mapped to an opaque reference in C and an object instance or similar in other languages.</p>
+<h2><a class="anchor" id="interfaceDefLangSyntax_typesUsetypes"></a>
+USETYPES</h2>
+<p>You can share type definitions between .api files with USETYPES. This is commonly referred to as importing, although only the type definitions are imported or used. Any code related definitions in a .api file, e.g. FUNCTION, are ignored. These USETYPES can even be nested.</p>
+<p>As an example of usage, suppose the files defs.api, common.api and example.api are defined as follows:</p>
+<p>defs.api </p>
+<pre class="fragment">DEFINE FIVE = 5;
+</pre><p>common.api </p>
+<pre class="fragment">USETYPES defs.api;
+
+DEFINE TEN = defs.FIVE + 5;
+</pre><p>example.api </p>
+<pre class="fragment">USETYPES common.api;
+
+DEFINE twenty = common.TEN + defs.FIVE + 5;
+</pre><p>This example illustrates that nesting causes an implicit USETYPES. Thus, any definitions from defs.api, can be used in example.api, in the same way as if it had explicitly imported defs.api.</p>
+<h1><a class="anchor" id="interfaceDefLangSyntax_function"></a>
+Specifying a Function</h1>
+<p>A function is specified as:</p>
+<pre class="fragment">FUNCTION [<returntype>] <name>
+(
+    [<parameterlist>]
+);
+</parameterlist></name></returntype></pre><p>The <code>parameterList</code> can contain one or more parameters separated by commas, or can be empty if there are no parameters. These parameters types are supported:</p>
+<div class="fragment"><div class="line"><type> <name> [ ( <span class="stringliteral">"IN"</span> | <span class="stringliteral">"OUT"</span> ) ] </name></type></div>
+</div><!-- fragment --><ul>
+<li>scalar type</li>
+<li>defaults to IN if a direction is not specified</li>
+</ul>
+<div class="fragment"><div class="line"><type> <name> <span class="stringliteral">"["</span> [ <minsize> <span class="stringliteral">".."</span> ] <maxsize> <span class="stringliteral">"]"</span> <span class="stringliteral">"IN"</span> </maxsize></minsize></name></type></div>
+</div><!-- fragment --><ul>
+<li>an IN array</li>
+<li><code>maxSize</code> specifies the maximum number of elements allowed for the array</li>
+<li>optional <code>minSize</code> specifies the minimum number of elements required for the array</li>
+</ul>
+<div class="fragment"><div class="line"><type> <name> <span class="stringliteral">"["</span> <minsize> <span class="stringliteral">"]"</span> <span class="stringliteral">"OUT"</span> </minsize></name></type></div>
+</div><!-- fragment --><ul>
+<li>an OUT array</li>
+<li>array should be large enough to store <code>minSize</code> elements; if supported by the function implemention, a shorter OUT array can be used.</li>
+</ul>
+<div class="fragment"><div class="line"><span class="stringliteral">"string"</span> <name> <span class="stringliteral">"["</span> [ <minsize> <span class="stringliteral">".."</span> ] <maxsize> <span class="stringliteral">"]"</span> <span class="stringliteral">"IN"</span> </maxsize></minsize></name></div>
+</div><!-- fragment --><ul>
+<li>an IN string</li>
+<li><code>maxSize</code> specifies the maximum string length allowed,</li>
+<li>optional <code>minSize</code> specifies the minimum string length required</li>
+<li>string length is given as number of characters, excluding any terminating characters</li>
+</ul>
+<div class="fragment"><div class="line"><span class="stringliteral">"string"</span> <name> <span class="stringliteral">"["</span> <minsize> <span class="stringliteral">"]"</span> <span class="stringliteral">"OUT"</span> </minsize></name></div>
+</div><!-- fragment --><ul>
+<li>an OUT string</li>
+<li>string should be large enough to store <code>minSize</code> characters; if supported by the function implemention, a shorter OUT string can be used.</li>
+<li>string length is given as number of characters, excluding any terminating characters</li>
+</ul>
+<p><code> "handler" <name> "</name></code></p>
+<ul>
+<li>a handler (callback) function.</li>
+<li>see <a class="el" href="interface_def_lang_syntax.html#interfaceDefLangSyntax_handler">Specifying a Handler</a> for information on how to declare a handler.</li>
+</ul>
+<p>The <code>returnType</code> is optional, and if specified, can be any type that's not an array, string, or handler.</p>
+<h1><a class="anchor" id="interfaceDefLangSyntax_event"></a>
+Specifying an Event</h1>
+<p>Do this to specify an event:</p>
+<pre class="fragment">EVENT <eventtype>
+(
+    <parameterlist>
+);
+</parameterlist></eventtype></pre><p>The <code>parameterList</code> can contain one or more parameters separated by commas. It can contain anything that's valid for a function, but it must contain one handler parameter. The parameters are used when registering a handler for the specified event.</p>
+<p>See <a class="el" href="interface_def_lang_c.html#interfaceDefLangC_event">Events in C</a> for details on the C code generated from the above event definition.</p>
+<h1><a class="anchor" id="interfaceDefLangSyntax_handler"></a>
+Specifying a Handler</h1>
+<p>Do this to specify a handler:</p>
+<pre class="fragment">HANDLER <handlertype>
+(
+    [<parameterlist>]
+);
+</parameterlist></handlertype></pre><p>The <code>parameterList</code> can contain one or more parameters separated by commas, or can be empty if there are no parameters. It can only contain scalar types or string types, as described above for <a class="el" href="interface_def_lang_syntax.html#interfaceDefLangSyntax_function">Specifying a Function</a>. All the parameters should be IN parameters.</p>
+<p>See <a class="el" href="interface_def_lang_c.html#interfaceDefLangC_handler">Handlers in C</a> for details on the C code generated from the above handler definition.</p>
+<h1><a class="anchor" id="interfaceDefLangSyntax_comments"></a>
+Comments</h1>
+<p>The API file supports both C and C++ comment styles. Comments that use the doxygen formats </p>
+<pre class="fragment">/** </pre><p> to start a multi-line comment or</p>
+<pre class="fragment">///<p> to start a one line comment receive special processing. Multi-line comments at the start of the API file will be copied directly to the start of the appropriate generated files.</p>
+<p>Comments given in the function definition will be copied to the appropriate generated files under the following conditions:</p>
+</pre><ul>
+<li>Multi-line comments must start with<pre class="fragment">/** </pre></li>
+<li>Single-line comments must start with<pre class="fragment">///</pre></li>
+<li>In a block of single-line comments, each line must start with<pre class="fragment">/// rather than just the first line. This is different from typical doxygen usage.</pre></li>
+<li>If the function definition is preceded by a multi-line comment then this comment will be copied to the appropriate generated files.</li>
+<li>If any parameter is followed by a multi-line comment or one or more single line comments, then all these comments will be copied to the appropriate generated files.</li>
+</ul>
+<p>If an event or handler definition is preceded by a multi-line comment, then this comment will be copied to the appropriate generated files, under the same conditions as function definitions.</p>
+<p>Any comments provided after an element in an ENUM or BITMASK, will be copied to the appropriate generated files, under the same conditions as function parameter comments.</p>
+<h1><a class="anchor" id="interfaceDefLangSyntax_sample"></a>
+Sample API</h1>
+<p>Here's the <code>defn.api</code> file containing just type defintions</p>
+<pre class="fragment">/**
+ * Example of nested .api file
+ */
+
+DEFINE SIX = 6;
+</pre><p>Here's the <code>common.api</code> file containing just type defintions, and using the types defined in <code>defn.api</code> </p>
+<pre class="fragment">/**
+ * Common definitions potentially used across multiple .api files
+ */
+
+USETYPES defn;
+
+
+/**
+ * Definition example
+ */
+DEFINE FOUR = 4;
+
+/**
+ * Example of using previously DEFINEd symbol within an imported file.
+ */
+DEFINE TEN = FOUR + defn.SIX;
+
+/**
+ * Reference example
+ */
+REFERENCE OpaqueReference;
+
+/**
+ * ENUM example
+ */
+ENUM EnumExample
+{
+    ZERO,     ///<p>Here's the <code>example.api</code> file containing various definitions, and using the types defined in <code>defn.api</code> and <code>common.api</code> </p>
+<pre class="fragment">/**
+ * Example API file
+ */
+
+// The .api suffix is optional
+USETYPES defn;
+USETYPES common.api;
+
+
+DEFINE TEN = common.FOUR + defn.SIX;
+DEFINE TWENTY = TEN + common.TEN;
+DEFINE SOME_STRING = "some string";
+
+
+/**
+ * Handler definition
+ */
+HANDLER TestAHandler
+(
+    int32 x   ///<hr />
+<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</pre></pre></div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

@@ -11,7 +11,7 @@ from bs4 import BeautifulSoup
 
 src_dir = "sources/"
 
-
+flat_cats = {}
 
 # This figures out if a link to href from document filepath should be considered as 'link-selected' 
 def match_link(href, filepath, category_match = True):
@@ -77,6 +77,10 @@ def gen_nav(json_file, current_filepath):
     dir = os.path.dirname(join(os.getcwd(), src_dir, current_filepath))
     jsn, dir = file_dispatch(dir, json_file,"_templates/", False)
     jsondata = json.loads(jsn, object_pairs_hook=OrderedDict)
+    return gen_nav_from_dict(jsondata,current_filepath)
+
+# Generates a navbar from json. Current filepath is the document it's on, since we need to know which link should light up.
+def gen_nav_from_dict(jsondata, current_filepath):
     innerHTML = ""
     links = jsondata["links"]
     for x in links:
@@ -125,15 +129,45 @@ def format_sidemenu_link(template, json_link, target_file, depth = 0):
         elclass += " link-selected"
     return template.format( json_link["href"], 'class="' + elclass + '"', json_link["title"]) + childrenHTML
 
+def gen_tocfile(dir, filename, contents):
+    x = cat_for_link(filename)
+    if x is None:
+        print filename + " doesn't seem to be in the toc."
+        return ""
+    else:
+        return "/resources/tocs/" + cat_for_link(filename) + ".json"
 
+def split_toc_into_categories(filepath):
+    with open(filepath) as f:
+        data = json.load(f)
+    return data['toc']['children']
 
+    # like gen_topmenu but automatic generation from toc
+def gen_autotopmenu(dir, filename, contents):
+    innerHTML = '<a href="{0}"{1}>{2}</a>'
+    outerHTML = """
+    <div id="topMenu">
+    <a href=/apps/docs/converted/ class="biglink">App docs?</a>
+    <nav>
+    {0}
+    </nav>
+    </div>
+    """
+    output = ""
+    my_cat = cat_for_link(filename)
+    for cat in cats:
+        output += innerHTML.format( cat['href'], ' class="link-selected"' if my_cat == cat['label'] else "", cat['label'])
+    return outerHTML.format(output)
 
 # marker->function mapping here
-funcs = {
+funcs = OrderedDict({
+    "%%%TOCFILE%%%" : gen_tocfile,
     "%%%HEADER%%%": gen_header,
+    "%%%AUTOTOPMENU%%%": gen_autotopmenu,
     "%%%TOPMENU%%%": gen_topmenu,
-    "%%%SIDEMENU%%%" : gen_sidemenu,
-}
+    "%%%SIDEMENU%%%" : gen_sidemenu
+
+})
 
 
 
@@ -144,11 +178,12 @@ def render_file(filepath, rel_dir):
 
 def render(filepath, rel_dir, contents):
     filename = os.path.basename(filepath)
+    flags=[] ### TODO: somehow use this to avoid repeating calculations
     for k in funcs.keys():
         if k in contents:
             f = funcs[k]
             #print("%s -> %s" % (f.__name__, os.path.relpath(filepath, src_dir)))
-            contents = contents.replace(k,f(rel_dir,filename , contents)) # take the appropriate function and replace the marker with its output
+            contents = contents.replace(k,f(rel_dir,filename , contents).encode()) # take the appropriate function and replace the marker with its output
     return contents
 
 def meta_to_title(html):
@@ -158,14 +193,43 @@ def meta_to_title(html):
         titletag.extract()
         title = titletag.attrs["content"]
         soup.html.head.title.string = title + " - Legato Docs"# because apparently soup.title is read only
-        print title
+        #print title
     else:
         print "No title meta tag."
     return str(soup)
 
+def get_tree_hrefs(tree):
+    l = []
+    l.append(tree['href'])
+    try:
+        for c in tree['children']:
+            l.extend(get_tree_hrefs(c))
+    except KeyError:
+        pass
+    return l
+
+def cat_for_link(href):
+    for k in flat_cats.keys():
+        if href in flat_cats[k]:
+            return k
+        if href.replace("_source.html",".html") in flat_cats[k]: # because source files aren't in the toc
+            return k
+
 if __name__ == "__main__":
     unittest.main(exit=False) 
     print("src_dir = %s" % src_dir)
+
+    cats = split_toc_into_categories(join(src_dir, "toc.json"))
+    tocdir = join(os.getcwd(), "out/resources/tocs/")
+    print tocdir
+    if not os.path.exists(tocdir):
+        os.makedirs(tocdir)
+    flat_cats = {cat['label']:get_tree_hrefs(cat) for cat in cats} 
+    for cat in cats:
+        with open(join(tocdir, cat['label'] + ".json"), "w") as f:
+            json.dump(cat, f)
+
+    
     for dir, subdirs, files in os.walk(join(os.getcwd(), src_dir)):
         if "_templates" in subdirs:
             subdirs.remove("_templates") # ignore template directory, as we don't want to build templates.
@@ -187,7 +251,7 @@ if __name__ == "__main__":
                     resulting_filepath = join(dir, resulting_filename)
 
                     tp, tpdir = file_dispatch(dir, template, subdir = "_templates")
-                    print("%s >> %s -> %s" % (file, join(tpdir, template), os.path.relpath(resulting_filepath, src_dir)))
+                    #print("%s >> %s -> %s" % (file, join(tpdir, template), os.path.relpath(resulting_filepath, src_dir)))
                     rendered_template = render(resulting_filepath, rel_dir, tp) # render elements in template
                     with open(filepath) as f:
                         contents = rendered_template.replace("{content}",f.read()) # insert content into rendered template

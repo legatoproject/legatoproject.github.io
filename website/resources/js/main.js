@@ -176,17 +176,17 @@ function checkbox() {
     console.log($('#tree1').css('display'));
 }
 
-function setupTree() {
+function setupTree(treeURL) {
     $(document).ready(function() {
         String.prototype.endsWith = function(suffix) {
             return this.indexOf(suffix, this.length - suffix.length) !== -1;
         };
         $.getJSON(
-            '/apps/docs/converted/toc.json',
+            treeURL,
             function(data) {
                 $tree = $('#tree1');
                 $tree.tree({
-                    data: data.toc.children,
+                    data: data.children,
                     saveState: true,
                     useContextMenu: false
                 });
