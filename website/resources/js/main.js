@@ -198,6 +198,7 @@ function setupTree(treeURL) {
                 if (page.endsWith("#")) {
                     page = page.slice(0, -1);
                 }
+                $tree.tree('selectNode', null);
                 $tree.tree('getTree').iterate(
                     function(node, level) {
                         if (node.href === page) {
