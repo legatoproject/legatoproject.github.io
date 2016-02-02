@@ -415,13 +415,15 @@ nav a:hover {
 	position: fixed;
 	top: 0;
 	left: 0;
-	width: 150px;
+	width: 165px;
 	z-index: 200;
 	height: 100%;
-	padding: 175px 30px 150px 30px;
+	padding: 175px 30px 150px 15px;
 	font-size: 13px;
 	background: url('../images/legato_logo-grey.png') no-repeat 64px 72px #fff;
 	background-size: 72px;
+	color: #00677A;
+	font-weight: 400;
 }
 
 .fa {
@@ -659,6 +661,47 @@ div.usecase a.usecase03-bg {
 	background: url('../images/slide_02.jpg') center no-repeat;
 	background-size: cover;
 }
+
+
+/*******************
+ * DOXYGEN CONTENT *
+ *******************/
+
+#doc-content div.title {
+	font-family: 'Roboto Mono', monospace;
+	font-weight: 400;
+	font-size: 36px;
+	color: #00677A;
+	padding-bottom: 15px;
+}
+
+#doc-content h1 {
+	font-family: 'Roboto Mono', monospace;
+	font-weight: 400;
+	font-size: 24px;
+	color: #00677A;
+	padding: 15px 0px 10px 0px;
+}
+
+#doc-content p {
+	margin: 0;
+	padding: 0;
+}
+
+#doc-content a {
+	color: #00AEAF;
+	border-bottom: 1px dashed #00AEAF;
+}
+
+#doc-content a:hover {
+	color: #00ffff;
+	border-bottom: 1px dashed #00ffff;
+}
+
+#doc-content hr {
+	display: none;
+}
+ 
 
 /*******************
  *     FOOTER      *

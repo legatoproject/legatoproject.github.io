@@ -2,8 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Legato - Build Apps - Documentation</title>
-	<meta name="description" content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" />
+    <title>Legato - Documentation</title>
+	<meta name="description" content="#description" />
 	<meta name="keywords" content="#keywords" />
 	<meta name="robots" content="noindex, nofollow" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -11,15 +11,26 @@
     <link rel="apple-touch-icon" href="#">
     <link rel="apple-touch-icon" sizes="72x72" href="#">
     <link rel="apple-touch-icon" sizes="114x114" href="#">
-    <link rel="stylesheet" type="text/css" href="resources/css/style.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="resources/css/style.css">
     <link rel="stylesheet" type="text/css" href="resources/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/jqtree.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/navtree.css">
     
     <!--[if IE]>
     <script src="resources/js/html5shiv.js"></script>
     <script src="resources/js/respond.js"></script>
     <![endif]-->
     
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script type="text/javascript" src="resources/js/jquery-core.js"></script>
+    <script type="text/javascript" src="resources/js/tree.jquery.js"></script>
+    <script type="text/javascript" src="resources/js/data.js"></script>
+    
+    <script type="text/javascript" src="resources/js/search.js"></script>
+    <script type="text/javascript" src="https://sdk.amazonaws.com/js/aws-sdk-2.2.10.min.js"></script>
+    
+    <link rel="stylesheet" href="resources/js/jquery-ui-1.11.4.custom/jquery-ui.css">
+    <script src="resources/js/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+    
     <script>
       $(document).ready(function(){
 		$("#menu-trigger").click(function() {
@@ -36,13 +47,7 @@
 		
       });
     </script>
-    
-    <script type="text/javascript" src="resources/js/search.js"></script>
-    <script type="text/javascript" src="https://sdk.amazonaws.com/js/aws-sdk-2.2.10.min.js"></script>
-    
-    <link rel="stylesheet" href="resources/js/jquery-ui-1.11.4.custom/jquery-ui.css">
-    <script src="resources/js/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
-    
+
 </head>
 <body>
     <div class="wrapper">
@@ -82,45 +87,104 @@
             </nav>
         </div>
         <div id="left">
-        	<div id="tree1">test text</div>
+        	<div id="tree1" style="display:visible;"></div>
+        	<div id="tree2" style="display:none;">tree2</div>
+        	<div id="tree3" style="display:none;">tree3</div>
+        	<div id="tree4" style="display:none;">tree4</div>
         </div>
         <div class="content">
-        	<h2>Learn</h2>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis, augue et rhoncus venenatis, nisl odio cursus ligula, eu euismod purus urna eu felis. Aenean bibendum metus eget lacinia volutpat. In sollicitudin odio arcu, a viverra ligula ullamcorper cursus. Aenean justo libero, pharetra ac iaculis eget, convallis vitae justo. Nunc ac mauris orci. Nulla varius lacus justo, posuere blandit purus placerat ac. Vivamus quis enim urna. Morbi gravida sit amet diam a fringilla. Quisque feugiat faucibus bibendum. Cras tempus scelerisque odio, et eleifend nibh porta nec. Nunc eu tincidunt metus. Aliquam id maximus libero. Morbi vitae aliquet sem. Vestibulum gravida efficitur elit, nec efficitur lorem accumsan ut. Fusce dapibus hendrerit ligula. Integer est tellus, efficitur sed turpis sed, vulputate mattis turpis.
-            <br /><br />
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis, augue et rhoncus venenatis, nisl odio cursus ligula, eu euismod purus urna eu felis. Aenean bibendum metus eget lacinia volutpat. In sollicitudin odio arcu, a viverra ligula ullamcorper cursus. Aenean justo libero, pharetra ac iaculis eget, convallis vitae justo. Nunc ac mauris orci. Nulla varius lacus justo, posuere blandit purus placerat ac. Vivamus quis enim urna. Morbi gravida sit amet diam a fringilla. Quisque feugiat faucibus bibendum. Cras tempus scelerisque odio, et eleifend nibh porta nec. Nunc eu tincidunt metus. Aliquam id maximus libero. Morbi vitae aliquet sem. Vestibulum gravida efficitur elit, nec efficitur lorem accumsan ut. Fusce dapibus hendrerit ligula. Integer est tellus, efficitur sed turpis sed, vulputate mattis turpis.
-            <br /><br />
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis, augue et rhoncus venenatis, nisl odio cursus ligula, eu euismod purus urna eu felis. Aenean bibendum metus eget lacinia volutpat. In sollicitudin odio arcu, a viverra ligula ullamcorper cursus. Aenean justo libero, pharetra ac iaculis eget, convallis vitae justo. Nunc ac mauris orci. Nulla varius lacus justo, posuere blandit purus placerat ac. Vivamus quis enim urna. Morbi gravida sit amet diam a fringilla. Quisque feugiat faucibus bibendum. Cras tempus scelerisque odio, et eleifend nibh porta nec. Nunc eu tincidunt metus. Aliquam id maximus libero. Morbi vitae aliquet sem. Vestibulum gravida efficitur elit, nec efficitur lorem accumsan ut. Fusce dapibus hendrerit ligula. Integer est tellus, efficitur sed turpis sed, vulputate mattis turpis.
-            <br /><br />
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis, augue et rhoncus venenatis, nisl odio cursus ligula, eu euismod purus urna eu felis. Aenean bibendum metus eget lacinia volutpat. In sollicitudin odio arcu, a viverra ligula ullamcorper cursus. Aenean justo libero, pharetra ac iaculis eget, convallis vitae justo. Nunc ac mauris orci. Nulla varius lacus justo, posuere blandit purus placerat ac. Vivamus quis enim urna. Morbi gravida sit amet diam a fringilla. Quisque feugiat faucibus bibendum. Cras tempus scelerisque odio, et eleifend nibh porta nec. Nunc eu tincidunt metus. Aliquam id maximus libero. Morbi vitae aliquet sem. Vestibulum gravida efficitur elit, nec efficitur lorem accumsan ut. Fusce dapibus hendrerit ligula. Integer est tellus, efficitur sed turpis sed, vulputate mattis turpis.
-            <br /><br />
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis, augue et rhoncus venenatis, nisl odio cursus ligula, eu euismod purus urna eu felis. Aenean bibendum metus eget lacinia volutpat. In sollicitudin odio arcu, a viverra ligula ullamcorper cursus. Aenean justo libero, pharetra ac iaculis eget, convallis vitae justo. Nunc ac mauris orci. Nulla varius lacus justo, posuere blandit purus placerat ac. Vivamus quis enim urna. Morbi gravida sit amet diam a fringilla. Quisque feugiat faucibus bibendum. Cras tempus scelerisque odio, et eleifend nibh porta nec. Nunc eu tincidunt metus. Aliquam id maximus libero. Morbi vitae aliquet sem. Vestibulum gravida efficitur elit, nec efficitur lorem accumsan ut. Fusce dapibus hendrerit ligula. Integer est tellus, efficitur sed turpis sed, vulputate mattis turpis.
-            <br /><br />
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis, augue et rhoncus venenatis, nisl odio cursus ligula, eu euismod purus urna eu felis. Aenean bibendum metus eget lacinia volutpat. In sollicitudin odio arcu, a viverra ligula ullamcorper cursus. Aenean justo libero, pharetra ac iaculis eget, convallis vitae justo. Nunc ac mauris orci. Nulla varius lacus justo, posuere blandit purus placerat ac. Vivamus quis enim urna. Morbi gravida sit amet diam a fringilla. Quisque feugiat faucibus bibendum. Cras tempus scelerisque odio, et eleifend nibh porta nec. Nunc eu tincidunt metus. Aliquam id maximus libero. Morbi vitae aliquet sem. Vestibulum gravida efficitur elit, nec efficitur lorem accumsan ut. Fusce dapibus hendrerit ligula. Integer est tellus, efficitur sed turpis sed, vulputate mattis turpis.
-            <br /><br />
-            <h3>This is how the Documentation is organized:</h3>
-            <div class="docsWidget blue">
-            	<h4 class=""><a href="#">Guides</a></h4>
-                <a href="#">SubItem #1</a>
-                <a href="#">SubItem #2</a>
-            </div>
-            <div class="docsWidget blue">
-            	<h4 class=""><a href="#">Tutorial</a></h4>
-                <a href="#">SubItem #1</a>
-                <a href="#">SubItem #2</a>
-                <a href="#">SubItem #3</a>
-            </div>
-            <div class="docsWidget blue">
-            	<h4 class=""><a href="#">Tools</a></h4>
-                <a href="#">SubItem #1</a>
-                <a href="#">SubItem #2</a>
-                <a href="#">SubItem #3</a>
-                <a href="#">SubItem #4</a>
-            </div>
-            <div class="docsWidget blue">
-            	<h4 class=""><a href="#">Reference</a></h4>
-                <a href="#">SubItem #1</a>
-                <a href="#">SubItem #2</a>
+			<div id="doc-content">
+ 				<div class="header">
+  					<div class="headertitle">
+   						<div class="title">Event-driven Programming</div>
+  					</div>
+ 				</div>
+ 				<!--header-->
+                <div class="contents">
+                    <div class="textblock">
+                        <p>
+                        In event-drivent programming, the flow of a program is determined by events triggered through a defined interaction (e.g., user interaction, exceeding threshold limit, etc. ). Usually, a main loop listens for events, and then triggers a callback function when an event is detected.
+                        </p>
+                        <p>
+                        Overall, Legato components are written using an event-driven model. Callback functions are attached to specific events, and when events occur, the thread's event loop triggers the appropriate callbacks. Legato components can also start other threads that run their own Legato event loops.
+                        </p>
+                        <p>
+                        Every component implements an initialization function called at process start-up by the main thread. That function does whatever initialization is required for that component (e.g., initializes data structures, registers callbacks, starts threads, etc.) and returns. After all initialization functions have run to completion and returned, the main thread enters the Legato event loop and begins reacting to events and calling registered callbacks.
+                        </p>
+                        <p>
+                        This allows multiple components to be deployed to the same process and even share a single thread within that process, without having to know anything about each other. This reduces the risk of multi-threaded race conditions and saves stack memory space.
+                        </p>
+                        <p>
+                        Beware one drawback is that if a component blocks a shared thread, it blocks every component sharing that thread.
+                        </p>
+                        <p>
+                        Sometimes, the
+                        <em>
+                         judicious
+                        </em>
+                        use of threads can considerably simplify a program, so multi-threading is also supported by Legato along with the usual thread synchronization constructs (mutexes, semaphores, etc.).
+                        </p>
+                        <h1>
+                        <a class="anchor" id="basicEvents_eventLoop">
+                        </a>
+                        Event Loop API
+                        </h1>
+                        <p>
+                        Legato's Event Loop API uses a central
+                        <b>
+                         event loop
+                        </b>
+                        that calls
+                        <b>
+                         event handler
+                        </b>
+                        functions in response to
+                        <b>
+                         event reports
+                        </b>
+                        . See
+                        <a class="el" href="c_event_loop.html">
+                         Event Loop API
+                        </a>
+                        </p>
+                        <p>
+                        Software components register their event handler functions with the event system (either directly through the Event Loop API or indirectly through other APIs that use the Event Loop API) so the central event loop knows the functions to call in response to defined events.
+                        </p>
+                        <p>
+                        Every event loop has an
+                        <b>
+                         event queue
+                        </b>
+                        , which is a queue of events waiting to be handled by that event loop.
+                        </p>
+                        <p>
+                        The following different usage patterns are supported by the Event Loop API:
+                        </p>
+                        <p>
+                        <a class="el" href="c_event_loop.html#c_event_deferredFunctionCalls">
+                         Deferred Function Calls
+                        </a>
+                        <br />
+                        <a class="el" href="c_event_loop.html#c_event_publishSubscribe">
+                         Publish-Subscribe Events
+                        </a>
+                        <br />
+                        <a class="el" href="c_event_loop.html#c_event_layeredPublishSubscribe">
+                         Layered Publish-Subscribe Handlers
+                        </a>
+                        <br />
+                        <a class="el" href="c_event_loop.html#c_event_dispatchingToOtherThreads">
+                         Dispatching Function Execution to Other Threads
+                        </a>
+                        <br />
+                        </p>
+                        <hr />
+                        <p>
+                        Copyright (C) Sierra Wireless Inc. Use of this work is subject to license.
+                        </p>
+                    </div>
+                </div>
+                <!-- contents -->
             </div>
             <br clear="left" />
         </div>
@@ -130,6 +194,7 @@
 	</div>
 </body>
 </html>
+
 <script>
 	$("#Tutorial").bind("click", function(){
     $("#tree1").hide();
@@ -189,5 +254,5 @@ function checkbox(){
 	console.log($("#category").is(":checked"));
 	console.log($('#tree1').css('display'));
 	}
-
+	
 </script>

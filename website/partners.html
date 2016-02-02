@@ -22,6 +22,7 @@
     
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 	<script src="resources/js/jquery.flexslider.js"></script>
+    <script src="resources/js/main.js"></script>
     <script>
       $(document).ready(function(){
 		$("#menu-trigger").click(function() {
@@ -54,78 +55,55 @@
             <header>
                 <nav>
                     <a href="index.html" class="navlink">Introduction</a>
-                    <a href="partners.html" class="navlink">Partners</a>
                     <a href="build-apps.html" class="navlink">Build Apps</a>
                     <a href="#" class="subnavlink">Introduction</a>
                     <a href="#" class="subnavlink">Get started</a>
                     <a href="#" class="subnavlink">Documentation</a>
-                    <a href="#" class="subnavlink">Community</a>
-                    <a href="#" class="subnavlink">Licence</a>
                     <a href="build-platform.html" class="navlink">Build Platform</a>
                     <a href="#" class="subnavlink">Introduction</a>
                     <a href="#" class="subnavlink">Documentation</a>
-                    <a href="#" class="subnavlink">Community</a>
-                    <a href="#" class="subnavlink">Licence</a>
+                    <a href="partners.html" class="navlink">Partners</a>
+                    <a href="community.html" class="navlink">Community</a>
+                    <a href="license.html" class="navlink">License</a>
                 </nav>
             </header>
         </div>
-        <h1><a title="back to top" href="#introduction" class="navlink">Legato</a></h1>
-        <div class="flexslider">
-            <ul class="slides">
-                <li class="slide_01">
-                    <h3>IoT Development Swiss Knife</h2>
-                    <h4>An open source Linux-based embedded platform<br />designed to simplify connected IoT application development</h4>
-                    <a href="#">read more</a>
-                </li>
-                <li class="slide_02">
-                    <h3>Legato Headline #2</h2>
-                    <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />Ut blandit, arcu at ultricies elementum, neque justo ullamcorper risus,<br />venenatis rutrum ante enim vel odio.</h4>
-                    <a href="#">read more</a>
-                </li>
-                <li class="slide_03">
-                    <h3>Legato Headline #3</h2>
-                    <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />Ut blandit, arcu at ultricies elementum, neque justo ullamcorper risus,<br />venenatis rutrum ante enim vel odio.</h4>
-                    <a href="#">read more</a>
-                </li>
-            </ul>
+        <div id="mainmenu" class="white">
+        	<h1><a title="back to top" href="index.html">Legato</a></h1>
+            <ul>
+                <li><a href="build-apps.html" class="navlink">Build Apps</a></li>
+                <li><a href="build-platform.html" class="navlink">Build Platform</a></li>
+                <li><a href="partners.html" class="navlink selected">Partners</a></li>
+                <li><a href="community.html" class="navlink">Community</a></li>
+                <li><a href="license.html" class="navlink">License</a></li>
+        	</ul>
         </div>
         <div class="content">
-        	<h2>Introducing headline</h2>
-            <p>
-            	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu lacus sit amet sapien pharetra ornare. Cras quis libero ut turpis ullamcorper fringilla. Aenean eget risus sit amet tortor rutrum sollicitudin. Aliquam blandit est nisi, et feugiat eros pretium consectetur. Curabitur fringilla lectus ut ullamcorper facilisis. Pellentesque sit amet volutpat lorem, id ultrices nibh. Nulla vel congue libero. Mauris egestas non nulla vel porta. Aenean porta sit amet mauris malesuada sollicitudin. Praesent gravida luctus fermentum. Praesent volutpat rutrum mauris, quis suscipit dolor gravida quis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam eget sapien convallis, iaculis est sed, facilisis risus. Etiam dapibus enim nunc, tincidunt condimentum nunc sagittis non. Suspendisse varius, nunc a cursus facilisis, nunc sapien ullamcorper dolor, quis pharetra elit ante eu arcu. Aliquam condimentum eros non turpis laoreet, a porta erat consectetur.
-            </p>
+        	<h2>Partners</h2>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis, augue et rhoncus venenatis, nisl odio cursus ligula, eu euismod purus urna eu felis. Aenean bibendum metus eget lacinia volutpat. In sollicitudin odio arcu, a viverra ligula ullamcorper cursus. Aenean justo libero, pharetra ac iaculis eget, convallis vitae justo. Nunc ac mauris orci. Nulla varius lacus justo, posuere blandit purus placerat ac. Vivamus quis enim urna. Morbi gravida sit amet diam a fringilla. Quisque feugiat faucibus bibendum. Cras tempus scelerisque odio, et eleifend nibh porta nec. Nunc eu tincidunt metus. Aliquam id maximus libero. Morbi vitae aliquet sem. Vestibulum gravida efficitur elit, nec efficitur lorem accumsan ut. Fusce dapibus hendrerit ligula. Integer est tellus, efficitur sed turpis sed, vulputate mattis turpis.
+            <br /><br />
+            <h3>Become a Partner</h3>
+            <div class="docsWidget">
+            	<h4 class=""><a href="#">Reference your Application/Component</a></h4>
+                <br clear="left" /><br />
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis, augue et rhoncus venenatis, nisl odio cursus ligula, eu euismod purus urna eu felis. 
+            </div>
+            <div class="docsWidget">
+            	<h4 class=""><a href="#">Reference your design house company</a></h4>
+                <br clear="left" /><br />
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis, augue et rhoncus venenatis, nisl odio cursus ligula, eu euismod purus urna eu felis. 
+            </div>
+            <div class="docsWidget">
+            	<h4 class=""><a href="#">Reference a new micro-controller supporting Legato</a></h4>
+                <br clear="left" /><br />
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis, augue et rhoncus venenatis, nisl odio cursus ligula, eu euismod purus urna eu felis. 
+            </div>
+            <br /><br />
+            <br clear="left" />
         </div>
-        <div class="apps-platform">
-            <div class="build">
-                <a href="#" class=" usecase01-bg"></a>
-                <h5>Build Apps</h5>
-                Lorem ipsum sic dolor amet
-            </div>
-            <div class="build">
-                <a href="#" class=" usecase02-bg"></a>
-                <h5>Build Platform</h5>
-                Lorem ipsum sic dolor amet
-            </div>
-            <br clear="left"  />
-    	</div>
-        <div class="usecases">
-            <div class="usecase">
-                <a href="#" class=" usecase01-bg"></a>
-                <h5>Real case #1</h5>
-                Lorem ipsum sic dolor amet
-            </div>
-            <div class="usecase">
-                <a href="#" class=" usecase02-bg"></a>
-                <h5>Real case #2</h5>
-                Lorem ipsum sic dolor amet
-            </div>
-            <div class="usecase">
-                <a href="#" class=" usecase03-bg"></a>
-                <h5>Real case #3</h5>
-                Lorem ipsum sic dolor amet
-            </div>
-            <br clear="left"  />
-    	</div>
+        <div id="footer">
+        	Copyright © Sierra Wireless Inc. Use of this work is subject to license.
+        </div>
 	</div>
 </body>
 </html>

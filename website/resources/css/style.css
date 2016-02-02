@@ -82,7 +82,7 @@ div.wrapper {
 }
 
 #top {
-	position: absolute;
+	position: fixed;
 	top: 0px;
 	left: -250px;
 	width: 250px;
@@ -147,8 +147,13 @@ div#mainmenu.white {
 }
 
 #mainmenu ul li a:hover {
-	border-bottom: 2px solid #00AEAF;
-	color: #00AEAF;
+	border-bottom: 2px solid #F7781E;
+	color: #F7781E;
+}
+
+#mainmenu ul li a.selected {
+	border-bottom: 2px solid #00687a;
+	color: #00687a;
 }
 
 #mainmenu h1 a {
@@ -180,7 +185,7 @@ nav {
 }
 
 nav a.navlink {
-	color: #00AEAF;
+	color: #F7781E;
 	font-size: 14px;
 	text-transform: uppercase;
 	padding: 15px 0px 5px 20px; 
@@ -485,7 +490,7 @@ ul.slides a {
     -webkit-border-radius: 25px;
     -moz-border-radius: 25px;
     border-radius: 25px;
-    background-color: #00AEAF;
+    background-color: #F7781E;
 	margin-top: 15px;
 }
 
@@ -538,15 +543,15 @@ ul.slides a {
 .docsWidget h4 {
 	font-family: 'Open Sans', arial, sans-serif;
 	font-weight: 400;
-	font-size: 24px;
+	font-size: 18px;
 	display: block;
 	height: 40px;
 	margin-bottom: 10px;
 }
 
 .docsWidget h4 a {
-	border-left: 2px solid #00AEAF;
-	color: #00AEAF;
+	border-left: 2px solid #F7781E;
+	color: #F7781E;
 	padding-left: 25px;
 	padding-bottom: 10px;
     padding-top: 10px;
@@ -577,8 +582,9 @@ ul.slides a {
 
 div#apps-platform {
 	position: relative;
-	padding: 1% 14% 0 15%;
-	background-color: white;
+	padding: 80px 14% 30px 15%;
+	text-align: center;
+	background-color: #f9f9f9;
 }
 
 div.build {
@@ -587,20 +593,31 @@ div.build {
 	width: 48%;
 	margin-right: 2%;
 	padding-bottom: 15px;
+	text-align: center;
 }
 
-div.build a {
-	display: block;
-	width: 100%;
-	height: 200px;
-	margin-bottom: 10px;
+div.build img {
+	width: 30%;
+	margin-bottom: 25px;
 }
 
 div.build h5 {
 	font-family: 'Roboto Mono', monospace;
 	font-weight: 400;
-	font-size: 18px;
-    color: #00AEAF;
+	font-size: 36px;
+	padding-bottom: 20px;
+}
+
+.orange {
+    color: #F7781E;
+}
+
+.bluegrey {
+	color: #6a8e9a;
+}
+
+.teal {
+	color: #00687a;
 }
 
 div.build a.usecase01-bg {
@@ -631,18 +648,11 @@ div.usecase {
 	padding-bottom: 15px;
 }
 
-div.usecase a {
-	display: block;
-	width: 100%;
-	height: 200px;
-	margin-bottom: 10px;
-}
-
 div.usecase h5 {
 	font-family: 'Roboto Mono', monospace;
 	font-weight: 400;
 	font-size: 18px;
-    color: #00AEAF;
+    color: #F7781E;
 }
 
 div.usecase a.usecase01-bg {
@@ -671,8 +681,6 @@ div.usecase a.usecase03-bg {
 	background-color: #FFF;
 	padding-top: 25px;
 	padding-bottom: 25px;
-}
-
-.wrapper.homepage #footer {
-	padding-left: 200px;
+	text-align: center;
+	
 }
