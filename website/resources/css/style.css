@@ -17,7 +17,7 @@ body {
 	color: rgb(120,120,120);
 	text-rendering: optimizeLegibility;
 	font-family: 'Open Sans', arial, sans-serif;
-	font-weight: 300;
+	font-weight: 400;
 	background-color: #FFF;
 }
 
@@ -31,6 +31,7 @@ a {
     -o-transition: all 0.5s ease-in-out;
     -ms-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
+	color: #F7781E;
 }
 
 a img {
@@ -136,14 +137,16 @@ div#mainmenu.white {
 	color: black;
 	padding: 0 20px;
 	text-transform: uppercase;
+	font-weight: 300;
 	font-size: 13px;
-	padding: 9px 20px 39px 20px; 
+	padding: 9px 25px 39px 25px; 
 	border-bottom: 2px solid transparent;
 	-webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
     -ms-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
+	margin-left: -4px;
 }
 
 #mainmenu ul li a:hover {
@@ -223,7 +226,15 @@ nav a:hover {
 	width: 100%;
 	z-index: 600;
 	height: 50px;
+}
+
+#menudocumentation.teal {
 	background-color: #00AEAF;
+}
+
+
+#menudocumentation.orange {
+	background-color: #F7781E;
 }
 
 #menudocumentation header {
@@ -260,7 +271,7 @@ nav a:hover {
 	right: 100px;
 	height: 50px;
 	padding-top: 35px;
-	color: #00687a;
+	color: #FFF;
 }
 
 #menudocumentation nav a {
@@ -298,7 +309,7 @@ nav a:hover {
 #menudocumentation nav label {
 	text-transform: uppercase;
 	font-size: 11px;
-	color: #00414d;
+	color: #FFF;
 	font-family: 'Open Sans', arial, sans-serif;
 	font-weight: 400;
 }
@@ -370,7 +381,14 @@ nav a:hover {
 	z-index: 400;
 	height: 100px;
 	box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
+}
+
+#topMenu.teal {
 	background-color: #00677A;
+}
+
+#topMenu.orange {
+	background-color: #b54b00;
 }
 
 #topMenu h2 {
@@ -487,9 +505,9 @@ ul.slides a {
 	text-transform: uppercase;
     line-height: 46px;
     color: #fff;
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    border-radius: 25px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
     background-color: #F7781E;
 	margin-top: 15px;
 }
@@ -577,7 +595,6 @@ ul.slides a {
 	display: block;
 	padding-left: 27px;
 	padding-top: 15px;
-	color: #666;
 }
 
 div#apps-platform {
@@ -668,6 +685,47 @@ div.usecase a.usecase02-bg {
 div.usecase a.usecase03-bg {
 	background: url('../images/slide_02.jpg') center no-repeat;
 	background-size: cover;
+}
+
+.button {
+	display: inline-block;
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #FFF;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #FFF;
+    font-size: 18px;
+    margin-top: 15px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.button.orange {
+    color: #F7781E;
+    border: 1px solid #F7781E;
+}
+
+.button.orange:hover {
+    color: #FFF;
+    background-color: #F7781E;
+}
+
+.button.teal {
+    color: #00687a;
+    border: 1px solid #00687a;
+}
+
+.button.teal:hover {
+    color: #FFF;
+    background-color: #00687a;
 }
 
 /*******************
