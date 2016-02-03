@@ -90,9 +90,9 @@ div.wrapper {
 	z-index: 900;
 	height: 100%;
 	background-color: #FFF;
-	transition: left 1s ease-in-out;
-	-moz-transition: left 1s ease-in-out;
-	-webkit-transition: left 1s ease-in-out;
+	transition: left 0.5s ease-in-out;
+	-moz-transition: left 0.5s ease-in-out;
+	-webkit-transition: left 0.5s ease-in-out;
 }
 	
 #top.menu-open {
