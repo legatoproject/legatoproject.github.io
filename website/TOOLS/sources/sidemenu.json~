@@ -1,0 +1,66 @@
+{
+     "links": [
+          {
+               "title": "Introduction",
+               "href": "/index.html"
+          },
+          {
+               "title": "Partners",
+               "href": "/partners/"
+          },
+          {
+               "title": "Build Apps",
+               "href": "/apps/",
+               "children": [
+                    {
+                         "title": "Introduction",
+                         "href": "/apps/intro"
+                    },
+                    {
+                         "title": "Get started",
+                         "href": "/apps/getstarted"
+                    },
+                    {
+                         "title": "Documentation",
+                         "href": "/apps/docs/learn"
+                    },
+                    {
+                         "title": "Community",
+                         "href": "/apps/community"
+                    },
+                    {
+                         "title": "License",
+                         "href": "/apps/license"
+                    }
+               ]
+          },
+          {
+               "title": "Build Platform",
+               "href": "/platform/",
+               "children": [
+                    {
+                         "title": "Introduction",
+                         "href": "/platform/"
+                    },
+                    {
+                         "title": "Get started",
+                         "href": "/platform/"
+                    },
+                    {
+                         "title": "Documentation",
+                         "href": "/platform/docs"
+                    },
+                    {
+                         "title": "Community",
+                         "href": "/platform/"
+                    },
+                    {
+                         "title": "License",
+                         "href": "/platform/"
+                    }
+               ]
+          }
+     ],
+     "innerHTML": "<a href=\"{0}\"{1}>{2}</a>",
+     "template": "sidemenu.html"
+}

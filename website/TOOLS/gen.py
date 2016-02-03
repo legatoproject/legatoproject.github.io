@@ -23,16 +23,6 @@ def match_link(href, filepath, category_match = True):
     else:
         return filepath.startswith(href.lstrip("/") if href != "/" else href)
 
-class MatchTest(unittest.TestCase):     
-    def test(self):
-        self.assertTrue(match_link("/platform/docs/", "platform/docs/index.html"))
-        self.assertTrue(match_link("/platform/", "platform/docs/index.html"))
-        self.assertTrue(match_link("/apps/docs/learn/", "apps/docs/learn/basics.html",True))
-        self.assertFalse(match_link("/apps/docs/learn/", "apps/docs/learn/basics.html",False))
-        self.assertTrue(match_link("basics.html", "apps/docs/learn/basics.html"))
-        self.assertTrue(match_link("/index.html", "index.html"))
-        self.assertFalse(match_link("/index.html","platform/docs/index.html"))
-
 
 # helpers for file_dispatch
 class UnsuitableDirError(Exception):
@@ -147,7 +137,7 @@ def gen_autotopmenu(dir, filename, contents):
     innerHTML = '<a href="{0}"{1}>{2}</a>'
     outerHTML = """
     <div id="topMenu">
-    <a href=/apps/docs/ class="biglink">App docs</a>
+    <a href=/docs/ class="biglink">Legato Docs</a>
     <nav>
     {0}
     </nav>
@@ -155,6 +145,7 @@ def gen_autotopmenu(dir, filename, contents):
     """
     output = ""
     my_cat = cat_for_link(filename)
+
     for cat in cats:
         output += innerHTML.format( cat['href'], ' class="link-selected"' if my_cat == cat['label'] else "", cat['label'])
     return outerHTML.format(output)
@@ -216,9 +207,7 @@ def cat_for_link(href):
             return k
 
 if __name__ == "__main__":
-    unittest.main(exit=False) 
     print("src_dir = %s" % src_dir)
-
     cats = split_toc_into_categories(join(src_dir, "toc.json"))
     tocdir = join(os.getcwd(), "out/resources/tocs/")
     print tocdir

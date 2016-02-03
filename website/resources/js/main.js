@@ -232,7 +232,7 @@ function setupTree(treeURL) {
                 // I removed all this dynamic loading stuff, because it causes a desync between the page you're on, and the content.
                 // It's difficult get the url of a page you've navigated to using the tree this way.
                 //instead, just navigate to the place.
-                window.location = href;
+                window.location.replace(href);
             }
         );
         //bind end
