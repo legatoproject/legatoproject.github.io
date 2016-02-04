@@ -4,10 +4,7 @@
                "title": "Introduction",
                "href": "/index.html"
           },
-          {
-               "title": "Partners",
-               "href": "/partners/"
-          },
+  
           {
                "title": "Build Apps",
                "href": "/docs/getstarted_main.html",
@@ -28,29 +25,22 @@
           },
           {
                "title": "Build Platform",
-               "href": "/platform/",
+               "href": "/docs/platform_constraints.html",
                "children": [
                     {
-                         "title": "Introduction",
-                         "href": "/platform/"
+                         "title": "Platform Constraints",
+                         "href": "/docs/platform_constraints.html"
                     },
                     {
-                         "title": "Get started",
-                         "href": "/platform/"
-                    },
-                    {
-                         "title": "Documentation",
-                         "href": "/platform/docs"
-                    },
-                    {
-                         "title": "Community",
-                         "href": "/platform/"
-                    },
-                    {
-                         "title": "License",
-                         "href": "/platform/"
+                         "title": "Yocto Info",
+                         "href": "/docs/yocto_main.html"
                     }
+              
                ]
+          },
+                  {
+               "title": "Partners",
+               "href": "/partners/"
           }
      ],
      "innerHTML": "<a href=\"{0}\"{1}>{2}</a>",
