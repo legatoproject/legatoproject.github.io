@@ -255,8 +255,6 @@ Functions</h2></td></tr>
 <tr class="separator:a78bd27d92337e2122320f41bcaa5480f"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:aac51332c6c84e460746eb1ad45c064d6"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#aac51332c6c84e460746eb1ad45c064d6">le_mrc_GetRadioPower</a> (<a class="el" href="le__basics_8h.html#ae2138c90c41d30e2d510be01d8b374da">le_onoff_t</a> *powerPtr)</td></tr>
 <tr class="separator:aac51332c6c84e460746eb1ad45c064d6"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a578262185e6c0514e4ad5ba584c360ca"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a578262185e6c0514e4ad5ba584c360ca">le_mrc_RegisterCellularNetwork</a> (const char *mcc, const char *mnc)</td></tr>
-<tr class="separator:a578262185e6c0514e4ad5ba584c360ca"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:ab4a246dd466fa8175aca0158e0cab227"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__mrc__interface_8h.html#a25a9e79cc9078e22cec22444fd959c61">le_mrc_ScanInformationListRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#ab4a246dd466fa8175aca0158e0cab227">le_mrc_PerformCellularNetworkScan</a> (<a class="el" href="le__mrc__interface_8h.html#af643c7005da7f2466302eebdf7a29d93">le_mrc_RatBitMask_t</a> ratMask)</td></tr>
 <tr class="separator:ab4a246dd466fa8175aca0158e0cab227"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:ae006d053b037cec589aa85053472a2af"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__mrc__interface_8h.html#a3e7fe3e0d8f10fe7853f00eb254529ea">le_mrc_ScanInformationRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#ae006d053b037cec589aa85053472a2af">le_mrc_GetFirstCellularNetworkScan</a> (<a class="el" href="le__mrc__interface_8h.html#a25a9e79cc9078e22cec22444fd959c61">le_mrc_ScanInformationListRef_t</a> scanInformationListRef)</td></tr>
@@ -2517,45 +2515,6 @@ NULL if no signal metrics are available. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">ratMask</td><td>Radio Access Technology mask </td></tr>
-</table>
-</dd>
-</dl>
-</div>
-</div>
-<a class="anchor" id="a578262185e6c0514e4ad5ba584c360ca"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="memname">
-<tr>
-<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mrc_RegisterCellularNetwork </td>
-<td>(</td>
-<td class="paramtype">const char * </td>
-<td class="paramname"><em>mcc</em>, </td>
-</tr>
-<tr>
-<td class="paramkey"></td>
-<td></td>
-<td class="paramtype">const char * </td>
-<td class="paramname"><em>mnc</em> </td>
-</tr>
-<tr>
-<td></td>
-<td>)</td>
-<td></td><td></td>
-</tr>
-</table>
-</div><div class="memdoc">
-<p>This function must be called to register on a cellular network [mcc;mnc]</p>
-<dl class="section return"><dt>Returns</dt><dd>LE_FAULT The function failed to register on the network. </dd>
-<dd>
-LE_BAD_PARAMETER A bad parameter was passed. </dd>
-<dd>
-LE_OK The function succeeded.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>If one code is too long (max LE_MRC_MCC_LEN/LE_MRC_MNC_LEN digits), it's a fatal error, the function won't return. </dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-<table class="params">
-<tr><td class="paramdir">[in]</td><td class="paramname">mcc</td><td>Mobile Country Code </td></tr>
-<tr><td class="paramdir">[in]</td><td class="paramname">mnc</td><td>Mobile Network Code </td></tr>
 </table>
 </dd>
 </dl>

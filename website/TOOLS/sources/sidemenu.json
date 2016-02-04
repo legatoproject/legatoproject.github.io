@@ -10,27 +10,19 @@
           },
           {
                "title": "Build Apps",
-               "href": "/apps/",
+               "href": "/docs/getstarted_main.html",
                "children": [
                     {
-                         "title": "Introduction",
-                         "href": "/apps/intro"
-                    },
-                    {
                          "title": "Get started",
-                         "href": "/apps/getstarted"
+                         "href": "/docs/getstarted_main.html"
                     },
                     {
                          "title": "Documentation",
-                         "href": "/docs/build_apps_main.html"
+                         "href": "/docs/build_apps_documentation.html"
                     },
                     {
-                         "title": "Community",
-                         "href": "/apps/community"
-                    },
-                    {
-                         "title": "License",
-                         "href": "/apps/license"
+                         "title": "Reference",
+                         "href": "/docs/files.html"
                     }
                ]
           },

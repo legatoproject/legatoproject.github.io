@@ -17,7 +17,7 @@ body {
 	color: rgb(120,120,120);
 	text-rendering: optimizeLegibility;
 	font-family: 'Open Sans', arial, sans-serif;
-	font-weight: 300;
+	font-weight: 400;
 	background-color: #FFF;
 }
 
@@ -31,6 +31,7 @@ a {
     -o-transition: all 0.5s ease-in-out;
     -ms-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
+	color: #F7781E;
 }
 
 a img {
@@ -80,24 +81,18 @@ div.wrapper {
 #menu-trigger.trigger-open {
 	color: #00687a;
 }
-#menu-trigger:hover{
-	color: #00AEAF;
-}
-#menu-trigger.documentation:hover{
-	color: #9CDBE6;
-}
+
 #top {
 	position: fixed;
 	top: 0px;
 	left: -250px;
-	width: 230px;
-	z-index: 600;
+	width: 250px;
+	z-index: 900;
 	height: 100%;
 	background-color: #FFF;
-	transition: left 0.3s ease-in-out;
-	-moz-transition: left 0.3s ease-in-out;
-	-webkit-transition: left 0.3s ease-in-out;
-	box-shadow:4px 0px 8px rgba(0,0,0,.28);
+	transition: left 0.5s ease-in-out;
+	-moz-transition: left 0.5s ease-in-out;
+	-webkit-transition: left 0.5s ease-in-out;
 }
 	
 #top.menu-open {
@@ -107,18 +102,14 @@ div.wrapper {
 #top header {
 	margin: auto;
 	position: relative;
-	padding-top: 100px;
-}
-/* TODO: THIS IS DMITRY STUFF; */
-#top .link-selected:after{
-	content: " ◀";
+	padding-top: 75px;
 }
 
 #mainmenu {
     position: fixed;
 	width: 100%;
 	height: 100px;
-    z-index: 900;
+    z-index: 10;
 }
 
 div#mainmenu.transparent {
@@ -146,26 +137,33 @@ div#mainmenu.white {
 	color: black;
 	padding: 0 20px;
 	text-transform: uppercase;
+	font-weight: 300;
 	font-size: 13px;
-	padding: 9px 20px 39px 20px; 
+	padding: 9px 25px 39px 25px; 
 	border-bottom: 2px solid transparent;
 	-webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
     -ms-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
+	margin-left: -4px;
 }
 
 #mainmenu ul li a:hover {
-	border-bottom: 2px solid #00AEAF;
-	color: #00AEAF;
+	border-bottom: 2px solid #F7781E;
+	color: #F7781E;
+}
+
+#mainmenu ul li a.selected {
+	border-bottom: 2px solid #00687a;
+	color: #00687a;
 }
 
 #mainmenu h1 a {
     position: absolute;
     left: 150px;
     text-indent: -9000px;
-    top: 29px;"API Guides"
+    top: 29px;
     width: 200px;
 	height: 60px;
     background: url('../images/legato_logo.png') no-repeat 0px 0px;
@@ -190,8 +188,8 @@ nav {
 }
 
 nav a.navlink {
-	color: #00AEAF;
-	font-size: 16px;
+	color: #F7781E;
+	font-size: 14px;
 	text-transform: uppercase;
 	padding: 15px 0px 5px 20px; 
 	display: block;
@@ -226,9 +224,17 @@ nav a:hover {
 	top: 0;
 	left: 0;
 	width: 100%;
-	z-index: 900;
+	z-index: 600;
 	height: 50px;
+}
+
+#menudocumentation.teal {
 	background-color: #00AEAF;
+}
+
+
+#menudocumentation.orange {
+	background-color: #F7781E;
 }
 
 #menudocumentation header {
@@ -265,7 +271,7 @@ nav a:hover {
 	right: 100px;
 	height: 50px;
 	padding-top: 35px;
-	color: #00687a;
+	color: #FFF;
 }
 
 #menudocumentation nav a {
@@ -297,17 +303,13 @@ nav a:hover {
     border-radius: 10px;
 	height: 15px;
 	padding-left: 15px;
-	width: 150px;
+	width: 100px;
 }
-
-
-
-
 
 #menudocumentation nav label {
 	text-transform: uppercase;
 	font-size: 11px;
-	color: #00414d;
+	color: #FFF;
 	font-family: 'Open Sans', arial, sans-serif;
 	font-weight: 400;
 }
@@ -324,34 +326,25 @@ nav a:hover {
     position: absolute;
 	background-color: rgba(255,255,255,0.9);
 	overflow: auto;
-
 }
 
 #menudocumentation nav ul#search_result a {
-	  transition: all 0.05s ease-in-out !important;
 	color: #00677A;
 	font-size: 11px;
 	font-family: 'Open Sans', arial, sans-serif;
 	font-weight: 400;
 	padding: 0px;
 }
-#menudocumentation nav ul#search_result a.sr-api{
-	color:green;
-}
-#menudocumentation nav a.ui-state-focus { 
-border-bottom: 1px dotted;
-	color:orange !important;
-} 
-/*
+
 #menudocumentation nav ul#search_result li:hover {
 	color: #00AEAF;
-}*/
+}
 
 #menudocumentation nav ul#search_result a li {
 	padding: 5px 10px 5px 15px;
 }
 
-#menudocumentation nav a:hover,#menudocumentation nav a.link-selected {
+#menudocumentation nav a:hover, nav a.link-selected {
 	border-bottom: 2px solid rgba(255,255,255,0.75);
 	color: rgba(255,255,255,0.75);
 }
@@ -388,24 +381,30 @@ border-bottom: 1px dotted;
 	z-index: 400;
 	height: 100px;
 	box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
+}
+
+#topMenu.teal {
 	background-color: #00677A;
 }
 
-#topMenu h2, .biglink {
-	display: block;
+#topMenu.orange {
+	background-color: #b54b00;
+}
+
+#topMenu h2 {
 	font-family: 'Open Sans', arial, sans-serif;
 	font-weight: 300;
 	font-weight: normal;
 	font-size: 24px;
 	color: rgba(255,255,255,1);
-	padding-left: 235px;
+	padding-left: 205px;
 	padding-top: 15px;
 }
 
 #topMenu nav {
 	position: absolute;
 	top: 25px;
-	left: 215px;
+	left: 190px;
 	height: 50px;
 	padding-top: 35px;	
 }
@@ -436,7 +435,7 @@ border-bottom: 1px dotted;
  *******************/
  
 #left {
-	position: absolute; /* changed from fixed */
+	position: fixed;
 	top: 0;
 	left: 0;
 	width: 150px;
@@ -506,10 +505,10 @@ ul.slides a {
 	text-transform: uppercase;
     line-height: 46px;
     color: #fff;
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    border-radius: 25px;
-    background-color: #00AEAF;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #F7781E;
 	margin-top: 15px;
 }
 
@@ -559,18 +558,18 @@ ul.slides a {
 	padding-right: 25px;
 }
 
-.docsWidget h4, .sectionlink h4 {
+.docsWidget h4 {
 	font-family: 'Open Sans', arial, sans-serif;
 	font-weight: 400;
-	font-size: 24px;
+	font-size: 18px;
 	display: block;
 	height: 40px;
 	margin-bottom: 10px;
 }
 
-.docsWidget h4 a, .sectionlink h4 a {
-	border-left: 2px solid #00AEAF;
-	color: #00AEAF;
+.docsWidget h4 a {
+	border-left: 2px solid #F7781E;
+	color: #F7781E;
 	padding-left: 25px;
 	padding-bottom: 10px;
     padding-top: 10px;
@@ -580,7 +579,7 @@ ul.slides a {
 	color: #e53b30;
 }
 
-.docsWidget.blue a:hover, .sectionlink.blue a:hover {
+.docsWidget.blue a:hover {
 	color: #006892;
 }
 
@@ -596,13 +595,13 @@ ul.slides a {
 	display: block;
 	padding-left: 27px;
 	padding-top: 15px;
-	color: #666;
 }
 
 div#apps-platform {
 	position: relative;
-	padding: 1% 14% 0 15%;
-	background-color: white;
+	padding: 80px 14% 30px 15%;
+	text-align: center;
+	background-color: #f9f9f9;
 }
 
 div.build {
@@ -611,20 +610,31 @@ div.build {
 	width: 48%;
 	margin-right: 2%;
 	padding-bottom: 15px;
+	text-align: center;
 }
 
-div.build a {
-	display: block;
-	width: 100%;
-	height: 200px;
-	margin-bottom: 10px;
+div.build img {
+	width: 30%;
+	margin-bottom: 25px;
 }
 
 div.build h5 {
 	font-family: 'Roboto Mono', monospace;
 	font-weight: 400;
-	font-size: 18px;
-    color: #00AEAF;
+	font-size: 36px;
+	padding-bottom: 20px;
+}
+
+.orange {
+    color: #F7781E;
+}
+
+.bluegrey {
+	color: #6a8e9a;
+}
+
+.teal {
+	color: #00687a;
 }
 
 div.build a.usecase01-bg {
@@ -655,18 +665,11 @@ div.usecase {
 	padding-bottom: 15px;
 }
 
-div.usecase a {
-	display: block;
-	width: 100%;
-	height: 200px;
-	margin-bottom: 10px;
-}
-
 div.usecase h5 {
 	font-family: 'Roboto Mono', monospace;
 	font-weight: 400;
 	font-size: 18px;
-    color: #00AEAF;
+    color: #F7781E;
 }
 
 div.usecase a.usecase01-bg {
@@ -684,6 +687,47 @@ div.usecase a.usecase03-bg {
 	background-size: cover;
 }
 
+.button {
+	display: inline-block;
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #FFF;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #FFF;
+    font-size: 18px;
+    margin-top: 15px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.button.orange {
+    color: #F7781E;
+    border: 1px solid #F7781E;
+}
+
+.button.orange:hover {
+    color: #FFF;
+    background-color: #F7781E;
+}
+
+.button.teal {
+    color: #00687a;
+    border: 1px solid #00687a;
+}
+
+.button.teal:hover {
+    color: #FFF;
+    background-color: #00687a;
+}
+
 /*******************
  *     FOOTER      *
  *******************/
@@ -695,8 +739,6 @@ div.usecase a.usecase03-bg {
 	background-color: #FFF;
 	padding-top: 25px;
 	padding-bottom: 25px;
-}
-
-.wrapper.homepage #footer {
-	padding-left: 200px;
+	text-align: center;
+	
 }

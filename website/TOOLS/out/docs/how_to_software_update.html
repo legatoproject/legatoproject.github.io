@@ -32,24 +32,22 @@
 <div id="top">
 <header>
 <nav>
-<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/partners/">Partners</a><a class="navlink" href="/apps/">Build Apps</a><a class="subnavlink" href="/apps/intro">Introduction</a><a class="subnavlink" href="/apps/getstarted">Get started</a><a class="subnavlink" href="/docs/build_apps_main.html">Documentation</a><a class="subnavlink" href="/apps/community">Community</a><a class="subnavlink" href="/apps/license">License</a><a class="navlink" href="/platform/">Build Platform</a><a class="subnavlink" href="/platform/">Introduction</a><a class="subnavlink" href="/platform/">Get started</a><a class="subnavlink" href="/platform/docs">Documentation</a><a class="subnavlink" href="/platform/">Community</a><a class="subnavlink" href="/platform/">License</a>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/partners/">Partners</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/platform/">Build Platform</a><a class="subnavlink" href="/platform/">Introduction</a><a class="subnavlink" href="/platform/">Get started</a><a class="subnavlink" href="/platform/docs">Documentation</a><a class="subnavlink" href="/platform/">Community</a><a class="subnavlink" href="/platform/">License</a>
 </nav>
 </header>
 </div>
-<div id="menudocumentation">
+<div class="orange" id="menudocumentation">
 <header>
 <h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
 <h2>/ Build Apps Documentation</h2>
 <nav class="ui-front" id="searchresult">
-<a href="/apps/docs/learn/">Learn</a><a href="/apps/docs/converted/">Converted API</a><a href="/apps/docs/api/">API Guides</a><a href="/apps/docs/tools/">Tools</a><a href="/apps/docs/reference/">Reference</a>
 <i class="fa fa-search"></i>
 <input id="autocomplete" onkeyup="getdata()" /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
 <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="search_result" tabindex="0"></ul>
 </nav>
 </header>
 </div>
-<div id="topMenu">
-<a class="biglink" href="/docs/">Legato Docs</a>
+<div class="orange" id="topMenu">
 <nav>
 <a class="link-selected" href="build_apps_main.html">Build Apps</a><a href="build_platform_main.html">Build Platform</a><a href="about_main.html">About</a>
 </nav>
@@ -86,7 +84,7 @@ Build Your System</h1>
 <p>Here's a sample .sdef file using numerous platform services:</p>
 <div class="fragment"><div class="line">apps:</div><div class="line">{</div><div class="line"> <span class="comment">// Platform services.</span></div><div class="line">    $LEGATO_ROOT/apps/platformServices/airVantage/avcService</div><div class="line">    $LEGATO_ROOT/apps/platformServices/audioService</div><div class="line">    $LEGATO_ROOT/apps/platformServices/cellNetService</div><div class="line">    $LEGATO_ROOT/apps/platformServices/dataConnectionService</div><div class="line">    $LEGATO_ROOT/apps/platformServices/fwupdateService</div><div class="line">    $LEGATO_ROOT/apps/platformServices/modemService</div><div class="line">    $LEGATO_ROOT/apps/platformServices/positioningService</div><div class="line">    $LEGATO_ROOT/apps/platformServices/powerMgr</div><div class="line">    $LEGATO_ROOT/apps/platformServices/secStore</div><div class="line">    $LEGATO_ROOT/apps/platformServices/smsInboxService</div><div class="line">    $LEGATO_ROOT/apps/platformServices/voiceCallService</div><div class="line">    $LEGATO_ROOT/apps/platformServices/gpioService</div><div class="line"></div><div class="line"> <span class="comment">// Command-line tools.</span></div><div class="line">    $LEGATO_ROOT/apps/tools/tools</div><div class="line">}</div><div class="line"></div><div class="line">commands:</div><div class="line">{</div><div class="line">    cm = tools:/bin/cm</div><div class="line">    fwupdate = tools:/bin/fwupdate</div><div class="line">    secstore = tools:/bin/secstore</div><div class="line">}</div></div><!-- fragment --><h2><a class="anchor" id="howToSoftwareUpdate_buildSystem_preserve"></a>
 Preserve App Between Systems</h2>
-<p>To preserve an app between systems, ensure the app is included in the defFilesSdef_apps: section of the <code></code>.sdef file.</p>
+<p>To preserve an app between systems, ensure the app is included in the <a class="el" href="def_files_sdef.html#defFilesSdef_apps">apps</a> section of the <code></code>.sdef file.</p>
 <h1><a class="anchor" id="howToSystemUpdate_maintainConfig"></a>
 Maintain Config Settings</h1>
 <p>This is how to maintain system config settings outside of the /apps and /users branches of the config tree:</p>

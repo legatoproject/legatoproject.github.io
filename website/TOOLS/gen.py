@@ -136,8 +136,7 @@ def split_toc_into_categories(filepath):
 def gen_autotopmenu(dir, filename, contents):
     innerHTML = '<a href="{0}"{1}>{2}</a>'
     outerHTML = """
-    <div id="topMenu">
-    <a href=/docs/ class="biglink">Legato Docs</a>
+    <div id="topMenu" class="orange">
     <nav>
     {0}
     </nav>

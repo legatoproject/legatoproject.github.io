@@ -1,25 +1,6 @@
 {
     "links": [
-        {
-            "title": "Learn",
-            "href": "/apps/docs/learn/"
-        },
-	{
-       	     "title": "Converted API",
-            "href": "/apps/docs/converted/"
-	},
-        {
-            "title": "API Guides",
-            "href": "/apps/docs/api/"
-        },
-        {
-            "title": "Tools",
-            "href": "/apps/docs/tools/"
-        },
-        {
-            "title": "Reference",
-            "href": "/apps/docs/reference/"
-        }
+
     ],
     "innerHTML": "<a href=\"{0}\"{1}>{2}</a>",
     "title": "Build Apps Documentation",
