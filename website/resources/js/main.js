@@ -99,7 +99,7 @@ function getdata() {
                     for (i = 0; i < hits.length; i++) {
                         var result = new Object();
                         result.value = hits[i].id;
-                        result.label = "<b>" + hits[i].fields.category +"</b> " +  hits[i].fields.title;
+                        result.label =  ""+ hits[i].fields.category +"<br/><b>" +  hits[i].fields.title +"</b>";
                         result.cat = hits[i].fields.category;
                         result.title = hits[i].fields.title;
                         results.push(result);

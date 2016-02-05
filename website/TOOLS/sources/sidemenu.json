@@ -4,7 +4,6 @@
                "title": "Introduction",
                "href": "/index.html"
           },
-  
           {
                "title": "Build Apps",
                "href": "/docs/getstarted_main.html",
@@ -35,12 +34,21 @@
                          "title": "Yocto Info",
                          "href": "/docs/yocto_main.html"
                     }
-              
                ]
           },
-                  {
-               "title": "Partners",
+          {
+               "title": "Community",
                "href": "/partners/"
+          }
+          ,
+          {
+               "title": "License",
+               "href": "/license/"
+          }
+          ,
+          {
+               "title": "About",
+               "href": "/about/"
           }
      ],
      "innerHTML": "<a href=\"{0}\"{1}>{2}</a>",

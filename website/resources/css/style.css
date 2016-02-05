@@ -294,18 +294,61 @@ nav a:hover {
     border-bottom: 2px solid rgba(255,255,255,1.0);
     color: rgba(255,255,255,1.0);
 }
-
-#menudocumentation nav input#autocomplete {
-	background-color: white;
-	border: none;
-	-webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-	height: 15px;
-	padding-left: 15px;
-	width: 100px;
+#searchresult .fa-search{
+		font-size:1.4em;
+	/*	 -webkit-animation: spin 0.25s infinite linear; */
 }
 
+
+@-webkit-keyframes spin {
+	from {
+		transform: rotate(0deg)
+		           translate(-8px)
+		           rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg)
+		           translate(-8px) 
+		           rotate(-360deg);
+	}
+}
+
+#menudocumentation nav input#autocomplete {
+	background-color: transparent;
+	border: none;
+	border-bottom: white solid 2px;
+	height: 1.5em;
+	font-size:150%;
+	padding-left: 15px;
+	width: 12em;
+	color:white;
+}
+#menudocumentation nav input#autocomplete:focus{
+	outline: none;
+}
+/* shifted off screen for screen readers I guess */
+.ui-helper-hidden-accessible { position: absolute; left:-999em; }
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: white;
+       opacity:  0.8;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: white;
+       opacity:  0.8;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: white;
+       opacity:  0.8;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+       color: white;
+       opacity:  0.8;
+}
+:placeholder-shown { /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
+    color: white;
+       opacity:  0.8;
+}
 #menudocumentation nav label {
 	text-transform: uppercase;
 	font-size: 11px;
@@ -324,12 +367,15 @@ nav a:hover {
     top: 55px;
     left: 425px;
     position: absolute;
-	background-color: rgba(255,255,255,0.9);
+
 	overflow: auto;
+	    background:#B54B00;
+    box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
+
 }
 
 #menudocumentation nav ul#search_result a {
-	color: #00677A;
+	color: white;
 	font-size: 11px;
 	font-family: 'Open Sans', arial, sans-serif;
 	font-weight: 400;
@@ -337,7 +383,7 @@ nav a:hover {
 }
 
 #menudocumentation nav ul#search_result li:hover {
-	color: #00AEAF;
+	text-decoration: underline;
 }
 
 #menudocumentation nav ul#search_result a li {
@@ -462,6 +508,7 @@ nav a:hover {
 }
 
 ul.slides {
+	background: #00687a;
 	height: 500px;
 	text-align: center;
 }
@@ -552,6 +599,10 @@ ul.slides a {
 	padding-bottom: 25px;
 }
 
+.content.orange h2, .content.orange h3 {
+    color: #F7781E;
+}
+
 .docsWidget {
 	position: relative;
 	float: left;
@@ -574,6 +625,11 @@ ul.slides a {
 	padding-left: 25px;
 	padding-bottom: 10px;
     padding-top: 10px;
+}
+
+.content.orange h4 a {
+    color: #00677A;
+	border-left: 2px solid #00677A;
 }
 
 .docsWidget.red a:hover {
@@ -626,9 +682,6 @@ div.build h5 {
 	padding-bottom: 20px;
 }
 
-.orange {
-    color: #F7781E;
-}
 
 .bluegrey {
 	color: #6a8e9a;
@@ -743,3 +796,43 @@ div.usecase a.usecase03-bg {
 	text-align: center;
 	
 }
+
+/*******************
+ * DOXYGEN CONTENT *
+ *******************/
+
+.contents div.title {
+	font-family: 'Roboto Mono', monospace;
+	font-weight: 400;
+	font-size: 36px;
+	color: #00677A;
+	padding-bottom: 15px;
+}
+
+.contents h1 {
+	font-family: 'Roboto Mono', monospace;
+	font-weight: 400;
+	font-size: 24px;
+	color: #00677A;
+	padding: 15px 0px 10px 0px;
+}
+
+.contents p {
+	margin: 0;
+	padding: 0;
+}
+
+.contents a {
+	color: #00AEAF;
+	border-bottom: 1px dashed #00AEAF;
+}
+
+.contents a:hover {
+	color: #00ffff;
+	border-bottom: 1px dashed #00ffff;
+}
+
+.contents hr {
+	display: none;
+}
+
