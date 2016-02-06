@@ -294,6 +294,9 @@ nav a:hover {
     border-bottom: 2px solid rgba(255,255,255,1.0);
     color: rgba(255,255,255,1.0);
 }
+
+.ui-autocomplete-loading { background:url('/resources/images/spinny.gif') no-repeat right center }
+
 #searchresult .fa-search{
 		font-size:1.4em;
 	/*	 -webkit-animation: spin 0.25s infinite linear; */
@@ -381,8 +384,10 @@ nav a:hover {
 	font-weight: 400;
 	padding: 0px;
 }
-
-#menudocumentation nav ul#search_result li:hover {
+#menudocumentation nav ul#search_result a.ui-state-focus{
+	text-decoration: underline;
+}
+#menudocumentation nav ul#search_result a:hover {
 	text-decoration: underline;
 }
 
@@ -390,7 +395,7 @@ nav a:hover {
 	padding: 5px 10px 5px 15px;
 }
 
-#menudocumentation nav a:hover, nav a.link-selected {
+#menudocumentation nav a:hover, nav a.link-selected, nav a.ui-state-focus {
 	border-bottom: 2px solid rgba(255,255,255,0.75);
 	font-weight: bold;
     /* color: rgba(255,255,255,0.75); wtf? */ 

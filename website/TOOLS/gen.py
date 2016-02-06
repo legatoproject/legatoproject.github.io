@@ -79,11 +79,19 @@ def gen_nav(json_file, current_filepath):
 def gen_nav_from_dict(jsondata, current_filepath):
     innerHTML = ""
     links = jsondata["links"]
+    try:
+        title = jsondata["title"]
+    except KeyError:
+        c = cat_for_link(os.path.basename(current_filepath))
+        if c is not None:
+            title = c[0]
+        else:
+            title = "Legato Documentation"
+            print("Using default title for " + current_filepath)
     for x in links:
         # print("match_link(%s, %s) = %s" % (x["href"], current_filepath,match_link(x["href"], current_filepath)))
         innerHTML += format_nav_link(jsondata["innerHTML"], x, current_filepath)
-    outerHTML = file_dispatch(dir, join("_templates/", jsondata["template"]))[0].format(innerHTML,
-                                                                                        jsondata.get("title", ""))
+    outerHTML = file_dispatch(dir, join("_templates/", jsondata["template"]))[0].format(innerHTML,title)
     return outerHTML
 
 
@@ -139,7 +147,7 @@ def gen_tocfile(dir, filename, contents):
         print filename + " doesn't seem to be in the toc."
         return ""
     else:
-        return "/resources/tocs/" + x[0] + " " + x[1] + ".json"
+        return "/resources/tocs/" + " ".join(x) + ".json"
 
 
 def split_toc_into_categories(filepath):
@@ -220,17 +228,26 @@ def get_tree_hrefs(tree):
         pass
     return l
 
+cat_cache = {}
+cached_accesses = 0
 
 def cat_for_link(href):
+    if href in cat_cache:
+        global cached_accesses
+        cached_accesses += 1
+        return cat_cache[href]
+    for context in contexts:
+        if href == context['href']:
+            return context['label'], ""
     for context in flat_contexts:
         for cat in flat_contexts[context]:
-            if href in flat_contexts[context][cat]:
-                return context, cat
-            if href.replace("_source.html", ".html") in flat_contexts[context][cat]:  # because source files aren't in the toc
+            if href in flat_contexts[context][cat] or href.replace("_source.html", ".html") in flat_contexts[context][cat]:
+                cat_cache[href] = (context,cat)
                 return context, cat
 
 
 if __name__ == "__main__":
+    
     print("src_dir = %s" % src_dir)
     contexts = split_toc_into_categories(join(src_dir, "toc.json"))
     tocdir = join(os.getcwd(), "out/resources/tocs/")
@@ -284,3 +301,4 @@ if __name__ == "__main__":
                     f.write(contents)
             else:
                 shutil.copy(filepath, join(outdir, file))
+    print("Cached acceses: %s" % cached_accesses)

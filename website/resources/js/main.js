@@ -76,12 +76,14 @@ function getdata() {
     var invoke_url = "";
     var domain = "";
     invoke_url = "http://search-dmitry-legato-c23azpit2gnttqniivoexmuqwy.us-west-2.cloudsearch.amazonaws.com/2013-01-01/search"; //API Gateway endpoint-search all documents;
-    $("#search_result").empty();
+
+
     var keyword = $('#autocomplete').val();
     // console.log(keyword);
 
     var ac = $("#autocomplete").autocomplete({
-
+        delay: 10,
+        autoFocus: true,
         source: function(request, response) {
 
 
@@ -93,17 +95,30 @@ function getdata() {
                     size: 15,
                     sort: "_score desc"
                 },
+                change: function(e, ui) {
+                    console.log(e.target.value);
+                },
                 success: function(data) {
                     var hits = data.hits.hit;
                     var results = []
-                    for (i = 0; i < hits.length; i++) {
-                        var result = new Object();
-                        result.value = hits[i].id;
-                        result.label =  ""+ hits[i].fields.category +"<br/><b>" +  hits[i].fields.title +"</b>";
-                        result.cat = hits[i].fields.category;
-                        result.title = hits[i].fields.title;
-                        results.push(result);
-                    }
+                    if (hits.length == 0) {
+                        results.push({
+                            value: "#",
+                            label: "No results found :("
+                        });
+                    } else
+                        for (i = 0; i < hits.length; i++) {
+                            var result = new Object();
+                            result.value = hits[i].id;
+                            result.cat = hits[i].fields.category;
+                            if (result.cat === undefined)
+                                result.cat = "Root"
+
+                            result.label = "" + result.cat + "<br/><b>" + hits[i].fields.title + "</b>";
+
+                            result.title = hits[i].fields.title;
+                            results.push(result);
+                        }
                     response(results);
                 }
             });
@@ -133,7 +148,7 @@ function getdata() {
     ac.data("ui-autocomplete")._renderItem = function(ul, item) {
         var itemclass;
         // TODO: maintain this stuff :
-        switch(item.cat){
+        switch (item.cat) {
             case "API Guides":
                 itemclass = "sr-api";
                 break;

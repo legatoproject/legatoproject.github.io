@@ -3,6 +3,5 @@
 
     ],
     "innerHTML": "<a href=\"{0}\"{1}>{2}</a>",
-    "title": "Build Apps Documentation",
     "template": "doc_header.html"
 }
