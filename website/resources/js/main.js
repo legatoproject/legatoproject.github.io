@@ -72,7 +72,7 @@ $("#Tools").bind("click", function() {
     $("#tree4").show();
 });
 
-function getdata() {
+function getdata(ctx) {
     var invoke_url = "";
     var domain = "";
     invoke_url = "http://search-dmitry-legato-c23azpit2gnttqniivoexmuqwy.us-west-2.cloudsearch.amazonaws.com/2013-01-01/search"; //API Gateway endpoint-search all documents;
@@ -93,6 +93,7 @@ function getdata() {
                 data: {
                     q: request.term,
                     size: 15,
+                    fq:"context:'" + ctx + "'",
                     sort: "_score desc"
                 },
                 change: function(e, ui) {

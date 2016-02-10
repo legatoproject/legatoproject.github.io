@@ -68,15 +68,15 @@ def file_dispatch(dir, filename, subdir=None, only_in_subdir=True):
 
 
 # Generates a navbar from json. Current filepath is the document it's on, since we need to know which link should light up.
-def gen_nav(json_file, current_filepath):
+def gen_nav(json_file, current_filepath, *args):
     dir = os.path.dirname(join(os.getcwd(), src_dir, current_filepath))
     jsn, dir = file_dispatch(dir, json_file, "_templates/", False)
     jsondata = json.loads(jsn, object_pairs_hook=OrderedDict)
-    return gen_nav_from_dict(jsondata, current_filepath)
+    return gen_nav_from_dict(jsondata, current_filepath, *args)
 
 
 # Generates a navbar from json. Current filepath is the document it's on, since we need to know which link should light up.
-def gen_nav_from_dict(jsondata, current_filepath):
+def gen_nav_from_dict(jsondata, current_filepath, *args):
     innerHTML = ""
     links = jsondata["links"]
     try:
@@ -91,7 +91,7 @@ def gen_nav_from_dict(jsondata, current_filepath):
     for x in links:
         # print("match_link(%s, %s) = %s" % (x["href"], current_filepath,match_link(x["href"], current_filepath)))
         innerHTML += format_nav_link(jsondata["innerHTML"], x, current_filepath)
-    outerHTML = file_dispatch(dir, join("_templates/", jsondata["template"]))[0].format(innerHTML,title)
+    outerHTML = file_dispatch(dir, join("_templates/", jsondata["template"]))[0].format(*([innerHTML,title] + list(args)))
     return outerHTML
 
 
@@ -147,7 +147,7 @@ def gen_tocfile(dir, filename, contents):
         print filename + " doesn't seem to be in the toc."
         return ""
     else:
-        return "/resources/tocs/" + " ".join(x) + ".json"
+        return "/resources/tocs/" + (" ".join(x)).strip(" ") + ".json"
 
 
 def split_toc_into_categories(filepath):

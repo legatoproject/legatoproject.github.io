@@ -1,6 +1,6 @@
 set -ex
 echo "Cleaning..."
-rm -r out/*
+rm -rf out/*
 echo "Running templater..."
 python gen.py
 echo "Copying..."
