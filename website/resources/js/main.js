@@ -75,7 +75,7 @@ $("#Tools").bind("click", function() {
 function getdata(ctx) {
     var invoke_url = "";
     var domain = "";
-    invoke_url = "http://search-dmitry-legato-c23azpit2gnttqniivoexmuqwy.us-west-2.cloudsearch.amazonaws.com/2013-01-01/search"; //API Gateway endpoint-search all documents;
+    invoke_url = "https://search-legato-eifosnaj736darrvvqhqwpevzy.us-west-2.cloudsearch.amazonaws.com/2013-01-01/search"; //API Gateway endpoint-search all documents;
 
 
     var keyword = $('#autocomplete').val();
@@ -88,7 +88,7 @@ function getdata(ctx) {
 
 
             $.ajax({
-                url: "https://crossorigin.me/https://search-dmitry-legato-c23azpit2gnttqniivoexmuqwy.us-west-2.cloudsearch.amazonaws.com/2013-01-01/search?",
+                url: "https://crossorigin.me/" + invoke_url,
                 dataType: "json",
                 data: {
                     q: request.term,
