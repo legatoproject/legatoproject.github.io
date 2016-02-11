@@ -551,6 +551,10 @@ ul.slides a {
 	padding-bottom: 25px;
 }
 
+.content.orange h2, .content.orange h3 {
+    color: #F7781E;
+}
+
 .docsWidget {
 	position: relative;
 	float: left;
@@ -573,6 +577,11 @@ ul.slides a {
 	padding-left: 25px;
 	padding-bottom: 10px;
     padding-top: 10px;
+}
+
+.content.orange h4 a {
+    color: #00677A;
+	border-left: 2px solid #00677A;
 }
 
 .docsWidget.red a:hover {
@@ -623,10 +632,6 @@ div.build h5 {
 	font-weight: 400;
 	font-size: 36px;
 	padding-bottom: 20px;
-}
-
-.orange {
-    color: #F7781E;
 }
 
 .bluegrey {
