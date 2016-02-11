@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-<title>Legato  - Legato Docs</title>
+<title>instsys  - Legato Docs</title>
 <meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
 <meta content="#keywords" name="keywords" />
 <meta content="noindex, nofollow" name="robots" />
@@ -23,7 +23,7 @@
 <script src="/resources/js/jquery.cookie.js"></script>
 <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 <script>
-        setupTree("/resources/tocs/About Legato.json");
+        setupTree("/resources/tocs/Build Apps Documentation.json");
         </script>
 </head>
 <body>
@@ -39,16 +39,16 @@
 <div class="orange" id="menudocumentation">
 <header>
 <h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
-<h2>/ About</h2>
+<h2>/ Build Apps</h2>
 <nav class="ui-front" id="searchresult">
 <i class="fa fa-search"></i>
-<input id="autocomplete" onkeyup="getdata('About')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
 </nav>
 </header>
 </div>
 <div class="orange" id="topMenu">
 <nav>
-<a class="link-selected" href="about_legato.html">Legato</a><a href="about_docs.html">Docs</a>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
 </nav>
 </div>
 <div id="left">
@@ -57,24 +57,25 @@
 <div class="content">
 <div class="header">
 <div class="headertitle">
-<h1 class="title">Legato </h1> </div>
+<h1 class="title">instsys </h1> </div>
 </div><div class="contents">
-<div class="textblock"><p><br />
-<br />
-<br />
-<br />
-</p><center><div class="image">
-<img alt="legatoLogo.png" src="legatoLogo.png" />
-</div>
-</center><center><a class="doc-version" href="#" title="16.01.0.Beta-8-g1ae78b7">16.01.0.Beta <em>(1ae78b7)</em></a> <br />
-<br />
-</center><center>Get help or report an issue:</center><center><a href="https://forum.sierrawireless.com/viewforum.php?f=177">Legato Forum</a></center><center><br />
-<br />
-</center><center>Open Sans typeface Apache License, version 2.0</center><center><a href="http://www.apache.org/licenses/LICENSE-2.0.html">License</a></center><center><br />
-<br />
-<br />
-<br />
- Copyright (C) Sierra Wireless Inc. Use of this work is subject to license.</center> </div></div>
+<div class="textblock"><h1>NAME</h1>
+<p><b>instsys</b> - apply update to target device</p>
+<h1>SYNOPSIS</h1>
+<p><code>instsys UPDATE_FILE [DEST_IP]</code><br />
+</p>
+<h1>DESCRIPTION</h1>
+<p>Apply the given update pack to the target device at a given IP address.</p>
+<p>UPDATE_FILE is the update pack file to be applied. E.g., 'myApp.ar7.update' or 'system.wp85.update'.</p>
+<p>DEST_IP is the IP address of the target device. If DEST_IP is not specified on the command line, the contents of the DEST_IP environment variable will be used.</p>
+<p>System update files are created by 'mksys'. App update files are created by 'mkapp'. App removal update packs and firmware update packs can be created using 'update-pack'.</p>
+<p>NOTE: App removal and app update packs can be concatenated together. E.g., to remove an app called 'myApp' and re-install it, </p><pre class="fragment">update-pack -ar myApp -o myApp.remove.update
+cat myApp.remove.update myApp.wp85.update > myApp.reinstall.wp85.update
+update myApp.reinstall.wp85.update
+</pre><p>Other types of update packs cannot be combined.</p>
+<hr />
+<p> Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
 <br clear="left" />
 </div>
 <div id="footer">

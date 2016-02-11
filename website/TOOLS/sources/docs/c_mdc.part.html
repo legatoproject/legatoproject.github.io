@@ -27,6 +27,9 @@ Data Profiles</h1>
 <li>Access Point Name using <a class="el" href="le__mdc__interface_8h.html#a1777f22b1a400593c3e0fb879acd57c6">le_mdc_SetAPN()</a>.</li>
 <li>Authentication settings using <a class="el" href="le__mdc__interface_8h.html#abf58f1dd7d4f9b915647e9c0f642065b">le_mdc_SetAuthentication()</a>.</li>
 </ul>
+<p>A sample code can be seen in the following page:</p><ul>
+<li><a class="el" href="c_mdc_data_profiles.html">Sample code for Data Profiles</a></li>
+</ul>
 <h1><a class="anchor" id="le_mdc_session"></a>
 Data Sessions</h1>
 <h2><a class="anchor" id="le_mdc_session_MO"></a>
@@ -42,13 +45,14 @@ Mobile Terminated (MT-PDP context activation)</h2>
 <h2><a class="anchor" id="le_mdc_session_networkItf"></a>
 Network interface settings</h2>
 <p>Once a data session starts, a Linux network interface is created. It's the application's responsibility to configure the network interface, usually through a DHCP client. Query the interface name using <a class="el" href="le__mdc__interface_8h.html#abf470aa8e252114cbb95b4e337083d52">le_mdc_GetInterfaceName()</a>. The IP Preference can be checked with <a class="el" href="le__mdc__interface_8h.html#aa3912e94864a6e5862e07f58b3772cba">le_mdc_IsIPv4()</a> or <a class="el" href="le__mdc__interface_8h.html#adde11de0b17b2c937acca6355b6fba11">le_mdc_IsIPv6()</a> when the profile is connected. The IP address for the current data session can be retreived by <a class="el" href="le__mdc__interface_8h.html#a732acb5823549a1644aa1bb5ba69fea5">le_mdc_GetIPv4Address()</a> or <a class="el" href="le__mdc__interface_8h.html#aacd6a0b646f26625cdb26a78d42f8e5f">le_mdc_GetIPv6Address()</a>. The Gateway and DNS addresses can be retrieved using <a class="el" href="le__mdc__interface_8h.html#af4be1afa6d44a4a7041f9f02660704b9">le_mdc_GetIPv4GatewayAddress()</a>, <a class="el" href="le__mdc__interface_8h.html#ae99f6e212de1b0c0ea8a8763b62e0bea">le_mdc_GetIPv4DNSAddresses()</a> or <a class="el" href="le__mdc__interface_8h.html#a0b82eac1ed112bd3b82060cc54751246">le_mdc_GetIPv6GatewayAddress()</a>, <a class="el" href="le__mdc__interface_8h.html#a8aeb3f684567eee2976b851b7d713f01">le_mdc_GetIPv6DNSAddresses()</a>. The Access Point Name can be retrieved by <a class="el" href="le__mdc__interface_8h.html#ac9accd1ea303d6840e5e7de19b0dae6f">le_mdc_GetAPN()</a>. The Data bearer Technology can be retreived by <a class="el" href="le__mdc__interface_8h.html#a1b17bb87b347162013b5ad608cdcda2d">le_mdc_GetDataBearerTechnology()</a>. When the data session is stopped, the disconnection reason can be known using <a class="el" href="le__mdc__interface_8h.html#afe73f44c23b1bd120dd82a85b36c6059">le_mdc_GetDisconnectionReason()</a> or <a class="el" href="le__mdc__interface_8h.html#a3e3a92b0f5e3edab9400412170517a62">le_mdc_GetPlatformSpecificDisconnectionCode()</a> (refer to your platform documentation for further details).</p>
+<p>A sample code can be seen in the following page:</p><ul>
+<li><a class="el" href="c_mdc_data_sessions.html">Sample code for network interface settings</a></li>
+</ul>
 <h1><a class="anchor" id="le_mdc_dataStatistics"></a>
 Data Statistics</h1>
 <p>Data bytes received/transmitted can be access through <a class="el" href="le__mdc__interface_8h.html#aaad833c105f7d0ae77f18195d6739080">le_mdc_GetBytesCounters()</a>. These values correspond to the number of bytes received/transmitted since the last software reset or the last <a class="el" href="le__mdc__interface_8h.html#a63636b2779d2ee6a6520ebfb2d26666c">le_mdc_ResetBytesCounter()</a> called. Making these value persistent after a software reboot is the client responsibility.</p>
-<h1><a class="anchor" id="le_mdc_sampleCode"></a>
-Sample code</h1>
 <p>A sample code can be seen in the following page:</p><ul>
-<li><a class="el" href="c_mdc_sample_code.html">Sample code for Data modem service</a></li>
+<li><a class="el" href="c_mdc_data_statistics.html">Sample code for Data Statistics</a></li>
 </ul>
 <hr />
 <p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>

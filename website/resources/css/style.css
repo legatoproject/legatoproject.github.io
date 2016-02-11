@@ -291,8 +291,7 @@ nav a:hover {
 }
 
 #menudocumentation nav a:hover, #menudocumentation nav a.link-selected {
-    border-bottom: 2px solid rgba(255,255,255,1.0);
-    color: rgba(255,255,255,1.0);
+
 }
 
 .ui-autocomplete-loading { background:url('/resources/images/spinny.gif') no-repeat right center }
@@ -355,7 +354,7 @@ nav a:hover {
 #menudocumentation nav label {
 	text-transform: uppercase;
 	font-size: 11px;
-	color: #FFF;
+	color: #00677A;
 	font-family: 'Open Sans', arial, sans-serif;
 	font-weight: 400;
 }
@@ -372,24 +371,25 @@ nav a:hover {
     position: absolute;
 
 	overflow: auto;
-	    background:#B54B00;
+	    background:#FFF;
+	    color:#00677A;
     box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
 
 }
 
 #menudocumentation nav ul#search_result a {
-	color: white;
+	
 	font-size: 11px;
 	font-family: 'Open Sans', arial, sans-serif;
 	font-weight: 400;
 	padding: 0px;
 }
-#menudocumentation nav ul#search_result a.ui-state-focus{
-	text-decoration: underline;
+#menudocumentation nav ul#search_result a.ui-state-focus:before, #menudocumentation nav ul#search_result a:hover:before{
+    content: "|";
+    float: left;
+    font-size: 2.5em;
 }
-#menudocumentation nav ul#search_result a:hover {
-	text-decoration: underline;
-}
+
 
 #menudocumentation nav ul#search_result a li {
 	padding: 5px 10px 5px 15px;
