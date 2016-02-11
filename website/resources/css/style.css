@@ -427,7 +427,7 @@ nav a:hover {
 
 #topMenu {
 	position: absolute;
-	top: 50px;
+	top: 0.8em;
 	left: 0;
 	width: 100%;
 	z-index: 400;
