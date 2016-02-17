@@ -11,7 +11,7 @@ IPC interfaces binding</h1>
 <p>All the functions of this API are provided by the <b>powerMgr</b> service.</p>
 <p>Here's a code sample binding to Power Manager services: </p><pre class="fragment">bindings:
 {
-   clientExe.clientComponent.le_pm -> powerMgr.le_pm
+   clientExe.clientComponent.le_pm -&gt; powerMgr.le_pm
 }
 </pre><h1><a class="anchor" id="le_pm_request"></a>
 Requesting and releasing a wakeup source</h1>
@@ -19,5 +19,5 @@ Requesting and releasing a wakeup source</h1>
 <p>Power Manager service will automatically release and delete all wakeup sources held on behalf of an exiting or disconnecting client.</p>
 <p>For deterministic behaviour, clients requesting services of Power Manager should have CAP_EPOLLWAKEUP (or CAP_BLOCK_SUSPEND) capability assigned.</p>
 <hr />
-<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>

@@ -13,9 +13,9 @@
 <p>DEST_IP is the IP address of the target device. If DEST_IP is not specified on the command line, the contents of the DEST_IP environment variable will be used.</p>
 <p>System update files are created by 'mksys'. App update files are created by 'mkapp'. App removal update packs and firmware update packs can be created using 'update-pack'.</p>
 <p>NOTE: App removal and app update packs can be concatenated together. E.g., to remove an app called 'myApp' and re-install it, </p><pre class="fragment">update-pack -ar myApp -o myApp.remove.update
-cat myApp.remove.update myApp.wp85.update > myApp.reinstall.wp85.update
+cat myApp.remove.update myApp.wp85.update &gt; myApp.reinstall.wp85.update
 update myApp.reinstall.wp85.update
 </pre><p>Other types of update packs cannot be combined.</p>
 <hr />
-<p> Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright"> Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>

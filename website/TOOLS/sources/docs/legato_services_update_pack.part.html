@@ -26,7 +26,7 @@ Update System</h2>
 <pre class="fragment">Field   = Description
 ----------------------------------------------------------------------------------------------------
 command = string = "updateSystem"
-md5     = string = MD5 hash of system's build staging area (excluding <c>info.properties</c> file).
+md5     = string = MD5 hash of system's build staging area (excluding &lt;c&gt;info.properties&lt;/c&gt; file).
 size    = integer = Number of bytes of payload associated.
 </pre><p>Code sample:</p>
 <pre class="fragment">{
@@ -86,7 +86,7 @@ size    = unsigned integer = Number of bytes of payload associated with this tas
 App Updates Concatenation</h1>
 <p>App removal and app install update packs can be combined together by concatenating their files together into a single file.</p>
 <p>Code sample:</p>
-<div class="fragment"><div class="line">$ cat app1.remove.update app2.wp85.update app3.wp85.update > myMultiAppChanges.update</div></div><!-- fragment --><p>It's <b>strongly</b> recommended that system updates be used instead of concatenated app changes. System updates are applied atomically preventing problems that can result from a multi-app update being interrupted before all the changes could be applied (e.g., by a power loss, reset, or loss of connectivity.</p>
+<div class="fragment"><div class="line">$ cat app1.remove.update app2.wp85.update app3.wp85.update &gt; myMultiAppChanges.update</div></div><!-- fragment --><p>It's <b>strongly</b> recommended that system updates be used instead of concatenated app changes. System updates are applied atomically preventing problems that can result from a multi-app update being interrupted before all the changes could be applied (e.g., by a power loss, reset, or loss of connectivity.</p>
 <hr />
-<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>

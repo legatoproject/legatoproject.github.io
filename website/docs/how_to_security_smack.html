@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Implementing SMACK  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">Implementing SMACK </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p>See <a class="el" href="basic_security_smack.html">SMACK</a> basics.</p>
+<h1><a class="anchor" id="howToSandboxSmack_overview"></a>
+Overview</h1>
+<p>Simplified Mandatory Access Control Kernel (SMACK) provides a simple solution for mandatory access control (MAC). MAC provides the ability for a centralized entity to set access policy for system resources.</p>
+<p>Linux's default access control policy is governed by permission bits on system resources (files, directories, devices, etc.). Permission bits can be modified by the resource owner (process with the same user ID as the resource). The access control policy is at the discretion of the resource owner; this system is classified as DAC (discretionary access control). With DAC, policies are set in a distributed manner as there are often many system users, each setting the access policy for its own resources.</p>
+<p>In contrast, MAC policies are set for all system resources by a centralized entity.</p>
+<p>Linux's DAC has known weaknesses that can lead to security leaks. MAC is often used to overcome some of the short comings of DAC for systems that require a higher level of security.</p>
+<p>SMACK isn't the only MAC solution available. Because it's a simple solution, it's not flexible enough to handle all use cases. For the majority of use cases, it will be easier to setup and maintain.</p>
+<p>SMACK supplements Linux's DAC system. DAC permissions are checked first; if access is granted, SMACK permissions are then checked. Consequently, SMACK can only limit access, it can't grant access beyond DAC permissions.</p>
+<p>SMACK uses 'labels' on resources (objects in SMACK terminology) and processes (subjects) to determine access. Labels on resources can only be set by a privileged process. A privileged process can only set it's own label but not labels of other processes.</p>
+<p>There are a number of single character labels ("_", "^", "*", "?", "@") that have special meanings. SMACK restricts read/write/execute access based on the subject label and the object label according to the following rules:</p>
+<ol type="1">
+<li>Any access requested by a task labelled "*" is denied.</li>
+<li>A read or execute access requested by a task labelled "^" is permitted.</li>
+<li>A read or execute access requested on an object labelled "_" is permitted.</li>
+<li>Any access requested on an object labelled "*" is permitted.</li>
+<li>Any access requested by a task on an object with the same label is permitted.</li>
+<li>Any access requested that is explicitly defined in the loaded rule set is permitted.</li>
+<li>Any other access is denied.</li>
+</ol>
+<p>Rule 6 lets us use explicit rules through adding specific labels. Explicit rules define the access rights a subject label can have on an object label. Only privileged processes can set rules.</p>
+<h1><a class="anchor" id="howToSandboxSmack_privProcess"></a>
+Privileged Processess</h1>
+<p>Privileged processes use the CAP_MAC_OVERRIDE capability. It's also possible to configure the system so the CAP_MAC_OVERRIDE is honoured only for processes with a specific label. This configuration allows the system to restrict root processes (have CAP_MAC_OVERRIDE) that don't have the proper SMACK label.</p>
+<h1><a class="anchor" id="howToSandboxSmack_assignLabels"></a>
+Assigning Labels</h1>
+<p>Use smack_SetMyLabel() to set the SMACK label for the calling process. The calling process must be a privileged process. Setting SMACK labels for other processes isn't possible.</p>
+<p>To set the SMACK label for file system objects use smack_SetLabel(), again the calling process must be privileged.</p>
+<h1><a class="anchor" id="howToSandboxSmack_setRules"></a>
+Set Rules</h1>
+<p>Use smack_SetRule() to set an explicit SMACK rule that gives a specified subject access to a specified object.</p>
+<h1><a class="anchor" id="howToSandboxSmack_supervisor"></a>
+Supervisor</h1>
+<p>SMACK policies are set by the Legato startup scripts, the Legato Installer, and the Legato Supervisor.</p>
+<p>By default system files have the "_" SMACK label meaning everyone has read and execute access to them. The Legato startup scripts are responsible for setting SMACK labels for system files that require special permission handling (e.g., <code>/dev/null</code> file is given the label "*" by the start up scripts so the file is fully accessible to everyone. The Legato startup scripts also ensure the Legato Supervisor and Installer have the 'admin' SMACK label.</p>
+<p>The Legato Installer sets SMACK labels for all app bundled files. The SMACK label for each app is unique to the app.</p>
+<p>The Supervisor sets SMACK labels for framework daemons, processes for apps, sandbox directories and SMACK rules for IPC bindings.</p>
+<p>Framework daemons are given the SMACK label "framework".</p>
+<p>All processes are given the same SMACK label as their app. All app labels are unique.</p>
+<p>SMACK rules are set so IPC bindings between apps work. Here's a code sample of rules to set if a client app needs to access a server app:</p>
+<div class="fragment"><div class="line"><span class="stringliteral">'clientAppLabel'</span> rw <span class="stringliteral">'serverAppLabel'</span> <span class="comment">// client has read-write access to server.</span></div><div class="line"><span class="stringliteral">'serverAppLabel'</span> rw <span class="stringliteral">'clientAppLabel'</span> <span class="comment">// server has read-write access to client.</span></div></div><!-- fragment --><p>Sandboxed directories are given labels corresponding to the app's access rights to those directory. Generally, an app only has read and execute permission to its sandboxes /bin directory. Its properties look like this:</p>
+<p>owner = root group = root DAC permissions = ---—r-x SMACK label = 'AppLabelrx'</p>
+<p>The Supervisor also sets up the SMACK rule so the app has the proper access to the directory:</p>
+<p>'AppLabel' rx 'AppLabelrx'</p>
+<p>App's directories are given different labels than the app itself so that if an IPC binding is present, the remote app has access to the local app but doesn't have direct access to the local app's files.</p>
+<p>All bundled files within an app's sandbox are given the app's SMACK label. This supports passing file descriptors from one app to another. However, the file descriptor can't be passed onto a third app.</p>
+<h1><a class="anchor" id="howToSandboxSmack_limitations"></a>
+Limitations</h1>
+<p>Extended attributes used to store the SMACK label are available on all file systems we currently use with one key feature is missing: when a new file is created, the file should inherit the SMACK label of the creator. Because this feature is missing, our current implementation of SMACK has the following limitations:</p>
+<ul>
+<li>Mqueue file system will always set new files to "_" label. This means we can't control access between apps that use MQueues.</li>
+<li>Tmpfs always sets new files to "*" label. This means we can't totally control access to files created in sandboxes because sandboxes use tmpfs. It's only an issue when file descriptors for the created files are passed over IPC to another app. The other app can then pass that fd onto a third app and so on.</li>
+<li>Yaffs2/UBIFS do not set any label for newly created files. This causes an issue with the config daemon that has the label "framework", but its created files don't have any labels. To work around this, the config daemon must run as root and the 'onlycap' SMACK file must not be set. This means there is limited protection because all root processes have the ability to change SMACK labels on files.</li>
+<li>QMI sockets are currently set to "*" because some apps need to write to them. Ideally, the QMI socket file would be given a label such as "qmi" and a rule would be created to only allow access to the app that requires it. However, there currently isn't a way to specify this in the xdef file.</li>
+</ul>
+<hr />
+<p class="copyright"> Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

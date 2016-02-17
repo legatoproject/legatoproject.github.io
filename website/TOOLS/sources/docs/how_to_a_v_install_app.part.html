@@ -14,7 +14,7 @@ $ av-pack -f helloWorld.wp85.update abcCo.jsmith.helloWorld _build_helloWorld/wp
 <p>The output will be a file called <code>helloWorld.zip</code>.</p>
 <p>If your target device has been configured for app signature checks or to accept only encrypted apps, you must use your signing/encryption tool to sign the <code></code>.update file and then pack it with <code>av-pack</code> instead. Don't sign or encrypt the <code>manifest.app</code> file, or the final <code></code>.zip file, as AirVantage won't be able to read them.</p>
 <pre class="fragment">$ mkapp -t wp85 helloWorld.adef
-$ cat helloWorld.wp85.update | myAppSigner > helloWorld.wp85.signed
+$ cat helloWorld.wp85.update | myAppSigner &gt; helloWorld.wp85.signed
 $ av-pack -f helloWorld.wp85.signed abcCo.jsmith.helloWorld _build_helloWorld/wp85
 </pre><h1><a class="anchor" id="howToAVInstallApp_usingAv"></a>
 Using AirVantage Platform</h1>
@@ -22,7 +22,7 @@ Using AirVantage Platform</h1>
 <p><b>Upload app</b></p>
 <p>Your app zip file name will be something like <code>helloWorld.zip</code>.</p>
 <p>See <a href="https://doc.airvantage.net/display/USERGUIDE/Getting+Started">AirVantage Getting Started</a> Develop+Activity : "My
-Apps" Section -> action Release ( select publish) for details.</p>
+Apps" Section -&gt; action Release ( select publish) for details.</p>
 <p><b>Create app installation job</b></p>
 <p>You need to create the app install job on the platform: in your system <code>Monitor</code> view, <code>More</code> menu, choose <code>Install app</code> and select the app you just uploaded (released and published) in previous step.</p>
 <h1><a class="anchor" id="howToAVInstallApp_rcvAppAgent"></a>
@@ -37,5 +37,5 @@ Going further</h1>
 <hr />
 <p>See <a href="https://doc.airvantage.net/display/USERGUIDE/Getting+Started">AirVantage Getting Started</a> more details.</p>
 <hr />
-<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>

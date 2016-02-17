@@ -11,59 +11,59 @@
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a69a38f7e650f581bb5e2b5ce7e339202"><td align="right" class="memItemLeft" valign="top">typedef struct le_pos_Sample * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a></td></tr>
-<tr class="separator:a69a38f7e650f581bb5e2b5ce7e339202"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a5a6f639c1293ba027109b40be3ab21bd"><td align="right" class="memItemLeft" valign="top">typedef struct le_pos_MovementHandler * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#a5a6f639c1293ba027109b40be3ab21bd">le_pos_MovementHandlerRef_t</a></td></tr>
-<tr class="separator:a5a6f639c1293ba027109b40be3ab21bd"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a52ec35470a43299a2c6850927c2c5090"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#a52ec35470a43299a2c6850927c2c5090">le_pos_MovementHandlerFunc_t</a>) (<a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a> positionSampleRef, void *contextPtr)</td></tr>
-<tr class="separator:a52ec35470a43299a2c6850927c2c5090"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a69a38f7e650f581bb5e2b5ce7e339202"><td align="right" class="memItemLeft" valign="top">typedef struct le_pos_Sample *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a></td></tr>
+<tr class="separator:a69a38f7e650f581bb5e2b5ce7e339202"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:a5a6f639c1293ba027109b40be3ab21bd"><td align="right" class="memItemLeft" valign="top">typedef struct le_pos_MovementHandler *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#a5a6f639c1293ba027109b40be3ab21bd">le_pos_MovementHandlerRef_t</a></td></tr>
+<tr class="separator:a5a6f639c1293ba027109b40be3ab21bd"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:a52ec35470a43299a2c6850927c2c5090"><td align="right" class="memItemLeft" valign="top">typedef void(*&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#a52ec35470a43299a2c6850927c2c5090">le_pos_MovementHandlerFunc_t</a>) (<a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a> positionSampleRef, void *contextPtr)</td></tr>
+<tr class="separator:a52ec35470a43299a2c6850927c2c5090"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aecea99c52e78dc7ecc3402339fc20ddf"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#aecea99c52e78dc7ecc3402339fc20ddf">le_pos_ConnectService</a> (void)</td></tr>
-<tr class="separator:aecea99c52e78dc7ecc3402339fc20ddf"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:aeeb3c52f69727372526718e51bec0e0e"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#aeeb3c52f69727372526718e51bec0e0e">le_pos_DisconnectService</a> (void)</td></tr>
-<tr class="separator:aeeb3c52f69727372526718e51bec0e0e"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a17e99072772110c1609c53247d663ed3"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__pos__interface_8h.html#a5a6f639c1293ba027109b40be3ab21bd">le_pos_MovementHandlerRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#a17e99072772110c1609c53247d663ed3">le_pos_AddMovementHandler</a> (uint32_t horizontalMagnitude, uint32_t verticalMagnitude, <a class="el" href="le__pos__interface_8h.html#a52ec35470a43299a2c6850927c2c5090">le_pos_MovementHandlerFunc_t</a> handlerPtr, void *contextPtr)</td></tr>
-<tr class="separator:a17e99072772110c1609c53247d663ed3"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a3c1b616489fc29fc578e58c6b570f14b"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#a3c1b616489fc29fc578e58c6b570f14b">le_pos_RemoveMovementHandler</a> (<a class="el" href="le__pos__interface_8h.html#a5a6f639c1293ba027109b40be3ab21bd">le_pos_MovementHandlerRef_t</a> addHandlerRef)</td></tr>
-<tr class="separator:a3c1b616489fc29fc578e58c6b570f14b"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a0aefc90df207f2e20286ea1be88e70d4"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#a0aefc90df207f2e20286ea1be88e70d4">le_pos_Get2DLocation</a> (int32_t *latitudePtr, int32_t *longitudePtr, int32_t *hAccuracyPtr)</td></tr>
-<tr class="separator:a0aefc90df207f2e20286ea1be88e70d4"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ad2e96a853c9e3d4daa351494ff2070ba"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#ad2e96a853c9e3d4daa351494ff2070ba">le_pos_Get3DLocation</a> (int32_t *latitudePtr, int32_t *longitudePtr, int32_t *hAccuracyPtr, int32_t *altitudePtr, int32_t *vAccuracyPtr)</td></tr>
-<tr class="separator:ad2e96a853c9e3d4daa351494ff2070ba"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a7f8c37ad14a3375eb9b5d6954916be41"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#a7f8c37ad14a3375eb9b5d6954916be41">le_pos_GetTime</a> (uint16_t *hoursPtr, uint16_t *minutesPtr, uint16_t *secondsPtr, uint16_t *millisecondsPtr)</td></tr>
-<tr class="separator:a7f8c37ad14a3375eb9b5d6954916be41"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a190d242995bb06518b5a064df5578c85"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#a190d242995bb06518b5a064df5578c85">le_pos_GetDate</a> (uint16_t *yearPtr, uint16_t *monthPtr, uint16_t *dayPtr)</td></tr>
-<tr class="separator:a190d242995bb06518b5a064df5578c85"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a5b483fdcd812f4da7bdda284e9bb18b6"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#a5b483fdcd812f4da7bdda284e9bb18b6">le_pos_GetMotion</a> (uint32_t *hSpeedPtrPtr, int32_t *hSpeedAccuracyPtrPtr, int32_t *vSpeedPtrPtr, int32_t *vSpeedAccuracyPtrPtr)</td></tr>
-<tr class="separator:a5b483fdcd812f4da7bdda284e9bb18b6"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ae06eaad71c152ade96d9b3f2e87a2053"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#ae06eaad71c152ade96d9b3f2e87a2053">le_pos_GetHeading</a> (int32_t *headingPtr, int32_t *headingAccuracyPtr)</td></tr>
-<tr class="separator:ae06eaad71c152ade96d9b3f2e87a2053"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a2b5b4e4ce66c4f1653d6f0982bbd5feb"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#a2b5b4e4ce66c4f1653d6f0982bbd5feb">le_pos_GetDirection</a> (int32_t *directionPtr, int32_t *directionAccuracyPtr)</td></tr>
-<tr class="separator:a2b5b4e4ce66c4f1653d6f0982bbd5feb"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ae7b3b16601465b663b468f12c63ea485"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#ae7b3b16601465b663b468f12c63ea485">le_pos_sample_Get2DLocation</a> (<a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a> positionSampleRef, int32_t *latitudePtr, int32_t *longitudePtr, int32_t *horizontalAccuracyPtr)</td></tr>
-<tr class="separator:ae7b3b16601465b663b468f12c63ea485"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a47171bf14bf4f249d3b76a8ed204f13c"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#a47171bf14bf4f249d3b76a8ed204f13c">le_pos_sample_GetTime</a> (<a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a> positionSampleRef, uint16_t *hoursPtr, uint16_t *minutesPtr, uint16_t *secondsPtr, uint16_t *millisecondsPtr)</td></tr>
-<tr class="separator:a47171bf14bf4f249d3b76a8ed204f13c"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a8249f20e9d5020aaa23e54ccf6bbeb9d"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#a8249f20e9d5020aaa23e54ccf6bbeb9d">le_pos_sample_GetDate</a> (<a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a> positionSampleRef, uint16_t *yearPtr, uint16_t *monthPtr, uint16_t *dayPtr)</td></tr>
-<tr class="separator:a8249f20e9d5020aaa23e54ccf6bbeb9d"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ac6c6868fdc51ce14492adfcd0d7274c0"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#ac6c6868fdc51ce14492adfcd0d7274c0">le_pos_sample_GetAltitude</a> (<a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a> positionSampleRef, int32_t *altitudePtr, int32_t *altitudeAccuracyPtr)</td></tr>
-<tr class="separator:ac6c6868fdc51ce14492adfcd0d7274c0"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a0bb7a30675f1dd7891b22c7753d7caec"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#a0bb7a30675f1dd7891b22c7753d7caec">le_pos_sample_GetHorizontalSpeed</a> (<a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a> positionSampleRef, uint32_t *hspeedPtr, int32_t *hspeedAccuracyPtr)</td></tr>
-<tr class="separator:a0bb7a30675f1dd7891b22c7753d7caec"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a18162e15ad9a61696312745ec0bec1fd"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#a18162e15ad9a61696312745ec0bec1fd">le_pos_sample_GetVerticalSpeed</a> (<a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a> positionSampleRef, int32_t *vspeedPtr, int32_t *vspeedAccuracyPtr)</td></tr>
-<tr class="separator:a18162e15ad9a61696312745ec0bec1fd"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a181f453d46f8b5440d91f2af1b4ebbfb"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#a181f453d46f8b5440d91f2af1b4ebbfb">le_pos_sample_GetHeading</a> (<a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a> positionSampleRef, int32_t *headingPtr, int32_t *headingAccuracyPtr)</td></tr>
-<tr class="separator:a181f453d46f8b5440d91f2af1b4ebbfb"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ae42d09bb5146b52dd1f628a93611bc31"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#ae42d09bb5146b52dd1f628a93611bc31">le_pos_sample_GetDirection</a> (<a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a> positionSampleRef, int32_t *directionPtr, int32_t *directionAccuracyPtr)</td></tr>
-<tr class="separator:ae42d09bb5146b52dd1f628a93611bc31"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:af2999e2e4f7eca899b2af1125547e3ea"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#af2999e2e4f7eca899b2af1125547e3ea">le_pos_sample_Release</a> (<a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a> positionSampleRef)</td></tr>
-<tr class="separator:af2999e2e4f7eca899b2af1125547e3ea"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aecea99c52e78dc7ecc3402339fc20ddf"><td align="right" class="memItemLeft" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#aecea99c52e78dc7ecc3402339fc20ddf">le_pos_ConnectService</a> (void)</td></tr>
+<tr class="separator:aecea99c52e78dc7ecc3402339fc20ddf"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:aeeb3c52f69727372526718e51bec0e0e"><td align="right" class="memItemLeft" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#aeeb3c52f69727372526718e51bec0e0e">le_pos_DisconnectService</a> (void)</td></tr>
+<tr class="separator:aeeb3c52f69727372526718e51bec0e0e"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:a17e99072772110c1609c53247d663ed3"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__pos__interface_8h.html#a5a6f639c1293ba027109b40be3ab21bd">le_pos_MovementHandlerRef_t</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#a17e99072772110c1609c53247d663ed3">le_pos_AddMovementHandler</a> (uint32_t horizontalMagnitude, uint32_t verticalMagnitude, <a class="el" href="le__pos__interface_8h.html#a52ec35470a43299a2c6850927c2c5090">le_pos_MovementHandlerFunc_t</a> handlerPtr, void *contextPtr)</td></tr>
+<tr class="separator:a17e99072772110c1609c53247d663ed3"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:a3c1b616489fc29fc578e58c6b570f14b"><td align="right" class="memItemLeft" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#a3c1b616489fc29fc578e58c6b570f14b">le_pos_RemoveMovementHandler</a> (<a class="el" href="le__pos__interface_8h.html#a5a6f639c1293ba027109b40be3ab21bd">le_pos_MovementHandlerRef_t</a> addHandlerRef)</td></tr>
+<tr class="separator:a3c1b616489fc29fc578e58c6b570f14b"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:a0aefc90df207f2e20286ea1be88e70d4"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#a0aefc90df207f2e20286ea1be88e70d4">le_pos_Get2DLocation</a> (int32_t *latitudePtr, int32_t *longitudePtr, int32_t *hAccuracyPtr)</td></tr>
+<tr class="separator:a0aefc90df207f2e20286ea1be88e70d4"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:ad2e96a853c9e3d4daa351494ff2070ba"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#ad2e96a853c9e3d4daa351494ff2070ba">le_pos_Get3DLocation</a> (int32_t *latitudePtr, int32_t *longitudePtr, int32_t *hAccuracyPtr, int32_t *altitudePtr, int32_t *vAccuracyPtr)</td></tr>
+<tr class="separator:ad2e96a853c9e3d4daa351494ff2070ba"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:a7f8c37ad14a3375eb9b5d6954916be41"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#a7f8c37ad14a3375eb9b5d6954916be41">le_pos_GetTime</a> (uint16_t *hoursPtr, uint16_t *minutesPtr, uint16_t *secondsPtr, uint16_t *millisecondsPtr)</td></tr>
+<tr class="separator:a7f8c37ad14a3375eb9b5d6954916be41"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:a190d242995bb06518b5a064df5578c85"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#a190d242995bb06518b5a064df5578c85">le_pos_GetDate</a> (uint16_t *yearPtr, uint16_t *monthPtr, uint16_t *dayPtr)</td></tr>
+<tr class="separator:a190d242995bb06518b5a064df5578c85"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:a5b483fdcd812f4da7bdda284e9bb18b6"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#a5b483fdcd812f4da7bdda284e9bb18b6">le_pos_GetMotion</a> (uint32_t *hSpeedPtrPtr, int32_t *hSpeedAccuracyPtrPtr, int32_t *vSpeedPtrPtr, int32_t *vSpeedAccuracyPtrPtr)</td></tr>
+<tr class="separator:a5b483fdcd812f4da7bdda284e9bb18b6"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:ae06eaad71c152ade96d9b3f2e87a2053"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#ae06eaad71c152ade96d9b3f2e87a2053">le_pos_GetHeading</a> (int32_t *headingPtr, int32_t *headingAccuracyPtr)</td></tr>
+<tr class="separator:ae06eaad71c152ade96d9b3f2e87a2053"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:a2b5b4e4ce66c4f1653d6f0982bbd5feb"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#a2b5b4e4ce66c4f1653d6f0982bbd5feb">le_pos_GetDirection</a> (int32_t *directionPtr, int32_t *directionAccuracyPtr)</td></tr>
+<tr class="separator:a2b5b4e4ce66c4f1653d6f0982bbd5feb"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:ae7b3b16601465b663b468f12c63ea485"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#ae7b3b16601465b663b468f12c63ea485">le_pos_sample_Get2DLocation</a> (<a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a> positionSampleRef, int32_t *latitudePtr, int32_t *longitudePtr, int32_t *horizontalAccuracyPtr)</td></tr>
+<tr class="separator:ae7b3b16601465b663b468f12c63ea485"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:a47171bf14bf4f249d3b76a8ed204f13c"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#a47171bf14bf4f249d3b76a8ed204f13c">le_pos_sample_GetTime</a> (<a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a> positionSampleRef, uint16_t *hoursPtr, uint16_t *minutesPtr, uint16_t *secondsPtr, uint16_t *millisecondsPtr)</td></tr>
+<tr class="separator:a47171bf14bf4f249d3b76a8ed204f13c"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:a8249f20e9d5020aaa23e54ccf6bbeb9d"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#a8249f20e9d5020aaa23e54ccf6bbeb9d">le_pos_sample_GetDate</a> (<a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a> positionSampleRef, uint16_t *yearPtr, uint16_t *monthPtr, uint16_t *dayPtr)</td></tr>
+<tr class="separator:a8249f20e9d5020aaa23e54ccf6bbeb9d"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:ac6c6868fdc51ce14492adfcd0d7274c0"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#ac6c6868fdc51ce14492adfcd0d7274c0">le_pos_sample_GetAltitude</a> (<a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a> positionSampleRef, int32_t *altitudePtr, int32_t *altitudeAccuracyPtr)</td></tr>
+<tr class="separator:ac6c6868fdc51ce14492adfcd0d7274c0"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:a0bb7a30675f1dd7891b22c7753d7caec"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#a0bb7a30675f1dd7891b22c7753d7caec">le_pos_sample_GetHorizontalSpeed</a> (<a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a> positionSampleRef, uint32_t *hspeedPtr, int32_t *hspeedAccuracyPtr)</td></tr>
+<tr class="separator:a0bb7a30675f1dd7891b22c7753d7caec"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:a18162e15ad9a61696312745ec0bec1fd"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#a18162e15ad9a61696312745ec0bec1fd">le_pos_sample_GetVerticalSpeed</a> (<a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a> positionSampleRef, int32_t *vspeedPtr, int32_t *vspeedAccuracyPtr)</td></tr>
+<tr class="separator:a18162e15ad9a61696312745ec0bec1fd"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:a181f453d46f8b5440d91f2af1b4ebbfb"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#a181f453d46f8b5440d91f2af1b4ebbfb">le_pos_sample_GetHeading</a> (<a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a> positionSampleRef, int32_t *headingPtr, int32_t *headingAccuracyPtr)</td></tr>
+<tr class="separator:a181f453d46f8b5440d91f2af1b4ebbfb"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:ae42d09bb5146b52dd1f628a93611bc31"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#ae42d09bb5146b52dd1f628a93611bc31">le_pos_sample_GetDirection</a> (<a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a> positionSampleRef, int32_t *directionPtr, int32_t *directionAccuracyPtr)</td></tr>
+<tr class="separator:ae42d09bb5146b52dd1f628a93611bc31"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:af2999e2e4f7eca899b2af1125547e3ea"><td align="right" class="memItemLeft" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#af2999e2e4f7eca899b2af1125547e3ea">le_pos_sample_Release</a> (<a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a> positionSampleRef)</td></tr>
+<tr class="separator:af2999e2e4f7eca899b2af1125547e3ea"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
 </table>
 <a id="details" name="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Legato <a class="el" href="c_pos.html">Positioning</a> include file.</p>
-<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div><h2 class="groupheader">Typedef Documentation</h2>
 <a class="anchor" id="a52ec35470a43299a2c6850927c2c5090"></a>
 <div class="memitem">
@@ -116,26 +116,26 @@ Functions</h2></td></tr>
 <tr>
 <td class="memname"><a class="el" href="le__pos__interface_8h.html#a5a6f639c1293ba027109b40be3ab21bd">le_pos_MovementHandlerRef_t</a> le_pos_AddMovementHandler </td>
 <td>(</td>
-<td class="paramtype">uint32_t </td>
+<td class="paramtype">uint32_t&nbsp;</td>
 <td class="paramname"><em>horizontalMagnitude</em>, </td>
 </tr>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype">uint32_t </td>
+<td class="paramtype">uint32_t&nbsp;</td>
 <td class="paramname"><em>verticalMagnitude</em>, </td>
 </tr>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype"><a class="el" href="le__pos__interface_8h.html#a52ec35470a43299a2c6850927c2c5090">le_pos_MovementHandlerFunc_t</a> </td>
+<td class="paramtype"><a class="el" href="le__pos__interface_8h.html#a52ec35470a43299a2c6850927c2c5090">le_pos_MovementHandlerFunc_t</a>&nbsp;</td>
 <td class="paramname"><em>handlerPtr</em>, </td>
 </tr>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype">void * </td>
-<td class="paramname"><em>contextPtr</em> </td>
+<td class="paramtype">void *&nbsp;</td>
+<td class="paramname"><em>contextPtr</em>&nbsp;</td>
 </tr>
 <tr>
 <td></td>
@@ -164,7 +164,7 @@ Functions</h2></td></tr>
 <tr>
 <td class="memname">void le_pos_ConnectService </td>
 <td>(</td>
-<td class="paramtype">void </td>
+<td class="paramtype">void&nbsp;</td>
 <td class="paramname"></td><td>)</td>
 <td></td>
 </tr>
@@ -182,7 +182,7 @@ Functions</h2></td></tr>
 <tr>
 <td class="memname">void le_pos_DisconnectService </td>
 <td>(</td>
-<td class="paramtype">void </td>
+<td class="paramtype">void&nbsp;</td>
 <td class="paramname"></td><td>)</td>
 <td></td>
 </tr>
@@ -200,20 +200,20 @@ Functions</h2></td></tr>
 <tr>
 <td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_pos_Get2DLocation </td>
 <td>(</td>
-<td class="paramtype">int32_t * </td>
+<td class="paramtype">int32_t *&nbsp;</td>
 <td class="paramname"><em>latitudePtr</em>, </td>
 </tr>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype">int32_t * </td>
+<td class="paramtype">int32_t *&nbsp;</td>
 <td class="paramname"><em>longitudePtr</em>, </td>
 </tr>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype">int32_t * </td>
-<td class="paramname"><em>hAccuracyPtr</em> </td>
+<td class="paramtype">int32_t *&nbsp;</td>
+<td class="paramname"><em>hAccuracyPtr</em>&nbsp;</td>
 </tr>
 <tr>
 <td></td>
@@ -246,32 +246,32 @@ LE_OK Function succeeded.</dd></dl>
 <tr>
 <td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_pos_Get3DLocation </td>
 <td>(</td>
-<td class="paramtype">int32_t * </td>
+<td class="paramtype">int32_t *&nbsp;</td>
 <td class="paramname"><em>latitudePtr</em>, </td>
 </tr>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype">int32_t * </td>
+<td class="paramtype">int32_t *&nbsp;</td>
 <td class="paramname"><em>longitudePtr</em>, </td>
 </tr>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype">int32_t * </td>
+<td class="paramtype">int32_t *&nbsp;</td>
 <td class="paramname"><em>hAccuracyPtr</em>, </td>
 </tr>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype">int32_t * </td>
+<td class="paramtype">int32_t *&nbsp;</td>
 <td class="paramname"><em>altitudePtr</em>, </td>
 </tr>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype">int32_t * </td>
-<td class="paramname"><em>vAccuracyPtr</em> </td>
+<td class="paramtype">int32_t *&nbsp;</td>
+<td class="paramname"><em>vAccuracyPtr</em>&nbsp;</td>
 </tr>
 <tr>
 <td></td>
@@ -306,20 +306,20 @@ LE_OK Function succeeded.</dd></dl>
 <tr>
 <td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_pos_GetDate </td>
 <td>(</td>
-<td class="paramtype">uint16_t * </td>
+<td class="paramtype">uint16_t *&nbsp;</td>
 <td class="paramname"><em>yearPtr</em>, </td>
 </tr>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype">uint16_t * </td>
+<td class="paramtype">uint16_t *&nbsp;</td>
 <td class="paramname"><em>monthPtr</em>, </td>
 </tr>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype">uint16_t * </td>
-<td class="paramname"><em>dayPtr</em> </td>
+<td class="paramtype">uint16_t *&nbsp;</td>
+<td class="paramname"><em>dayPtr</em>&nbsp;</td>
 </tr>
 <tr>
 <td></td>
@@ -351,14 +351,14 @@ LE_OK Function succeeded. </dd></dl>
 <tr>
 <td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_pos_GetDirection </td>
 <td>(</td>
-<td class="paramtype">int32_t * </td>
+<td class="paramtype">int32_t *&nbsp;</td>
 <td class="paramname"><em>directionPtr</em>, </td>
 </tr>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype">int32_t * </td>
-<td class="paramname"><em>directionAccuracyPtr</em> </td>
+<td class="paramtype">int32_t *&nbsp;</td>
+<td class="paramname"><em>directionAccuracyPtr</em>&nbsp;</td>
 </tr>
 <tr>
 <td></td>
@@ -390,14 +390,14 @@ LE_OK Function succeeded.</dd></dl>
 <tr>
 <td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_pos_GetHeading </td>
 <td>(</td>
-<td class="paramtype">int32_t * </td>
+<td class="paramtype">int32_t *&nbsp;</td>
 <td class="paramname"><em>headingPtr</em>, </td>
 </tr>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype">int32_t * </td>
-<td class="paramname"><em>headingAccuracyPtr</em> </td>
+<td class="paramtype">int32_t *&nbsp;</td>
+<td class="paramname"><em>headingAccuracyPtr</em>&nbsp;</td>
 </tr>
 <tr>
 <td></td>
@@ -429,26 +429,26 @@ LE_OK Function succeeded.</dd></dl>
 <tr>
 <td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_pos_GetMotion </td>
 <td>(</td>
-<td class="paramtype">uint32_t * </td>
+<td class="paramtype">uint32_t *&nbsp;</td>
 <td class="paramname"><em>hSpeedPtrPtr</em>, </td>
 </tr>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype">int32_t * </td>
+<td class="paramtype">int32_t *&nbsp;</td>
 <td class="paramname"><em>hSpeedAccuracyPtrPtr</em>, </td>
 </tr>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype">int32_t * </td>
+<td class="paramtype">int32_t *&nbsp;</td>
 <td class="paramname"><em>vSpeedPtrPtr</em>, </td>
 </tr>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype">int32_t * </td>
-<td class="paramname"><em>vSpeedAccuracyPtrPtr</em> </td>
+<td class="paramtype">int32_t *&nbsp;</td>
+<td class="paramname"><em>vSpeedAccuracyPtrPtr</em>&nbsp;</td>
 </tr>
 <tr>
 <td></td>
@@ -482,26 +482,26 @@ LE_OK Function succeeded.</dd></dl>
 <tr>
 <td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_pos_GetTime </td>
 <td>(</td>
-<td class="paramtype">uint16_t * </td>
+<td class="paramtype">uint16_t *&nbsp;</td>
 <td class="paramname"><em>hoursPtr</em>, </td>
 </tr>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype">uint16_t * </td>
+<td class="paramtype">uint16_t *&nbsp;</td>
 <td class="paramname"><em>minutesPtr</em>, </td>
 </tr>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype">uint16_t * </td>
+<td class="paramtype">uint16_t *&nbsp;</td>
 <td class="paramname"><em>secondsPtr</em>, </td>
 </tr>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype">uint16_t * </td>
-<td class="paramname"><em>millisecondsPtr</em> </td>
+<td class="paramtype">uint16_t *&nbsp;</td>
+<td class="paramname"><em>millisecondsPtr</em>&nbsp;</td>
 </tr>
 <tr>
 <td></td>
@@ -534,7 +534,7 @@ LE_OK Function succeeded. </dd></dl>
 <tr>
 <td class="memname">void le_pos_RemoveMovementHandler </td>
 <td>(</td>
-<td class="paramtype"><a class="el" href="le__pos__interface_8h.html#a5a6f639c1293ba027109b40be3ab21bd">le_pos_MovementHandlerRef_t</a> </td>
+<td class="paramtype"><a class="el" href="le__pos__interface_8h.html#a5a6f639c1293ba027109b40be3ab21bd">le_pos_MovementHandlerRef_t</a>&nbsp;</td>
 <td class="paramname"><em>addHandlerRef</em></td><td>)</td>
 <td></td>
 </tr>
@@ -556,26 +556,26 @@ LE_OK Function succeeded. </dd></dl>
 <tr>
 <td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_pos_sample_Get2DLocation </td>
 <td>(</td>
-<td class="paramtype"><a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a> </td>
+<td class="paramtype"><a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a>&nbsp;</td>
 <td class="paramname"><em>positionSampleRef</em>, </td>
 </tr>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype">int32_t * </td>
+<td class="paramtype">int32_t *&nbsp;</td>
 <td class="paramname"><em>latitudePtr</em>, </td>
 </tr>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype">int32_t * </td>
+<td class="paramtype">int32_t *&nbsp;</td>
 <td class="paramname"><em>longitudePtr</em>, </td>
 </tr>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype">int32_t * </td>
-<td class="paramname"><em>horizontalAccuracyPtr</em> </td>
+<td class="paramtype">int32_t *&nbsp;</td>
+<td class="paramname"><em>horizontalAccuracyPtr</em>&nbsp;</td>
 </tr>
 <tr>
 <td></td>
@@ -611,20 +611,20 @@ latitudePtr, longitudePtr, horizontalAccuracyPtr can be set to NULL if not neede
 <tr>
 <td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_pos_sample_GetAltitude </td>
 <td>(</td>
-<td class="paramtype"><a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a> </td>
+<td class="paramtype"><a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a>&nbsp;</td>
 <td class="paramname"><em>positionSampleRef</em>, </td>
 </tr>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype">int32_t * </td>
+<td class="paramtype">int32_t *&nbsp;</td>
 <td class="paramname"><em>altitudePtr</em>, </td>
 </tr>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype">int32_t * </td>
-<td class="paramname"><em>altitudeAccuracyPtr</em> </td>
+<td class="paramtype">int32_t *&nbsp;</td>
+<td class="paramname"><em>altitudeAccuracyPtr</em>&nbsp;</td>
 </tr>
 <tr>
 <td></td>
@@ -659,26 +659,26 @@ altitudePtr, altitudeAccuracyPtr can be set to NULL if not needed. </dd></dl>
 <tr>
 <td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_pos_sample_GetDate </td>
 <td>(</td>
-<td class="paramtype"><a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a> </td>
+<td class="paramtype"><a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a>&nbsp;</td>
 <td class="paramname"><em>positionSampleRef</em>, </td>
 </tr>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype">uint16_t * </td>
+<td class="paramtype">uint16_t *&nbsp;</td>
 <td class="paramname"><em>yearPtr</em>, </td>
 </tr>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype">uint16_t * </td>
+<td class="paramtype">uint16_t *&nbsp;</td>
 <td class="paramname"><em>monthPtr</em>, </td>
 </tr>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype">uint16_t * </td>
-<td class="paramname"><em>dayPtr</em> </td>
+<td class="paramtype">uint16_t *&nbsp;</td>
+<td class="paramname"><em>dayPtr</em>&nbsp;</td>
 </tr>
 <tr>
 <td></td>
@@ -711,20 +711,20 @@ LE_OK Function succeeded. </dd></dl>
 <tr>
 <td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_pos_sample_GetDirection </td>
 <td>(</td>
-<td class="paramtype"><a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a> </td>
+<td class="paramtype"><a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a>&nbsp;</td>
 <td class="paramname"><em>positionSampleRef</em>, </td>
 </tr>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype">int32_t * </td>
+<td class="paramtype">int32_t *&nbsp;</td>
 <td class="paramname"><em>directionPtr</em>, </td>
 </tr>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype">int32_t * </td>
-<td class="paramname"><em>directionAccuracyPtr</em> </td>
+<td class="paramtype">int32_t *&nbsp;</td>
+<td class="paramname"><em>directionAccuracyPtr</em>&nbsp;</td>
 </tr>
 <tr>
 <td></td>
@@ -759,20 +759,20 @@ directionPtr, directionAccuracyPtr can be set to NULL if not needed. </dd></dl>
 <tr>
 <td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_pos_sample_GetHeading </td>
 <td>(</td>
-<td class="paramtype"><a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a> </td>
+<td class="paramtype"><a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a>&nbsp;</td>
 <td class="paramname"><em>positionSampleRef</em>, </td>
 </tr>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype">int32_t * </td>
+<td class="paramtype">int32_t *&nbsp;</td>
 <td class="paramname"><em>headingPtr</em>, </td>
 </tr>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype">int32_t * </td>
-<td class="paramname"><em>headingAccuracyPtr</em> </td>
+<td class="paramtype">int32_t *&nbsp;</td>
+<td class="paramname"><em>headingAccuracyPtr</em>&nbsp;</td>
 </tr>
 <tr>
 <td></td>
@@ -807,20 +807,20 @@ headingPtr, headingAccuracyPtr can be set to NULL if not needed. </dd></dl>
 <tr>
 <td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_pos_sample_GetHorizontalSpeed </td>
 <td>(</td>
-<td class="paramtype"><a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a> </td>
+<td class="paramtype"><a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a>&nbsp;</td>
 <td class="paramname"><em>positionSampleRef</em>, </td>
 </tr>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype">uint32_t * </td>
+<td class="paramtype">uint32_t *&nbsp;</td>
 <td class="paramname"><em>hspeedPtr</em>, </td>
 </tr>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype">int32_t * </td>
-<td class="paramname"><em>hspeedAccuracyPtr</em> </td>
+<td class="paramtype">int32_t *&nbsp;</td>
+<td class="paramname"><em>hspeedAccuracyPtr</em>&nbsp;</td>
 </tr>
 <tr>
 <td></td>
@@ -855,32 +855,32 @@ hSpeedPtr, hSpeedAccuracyPtr can be set to NULL if not needed. </dd></dl>
 <tr>
 <td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_pos_sample_GetTime </td>
 <td>(</td>
-<td class="paramtype"><a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a> </td>
+<td class="paramtype"><a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a>&nbsp;</td>
 <td class="paramname"><em>positionSampleRef</em>, </td>
 </tr>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype">uint16_t * </td>
+<td class="paramtype">uint16_t *&nbsp;</td>
 <td class="paramname"><em>hoursPtr</em>, </td>
 </tr>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype">uint16_t * </td>
+<td class="paramtype">uint16_t *&nbsp;</td>
 <td class="paramname"><em>minutesPtr</em>, </td>
 </tr>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype">uint16_t * </td>
+<td class="paramtype">uint16_t *&nbsp;</td>
 <td class="paramname"><em>secondsPtr</em>, </td>
 </tr>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype">uint16_t * </td>
-<td class="paramname"><em>millisecondsPtr</em> </td>
+<td class="paramtype">uint16_t *&nbsp;</td>
+<td class="paramname"><em>millisecondsPtr</em>&nbsp;</td>
 </tr>
 <tr>
 <td></td>
@@ -914,20 +914,20 @@ LE_OK Function succeeded. </dd></dl>
 <tr>
 <td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_pos_sample_GetVerticalSpeed </td>
 <td>(</td>
-<td class="paramtype"><a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a> </td>
+<td class="paramtype"><a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a>&nbsp;</td>
 <td class="paramname"><em>positionSampleRef</em>, </td>
 </tr>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype">int32_t * </td>
+<td class="paramtype">int32_t *&nbsp;</td>
 <td class="paramname"><em>vspeedPtr</em>, </td>
 </tr>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype">int32_t * </td>
-<td class="paramname"><em>vspeedAccuracyPtr</em> </td>
+<td class="paramtype">int32_t *&nbsp;</td>
+<td class="paramname"><em>vspeedAccuracyPtr</em>&nbsp;</td>
 </tr>
 <tr>
 <td></td>
@@ -962,7 +962,7 @@ vSpeedPtr, vSpeedAccuracyPtr can be set to NULL if not needed. </dd></dl>
 <tr>
 <td class="memname">void le_pos_sample_Release </td>
 <td>(</td>
-<td class="paramtype"><a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a> </td>
+<td class="paramtype"><a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a>&nbsp;</td>
 <td class="paramname"><em>positionSampleRef</em></td><td>)</td>
 <td></td>
 </tr>

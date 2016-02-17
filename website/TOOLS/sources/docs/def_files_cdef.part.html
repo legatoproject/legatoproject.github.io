@@ -40,7 +40,7 @@ Assets</h1>
 </pre><p>Once you've defined your assets, it's up to the app to instantiate instances of them at run-time using the <a class="el" href="c_le_avdata.html">AirVantage Data</a> API. Also see <a class="el" href="how_to_a_v_data.html">Manage AirVantage Data</a>.</p>
 <h1><a class="anchor" id="defFilesCdef_bundles"></a>
 Bundles</h1>
-<p>Lists additional files or directories to be copied from the build host into the app so they’re available to the app at runtime (e.g., audio files, web pages, executable scripts or programs built using some external build system).</p>
+<p>Lists additional files or directories to be copied from the build host into the app so they&rsquo;re available to the app at runtime (e.g., audio files, web pages, executable scripts or programs built using some external build system).</p>
 <pre class="fragment">bundles:
 {
     file:
@@ -120,8 +120,8 @@ API</h2>
 <p>Lists IPC services provided by this component to other components.</p>
 <p>Contents use the same syntax as the <code>requires:</code> <a class="el" href="def_files_cdef.html#defFilesCdef_requiresApi">API</a> section, except the options are different.</p>
 <p>Here's a code sample where <code> greet.api </code> defines a function called <code>Send()</code> where the C source code for the component (in <code>greetServer.c</code>) is implement a function called <code>greet_Send()</code>.</p>
-<div class="fragment"><div class="line">provides:</div><div class="line">{</div><div class="line">    api:</div><div class="line">    {</div><div class="line">        greet.api   <span class="comment">// We offer the Greet API to others so they can say “hello” to the world.</span></div><div class="line">        heat = digitalOutput.api</div><div class="line">        cool = digitalOutput.api</div><div class="line">    }</div><div class="line">}</div><div class="line"></div><div class="line">sources:</div><div class="line">{</div><div class="line">    greetServer.c</div><div class="line">    tempControl.c</div><div class="line">}</div></div><!-- fragment --><p>The component must implement the API functions being provided.</p>
-<p>In C, the source code must <code>#include “interfaces.h”</code> to get the auto-generated function prototype definitions and type definitions. The function and type names defined in the <code></code>.api files are prefixed with the interface name and an underscore (similar to required APIs).</p>
+<div class="fragment"><div class="line">provides:</div><div class="line">{</div><div class="line">    api:</div><div class="line">    {</div><div class="line">        greet.api   <span class="comment">// We offer the Greet API to others so they can say &ldquo;hello&rdquo; to the world.</span></div><div class="line">        heat = digitalOutput.api</div><div class="line">        cool = digitalOutput.api</div><div class="line">    }</div><div class="line">}</div><div class="line"></div><div class="line">sources:</div><div class="line">{</div><div class="line">    greetServer.c</div><div class="line">    tempControl.c</div><div class="line">}</div></div><!-- fragment --><p>The component must implement the API functions being provided.</p>
+<p>In C, the source code must <code>#include &ldquo;interfaces.h&rdquo;</code> to get the auto-generated function prototype definitions and type definitions. The function and type names defined in the <code></code>.api files are prefixed with the interface name and an underscore (similar to required APIs).</p>
 <h3><a class="anchor" id="defFilesCdef_providesApiManualStart"></a>
 [manual-start] Option</h3>
 <p>To reduce the initialization code a component writer needs to write, the build tools automatically try to advertise the service when the executable is run. Sometimes this is not the preferred behaviour.</p>
@@ -150,8 +150,8 @@ API</h2>
 <p>The name of the <code></code>.api file (minus the <code></code>.api extension) is the name of the interface, and in C code, the names of functions and data types defined in the <code></code>.api file are prefixed with the name of the interface with an underscore separator.</p>
 <div class="fragment"><div class="line">requires:</div><div class="line">{</div><div class="line">    api:</div><div class="line">    {</div><div class="line">        print.api <span class="comment">// WriteLine() from the API will appear in my C code as "print_WriteLine()".</span></div><div class="line">    }</div><div class="line">}</div></div><!-- fragment --><p>To rename the interface, an interface name followed by an equals sign ('=') can be added in front of the <code></code>.api file path.</p>
 <div class="fragment"><div class="line">requires:</div><div class="line">{</div><div class="line">    api:</div><div class="line">    {</div><div class="line">        hello = greet.api <span class="comment">// Send() from the API will appear as "hello_Send()" in my code.</span></div><div class="line">    }</div><div class="line">}</div></div><!-- fragment --><p>Multiple instances of the same API listed in the <code>api:</code> section must have unique instance names, and appear as separate functions with different prefixes.</p>
-<div class="fragment"><div class="line">requires:</div><div class="line">{</div><div class="line">    api:</div><div class="line">    {</div><div class="line">        heat = digitalOutput.api   <span class="comment">// Used to turn on and off the heater.</span></div><div class="line">        cool = digitalOutput.api   <span class="comment">// Used to turn on and off the cooling (A/C).</span></div><div class="line">    }</div><div class="line">}</div></div><!-- fragment --><p>If <code> digitalOutput.api </code> defines two functions <code>On()</code> <code>and</code> Off(), the component’s source code would have four functions available to it: <code>heat_On()</code>, <code>heat_Off()</code>, <code>cool_On()</code>, and <code>cool_Off()</code>.</p>
-<p>C/C++ source code must <code> #include “interfaces.h”</code> to use the auto-generated function definitions. The build tools will automatically generate a version of <code>interfaces.h</code> customized for your component that includes all declarations for all the interfaces the component uses.</p>
+<div class="fragment"><div class="line">requires:</div><div class="line">{</div><div class="line">    api:</div><div class="line">    {</div><div class="line">        heat = digitalOutput.api   <span class="comment">// Used to turn on and off the heater.</span></div><div class="line">        cool = digitalOutput.api   <span class="comment">// Used to turn on and off the cooling (A/C).</span></div><div class="line">    }</div><div class="line">}</div></div><!-- fragment --><p>If <code> digitalOutput.api </code> defines two functions <code>On()</code> <code>and</code> Off(), the component&rsquo;s source code would have four functions available to it: <code>heat_On()</code>, <code>heat_Off()</code>, <code>cool_On()</code>, and <code>cool_Off()</code>.</p>
+<p>C/C++ source code must <code> #include &ldquo;interfaces.h&rdquo;</code> to use the auto-generated function definitions. The build tools will automatically generate a version of <code>interfaces.h</code> customized for your component that includes all declarations for all the interfaces the component uses.</p>
 <p>The build tools search for the interface definition (.api) file based on the interface search path.</p>
 <h3><a class="anchor" id="defFilesCdef_requiresApiOptions"></a>
 Options</h3>
@@ -167,8 +167,8 @@ File</h2>
 <p>Things listed in <code>requires</code> are expected to be found on the target at runtime. They're not copied into the app at build time; they are made accessible to the app inside of its sandbox at runtime.</p>
 <p>Each entry consists of two file system paths:</p>
 <ul>
-<li>path to the object in the file system outside of the app, which must be an absolute path (beginning with ‘/’).</li>
-<li>absolute file system path inside the app’s sandbox where the object will appear at runtime.</li>
+<li>path to the object in the file system outside of the app, which must be an absolute path (beginning with &lsquo;/&rsquo;).</li>
+<li>absolute file system path inside the app&rsquo;s sandbox where the object will appear at runtime.</li>
 </ul>
 <p>A file path can be enclosed in quotation marks (either single ' or double "). This is required when it contains spaces or character sequences that would start comments.</p>
 <p>The first path can't end in a '/'.</p>
@@ -207,8 +207,8 @@ Device</h2>
 <p>Each entry consists of two file system paths and a set of optional access permissions:</p>
 <ul>
 <li>access permissions, readable ([r]) and/or writeable ([w]). Executable is not allowed on device files. If permission values are not specified, then read-only ([r]) is the default.</li>
-<li>path to the object in the file system outside of the app, which must be an absolute path (beginning with ‘/’). This must be a path to a valid character or block device file.</li>
-<li>absolute file system path inside the app’s sandbox where the object will appear at runtime.</li>
+<li>path to the object in the file system outside of the app, which must be an absolute path (beginning with &lsquo;/&rsquo;). This must be a path to a valid character or block device file.</li>
+<li>absolute file system path inside the app&rsquo;s sandbox where the object will appear at runtime.</li>
 </ul>
 <p>A file path can be enclosed in quotation marks (either single ' or double "). This is required when it contains spaces or character sequences that would start comments.</p>
 <p>The first path can't end in a '/'.</p>
@@ -246,8 +246,8 @@ Dir</h2>
 <p>Things listed here are expected to be found on the target at runtime. They are not copied into the app at build time; they are made accessible to the app inside of its sandbox at runtime.</p>
 <p>Each entry consists of two file system paths:</p>
 <ul>
-<li>The <b>first</b> path is the path to the directory <b>outside</b> of the app. This must be an absolute path (beginning with ‘/’) and can never end in a '/'.</li>
-<li>The <b>second</b> path is the absolute path <b>inside</b> the app’s sandbox where the directory will appear at runtime.</li>
+<li>The <b>first</b> path is the path to the directory <b>outside</b> of the app. This must be an absolute path (beginning with &lsquo;/&rsquo;) and can never end in a '/'.</li>
+<li>The <b>second</b> path is the absolute path <b>inside</b> the app&rsquo;s sandbox where the directory will appear at runtime.</li>
 </ul>
 <p>Paths can be enclosed in quotation marks (either single ' or double "). This is required when it contains spaces or character sequences that would start comments.</p>
 <p>If the second path ends in a '/', then it's specifying the directory into which the object will appear, and the object will have the same name inside the sandbox as it has outside the sandbox.</p>
@@ -274,12 +274,12 @@ Dir</h2>
 Lib</h2>
 <p>The <code>lib:</code> subsection of the <code>requires:</code> section is used to specify that a shared (dynamic) library is required by any executable that the component is part of.</p>
 <p>The required library will be linked with executables that the component is a part of.</p>
-<p>Specifying a shared library file's path will result in "<c>-L<c>" and "<c>-l<c>" arguments being added to the linker's command line.</p>
+<p>Specifying a shared library file's path will result in "&lt;c&gt;-L&lt;c&gt;" and "&lt;c&gt;-l&lt;c&gt;" arguments being added to the linker's command line.</p>
 <p>This is useful when linking to libraries that are not part of the target's sysroot. (If the library is part of the target's sysroot, then the <code>ldflags:</code> section can be used instead.)</p>
 <p>On the target device at runtime, the dynamic linker will look for the library, so it must be made available inside the app sandbox, somewhere in the dynamic linker's library search path. (The dynamic linker will typically look in the <code>/lib</code> and <code>/usr/lib</code> directories for libraries at runtime.)</p>
 <p>The library file can be bundled as a part of the app using the <b><code>bundles:</code></b> section of the <code>.cdef</code> file.</p>
 <div class="fragment"><div class="line">bundles:</div><div class="line">{</div><div class="line">    file:</div><div class="line">    {</div><div class="line"> <span class="comment">// Bundle the "foo" library as part of the app (in the app's /lib directory).</span></div><div class="line">        libfoo.so.3     /lib/</div><div class="line">        libfoo.so.3.1.1 /lib/</div><div class="line">    }</div><div class="line">}</div></div><!-- fragment --><p>Or, if the library is already present on the target, then the <code>files:</code> or <code>dirs:</code> subsection of the <b><code>requires:</code></b> section of either the <code>.cdef</code> or <code>.adef</code> file can be used to make the library visible from inside the app sandbox.</p>
-<div class="fragment"><div class="line">requires:</div><div class="line">{</div><div class="line">    file:</div><div class="line">    {</div><div class="line"> <span class="comment">// Make the "foo" library available inside the app sandbox (in the app's /lib directory).</span></div><div class="line">        /usr/local/lib/libfoo.so.3     /lib/</div><div class="line">        /usr/local/lib/libfoo.so.3.1.1 /lib/</div><div class="line">    }</div><div class="line">}</div></div><!-- fragment --><p>For backward compatibility, it is also possible to specify the library name "xml" without the leading "lib" or the trailing ".so". This will result in "<c>-lxml</c>" being passed to the linker when linking any executables that include this component, but will not add a '-L' option.</p>
+<div class="fragment"><div class="line">requires:</div><div class="line">{</div><div class="line">    file:</div><div class="line">    {</div><div class="line"> <span class="comment">// Make the "foo" library available inside the app sandbox (in the app's /lib directory).</span></div><div class="line">        /usr/local/lib/libfoo.so.3     /lib/</div><div class="line">        /usr/local/lib/libfoo.so.3.1.1 /lib/</div><div class="line">    }</div><div class="line">}</div></div><!-- fragment --><p>For backward compatibility, it is also possible to specify the library name "xml" without the leading "lib" or the trailing ".so". This will result in "&lt;c&gt;-lxml&lt;/c&gt;" being passed to the linker when linking any executables that include this component, but will not add a '-L' option.</p>
 <div class="fragment"><div class="line">requires:</div><div class="line">{</div><div class="line">    lib:</div><div class="line">    {</div><div class="line">        xml    <span class="comment">// I need access to libxml.so which is expected to already be on the target.</span></div><div class="line">    }</div><div class="line">}</div></div><!-- fragment --><p>This is equivalent to using the "ldflags:" section to add "-lxml" to the linker command-line arguments.</p>
 <div class="fragment"><div class="line">ldflags:</div><div class="line">{</div><div class="line">    -lxml</div><div class="line">}</div></div><!-- fragment --><h2><a class="anchor" id="defFilesCdef_requiresComponent"></a>
 Component</h2>
@@ -292,5 +292,5 @@ Sources</h1>
 <p>Contains a list of source code files.</p>
 <p>If C or C++ code, one source file must implement a <code>COMPONENT_INIT</code> function. The framework will automatically call that function at start-up.</p>
 <div class="fragment"><div class="line">sources:</div><div class="line">{</div><div class="line">    foo.c</div><div class="line">    bar.c</div><div class="line">    init.c      <span class="comment">// This one implements the COMPONENT_INIT</span></div><div class="line">}</div></div><!-- fragment --><hr />
-<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>

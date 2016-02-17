@@ -19,19 +19,19 @@ Data</h1>
 cm data info </pre> <blockquote class="doxtable">
 <p>Get info on profile in use. </p>
 </blockquote>
-<pre class="fragment">cm data profile <index> </pre> <blockquote class="doxtable">
+<pre class="fragment">cm data profile &lt;index&gt; </pre> <blockquote class="doxtable">
 <p>Set profile in use. </p>
 </blockquote>
-<pre class="fragment">cm data apn <apn> </pre> <blockquote class="doxtable">
+<pre class="fragment">cm data apn &lt;apn&gt; </pre> <blockquote class="doxtable">
 <p>Set apn for profile in use. </p>
 </blockquote>
-<pre class="fragment">cm data pdp <pdp> </pre> <blockquote class="doxtable">
+<pre class="fragment">cm data pdp &lt;pdp&gt; </pre> <blockquote class="doxtable">
 <p>Set pdp type for profile in use. </p>
 </blockquote>
-<pre class="fragment">cm data auth <none/pap/chap> <username> <password> </pre> <blockquote class="doxtable">
+<pre class="fragment">cm data auth &lt;none/pap/chap&gt; &lt;username&gt; &lt;password&gt; </pre> <blockquote class="doxtable">
 <p>Set authentication for profile in use. </p>
 </blockquote>
-<pre class="fragment">cm data connect <optional timeout (secs)> </pre> <blockquote class="doxtable">
+<pre class="fragment">cm data connect &lt;optional timeout (secs)&gt; </pre> <blockquote class="doxtable">
 <p>Start a data connection. </p>
 </blockquote>
 <pre class="fragment">cm data watch </pre> <blockquote class="doxtable">
@@ -64,10 +64,10 @@ Radio</h1>
 cm radio status </pre> <blockquote class="doxtable">
 <p>Get modem status. </p>
 </blockquote>
-<pre class="fragment">cm radio <on/off> </pre> <blockquote class="doxtable">
+<pre class="fragment">cm radio &lt;on/off&gt; </pre> <blockquote class="doxtable">
 <p>Enable/disable radio. </p>
 </blockquote>
-<pre class="fragment">cm radio rat <CDMA | GSM/UMTS | LTE> </pre> <blockquote class="doxtable">
+<pre class="fragment">cm radio rat &lt;CDMA | GSM/UMTS | LTE&gt; </pre> <blockquote class="doxtable">
 <p>Set radio access technology. </p>
 </blockquote>
 <pre class="fragment">cm radio rat AUTO </pre> <blockquote class="doxtable">
@@ -93,25 +93,25 @@ cm sim status </pre> <blockquote class="doxtable">
 <pre class="fragment">cm sim number </pre> <blockquote class="doxtable">
 <p>Get the sim phone number. Often M2M SIM cards don't know their number (will return nothing). </p>
 </blockquote>
-<pre class="fragment">cm sim enterpin <pin> </pre> <blockquote class="doxtable">
+<pre class="fragment">cm sim enterpin &lt;pin&gt; </pre> <blockquote class="doxtable">
 <p>Enter pin code that's required before any mobile equipment functionality can be used. </p>
 </blockquote>
-<pre class="fragment">cm sim changepin <oldpin> <newpin> </pre> <blockquote class="doxtable">
+<pre class="fragment">cm sim changepin &lt;oldpin&gt; &lt;newpin&gt; </pre> <blockquote class="doxtable">
 <p>Change the PIN code of the SIM card. </p>
 </blockquote>
-<pre class="fragment">cm sim lock <pin> </pre> <blockquote class="doxtable">
+<pre class="fragment">cm sim lock &lt;pin&gt; </pre> <blockquote class="doxtable">
 <p>Lock SIM: enables SIM card security, will request for a PIN code when inserted. </p>
 </blockquote>
-<pre class="fragment">cm sim unlock <pin> </pre> <blockquote class="doxtable">
+<pre class="fragment">cm sim unlock &lt;pin&gt; </pre> <blockquote class="doxtable">
 <p>Unlock SIM: disables SIM card security, won't request a PIN code when inserted (unsafe). </p>
 </blockquote>
-<pre class="fragment">cm sim unblock <puk> <newpin> </pre> <blockquote class="doxtable">
+<pre class="fragment">cm sim unblock &lt;puk&gt; &lt;newpin&gt; </pre> <blockquote class="doxtable">
 <p>Unblocks the SIM card. The SIM card is blocked after X unsuccessful attempts to enter the PIN. </p>
 </blockquote>
-<pre class="fragment">cm sim storepin <pin> </pre> <blockquote class="doxtable">
+<pre class="fragment">cm sim storepin &lt;pin&gt; </pre> <blockquote class="doxtable">
 <p>Stores PIN. Whether security is enabled or not, the SIM card has a PIN code that must be entered for every operation. You can change the PIN code through <code>changepin</code> and <code>unblock</code>. </p>
 </blockquote>
-<pre class="fragment">cm sim select <EMBEDDED | EXTERNAL_SLOT_1 | EXTERNAL_SLOT_2 | REMOTE> </pre> <blockquote class="doxtable">
+<pre class="fragment">cm sim select &lt;EMBEDDED | EXTERNAL_SLOT_1 | EXTERNAL_SLOT_2 | REMOTE&gt; </pre> <blockquote class="doxtable">
 <p>Select the SIM type. </p>
 </blockquote>
 <p>Whether security is enabled or not, the SIM card has a PIN code that must be entered for every operations. Only ways to change this PIN code are through 'changepin' and 'unblock' operations.</p>
@@ -120,22 +120,22 @@ SMS</h1>
 <pre class="fragment">cm sms monitor </pre> <blockquote class="doxtable">
 <p>Monitor incoming SMS. </p>
 </blockquote>
-<pre class="fragment">cm sms send <number> <content> </pre> <blockquote class="doxtable">
+<pre class="fragment">cm sms send &lt;number&gt; &lt;content&gt; </pre> <blockquote class="doxtable">
 <p>Send a text SMS. </p>
 </blockquote>
-<pre class="fragment">cm sms sendbin <number> <file> <optional max sms> </pre> <blockquote class="doxtable">
+<pre class="fragment">cm sms sendbin &lt;number&gt; &lt;file&gt; &lt;optional max sms&gt; </pre> <blockquote class="doxtable">
 <p>Send a binary SMS </p>
 </blockquote>
 <p>Options:</p><ul>
-<li><number>: Destination number</li>
-<li><content>: Content as text supported by GSM 03.38 alphabet</li>
-<li><file>: File path OR - for standard input (stdin)</li>
-<li><optional max="" sms>="">: (Optional) Limit for the number of SMS the file is split in</li>
+<li>&lt;number&gt;: Destination number</li>
+<li>&lt;content&gt;: Content as text supported by GSM 03.38 alphabet</li>
+<li>&lt;file&gt;: File path OR - for standard input (stdin)</li>
+<li>&lt;optional max="" sms&gt;=""&gt;: (Optional) Limit for the number of SMS the file is split in</li>
 </ul>
 <pre class="fragment">cm sms list </pre> <blockquote class="doxtable">
 <p>List all stored SMS </p>
 </blockquote>
-<pre class="fragment">cm sms get <idx> </pre> <blockquote class="doxtable">
+<pre class="fragment">cm sms get &lt;idx&gt; </pre> <blockquote class="doxtable">
 <p>Get specific stored SMS. </p>
 </blockquote>
 <pre class="fragment">cm sms clear </pre> <blockquote class="doxtable">
@@ -160,5 +160,5 @@ cm temp all </pre> <blockquote class="doxtable">
 <p>Print the platform temperature. </p>
 </blockquote>
 <hr />
-<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>

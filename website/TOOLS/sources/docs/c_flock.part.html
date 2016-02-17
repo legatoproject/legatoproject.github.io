@@ -42,5 +42,5 @@ Limitations</h1>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> fd1 = <a class="code" href="le__file_lock_8h.html#aac3e11a6f7f363d29b8dbb1eb6c2c287">le_flock_Open</a>(<span class="stringliteral">"foo"</span>, <a class="code" href="le__file_lock_8h.html#a5e5400e33a5e10b7c624748a9ce11280a887421ec0def966e3ffc65e6bde1f1fc">LE_FLOCK_READ</a>);   <span class="comment">// Obtains a read lock on the file.</span></div><div class="line"><span class="keywordtype">int</span> fd2 = <a class="code" href="le__file_lock_8h.html#aac3e11a6f7f363d29b8dbb1eb6c2c287">le_flock_Open</a>(<span class="stringliteral">"foo"</span>, <a class="code" href="le__file_lock_8h.html#a5e5400e33a5e10b7c624748a9ce11280a058867728a1de4773023f009c2934188">LE_FLOCK_WRITE</a>);  <span class="comment">// This call will block forever.</span></div></div><!-- fragment --><p>This API only permits whole files to be locked, not portions of a file.</p>
 <p>Many NFS implementations don't recognize locks used by this API.</p>
 <hr />
-<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>

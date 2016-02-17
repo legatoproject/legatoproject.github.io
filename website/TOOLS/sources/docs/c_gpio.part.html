@@ -46,11 +46,11 @@
 <p>Binding example:</p>
 <pre class="fragment">bindings:
 {
-    ui.frontPanel.powerLed -> gpioService.le_gpio22
+    ui.frontPanel.powerLed -&gt; gpioService.le_gpio22
 }
 </pre><h1><a class="anchor" id="gpioConfig"></a>
 Configuring available GPIOs</h1>
 <p>The GPIOs which are available for use are advertised in the sysfs at </p><pre class="fragment">/sys/class/gpio/gpiochip1/mask </pre><p> For each entry in this bitmask, a service will be advertised to allow use of the pin. However, if a pin needs to be disabled form being accessed, e.g. it carries out some system function that should not be available to apps, then it can be disabled by adding an entry to the config tree.</p>
 <p>For example, to disable pin 6 from being used, add the entry </p><pre class="fragment">gpioService:/pins/disabled/n </pre><p> where n is the GPIO number. The value should be set to true to disable that service. If the value is either false or absent then the service will run. Entries can be added using the config tool, for example </p><pre class="fragment">config set gpioService:/pins/disabled/13 true bool</pre><p> will disable the service for pin 13. Note that specifying the type as bool is vital as the config tool defaults to the string type, and hence any value set will default to false. </p><hr />
-<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>

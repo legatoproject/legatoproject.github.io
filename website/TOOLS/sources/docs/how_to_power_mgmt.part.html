@@ -24,19 +24,19 @@ Wakeup Sources</h1>
 <p><a class="el" href="le__pm__interface_8h.html#a85038248bcddc8963f7280ffa53acf62">le_pm_NewWakeupSource()</a> create a wakeup source with a particular tag,</p>
 <p><a class="el" href="le__pm__interface_8h.html#a6be9b6c443c506b0ce29da79e53e2534">le_pm_StayAwake()</a> acquire a wakeup source, and</p>
 <p><a class="el" href="le__pm__interface_8h.html#a2ffb1fb0d165604226a9df35360080ea">le_pm_Relax()</a> release a wakeup source.</p>
-<p>When the Power Manager receives a request from another component via <a class="el" href="le__pm__interface_8h.html#a85038248bcddc8963f7280ffa53acf62">le_pm_NewWakeupSource()</a>, it'll prefix the requested tag with string <code>legato_</code> and post-fix it with the requestor’s process ID resulting in the wakeup source name format </p><pre class="fragment">legato_<tag>_<process-id> </pre><p>This name format allows for easy traceability of wakeup sources. The process ID refers to a particular Legato app and the tag refers to a particular wakeup source within that app.</p>
+<p>When the Power Manager receives a request from another component via <a class="el" href="le__pm__interface_8h.html#a85038248bcddc8963f7280ffa53acf62">le_pm_NewWakeupSource()</a>, it'll prefix the requested tag with string <code>legato_</code> and post-fix it with the requestor&rsquo;s process ID resulting in the wakeup source name format </p><pre class="fragment">legato_&lt;tag&gt;_&lt;process-id&gt; </pre><p>This name format allows for easy traceability of wakeup sources. The process ID refers to a particular Legato app and the tag refers to a particular wakeup source within that app.</p>
 <p>A wakeup source using this name is then created on behalf of the requesting component and a reference to the wakeup source is passed back to the requestor to use it in <a class="el" href="le__pm__interface_8h.html#a6be9b6c443c506b0ce29da79e53e2534">le_pm_StayAwake()</a> and <a class="el" href="le__pm__interface_8h.html#a2ffb1fb0d165604226a9df35360080ea">le_pm_Relax()</a> calls.</p>
 <p>Stale wakeup sources are automatically released by the Power Manager when their requestor exits and/or disconnects from the Power Manager.</p>
 <h1><a class="anchor" id="howToPowerMgmt_wakeupAndDeferrable"></a>
-Wakeup & Deferrable Events</h1>
+Wakeup &amp; Deferrable Events</h1>
 <p>Legato apps run in an event-driven model so the app remains idle until there's an event to be processed. Once an event occurs, Legato detects it and dispatches it to one of its threads for processing.</p>
 <p>From a power management aspect, there's no reason for the system to stay powered while it's idle. Also, events may not have the same processing importance, so Legato classifies them like this:</p>
 <ul>
 <li><b>Wakeup events</b>: require immediate attention so the system to must be powered.</li>
 <li><b>Deferrable events</b>: can wait to be processed until the system is powered for another reason.</li>
 </ul>
-<p>These event types are defined in the <code>fdMonitor</code> object. To classify the fdMonitor event as wakeup or deferrable, the app should call <a class="el" href="le__fd_monitor_8h.html#a66a93ae01f1e6faf1d0c7645752d4442">le_fdMonitor_SetDeferrable()</a> with the appropriate ‘isDeferrable’ flag. By default, if <a class="el" href="le__fd_monitor_8h.html#a66a93ae01f1e6faf1d0c7645752d4442">le_fdMonitor_SetDeferrable()</a> is not called; all events on that object will be assumed to be wakeup events.</p>
-<p>The underlying Linux mechanism of waiting for wakeup events from <code>fdMonitor’s</code> file descriptor uses epoll_wait() in conjunction with <code>EPOLLWAKEUP</code> flag. When an epoll_wait() event occurs on a file descriptor that has this flag is set, epoll_wait() will unblock the caller and an <b>eventpoll</b> kernel wakeup source will be signaled. This causes the system to stay awake until one of these conditions are met:</p>
+<p>These event types are defined in the <code>fdMonitor</code> object. To classify the fdMonitor event as wakeup or deferrable, the app should call <a class="el" href="le__fd_monitor_8h.html#a66a93ae01f1e6faf1d0c7645752d4442">le_fdMonitor_SetDeferrable()</a> with the appropriate &lsquo;isDeferrable&rsquo; flag. By default, if <a class="el" href="le__fd_monitor_8h.html#a66a93ae01f1e6faf1d0c7645752d4442">le_fdMonitor_SetDeferrable()</a> is not called; all events on that object will be assumed to be wakeup events.</p>
+<p>The underlying Linux mechanism of waiting for wakeup events from <code>fdMonitor&rsquo;s</code> file descriptor uses epoll_wait() in conjunction with <code>EPOLLWAKEUP</code> flag. When an epoll_wait() event occurs on a file descriptor that has this flag is set, epoll_wait() will unblock the caller and an <b>eventpoll</b> kernel wakeup source will be signaled. This causes the system to stay awake until one of these conditions are met:</p>
 <ul>
 <li>another epoll_wait() call is made with the same file descriptor in the event list.</li>
 </ul>
@@ -70,7 +70,7 @@ Troubleshooting</h1>
 <p>Dump contents of /sys/kernel/debug/wakeup_sources to find the fields that have a non-zero active_since field. Also dump contents of <code>/sys/power/wake_lock</code> to find active user-space wakeup sources. <br />
 </p>
 <p><em>Command</em> </p>
-<pre class="fragment"> cat /sys/kernel/debug/wakeup_sources |sed -e s/"^       "/"unnamed"/ | awk '{print $6 "\t" $1}' | grep -v "^0" |sort –n
+<pre class="fragment"> cat /sys/kernel/debug/wakeup_sources |sed -e s/"^       "/"unnamed"/ | awk '{print $6 "\t" $1}' | grep -v "^0" |sort &ndash;n
  cat /sys/power/wake_lock
 </pre><h4>Problem </h4>
 <p><b>System perpetually suspends and resumes. </b></p>
@@ -87,6 +87,6 @@ Troubleshooting</h1>
 <p><em>Test</em> </p>
 <p>Dump contents of all</p><pre class="fragment">/sys/devices/*/power/wakeup </pre><p> files and check which devices have wakeup interrupts enabled.</p>
 <p><em>Command</em> </p>
-<pre class="fragment">find /sys/devices –name wakeup –exec cat “{}” “;” -print </pre><hr />
-<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<pre class="fragment">find /sys/devices &ndash;name wakeup &ndash;exec cat &ldquo;{}&rdquo; &ldquo;;&rdquo; -print </pre><hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>

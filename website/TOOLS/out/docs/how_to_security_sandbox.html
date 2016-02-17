@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Config Sandbox  - Legato Docs</title>
+<meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description" />
+<meta content="#keywords" name="keywords" />
+<meta content="noindex, nofollow" name="robots" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" />
+<link href="/resources/images/legato.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/images/legato.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="#" rel="apple-touch-icon" />
+<link href="#" rel="apple-touch-icon" sizes="72x72" />
+<link href="#" rel="apple-touch-icon" sizes="114x114" />
+<link href="/resources/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+        <script src="/resources/js/html5shiv.js"></script>
+        <script src="/resources/js/respond.js"></script>
+        <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="/resources/js/main.js"></script>
+<link href="/resources/css/jqtree.css" rel="stylesheet" type="text/css" />
+<script src="/resources/js/tree.jquery.js" type="text/javascript"></script>
+<script src="/resources/js/jquery.cookie.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        setupTree("/resources/tocs/Build Apps Documentation.json");
+        </script>
+</head>
+<body>
+<div class="wrapper">
+<div class="fa fa-bars documentation" id="menu-trigger"></div>
+<div id="top">
+<header>
+<nav>
+<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="/docs/getstarted_main.html">Build Apps</a><a class="subnavlink" href="/docs/getstarted_main.html">Get started</a><a class="subnavlink" href="/docs/build_apps_documentation.html">Documentation</a><a class="subnavlink" href="/docs/files.html">Reference</a><a class="navlink" href="/docs/platform_constraints.html">Build Platform</a><a class="subnavlink" href="/docs/platform_constraints.html">Platform Constraints</a><a class="subnavlink" href="/docs/yocto_main.html">Yocto Info</a><a class="navlink" href="/docs/about_main.html">About</a>
+</nav>
+</header>
+</div>
+<div class="orange" id="menudocumentation">
+<header>
+<h1><a class="navlink" href="/" title="back to Legato homepage">Legato</a></h1>
+<h2>/ Build Apps</h2>
+<nav class="ui-front" id="searchresult">
+<i class="fa fa-search"></i>
+<input id="autocomplete" onkeyup="getdata('Build Apps')" placeholder="Search..." /> <!-- <input id="category" type="checkbox" onclick="checkbox()"> <label for="category">API Search</label> -->
+</nav>
+</header>
+</div>
+<div class="orange" id="topMenu">
+<nav>
+<a href="getstarted_main.html">Get Started</a><a class="link-selected" href="build_apps_documentation.html">Documentation</a><a href="files.html">Reference</a>
+</nav>
+</div>
+<div id="left">
+<div id="tree1"></div>
+</div>
+<div class="content">
+<div class="header">
+<div class="headertitle">
+<h1 class="title">Config Sandbox </h1> </div>
+</div><div class="contents">
+<div class="textblock"><p>To understand how Legato sandboxes are implemented, see <a class="el" href="basic_security_sandbox.html">Sandboxes</a> basics.</p>
+<h1><a class="anchor" id="howToSecuritySandbox_oveview"></a>
+Overview</h1>
+<p>Sandboxes are configured through the <a class="el" href="def_files.html">Definition Files</a> :</p><ul>
+<li><a class="el" href="def_files_adef.html">Application Definition .adef</a></li>
+<li><a class="el" href="def_files_sdef.html">System Definition .sdef</a></li>
+</ul>
+<p>This is what a sandboxed app <a class="el" href="how_to_config_tree_schema.html">Config Tree Schema</a> looks like.</p>
+<h1><a class="anchor" id="howToSecuritySandbox_probs"></a>
+Common Problems</h1>
+<p>Often, when sandbox problems occur, it's because either:</p><ul>
+<li>the permissions are set incorrectly: check the <code></code>.sdef bundles section to ensure permissions are valid.</li>
+<li>there's a file missing from the file system within the sandbox: check that the <code>def</code> files' requires sections include all required files.</li>
+</ul>
+<h1><a class="anchor" id="howToSecuritySandbox_sampleApps"></a>
+Sandbox Sample Apps</h1>
+<p>Legato provides sample apps that use sandboxes: <br />
+<a class="el" href="sample_apps_shell_piping.html">Shell Piping</a> <br />
+<a class="el" href="sample_apps_command_line.html">Command Line</a></p>
+<h2><a class="anchor" id="howToSecuritySandbox_sampleAppsCode"></a>
+Sample Code</h2>
+<p>This is the <a class="el" href="sample_apps_shell_piping.html">Shell Piping</a> sample app's <code></code>.adef file:</p>
+<pre class="fragment">start: manual
+
+bundles:
+{
+    file:
+    {
+        // Bundling the script into the sandbox with the permissions needed to run it.
+        [rx] utilPipes    /
+    }
+}
+
+requires:
+{
+    file:
+    {
+        // Adding sh (shell), ls, grep and echo utilities into the sandbox.
+        /bin/sh     /usr/local/bin/
+        /bin/ls     /usr/local/bin/
+        /bin/grep   /usr/local/bin/
+        /bin/echo   /usr/local/bin/
+    }
+}
+
+processes:
+{
+    run:
+    {
+        // Run sh (shell) and pass it the script for it to run.
+        (sh utilPipes)
+    }
+}
+</pre><h1><a class="anchor" id="howToSandbox_servicesOutside"></a>
+Access Services Outside</h1>
+<p>A Legato sandboxed app can access services outside its sandbox. All available services are advertised by the Service Directory. Apps connect to services through a request to the Service Directory. The Service Directory grants access only if the app has been explicitly bound to a service (using the <code></code>.adef and <code></code>.sdef <code>bindings</code> section).</p>
+<p>If you want to allow direct access to bind mount objects from the file system (e.g., files, directories, named sockets and pipes, etc.), explicitly allow it through app configuration in the <code></code>.adef and <code></code>.cdef files <code>requires</code> section.</p>
+<h1><a class="anchor" id="howToSandbox_unsandbox"></a>
+Unsandbox</h1>
+<p>Although it's not recommended, you can turn-off sandboxing by setting <a class="el" href="def_files_adef.html#defFilesAdef_sandboxed">Sandboxed</a> to <code>false</code>.</p>
+<hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</div></div>
+<br clear="left" />
+</div>
+<div id="footer">
+</div>
+</div>
+</body>
+</html>

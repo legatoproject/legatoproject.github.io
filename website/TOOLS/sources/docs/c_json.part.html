@@ -54,11 +54,11 @@ Example</h1>
 <ol type="1">
 <li>LE_JSON_DOC_END - At this point, parsing stops.</li>
 </ol>
-<p>If the handler function passed to <a class="el" href="le__json_8h.html#a610f180628f8e5be75fe5a08533124df">le_json_Parse()</a> is called "<c>TopLevelHandler()</c>", TopLevelHandler() will be called for the all events. But, when <code>TopLevelHandler()</code> gets the event LE_JSON_OBJECT_MEMBER for the member "x" and responds by calling <code>le_json_SetEventHandler(XHandler(), NULL)</code>, then the LE_JSON_NUMBER event for "x" will be passed to <code>XHandler()</code>. But, the following LE_JSON_OBJECT_MEMBER event for "y" will still go to <code>TopLevelHandler()</code>, because the context returns to the top level object after the parser finishes parsing member "x".</p>
+<p>If the handler function passed to <a class="el" href="le__json_8h.html#a610f180628f8e5be75fe5a08533124df">le_json_Parse()</a> is called "&lt;c&gt;TopLevelHandler()&lt;/c&gt;", TopLevelHandler() will be called for the all events. But, when <code>TopLevelHandler()</code> gets the event LE_JSON_OBJECT_MEMBER for the member "x" and responds by calling <code>le_json_SetEventHandler(XHandler(), NULL)</code>, then the LE_JSON_NUMBER event for "x" will be passed to <code>XHandler()</code>. But, the following LE_JSON_OBJECT_MEMBER event for "y" will still go to <code>TopLevelHandler()</code>, because the context returns to the top level object after the parser finishes parsing member "x".</p>
 <h1><a class="anchor" id="c_json_threads"></a>
 Multi-Threading</h1>
 <p>This API is not thread safe. DO NOT attempt to SHARE parsers between threads.</p>
 <p>If a thread dies, any parsers in use by that thread that have not been cleaned-up by calls to <a class="el" href="le__json_8h.html#a688e27c19518c70c0bd279f4451eb973">le_json_Cleanup()</a> will be cleaned up automatically.</p>
 <hr />
-<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>

@@ -25,7 +25,7 @@ processes:
 
 bindings:
 {
-    myClient.greetClient.hello -> myServer.greetServer.hello
+    myClient.greetClient.hello -&gt; myServer.greetServer.hello
 }
 </pre><p>This defines two executable programs called <code>myServer</code> (containing the greetServer component) and <code>myClient</code> (containing the greetClient component).</p>
 <p>It then starts one instance of <code>myServer</code> and one instance of <code>myClient</code>, and binds <code>myClient.greetClient.hello</code> to <code>myServer.greetServer.hello</code>.</p>
@@ -34,5 +34,5 @@ bindings:
 </pre><p>You'll now have a file called "helloWorld.wp85" that contains your app.</p>
 <p>You can install and run it using instapp, see <a class="el" href="basic_apps_create.html#basicAppsCreate_instTarget">Install App to Target</a> for details.</p>
 <hr />
-<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>

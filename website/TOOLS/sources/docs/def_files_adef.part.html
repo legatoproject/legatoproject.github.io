@@ -8,32 +8,32 @@ Bindings</h1>
 <p>Bindings allow client-side IPC API interfaces (listed in the <em>requires</em> sections of Component.cdef files) to be bound to server-side interfaces (listed in the <em>provides</em> sections of Component.cdef files).</p>
 <p>This gives direct control over how IPC interfaces are interconnected so reusable components and/or apps can be bound (wired) together to form a working system.</p>
 <p>Bindings can be between two interfaces inside the same app (internal binding), or can be between a client-side interface in an app and a server-side interface provided by another app (or non-app user).</p>
-<p>Interface instances inside the app use the executable name, component name, and the service instance name separated by a period (‘.’).</p>
-<p>The client interface always appears first with an arrow (<code> -> </code>) to separate the client interface from the server interface.</p>
+<p>Interface instances inside the app use the executable name, component name, and the service instance name separated by a period (&lsquo;.&rsquo;).</p>
+<p>The client interface always appears first with an arrow (<code> -&gt; </code>) to separate the client interface from the server interface.</p>
 <p>Here's a code sample binding <code>clientExe.clientComponent.clientInterface</code> to <code>serverExe.serverComponent.serverInterface</code>:</p>
 <pre class="fragment">bindings:
 {
-    clientExe.clientComponent.clientInterface -> serverExe.serverComponent.serverInterface
+    clientExe.clientComponent.clientInterface -&gt; serverExe.serverComponent.serverInterface
 }
 </pre><p>External services provided by other apps use the app name and the service name, separated by a period ('.'):</p>
 <pre class="fragment">bindings:
 {
-    clientExe.clientComponent.clientInterface -> otherApp.serverInterface
+    clientExe.clientComponent.clientInterface -&gt; otherApp.serverInterface
 }
 </pre><p>To bind to a service provided by a non-app user, the app name is replaced by a user name inside angle brackets:</p>
 <pre class="fragment">bindings:
 {
-    clientExe.clientComponent.clientInterface -> <root>.serverInterface
+    clientExe.clientComponent.clientInterface -&gt; &lt;root&gt;.serverInterface
 }
 </pre><p>If client-side code was built using the <code>ifgen</code> tool or <a class="el" href="build_toolsmkcomp.html">mkcomp</a> or <a class="el" href="build_toolsmkexe.html">mkexe</a> with requires or bundles sections, the tool reading your .adef file won't know about the client-side interface. Use a special work-around to bind those interfaces:</p>
 <pre class="fragment">bindings:
 {
-    *.le_data -> dataConnectionService.le_data
+    *.le_data -&gt; dataConnectionService.le_data
 }
 </pre><p>This would bind any unknown client-side <code>le_data</code> interfaces in the current app to the <code>le_data</code> server-side interface on the <code>dataConnectionService</code> app.</p>
 <h1><a class="anchor" id="defFilesAdef_bundles"></a>
 Bundles</h1>
-<p>Lists additional files or directories to be copied from the build host into the app so they’re available to the app at runtime (e.g., audio files, web pages, executable scripts or programs built using some external build system).</p>
+<p>Lists additional files or directories to be copied from the build host into the app so they&rsquo;re available to the app at runtime (e.g., audio files, web pages, executable scripts or programs built using some external build system).</p>
 <pre class="fragment">bundles:
 {
     file:
@@ -113,12 +113,12 @@ CPU Share</h1>
 <h1><a class="anchor" id="defFilesAdef_executables"></a>
 Executables</h1>
 <p>Lists executables to be constructed and moved to the <code>bin</code> directory inside the app.</p>
-<p>An executable’s content is specified as a list of components.</p>
+<p>An executable&rsquo;s content is specified as a list of components.</p>
 <pre class="fragment">executables:
 {
     myExe = ( myComponent otherComponent )
 }
-</pre><p>Each component included in an executable will be built and linked into the executable and its <code>COMPONENT_INIT</code> function will be run at process start-up. The component’s runtime files (shared libraries, source code, etc.) will be packaged inside the app to be installed on the target.</p>
+</pre><p>Each component included in an executable will be built and linked into the executable and its <code>COMPONENT_INIT</code> function will be run at process start-up. The component&rsquo;s runtime files (shared libraries, source code, etc.) will be packaged inside the app to be installed on the target.</p>
 <p>The mechanisms used to construct executables and components depend on the type of content and the target device.</p>
 <p>C and C++ files will be compiled and linked using the appropriate compiler tool chain based on the target.</p>
 <p>(In the future) Java code will be compiled to Java bytecode, and interpreted code, such as Python code will be simply copied into the app.</p>
@@ -180,7 +180,7 @@ Processes</h1>
     run:
     {
         myProc1 = ( myExe --foo -b 43 )
-        myProc2 = ( myExe –bar --b 92 )
+        myProc2 = ( myExe &ndash;bar --b 92 )
         ( myExe2 "Hello, world." )  // If no proc name is specified, uses the exe name by default.
     }
 
@@ -216,7 +216,7 @@ Run</h2>
 <p>Names a process to be started by the Supervisor when the app is started. Also specifies executable and command-line arguments.</p>
 <div class="fragment"><div class="line">run:</div><div class="line">{</div><div class="line">    myProc1 = ( myExe --foo -b 43 )</div><div class="line">}</div></div><!-- fragment --><p>Process name and command-line arguments are optional.</p>
 <div class="fragment"><div class="line">run:</div><div class="line">{</div><div class="line">    ( myexe )</div><div class="line">}</div></div><!-- fragment --><p>If the process name is not specified, then the process will be given the same name as the executable it's running (e.g. <code>myexe</code>)</p>
-<p>A given executable can be launched multiple times. </p><div class="fragment"><div class="line">run:</div><div class="line">{</div><div class="line">    process1 = ( myexe )</div><div class="line">    process2 = ( myexe )</div><div class="line">}</div></div><!-- fragment --><p>Command-line arguments passed to the process when started can appear after the executable name. </p><div class="fragment"><div class="line">run:</div><div class="line">{</div><div class="line">    ( myexe --foo )</div><div class="line">}</div></div><!-- fragment --><div class="fragment"><div class="line">run:</div><div class="line">{</div><div class="line">    ( myexe --bar  <span class="comment">// Note that the command-line can be broken into multiple lines for readability.</span></div><div class="line">            --toto ) <span class="comment">// And it can be commented too.</span></div><div class="line">}</div></div><!-- fragment --><p>Executable names can be the ones listed in the app’s <code>executables:</code> section. They can also be the names of files that are bundled into the app with <code>[x]</code> (executable) permission.</p>
+<p>A given executable can be launched multiple times. </p><div class="fragment"><div class="line">run:</div><div class="line">{</div><div class="line">    process1 = ( myexe )</div><div class="line">    process2 = ( myexe )</div><div class="line">}</div></div><!-- fragment --><p>Command-line arguments passed to the process when started can appear after the executable name. </p><div class="fragment"><div class="line">run:</div><div class="line">{</div><div class="line">    ( myexe --foo )</div><div class="line">}</div></div><!-- fragment --><div class="fragment"><div class="line">run:</div><div class="line">{</div><div class="line">    ( myexe --bar  <span class="comment">// Note that the command-line can be broken into multiple lines for readability.</span></div><div class="line">            --toto ) <span class="comment">// And it can be commented too.</span></div><div class="line">}</div></div><!-- fragment --><p>Executable names can be the ones listed in the app&rsquo;s <code>executables:</code> section. They can also be the names of files that are bundled into the app with <code>[x]</code> (executable) permission.</p>
 <p>Quotation marks (either single <b>'</b> or double <b>"</b>) can be used if white-space (spaces, tabs, <code>//</code>, etc.) is needed inside a command-line argument, or if an empty argument is needed ("").</p>
 <h2><a class="anchor" id="defFilesAdef_processEnvVars"></a>
 Env Vars</h2>
@@ -284,7 +284,7 @@ Extern</h1>
 {
     exeName.componentName.interfaceName
 }
-</pre><p>Internal interface instances are identified by the executable, component, and interface names. The different interface instance identifier parts are separated by a period (‘.’).</p>
+</pre><p>Internal interface instances are identified by the executable, component, and interface names. The different interface instance identifier parts are separated by a period (&lsquo;.&rsquo;).</p>
 <p>Outside the app, the interface will be identified using the app name and the interface name (<code>appName.interfaceName</code>), thereby hiding from other apps the details of what executable and component within the app implements the interface.</p>
 <p>To have other apps see an interface with a different name, add <code> differentName = </code> in front of the interface specification:</p>
 <pre class="fragment">extern:
@@ -340,7 +340,7 @@ Dir</h2>
 <p>Each entry consists of two file system paths:</p>
 <ul>
 <li>The <b>first</b> path is the path to the directory <b>outside</b> of the app. This must be an absolute path (beginning with "/") and can never end in a "/".</li>
-<li>The <b>second</b> path is the absolute path <b>inside</b> the app’s sandbox where the directory will appear at runtime.</li>
+<li>The <b>second</b> path is the absolute path <b>inside</b> the app&rsquo;s sandbox where the directory will appear at runtime.</li>
 </ul>
 <p>Paths can be enclosed in quotation marks (either single ' or double "). This is required when it contains spaces or character sequences that would start comments.</p>
 <p>If the destination path ends in a "/", the name from the source is appended to it. Otherwise, only the destination path is used. That means <code>/foo/bar</code> /baz will appear as <code>/baz</code> inside the sandbox, and <code>/foo/bar</code> /baz/ will appear as <code>/baz/bar</code> inside the sandbox.</p>
@@ -372,8 +372,8 @@ File</h2>
 <p>Things listed in <code>requires</code> are expected to be found on the target at runtime. They're not copied into the app at build time; they are made accessible to the app inside of its sandbox at runtime.</p>
 <p>Each entry consists of two file system paths:</p>
 <ul>
-<li>path to the object in the file system outside of the app, which must be an absolute path (beginning with ‘/’).</li>
-<li>absolute file system path inside the app’s sandbox where the object will appear at runtime.</li>
+<li>path to the object in the file system outside of the app, which must be an absolute path (beginning with &lsquo;/&rsquo;).</li>
+<li>absolute file system path inside the app&rsquo;s sandbox where the object will appear at runtime.</li>
 </ul>
 <p>A file path can be enclosed in quotation marks (either single ' or double "). This is required when it contains spaces or character sequences that would start comments.</p>
 <p>The first path can't end in a '/'.</p>
@@ -412,8 +412,8 @@ Device</h2>
 <p>Each entry consists of two file system paths and a set of optional access permissions:</p>
 <ul>
 <li>access permissions, readable ([r]) and/or writeable ([w]). Executable is not allowed on device files. If permission values are not specified, then read-only ([r]) is the default.</li>
-<li>path to the object in the file system outside of the app, which must be an absolute path (beginning with ‘/’). This must be a path to a valid character or block device file.</li>
-<li>absolute file system path inside the app’s sandbox where the object will appear at runtime.</li>
+<li>path to the object in the file system outside of the app, which must be an absolute path (beginning with &lsquo;/&rsquo;). This must be a path to a valid character or block device file.</li>
+<li>absolute file system path inside the app&rsquo;s sandbox where the object will appear at runtime.</li>
 </ul>
 <p>A file path can be enclosed in quotation marks (either single ' or double "). This is required when it contains spaces or character sequences that would start comments.</p>
 <p>The first path can't end in a '/'.</p>
@@ -469,7 +469,7 @@ Version</h1>
 <p>Optional field that specifies a string to use as the app's version string.</p>
 <pre class="fragment">version: 0.3a
 </pre><dl class="section note"><dt>Note</dt><dd><ul>
-<li>The <b><code>–append-to-version</code></b> option to <code>mkapp</code> can be used to add to the app's version string.</li>
+<li>The <b><code>&ndash;append-to-version</code></b> option to <code>mkapp</code> can be used to add to the app's version string.</li>
 <li><b><code>app foo version</code></b> can be run on-target to get the version string of the app called "foo".</li>
 </ul>
 </dd></dl>
@@ -480,5 +480,5 @@ Watchdog Action</h1>
 Watchdog Timeout</h1>
 <p>The <code>watchdogTimeout</code> section sets the default timeout in milliseconds for processes in this app. Will be used if there's no value set in the processes section for a given process. See <a class="el" href="def_files_adef.html#defFilesAdef_processWatchdogTimeout">Watchdog Timeout</a> in the processes section.</p>
 <hr />
-<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>

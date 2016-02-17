@@ -47,10 +47,10 @@ Build Tool Search Paths</h1>
 <li><b>source</b> search path - lists file system directories where the build tools look for source code files and components.</li>
 <li><b>interface</b> search path - lists file system directories where the build tools look for interface definition files (.h files and .api files).</li>
 </ul>
-<p>The default search path “.” is the current working directory where the build tool ran.</p>
+<p>The default search path &ldquo;.&rdquo; is the current working directory where the build tool ran.</p>
 <p>Search paths can be changed through mk tools command-line options:</p><ul>
 <li>'-s' sets the source search path</li>
-<li>‘-i’ sets the interface search path</li>
+<li>&lsquo;-i&rsquo; sets the interface search path</li>
 </ul>
 <div class="fragment"><div class="line">$ mksys packageTracker.sdef -i ~/work/interfaces -s ~/work/components</div></div><!-- fragment --><h1><a class="anchor" id="defFilesOverview_overriding"></a>
 Precedence and Overriding</h1>
@@ -61,5 +61,5 @@ Unsandboxed App Limits</h1>
 <p>Although it's better for apps to be sandboxed, apps aren't limited to running inside a sandbox. We call these <em>unsandboxed</em> apps.</p>
 <p>Even though unsanboxed apps aren't constrained the same way sandboxed apps are constrained, the Supervisor will still enforce <a class="el" href="def_files_adef.html#defFilesAdef_cpuShare">CPU Share</a> and <a class="el" href="def_files_adef.html#defFilesAdef_processMaxFileBytes">Max File Bytes</a> limits.</p>
 <hr />
-<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>

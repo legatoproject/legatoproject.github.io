@@ -10,7 +10,7 @@ IPC interfaces binding</h1>
 <p>All the functions of this API are provided by the <b>voiceCallService</b> application service.</p>
 <p>Here's a code sample binding to Voice Call services: </p><pre class="fragment">bindings:
 {
-   clientExe.clientComponent.le_voicecall -> voiceCallService.le_voicecall
+   clientExe.clientComponent.le_voicecall -&gt; voiceCallService.le_voicecall
 }
 </pre><h1><a class="anchor" id="c_le_voicecall_outgoing"></a>
 Starting a Voice call</h1>
@@ -30,5 +30,5 @@ Answering a Voice call</h1>
 <p>If <a class="el" href="le__voicecall__interface_8h.html#aa4758e37f80ef9fd410ef0a9731d3797">le_voicecall_End()</a> failed a LE_VOICECALL_EVENT_END_FAILED event will be sent. If <a class="el" href="le__voicecall__interface_8h.html#a9dc899a059b3881edb7da244b8c9fbef">le_voicecall_Answer()</a> failed a LE_VOICECALL_EVENT_ANSWER_FAILED event will be sent.</p>
 <p>Application have to use <a class="el" href="le__voicecall__interface_8h.html#adb9eeb5c2e344f72b934dc8b72d3db62">le_voicecall_Delete()</a> to release <a class="el" href="le__voicecall__interface_8h.html#a74c8b6a9f13f7a8ef47b6b1d57d8ab56">le_voicecall_CallRef_t</a> voice call reference object when it is no more used.</p>
 <hr />
-<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>

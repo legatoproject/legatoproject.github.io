@@ -23,7 +23,7 @@ IPC interfaces binding</h1>
 <p>All the functions of this API are provided by the <b>smsInboxService</b> application service.</p>
 <p>Here's a code sample binding to SMS Inbox services: </p><pre class="fragment">bindings:
 {
-   clientExe.clientComponent.le_smsInbox1 -> smsInboxService.le_smsInbox1
+   clientExe.clientComponent.le_smsInbox1 -&gt; smsInboxService.le_smsInbox1
 }
 </pre><dl class="section note"><dt>Note</dt><dd>By default, smsInboxService starts manually. To start it automatically, the user can remove the option from the smsInboxService.adef file.</dd></dl>
 <p>A second message box (named le_smsInbox2) can be used by another application. These 2 message boxes are used independently. All functions of this second message box are prefixed by le_smsInbox2 (instead of le_msmInbox1). The user can implement other message boxes based on le_smsInbox1 and le_smsInbox2 model.</p>
@@ -64,10 +64,10 @@ Configuration tree</h1>
 <p>The configuration database path for the SMS Inbox Service is: </p><pre class="fragment">/
     smsInbox/
         apps/
-            appA<uint> = <# of messages>
-            appB<uint> = <# of messages>
+            appA&lt;uint&gt; = &lt;# of messages&gt;
+            appB&lt;uint&gt; = &lt;# of messages&gt;
 </pre><p>Each app have its own inbox, containing its own list of messages. The maximum number of messages is specified for each inbox. If the message box is not configured, a default number of 10 messages is applied (only for message boxes configured in le_smsInbox_mboxName[] area).</p>
 <p>The application name is given by the API name provided into the Components.cdef, both must be the same.</p>
 <hr />
-<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>

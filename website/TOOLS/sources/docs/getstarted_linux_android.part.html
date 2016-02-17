@@ -13,5 +13,5 @@ Setup fastboot</h1>
 Create Udev Rules</h1>
 <p>By default, fastboot on Ubuntu can't communicate with a USB-connected device because of the default permissions. Create udev rules to overcome this. In the file /etc/udev/rules.d/51-android.rules insert the following two lines and save: </p><div class="fragment"><div class="line">SUBSYSTEM==<span class="stringliteral">"usb"</span>, ATTRS{idVendor}==<span class="stringliteral">"1199"</span>, MODE=<span class="stringliteral">"0666"</span> </div></div><!-- fragment --> <div class="fragment"><div class="line">SUBSYSTEM==<span class="stringliteral">"usb"</span>, ATTRS{idVendor}==<span class="stringliteral">"18d1"</span>, MODE=<span class="stringliteral">"0666"</span> </div></div><!-- fragment --><p> Then reboot your PC.</p>
 <hr />
-<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>

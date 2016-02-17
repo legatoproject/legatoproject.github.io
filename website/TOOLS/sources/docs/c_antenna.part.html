@@ -10,7 +10,7 @@ IPC interfaces binding</h1>
 <p>All the functions of this API are provided by the <b>modemService</b>.</p>
 <p>Here's a code sample binding to modem services: </p><pre class="fragment">  bindings:
   {
-     clientExe.clientComponent.le_antenna -> modemService.le_antenna
+     clientExe.clientComponent.le_antenna -&gt; modemService.le_antenna
   }</pre><h1><a class="anchor" id="le_antenna_cell_section"></a>
 Cellular or Diversity antenna</h1>
 <h2><a class="anchor" id="le_antenna_cell_diag_subsection"></a>
@@ -49,9 +49,9 @@ Diagnostics principle</h2>
 Thresholds</h2>
 <p>Configurable thresholds are compared to the ADC (Analog to Digital Converter) reading from the antenna diagnostic hardware design measuring the current to determine in which state the antenna is.</p>
 <p>The following status are reported for the GNSS antenna if the ADC value is:</p><ul>
-<li>SHORT_CIRCUIT: ADC value > short limit, but over current HW not tripped.</li>
-<li>CLOSE_CIRCUIT: short limit >= ADC value >= open limit.</li>
-<li>OPEN_CIRCUIT: ADC value < open limit.</li>
+<li>SHORT_CIRCUIT: ADC value &gt; short limit, but over current HW not tripped.</li>
+<li>CLOSE_CIRCUIT: short limit &gt;= ADC value &gt;= open limit.</li>
+<li>OPEN_CIRCUIT: ADC value &lt; open limit.</li>
 <li>OVER_CURRENT: antenna is shorted and current HW protection circuitry has tripped.</li>
 </ul>
 <dl class="section note"><dt>Note</dt><dd>The open threshold is always LOWER than the short threshold.</dd></dl>
@@ -59,7 +59,7 @@ Thresholds</h2>
 Antenna diagnostic ADC selection</h1>
 <dl class="section warning"><dt>Warning</dt><dd>Ensure to check the supported antenna diagnosis for your specific platform.</dd></dl>
 <p>By default, the antenna diagnostics use an internal ADC for reading the voltage from the integrated antenna diagnosis circuit if any.</p>
-<p>An antenna design that makes use of an external antenna diagnosis circuit can still take advantage of the antenna monitoring service. Using the function <a class="el" href="le__antenna__interface_8h.html#a691370edf658b655a0f72b285dc5d00a">le_antenna_SetExternalAdc()</a>, the module can be instructed to monitor one of the external ADC’s to read the voltage from an external antenna diagnosis circuit rather than the internal ADC. Moreover, the <a class="el" href="le__antenna__interface_8h.html#a095510ac1da6efaf15db134321a012b3">le_antenna_GetExternalAdc()</a> function reads the external ADC used to monitor the requested antenna.</p>
+<p>An antenna design that makes use of an external antenna diagnosis circuit can still take advantage of the antenna monitoring service. Using the function <a class="el" href="le__antenna__interface_8h.html#a691370edf658b655a0f72b285dc5d00a">le_antenna_SetExternalAdc()</a>, the module can be instructed to monitor one of the external ADC&rsquo;s to read the voltage from an external antenna diagnosis circuit rather than the internal ADC. Moreover, the <a class="el" href="le__antenna__interface_8h.html#a095510ac1da6efaf15db134321a012b3">le_antenna_GetExternalAdc()</a> function reads the external ADC used to monitor the requested antenna.</p>
 <h1><a class="anchor" id="API_desc"></a>
 API description</h1>
 <p><a class="el" href="le__antenna__interface_8h.html#af768fcc154de42aecd549ff10e600a65">le_antenna_Request()</a> API allows the application to monitor the requested antenna.</p>
@@ -74,5 +74,5 @@ API description</h1>
 <p><a class="el" href="le__antenna__interface_8h.html#a691370edf658b655a0f72b285dc5d00a">le_antenna_SetExternalAdc()</a> API sets the external ADC used to monitor the requested antenna.</p>
 <p><a class="el" href="le__antenna__interface_8h.html#a095510ac1da6efaf15db134321a012b3">le_antenna_GetExternalAdc()</a> API gets the external ADC used to monitor the requested antenna.</p>
 <hr />
-<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>

@@ -38,14 +38,14 @@ handler
 <h2><a class="anchor" id="apiFilesSyntax_typesDefine"></a>
 DEFINE</h2>
 <p>A DEFINE is specified as:</p>
-<pre class="fragment">DEFINE <name> = <value>;
+<pre class="fragment">DEFINE &lt;name&gt; = &lt;value&gt;;
 </pre><p>The <code>value</code> can be a string or an expression evaluated to a numeric value (when the definition is read).</p>
 <h2><a class="anchor" id="apiFilesSyntax_typesEnum"></a>
 ENUM</h2>
 <p>An ENUM is specified as:</p>
-<pre class="fragment">ENUM <name>
+<pre class="fragment">ENUM &lt;name&gt;
 {
-    [<elementList>]
+    [&lt;elementList&gt;]
 };
 </pre><p>The <code>elementList</code> is a comma separated list of elements. The elements should all be uppper-case. Element values assigned are internally generated and can't be explicitly given.</p>
 <h2><a class="anchor" id="apiFilesSyntax_typesBitmask"></a>
@@ -54,7 +54,7 @@ BITMASK</h2>
 <h2><a class="anchor" id="apiFilesSyntax_typesReference"></a>
 REFERENCE</h2>
 <p>A REFERENCE is specified as:</p>
-<pre class="fragment">REFERENCE <name>;
+<pre class="fragment">REFERENCE &lt;name&gt;;
 </pre><p>The REFERENCE is used to define a reference to an object. The object reference is mapped to an opaque reference in C and an object instance or similar in other languages.</p>
 <h2><a class="anchor" id="apiFilesSyntax_typesUsetypes"></a>
 USETYPES</h2>
@@ -71,36 +71,36 @@ DEFINE twenty = common.TEN + defs.FIVE + 5;
 <h1><a class="anchor" id="apiFilesSyntax_function"></a>
 Specifying a Function</h1>
 <p>A function is specified as:</p>
-<pre class="fragment">FUNCTION [<returnType>] <name>
+<pre class="fragment">FUNCTION [&lt;returnType&gt;] &lt;name&gt;
 (
-    [<parameterList>]
+    [&lt;parameterList&gt;]
 );
 </pre><p>The <code>parameterList</code> can contain one or more parameters separated by commas, or can be empty if there are no parameters. These parameters types are supported:</p>
-<div class="fragment"><div class="line"><type> <name> [ ( <span class="stringliteral">"IN"</span> | <span class="stringliteral">"OUT"</span> ) ] </div></div><!-- fragment --><ul>
+<div class="fragment"><div class="line">&lt;type&gt; &lt;name&gt; [ ( <span class="stringliteral">"IN"</span> | <span class="stringliteral">"OUT"</span> ) ] </div></div><!-- fragment --><ul>
 <li>scalar type</li>
 <li>defaults to IN if a direction is not specified</li>
 </ul>
-<div class="fragment"><div class="line"><type> <name> <span class="stringliteral">"["</span> [ <minSize> <span class="stringliteral">".."</span> ] <maxSize> <span class="stringliteral">"]"</span> <span class="stringliteral">"IN"</span> </div></div><!-- fragment --><ul>
+<div class="fragment"><div class="line">&lt;type&gt; &lt;name&gt; <span class="stringliteral">"["</span> [ &lt;minSize&gt; <span class="stringliteral">".."</span> ] &lt;maxSize&gt; <span class="stringliteral">"]"</span> <span class="stringliteral">"IN"</span> </div></div><!-- fragment --><ul>
 <li>an IN array</li>
 <li><code>maxSize</code> specifies the maximum number of elements allowed for the array</li>
 <li>optional <code>minSize</code> specifies the minimum number of elements required for the array</li>
 </ul>
-<div class="fragment"><div class="line"><type> <name> <span class="stringliteral">"["</span> <minSize> <span class="stringliteral">"]"</span> <span class="stringliteral">"OUT"</span> </div></div><!-- fragment --><ul>
+<div class="fragment"><div class="line">&lt;type&gt; &lt;name&gt; <span class="stringliteral">"["</span> &lt;minSize&gt; <span class="stringliteral">"]"</span> <span class="stringliteral">"OUT"</span> </div></div><!-- fragment --><ul>
 <li>an OUT array</li>
 <li>array should be large enough to store <code>minSize</code> elements; if supported by the function implemention, a shorter OUT array can be used.</li>
 </ul>
-<div class="fragment"><div class="line"><span class="stringliteral">"string"</span> <name> <span class="stringliteral">"["</span> [ <minSize> <span class="stringliteral">".."</span> ] <maxSize> <span class="stringliteral">"]"</span> <span class="stringliteral">"IN"</span> </div></div><!-- fragment --><ul>
+<div class="fragment"><div class="line"><span class="stringliteral">"string"</span> &lt;name&gt; <span class="stringliteral">"["</span> [ &lt;minSize&gt; <span class="stringliteral">".."</span> ] &lt;maxSize&gt; <span class="stringliteral">"]"</span> <span class="stringliteral">"IN"</span> </div></div><!-- fragment --><ul>
 <li>an IN string</li>
 <li><code>maxSize</code> specifies the maximum string length allowed,</li>
 <li>optional <code>minSize</code> specifies the minimum string length required</li>
 <li>string length is given as number of characters, excluding any terminating characters</li>
 </ul>
-<div class="fragment"><div class="line"><span class="stringliteral">"string"</span> <name> <span class="stringliteral">"["</span> <minSize> <span class="stringliteral">"]"</span> <span class="stringliteral">"OUT"</span> </div></div><!-- fragment --><ul>
+<div class="fragment"><div class="line"><span class="stringliteral">"string"</span> &lt;name&gt; <span class="stringliteral">"["</span> &lt;minSize&gt; <span class="stringliteral">"]"</span> <span class="stringliteral">"OUT"</span> </div></div><!-- fragment --><ul>
 <li>an OUT string</li>
 <li>string should be large enough to store <code>minSize</code> characters; if supported by the function implemention, a shorter OUT string can be used.</li>
 <li>string length is given as number of characters, excluding any terminating characters</li>
 </ul>
-<p><code> "handler" <name> "</code></p><ul>
+<p><code> "handler" &lt;name&gt; "</code></p><ul>
 <li>a handler (callback) function.</li>
 <li>see <a class="el" href="api_files_syntax.html#apiFilesSyntax_handler">Specifying a Handler</a> for info on how to declare a handler.</li>
 </ul>
@@ -108,28 +108,28 @@ Specifying a Function</h1>
 <h1><a class="anchor" id="apiFilesSyntax_event"></a>
 Specifying an Event</h1>
 <p>Do this to specify an event:</p>
-<pre class="fragment">EVENT <eventType>
+<pre class="fragment">EVENT &lt;eventType&gt;
 (
-    <parameterList>
+    &lt;parameterList&gt;
 );
 </pre><p>The <code>parameterList</code> can contain one or more parameters separated by commas. It can contain anything that's valid for a function, but it must contain one handler parameter. The parameters are used when registering a handler for the specified event.</p>
 <p>See <a class="el" href="api_files_c.html#apiFilesC_event">Events in C</a> for details on the C code generated from the above event definition.</p>
 <h1><a class="anchor" id="apiFilesSyntax_handler"></a>
 Specifying a Handler</h1>
 <p>Do this to specify a handler:</p>
-<pre class="fragment">HANDLER <handlerType>
+<pre class="fragment">HANDLER &lt;handlerType&gt;
 (
-    [<parameterList>]
+    [&lt;parameterList&gt;]
 );
 </pre><p>The <code>parameterList</code> can contain one or more parameters separated by commas, or can be empty if there are no parameters. It can only contain scalar types or string types, as described above for <a class="el" href="api_files_syntax.html#apiFilesSyntax_function">Specifying a Function</a>. All the parameters should be IN parameters.</p>
 <p>See <a class="el" href="api_files_c.html#apiFilesC_handler">Handlers in C</a> for details on the C code generated from the above handler definition.</p>
 <h1><a class="anchor" id="apiFilesSyntax_comments"></a>
 Comments</h1>
-<p>The API file supports both C and C++ comment styles. Comments that use the doxygen formats </p><pre class="fragment">/** </pre><p> to start a multi-line comment or</p><pre class="fragment">///< </pre><p> to start a one line comment receive special processing. Multi-line comments at the start of the API file will be copied directly to the start of the appropriate generated files.</p>
+<p>The API file supports both C and C++ comment styles. Comments that use the doxygen formats </p><pre class="fragment">/** </pre><p> to start a multi-line comment or</p><pre class="fragment">///&lt; </pre><p> to start a one line comment receive special processing. Multi-line comments at the start of the API file will be copied directly to the start of the appropriate generated files.</p>
 <p>Comments given in the function definition will be copied to the appropriate generated files under the following conditions:</p><ul>
 <li>Multi-line comments must start with<pre class="fragment">/** </pre></li>
-<li>Single-line comments must start with<pre class="fragment">///< </pre></li>
-<li>In a block of single-line comments, each line must start with<pre class="fragment">///< </pre> rather than just the first line. This is different from typical doxygen usage.</li>
+<li>Single-line comments must start with<pre class="fragment">///&lt; </pre></li>
+<li>In a block of single-line comments, each line must start with<pre class="fragment">///&lt; </pre> rather than just the first line. This is different from typical doxygen usage.</li>
 <li>If the function definition is preceded by a multi-line comment then this comment will be copied to the appropriate generated files.</li>
 <li>If any parameter is followed by a multi-line comment or one or more single line comments, then all these comments will be copied to the appropriate generated files.</li>
 </ul>
@@ -171,10 +171,10 @@ REFERENCE OpaqueReference;
  */
 ENUM EnumExample
 {
-    ZERO,     ///< first enum
-    ONE,      ///< second enum
-    TWO,      ///< third enum
-    THREE     ///< fourth enum
+    ZERO,     ///&lt; first enum
+    ONE,      ///&lt; second enum
+    TWO,      ///&lt; third enum
+    THREE     ///&lt; fourth enum
 };
 
 /**
@@ -182,9 +182,9 @@ ENUM EnumExample
  */
 BITMASK BitMaskExample
 {
-    BIT0,     ///< first
-    BIT1,     ///< second
-    BIT2,     ///< third
+    BIT0,     ///&lt; first
+    BIT1,     ///&lt; second
+    BIT2,     ///&lt; third
 };
 
 
@@ -208,8 +208,8 @@ DEFINE SOME_STRING = "some string";
  */
 HANDLER TestAHandler
 (
-    int32 x   ///< First parameter for the handler
-              ///< Second comment line
+    int32 x   ///&lt; First parameter for the handler
+              ///&lt; Second comment line
 );
 
 
@@ -218,8 +218,8 @@ HANDLER TestAHandler
  */
 EVENT TestA
 (
-    uint32 data,          ///< Used when registering the handler i.e. it is
-                          ///< passed into the generated ADD_HANDLER function.
+    uint32 data,          ///&lt; Used when registering the handler i.e. it is
+                          ///&lt; passed into the generated ADD_HANDLER function.
     handler TestAHandler
 );
 
@@ -229,18 +229,18 @@ EVENT TestA
  */
 FUNCTION AllParameters
 (
-    common.EnumExample a,  ///< first one-line comment
-                           ///< second one-line comment
+    common.EnumExample a,  ///&lt; first one-line comment
+                           ///&lt; second one-line comment
     uint32 b OUT,
     uint32 data[common.TEN] IN,
 
-    uint32 output[TEN] OUT,   ///< some more comments here
-    ///< and some comments here as well
+    uint32 output[TEN] OUT,   ///&lt; some more comments here
+    ///&lt; and some comments here as well
 
     string label [common.TEN..20] IN,
     string response [TWENTY] OUT
-    ///< comments on final parameter, first line
-    ///< and more comments
+    ///&lt; comments on final parameter, first line
+    ///&lt; and more comments
 );
 
 
@@ -249,8 +249,8 @@ FUNCTION AllParameters
  */
 FUNCTION FileTest
 (
-    file dataFile IN,   ///< file descriptor as IN parameter
-    file dataOut OUT    ///< file descriptor as OUT parameter
+    file dataFile IN,   ///&lt; file descriptor as IN parameter
+    file dataOut OUT    ///&lt; file descriptor as OUT parameter
 );
 
 /**
@@ -263,5 +263,5 @@ FUNCTION int32 UseCallback
 );
 
 </pre><hr />
-<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>

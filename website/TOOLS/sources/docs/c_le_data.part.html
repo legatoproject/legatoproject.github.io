@@ -11,7 +11,7 @@ IPC interfaces binding</h1>
 <p>All the functions of this API are provided by the <b>dataConnectionService</b> application service.</p>
 <p>Here's a code sample binding to Data Connection services: </p><pre class="fragment"> bindings:
  {
-    clientExe.clientComponent.le_data -> dataConnectionService.le_data
+    clientExe.clientComponent.le_data -&gt; dataConnectionService.le_data
  }</pre><h1><a class="anchor" id="c_le_data_default"></a>
 Default Data Connection</h1>
 <p>Default data connection is obtained using <a class="el" href="le__data__interface_8h.html#afb9db0acdd98620cb0cd303bee8a817c">le_data_Request()</a>. Before the data connection is requested, an application registers a connection state handler using <a class="el" href="le__data__interface_8h.html#aebd3fc58774ed3f5a11f70d2317837dd">le_data_AddConnectionStateHandler()</a>. Once the data connection is established, the handler will be called indicating it's now connected. If the state of the data connection changes, then the handler will be called with the new state. To release a data connection, an application can use <a class="el" href="le__data__interface_8h.html#a1dc7cd8faed6b1ee02ea947cf02b8ee7">le_data_Release()</a>.</p>
@@ -24,7 +24,7 @@ Default Data Connection</h1>
 Configuration tree</h1>
 <p>The configuration database path for the Data Connection Service is: </p><pre class="fragment"> /
      dataConnectionService/
-         prefTech<string> == <technology></pre><p>'prefTech' is the preferred technology used for the data connection service. It can be set with the following choices (string type):</p><ul>
+         prefTech&lt;string&gt; == &lt;technology&gt;</pre><p>'prefTech' is the preferred technology used for the data connection service. It can be set with the following choices (string type):</p><ul>
 <li>"wifi"</li>
 <li>"ethernet"</li>
 <li>"cellular"</li>
@@ -43,5 +43,5 @@ Data Connection Options</h1>
 </ul>
 <p><a class="el" href="le__data__interface_8h.html#aebd3fc58774ed3f5a11f70d2317837dd">le_data_AddConnectionStateHandler()</a> and <a class="el" href="le__data__interface_8h.html#a1dc7cd8faed6b1ee02ea947cf02b8ee7">le_data_Release()</a> APIs can continue to be used, as described above.</p>
 <hr />
-<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>

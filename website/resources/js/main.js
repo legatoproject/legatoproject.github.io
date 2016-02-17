@@ -93,7 +93,7 @@ function getdata(ctx) {
                 data: {
                     q: request.term,
                     size: 15,
-                    fq:"context:'" + ctx + "'",
+                    fq: "context:'" + ctx + "'",
                     sort: "_score desc"
                 },
                 change: function(e, ui) {
@@ -125,6 +125,7 @@ function getdata(ctx) {
             });
 
         },
+
         minLength: 1,
         focus: function(event, ui) {
             event.preventDefault(); // so the textbox's value doesn't get replaced.
@@ -170,10 +171,10 @@ function getdata(ctx) {
                 break;
 
         }
-        return $("<a class=\"" + itemclass + "\">")
-            .attr("href", item.value)
-            .html("<li>" + item.label + "</li>")
-            .appendTo(ul);
+        var anchor = $("<a>").attr("href", item.value).html(item.label);
+        var li = $("<li>");
+        anchor.appendTo(li)
+        return li.appendTo(ul);
     };
 
     ac.data("ui-autocomplete")._renderMenu = function(ul, items) {
@@ -204,7 +205,9 @@ function setupTree(treeURL) {
                 $tree.tree({
                     data: data.children,
                     saveState: true,
-                    useContextMenu: false
+                    useContextMenu: false,
+                    closedIcon: "+",
+                    openedIcon: "-"
                 });
 
                 var path = window.location.pathname;
@@ -215,6 +218,7 @@ function setupTree(treeURL) {
                     page = page.slice(0, -1);
                 }
                 $tree.tree('selectNode', null);
+
                 $tree.tree('getTree').iterate(
                     function(node, level) {
                         if (node.href === page) {

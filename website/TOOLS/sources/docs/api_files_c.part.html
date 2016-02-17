@@ -200,16 +200,16 @@ typedef struct common_OpaqueReference* common_OpaqueReferenceRef_t;
 typedef enum
 {
     COMMON_ZERO,
-        ///< first enum
+        ///&lt; first enum
 
     COMMON_ONE,
-        ///< second enum
+        ///&lt; second enum
 
     COMMON_TWO,
-        ///< third enum
+        ///&lt; third enum
 
     COMMON_THREE
-        ///< fourth enum
+        ///&lt; fourth enum
 }
 common_EnumExample_t;
 
@@ -222,13 +222,13 @@ common_EnumExample_t;
 typedef enum
 {
     COMMON_BIT0 = 0x1,
-        ///< first
+        ///&lt; first
 
     COMMON_BIT1 = 0x2,
-        ///< second
+        ///&lt; second
 
     COMMON_BIT2 = 0x4
-        ///< third
+        ///&lt; third
 }
 common_BitMaskExample_t;
 
@@ -333,15 +333,15 @@ typedef void (*example_TestAHandlerFunc_t)
 example_TestAHandlerRef_t example_AddTestAHandler
 (
     uint32_t data,
-        ///< [IN]
-        ///< Used when registering the handler i.e. it is
-        ///< passed into the generated ADD_HANDLER function.
+        ///&lt; [IN]
+        ///&lt; Used when registering the handler i.e. it is
+        ///&lt; passed into the generated ADD_HANDLER function.
 
     example_TestAHandlerFunc_t handlerPtr,
-        ///< [IN]
+        ///&lt; [IN]
 
     void* contextPtr
-        ///< [IN]
+        ///&lt; [IN]
 );
 
 //--------------------------------------------------------------------------------------------------
@@ -352,7 +352,7 @@ example_TestAHandlerRef_t example_AddTestAHandler
 void example_RemoveTestAHandler
 (
     example_TestAHandlerRef_t addHandlerRef
-        ///< [IN]
+        ///&lt; [IN]
 );
 
 //--------------------------------------------------------------------------------------------------
@@ -363,37 +363,37 @@ void example_RemoveTestAHandler
 void example_AllParameters
 (
     common_EnumExample_t a,
-        ///< [IN]
-        ///< first one-line comment
-        ///< second one-line comment
+        ///&lt; [IN]
+        ///&lt; first one-line comment
+        ///&lt; second one-line comment
 
     uint32_t* bPtr,
-        ///< [OUT]
+        ///&lt; [OUT]
 
     const uint32_t* dataPtr,
-        ///< [IN]
+        ///&lt; [IN]
 
     size_t dataNumElements,
-        ///< [IN]
+        ///&lt; [IN]
 
     uint32_t* outputPtr,
-        ///< [OUT]
-        ///< some more comments here
-        ///< and some comments here as well
+        ///&lt; [OUT]
+        ///&lt; some more comments here
+        ///&lt; and some comments here as well
 
     size_t* outputNumElementsPtr,
-        ///< [INOUT]
+        ///&lt; [INOUT]
 
     const char* label,
-        ///< [IN]
+        ///&lt; [IN]
 
     char* response,
-        ///< [OUT]
-        ///< comments on final parameter, first line
-        ///< and more comments
+        ///&lt; [OUT]
+        ///&lt; comments on final parameter, first line
+        ///&lt; and more comments
 
     size_t responseNumElements
-        ///< [IN]
+        ///&lt; [IN]
 );
 
 //--------------------------------------------------------------------------------------------------
@@ -404,12 +404,12 @@ void example_AllParameters
 void example_FileTest
 (
     int dataFile,
-        ///< [IN]
-        ///< file descriptor as IN parameter
+        ///&lt; [IN]
+        ///&lt; file descriptor as IN parameter
 
     int* dataOutPtr
-        ///< [OUT]
-        ///< file descriptor as OUT parameter
+        ///&lt; [OUT]
+        ///&lt; file descriptor as OUT parameter
 );
 
 //--------------------------------------------------------------------------------------------------
@@ -420,18 +420,18 @@ void example_FileTest
 int32_t example_UseCallback
 (
     uint32_t someParm,
-        ///< [IN]
+        ///&lt; [IN]
 
     example_TestAHandlerFunc_t handlerPtr,
-        ///< [IN]
+        ///&lt; [IN]
 
     void* contextPtr
-        ///< [IN]
+        ///&lt; [IN]
 );
 
 
 #endif // EXAMPLE_H_INCLUDE_GUARD
 
 </pre><hr />
-<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>

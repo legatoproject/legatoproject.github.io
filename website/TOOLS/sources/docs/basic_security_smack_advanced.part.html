@@ -42,7 +42,7 @@ Supervisor</h1>
 <p>All processes are given the same SMACK label as their app. All app labels are unique.</p>
 <p>SMACK rules are set so IPC bindings between apps work. Here's a code sample of rules to set if a client app needs to access a server app:</p>
 <div class="fragment"><div class="line"><span class="stringliteral">'clientAppLabel'</span> rw <span class="stringliteral">'serverAppLabel'</span> <span class="comment">// client has read-write access to server.</span></div><div class="line"><span class="stringliteral">'serverAppLabel'</span> rw <span class="stringliteral">'clientAppLabel'</span> <span class="comment">// server has read-write access to client.</span></div></div><!-- fragment --><p>Sandboxed directories are given labels corresponding to the app's access rights to those directory. Generally, an app only has read and execute permission to its sandboxes /bin directory. Its properties look like this:</p>
-<p>owner = root group = root DAC permissions = ---—r-x SMACK label = 'AppLabelrx'</p>
+<p>owner = root group = root DAC permissions = ---&mdash;r-x SMACK label = 'AppLabelrx'</p>
 <p>The Supervisor also sets up the SMACK rule so the app has the proper access to the directory:</p>
 <p>'AppLabel' rx 'AppLabelrx'</p>
 <p>App's directories are given different labels than the app itself so that if an IPC binding is present, the remote app has access to the local app but doesn't have direct access to the local app's files.</p>
@@ -57,5 +57,5 @@ Limitations</h1>
 <li>QMI sockets are currently set to "*" because some apps need to write to them. Ideally, the QMI socket file would be given a label such as "qmi" and a rule would be created to only allow access to the app that requires it. However, there currently isn't a way to specify this in the xdef file.</li>
 </ul>
 <hr />
-<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>

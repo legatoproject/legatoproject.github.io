@@ -20,7 +20,7 @@ Change Default USB Classes</h1>
 Setup Target Static IP</h1>
 <p>You can configure your target and development PC so it doesn't prompt for a password, run: <b>bin/configtargetssh</b> </p>
 <p>It'll look like this: </p><pre class="fragment">dave@devbox:~/legato$ bin/configtargetssh 192.168.1.2
-Generating new key pair... --->>> LEAVE THE PASSPHRASE EMPTY <<<---
+Generating new key pair... ---&gt;&gt;&gt; LEAVE THE PASSPHRASE EMPTY &lt;&lt;&lt;---
 Generating public/private rsa key pair.
 Enter passphrase (empty for no passphrase):
 Enter same passphrase again:
@@ -59,12 +59,12 @@ Read/Write rootfs</h1>
 Disable New Package Download</h1>
 <p>The Yocto build defaults to disable new package downloads.</p>
 <p>Enable downloading new packages over the Internet, modify:</p>
-<p><code><build-dir>/conf/local</code>.conf value <code>BB_NO_NETWORK</code> to "0" . The file is only present after a build has run once.</p>
+<p><code>&lt;build-dir&gt;/conf/local</code>.conf value <code>BB_NO_NETWORK</code> to "0" . The file is only present after a build has run once.</p>
 <h1><a class="anchor" id="yoctoBSPTestReport"></a>
 Setup using BSPTestReport.xls</h1>
 <p>The <code>BSPTestReport.xls</code> spreadsheet is used for instructions and reports to help set up different BSP features to test. Start with the Contents sheet.</p>
 <h1><a class="anchor" id="getstartedInstallNotes_yoctoNFSRoot"></a>
 Use nfs root</h1>
-<p>The file <b>meta-swi/meta-swi-mdm9x15/conf/machine/qcom-mdm9615.conf</b> contains examples if you need to include a lot of extra packages in your rootfs or if you build the debug version. See README.bsp for details. Remember to untar the generated rootfs to an exported file system. The file pointed to by the rootfs link contains the most recent root file system. There’s more info available at <a href="https://www.kernel.org/doc/Documentation/filesystems/nfs/nfsroot.txt">kernel docs</a>. </p><hr />
-<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p>The file <b>meta-swi/meta-swi-mdm9x15/conf/machine/qcom-mdm9615.conf</b> contains examples if you need to include a lot of extra packages in your rootfs or if you build the debug version. See README.bsp for details. Remember to untar the generated rootfs to an exported file system. The file pointed to by the rootfs link contains the most recent root file system. There&rsquo;s more info available at <a href="https://www.kernel.org/doc/Documentation/filesystems/nfs/nfsroot.txt">kernel docs</a>. </p><hr />
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>

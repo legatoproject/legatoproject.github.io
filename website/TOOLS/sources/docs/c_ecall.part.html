@@ -11,7 +11,7 @@
 <p>eCall is a technology initiative intended to bring rapid assistance to auto accidents anywhere in the European Union. When a serious vehicle accident occurs, sensors automatically trigger an eCall. When activated, the in-vehicle system (IVS) establishes a 112-voice connection.</p>
 <p>The Mobile Network Operator handles the eCall like any other 112 call and routes the call to the most appropriate emergency response centre - Public Safety Answering Point (PSAP).</p>
 <p>At the same time, a digital "minimum set of data" (MSD) message is sent over the voice call using in-band modem signals. The MSD includes accident information like time, location, driving direction, and vehicle description.</p>
-<p>The eCall can also be activated manually. The mobile network operator identifies that the 112 call is an eCall from the “eCall flag” inserted by the vehicle’s communication module.</p>
+<p>The eCall can also be activated manually. The mobile network operator identifies that the 112 call is an eCall from the &ldquo;eCall flag&rdquo; inserted by the vehicle&rsquo;s communication module.</p>
 <p>This API applies for both PAN-EUROPEAN and ERA-GLONASS standards.</p>
 <dl class="section note"><dt>Note</dt><dd>eCall service is only available on automotive products.</dd></dl>
 <h1><a class="anchor" id="le_ecall_binding"></a>
@@ -19,7 +19,7 @@ IPC interfaces binding</h1>
 <p>All the functions of this API are provided by the <b>modemService</b> service.</p>
 <p>Here's a code sample binding to modem services: </p><pre class="fragment">bindings:
 {
-   clientExe.clientComponent.le_ecall -> modemService.le_ecall
+   clientExe.clientComponent.le_ecall -&gt; modemService.le_ecall
 }
 </pre><h1><a class="anchor" id="le_ecall_operation"></a>
 Operation modes</h1>
@@ -62,7 +62,7 @@ Minimum Set of Data (MSD)</h1>
 <li><code>LE_ECALL_TX_MODE_PUSH</code> : the MSD is pushed by the IVS</li>
 <li><code>LE_ECALL_TX_MODE_PULL</code> : the MSD is sent when requested by the PSAP</li>
 </ul>
-<p>It's possible to import a prepared MSD using the <a class="el" href="le__ecall__interface_8h.html#a85c4c3b921b9a6b0bc10f9400e58113e">le_ecall_ImportMsd()</a> function. The prepared MSD must answer the requirements described in the "EN 15722:2013" publication (this publication has been prepared by Technical Committee CEN/TC 278 “Intelligent Transport Systems").</p>
+<p>It's possible to import a prepared MSD using the <a class="el" href="le__ecall__interface_8h.html#a85c4c3b921b9a6b0bc10f9400e58113e">le_ecall_ImportMsd()</a> function. The prepared MSD must answer the requirements described in the "EN 15722:2013" publication (this publication has been prepared by Technical Committee CEN/TC 278 &ldquo;Intelligent Transport Systems").</p>
 <dl class="section warning"><dt>Warning</dt><dd>The imported MSD doesn't take into account the values provided by the le_ecall_SetMsdXxx() functions and the configuration tree. It overwrites any previous imported MSD or encoded MSD.</dd>
 <dd>
 The imported MSD overwrites the control flags (automaticActivation and testCall) set by le_ecall_StartXxx() functions (Manual, Automatic, Test). The User App is in charge of their correct settings.</dd></dl>
@@ -106,7 +106,7 @@ ERA-GLONASS MSD additional data</h1>
 <div class="fragment"><div class="line">ERAOADASN1Module</div><div class="line">DEFINITIONS</div><div class="line">AUTOMATIC TAGS ::=</div><div class="line">BEGIN</div><div class="line">ERADataFormatId::= INTEGER (1)</div><div class="line"></div><div class="line">ERAAdditionalData ::= SEQUENCE {</div><div class="line">   crashSeverity INTEGER(0..2047) OPTIONAL,</div><div class="line">   diagnosticResult DiagnosticResult OPTIONAL,</div><div class="line">   crashInfo CrashInfo OPTIONAL,</div><div class="line">   ...</div><div class="line">}</div><div class="line"></div><div class="line">DiagnosticResult ::= SEQUENCE {</div><div class="line">   micConnectionFailure BOOLEAN OPTIONAL,</div><div class="line">   micFailure BOOLEAN OPTIONAL,</div><div class="line">   rightSpeakerFailure BOOLEAN OPTIONAL,</div><div class="line">   leftSpeakerFailure BOOLEAN OPTIONAL,</div><div class="line">   speakersFailure BOOLEAN OPTIONAL,</div><div class="line">   ignitionLineFailure BOOLEAN OPTIONAL,</div><div class="line">   uimFailure BOOLEAN OPTIONAL,</div><div class="line">   statusIndicatorFailure BOOLEAN OPTIONAL,</div><div class="line">   batteryFailure BOOLEAN OPTIONAL,</div><div class="line">   batteryVoltageLow BOOLEAN OPTIONAL,</div><div class="line">   crashSensorFailure BOOLEAN OPTIONAL,</div><div class="line">   firmwareImageCorruption BOOLEAN OPTIONAL,</div><div class="line">   commModuleInterfaceFailure BOOLEAN OPTIONAL,</div><div class="line">   gnssReceiverFailure BOOLEAN OPTIONAL,</div><div class="line">   raimProblem BOOLEAN OPTIONAL,</div><div class="line">   gnssAntennaFailure BOOLEAN OPTIONAL,</div><div class="line">   commModuleFailure BOOLEAN OPTIONAL,</div><div class="line">   eventsMemoryOverflow BOOLEAN OPTIONAL,</div><div class="line">   crashProfileMemoryOverflow BOOLEAN OPTIONAL,</div><div class="line">   otherCriticalFailires BOOLEAN OPTIONAL,</div><div class="line">   otherNotCriticalFailures BOOLEAN OPTIONAL</div><div class="line">}</div><div class="line"></div><div class="line">CrashInfo ::= SEQUENCE {</div><div class="line">   crashFront BOOLEAN OPTIONAL,</div><div class="line">   crashLeft BOOLEAN OPTIONAL,</div><div class="line">   crashRight BOOLEAN OPTIONAL,</div><div class="line">   crashRear BOOLEAN OPTIONAL,</div><div class="line">   crashRollover BOOLEAN OPTIONAL,</div><div class="line">   crashSide BOOLEAN OPTIONAL,</div><div class="line">   crashFrontOrSide BOOLEAN OPTIONAL,</div><div class="line">   crashAnotherType BOOLEAN OPTIONAL</div><div class="line">}</div><div class="line">END</div></div><!-- fragment --><h1><a class="anchor" id="le_ecall_redial"></a>
 Redial management</h1>
 <p>In the case of PAN-EUROPEAN, the redial can be performed as many times as desired but should be performed within 2 minutes. (EN 16062:2014 -7.14.3).</p>
-<p>In the case of ERA-GLONASS, the redial can be performed ECALL_MANUAL_DIAL_ATTEMPTS times within the maximal time limit of ECALL_DIAL_DURATION (GOST 54620 2013 – Appendix A).</p>
+<p>In the case of ERA-GLONASS, the redial can be performed ECALL_MANUAL_DIAL_ATTEMPTS times within the maximal time limit of ECALL_DIAL_DURATION (GOST 54620 2013 &ndash; Appendix A).</p>
 <p>The <b>LE_ECALL_STATE_END_OF_REDIAL_PERIOD</b> state event notifies the User of the redial period end.</p>
 <h1><a class="anchor" id="le_ecall_samples"></a>
 Code samples</h1>
@@ -127,8 +127,8 @@ eCall configuration</h1>
 <li><a class="el" href="le__ecall__interface_8h.html#a0f24b673049d51baf132ace25e2fa161">le_ecall_GetNadDeregistrationTime()</a></li>
 </ul>
 <p>Time is set in hours where:</p><ul>
-<li>from 1 to 60 minutes -> 1 hour</li>
-<li>from 61 to 120 minutes -> 2hours, etc.</li>
+<li>from 1 to 60 minutes -&gt; 1 hour</li>
+<li>from 61 to 120 minutes -&gt; 2hours, etc.</li>
 </ul>
 <p>Example: if <code>deregTime</code> parameter unit is minutes, the effective time is: </p><div class="fragment"><div class="line">ECallConfiguration.nad_deregistration_time = (deregTime+59)/60; </div></div><!-- fragment --><p>After termination of an emergency call the in-vehicle system remains registered on the network for the period of time, defined by the installation parameter 'NAD_DEREGISTRATION_TIME'.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Be sure to check the possible values of 'NAD_DEREGISTRATION_TIME' for your specific platform.</dd></dl>
@@ -147,13 +147,13 @@ Configuration tree</h1>
 <p>The configuration database path for the eCall is: </p><pre class="fragment">/
     modemServices/
         eCall/
-            systemStandard<string> = <eCall system>
-            msdVersion<int> = <MSD value>
-            vehicleType<string> = <vehicle type>
-            vin<string> = <VIN>
+            systemStandard&lt;string&gt; = &lt;eCall system&gt;
+            msdVersion&lt;int&gt; = &lt;MSD value&gt;
+            vehicleType&lt;string&gt; = &lt;vehicle type&gt;
+            vin&lt;string&gt; = &lt;VIN&gt;
             propulsionType/
-                0<string> = <propulsion type>
-                1<string> = <propulsion type>
+                0&lt;string&gt; = &lt;propulsion type&gt;
+                1&lt;string&gt; = &lt;propulsion type&gt;
                 ...
 </pre><p>The 'systemStandard' is the kind of eCall system:</p><ul>
 <li>PAN-EUROPEAN</li>
@@ -188,7 +188,7 @@ Configuration tree</h1>
 </ul>
 <p>Several 'propulsionType' can be applied.</p>
 <hr />
-<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license.</p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license.</p>
 <hr />
-<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>

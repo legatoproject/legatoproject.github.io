@@ -12,7 +12,7 @@ IPC interfaces binding</h1>
 <p>All the functions of this API are provided by the <b>modemService</b>.</p>
 <p>Here's a code sample binding to modem services: </p><pre class="fragment">bindings:
 {
-   clientExe.clientComponent.le_sms -> modemService.le_sms
+   clientExe.clientComponent.le_sms -&gt; modemService.le_sms
 }
 </pre><h1><a class="anchor" id="le_sms_ops_creating_msg"></a>
 Creating a Message object</h1>
@@ -86,7 +86,7 @@ Deleting a message from the storage area</h1>
 <p><code><a class="el" href="le__sms__interface_8h.html#aff755186b683b94ba2788b48e28284a3">le_sms_DeleteFromStorage()</a></code> deletes the message from the storage area. Message is identified with <code>le_sms_MsgRef_t</code> object. The API returns an error if the message is not found in the storage area.</p>
 <dl class="section note"><dt>Note</dt><dd>If several users own the Message object on new reception (e.g., several handler functions registered for SMS message reception), the Message will be deleted from the storage area only after the last user deletes the Message object reference (not necessary from storage). API returns always LE_OK in this case.</dd>
 <dd>
-If one client creates a list and deletes all sms from storage, other clients won’t see sms stored If they have not created a sms list too. Sms List creation locks and delays sms deletion from storage until all references have been deleted.</dd></dl>
+If one client creates a list and deletes all sms from storage, other clients won&rsquo;t see sms stored If they have not created a sms list too. Sms List creation locks and delays sms deletion from storage until all references have been deleted.</dd></dl>
 <h1><a class="anchor" id="le_sms_ops_broadcast"></a>
 SMS Cell Broadcast</h1>
 <p>The Cell Broadcast service permits a number of unacknowledged general messages to be broadcast to all receivers within a particular region. Cell Broadcast messages are broadcast to defined geographical areas known as cell broadcast areas. These areas may comprise of one or more cells, or may comprise the entire PLMN.</p>
@@ -132,15 +132,15 @@ Sample codes</h1>
 <p>A sample code that implements a function for Mobile Terminated SMS message can be found in <b>smsMT.c</b> file (please refer to <a class="el" href="c_sms_sample_m_t.html">Sample code for Mobile Terminated SMS message</a> page).</p>
 <p>These two samples can be easily compiled and run into the <b>sms</b> app, to install and use this app:</p>
 <pre class="fragment">$ make ar7
-$ bin/instapp  build/ar7/bin/samples/sms.ar7 <ipaddress>
+$ bin/instapp  build/ar7/bin/samples/sms.ar7 &lt;ipaddress&gt;
 </pre><p> where ipaddress is the address of your target device.</p>
 <p>Then on your target, just run: </p><pre class="fragment">$ app start sms
-</pre><p>The sample replies to the sender by the message "Message from <phone number> received". Where "phone number" is the sender's phone number.</p>
+</pre><p>The sample replies to the sender by the message "Message from &lt;phone number&gt; received". Where "phone number" is the sender's phone number.</p>
 <p>Sample code for that application can be seen in the following pages:</p><ul>
 <li><a class="el" href="c_sms_sample_m_o.html">Sample code for Mobile Originated SMS message</a> <br />
 </li>
 <li><a class="el" href="c_sms_sample_m_t.html">Sample code for Mobile Terminated SMS message</a></li>
 </ul>
 <hr />
-<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>

@@ -16,17 +16,17 @@ eCall Session</h1>
 
 /
       settings/
-           psap<string> == <PSAP number>
-           hMinAccuracy<int> == <minimum horizontal accuracy value>
-           dirMinAccuracy<int> == <minimum direction accuracy value>
+           psap&lt;string&gt; == &lt;PSAP number&gt;
+           hMinAccuracy&lt;int&gt; == &lt;minimum horizontal accuracy value&gt;
+           dirMinAccuracy&lt;int&gt; == &lt;minimum direction accuracy value&gt;
 </pre><ul>
 <li>'psap' is the PSAP telephone number.</li>
 <li>'hAccuracy' is the minimum expected horizontal accuracy to trust the position (in meters).</li>
 <li>'dirAccuracy' is the minimum expected direction accuracy to trust the position (in degrees).</li>
 </ul>
-<p>You can set them by issuing the commands: </p><pre class="fragment">$ config set eCallDemo:/settings/psap <PSAP number>
-$ config set eCallDemo:/settings/hMinAccuracy <minimum horizontal accuracy value> int
-$ config set eCallDemo:/settings/dirMinAccuracy <minimum direction accuracy value> int
+<p>You can set them by issuing the commands: </p><pre class="fragment">$ config set eCallDemo:/settings/psap &lt;PSAP number&gt;
+$ config set eCallDemo:/settings/hMinAccuracy &lt;minimum horizontal accuracy value&gt; int
+$ config set eCallDemo:/settings/dirMinAccuracy &lt;minimum direction accuracy value&gt; int
 </pre><p>These are the config tree settings needed for the eCall sample app:</p>
 <pre class="fragment">config set eCallDemo:/settings/psap 0141081040
 config set eCallDemo:/settings/hMinAccuracy 100 int
@@ -37,13 +37,13 @@ Config Tree Path</h1>
 <pre class="fragment">/
     modemServices/
         eCall/
-            systemStandard<string> = <eCall system>
-            msdVersion<int> = <MSD value>
-            vehicleType<string> = <vehicle type>
-            vin<string> = <VIN>
+            systemStandard&lt;string&gt; = &lt;eCall system&gt;
+            msdVersion&lt;int&gt; = &lt;MSD value&gt;
+            vehicleType&lt;string&gt; = &lt;vehicle type&gt;
+            vin&lt;string&gt; = &lt;VIN&gt;
             propulsionType/
-                0<string> = <propulsion type>
-                1<string> = <propulsion type>
+                0&lt;string&gt; = &lt;propulsion type&gt;
+                1&lt;string&gt; = &lt;propulsion type&gt;
                 ...
 </pre><p>This is a config tree path setting example:</p>
 <pre class="fragment">config set /modemServices/eCall/systemStandard PAN-EUROPEAN
@@ -54,7 +54,7 @@ config set /modemServices/eCall/propulsionType/0 Diesel
 </pre><h1><a class="anchor" id="sampleApps_eCallTrig"></a>
 trig utility</h1>
 <p>This utility triggers the eCallDemo application.</p>
-<p>Run <code>trig</code> like this: </p><pre class="fragment">$ execInApp eCallDemo trig <number of passengers>
+<p>Run <code>trig</code> like this: </p><pre class="fragment">$ execInApp eCallDemo trig &lt;number of passengers&gt;
 </pre><hr />
-<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>

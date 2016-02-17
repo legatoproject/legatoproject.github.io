@@ -37,5 +37,5 @@ Working without Transactions</h1>
 <p>Translating this to a "quick" (non-transactional) example looks like this:</p>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span> ClearIpInfo</div><div class="line">(</div><div class="line"> <span class="keyword">const</span> <span class="keywordtype">char</span>* interfaceNamePtr</div><div class="line">)</div><div class="line">{</div><div class="line"> <span class="keywordtype">char</span> pathBuffer[MAX_CFG_STRING] = { 0 };</div><div class="line"></div><div class="line">    sprintf(pathBuffer, <span class="stringliteral">"/system/%s/ip4/"</span>, interfaceNamePtr);</div><div class="line"> <a class="code" href="le__cfg__interface_8h.html#a95f44c1e0d16eb48475465af63300a75">le_cfg_QuickDeleteNode</a>(pathBuffer);</div><div class="line">}</div></div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>Because each read is independant, there's no guarantee of consistency between them. If another process changes one of the values while you read/write the other, the two values could be read out of sync.</dd></dl>
 <hr />
-<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>

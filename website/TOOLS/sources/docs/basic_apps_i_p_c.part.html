@@ -48,8 +48,8 @@ $ gedit greetServer/Component.cdef
 </pre><p>Make it contain the following:</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include "<a class="code" href="legato_8h.html">legato.h</a>"</span></div><div class="line"><span class="preprocessor">#include "interfaces.h"</span></div><div class="line"></div><div class="line"><span class="keywordtype">void</span> hello_Greet(<span class="keywordtype">void</span>)</div><div class="line">{</div><div class="line"> <a class="code" href="le__log_8h.html#a4ebab29f40ee8eaaa87205fe3f9aaa13">LE_INFO</a>(<span class="stringliteral">"Hello world."</span>);</div><div class="line">}</div><div class="line"></div><div class="line"><a class="code" href="le__event_loop_8h.html#abdb9187a56836a93d19cc793cbd4b7ec">COMPONENT_INIT</a></div><div class="line">{</div><div class="line"></div><div class="line">}</div></div><!-- fragment --><p>The file <code>interfaces.h</code> is auto-generated based on the contents of <code>greet.api</code> and greetServer's <code>Component.cdef</code>. It'll contain a prototype of the function <code>hello_Greet()</code>, which we implemented in <code>greetServer.c</code>.</p>
 <p>The function <code>hello_Greet()</code> will be called when a client binds to our <code>hello</code> service and calls the function <code>Greet()</code>. The name <code>hello_Greet</code> follows this pattern:</p>
-<pre class="fragment"><interface-name> '_' <api-function-name>
-</pre><p>The <interface-name> is the name given to the provided interface. In our example, it's the name <code>hello</code> before the <code>=</code> in the line <code>hello</code> <code>=</code> <code>greet.api</code>.</p>
+<pre class="fragment">&lt;interface-name&gt; '_' &lt;api-function-name&gt;
+</pre><p>The &lt;interface-name&gt; is the name given to the provided interface. In our example, it's the name <code>hello</code> before the <code>=</code> in the line <code>hello</code> <code>=</code> <code>greet.api</code>.</p>
 <dl class="section note"><dt>Note</dt><dd>If you forget to implement a service function on the server or if you give it the wrong name, the link stage will fail and complain that the symbol is unresolved. You'll know you missed a function, and you'll be able to see what the correct name of the function should be.</dd></dl>
 <h1><a class="anchor" id="basicAppsIPC_helloIPCCreatingTheClient"></a>
 Create Client Component</h1>
@@ -68,5 +68,5 @@ Declare IPC Bindings</h1>
 <p>You can create an <a class="el" href="def_files_adef.html">Application Definition .adef</a> file with an <a class="el" href="def_files_adef.html#defFilesAdef_extern">Extern</a> section to declare it's available for binding:</p>
 <div class="fragment"><div class="line"><span class="keyword">extern</span>:</div><div class="line">{</div><div class="line">    helloWorld.greetServer.greet.api</div><div class="line">}</div></div><!-- fragment --><p>You only need to do this if you want to leave your interface unbound, and bind it later in the <a class="el" href="def_files_sdef.html">System Definition .sdef</a> file <a class="el" href="def_files_sdef.html#defFilesSdef_bindings">bindings</a> section.</p>
 <hr />
-<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>

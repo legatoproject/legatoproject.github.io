@@ -14,7 +14,7 @@ isReady = TRUE; </pre><p>Comments should focus mainly on describing why somethin
 <p>The idea of why the code is doing what it's doing can't be conveyed well in the code itself. This is the most valuable information to have in comments to advise of pitfalls and help quickly identify whether design change options are viable. Often, the ''why'' was learned the hard way, so documenting it can save others from having to learn it the hard way, too. Also, sometimes things are done arbitrarily, which is good to know too so people don't have to fear that making changes to it might break something in some subtle way.</p>
 <p>C++ style comments are permitted in C code. All modern compilers support them.</p>
 <p>Each module should contain a comment block at the top of the file that describes the module's purpose. The header comment block should be formatted like this:</p>
-<pre class="fragment">/**
+<pre class="copyright">/**
  * @file le_basics.h
  *
  * There are certain cardinal types and commonly-used constants that form the most basic
@@ -22,7 +22,7 @@ isReady = TRUE; </pre><p>Comments should focus mainly on describing why somethin
  * error codes, portable integer types, and helpful macros to make ugly things nicer to look
  * at and easier to use.
  *
- * <HR>
+ * &lt;HR&gt;
  *
  * Copyright (C) Sierra Wireless Inc. Use of this work is subject to license.
  */
@@ -39,10 +39,10 @@ isReady = TRUE; </pre><p>Comments should focus mainly on describing why somethin
 //--------------------------------------------------------------------------------------------------
 le_mem_PoolRef_t le_mem_CreateSubPool
 (
-    le_mem_PoolRef_t    pool,       ///< [IN] The super-pool.
-    const char*         name,       ///< [IN] Name of the sub-pool (will be copied into the
+    le_mem_PoolRef_t    pool,       ///&lt; [IN] The super-pool.
+    const char*         name,       ///&lt; [IN] Name of the sub-pool (will be copied into the
                                     ///   sub-pool).
-    size_t              numObjects  ///< [IN] Number of objects to take from the super-pool.
+    size_t              numObjects  ///&lt; [IN] Number of objects to take from the super-pool.
 );
 </pre><p>Function parameters should be documented with comments after the parameter like above. Placing the comments after the parameters (instead of in the function comment block) keeps the comments and parameters together making it easier to read. It also reminds the developer to update the comments when the parameters are changed.</p>
 <p>A struct should be documented in a similar manner where each field has comments proceeding it like this:</p>
@@ -53,9 +53,9 @@ le_mem_PoolRef_t le_mem_CreateSubPool
 //--------------------------------------------------------------------------------------------------
 typedef struct
 {
-    uint64_t    numAllocs;      ///< Number of times an object has been allocated from this pool.
-    size_t      numFree;        ///< Number of free objects currently available in this pool.
-    size_t      numOverflows;   ///< Number of times le_mem_ForceAlloc() had to expand the pool.
+    uint64_t    numAllocs;      ///&lt; Number of times an object has been allocated from this pool.
+    size_t      numFree;        ///&lt; Number of free objects currently available in this pool.
+    size_t      numOverflows;   ///&lt; Number of times le_mem_ForceAlloc() had to expand the pool.
 }
 le_mem_PoolStats_t;
 </pre><p>Enumerated types should be documented similarly.</p>
@@ -69,10 +69,10 @@ le_mem_PoolStats_t;
 //--------------------------------------------------------------------------------------------------
 typedef enum
 {
-    EG_PERFECT = 0,             ///< Things went well. Nothing to worry about.
-    EG_TROUBLE = -1,            ///< We might want to think about packing our bags.
-    EG_PANIC = -2,              ///< Definitely not good.
-    EG_WARP_CORE_BREACH = -99   ///< Dilithium crystals defocused the anti-matter beam. Should never happen.
+    EG_PERFECT = 0,             ///&lt; Things went well. Nothing to worry about.
+    EG_TROUBLE = -1,            ///&lt; We might want to think about packing our bags.
+    EG_PANIC = -2,              ///&lt; Definitely not good.
+    EG_WARP_CORE_BREACH = -99   ///&lt; Dilithium crystals defocused the anti-matter beam. Should never happen.
 }
 eg_code_t;
 </pre><p>If the meaning of the constants in an enumerated type are obvious based on their names, comments could be omitted like this:</p>
@@ -104,7 +104,7 @@ Cyclomatic Complexity</h1>
     int i;
     int result = 0;
 
-    if (argc <= 0)
+    if (argc &lt;= 0)
     {
         printf("No arguments provided.\n");
         result = 1;
@@ -113,7 +113,7 @@ Cyclomatic Complexity</h1>
     {
         printf("argc = %d\n", argc);
 
-        for (i = 0; i < argc; i++)
+        for (i = 0; i &lt; argc; i++)
         {
             printf("argv[%d] = '%s'\n", argv[i]);
         }
@@ -143,12 +143,12 @@ Fan Out</h1>
         }
         else
         {
-            entryPtr->value = value;
-            entryPtr->timestamp = GetTimestamp();
+            entryPtr-&gt;value = value;
+            entryPtr-&gt;timestamp = GetTimestamp();
 
             // Add the entry to the log entry list.
             LogEntryList[NextEntryIndex++] = entryPtr;
-            if (NextExtryIndex >= LOG_SIZE)
+            if (NextExtryIndex &gt;= LOG_SIZE)
             {
                 NextEntryIndex = 0; // wrap around
             }
@@ -178,7 +178,7 @@ Gotos</h1>
 
     ...
 
-    if (x > LIMIT)
+    if (x &gt; LIMIT)
     {
         goto fault;
     }
@@ -232,5 +232,5 @@ Tabs</h1>
 <p>The standard indentation distance is 4 spaces per indentation level.</p>
 <p>Configure your editor(s) now! (...and, while you're at it, tell your editor not to automatically go and change pre-existing code.)</p>
 <hr />
-<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>

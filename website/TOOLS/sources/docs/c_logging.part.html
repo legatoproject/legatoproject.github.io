@@ -21,11 +21,11 @@ Levels</h2>
 </ul>
 <h2><a class="anchor" id="c_log_basic_defaultSyslog"></a>
 Standard Out and Standard Error in Syslog</h2>
-<p>By default, app processes will have their <code>stdout</code> and <code>stderr</code> redirected to the <code>syslog</code>. Each process’s stdout will be logged at INFO severity level; it’s stderr will be logged at “ERR” severity level.</p>
+<p>By default, app processes will have their <code>stdout</code> and <code>stderr</code> redirected to the <code>syslog</code>. Each process&rsquo;s stdout will be logged at INFO severity level; it&rsquo;s stderr will be logged at &ldquo;ERR&rdquo; severity level.</p>
 <p>There are two limitations with this feature:</p><ul>
-<li>the PID reported in the logs generally refer to the PID of the process that generates the stdout/stderr message. If a process forks, then both the parent and child processes’ stdout/stderr will share the same connection to the syslog, and the parent’s PID will be reported in the logs for both processes.</li>
-<li>stdout is line buffered when connected to a terminal, which means <code>printf(“hello<br />
-”)</code> will be printed to the terminal immediately. If stdout is connected to something like a pipe it's bulk buffered, which means a flush doesn't occur until the buffer is full.</li>
+<li>the PID reported in the logs generally refer to the PID of the process that generates the stdout/stderr message. If a process forks, then both the parent and child processes&rsquo; stdout/stderr will share the same connection to the syslog, and the parent&rsquo;s PID will be reported in the logs for both processes.</li>
+<li>stdout is line buffered when connected to a terminal, which means <code>printf(&ldquo;hello<br />
+&rdquo;)</code> will be printed to the terminal immediately. If stdout is connected to something like a pipe it's bulk buffered, which means a flush doesn't occur until the buffer is full.</li>
 </ul>
 <p>To make your process line buffer stdout so that printf will show up in the logs as expected, the <code>setlinebuf(stdout)</code> system call can be used. Alternatively, <code>fflush(stdout)</code> can be called \ to force a flush of the stdout buffer.</p>
 <p>This issue doesn't exist with stderr as stderr is never buffered.</p>
@@ -77,7 +77,7 @@ Tracing</h2>
 </ul>
 <p>This macro is special because it's independent of log level. Instead, trace messages are associated with a trace keyword. Tracing can be enabled and disabled based on these keywords.</p>
 <p>If a developer wanted to trace the creation of "shape" objects in their GUI package, they could add trace statements like the following:</p>
-<div class="fragment"><div class="line"><a class="code" href="le__log_8h.html#a07bbbb4095720cff330e87e249ce1252">LE_TRACE</a>(NewShapeTraceRef, <span class="stringliteral">"Created %p with position (%d,%d)."</span>, shapePtr, shapePtr->x, shapePtr->y);</div></div><!-- fragment --><p>The reference to the trace is obtained at start-up as follows:</p>
+<div class="fragment"><div class="line"><a class="code" href="le__log_8h.html#a07bbbb4095720cff330e87e249ce1252">LE_TRACE</a>(NewShapeTraceRef, <span class="stringliteral">"Created %p with position (%d,%d)."</span>, shapePtr, shapePtr-&gt;x, shapePtr-&gt;y);</div></div><!-- fragment --><p>The reference to the trace is obtained at start-up as follows:</p>
 <div class="fragment"><div class="line">NewShapeTraceRef = <a class="code" href="le__log_8h.html#a6d99d8147bcdcd1ed3848c9fdb72afe5">le_log_GetTraceRef</a>(<span class="stringliteral">"newShape"</span>);</div></div><!-- fragment --><p>This allows enabling and disabling these <a class="el" href="le__log_8h.html#a07bbbb4095720cff330e87e249ce1252">LE_TRACE()</a> calls using the "newShape" keyword through configuration settings and runtime log control tools. See <a class="el" href="c_logging.html#c_log_controlling">Log Controls</a> below.</p>
 <p>Applications can use <a class="el" href="le__log_8h.html#a0746e2e37585f61ccdf7ce4976909936">LE_IS_TRACE_ENABLED(NewShapeTraceRef)</a> to query whether a trace keyword is enabled.</p>
 <p>These allow apps to hook into the trace management system to use it to implement sophisticated, app-specific tracing or profiling features.</p>
@@ -150,11 +150,11 @@ App Crash Logs</h1>
 <p>When a process within an app faults or exits in error, a copy of the current syslog buffer is captured along with a core file of the process crash (if generated).</p>
 <p>The core file maximum size is determined by the process settings <code>maxCoreDumpFileBytes</code> and <code>maxFileBytes</code> found in the processes section of your app's <code></code>.adef file. By default, the <code>maxCoreDumpFileBytes</code> is set to 0, do not create a core file.</p>
 <p>To help save the target from flash burnout, the syslog and core files are stored in the RAM FS under /tmp. When a crash occurs, this directory is created:</p>
-<pre class="fragment"> /tmp/legato_logs/<app-name>/<exe-name>/</pre><p>The path for myApp and myExe would be:</p>
+<pre class="fragment"> /tmp/legato_logs/&lt;app-name&gt;/&lt;exe-name&gt;/</pre><p>The path for myApp and myExe would be:</p>
 <pre class="fragment"> /tmp/legato_logs/myApp/myExe/</pre><p>The files in that directory look like this:</p>
 <pre class="fragment"> core-myExe-1418694851
  syslog-1418694851</pre><p>If the fault action for that app's process is to reboot the target, the output location is changed to this (and is preserved across reboots):</p>
-<pre class="fragment"> /mnt/flash/legato_logs/<app-name>/<exe-name>/</pre><p>To save on RAM and flash space, only the most recent 4 copies of each file are preserved.</p>
+<pre class="fragment"> /mnt/flash/legato_logs/&lt;app-name&gt;/&lt;exe-name&gt;/</pre><p>To save on RAM and flash space, only the most recent 4 copies of each file are preserved.</p>
 <hr />
-<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>

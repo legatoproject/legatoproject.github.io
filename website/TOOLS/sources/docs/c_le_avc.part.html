@@ -35,10 +35,10 @@ AirVantage service configuration tree</h1>
     apps/
         avcService/
                  modemActivityTimeout
-</pre><p>After an AirVantage session is started, if there's no activity from the modem within the timer interval, then LE_AVC_NO_UPDATE state will be returned to the app. However, this modem activity timeout can be overridden by setting an integer value at /apps/avcService/modemActivityTimeout. The modem activity timer is initialized only when the avcService starts. If a valid entry >0 is found, then it will be used instead of the default value of 20 seconds. The following steps should be used to set the modemActivtyTimeout.</p>
+</pre><p>After an AirVantage session is started, if there's no activity from the modem within the timer interval, then LE_AVC_NO_UPDATE state will be returned to the app. However, this modem activity timeout can be overridden by setting an integer value at /apps/avcService/modemActivityTimeout. The modem activity timer is initialized only when the avcService starts. If a valid entry &gt;0 is found, then it will be used instead of the default value of 20 seconds. The following steps should be used to set the modemActivtyTimeout.</p>
 <pre class="fragment">config set /apps/avcService/modemActivityTimeout xx
 app restart avcService
 </pre><dl class="section note"><dt>Note</dt><dd>Everytime a new value is written to modemActivityTimeout, the avcService needs to be restarted to read the new value.</dd></dl>
 <hr />
-<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>

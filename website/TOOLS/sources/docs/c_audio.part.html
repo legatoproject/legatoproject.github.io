@@ -13,7 +13,7 @@ IPC interfaces binding</h1>
 <p>All the functions of this API are provided by the <b>audioService</b>.</p>
 <p>Here's a code sample binding to audio services: </p><pre class="fragment">bindings:
 {
-   clientExe.clientComponent.le_audio -> audioService.le_audio
+   clientExe.clientComponent.le_audio -&gt; audioService.le_audio
 }
 </pre><h1><a class="anchor" id="le_audio_configuration"></a>
 Configure the Audio</h1>
@@ -82,14 +82,15 @@ Create Audio connectors</h1>
 <p>You can remove an audio stream from a connector by calling the <a class="el" href="le__audio__interface_8h.html#a6b88df9301038375701e4c15a4c8aaf0">le_audio_Disconnect()</a> function.</p>
 <p>When finished with it, delete it using the <a class="el" href="le__audio__interface_8h.html#a3f40b13ff980040503927f59bb3e86a9">le_audio_DeleteConnector()</a> function.</p>
 <p>A sample code that implements audio connectors and audio streams during voice call can be found in <b>audioMccTest.c</b> file (please refer to <a class="el" href="c_audio_mcc.html">Sample code of audio settings for a dialing call</a> page).</p>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to set the connectors before the connected streams are used. In particular, a connector using Modem Voice Rx or Tx interfaces has to be created before dialing or answering the call if the application needs to customize the audio path.</dd></dl>
 <h1><a class="anchor" id="le_audio_pb_playback"></a>
 Playback</h1>
 <p>An audio file can be played to any active output interfaces.</p>
 <p>Open a player interface by calling:</p><ul>
 <li><a class="el" href="le__audio__interface_8h.html#a92eb1b6377f50ff07b97c5b8546f01ec">le_audio_OpenPlayer()</a>: returns an Audio Stream Reference for file playback. An audio file can be played on the local audio interface like Speaker, USB Tx, PCM Tx, I2S Tx or on the remote audio interface Modem Voice Tx depending the kind of connector (input or output) is tied to.</li>
 <li><a class="el" href="le__audio__interface_8h.html#aea2c5d0b394cfab87503639c534300c9">le_audio_PlayFile()</a>: plays a specified file. WAVE (Waveform audio file) and AMR (Adaptive Multi Rate) are supported. AMR is an audio compression format optimized for speech coding. Two codecs are supported:<ul>
-<li>AMR_NB (AMR Narrowband) codec that encodes narrowband (200–3400 Hz) signals at variable bit rates ranging from 4.75 to 12.2 kbit/s. It was adopted as the standard speech codec by 3GPP.</li>
-<li>AMR-WB (AMR Wideband) is an ITU-T standard speech codec which improved speech quality due to a wider speech bandwidth of 50–7000 Hz.</li>
+<li>AMR_NB (AMR Narrowband) codec that encodes narrowband (200&ndash;3400 Hz) signals at variable bit rates ranging from 4.75 to 12.2 kbit/s. It was adopted as the standard speech codec by 3GPP.</li>
+<li>AMR-WB (AMR Wideband) is an ITU-T standard speech codec which improved speech quality due to a wider speech bandwidth of 50&ndash;7000 Hz.</li>
 </ul>
 </li>
 <li><a class="el" href="le__audio__interface_8h.html#afd37d59ab8207338da197554f49d7ff0">le_audio_PlaySamples()</a>: initiates a playback using an audio flow. A pipe has to be opened first, then the PCM samples are sent throught the opened pipe. A play can be done only on a connected stream. For instance, the "I2S Tx", "Modem Voice Rx" and "Player" must be previously connected before playing a file.</li>
@@ -141,5 +142,5 @@ DTMF</h1>
 <dl class="section note"><dt>Note</dt><dd>The DTMF decoding works only on an active audio path.</dd></dl>
 <p>A sample code that implements DTMF playback and decoding can be found in <b>audioDtmfTest.c</b> file (please refer to <a class="el" href="c_audiodtmf.html">Sample code of dtmf playback and decoding</a> page).</p>
 <hr />
-<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>

@@ -26,7 +26,7 @@ Create C Source File</h2>
 <pre class="fragment">$ gedit helloComp/hello.c
 </pre><p>It should contain the following:</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include "<a class="code" href="legato_8h.html">legato.h</a>"</span></div><div class="line"></div><div class="line"><a class="code" href="le__event_loop_8h.html#abdb9187a56836a93d19cc793cbd4b7ec">COMPONENT_INIT</a></div><div class="line">{</div><div class="line"> <a class="code" href="le__log_8h.html#a4ebab29f40ee8eaaa87205fe3f9aaa13">LE_INFO</a>(<span class="stringliteral">"Hello world.\n"</span>);</div><div class="line">}</div></div><!-- fragment --><p>This looks similar to the original C <code>hello</code>, world program from Kernighan's and Richie's "The C Programming Language", except that:</p><ul>
-<li>#include <stdio.h> is replaced with #include "legato.h"</li>
+<li>#include &lt;stdio.h&gt; is replaced with #include "legato.h"</li>
 <li>main() is replaced with COMPONENT_INIT</li>
 </ul>
 <p>In fact, <a class="el" href="legato_8h.html">legato.h</a> will include stdio.h, along with a bunch of other system headers and Legato framework headers. This reduces the amount of time you have to spend including header files to get access to the functions and data types you need.</p>
@@ -75,7 +75,7 @@ Build App</h1>
 <h1><a class="anchor" id="basicAppsCreate_instTarget"></a>
 Install App to Target</h1>
 <p><code>6</code>. Use <code>instapp</code> to install the app on your target:</p>
-<pre class="fragment">$ instapp helloWorld.wp85.update <ip addr>
+<pre class="fragment">$ instapp helloWorld.wp85.update &lt;ip addr&gt;
 </pre><p>The second argument is the target device's IP address where to install the app. This will connect to the target and install the app.</p>
 <h1><a class="anchor" id="basicAppsCreate_usage"></a>
 Usage</h1>
@@ -99,12 +99,12 @@ View Logs</h2>
 </pre><h2><a class="anchor" id="basicAppsCreate_usageRmApp"></a>
 Remove App</h2>
 <p>From the host PC, run <code>rmapp</code> to uninstall the app:</p>
-<pre class="fragment">$ rmapp helloWorld.wp85 <ip addr>
-</pre><p>From the target run: </p><pre class="fragment">app remove <app name>
+<pre class="fragment">$ rmapp helloWorld.wp85 &lt;ip addr&gt;
+</pre><p>From the target run: </p><pre class="fragment">app remove &lt;app name&gt;
 </pre><h2><a class="anchor" id="basicAppsCreate_usageLsApp"></a>
 List App</h2>
 <p>Use <code>lsapp</code> to list the apps installed on a target.</p>
-<pre class="fragment">$ lsapp <ip addr>
+<pre class="fragment">$ lsapp &lt;ip addr&gt;
 </pre><hr />
-<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>

@@ -15,7 +15,7 @@ IPC interfaces binding</h1>
 <p>All the functions of this API are provided by the <b>cellNetService</b> application service.</p>
 <p>Here's a code sample binding to Cellular Network services: </p><pre class="fragment">bindings:
 {
-   clientExe.clientComponent.le_cellnet -> cellNetService.le_cellnet
+   clientExe.clientComponent.le_cellnet -&gt; cellNetService.le_cellnet
 }
 </pre><h1><a class="anchor" id="c_le_cellnet_requesting"></a>
 Requesting the Cellular Network</h1>
@@ -34,7 +34,7 @@ Cellular Network configuration tree</h1>
      modemServices/
          sim/
              1/
-                 pin<string> == <PIN_CODE></pre><ul>
+                 pin&lt;string&gt; == &lt;PIN_CODE&gt;</pre><ul>
 <li>'1' is the sim slot number that <a class="el" href="le__sim__interface_8h.html#a4c9e3ded0485f14c66e4d51763f2de57">le_sim_GetSelectedCard()</a> is returning.</li>
 <li>'PIN_CODE' is the PIN code for the SIM card.</li>
 </ul>
@@ -43,7 +43,7 @@ Cellular Network configuration tree</h1>
 <li>is blocked, Cellular Network Service just log an error and did not try to enter the puk code.</li>
 </ul>
 </dd></dl>
-<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license.</p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license.</p>
 <hr />
-<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>
