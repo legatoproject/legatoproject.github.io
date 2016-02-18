@@ -51,7 +51,8 @@ function getdata(ctx) {
     var domain = "";
     invoke_url = "https://search-legato-eifosnaj736darrvvqhqwpevzy.us-west-2.cloudsearch.amazonaws.com/2013-01-01/search"; //API Gateway endpoint-search all documents;
 
-
+    if(ctx == "Legato Documentation")
+        ctx="";
     var keyword = $('#autocomplete').val();
     // console.log(keyword);
 
@@ -64,11 +65,12 @@ function getdata(ctx) {
             $.ajax({
                 url: "https://crossorigin.me/" + invoke_url,
                 dataType: "json",
-                data: {
-                    q: request.term,
-                    size: 15,
-                    fq: "context:'" + ctx + "'",
-                    sort: "_score desc"
+                data: new function(){
+                    this.q = request.term;
+                    this.size = 15;
+                    if(ctx != "")
+                        this.fq = "context:'" + ctx + "'"; //only include "context:" filter if ctx isnt empty
+                    this.sort = "_score desc";
                 },
                 change: function(e, ui) {
                     console.log(e.target.value);
