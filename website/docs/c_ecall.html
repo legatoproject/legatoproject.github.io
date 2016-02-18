@@ -179,7 +179,8 @@ eCall configuration</h1>
 <li><a class="el" href="le__ecall__interface_8h.html#a9c13a8582bca84c4ae77643e1f4cfd71">le_ecall_SetPsapNumber()</a></li>
 <li><a class="el" href="le__ecall__interface_8h.html#a91c84ca3f4bb27844bfd2d14859bf31a">le_ecall_GetPsapNumber()</a></li>
 </ul>
-<dl class="section note"><dt>Note</dt><dd>Important! These two functions don't modified the U/SIM content nor read the U/SIM content.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>That PSAP number is not applied to Manually or Automatically initiated eCall. For those modes, an emergency call is launched.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>These two functions don't modified the U/SIM content nor read the U/SIM content.</dd></dl>
 <p><a class="el" href="le__ecall__interface_8h.html#a034c442fd7c6650ed956822a561c0104">le_ecall_UseUSimNumbers()</a> function can be recalled to indicate the modem to read the number to dial from the FDN/SDN of the U/SIM, depending upon the eCall operating mode.</p>
 <p>The NAD (Network Access Device, i.e. the Modem) deregistration time value can be set or get with:</p><ul>
 <li><a class="el" href="le__ecall__interface_8h.html#a66e454e84db7d337d76bc867b57891a1">le_ecall_SetNadDeregistrationTime()</a></li>

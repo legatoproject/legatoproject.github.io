@@ -1190,7 +1190,8 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Get the Public Safely Answering Point telephone number set with <a class="el" href="le__ecall__interface_8h.html#a9c13a8582bca84c4ae77643e1f4cfd71">le_ecall_SetPsapNumber()</a> function.</p>
-<dl class="section note"><dt>Note</dt><dd>Important! This function doesn't read the U/SIM content.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>That PSAP number is not applied to Manually or Automatically initiated eCall. For those modes, an emergency call is launched.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>This function doesn't read the U/SIM content.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd><ul>
 <li>LE_OK on success</li>
 <li>LE_FAULT on failures or if <a class="el" href="le__ecall__interface_8h.html#a9c13a8582bca84c4ae77643e1f4cfd71">le_ecall_SetPsapNumber()</a> has never been called before. </li>
@@ -1835,7 +1836,8 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Set the Public Safely Answering Point telephone number.</p>
-<dl class="section note"><dt>Note</dt><dd>Important! This function doesn't modified the U/SIM content.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>That PSAP number is not applied to Manually or Automatically initiated eCall. For those modes, an emergency call is launched.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>This function doesn't modified the U/SIM content.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd><ul>
 <li>LE_OK on success</li>
 <li>LE_FAULT for other failures</li>

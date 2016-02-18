@@ -631,7 +631,8 @@ Functions</h2></td></tr>
 <p>This function gets the GNSS device acquisition rate.</p>
 <dl class="section return"><dt>Returns</dt><dd><ul>
 <li>LE_OK on success</li>
-<li>LE_FAULT on failure </li>
+<li>LE_FAULT on failure</li>
+<li>LE_NOT_PERMITTED If the GNSS device is not in "ready" state. </li>
 </ul>
 </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -1373,7 +1374,8 @@ If the caller is passing an invalid Position sample reference into this function
 <li>LE_OK on success</li>
 <li>LE_FAULT on failure</li>
 <li>LE_UNSUPPORTED request not supported</li>
-<li>LE_TIMEOUT a time-out occurred </li>
+<li>LE_TIMEOUT a time-out occurred</li>
+<li>LE_NOT_PERMITTED If the GNSS device is not in "ready" state. </li>
 </ul>
 </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>

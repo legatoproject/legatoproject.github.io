@@ -45,32 +45,6 @@ $(document).ready(function() {
 
 });
 
-$("#Tutorial").bind("click", function() {
-    $("#tree1").hide();
-    $("#tree2").show();
-    $("#tree3").hide();
-    $("#tree4").hide();
-});
-
-$("#Guides").bind("click", function() {
-    $("#tree1").show();
-    $("#tree2").hide();
-    $("#tree3").hide();
-    $("#tree4").hide();
-});
-
-$("#API").bind("click", function() {
-    $("#tree1").hide();
-    $("#tree2").hide();
-    $("#tree3").show();
-    $("#tree4").hide();
-});
-$("#Tools").bind("click", function() {
-    $("#tree1").hide();
-    $("#tree2").hide();
-    $("#tree3").hide();
-    $("#tree4").show();
-});
 
 function getdata(ctx) {
     var invoke_url = "";
@@ -207,7 +181,8 @@ function setupTree(treeURL) {
                     saveState: true,
                     useContextMenu: false,
                     closedIcon: "+",
-                    openedIcon: "-"
+                    openedIcon: "-",
+                    keyboardSupport: false
                 });
 
                 var path = window.location.pathname;
