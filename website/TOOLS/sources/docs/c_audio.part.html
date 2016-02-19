@@ -17,9 +17,9 @@ IPC interfaces binding</h1>
 }
 </pre><h1><a class="anchor" id="le_audio_configuration"></a>
 Configure the Audio</h1>
-<p>The audio profile can be set with the <a class="el" href="le__audio__interface_8h.html#ae2e6553f8125a30676d31f5cbd43a3b8">le_audio_SetProfile()</a> function. The pre-configured profiles are defined with <code>le_audio_Profile_t</code> enumeration type.</p>
-<dl class="section warning"><dt>Warning</dt><dd>Ensure to check the list of supported audio profiles for your specific platform.</dd></dl>
-<p>An audio profile can be retrieved with <a class="el" href="le__audio__interface_8h.html#a1bf9091e0068a75a34fdf638ce0f2bc3">le_audio_GetProfile()</a> and set with <a class="el" href="le__audio__interface_8h.html#ae2e6553f8125a30676d31f5cbd43a3b8">le_audio_SetProfile()</a>.</p>
+<p>The audio profile can be set with the <a class="el" href="le__audio__interface_8h.html#a8526af295a5fe34cbb79f6b6d5c99f6a">le_audio_SetProfile()</a> function.</p>
+<dl class="section warning"><dt>Warning</dt><dd>Ensure to check the number of supported audio profiles for your specific platform.</dd></dl>
+<p>An audio profile can be retrieved with <a class="el" href="le__audio__interface_8h.html#a26d5e3e4e52a821a18c4dd6a84b2fa23">le_audio_GetProfile()</a> and set with <a class="el" href="le__audio__interface_8h.html#a8526af295a5fe34cbb79f6b6d5c99f6a">le_audio_SetProfile()</a>.</p>
 <p>Then, the following functions let you enable or disable the audio settings on the selected audio interface:</p><ul>
 <li><a class="el" href="le__audio__interface_8h.html#ac1af23c9febed1378620370a6961ce89">le_audio_EnableNoiseSuppressor()</a>/le_audio_DisableNoiseSuppressor(): Noise Suppressor.</li>
 <li><a class="el" href="le__audio__interface_8h.html#a54df27e4ab733a1f50e17903d7a9ae88">le_audio_EnableEchoCanceller()</a>/ <a class="el" href="le__audio__interface_8h.html#afc413a569b1e7eb877a3f98c2b52b05d">le_audio_DisableEchoCanceller()</a>: Echo Canceller.</li>

@@ -47,16 +47,6 @@ Enumerations</h2></td></tr>
 <a class="el" href="le__audio__interface_8h.html#aaf870f5f30f4f6f65efb873c5d0cb5f1a0d7192558212ce592db643ee43bd1054">LE_AUDIO_MEDIA_MAX</a>
  }</td></tr>
 <tr class="separator:aaf870f5f30f4f6f65efb873c5d0cb5f1"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
-<tr class="memitem:a3d396e4c3ed914277e81c39f3c423ed5"><td align="right" class="memItemLeft" valign="top">enum &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="le__audio__interface_8h.html#a3d396e4c3ed914277e81c39f3c423ed5">le_audio_Profile_t</a> { <br />
-&nbsp;&nbsp;<a class="el" href="le__audio__interface_8h.html#a3d396e4c3ed914277e81c39f3c423ed5a0b2baa1a1db29f3ef78d31e6ca9b7648">LE_AUDIO_HANDSFREE</a>, 
-<a class="el" href="le__audio__interface_8h.html#a3d396e4c3ed914277e81c39f3c423ed5aed17351c74da18eea646b52432621bbf">LE_AUDIO_HANDSET</a>, 
-<a class="el" href="le__audio__interface_8h.html#a3d396e4c3ed914277e81c39f3c423ed5a28b615e66b45a58709c6389f905f606e">LE_AUDIO_HEADSET</a>, 
-<a class="el" href="le__audio__interface_8h.html#a3d396e4c3ed914277e81c39f3c423ed5a7de255a63a21334b4b792c33bfdfa8a9">LE_AUDIO_TTY</a>, 
-<br />
-&nbsp;&nbsp;<a class="el" href="le__audio__interface_8h.html#a3d396e4c3ed914277e81c39f3c423ed5a3fbcc52b25d4c6053f687bb155b30abd">LE_AUDIO_USB</a>
-<br />
- }</td></tr>
-<tr class="separator:a3d396e4c3ed914277e81c39f3c423ed5"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
 <tr class="memitem:a5b07d59ec1067a4d81250a46f93715b8"><td align="right" class="memItemLeft" valign="top">enum &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="le__audio__interface_8h.html#a5b07d59ec1067a4d81250a46f93715b8">le_audio_Companding_t</a> { <a class="el" href="le__audio__interface_8h.html#a5b07d59ec1067a4d81250a46f93715b8a271c71620c5ea0a607c5372f4c650519">LE_AUDIO_COMPANDING_ALAW</a>, 
 <a class="el" href="le__audio__interface_8h.html#a5b07d59ec1067a4d81250a46f93715b8ad8a49ed29e9bf3077127ec237c742753">LE_AUDIO_COMPANDING_ULAW</a>, 
 <a class="el" href="le__audio__interface_8h.html#a5b07d59ec1067a4d81250a46f93715b8ae40f3183883d0e0e3c35733326ac9733">LE_AUDIO_COMPANDING_NONE</a>
@@ -180,10 +170,10 @@ Functions</h2></td></tr>
 <tr class="separator:ac4978d8d632269730c67e27d66fba818"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
 <tr class="memitem:a364cdff3d9fa7b2ced00ef92c0c4e9f7"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="le__audio__interface_8h.html#a364cdff3d9fa7b2ced00ef92c0c4e9f7">le_audio_DisableAutomaticGainControl</a> (<a class="el" href="le__audio__interface_8h.html#a9a46ff5a5afa61f1bc76120ab9e4da0a">le_audio_StreamRef_t</a> streamRef)</td></tr>
 <tr class="separator:a364cdff3d9fa7b2ced00ef92c0c4e9f7"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
-<tr class="memitem:ae2e6553f8125a30676d31f5cbd43a3b8"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="le__audio__interface_8h.html#ae2e6553f8125a30676d31f5cbd43a3b8">le_audio_SetProfile</a> (<a class="el" href="le__audio__interface_8h.html#a3d396e4c3ed914277e81c39f3c423ed5">le_audio_Profile_t</a> profile)</td></tr>
-<tr class="separator:ae2e6553f8125a30676d31f5cbd43a3b8"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
-<tr class="memitem:a1bf9091e0068a75a34fdf638ce0f2bc3"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="le__audio__interface_8h.html#a1bf9091e0068a75a34fdf638ce0f2bc3">le_audio_GetProfile</a> (<a class="el" href="le__audio__interface_8h.html#a3d396e4c3ed914277e81c39f3c423ed5">le_audio_Profile_t</a> *profilePtr)</td></tr>
-<tr class="separator:a1bf9091e0068a75a34fdf638ce0f2bc3"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:a8526af295a5fe34cbb79f6b6d5c99f6a"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="le__audio__interface_8h.html#a8526af295a5fe34cbb79f6b6d5c99f6a">le_audio_SetProfile</a> (uint32_t profile)</td></tr>
+<tr class="separator:a8526af295a5fe34cbb79f6b6d5c99f6a"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
+<tr class="memitem:a26d5e3e4e52a821a18c4dd6a84b2fa23"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="le__audio__interface_8h.html#a26d5e3e4e52a821a18c4dd6a84b2fa23">le_audio_GetProfile</a> (uint32_t *profilePtr)</td></tr>
+<tr class="separator:a26d5e3e4e52a821a18c4dd6a84b2fa23"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
 <tr class="memitem:ae7c9d76c5377ad5fae13b24477827f45"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="le__audio__interface_8h.html#ae7c9d76c5377ad5fae13b24477827f45">le_audio_SetPcmSamplingRate</a> (uint32_t rate)</td></tr>
 <tr class="separator:ae7c9d76c5377ad5fae13b24477827f45"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
 <tr class="memitem:ab3678e77c8d69f248cd339042bd824cc"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="le__audio__interface_8h.html#ab3678e77c8d69f248cd339042bd824cc">le_audio_SetPcmSamplingResolution</a> (uint32_t bitsPerSample)</td></tr>
@@ -569,35 +559,6 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="aaf870f5f30f4f6f65efb873c5d0cb5f1a0d7192558212ce592db643ee43bd1054"></a>LE_AUDIO_MEDIA_MAX&nbsp;</td><td class="fielddoc">
 <p>Enumerate max value. </p>
-</td></tr>
-</table>
-</div>
-</div>
-<a class="anchor" id="a3d396e4c3ed914277e81c39f3c423ed5"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="memname">
-<tr>
-<td class="memname">enum <a class="el" href="le__audio__interface_8h.html#a3d396e4c3ed914277e81c39f3c423ed5">le_audio_Profile_t</a></td>
-</tr>
-</table>
-</div><div class="memdoc">
-<p>Audio profiles. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a3d396e4c3ed914277e81c39f3c423ed5a0b2baa1a1db29f3ef78d31e6ca9b7648"></a>LE_AUDIO_HANDSFREE&nbsp;</td><td class="fielddoc">
-<p>Handsfree profile. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a3d396e4c3ed914277e81c39f3c423ed5aed17351c74da18eea646b52432621bbf"></a>LE_AUDIO_HANDSET&nbsp;</td><td class="fielddoc">
-<p>Handset profile. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a3d396e4c3ed914277e81c39f3c423ed5a28b615e66b45a58709c6389f905f606e"></a>LE_AUDIO_HEADSET&nbsp;</td><td class="fielddoc">
-<p>Headset profile. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a3d396e4c3ed914277e81c39f3c423ed5a7de255a63a21334b4b792c33bfdfa8a9"></a>LE_AUDIO_TTY&nbsp;</td><td class="fielddoc">
-<p>Teletypewriter profile (for hearing impaired use cases). </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a3d396e4c3ed914277e81c39f3c423ed5a3fbcc52b25d4c6053f687bb155b30abd"></a>LE_AUDIO_USB&nbsp;</td><td class="fielddoc">
-<p>USB profile. </p>
 </td></tr>
 </table>
 </div>
@@ -1343,14 +1304,14 @@ LE_OK The function succeeded.</dd></dl>
 </dl>
 </div>
 </div>
-<a class="anchor" id="a1bf9091e0068a75a34fdf638ce0f2bc3"></a>
+<a class="anchor" id="a26d5e3e4e52a821a18c4dd6a84b2fa23"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
 <tr>
 <td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_audio_GetProfile </td>
 <td>(</td>
-<td class="paramtype"><a class="el" href="le__audio__interface_8h.html#a3d396e4c3ed914277e81c39f3c423ed5">le_audio_Profile_t</a> *&nbsp;</td>
+<td class="paramtype">uint32_t *&nbsp;</td>
 <td class="paramname"><em>profilePtr</em></td><td>)</td>
 <td></td>
 </tr>
@@ -2395,14 +2356,14 @@ LE_OK The function succeeded.</dd></dl>
 </dl>
 </div>
 </div>
-<a class="anchor" id="ae2e6553f8125a30676d31f5cbd43a3b8"></a>
+<a class="anchor" id="a8526af295a5fe34cbb79f6b6d5c99f6a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
 <tr>
 <td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_audio_SetProfile </td>
 <td>(</td>
-<td class="paramtype"><a class="el" href="le__audio__interface_8h.html#a3d396e4c3ed914277e81c39f3c423ed5">le_audio_Profile_t</a>&nbsp;</td>
+<td class="paramtype">uint32_t&nbsp;</td>
 <td class="paramname"><em>profile</em></td><td>)</td>
 <td></td>
 </tr>
