@@ -1,7 +1,0 @@
-{
-    "links": [
-
-    ],
-    "innerHTML": "<a href=\"{0}\"{1}>{2}</a>",
-    "template": "doc_header.html"
-}
