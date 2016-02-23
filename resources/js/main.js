@@ -31,6 +31,9 @@ $(function() {
 });
 
 $(document).ready(function() {
+      $(window).scroll(function(){
+        $('#tree1').css("padding-top",Math.max(50, 110-$(document).scrollTop())); // nasty
+    });
     $("#menu-trigger").click(function() {
         $("#top")[this.opened ? "removeClass" : "addClass"]("menu-open");
         $(this)[this.opened ? "removeClass" : "addClass"]("trigger-open");
