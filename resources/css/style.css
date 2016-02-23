@@ -505,13 +505,12 @@ color: #00AEAF;
  *******************/
  
  #left {
-    height:100%;
+    height: calc(100% - 140px);
     position: fixed;
     top: 0;
     width: 300px;
     z-index: 200;
     padding: 0 30px 150px 10px;
-    min-height:100%;
     font-size: 14px;
     overflow: scroll;
     box-shadow: -1px 0px 8px 10px rgba(0,0,0,.07) inset;
