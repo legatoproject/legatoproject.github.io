@@ -505,20 +505,19 @@ color: #00AEAF;
  *******************/
  
  #left {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 200px;
-    z-index: 200;
     height: 100%;
-    padding: 125px 30px 150px 10px;
+    position: fixed;
+    width: 300px;
+    z-index: 200;
+    padding: 0 30px 150px 10px;
+    min-height: 100%;
     font-size: 14px;
-    /*background: url('../images/legato_logo-grey.png') no-repeat 100px 162px #fff;
-    background-size: 72px;*/
-    overflow: hidden;
-        box-shadow: -1px 0px 8px rgba(0,0,0,.07) inset;
+    overflow: scroll;
+    box-shadow: -1px 0px 8px rgba(0,0,0,.07) inset;
 }
-
+#tree1{
+    padding-top:120px;
+}
 .fa {
     display: inline-block;
     font-family: FontAwesome;
@@ -600,7 +599,7 @@ ul.slides a {
 .content {
     position: relative;
     padding-top: 135px;
-    padding-left: 300px;
+    padding-left: 400px;
     padding-right: 150px;
     font-family: 'Open Sans', arial, sans-serif;
     font-weight: 400;
