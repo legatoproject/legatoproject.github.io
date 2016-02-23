@@ -29,10 +29,13 @@ $(function() {
     });
 
 });
-
+function adapt_for_scroll(){
+    $('#tree1').css("padding-top",Math.max(50, 110-$(document).scrollTop())); 
+}
 $(document).ready(function() {
+    adapt_for_scroll();
       $(window).scroll(function(){
-        $('#tree1').css("padding-top",Math.max(50, 110-$(document).scrollTop())); // nasty
+         adapt_for_scroll();
     });
     $("#menu-trigger").click(function() {
         $("#top")[this.opened ? "removeClass" : "addClass"]("menu-open");
