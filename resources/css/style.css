@@ -939,6 +939,7 @@ pre.fragment{
     font-size: 15px;
     padding: 0.7em;
     background: rgba(130, 130, 130, 0.1);
+    overflow: scroll;
 }
 .memproto>table.memname
 {
