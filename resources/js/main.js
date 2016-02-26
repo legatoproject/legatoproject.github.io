@@ -130,29 +130,6 @@ function getdata(ctx) {
     });
 
     ac.data("ui-autocomplete")._renderItem = function(ul, item) {
-        var itemclass;
-        // TODO: maintain this stuff :
-        switch (item.cat) {
-            case "API Guides":
-                itemclass = "sr-api";
-                break;
-            case "Get Started":
-                itemclass = "sr-getstarted";
-                break;
-            case "Learn":
-                itemclass = "sr-learn";
-                break;
-            case "Tools":
-                itemclass = "sr-tools";
-                break;
-            case "Reference":
-                itemclass = "sr-reference";
-                break;
-            default:
-                itemclass = "sr-default";
-                break;
-
-        }
         var anchor = $("<a>").attr("href", item.value).html(item.label);
         var li = $("<li>");
         anchor.appendTo(li)
@@ -170,10 +147,7 @@ function getdata(ctx) {
 
 }
 
-function checkbox() {
-    console.log($("#category").is(":checked"));
-    console.log($('#tree1').css('display'));
-}
+
 
 function setupTree(treeURL) {
     $(document).ready(function() {
@@ -186,7 +160,7 @@ function setupTree(treeURL) {
                 $tree = $('#tree1');
                 $tree.tree({
                     data: data.children,
-                    saveState: true,
+                    saveState: false,
                     useContextMenu: false,
                     closedIcon: "+",
                     openedIcon: "-",
