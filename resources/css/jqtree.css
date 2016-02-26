@@ -5,7 +5,7 @@ ul.jqtree-tree {
   padding: 0; }
   ul.jqtree-tree ul.jqtree_common {
     list-style: none outside;
-    margin-left: 12px;
+    margin-left: 1.5em;
     margin-right: 0;
     margin-bottom: 0;
     padding: 0;
@@ -15,7 +15,7 @@ ul.jqtree-tree {
   ul.jqtree-tree li.jqtree_common {
     clear: both;
     list-style-type: none; 
-    margin-left: 1em; 
+
   }
   ul.jqtree-tree .jqtree-toggler {
     border-bottom: none;
