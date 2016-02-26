@@ -14,7 +14,9 @@ ul.jqtree-tree {
     display: none; }
   ul.jqtree-tree li.jqtree_common {
     clear: both;
-    list-style-type: none; }
+    list-style-type: none; 
+    margin-left: 1em; 
+  }
   ul.jqtree-tree .jqtree-toggler {
     border-bottom: none;
     color: #333;
@@ -29,7 +31,7 @@ ul.jqtree-tree {
   ul.jqtree-tree .jqtree-element {
     cursor: pointer;
     position: relative; 
-        margin-left: 1em; 
+   
     
   }
   ul.jqtree-tree .jqtree-title {
