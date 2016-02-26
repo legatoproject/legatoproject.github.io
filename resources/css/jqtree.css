@@ -31,8 +31,7 @@ ul.jqtree-tree {
     position: relative; }
   ul.jqtree-tree .jqtree-title {
     color: #1C4257;
-    vertical-align: middle;
-    margin-left: 1em; }
+    vertical-align: middle; }
     ul.jqtree-tree .jqtree-title.jqtree-title-folder {
       margin-left: 0; }
   ul.jqtree-tree li.jqtree-folder {
