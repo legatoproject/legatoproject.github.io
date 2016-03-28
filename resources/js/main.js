@@ -53,23 +53,20 @@ $(document).ready(function() {
 
 
 function getdata(ctx) {
-    var invoke_url = "";
     var domain = "";
-    invoke_url = "https://search-legato-eifosnaj736darrvvqhqwpevzy.us-west-2.cloudsearch.amazonaws.com/2013-01-01/search"; //API Gateway endpoint-search all documents;
-
+    var invoke_url = "https://x6khds7mia.execute-api.us-west-2.amazonaws.com/prod"; // amazon api proxy for CORS
+    
     if(ctx == "Legato Documentation")
         ctx="";
     var keyword = $('#autocomplete').val();
-    // console.log(keyword);
 
     var ac = $("#autocomplete").autocomplete({
         delay: 10,
         autoFocus: true,
         source: function(request, response) {
 
-
             $.ajax({
-                url: "https://crossorigin.me/" + invoke_url,
+                url: invoke_url,
                 dataType: "json",
                 data: new function(){
                     this.q = request.term;
