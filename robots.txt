@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /legato-docs/latest/
+Disallow: /legato-docs/
