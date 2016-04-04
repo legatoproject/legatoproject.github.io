@@ -1,7 +1,6 @@
 html,
 body {
-  margin: 0px;
-  padding: 0px;
+padding:0.5em;
   height: 100%;
   -webkit-font-smoothing: antialiased;
 }
@@ -111,4 +110,17 @@ h4 {
 }
 .small{
 		margin-top:3em;
+}
+
+
+@media only screen and (max-width : 650px) {
+	body{
+		zoom:0.5; /* oh jeez */
+		padding:0;
+	}
+.biglink{
+padding:0;
+margin:0;
+}
+
 }
