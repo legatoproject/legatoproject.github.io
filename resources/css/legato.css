@@ -1,0 +1,73 @@
+img#logo{
+	    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    -ms-interpolation-mode: nearest-neighbor;
+	width:175px;
+}
+#particles{
+	background:#7395A0;
+	position:relative;
+	height:100%;
+	width:100%;
+}
+.altbg{
+	background:#7395A0;
+	color:#FFF;
+	width:100%;
+}
+.altbg a{
+color:#FFF;
+}
+.banner{
+	position:relative;
+	width:100%;
+	height:50vh;
+	text-align: center;
+}
+.banner-content{
+    position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+    vertical-align: middle;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+
+
+    text-shadow: 0 1px 1px black;
+}
+.banner-head{
+	    text-shadow: 1px 1px 2px #171516;
+	margin-top:0;
+	display:block;
+	text-align: center;
+	vertical-align: middle;
+}
+.biglink a {
+  color: #8b8b8b;
+    text-decoration: none;
+}
+.banner-text{
+	color:#FFF;
+}
+p.banner-text{
+	font-size:1.5em;
+}
+.banner .pure-button{
+	text-shadow: none;
+}
+.biglink h4 {
+  font-weight: normal;
+  color: #272727;
+  font-size: 20px;
+  padding-top: .6em;
+  opacity:inherit;
+}
+.partnerbox{
+	margin-bottom:4em;
+}
+.footer{
+	background-color: #444;
+
+}
