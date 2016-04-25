@@ -7,7 +7,7 @@ img#logo{
 }
 #particles{
 	background:#7395A0;
-	position:relative;
+	position:absolute;
 	height:100%;
 	width:100%;
 }
@@ -31,15 +31,23 @@ color:#FFF;
   transform: translateY(-50%);
     vertical-align: middle;
     text-align: center;
-    width: 100%;
-    margin: 0;
-
-
+    right:0;
+    left:0;
+	margin:0 auto;
+	width:70%;
     text-shadow: 0 1px 1px black;
 }
+@media screen  and (max-width: 979px) {
+  .banner-content{
+  	width:95%;
+  }
+  #placeholder{
+  	display:none;
+  }
+}
 .banner-head{
-	    text-shadow: 1px 1px 2px #171516;
-	margin-top:0;
+	margin:0 auto;
+	text-shadow: 1px 1px 2px #171516;
 	display:block;
 	text-align: center;
 	vertical-align: middle;
@@ -47,6 +55,12 @@ color:#FFF;
 .biglink a {
   color: #8b8b8b;
     text-decoration: none;
+}
+.biglink:hover + p {
+color:#000;
+}
+.biglink:hover h4 {
+text-shadow: 0px 0px 1px #AAA;
 }
 .banner-text{
 	color:#FFF;
@@ -56,6 +70,11 @@ p.banner-text{
 }
 .banner .pure-button{
 	text-shadow: none;
+	background-color: #F7781E;
+	    color: rgba(255, 255, 255, 0.8);
+}
+.banner{
+
 }
 .biglink h4 {
   font-weight: normal;
@@ -70,4 +89,68 @@ p.banner-text{
 .footer{
 	background-color: #444;
 
+}
+
+.landing-tables p{
+margin: 1em 3em;
+}
+.landing-tables, .information {
+    max-width: 980px;
+    margin: 0 auto;
+}
+.landing-tables {
+    margin-bottom: 3.125em;
+    text-align: center;
+}
+#become{
+	padding: 5% 0;
+}
+.bottom{
+	position:absolute;
+	bottom:0;
+	width:100%;
+	padding-left:0;
+	padding-right:0;
+}
+.extend{
+height:100%;
+}
+body{
+	height:100%;
+}
+.pure-menu{
+	background:#FFF;
+}
+.altbg .pure-menu a{
+	color: #777;
+}
+#email{
+	
+	padding-bottom: 0px;
+	text-decoration: none;
+	    letter-spacing: 0.03em;
+}
+#email:hover{
+	border-bottom: 1px dashed #FFF;
+}
+#placeholder{
+	border: 2px dashed #FFF;
+	border-radius: 35px;
+	width:250px;
+	height:250px;
+	margin: 10em auto;
+padding:2em;
+    text-align: center;
+
+position:relative;
+}
+#placeholder h3{
+	    position: absolute;
+  top: 50%;
+  left:0;
+  right:0;
+  transform: translateY(-50%);
+	margin:0 auto;
+	width:70%;
+    text-align: center;
 }
