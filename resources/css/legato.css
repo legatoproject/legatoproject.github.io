@@ -46,7 +46,9 @@ img#logo {
 	text-shadow: 0 1px 1px black;
 	transform: translateY(-50%);
 }
-
+.pg-canvas{
+	width: 100%;
+}
 .banner-head {
 	display: block;
 	vertical-align: middle;
