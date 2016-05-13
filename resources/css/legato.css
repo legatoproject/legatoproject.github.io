@@ -162,6 +162,9 @@ body {
 a.pure-menu-link:focus {
     background-color: initial;
 }
+ a.pure-menu-link:hover{
+ 	    background-color: rgb(238, 238, 238);
+ }
 a.pure-button.orange{
 	background-color: #F7781E;
 	color: rgba(255, 255, 255, 0.8);
