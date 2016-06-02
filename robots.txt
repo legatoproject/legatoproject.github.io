@@ -12,3 +12,6 @@ Disallow: /legato-docs/15_05
 Disallow: /legato-docs/15_08
 Disallow: /legato-docs/15_10
 Disallow: /legato-docs/16_01
+
+User-Agent: LinkChecker
+Allow: /
