@@ -27,6 +27,12 @@ img#logo {
 .altbg a {
 	color: #FFF;
 }
+.altbg a.floaty {
+	color: gray;
+}
+.offset{
+	margin-top:3em;
+}
 .banner {
 	position: relative;
 	height: 50vh;
@@ -103,7 +109,8 @@ p.banner-text {
 	padding: 0 1em;
 }
 .quickstartbox{
-	padding-top:3em;
+	padding-top:1.5em;
+	padding-bottom:1.5em;
 }
 .partnerbox {
 	padding-bottom: 4em;
@@ -165,12 +172,12 @@ a.pure-menu-link:focus {
  a.pure-menu-link:hover{
  	    background-color: rgb(238, 238, 238);
  }
-a.pure-button.orange{
+.pure-button.orange{
 	background-color: #F7781E;
-	color: rgba(255, 255, 255, 0.8);
+	color: #fff;
 	text-shadow: none;
 }
-a.pure-button{
+.pure-button{
 	color: gray;
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
