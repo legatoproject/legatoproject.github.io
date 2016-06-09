@@ -1,3 +1,6 @@
+a.pure-button, p, a{
+	font-family: 'Open Sans', sans-serif;
+}
 img#logo {
 	width: 175px;
 	image-rendering: -moz-crisp-edges;
@@ -11,6 +14,7 @@ img#logo {
 	width: 100%;
 	background: #7395A0;
 }
+
 .partnerbox a {
 	color: #00687A;
 	text-decoration: none;
@@ -61,7 +65,15 @@ img#logo {
 	vertical-align: middle;
 	margin: 0 auto;
 	text-align: center;
-	text-shadow: 1px 1px 2px #171516, 0px 0px 14px #7395A0;
+
+}
+.banner-head, .banner-text{
+
+		text-shadow: 1px 1px 2px #171516, 
+		-5px -5px 9px #7395A0, 
+		-5px 5px 9px #7395A0, 
+		5px -5px 9px #7395A0, 
+		5px 5px 9px #7395A0;
 }
 .biglink a {
 	color: #8b8b8b;
@@ -99,6 +111,18 @@ p.banner-text {
 .footer {
 	background-color: #444;
 	box-shadow: 0px 2px 15px 0px #333;
+}
+h1,h2{
+		font-family: 'Open Sans', sans-serif;
+}
+h1.title{
+	font-weight:normal;
+	font-size:37px;
+	text-align: center;
+	padding-left:0.7em;
+	margin: 1em 0;
+	color:#555;
+
 }
 .landing-tables p {
 	margin: 0.2em 3em;
@@ -180,6 +204,10 @@ a.pure-menu-link:focus {
 .pure-button{
 	color: gray;
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	font-size:larger;
+}
+a.pure-button-primary{
+	    background-color: #00677A;
 }
 #email {
 	padding-bottom: 0px;
@@ -193,6 +221,12 @@ a.pure-menu-link:focus {
 	position:absolute;
 	right:2em;
 	bottom:2em;
+}
+.shadow{
+	  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.13);
+}
+.shadow-enroach{
+	  box-shadow: 0 10px 20px rgba(0,0,0,0.19) inset, 0 6px 6px rgba(0,0,0,0.13) inset,  0 -3px 15px rgba(0,0,0,0.13) inset;
 }
 .pure-button.floaty{
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.13);
