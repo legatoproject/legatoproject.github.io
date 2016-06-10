@@ -92,7 +92,14 @@ img#logo {
 p.banner-text {
 	font-size: 1.5em;
 }
-
+.banner-text.stand-out
+{
+	text-shadow: 1px 1px 1px #F7781E, 
+		-5px -5px 9px #7395A0, 
+		-5px 5px 9px #7395A0, 
+		5px -5px 9px #7395A0, 
+		5px 5px 9px #7395A0;
+}
 .banner {
 
 /*	box-shadow:  0px 1px 15px -4px #7395A0;
@@ -206,6 +213,9 @@ a.pure-menu-link:focus {
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	font-size:larger;
 }
+.pure-button.smaller{
+	font-size:medium;
+}
 a.pure-button-primary{
 	    background-color: #00677A;
 }
@@ -276,8 +286,50 @@ li {
 		display: none;
 	}
 }
-@media screen  and (max-height:700px) {
+@media screen  and (max-width:600px),screen and (max-height:700px) {
 	.banner-head {
     font-size: 1.5em;
 }
 }
+
+@font-face {
+  font-family: 'download';
+  src: url('/resources/css/download.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "download";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+   position:relative;
+   bottom:-.1em;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  
+
+ 
+  /* you can be more comfortable with increased icons size */
+  font-size: 120%; 
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-down-circled2:before { content: '\e800';} 

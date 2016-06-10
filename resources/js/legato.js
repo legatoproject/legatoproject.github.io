@@ -13,9 +13,9 @@ $(document).ready(function() {
         particleground(prt, {
             parallax: true,
             parallaxMultiplier: 40,
-            dotColor: '#B7CDD4',
-            lineColor: '#A9C3CC',
-            density: 4500,
+            dotColor: 'rgba(169, 195, 204, 0.75)',
+            lineColor: 'rgba(169, 195, 204, 0.6)',
+            density: 4000,
             minSpeedX: 0.1,
             maxSpeedX: 0.5,
             minSpeedY: 0.1,
