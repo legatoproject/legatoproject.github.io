@@ -3,2168 +3,5068 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
     <loc>http://legato.io/</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/index.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/releaseNotes16103.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/releaseNotes16104.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/releaseNotes17050.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/releaseNotes17060.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/releaseNotes17072.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/releaseNotes17081.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/releaseNotes17090.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/releaseNotes17100.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/releaseNotes17110.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_adc.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/apiFiles.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/apiFiles.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_07/apiFiles.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/apiFiles.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_08/apiFiles.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_05/apiFiles.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_3/apiFiles.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_06/apiFiles.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_07/apiFiles.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10/apiFiles.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_4/apiFiles.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_04/apiFiles.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/apiGuidesMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/17_10/apiGuidesMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
-  </url>
-  <url>
-    <loc>http://legato.io/legato-docs/17_08/apiGuidesMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
-  </url>
-  <url>
-    <loc>http://legato.io/legato-docs/17_07/apiGuidesMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/17_09/apiGuidesMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
-    <loc>http://legato.io/legato-docs/17_06/apiGuidesMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <loc>http://legato.io/legato-docs/17_08/apiGuidesMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_07/apiGuidesMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/17_05/apiGuidesMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
-    <loc>http://legato.io/legato-docs/16_10_4/apiGuidesMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
-  </url>
-  <url>
-    <loc>http://legato.io/legato-docs/16_10/apiGuidesMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <loc>http://legato.io/legato-docs/17_06/apiGuidesMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/16_10_3/apiGuidesMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
-    <loc>http://legato.io/legato-docs/16_04/apiGuidesMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <loc>http://legato.io/legato-docs/16_10/apiGuidesMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/16_07/apiGuidesMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_4/apiGuidesMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_04/apiGuidesMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/legatoAtServices.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/c_atClient.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/c_atServer.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/aboutMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/17_10/aboutMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
-  </url>
-  <url>
-    <loc>http://legato.io/legato-docs/17_08/aboutMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
-  </url>
-  <url>
-    <loc>http://legato.io/legato-docs/17_07/aboutMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/17_09/aboutMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
-    <loc>http://legato.io/legato-docs/17_06/aboutMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <loc>http://legato.io/legato-docs/17_08/aboutMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_07/aboutMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/17_05/aboutMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
-    <loc>http://legato.io/legato-docs/16_10_4/aboutMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
-  </url>
-  <url>
-    <loc>http://legato.io/legato-docs/16_10/aboutMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <loc>http://legato.io/legato-docs/17_06/aboutMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/16_10_3/aboutMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
-    <loc>http://legato.io/legato-docs/16_04/aboutMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <loc>http://legato.io/legato-docs/16_10/aboutMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/16_07/aboutMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_4/aboutMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_04/aboutMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/basicAppsClientServer.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/basicAppsAddThings.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/basicAppsAddThings.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/avMigration.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/sampleApps_AVAssetData.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/sampleApps_AVAssetData.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/legatoServicesAirVantage.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/legatoServicesAirVantage.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_le_avc.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/sampleApps_AV.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/sampleApps_AV.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/c_le_avdata.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/platformConstraintsAdc.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/c_antenna.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/c_appCtrl.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/basicConfig.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/basicConfig.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/basicConfig.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/defFilesAdef.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/defFilesAdef.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/defFilesAdef.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/c_appInfo.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/avData.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_atomFile.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
-    <loc>http://legato.io/legato-docs/latest/platformConstraintsAudio.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <loc>http://legato.io/legato-docs/17_10/c_atomFile.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/c_atomFile.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_audio.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/platformConstraintsAudio.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_basics.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/c_basics.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/c_basics.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/c_bootReason.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_05/buildTools.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_06/buildTools.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_3/buildTools.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10/buildTools.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_07/buildTools.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_4/buildTools.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/buildAppsMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/17_10/buildAppsMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/17_09/buildAppsMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/17_08/buildAppsMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/17_07/buildAppsMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
-  </url>
-  <url>
-    <loc>http://legato.io/legato-docs/17_06/buildAppsMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/17_05/buildAppsMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
-    <loc>http://legato.io/legato-docs/16_10_4/buildAppsMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <loc>http://legato.io/legato-docs/17_06/buildAppsMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/16_10_3/buildAppsMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/16_10/buildAppsMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
-  </url>
-  <url>
-    <loc>http://legato.io/legato-docs/16_04/buildAppsMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/16_07/buildAppsMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_4/buildAppsMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_04/buildAppsMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_le_build_cfg.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/c_le_build_cfg.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/c_le_build_cfg.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10/basicBuild.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/buildPlatformMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/17_10/buildPlatformMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/17_08/buildPlatformMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/17_09/buildPlatformMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/17_07/buildPlatformMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
-  </url>
-  <url>
-    <loc>http://legato.io/legato-docs/17_06/buildPlatformMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/17_05/buildPlatformMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
-    <loc>http://legato.io/legato-docs/16_10_4/buildPlatformMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <loc>http://legato.io/legato-docs/17_06/buildPlatformMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/16_10_3/buildPlatformMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/16_10/buildPlatformMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/16_07/buildPlatformMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_4/buildPlatformMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/16_04/buildPlatformMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/toolsBuild.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/17_10/toolsBuild.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/17_09/toolsBuild.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_08/toolsBuild.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_07/toolsBuild.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/howToKernelObject.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/howToKernelObject.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/ccodingStdsMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/ccodingStdsMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_07/ccodingStdsMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/ccodingStdsMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_08/ccodingStdsMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_05/ccodingStdsMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_3/ccodingStdsMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_06/ccodingStdsMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10/ccodingStdsMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_07/ccodingStdsMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_4/ccodingStdsMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_04/ccodingStdsMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/apiFilesC.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/files.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/files.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/files.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_08/files.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_07/files.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_06/files.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_05/files.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_3/files.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10/files.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_07/files.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_4/files.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_04/files.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_APIs.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/17_10/c_APIs.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/17_09/c_APIs.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_08/c_APIs.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_05/c_APIs.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_07/c_APIs.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_06/c_APIs.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_3/c_APIs.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10/c_APIs.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_07/c_APIs.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_4/c_APIs.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_crc.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/c_crc.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/c_crc.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_le_cellnet.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/c_le_cellnet.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/sampleApps_commandLine.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/sampleApps_commandLine.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_args.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/c_args.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/c_args.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/ccodingStdsComplexity.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/defFilesCdef.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/basicComponents.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/buildAppsConcepts.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/17_10/buildAppsConcepts.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
-  </url>
-  <url>
-    <loc>http://legato.io/legato-docs/17_08/buildAppsConcepts.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
-  </url>
-  <url>
-    <loc>http://legato.io/legato-docs/17_09/buildAppsConcepts.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/17_07/buildAppsConcepts.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
-    <loc>http://legato.io/legato-docs/17_06/buildAppsConcepts.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <loc>http://legato.io/legato-docs/17_08/buildAppsConcepts.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/buildAppsConcepts.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/17_05/buildAppsConcepts.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
-    <loc>http://legato.io/legato-docs/16_10_4/buildAppsConcepts.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <loc>http://legato.io/legato-docs/17_06/buildAppsConcepts.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/16_10_3/buildAppsConcepts.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/16_10/buildAppsConcepts.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/16_07/buildAppsConcepts.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_4/buildAppsConcepts.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/16_04/buildAppsConcepts.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/legatoServicesConfigTree.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/legatoServicesConfigTree.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_config.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/c_config.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/c_config.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/c_configAdmin.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/avConfigure.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/basicTargetModem.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/basicTargetConfigETH.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/raspbianMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/raspbianMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/raspbianMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_07/basicTarget.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_08/basicTarget.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_05/basicTarget.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_06/basicTarget.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_3/basicTarget.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_4/basicTarget.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/basicTarget.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/basicTarget.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/basicTarget.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10/basicTarget.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/basicTargetConfigUSB.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/aboutLegatoContributing.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/aboutLegatoContributing.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/aboutLegatoContributing.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_08/aboutLegatoContributing.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_05/aboutLegatoContributing.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_07/aboutLegatoContributing.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_06/aboutLegatoContributing.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_3/aboutLegatoContributing.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_4/aboutLegatoContributing.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10/aboutLegatoContributing.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/basicAppsCreate.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/basicAppsCreate.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/basicAppsCreate.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/avInstallUpload.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_le_data.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/howToDebug.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/howToDebug.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/howToDebugGDB.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/howToDebugGDB.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/defFiles.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/defFiles.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_08/defFiles.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_07/defFiles.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/defFiles.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_05/defFiles.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_06/defFiles.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_3/defFiles.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10/defFiles.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_07/defFiles.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_4/defFiles.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/basicAppsCompMulti.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/basicAppsCompMulti.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/basicApps.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/basicApps.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_07/basicApps.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_08/basicApps.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/basicApps.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_05/basicApps.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_06/basicApps.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_07/basicApps.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_3/basicApps.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10/basicApps.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_4/basicApps.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/basicTargetDevMode.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_dir.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/c_dir.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/c_dir.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10/aboutDocsVersion.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_07/aboutDocsVersion.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_04/aboutDocsVersion.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_doublyLinkedList.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/c_doublyLinkedList.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/c_doublyLinkedList.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/platformConstraintsDualSys.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/c_le_dualsys.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_memory.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/c_memory.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/c_memory.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_eventLoop.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/c_eventLoop.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/c_eventLoop.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/basicEvents.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/avExchangeData.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_fdMonitor.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/c_fdMonitor.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/c_fdMonitor.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_flock.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/c_flock.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/c_flock.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_fs.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/c_fs.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/c_fs.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/sampleApps_fwupdateDownloader.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/sampleApps_fwupdateDownloader.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/platformConstraintsFlash.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_flash.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/ccodingStdsFormat.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/c_framework.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_gnss.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/platformConstraintsGnss.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_gpio.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/c_gpio.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/sampleApps_gpioCf3.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/sampleApps_gpioCf3.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/quickstart</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/aboutDocsGlossary.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/sampleApps_httpGet.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/sampleApps_httpGet.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/sampleApps_httpServer.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/sampleApps_httpServer.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_hashmap.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/c_hashmap.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/c_hashmap.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/sampleApps_helloIpc.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/sampleApps_helloIpc.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/sampleApps_helloWorld.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/sampleApps_helloWorld.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_hex.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/c_hex.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/c_hex.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_3/toolsHost.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_07/toolsHost.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10/toolsHost.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_4/toolsHost.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/howToMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/17_10/howToMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_08/howToMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_07/howToMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/howToMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_05/howToMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_06/howToMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_07/howToMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_3/howToMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10/howToMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_4/howToMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_04/howToMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/howToSecuritySmack.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/platformConstraintsInfo.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/c_ips.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/c_le_instStat.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/basicBuild.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/basicBuild.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_07/basicBuild.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_08/basicBuild.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/basicBuild.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_05/basicBuild.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_06/basicBuild.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_3/basicBuild.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_4/basicBuild.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/basicBuildLegato.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/basicIPC.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/basicIPC.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/basicInterfaces.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/basicInterfaces.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/basicInterfaces.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/basicInternationalization.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_json.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/c_json.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/c_json.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10/javaBuild.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_07/javaBuild.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/sampleApps_karaoke.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/sampleApps_karaoke.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/defFilesMdef.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/sampleApps_legacy.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/sampleApps_legacy.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/aboutLegato.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/aboutLegato.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/aboutLegato.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_08/aboutLegato.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_05/aboutLegato.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_06/aboutLegato.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_07/aboutLegato.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_3/aboutLegato.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10/aboutLegato.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_07/aboutLegato.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_4/aboutLegato.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_04/aboutLegato.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/platformConstraintsReadOnly.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/16_04/Legato_16_04_ReleaseNotes.pdf</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/16_07/Legato_16_07_ReleaseNotes.pdf</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/16_10/Legato_16_10_1_ReleaseNotes.pdf</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/aboutLicenses.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/aboutLicenses.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/aboutLicenses.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_08/aboutLicenses.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_07/aboutLicenses.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_05/aboutLicenses.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_06/aboutLicenses.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_3/aboutLicenses.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10/aboutLicenses.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_07/aboutLicenses.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_4/aboutLicenses.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_04/aboutLicenses.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/basicLog.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_logging.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/c_logging.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/c_logging.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/howToLoginAuthentication.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/howToLoginAuthentication.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/sampleApps_lowPower.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/sampleApps_lowPower.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_lpt.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_messaging.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/c_messaging.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/c_messaging.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_pack.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/c_pack.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/c_pack.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/basicBuildLegato_make.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/howToPowerMgmt.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/howToPowerMgmt.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/howToGNSS.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/howToGNSS.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/howToSecurity.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/howToSecurity.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/howToEcall.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
-    <loc>http://legato.io/legato-docs/latest/platformConstraintsmdmCfg.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <loc>http://legato.io/legato-docs/17_10/howToEcall.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/legatoServicesModem.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/platformConstraintsmdmCfg.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/c_mcc.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_mdc.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/sampleApps_modemDemo.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/sampleApps_modemDemo.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_fwupdate.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_info.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/c_mrc.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/platformConstraintsMdc.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/aboutLicensesMPLv2.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_mutex.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/c_mutex.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/c_mutex.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/partners</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/basicConcepts.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/basicConcepts.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_07/basicConcepts.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_08/basicConcepts.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/basicConcepts.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_05/basicConcepts.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_06/basicConcepts.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_3/basicConcepts.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10/basicConcepts.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_07/basicConcepts.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_4/basicConcepts.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/defFilesOverview.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_path.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/c_path.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/c_path.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_pathIter.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/c_pathIter.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/c_pathIter.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/platformConstraints.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/platformConstraints.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_08/platformConstraints.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/platformConstraints.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_07/platformConstraints.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_05/platformConstraints.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_06/platformConstraints.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_3/platformConstraints.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_07/platformConstraints.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10/platformConstraints.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_4/platformConstraints.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/platformConstraintsSpecificErrorCodes.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/howToPortLegacyGen.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/howToPortLegacyGen.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/howToPortLegacyC.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/legatoServicesPositioning.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/c_pos.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/legatoServicesPositioning.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/legatoServicesPowerMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/legatoServicesPowerMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/basicPwrMgmt.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/c_pm.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_print.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/c_print.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/c_print.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_08/raspbianMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_07/raspbianMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_05/raspbianMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_06/raspbianMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_3/raspbianMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_07/raspbianMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10/raspbianMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_4/raspbianMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/avRegister.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10/aboutReleaseInfo.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_07/aboutReleaseInfo.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_04/aboutReleaseInfo.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/aboutReleaseInfo.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/aboutReleaseInfo.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/aboutReleaseInfo.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_08/aboutReleaseInfo.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_07/aboutReleaseInfo.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_05/aboutReleaseInfo.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_06/aboutReleaseInfo.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_3/aboutReleaseInfo.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_4/aboutReleaseInfo.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_rsim.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/c_riPin.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/basicRuntimeArch.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/17_10/basicRuntimeArch.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/17_09/basicRuntimeArch.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_sim.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/platformConstraintsSim.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/platformConstraintsStk.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
-  </url>
-  <url>
-    <loc>http://legato.io/legato-docs/latest/sampleApps_sms.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_sms.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/sampleApps_sms.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/sampleApps_sms.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/c_smsInbox.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/legatoServicesSMS.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/legatoServicesSMS.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_spi.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_safeRef.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/c_safeRef.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/c_safeRef.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/sampleApps.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/17_10/sampleApps.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_08/sampleApps.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_07/sampleApps.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/sampleApps.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_05/sampleApps.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_06/sampleApps.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_3/sampleApps.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_07/sampleApps.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10/sampleApps.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_4/sampleApps.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_04/sampleApps.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/c_rsimTest.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/c_gnssSampleCodeEnableDisable.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/c_gnssSampleCodeNmeaSentences.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/c_gnssSampleCodeXtra.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/c_gnssSampleCodeAcquisitionRate.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/c_gnssSampleCodeConstellation.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/c_gnssSampleCodeMinElevation.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/c_simTestSimToolkit.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/c_simTestProfileSwitch.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/c_smsSampleMO.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/c_smsSampleMT.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/c_simTestAuthentication.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/c_simTestIdentification.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/c_simTestSelect.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/c_simTestStates.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/c_simTestApdu.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/c_smsCbSample.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/c_gnssSampleCodeStartStop.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/c_dataConnectionServiceSample.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/c_gnssSampleCodeReStart.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/c_audioCapturePlayback.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/c_audioMcc.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/c_audiodtmf.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/howToSecuritySandboxConfigSample.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/howToSecuritySandboxConfigSample.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/howToSecuritySandboxConfigSample.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/howToSecuritySandboxHelper.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/howToSecuritySandboxHelper.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/howToSecuritySandboxHelper.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/howToSecuritySandboxOverview.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/howToSecuritySandboxOverview.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/howToSecuritySandboxOverview.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/howToSecuritySandboxLimits.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/basicSecuritySandbox.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/17_10/basicSecuritySandbox.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/17_09/basicSecuritySandbox.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
-  </url>
-  <url>
-    <loc>http://legato.io/legato-docs/latest/platformConstraintsSecStorage.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
-  </url>
-  <url>
-    <loc>http://legato.io/legato-docs/latest/c_secStore.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/legatoServicesSecStoreMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/c_secStore.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/platformConstraintsSecStorage.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/c_secStoreAdmin.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/basicSecurity.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/ccodingStdsSecurity.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_semaphore.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/c_semaphore.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/c_semaphore.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/legatoServices.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/legatoServices.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/legatoServices.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_08/legatoServices.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_05/legatoServices.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_07/legatoServices.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_06/legatoServices.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10/legatoServices.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_07/legatoServices.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_3/legatoServices.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_4/legatoServices.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_04/legatoServices.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/howToSetUserTimebase.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/howToSetUserTimebase.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/howToSPI.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/sampleApps_shellPiping.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/sampleApps_shellPiping.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_signals.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/c_signals.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/c_signals.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_singlyLinkedList.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/c_singlyLinkedList.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/c_singlyLinkedList.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_update.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/c_update.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/c_update.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/sampleApps_streamMedia.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/sampleApps_streamMedia.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_streamMedia.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/legatoServicesSupervisor.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/platformConstraintsAtCmd.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/apiFilesSyntax.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_clock.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/c_clock.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/c_clock.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/defFilesSdef.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/defFilesSdef.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_05/toolsTarget.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_3/toolsTarget.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_06/toolsTarget.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10/toolsTarget.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_07/toolsTarget.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_4/toolsTarget.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_05/toolsHost.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_06/toolsHost.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/toolsTargetMgmt.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/toolsTargetMgmt.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_08/toolsTargetMgmt.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/toolsTargetMgmt.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_07/toolsTargetMgmt.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/toolsTarget.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
-    <loc>http://legato.io/legato-docs/latest/platformConstraintsTemperature.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <loc>http://legato.io/legato-docs/17_10/toolsTarget.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_08/toolsTarget.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/toolsTarget.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_07/toolsTarget.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_temp.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/platformConstraintsTemperature.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_threading.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/c_threading.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/c_threading.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_timer.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/c_timer.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/c_timer.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/tools.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/17_10/tools.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/17_08/tools.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/17_09/tools.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/17_07/tools.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
-  </url>
-  <url>
-    <loc>http://legato.io/legato-docs/17_06/tools.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/17_05/tools.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
-    <loc>http://legato.io/legato-docs/16_10_4/tools.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <loc>http://legato.io/legato-docs/17_06/tools.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/16_10_3/tools.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/16_10/tools.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/16_07/tools.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_4/tools.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/16_04/tools.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_utf8.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/c_utf8.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/c_utf8.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_ulpm.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_test.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/c_test.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/c_test.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/legatoServicesUpdateMain.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/legatoServicesUpdateMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/c_updateCtrl.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/legatoServicesUpdatePack.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/legatoServicesUpdatePack.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/legatoServicesUpdate.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/basicUpdates.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/basicAppsIPC.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/howToLogs.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/howToLogs.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/howToSoftwareUpdate.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/howToSoftwareUpdate.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/c_rtc.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_le_voicecall.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_wdog.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/c_wdog.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/c_wdog.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/legatoServicesWiFi.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/legatoServicesWiFi.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_07/c_le_wifi_ap.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_08/c_le_wifi_ap.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_05/c_le_wifi_ap.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_06/c_le_wifi_ap.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_3/c_le_wifi_ap.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10/c_le_wifi_ap.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_07/c_le_wifi_ap.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/c_le_wifi_ap.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_4/c_le_wifi_ap.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/wifi_wifiap_testapp.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_08/wifi_wifiap_testapp.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_07/wifi_wifiap_testapp.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_05/wifi_wifiap_testapp.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_06/wifi_wifiap_testapp.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10/wifi_wifiap_testapp.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_07/wifi_wifiap_testapp.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_3/wifi_wifiap_testapp.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_4/wifi_wifiap_testapp.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_04/wifi_wifiap_testapp.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_07/wifi_wifiwebAp_sample.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_08/wifi_wifiwebAp_sample.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_06/wifi_wifiwebAp_sample.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_05/wifi_wifiwebAp_sample.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_3/wifi_wifiwebAp_sample.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10/wifi_wifiwebAp_sample.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_07/wifi_wifiwebAp_sample.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/wifi_wifiwebAp_sample.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_4/wifi_wifiwebAp_sample.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_07/wifi_wificlient_testapp.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_08/wifi_wificlient_testapp.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_06/wifi_wificlient_testapp.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_05/wifi_wificlient_testapp.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_3/wifi_wificlient_testapp.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10/wifi_wificlient_testapp.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_07/wifi_wificlient_testapp.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/wifi_wificlient_testapp.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_4/wifi_wificlient_testapp.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_04/wifi_wificlient_testapp.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_08/c_le_wifi_client.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_07/c_le_wifi_client.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_05/c_le_wifi_client.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_06/c_le_wifi_client.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10/c_le_wifi_client.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_3/c_le_wifi_client.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_07/c_le_wifi_client.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/c_le_wifi_client.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_4/c_le_wifi_client.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_04/c_le_wifi_client.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_08/wifi_toolsTarget_wifi.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_07/wifi_toolsTarget_wifi.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_05/wifi_toolsTarget_wifi.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_06/wifi_toolsTarget_wifi.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10/wifi_toolsTarget_wifi.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_3/wifi_toolsTarget_wifi.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_07/wifi_toolsTarget_wifi.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_4/wifi_toolsTarget_wifi.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/17_08/external_proj_mainpage.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/17_07/external_proj_mainpage.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
-  </url>
-  <url>
-    <loc>http://legato.io/legato-docs/17_06/external_proj_mainpage.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/17_05/external_proj_mainpage.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
-    <loc>http://legato.io/legato-docs/16_10_4/external_proj_mainpage.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
-  </url>
-  <url>
-    <loc>http://legato.io/legato-docs/16_10/external_proj_mainpage.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <loc>http://legato.io/legato-docs/17_06/external_proj_mainpage.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/16_10_3/external_proj_mainpage.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
-    <loc>http://legato.io/legato-docs/16_04/external_proj_mainpage.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <loc>http://legato.io/legato-docs/16_10/external_proj_mainpage.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/16_07/external_proj_mainpage.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_4/external_proj_mainpage.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_04/external_proj_mainpage.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_08/yoctoMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_07/yoctoMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_05/yoctoMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_06/yoctoMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_3/yoctoMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10/yoctoMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_07/yoctoMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_10_4/yoctoMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/16_04/yoctoMain.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/toolsTarget_app.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/toolsHost_app.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/toolsHost_av-pack.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/toolsHost_checkpa.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/toolsTarget_cm.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/common__interface_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/toolsTarget_config.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/toolsTarget_config.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/toolsTarget_config.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/toolsTarget_configEcm.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/toolsHost_configtargetssh.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/toolsHost_createsdk.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/defn__interface_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/sampleApps_eCall.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/sampleApps_eCall.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_ecall.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/example__interface_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/toolsHost_fwupdate.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/toolsTarget_fwUpdate.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/toolsHost_gettargettype.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/toolsTarget_gnss.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/buildToolsifgen.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/buildToolsifgen.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/buildToolsifgen.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/toolsTarget_inspect.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/toolsTarget_inspect.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/toolsHost_instapp.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/toolsHost_instlegato.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/toolsHost_instsys.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__adc__interface_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__adc__interface_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__antenna__interface_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__antenna__interface_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__app_ctrl__interface_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__app_ctrl__interface_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__app_info__interface_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__app_info__interface_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__app_proc__interface_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__app_proc__interface_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__args_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__args_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__at_client__interface_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__at_client__interface_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__at_defs__interface_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__at_defs__interface_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__at_server__interface_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/le__at_server__interface_8h.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__atom_file_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__atom_file_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/le__audio__interface_8h_source.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/le__audio__interface_8h.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/le__avc__interface_8h_source.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/le__avc__interface_8h.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/le__avdata__interface_8h_source.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/le__avdata__interface_8h.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/le__basics_8h_source.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__basics_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/le__boot_reason__interface_8h_source.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/le__boot_reason__interface_8h.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/le__build__config_8h_source.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/le__build__config_8h.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/le__cellnet__interface_8h_source.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/le__cellnet__interface_8h.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__cfg_admin__interface_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__cfg_admin__interface_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/le__cfg__interface_8h_source.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__cfg__interface_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/structle__clk___time__t.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__clock_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__clock_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__crc_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__crc_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__data__interface_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__data__interface_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__dir_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__dir_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/structle__dls___link__t.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/structle__dls___list__t.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__doubly_linked_list_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__doubly_linked_list_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__dualsys__interface_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__dualsys__interface_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__ecall__interface_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__ecall__interface_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__event_loop_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__event_loop_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__fd_monitor_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__fd_monitor_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__file_lock_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__file_lock_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__flash__interface_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__flash__interface_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__framework__interface_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__framework__interface_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__fs_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__fwupdate__interface_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__fwupdate__interface_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__gnss__interface_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__gnss__interface_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__gpio__interface_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__gpio__interface_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__hashmap_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__hashmap_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__hex_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__hex_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__info__interface_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__info__interface_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__inst_stat__interface_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__inst_stat__interface_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__ips__interface_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__ips__interface_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__json_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__json_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__limit__interface_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__limit__interface_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__log_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__log_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__lpt__interface_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__lpt__interface_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__mcc__interface_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__mcc__interface_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__mdc__interface_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__mdc__interface_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__mdm_defs__interface_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__mdm_defs__interface_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/le__mem_8h_source.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__mem_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/le__messaging_8h_source.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__messaging_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/le__mrc__interface_8h_source.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/le__mrc__interface_8h.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__mutex_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__mutex_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__pack_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__path_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__path_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__path_iter_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__path_iter_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__pm__interface_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__pm__interface_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__port__interface_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__port__interface_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__pos_ctrl__interface_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__pos_ctrl__interface_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__pos__interface_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__pos__interface_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__print_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__print_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/le__print_8h.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__rand_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__rand_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__ri_pin__interface_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__ri_pin__interface_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__rsim__interface_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__rsim__interface_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__rtc__interface_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__rtc__interface_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__safe_ref_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__safe_ref_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__sec_store__interface_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__sec_store__interface_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__semaphore_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__semaphore_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__signals_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__signals_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__sim__interface_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__sim__interface_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__singly_linked_list_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__singly_linked_list_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/structle__sls___link__t.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/structle__sls___list__t.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/structle__sls___list__t.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__sms_inbox1__interface_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/le__sms_inbox1__interface_8h.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__sms__interface_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__sms__interface_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__spi__interface_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__spi__interface_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__temp__interface_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__temp__interface_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__test_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__test_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/le__test_8h.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/le__thread_8h_source.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__thread_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/le__thread_8h.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__timer_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__timer_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/le__tty_8h_source.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__tty_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/le__tty_8h.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/le__ulpm__interface_8h_source.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/le__ulpm__interface_8h.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__update_ctrl__interface_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/le__update_ctrl__interface_8h.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/le__update__interface_8h_source.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__update__interface_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__utf8_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__utf8_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/le__voicecall__interface_8h_source.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__voicecall__interface_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/le__wdog__interface_8h_source.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__wdog__interface_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/le__wdog__interface_8h.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__wifi_ap__interface_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/le__wifi_ap__interface_8h.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__wifi_client__interface_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/le__wifi_client__interface_8h.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/le__wifi_defs__interface_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/le__wifi_defs__interface_8h.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/toolsTarget_legato.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/toolsHost_legato-install.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/toolsHost_legato-qemu.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/legato_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/legato_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/legato_8h.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/toolsTarget_log.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/toolsTarget_log.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/toolsTarget_log.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/log_fd__interface_8h_source.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/log_fd__interface_8h.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/buildToolsmk.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/buildToolsmk.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/buildToolsmk.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/buildToolsmkapp.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/buildToolsmkapp.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/buildToolsmkapp.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/buildToolsmkcomp.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/buildToolsmkcomp.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/buildToolsmkexe.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/buildToolsmkexe.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/toolsHost_mklegatoimg.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/toolsHost_mklegatotreero.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/buildToolsmksys.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/buildToolsmksys.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/buildToolsmksys.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/pa__wifi_8h_source.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/pa__wifi__ap_8h_source.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/toolsTarget_pmTool.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/toolsHost_releaselegato.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/toolsHost_remoteDebug.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/toolsHost_sbhelper.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/toolsHost_sbhelper.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/toolsTarget_sbtrace.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/toolsTarget_sbtrace.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/toolsTarget_sdir.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/sec_store_admin__interface_8h_source.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/sec_store_admin__interface_8h.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/toolsHost_security-pack.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/toolsTarget_setNet.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/toolsHost_setname.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/toolsHost_settime.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/toolsHost_settz.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/toolsHost_simu.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/toolsHost_splitdebug.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/toolsHost_startlegato.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/toolsHost_stoplegato.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/stream_media__interface_8h_source.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/stream_media__interface_8h.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/toolsHost_systocwe.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/toolsHost_systoimg.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/c_tty.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/c_tty.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/c_tty.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/toolsTarget_update.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/toolsHost_update.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/toolsTarget_update.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/toolsTarget_update.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_10/toolsHost_update.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
   <url>
     <loc>http://legato.io/legato-docs/latest/toolsHost_update-pack.html</loc>
-    <changefreq>daily</changefreq>
-    <priority>None</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/toolsHost_update-util.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/wdog__interface_8h_source.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/wdog__interface_8h.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/17_09/wdog__interface_8h.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/wifi_toolsTarget_wifi.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/wifi_service_8h_source.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/wifi__internal_8h_source.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
+  </url>
+  <url>
+    <loc>http://legato.io/legato-docs/latest/wifi__internal_8h.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.0</priority>
   </url>
 </urlset>
 <!--<guid value="" />-->

@@ -15,3 +15,6 @@ Disallow: /legato-docs/16_01
 
 User-Agent: LinkChecker
 Allow: /
+Allow: /resources/sitemap.xml
+
+Sitemap: http://legato.io/resources/sitemap.xml
