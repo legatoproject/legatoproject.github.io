@@ -336,3 +336,8 @@ li {
 }
  
 .icon-down-circled2:before { content: '\e800';} 
+
+.legato-survey-link {
+    color: #ffc093;
+    text-decoration: none
+}
