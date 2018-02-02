@@ -90,6 +90,9 @@ img#logo {
 .banner-text {
 	color: #FFF;
 }
+a.banner-text {
+	color: #F7781E;
+}
 p.banner-text {
 	font-size: 1.5em;
 }
