@@ -14,7 +14,7 @@ Disallow: /legato-docs/15_08
 Disallow: /legato-docs/15_10
 Disallow: /legato-docs/16_01
 
-Sitemap: http://legato.io/resources/sitemap.xml
+Sitemap: https://legato.io/resources/sitemap.xml
 
 User-Agent: LinkChecker
 Allow: /
