@@ -1,18 +1,18 @@
 User-agent: *
-Allow: /legato-docs/latest/*
+Allow: https://docs.legato.io/latest/*
 Allow: /resources/sitemap.xml
-Disallow: /legato-docs/
-Disallow: /legato-docs/14_1
-Disallow: /legato-docs/14_04
-Disallow: /legato-docs/14_04_1
-Disallow: /legato-docs/14_07
-Disallow: /legato-docs/14_10
-Disallow: /legato-docs/15_01
-Disallow: /legato-docs/15_01_1
-Disallow: /legato-docs/15_05
-Disallow: /legato-docs/15_08
-Disallow: /legato-docs/15_10
-Disallow: /legato-docs/16_01
+Disallow: https://docs.legato.io/
+Disallow: https://docs.legato.io/14_1
+Disallow: https://docs.legato.io/14_04
+Disallow: https://docs.legato.io/14_04_1
+Disallow: https://docs.legato.io/14_07
+Disallow: https://docs.legato.io/14_10
+Disallow: https://docs.legato.io/15_01
+Disallow: https://docs.legato.io/15_01_1
+Disallow: https://docs.legato.io/15_05
+Disallow: https://docs.legato.io/15_08
+Disallow: https://docs.legato.io/15_10
+Disallow: https://docs.legato.io/16_01
 
 Sitemap: https://legato.io/resources/sitemap.xml
 
