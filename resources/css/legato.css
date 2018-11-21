@@ -397,3 +397,21 @@ screen and (max-height:700px) {
     color: #ffc093;
     text-decoration: none
 }
+
+.contents a {
+    -webkit-transition: all 0s;
+    -moz-transition: all 0s;
+    -o-transition: all 0s;
+    -ms-transition: all 0s;
+    transition: all 0s;
+    color: #00AEAF;  /*border-bottom: 1px dashed #00AEAF;*/
+    text-decoration: none;
+}
+.contents a:hover {
+    color: #43E6E6;
+    border-bottom: 1px dashed #00ffff;
+}
+
+.releases th,td {
+    text-align: center;
+}
