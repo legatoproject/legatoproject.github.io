@@ -6,10 +6,6 @@ a {
 
 img#logo {
     width: 175px;
-    image-rendering: -moz-crisp-edges;
-    image-rendering: -o-crisp-edges;
-    image-rendering: -webkit-optimize-contrast;
-    -ms-interpolation-mode: nearest-neighbor;
 }
 
 #particles {
@@ -415,3 +411,46 @@ screen and (max-height:700px) {
 .releases th,td {
     text-align: center;
 }
+.pure-menu-selected .pure-menu-link, .pure-menu-selected .pure-menu-link:visited {
+    color: #f7781e;
+}
+#whats-new-container .informations, #whats-new-container .filename{
+    display:none;
+}
+
+#whats-new-container h1, h2, h3{
+    letter-spacing: initial;
+    text-transform: initial;
+}
+
+#whats-new-container h1{
+    font-size: 1.5em;
+}
+#whats-new-container h2{
+    font-size:1.2em;
+}
+#whats-new-container > p {
+    text-align: center;
+}
+.whats-new-post {
+    background-color: rgb(248, 248, 248);
+    padding: 0.7em 2em;
+    box-shadow: 1px 1px 2px rgba(0,0,0, 0.02);
+    border: 1px solid rgba(0,0,0, 0.02);
+    margin-bottom: 2em;
+}
+.whats-new-post-header {
+    border-bottom: 1px solid rgba(0,0,0, 0.05);
+}
+.whats-new-post-header-row {
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.whats-new-post-title {
+    font-size: 1.5em;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration:none;
+}
+

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Legato Partners">
+    <link rel="shortcut icon" href="legato.ico" type="image/x-icon" />
+    <link rel="icon" href="legato.ico" type="image/x-icon" />
+    <title>Legato - What's New</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <!--[if lte IE 8]>
+
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-old-ie-min.css">
+
+        <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
+    <!--<![endif]-->
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="resources/css/landing-old-ie.css">
+        <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="resources/css/landing.css">
+    <!--<![endif]-->
+    <link rel="stylesheet" href="resources/css/legato.css">
+</head>
+
+<body>
+    <div class="pure-menu pure-menu-horizontal pure-menu-scrollable">
+        <a href="/" class="pure-menu-heading"><img id="logo" src="resources/img/legato_logo.png"></a>
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item "><a href="/" class="pure-menu-link">Home</a></li>
+            <li class="pure-menu-item"><a href="quickstart" class="pure-menu-link">Getting Started</a></li>
+            <li class="pure-menu-item"><a href="https://forum.legato.io/" class="pure-menu-link">Forums</a></li>
+            <li class="pure-menu-item"><a href="partners" class="pure-menu-link">Partners</a></li>
+            <li class="pure-menu-item"><a href="releases" class="pure-menu-link">Releases</a></li>
+            <li class="pure-menu-item"><a href="https://docs.legato.io/latest/aboutMain.html" class="pure-menu-link">About</a></li>
+            <li class="pure-menu-item pure-menu-selected"><a href="whatsnew" class="pure-menu-link">What's New</a></li>
+        </ul>
+    </div>
+    <div class="pure-g information ">
+        <div class="pure-u-1 pure-u-md-1-1">
+            <h1 class="title">What's New</h1>
+        <div id="whats-new-container">
+        </div>
+        <script>
+            let container = document.getElementById('whats-new-container');
+            fetch('https://forum.legato.io/c/News.json')
+                .then(resp => {
+                    if (resp.ok)
+                        return resp.json();
+                    else
+                        throw Error(resp.statusText);
+                })
+                .then(data => {
+                    const cutoffMonthsAgo = 3; // display posts from this many months ago
+                    let dateHorizon = new Date();
+                    dateHorizon.setMonth(dateHorizon.getMonth() - cutoffMonthsAgo);
+                    let topics = data.topic_list.topics
+                        .filter(t =>
+                            !t.closed &&
+                            !t.archived &&
+                            Date.parse(t.created_at) >= dateHorizon)
+                        .sort(t => t.created_at);
+                    if (topics.length == 0) {
+                        container.innerHTML += `<p>We have no new features to announce at this time.</p>
+						<p>Please check our <a href="/releases">release page</a> for our up-to-date release notes.</p>`;
+                    }
+                    for (topic of topics) {
+                        fetch(`https://forum.legato.io/t/${topic.id}.json`)
+                            .then(x => x.json())
+                            .then(x => {
+                                container.innerHTML += `
+                                <article class="whats-new-post">
+                                    <div class="whats-new-post-header">
+                                        <div class="whats-new-post-header-row">
+                                            <a href="https://forum.legato.io/t/${topic.id}" class="whats-new-post-title">${x.fancy_title}</a>
+                                            <span class="whats-new-post-date">${x.created_at.split('T')[0]}</span>
+                                        </div>
+                                    </div>
+                                    ${x.post_stream.posts[0].cooked}
+                                </article>`;
+                            });
+                    }
+                })
+                .catch(e => container.innerHTML += `<p>We ran into an error, please check back later to find out what's new in Legato.</p><p>(<code>${e}</code>)</p>`);
+        </script>
+    </div>
+
+    <div class="information pure-g quickstartbox">
+        <div class="pure-u-1-1">
+            <a class="pure-button" href="https://forum.legato.io/c/News">See all news</a>
+            </div>
+        </div>
+
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="resources/js/jquery.particleground.min.js"></script>
+    <script type="text/javascript" src="resources/js/legato.js"></script>
+    <script type="text/javascript" src="resources/js/smooth-scroll.min.js"></script>
+    <script>
+        smoothScroll.init();
+    </script>
+</body>
+
+</html>
