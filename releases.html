@@ -52,16 +52,30 @@
             <div class="contents">
                 <div class="textblock">
                     <p>The Legato Application Framework release notes provide information on new features and resolved issues in the current release.</p>
-                    <p>The <a class="el" href="https://docs.legato.io/latest/basicBuildLegato.html">build Legato</a> instructions walk you through setting up your development environment using either the GitHub Repositories or downloading the artifacts tar.bz2
-                        format.
-                    </p>
-                    <p>Legato Application Framework Releases:</p>
+                    </br>
+                    <p>Use <b><a class="el" href="https://docs.legato.io/latest/confLeaf.html">Leaf</a></b> to quickly download, install and configure your development environment and get started using Legato.</p>
+                    </br>
+                    <p>Legato provides multiple ways to download the source code:</p>
+                    <ul>
+                        <li><b><a class="el" href="https://docs.legato.io/latest/confLeaf.html">Leaf</a></b> - downloads and configures all the software, tools and environment variables you need to start developing with Legato easily. Leaf maintains its own
+                            package repository you can view using: <code>leaf search -t [target]</code>.</li>
+                        <li><b><a class="el" href="https://gerrit.legato.io">Gerrit</a></b> - clone the source code (including FOSS and proprietary code) from the Legato code repository.
+                            </br> Repo command: <code>repo init -u ssh://$USERID@gerrit.legato.io:29418/manifest -m [path/to/manifest.xml] -g default,-cache; repo sync</code> (replace <code>path/to/manifest.xml</code> with the repo manifest)</p>
+                        </li>
+                        <li><b><a class="el" href="https://github.com/legatoproject/legato-af#clone-from-github">GitHub</a></b> - clone the FOSS source code (not including proprietary code) from GitHub. This does not include binary apps for connecting to
+                            AirVantage.
+                            </br>Repo command: <code>repo init -u https://github.com/legatoproject/manifest -m [path/to/manifest.xml] -g default,-cache; repo sync</code> (replace <code>path/to/manifest.xml</code> with the repo manifest)</p>
+                        </li>
+                        <li><b>Tarball</b> - download the source code directly from Sierra Wireless. The tarball contains both the FOSS and proprietary code.</li>
+                    </ul>
+                    <h2>Legato Application Framework Releases:</h2>
                     <table class="pure-table pure-table-striped releases">
                         <thead>
                             <tr>
                                 <th>Version</th>
                                 <th>Date</th>
                                 <th>Release Notes</th>
+                                <th>Repo Manifest</th>
                                 <th>GitHub</th>
                                 <th>Tarball</th>
                                 <th>User Docs</th>
@@ -72,6 +86,7 @@
                                 <td>19.04.0</td>
                                 <td>Jun 5, 2019</td>
                                 <td><a class="el" href="https://docs.legato.io/latest/aboutReleaseNotes.html">19.04.0 Release Notes</a> </td>
+                                <td>legato/releases/19.04.0/legato.xml</td>
                                 <td><a href="https://github.com/legatoproject/legato-af/tree/19.04.0">19.04.0 tag</a></td>
                                 <td><a href="https://downloads.sierrawireless.com/legato/1904/legato-19.04.0.tar.bz2">legato-19.04.0.tar.bz2</a></td>
                                 <td><a href="https://legato.io/legato-docs/latest/buildAppsMain.html">latest
@@ -81,6 +96,7 @@
                                 <td>19.02.0</td>
                                 <td>Mar 22, 2019</td>
                                 <td><a class="el" href="https://docs.legato.io/19_02/aboutReleaseNotes.html">19.02.0 Release Notes</a> </td>
+                                <td>legato/releases/19.02.0/legato.xml</td>
                                 <td><a href="https://github.com/legatoproject/legato-af/tree/19.02.0">19.02.0 tag</a></td>
                                 <td><a href="https://downloads.sierrawireless.com/legato/1902/legato-19.02.0.tar.bz2">legato-19.02.0.tar.bz2</a></td>
                                 <td><a href="https://legato.io/legato-docs/19_02/buildAppsMain.html">19.02.0
@@ -90,6 +106,7 @@
                                 <td>19.01.0</td>
                                 <td>Jan 31, 2019</td>
                                 <td><a class="el" href="https://docs.legato.io/19_01/aboutReleaseNotes.html">19.01.0 Release Notes</a> </td>
+                                <td>legato/releases/19.01.0/legato.xml</td>
                                 <td><a href="https://github.com/legatoproject/legato-af/tree/19.01.0">19.01.0 tag</a></td>
                                 <td><a href="https://downloads.sierrawireless.com/legato/1901/legato-19.01.0.tar.bz2">legato-19.01.0.tar.bz2</a></td>
                                 <td><a href="https://legato.io/legato-docs/19_01/buildAppsMain.html">19.01.0
@@ -99,6 +116,7 @@
                                 <td>18.10.3</td>
                                 <td>Feb 12, 2019</td>
                                 <td><a class="el" href="https://docs.legato.io/18_10/aboutReleaseNotes.html">18.10.3 Release Notes</a> </td>
+                                <td>legato/releases/18.10.3/legato.xml</td>
                                 <td><a href="https://github.com/legatoproject/legato-af/tree/18.10.3">18.10.3 tag</a></td>
                                 <td><a href="https://downloads.sierrawireless.com/legato/1810/legato-18.10.3.tar.bz2">legato-18.10.3.tar.bz2</a></td>
                                 <td><a href="https://legato.io/legato-docs/18_10/buildAppsMain.html">18.10.3
@@ -108,6 +126,7 @@
                                 <td>18.09.2</td>
                                 <td>May 3, 2019</td>
                                 <td><a class="el" href="https://docs.legato.io/18_09/releaseNotes18090.html">18.09.2 Release Notes</a> </td>
+                                <td>legato/releases/18.09.2/legato.xml</td>
                                 <td><a href="https://github.com/legatoproject/legato-af/tree/18.09.2">18.09.2 tag</a></td>
                                 <td><a href="https://downloads.sierrawireless.com/legato/1809/legato-18.09.2.tar.bz2">legato-18.09.2.tar.bz2</a></td>
                                 <td><a href="https://legato.io/legato-docs/18_09/buildAppsMain.html">18.09.2
@@ -117,6 +136,7 @@
                                 <td>18.08.0</td>
                                 <td>Sep 14, 2018</td>
                                 <td><a class="el" href="https://docs.legato.io/18_08/releaseNotes18080.html">18.08.0 Release Notes</a> </td>
+                                <td>legato/releases/18.08.0/legato.xml</td>
                                 <td><a href="https://github.com/legatoproject/legato-af/tree/18.08.0">18.08.0 tag</a>
                                 </td>
                                 <td><a href="https://downloads.sierrawireless.com/legato/1808/legato-18.08.0.tar.bz2">legato-18.08.0.tar.bz2</a>
@@ -128,6 +148,7 @@
                                 <td>18.07.0</td>
                                 <td>Aug 07, 2018</td>
                                 <td><a class="el" href="https://docs.legato.io/18_07/releaseNotes18070.html">18.07.0 Release Notes</a> </td>
+                                <td>legato/releases/18.07.0/legato.xml</td>
                                 <td><a href="https://github.com/legatoproject/legato-af/tree/18.07.0">18.07.0 tag</a>
                                 </td>
                                 <td><a href="https://downloads.sierrawireless.com/legato/1807/legato-18.07.0.tar.bz2">legato-18.07.0.tar.bz2</a>
@@ -139,6 +160,7 @@
                                 <td>18.06.4</td>
                                 <td>Oct 23, 2018</td>
                                 <td><a class="el" href="https://docs.legato.io/18_06/releaseNotes18064.html">18.06.4 Release Notes</a> </td>
+                                <td>legato/releases/18.06.4/legato.xml</td>
                                 <td><a href="https://github.com/legatoproject/legato-af/tree/18.06.4">18.06.4 tag</a>
                                 </td>
                                 <td><a href="https://downloads.sierrawireless.com/legato/1806/legato-18.06.4.tar.bz2">legato-18.06.4.tar.bz2</a>
@@ -150,6 +172,7 @@
                                 <td>18.05.1</td>
                                 <td>Jun 20, 2018</td>
                                 <td><a class="el" href="https://docs.legato.io/18_05/releaseNotes18051.html">18.05.1 Release Notes</a> </td>
+                                <td>legato/releases/18.05.1/legato.xml</td>
                                 <td><a href="https://github.com/legatoproject/legato-af/tree/18.05.1">18.05.1 tag</a>
                                 </td>
                                 <td><a href="https://downloads.sierrawireless.com/legato/1805/legato-18.05.1.tar.bz2">legato-18.05.1.tar.bz2</a>
@@ -161,6 +184,7 @@
                                 <td>18.04.0</td>
                                 <td>May 8, 2018</td>
                                 <td><a class="el" href="https://docs.legato.io/18_04/releaseNotes18040.html">18.04.0 Release Notes</a> </td>
+                                <td>legato/releases/18.04.0/legato.xml</td>
                                 <td><a href="https://github.com/legatoproject/legato-af/tree/18.04.0">18.04.0 tag</a>
                                 </td>
                                 <td><a href="https://downloads.sierrawireless.com/legato/1804/legato-18.04.0.tar.bz2">legato-18.04.0.tar.bz2</a>
@@ -172,6 +196,7 @@
                                 <td>18.03.0</td>
                                 <td>Apr 11, 2018</td>
                                 <td><a class="el" href="https://docs.legato.io/18_03/releaseNotes18030.html">18.03.0 Release Notes</a> </td>
+                                <td>legato/releases/18.03.0/legato.xml</td>
                                 <td><a href="https://github.com/legatoproject/legato-af/tree/18.03.0">18.03.0 tag</a>
                                 </td>
                                 <td><a href="https://downloads.sierrawireless.com/legato/1803/legato-18.03.0.tar.bz2">legato-18.03.0.tar.bz2</a>
@@ -183,6 +208,7 @@
                                 <td>18.02.0</td>
                                 <td>Mar 5, 2018</td>
                                 <td><a class="el" href="https://docs.legato.io/18_02/releaseNotes18020.html">18.02.0 Release Notes</a> </td>
+                                <td>legato/releases/18.02.0/legato.xml</td>
                                 <td><a href="https://github.com/legatoproject/legato-af/tree/18.02.0">18.02.0 tag</a>
                                 </td>
                                 <td><a href="https://downloads.sierrawireless.com/legato/1802/legato-18.02.0.tar.bz2">legato-18.02.0.tar.bz2</a>
@@ -194,6 +220,7 @@
                                 <td>18.01.0</td>
                                 <td>Feb 6, 2018</td>
                                 <td><a class="el" href="https://docs.legato.io/18_01/releaseNotes18010.html">18.01.0 Release Notes</a> </td>
+                                <td>legato/releases/18.01.0/legato.xml</td>
                                 <td><a href="https://github.com/legatoproject/legato-af/tree/18.01.0">18.01.0 tag</a>
                                 </td>
                                 <td><a href="https://downloads.sierrawireless.com/legato/1801/legato-18.01.0.tar.bz2">legato-18.01.0.tar.bz2</a>
@@ -205,6 +232,7 @@
                                 <td>17.11.0</td>
                                 <td>Dec 14, 2017</td>
                                 <td><a class="el" href="https://docs.legato.io/17_11/releaseNotes17110.html">17.11.0 Release Notes</a> </td>
+                                <td>legato/releases/17.11.0/legato.xml</td>
                                 <td><a href="https://github.com/legatoproject/legato-af/tree/17.11.0">17.11.0 tag</a>
                                 </td>
                                 <td><a href="https://downloads.sierrawireless.com/legato/1711/legato-17.11.0.tar.bz2">legato-17.11.0.tar.bz2</a>
@@ -216,6 +244,7 @@
                                 <td>17.10.0</td>
                                 <td>Nov 13, 2017</td>
                                 <td><a class="el" href="https://docs.legato.io/17_10/releaseNotes17100.html">17.10.0 Release Notes</a> </td>
+                                <td>legato/releases/17.10.0/legato.xml</td>
                                 <td><a href="https://github.com/legatoproject/legato-af/tree/17.10.0">17.10.0 tag</a>
                                 </td>
                                 <td><a href="https://downloads.sierrawireless.com/legato/1710/legato-17.10.0.tar.bz2">legato-17.10.0.tar.bz2</a>
@@ -227,6 +256,7 @@
                                 <td>17.09.0</td>
                                 <td>Oct 19, 2017</td>
                                 <td><a class="el" href="https://docs.legato.io/17_09/releaseNotes17090.html">17.09.0 Release Notes</a> </td>
+                                <td>legato/releases/17.09.0/legato.xml</td>
                                 <td><a href="https://github.com/legatoproject/legato-af/tree/17.09.0">17.09.0 tag</a>
                                 </td>
                                 <td><a href="https://downloads.sierrawireless.com/legato/1709/legato-17.09.0.tar.bz2">legato-17.09.0.tar.bz2</a>
@@ -238,6 +268,7 @@
                                 <td>17.08.1</td>
                                 <td>Sept 29, 2017</td>
                                 <td><a class="el" href="https://docs.legato.io/17_08/releaseNotes17081.html">17.08.1 Release Notes</a> </td>
+                                <td>legato/releases/17.08.1/legato.xml</td>
                                 <td><a href="https://github.com/legatoproject/legato-af/tree/17.08.1">17.08.1 tag</a>
                                 </td>
                                 <td><a href="https://downloads.sierrawireless.com/legato/1708/legato-17.08.1.tar.bz2">legato-17.08.1.tar.bz2</a>
@@ -249,6 +280,7 @@
                                 <td>17.07.2</td>
                                 <td>Sept 8, 2017</td>
                                 <td><a class="el" href="https://docs.legato.io/17_07/releaseNotes17072.html">17.07.2 Release Notes</a> </td>
+                                <td>legato/releases/17.07.2/legato.xml</td>
                                 <td><a href="https://github.com/legatoproject/legato-af/tree/17.07.2">17.07.2 tag</a>
                                 </td>
                                 <td><a href="https://downloads.sierrawireless.com/legato/1707/legato-17.07.2.tar.bz2">legato-17.07.2.tar.bz2</a>
@@ -260,6 +292,7 @@
                                 <td>17.06.0</td>
                                 <td>Jul 7, 2017</td>
                                 <td><a class="el" href="https://docs.legato.io/17_06/releaseNotes17060.html">17.06.0 Release Notes</a> </td>
+                                <td>legato/releases/17.06.0/legato.xml</td>
                                 <td><a href="https://github.com/legatoproject/legato-af/tree/17.06.0">17.06.0 tag</a>
                                 </td>
                                 <td><a href="https://downloads.sierrawireless.com/legato/1706/legato-17.06.0.tar.bz2">legato-17.06.0.tar.bz2</a>
@@ -271,6 +304,7 @@
                                 <td>17.05.0</td>
                                 <td>Jun 23, 2017</td>
                                 <td><a class="el" href="https://docs.legato.io/17_05/releaseNotes17050.html">17.05.0 Release Notes</a> </td>
+                                <td>legato/releases/17.05.0/legato.xml</td>
                                 <td><a href="https://github.com/legatoproject/legato-af/tree/17.05.0">17.05.0 tag</a>
                                 </td>
                                 <td><a href="https://downloads.sierrawireless.com/legato/1705/legato-17.05.0.tar.bz2">legato-17.05.0.tar.bz2</a>
@@ -282,6 +316,7 @@
                                 <td>16.10.4</td>
                                 <td>Oct 18, 2017</td>
                                 <td><a class="el" href="https://docs.legato.io/16_10_4/releaseNotes16104.html">16.10.4 Release Notes</a> </td>
+                                <td>legato/releases/16.10.4/legato.xml</td>
                                 <td><a href="https://github.com/legatoproject/legato-af/tree/16.10.4">16.10.4 tag</a>
                                 </td>
                                 <td><a href="https://downloads.sierrawireless.com/legato/16103/legato-16.10.4.tar.bz2">legato-16.10.4.tar.bz2</a>
@@ -293,6 +328,7 @@
                                 <td>16.10.3</td>
                                 <td>Apr 28, 2017</td>
                                 <td><a class="el" href="https://docs.legato.io/16_10_3/releaseNotes16_10_3.html">16.10.3 Release Notes</a> </td>
+                                <td>legato/releases/16.10.3/legato.xml</td>
                                 <td><a href="https://github.com/legatoproject/legato-af/tree/16.10.3">16.10.3 tag</a>
                                 </td>
                                 <td><a href="https://downloads.sierrawireless.com/legato/16103/legato-16.10.3.tar.bz2">legato-16.10.3.tar.bz2</a>
@@ -305,6 +341,7 @@
                                 <td>Dec 23, 2016</td>
                                 <td><a href="https://legato.io/legato-docs/16_10/Legato_16_10_1_ReleaseNotes.pdf">16.10.1
                                         Release Notes</a> </td>
+                                <td>legato/releases/16.10.1/legato.xml</td>
                                 <td><a href="https://github.com/legatoproject/legato-af/tree/16.10.1">16.10.1 tag</a>
                                 </td>
                                 <td><a href="https://downloads.sierrawireless.com/legato/16101/legato-16.10.1.tar.bz2">legato-16.10.1.tar.bz2</a>
@@ -314,7 +351,23 @@
                             </tr>
                         </tbody>
                     </table>
-                    <p>For the <b>latest</b> (in progress) version of the Legato Application Framework clone it directly from <a href="https://github.com/legatoproject/legato-af#welcome-to-legato">GitHub.</a></p>
+
+                    <h2> Leaf</h2>
+                    <p>To install leaf, download and setup our debian package (from the Sierra Wireless tools repository):</p>
+                    <code>$ wget https://downloads.sierrawireless.com/tools/leaf/leaf_latest.deb -O /tmp/leaf_latest.deb && sudo apt install /tmp/leaf_latest.deb</code></br>
+                    <code>$ mkdir ~/myWorkspace; cd ~/myWorkspace</code></br>
+                    <p>Search and install a package for your target (downloads and automatically installs Legato, the toolchain and tools):</p>
+                    <code>$ leaf search -t [target]</code></br>
+                    <code>$ leaf setup -p [packageIdentifier] [profileName]</code></br>
+                    <p>Start developing using the Leaf Shell to configure your environment:</p>
+                    <code>$ leaf shell</code>
+                    <h2> Latest (in progress) Code</h2>
+                    <p>For the <b>latest</b> (in progress) version of the Legato Application Framework clone it directly from:
+                        <ul>
+                            <li>Gerrit - <code>repo init -u ssh://$USERID@gerrit.legato.io:29418/manifest; repo sync</code></li>
+                            <li>GitHub - <code>repo init -u git://github.com/legatoproject/manifest; repo sync</code></li>
+                        </ul>
+                    </p>
                     <p>The Legato Application Framework is licensed under the <a class="el" href="aboutLicenses.html">MPLv2</a>.</p>
                     <p>The Legato team welcomes <a class="el" href="aboutLegatoContributing.html">contributions</a> to the project.</p>
                     <h1>
