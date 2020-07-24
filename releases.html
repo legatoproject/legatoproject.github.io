@@ -29,7 +29,7 @@
 
 <body>
     <div class="pure-menu pure-menu-horizontal pure-menu-scrollable">
-        <a href="/" class="pure-menu-heading"><img id="logo" src="resources/img/legato_logo.png"></a>
+        <a href="/" class="pure-menu-heading"><img id="logo" src="resources/img/legato_logo.png" alt="Legato"></a>
         <ul class="pure-menu-list">
             <li class="pure-menu-item "><a href="/" class="pure-menu-link">Home</a></li>
             <li class="pure-menu-item"><a href="quickstart" class="pure-menu-link">Getting Started</a></li>
@@ -60,11 +60,11 @@
                         <li><b><a class="el" href="https://docs.legato.io/latest/confLeaf.html">Leaf</a></b> - downloads and configures all the software, tools and environment variables you need to start developing with Legato easily. Leaf maintains its own
                             package repository you can view using: <code>leaf search -t [target]</code>.</li>
                         <li><b><a class="el" href="https://gerrit.legato.io">Gerrit</a></b> - clone the source code (including FOSS and proprietary code) from the Legato code repository.
-                            </br> Repo command: <code>repo init -u ssh://$USERID@gerrit.legato.io:29418/manifest -m [path/to/manifest.xml] -g default,-cache; repo sync</code> (replace <code>path/to/manifest.xml</code> with the repo manifest)</p>
+                            </br> Repo command: <code>repo init -u ssh://$USERID@gerrit.legato.io:29418/manifest -m [path/to/manifest.xml] -g default,-cache; repo sync</code> (replace <code>path/to/manifest.xml</code> with the repo manifest)
                         </li>
                         <li><b><a class="el" href="https://github.com/legatoproject/legato-af#clone-from-github">GitHub</a></b> - clone the FOSS source code (not including proprietary code) from GitHub. This does not include binary apps for connecting to
                             AirVantage.
-                            </br>Repo command: <code>repo init -u https://github.com/legatoproject/manifest -m [path/to/manifest.xml] -g default,-cache; repo sync</code> (replace <code>path/to/manifest.xml</code> with the repo manifest)</p>
+                            </br>Repo command: <code>repo init -u https://github.com/legatoproject/manifest -m [path/to/manifest.xml] -g default,-cache; repo sync</code> (replace <code>path/to/manifest.xml</code> with the repo manifest)
                         </li>
                         <li><b>Tarball</b> - download the source code directly from Sierra Wireless. The tarball contains both the FOSS and proprietary code.</li>
                     </ul>
@@ -98,7 +98,7 @@
                                 <td>legato/releases/19.11.0/legato.xml</td>
                                 <td><a href="https://github.com/legatoproject/legato-af/tree/19.11.0">19.11.0 tag</a></td>
                                 <td><a href="https://downloads.sierrawireless.com/legato/1911/legato-19.11.0.tar.bz2">legato-19.11.0.tar.bz2</a></td>
-                                <td><a href="https://legato.io/legato-docs/19_11/buildAppsMain.html">latest legato.io</a> </td>
+                                <td><a href="https://legato.io/legato-docs/19_11/buildAppsMain.html">19.11.0 legato.io</a> </td>
                             </tr>
                             <tr>
                                 <td>19.10.0</td>
@@ -107,7 +107,7 @@
                                 <td>legato/releases/19.10.0/legato.xml</td>
                                 <td><a href="https://github.com/legatoproject/legato-af/tree/19.09.0">19.10.0 tag</a></td>
                                 <td><a href="https://downloads.sierrawireless.com/legato/1910/legato-19.10.0.tar.bz2">legato-19.10.0.tar.bz2</a></td>
-                                <td><a href="https://legato.io/legato-docs/19_10/buildAppsMain.html">latest legato.io</a> </td>
+                                <td><a href="https://legato.io/legato-docs/19_10/buildAppsMain.html">19.10.0 legato.io</a> </td>
                             </tr>
                             <tr>
                                 <td>19.09.0</td>
@@ -116,8 +116,7 @@
                                 <td>legato/releases/19.09.0/legato.xml</td>
                                 <td><a href="https://github.com/legatoproject/legato-af/tree/19.09.0">19.09.0 tag</a></td>
                                 <td><a href="https://downloads.sierrawireless.com/legato/1909/legato-19.09.0.tar.bz2">legato-19.09.0.tar.bz2</a></td>
-                                <td><a href="https://legato.io/legato-docs/19_09/buildAppsMain.html">19.09.0
-                                       legato.io</a> </td>
+                                <td><a href="https://legato.io/legato-docs/19_09/buildAppsMain.html">19.09.0 legato.io</a> </td>
                             </tr>
                             <tr>
                                 <td>19.07.0</td>
@@ -126,8 +125,7 @@
                                 <td>legato/releases/19.07.0/legato.xml</td>
                                 <td><a href="https://github.com/legatoproject/legato-af/tree/19.07.0">19.07.0 tag</a></td>
                                 <td><a href="https://downloads.sierrawireless.com/legato/1907/legato-19.07.0.tar.bz2">legato-19.07.0.tar.bz2</a></td>
-                                <td><a href="https://legato.io/legato-docs/19_07/buildAppsMain.html">19.07.0
-                                        legato.io</a> </td>
+                                <td><a href="https://legato.io/legato-docs/19_07/buildAppsMain.html">19.07.0 legato.io</a> </td>
                             </tr>
                             <tr>
                                 <td>19.04.0</td>
@@ -136,8 +134,7 @@
                                 <td>legato/releases/19.04.0/legato.xml</td>
                                 <td><a href="https://github.com/legatoproject/legato-af/tree/19.04.0">19.04.0 tag</a></td>
                                 <td><a href="https://downloads.sierrawireless.com/legato/1904/legato-19.04.0.tar.bz2">legato-19.04.0.tar.bz2</a></td>
-                                <td><a href="https://legato.io/legato-docs/19_04/buildAppsMain.html">19.04.0
-                                        legato.io</a> </td>
+                                <td><a href="https://legato.io/legato-docs/19_04/buildAppsMain.html">19.04.0 legato.io</a> </td>
                             </tr>
                             <tr>
                                 <td>19.02.0</td>
@@ -146,8 +143,7 @@
                                 <td>legato/releases/19.02.0/legato.xml</td>
                                 <td><a href="https://github.com/legatoproject/legato-af/tree/19.02.0">19.02.0 tag</a></td>
                                 <td><a href="https://downloads.sierrawireless.com/legato/1902/legato-19.02.0.tar.bz2">legato-19.02.0.tar.bz2</a></td>
-                                <td><a href="https://legato.io/legato-docs/19_02/buildAppsMain.html">19.02.0
-                                        legato.io</a> </td>
+                                <td><a href="https://legato.io/legato-docs/19_02/buildAppsMain.html">19.02.0 legato.io</a> </td>
                             </tr>
                             <tr>
                                 <td>19.01.0</td>
@@ -156,8 +152,7 @@
                                 <td>legato/releases/19.01.0/legato.xml</td>
                                 <td><a href="https://github.com/legatoproject/legato-af/tree/19.01.0">19.01.0 tag</a></td>
                                 <td><a href="https://downloads.sierrawireless.com/legato/1901/legato-19.01.0.tar.bz2">legato-19.01.0.tar.bz2</a></td>
-                                <td><a href="https://legato.io/legato-docs/19_01/buildAppsMain.html">19.01.0
-                                        legato.io</a> </td>
+                                <td><a href="https://legato.io/legato-docs/19_01/buildAppsMain.html">19.01.0 legato.io</a> </td>
                             </tr>
                             <tr>
                                 <td>18.10.3</td>
@@ -166,8 +161,7 @@
                                 <td>legato/releases/18.10.3/legato.xml</td>
                                 <td><a href="https://github.com/legatoproject/legato-af/tree/18.10.3">18.10.3 tag</a></td>
                                 <td><a href="https://downloads.sierrawireless.com/legato/1810/legato-18.10.3.tar.bz2">legato-18.10.3.tar.bz2</a></td>
-                                <td><a href="https://legato.io/legato-docs/18_10/buildAppsMain.html">18.10.3
-                                        legato.io</a> </td>
+                                <td><a href="https://legato.io/legato-docs/18_10/buildAppsMain.html">18.10.3 legato.io</a> </td>
                             </tr>
                             <tr>
                                 <td>18.09.2</td>
@@ -176,8 +170,7 @@
                                 <td>legato/releases/18.09.2/legato.xml</td>
                                 <td><a href="https://github.com/legatoproject/legato-af/tree/18.09.2">18.09.2 tag</a></td>
                                 <td><a href="https://downloads.sierrawireless.com/legato/1809/legato-18.09.2.tar.bz2">legato-18.09.2.tar.bz2</a></td>
-                                <td><a href="https://legato.io/legato-docs/18_09/buildAppsMain.html">18.09.2
-                                        legato.io</a> </td>
+                                <td><a href="https://legato.io/legato-docs/18_09/buildAppsMain.html">18.09.2 legato.io</a> </td>
                             </tr>
                             <tr>
                                 <td>18.08.0</td>
@@ -188,8 +181,7 @@
                                 </td>
                                 <td><a href="https://downloads.sierrawireless.com/legato/1808/legato-18.08.0.tar.bz2">legato-18.08.0.tar.bz2</a>
                                 </td>
-                                <td><a href="https://legato.io/legato-docs/18_08/buildAppsMain.html">18.08.0
-                                        legato.io</a> </td>
+                                <td><a href="https://legato.io/legato-docs/18_08/buildAppsMain.html">18.08.0 legato.io</a> </td>
                             </tr>
                             <tr>
                                 <td>18.07.0</td>
@@ -200,8 +192,7 @@
                                 </td>
                                 <td><a href="https://downloads.sierrawireless.com/legato/1807/legato-18.07.0.tar.bz2">legato-18.07.0.tar.bz2</a>
                                 </td>
-                                <td><a href="https://legato.io/legato-docs/18_07/buildAppsMain.html">18.07.0
-                                        legato.io</a> </td>
+                                <td><a href="https://legato.io/legato-docs/18_07/buildAppsMain.html">18.07.0 legato.io</a> </td>
                             </tr>
                             <tr>
                                 <td>18.06.4</td>
@@ -212,8 +203,7 @@
                                 </td>
                                 <td><a href="https://downloads.sierrawireless.com/legato/1806/legato-18.06.4.tar.bz2">legato-18.06.4.tar.bz2</a>
                                 </td>
-                                <td><a href="https://legato.io/legato-docs/18_06/buildAppsMain.html">18.06.4
-                                        legato.io</a> </td>
+                                <td><a href="https://legato.io/legato-docs/18_06/buildAppsMain.html">18.06.4 legato.io</a> </td>
                             </tr>
                             <tr>
                                 <td>18.05.1</td>
@@ -224,8 +214,7 @@
                                 </td>
                                 <td><a href="https://downloads.sierrawireless.com/legato/1805/legato-18.05.1.tar.bz2">legato-18.05.1.tar.bz2</a>
                                 </td>
-                                <td><a href="https://legato.io/legato-docs/18_05/buildAppsMain.html">18.05.1
-                                        legato.io</a> </td>
+                                <td><a href="https://legato.io/legato-docs/18_05/buildAppsMain.html">18.05.1 legato.io</a> </td>
                             </tr>
                             <tr>
                                 <td>18.04.0</td>
@@ -236,8 +225,7 @@
                                 </td>
                                 <td><a href="https://downloads.sierrawireless.com/legato/1804/legato-18.04.0.tar.bz2">legato-18.04.0.tar.bz2</a>
                                 </td>
-                                <td><a href="https://legato.io/legato-docs/18_04/buildAppsMain.html">18.04.0
-                                        legato.io</a> </td>
+                                <td><a href="https://legato.io/legato-docs/18_04/buildAppsMain.html">18.04.0 legato.io</a> </td>
                             </tr>
                             <tr>
                                 <td>18.03.0</td>
@@ -248,8 +236,7 @@
                                 </td>
                                 <td><a href="https://downloads.sierrawireless.com/legato/1803/legato-18.03.0.tar.bz2">legato-18.03.0.tar.bz2</a>
                                 </td>
-                                <td><a href="https://legato.io/legato-docs/18_03/buildAppsMain.html">18.03.0
-                                        legato.io</a> </td>
+                                <td><a href="https://legato.io/legato-docs/18_03/buildAppsMain.html">18.03.0 legato.io</a> </td>
                             </tr>
                             <tr>
                                 <td>18.02.0</td>
@@ -260,8 +247,7 @@
                                 </td>
                                 <td><a href="https://downloads.sierrawireless.com/legato/1802/legato-18.02.0.tar.bz2">legato-18.02.0.tar.bz2</a>
                                 </td>
-                                <td><a href="https://legato.io/legato-docs/18_02/buildAppsMain.html">18.02.0
-                                        legato.io</a> </td>
+                                <td><a href="https://legato.io/legato-docs/18_02/buildAppsMain.html">18.02.0 legato.io</a> </td>
                             </tr>
                             <tr>
                                 <td>18.01.0</td>
@@ -272,8 +258,7 @@
                                 </td>
                                 <td><a href="https://downloads.sierrawireless.com/legato/1801/legato-18.01.0.tar.bz2">legato-18.01.0.tar.bz2</a>
                                 </td>
-                                <td><a href="https://legato.io/legato-docs/18_01/buildAppsMain.html">18.01.0
-                                        legato.io</a> </td>
+                                <td><a href="https://legato.io/legato-docs/18_01/buildAppsMain.html">18.01.0 legato.io</a> </td>
                             </tr>
                             <tr>
                                 <td>17.11.0</td>
@@ -284,8 +269,7 @@
                                 </td>
                                 <td><a href="https://downloads.sierrawireless.com/legato/1711/legato-17.11.0.tar.bz2">legato-17.11.0.tar.bz2</a>
                                 </td>
-                                <td><a href="https://legato.io/legato-docs/17_11/buildAppsMain.html">17.11.0
-                                        legato.io</a> </td>
+                                <td><a href="https://legato.io/legato-docs/17_11/buildAppsMain.html">17.11.0 legato.io</a> </td>
                             </tr>
                             <tr>
                                 <td>17.10.0</td>
@@ -296,8 +280,7 @@
                                 </td>
                                 <td><a href="https://downloads.sierrawireless.com/legato/1710/legato-17.10.0.tar.bz2">legato-17.10.0.tar.bz2</a>
                                 </td>
-                                <td><a href="https://legato.io/legato-docs/17_10/buildAppsMain.html">17.10.0
-                                        legato.io</a> </td>
+                                <td><a href="https://legato.io/legato-docs/17_10/buildAppsMain.html">17.10.0 legato.io</a> </td>
                             </tr>
                             <tr>
                                 <td>17.09.0</td>
@@ -308,8 +291,7 @@
                                 </td>
                                 <td><a href="https://downloads.sierrawireless.com/legato/1709/legato-17.09.0.tar.bz2">legato-17.09.0.tar.bz2</a>
                                 </td>
-                                <td><a href="https://legato.io/legato-docs/17_09/buildAppsMain.html">17.09.0
-                                        legato.io</a> </td>
+                                <td><a href="https://legato.io/legato-docs/17_09/buildAppsMain.html">17.09.0 legato.io</a> </td>
                             </tr>
                             <tr>
                                 <td>17.08.1</td>
@@ -320,8 +302,7 @@
                                 </td>
                                 <td><a href="https://downloads.sierrawireless.com/legato/1708/legato-17.08.1.tar.bz2">legato-17.08.1.tar.bz2</a>
                                 </td>
-                                <td><a href="https://legato.io/legato-docs/17_08/buildAppsMain.html">17.08.1
-                                        legato.io</a> </td>
+                                <td><a href="https://legato.io/legato-docs/17_08/buildAppsMain.html">17.08.1 legato.io</a> </td>
                             </tr>
                             <tr>
                                 <td>17.07.2</td>
@@ -332,8 +313,7 @@
                                 </td>
                                 <td><a href="https://downloads.sierrawireless.com/legato/1707/legato-17.07.2.tar.bz2">legato-17.07.2.tar.bz2</a>
                                 </td>
-                                <td><a href="https://legato.io/legato-docs/17_07/buildAppsMain.html">17.07.2
-                                        legato.io</a> </td>
+                                <td><a href="https://legato.io/legato-docs/17_07/buildAppsMain.html">17.07.2 legato.io</a> </td>
                             </tr>
                             <tr>
                                 <td>17.06.0</td>
@@ -344,8 +324,7 @@
                                 </td>
                                 <td><a href="https://downloads.sierrawireless.com/legato/1706/legato-17.06.0.tar.bz2">legato-17.06.0.tar.bz2</a>
                                 </td>
-                                <td><a href="https://legato.io/legato-docs/17_06/buildAppsMain.html">17.06.0
-                                        legato.io</a> </td>
+                                <td><a href="https://legato.io/legato-docs/17_06/buildAppsMain.html">17.06.0 legato.io</a> </td>
                             </tr>
                             <tr>
                                 <td>17.05.0</td>
@@ -356,8 +335,7 @@
                                 </td>
                                 <td><a href="https://downloads.sierrawireless.com/legato/1705/legato-17.05.0.tar.bz2">legato-17.05.0.tar.bz2</a>
                                 </td>
-                                <td><a href="https://legato.io/legato-docs/17_05/buildAppsMain.html">17.05.0
-                                        legato.io</a> </td>
+                                <td><a href="https://legato.io/legato-docs/17_05/buildAppsMain.html">17.05.0 legato.io</a> </td>
                             </tr>
                             <tr>
                                 <td>16.10.4</td>
@@ -368,8 +346,7 @@
                                 </td>
                                 <td><a href="https://downloads.sierrawireless.com/legato/16103/legato-16.10.4.tar.bz2">legato-16.10.4.tar.bz2</a>
                                 </td>
-                                <td><a href="https://legato.io/legato-docs/16_10_4/buildAppsMain.html">16.10.4
-                                        legato.io</a> </td>
+                                <td><a href="https://legato.io/legato-docs/16_10_4/buildAppsMain.html">16.10.4 legato.io</a> </td>
                             </tr>
                             <tr>
                                 <td>16.10.3</td>
@@ -380,8 +357,7 @@
                                 </td>
                                 <td><a href="https://downloads.sierrawireless.com/legato/16103/legato-16.10.3.tar.bz2">legato-16.10.3.tar.bz2</a>
                                 </td>
-                                <td><a href="https://legato.io/legato-docs/16_10_3/buildAppsMain.html">16.10.3
-                                        legato.io</a> </td>
+                                <td><a href="https://legato.io/legato-docs/16_10_3/buildAppsMain.html">16.10.3 legato.io</a> </td>
                             </tr>
                             <tr>
                                 <td>16.10.1</td>
@@ -393,8 +369,7 @@
                                 </td>
                                 <td><a href="https://downloads.sierrawireless.com/legato/16101/legato-16.10.1.tar.bz2">legato-16.10.1.tar.bz2</a>
                                 </td>
-                                <td><a href="https://legato.io/legato-docs/16_10/buildAppsMain.html">16.10.1
-                                        legato.io</a> </td>
+                                <td><a href="https://legato.io/legato-docs/16_10/buildAppsMain.html">16.10.1 legato.io</a> </td>
                             </tr>
                         </tbody>
                     </table>
@@ -409,12 +384,11 @@
                     <p>Start developing using the Leaf Shell to configure your environment:</p>
                     <code>$ leaf shell</code>
                     <h2> Latest (in progress) Code</h2>
-                    <p>For the <b>latest</b> (in progress) version of the Legato Application Framework clone it directly from:
-                        <ul>
-                            <li>Gerrit - <code>repo init -u ssh://$USERID@gerrit.legato.io:29418/manifest; repo sync</code></li>
-                            <li>GitHub - <code>repo init -u git://github.com/legatoproject/manifest; repo sync</code></li>
-                        </ul>
-                    </p>
+                    <p>For the <b>latest</b> (in progress) version of the Legato Application Framework clone it directly from:</p>
+                    <ul>
+                        <li>Gerrit - <code>repo init -u ssh://$USERID@gerrit.legato.io:29418/manifest; repo sync</code></li>
+                        <li>GitHub - <code>repo init -u git://github.com/legatoproject/manifest; repo sync</code></li>
+                    </ul>
                     <p>The Legato Application Framework is licensed under the <a class="el" href="aboutLicenses.html">MPLv2</a>.</p>
                     <p>The Legato team welcomes <a class="el" href="aboutLegatoContributing.html">contributions</a> to the project.</p>
                     <h1>
